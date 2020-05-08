@@ -5,7 +5,13 @@
 #' @return an object of class date
 
 date_from_MIT_filepath <- function(MIT_filepath){
-  as.Date(gsub(".csv", "", gsub("MIT_", "", MIT_filepath)))
+  raw_date <- gsub(".csv", "", gsub("Global_", "", MIT_filepath))
+  year <- substr(raw_date,1, 4)
+  month <- substr(raw_date, 5, 6)
+  day <- substr(raw_date, 7, 8)
+  date <- paste(year, month, day, sep="-")
+  print(as.Date(date))
+  return(as.Date(date))
 }
 
 #' turn MIT forecast file into quantile-based format
@@ -22,6 +28,7 @@ process_MIT_file<- function(mit_filepath, forecast_date){
   dat = subset(dat, Country == "Germany")
   dat$date <- as.Date(dat$Day)
   dat <- subset(dat, date > forecast_date) # restrict to timepoints after forecast date
+  dat$location <- NA
   dat$location <- "GM"
   dat$country <- NULL
   dat$X <- dat$observed <- NULL
