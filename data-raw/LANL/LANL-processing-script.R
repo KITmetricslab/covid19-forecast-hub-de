@@ -35,5 +35,5 @@ for(dat in dates){
   write_csv(total, 
             paste0("../../data-processed/LANL-GrowthRate/", 
                             dat, 
-                            "-LANL-GrowthRate.csv"))
+                            "-Germany-LANL-GrowthRate.csv"))
 }
