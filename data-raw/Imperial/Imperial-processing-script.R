@@ -35,5 +35,5 @@ for(i in 1:length(filepaths)){
   write_csv(formatted_file,
             path = paste0("../../data-processed/Imperial-ensemble1/",
                           date,
-                          "-Germany-Imperial.Ensemble.csv"))
+                          "-Germany-Imperial-ensemble1.csv"))
 }
