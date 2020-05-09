@@ -1,0 +1,33 @@
+IHME_raw<-read.csv("Hospitalization_all_locs.csv",stringsAsFactors = FALSE)
+IHME_germany<-IHME_raw[which(IHME_raw$location_name=="Germany"),]
+IHME_summary<-read.csv("summary_stats_all_locs.csv",stringsAsFactors = FALSE)
+IHME_processed<-read.csv("../../data-processed/IHME-CurveFit/2020-05-04-IHME-CurveFit.csv",stringsAsFactors = FALSE)
+IHME_processed_germany<-IHME_processed[which(IHME_processed$location_name=="Germany"),]
+
+#create CSV file
+
+state_fips_codes<-read.csv("C:/Users/yu4305/Documents/GitHub/covid19-forecast-hub/template/state_fips_codes.csv")
+germany_fips_codes<-read.table("state_codes_germany.txt",sep=":")
+state_code<-gsub("GM","",germany_fips_codes$V1)
+state_name<-c(unique(grep("Baden",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Bav",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Breme",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Hamb",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Hesse",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Lower",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Westpha",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Palatinate",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Saarland",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Schleswig",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Branden",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Mecklen",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Saxony",IHME_raw$location_name,value = TRUE))[2],
+              unique(grep("Saxony-Anhalt",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Thu",IHME_raw$location_name,value = TRUE)),
+              unique(grep("Berlin",IHME_raw$location_name,value = TRUE)))
+
+export_germany<-data.frame(state_code=as.numeric(state_code),state_name=state_name)
+write.csv(export_germany,"state_codes_germany.csv")
+
+
+
