@@ -29,5 +29,16 @@ state_name<-c(unique(grep("Baden",IHME_raw$location_name,value = TRUE)),
 export_germany<-data.frame(state_code=as.numeric(state_code),state_name=state_name)
 write.csv(export_germany,"state_codes_germany.csv")
 
+#generate filepaths in Imperial-processing-script.R
+
+#get files where Germany was predicted
+reported_countries<-list()
+germany_reported<-rep(NA,length(filepaths))
+for(i in 1:length(filepaths))
+{
+  reported_countries[[i]]<-readRDS(filepaths[i])$Country
+  germany_reported[i]<-as.logical(sum(reported_countries[[i]]=="Germany"))
+  
+}
 
 
