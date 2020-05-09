@@ -24,6 +24,11 @@ get_next_saturday <- function(date) {
   new_date <- diff + date
   return(new_date)
 }
+#Function to extract date from Imperial Path
+get_date<-function(path)
+{
+  as.Date(substr(path,start=nchar(path)-13,stop=nchar(path)-4))
+}
 
 
 #Main function for Germany, adapted from Reichlab Repo
@@ -45,7 +50,7 @@ format_imperial<-function(path,location="Germany", qntls=c(0.01, 0.025, seq(0.05
   
   #only take first since both are identical for Germany
   data_raw<-readRDS(path)$Predictions$Germany[[1]]  
-  date_publish<-as.Date(substr(path,start=nchar(path)-13,stop=nchar(path)-4))
+  date_publish<-get_date(path)
   #get timezero as in Reichlab function, i.e. date of official forecast collection
   timezero<-date_publish
   
