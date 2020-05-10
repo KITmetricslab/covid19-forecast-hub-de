@@ -161,6 +161,6 @@ filepaths <- list.files("./",pattern = "Hospitalization_all_locs.csv", recursive
     write_csv(formatted_file,
               path = paste0("../../data-processed/IHME-CurveFit/",
                             date,
-                            "-IHME-CurveFit.csv"))
+                            "-Germany-IHME-CurveFit.csv"))
   }
 #}
