@@ -20,7 +20,7 @@ for(i in 1:length(files_to_process)) {
   tmp_dat <- process_MIT_file(files_to_process[i], forecast_date = forecast_dates[[i]])
   print(forecast_dates[[i]])
   write.csv(tmp_dat,
-            paste0("../../data-processed/MIT_CovidAnalytics-DELPHI/", forecast_dates[[i]],
-                   "-Germany-MIT_CovidAnalytics-DELPHI.csv"),
+            paste0("../../data-processed/MIT-CovidAnalytics-DELPHI/", forecast_dates[[i]],
+                   "-Germany-MIT-CovidAnalytics-DELPHI.csv"),
             row.names = FALSE)
 }
