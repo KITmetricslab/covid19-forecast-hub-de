@@ -71,7 +71,7 @@ format_imperial<-function(path,location="Germany", qntls=c(0.01, 0.025, seq(0.05
   obs_data <- read_csv("../../data-truth/truth-Cumulative Deaths_Germany.csv") %>%
     mutate(date = as.Date(date, "%m/%d/%y"))
   last_obs_date <- as.Date(colnames(data_raw)[1])-1
-  last_obs_death <- obs_data$value[which(obs_data$location=="Germany" & obs_data$date==last_obs_date)]
+  last_obs_death <- obs_data$value[which(obs_data$location_name=="Germany" & obs_data$date==last_obs_date)]
   sample_mat_cum <- matrixStats::rowCumsums(as.matrix(data_raw)) + last_obs_death
   
   ## indices and samples for incident deaths 
