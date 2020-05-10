@@ -1,9 +1,9 @@
 # Author: Konstantin Görgen
 # Date: Sat May 09 12:16:26 2020
 # --------------
-# Modification:
-# Author:
-# Date:
+# Modification: Changed variables in final matrix in function format_imperial
+# Author: Konstantin Görgen
+# Date: 2020-05-10
 # --------------
 
 ##Helper Functions for Imperial Script
@@ -140,10 +140,21 @@ format_imperial<-function(path,location="Germany", qntls=c(0.01, 0.025, seq(0.05
     filter(quantile==0.5) %>% 
     mutate(quantile=NA, type="point")
   
+  #before adding together data, add in additional column location_name
+  #location_name: actual name
+  #location: fips_code
+  
+  #get fips codes
+  state_fips_codes<-read.csv("state_codes_germany.csv",stringsAsFactors = FALSE)[,-1]
+  location_name<-location
+  location_fips<-state_fips_codes[which(location==state_fips_codes[,2]),1]
+  
   all_dat <- bind_rows(qntl_dat_long, point_ests) %>%
     arrange(type, target, quantile) %>%
-    mutate(quantile = round(quantile, 3), forecast_date = timezero) %>%
-    select(forecast_date, target, target_end_date,location,type,quantile,value)
+    mutate(quantile = round(quantile, 3), forecast_date = timezero,location=location_fips,location_name=location_name) %>%
+    select(forecast_date, target, target_end_date,location,location_name,type,quantile,value)
+  
+
   
   return(all_dat)
  
