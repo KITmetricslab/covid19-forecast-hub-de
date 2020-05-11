@@ -48,7 +48,7 @@ make_qntl_dat <- function(path,all_states=FALSE) {
   
  
   data <- read.csv(path, stringsAsFactors = FALSE)
-  
+  forecast_date<-get_date(path)
   
   if (names(data)[grep("date",names(data))]!="date"){
     data<-data %>%

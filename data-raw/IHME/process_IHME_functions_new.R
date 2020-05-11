@@ -65,6 +65,8 @@ make_qntl_dat <- function(path,all_states=FALSE) {
     data_germany<-data_raw[data_raw$location_name=="Germany",]
   }
  
+#parse as date
+  data_germany$date<-as.Date(data_germany$date)
   
   
   ####Adapted from reichlab from here:
@@ -83,9 +85,23 @@ make_qntl_dat <- function(path,all_states=FALSE) {
   obs_data <- read_csv("../../data-truth/truth-Cumulative Deaths_Germany.csv") %>%
     mutate(date = as.Date(date, "%m/%d/%y"))
   last_obs_date <- timezero #is this the last date of observations?
+  #all observed deaths
   last_obs_death <- obs_data$value[which(obs_data$location_name=="Germany" & obs_data$date==last_obs_date)]
-  sample_mat_cum <- matrixStats::rowCumsums(as.matrix(data_germany)) + last_obs_death
+  sample_mat_cum <- data_germay %>% mutate(value=ifelse(obs_data$date<=last_obs_date,data_germany$  
+                                                          
+                                                          (data_germany,obs_data[1:which(data_germany$date==last_obs_date],
+                              )
+    matrixStats::rowCumsums(as.matrix(data_germany)) + last_obs_death
   
+  data_germany_cleaned<-data_germany
+  in_ihme<-data_germany_cleaned$date %in% obs_data$date
+  in_true<-obs_data$date %in% data_germany$date
+  obs_data_replace<-obs_data$value[in_true & obs_data$date<=last_obs_date]
+  data_germany_cleaned[in_ihme & data_germany_cleaned$date<=last_obs_date,3:5]<-
+    cbind(obs_data_replace,obs_data_replace,obs_data_replace)
+                       ,
+                                                              mutate,obs_data[1:which(data_germany$date==last_obs_date]  
+    
   ## indices and samples for incident deaths 
   which_days <- which(colnames(data_germany) %in% as.character(day_aheads$target_end_date))
   which_weeks <- which(colnames(data_germany) %in% as.character(week_aheads$target_end_date))
@@ -95,7 +111,7 @@ make_qntl_dat <- function(path,all_states=FALSE) {
   samples_weekly_cum <- sample_mat_cum[,which_weeks]
   
   
-  #old
+  #old code
   if (names(data)[grep("date",names(data))]!="date"){
     data<-data %>%
       dplyr::rename(date=names(data)[grep("date",names(data))])
