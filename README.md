@@ -6,7 +6,7 @@
 
 This repository assembles forecasts of cumulative and incident COVID19 deaths in Germany in a standardized format. It is run by members of the [Chair of Econometrics and Statistics at Karlsruhe Institute of Technology](https://statistik.econ.kit.edu/index.php) and the [Computational Statistics Group at Heidelberg Institute of Technology](https://www.h-its.org/research/cst/).
 
-The effort parallels the [US COVID-19 forecast hub](COVID-19 Forecast Hub) run by the UMass-Amherst Influenza Forecasting Center of Excellence based at the [Reich Lab](https://reichlab.io/). We are in close exchange with the ReichLab team and follow the general structure and [data format](https://github.com/reichlab/covid19-forecast-hub#data-model) defined there.
+The effort parallels the [US COVID-19 forecast hub](COVID-19 Forecast Hub) run by the UMass-Amherst Influenza Forecasting Center of Excellence based at the [Reich Lab](https://reichlab.io/). We are in close exchange with the Reich Lab team and follow the general structure and [data format](https://github.com/reichlab/covid19-forecast-hub#data-model) defined there.
 
 Unlike in the more advanced US COVID19 forecast hub, forecasts are currently not submitted to us by pull request. Instead, we actively collect available forecasts from various teams and re-format them in a standardized way.
 
@@ -31,18 +31,18 @@ The forecasts assembled in this repository have been created by various teams, m
 
 ## Teams generating forecasts
 
-Currently we assemble forecasts from teh following teams (data reuse license in brackets:
+Currently we assemble forecasts from the following teams (data reuse license in brackets):
 
 - [IHME](https://covid19.healthdata.org/united-states-of-america) (CC-AT-NC4.0)
 - [LANL](https://covid-19.bsvgateway.org/) (custom)
-- [Imperial](https://github.com/sangeetabhatia03/covid19-short-term-forecasts) (none given)
+- [Imperial](https://github.com/sangeetabhatia03/covid19-short-term-forecasts) (Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
 - [MIT](https://www.covidanalytics.io/) (Apache 2.0)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (none given)
 - [YYG](http://covid19-projections.com/) (MIT)
 
 ## Forecast hub team
 
-The following persons have contributed to assembling forecasts in this repository (in aöphabetical order):
+The following persons have contributed to assembling forecasts in this repository (in alphabetical order):
 
 - [Johannes Bracher](https://statistik.econ.kit.edu/mitarbeiter_2902.php)
 - Jannik Deuschel
