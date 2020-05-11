@@ -1,3 +1,10 @@
+#################################################################################
+###### This file has been adapted from code provided in the US COVID19 forecast hub:
+###### URL of original file
+###### The original file has been provided under the MIT license, and so is this adapted version.
+#################################################################################
+
+
 #' Calculate the date of the next Saturday
 #'
 #' @param date date for calculation
