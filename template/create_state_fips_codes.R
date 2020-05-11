@@ -6,7 +6,7 @@
 IHME_raw<-read.csv("../data-raw/IHME/2020_05_04/Hospitalization_all_locs.csv",stringsAsFactors = FALSE)
 
 germany_fips_codes<-read.csv("base_germany.csv")
-state_code<-gsub("GM","",germany_fips_codes$V1)
+#state_code<-gsub("GM","",germany_fips_codes$V1)
 state_name<-c(unique(grep("Baden",IHME_raw$location_name,value = TRUE)),
               unique(grep("Bav",IHME_raw$location_name,value = TRUE)),
               unique(grep("Breme",IHME_raw$location_name,value = TRUE)),
@@ -24,7 +24,7 @@ state_name<-c(unique(grep("Baden",IHME_raw$location_name,value = TRUE)),
               unique(grep("Thu",IHME_raw$location_name,value = TRUE)),
               unique(grep("Berlin",IHME_raw$location_name,value = TRUE)))
 
-export_germany<-data.frame(state_code=as.numeric(state_code),state_name=state_name)
+export_germany<-data.frame(state_code=germany_fips_codes$V1,state_name=state_name)
 write.csv(export_germany,"state_codes_germany.csv")
 
 
