@@ -47,7 +47,8 @@ process_geneva_file <- function(geneva_filepath, forecast_date){
   dat <- subset(dat, country == "Germany" & observed == "Predicted")
   dat$date <- as.Date(dat$date)
   dat <- subset(dat, date > forecast_date) # restrict to timepoints after forecast date
-  dat$location <- dat$location_name <- "Germany"
+  dat$location <- "GM"
+  dat$location_name <- "Germany"
   dat$country <- NULL
   dat$X <- dat$observed <- NULL
 
