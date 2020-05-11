@@ -1,3 +1,10 @@
+#################################################################################
+###### This file has been adapted from code provided in the US COVID19 forecast hub:
+###### https://github.com/reichlab/covid19-forecast-hub/blob/master/data-raw/Geneva/Geneva-processing-script.R
+###### Author of original code: Johannes Bracher
+###### The original file has been provided under the MIT license, and so is this adapted version.
+#################################################################################
+
 ## script for processing Geneva data
 ## Johannes Bracher
 ## April 2020
