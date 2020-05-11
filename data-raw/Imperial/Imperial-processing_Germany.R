@@ -5,6 +5,12 @@
 # Author: Konstantin Görgen
 # Date: 2020-05-10
 # --------------
+#################################################################################
+###### This file has been adapted from code provided in the US COVID19 forecast hub:
+###### https://github.com/reichlab/covid19-forecast-hub/tree/master/data-raw/Imperial/Imperial-processing.R
+###### Author of original code: Jarad Niemi
+###### The original file has been provided under the MIT license, and so is this adapted version.
+#################################################################################
 
 ##Helper Functions for Imperial Script
 

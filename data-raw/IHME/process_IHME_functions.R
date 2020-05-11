@@ -1,10 +1,11 @@
 # Author: Konstantin Görgen
 # Date: Fri May 08 14:51:21 2020
 # --------------
-# Modification:
-# Author:
-# Date:
-# --------------
+#################################################################################
+###### This file has been adapted from code provided in the US COVID19 forecast hub:
+###### https://github.com/reichlab/covid19-forecast-hub/tree/master/data-raw/IHME/IHME-processing.R
+###### The original file has been provided under the MIT license, and so is this adapted version.
+#################################################################################
 
 ##Functions to process IHME files
 

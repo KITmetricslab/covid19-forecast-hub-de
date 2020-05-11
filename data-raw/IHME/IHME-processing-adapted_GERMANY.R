@@ -1,4 +1,11 @@
-##File adapted from original project to fit Germany
+# Author: Konstantin Görgen
+# Date: Mon May 11 13:57:10 2020
+# --------------
+#################################################################################
+###### This file has been adapted from code provided in the US COVID19 forecast hub:
+###### https://github.com/reichlab/covid19-forecast-hub/tree/master/data-raw/IHME/IHME-processing.R
+###### The original file has been provided under the MIT license, and so is this adapted version.
+#################################################################################
 
 ## reformat IHME forecasts
 # Run from data-raw/IHME
