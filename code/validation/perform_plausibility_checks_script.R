@@ -10,6 +10,9 @@ source("code/validation/functions_plausibility.R")
 # make sure locale is English US
 Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 
+# The previous command doesn't work for me(Jannik).
+# sys.setlocale("LC_TIME", "C")
+
 directories <- list.dirs("data-processed")[-1]
 
 plausibility_checks <- list()
