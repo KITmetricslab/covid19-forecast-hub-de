@@ -1,5 +1,11 @@
+#################################################################################
+###### This file has been adapted from code provided in the US COVID19 forecast hub:
+###### URL of original file
+###### Author of original code: Nicholas Reich, Jarad Niemi (US)
+###### The original file has been provided under the MIT license, and so is this adapted version.
+#################################################################################
+
 ## script for processing LANL data 
-## Nicholas Reich, Jarad Niemi (US)
 ## Jannik Deuschel
 ## April 2020
 

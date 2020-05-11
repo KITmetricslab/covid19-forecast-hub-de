@@ -1,7 +1,12 @@
-## script for processing Geneva data
-## Johannes Bracher
+#################################################################################
+###### This file has been adapted from code provided in the US COVID19 forecast hub:
+###### URL of original file
+###### Author of original code: Johannes Bracher
+###### The original file has been provided under the MIT license, and so is this adapted version.
+#################################################################################
+
 ## Jannik Deuschel
-## April 2020
+## May 2020
 
 source("process_MIT_file_germany.R")
 # make sure that English names of days and months are used
