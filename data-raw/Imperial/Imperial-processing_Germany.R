@@ -5,6 +5,12 @@
 # Author: Konstantin Görgen
 # Date: 2020-05-10
 # --------------
+#################################################################################
+###### This file has been adapted from code provided in the US COVID19 forecast hub:
+###### https://github.com/reichlab/covid19-forecast-hub/tree/master/data-raw/Imperial/Imperial-processing.R
+###### Author of original code: Jarad Niemi
+###### The original file has been provided under the MIT license, and so is this adapted version.
+#################################################################################
 
 ##Helper Functions for Imperial Script
 
@@ -145,7 +151,7 @@ format_imperial<-function(path,location="Germany", qntls=c(0.01, 0.025, seq(0.05
   #location: fips_code
   
   #get fips codes
-  state_fips_codes<-read.csv("state_codes_germany.csv",stringsAsFactors = FALSE)[,-1]
+  state_fips_codes<-read.csv("../../template/state_codes_germany.csv",stringsAsFactors = FALSE)[,-1]
   location_name<-location
   location_fips<-state_fips_codes[which(location==state_fips_codes[,2]),1]
   
