@@ -1,3 +1,11 @@
+#################################################################################
+###### This file has been adapted from code provided in the US COVID19 forecast hub:
+###### https://github.com/reichlab/covid19-forecast-hub/blob/master/code/validation/functions_plausibility.R
+###### Author of original code: Johannes Bracher
+###### The original file has been provided under the MIT license, and so is this adapted version.
+#################################################################################
+
+
 # Some functions to perform plausibility checks on forecasts in quantiel format
 # Johannes Bracher, April 2020
 
