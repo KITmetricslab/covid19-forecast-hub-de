@@ -18,14 +18,13 @@ date_from_MIT_filepath <- function(MIT_filepath){
   month <- substr(raw_date, 5, 6)
   day <- substr(raw_date, 7, 8)
   date <- paste(year, month, day, sep="-")
-  print(as.Date(date))
   return(as.Date(date))
 }
 
 #' turn MIT forecast file into quantile-based format
 #'
-#' @param mit_filepath path to a Geneva submission file
-#' @param forecast_date the time at which the forecast was issued; Automated checking is not possible, 
+#' @param mit_filepath path to a MIT submission file
+#' @param forecast_date the time at which the forecast was issued;
 #' @details 
 #' 
 #' 

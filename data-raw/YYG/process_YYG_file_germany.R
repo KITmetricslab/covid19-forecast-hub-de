@@ -1,0 +1,126 @@
+#' helper funtion to extract a date from a CU path name
+#'
+#' @param YGG_filepath the path from which to extract the date
+#'
+#' @return an object of class date
+
+
+date_from_YYG_filepath <- function(YGG_filepath){
+  raw_date <- gsub(".csv", "", gsub("_global", "", YGG_filepath))
+  return(as.Date(raw_date))
+}
+
+#' turn MIT forecast file into quantile-based format
+#'
+#' @param yyg_filepath path to a YYG submission file
+#' @param forecast_date the time at which the forecast was issued;
+#' @details 
+#' 
+#' 
+#' @return a data.frame in quantile format
+
+process_YYG_file<- function(yyg_filepath, forecast_date){
+  
+  dat <- read.csv(yyg_filepath)
+  dat <- subset(dat, country == "Germany")
+  dat$date <- as.Date(dat$date)
+  dat <- subset(dat, date > forecast_date) # restrict to timepoints after forecast date
+  dat$location <- NA
+  dat$location <- "GM"
+  dat$country <- NULL
+  
+  # process mean data
+  daily_dat_mean <- reshape(dat, direction = "long", 
+                            varying = list(c("predicted_deaths_mean", 
+                                             "predicted_total_deaths_mean")),
+                            times = c("day ahead inc death", 
+                                      "day ahead cum death"))
+  daily_dat_mean$quantile <- NA
+  daily_dat_mean$type <- "point"
+  colnames(daily_dat_mean)[colnames(daily_dat_mean) == 
+                             "predicted_deaths_mean"] <- "value"
+  daily_dat_mean$predicted_deaths_lower <- NULL
+  daily_dat_mean$predicted_deaths_upper <- NULL
+  daily_dat_mean$predicted_total_deaths_lower <- NULL
+  daily_dat_mean$predicted_total_deaths_upper <- NULL
+  
+  # process lower quantile
+  daily_dat_lower <- reshape(dat, direction = "long", 
+                            varying = list(c("predicted_deaths_lower",
+                                             "predicted_total_deaths_lower")),
+                            times = c("day ahead inc death",
+                                      "day ahead cum death"))
+  daily_dat_lower$quantile <- 0.025
+  daily_dat_lower$type <- "quantile"
+  colnames(daily_dat_lower)[colnames(daily_dat_lower) == 
+                             "predicted_deaths_lower"] <- "value"
+  daily_dat_lower$predicted_deaths_mean <- NULL
+  daily_dat_lower$predicted_deaths_upper <- NULL
+  daily_dat_lower$predicted_total_deaths_mean <- NULL
+  daily_dat_lower$predicted_total_deaths_upper <- NULL
+  
+  # process upper quantile
+  daily_dat_upper <- reshape(dat, direction = "long", 
+                             varying = list(c("predicted_deaths_upper", 
+                                              "predicted_total_deaths_upper")),
+                             times = c("day ahead inc death", 
+                                       "day ahead cum death"))
+  daily_dat_upper$quantile <- 0.975
+  daily_dat_upper$type <- "quantile"
+  colnames(daily_dat_upper)[colnames(daily_dat_upper) == 
+                              "predicted_deaths_upper"] <- "value"
+  daily_dat_upper$predicted_deaths_mean <- NULL
+  daily_dat_upper$predicted_deaths_lower <- NULL
+  daily_dat_upper$predicted_total_deaths_mean <- NULL
+  daily_dat_upper$predicted_total_deaths_lower <- NULL
+  
+  daily_dat <- rbind(daily_dat_mean, daily_dat_lower, daily_dat_upper)
+  
+  daily_dat$id <- NULL
+  rownames(daily_dat) <- NULL
+  
+  # get forecast horizons:
+  daily_dat$horizon <- as.numeric(daily_dat$date - forecast_date)
+  daily_dat$target <- paste(daily_dat$horizon, daily_dat$time)
+  
+  # remove unneeded columns
+  daily_dat$time <- daily_dat$horizon <- NULL
+  
+  # add required ones:
+  daily_dat$forecast_date <- forecast_date
+  daily_dat$location_name <- "Germany"
+  colnames(daily_dat)[colnames(daily_dat) == "date"] <- "target_end_date"
+  
+  daily_dat <- daily_dat[, c("forecast_date", "target", "target_end_date", "location",
+                             "location_name", "type", "quantile", "value")]
+  
+  # add one-week-ahead cumulative forecast if possible:
+  # get day of the week of forecast_date:
+  day <- weekdays(forecast_date, abbreviate = TRUE)
+  
+  # When do the one-week-ahead forecast end?
+  next_dates <- seq(from = forecast_date, length.out = 14, by = 1)
+  next_days <- weekdays(next_dates, abbreviate = TRUE)
+  if(day %in% c("Sun", "Mon")){
+    forecast_1_wk_ahead_end <- next_dates[next_days == "Sat"][1]
+  }else{
+    forecast_1_wk_ahead_end <- next_dates[next_days == "Sat"][2]
+  }
+  # Whether the one-week-ahead forecast can be computed depends on the day
+  # the forecasts were issued:
+  if(max(daily_dat$target_end_date) > forecast_1_wk_ahead_end){
+    ends_weekly_forecasts <- data.frame(end = seq(from = forecast_1_wk_ahead_end,
+                                                  by = 7, to = max(daily_dat$target_end_date)))
+    ends_weekly_forecasts$target <- paste(1:nrow(ends_weekly_forecasts), "wk ahead cum death")
+    # restrict to respective cumulative forecasts:
+    weekly_dat <- subset(daily_dat, target_end_date %in% ends_weekly_forecasts$end &
+                           grepl("cum", daily_dat$target))
+    weekly_dat$target <- NULL
+    weekly_dat <- merge(weekly_dat, ends_weekly_forecasts, by.x = "target_end_date", by.y = "end")
+    weekly_dat <- weekly_dat[, colnames(daily_dat)]
+    
+    daily_dat <- rbind(daily_dat, weekly_dat)
+  }
+  
+  return(daily_dat) 
+}
