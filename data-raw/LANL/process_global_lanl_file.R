@@ -1,5 +1,12 @@
+#################################################################################
+###### This file has been adapted from code provided in the US COVID19 forecast hub:
+###### URL of original file
+###### Author of original code: Nicholas Reich, Jarad Niemi
+###### The original file has been provided under the MIT license, and so is this adapted version.
+#################################################################################
+
 ## LANL cumulative death data functions
-## Nicholas Reich, Jarad Niemi
+## Jannik Deuschel
 ## April 2020
 
 source("../../code/processing-fxns/get_next_saturday.R")
