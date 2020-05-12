@@ -24,8 +24,9 @@ state_name<-c(unique(grep("Baden",IHME_raw$location_name,value = TRUE)),
               unique(grep("Thu",IHME_raw$location_name,value = TRUE)),
               unique(grep("Berlin",IHME_raw$location_name,value = TRUE)))
 
-export_germany<-data.frame(state_code=germany_fips_codes$V1,state_name=state_name)
-write.csv(export_germany,"state_codes_germany.csv")
+export_states<-data.frame(state_code=germany_fips_codes$V1,state_name=state_name)
+export_germany<-rbind(export_states,c("GM","Germany"))
+write.csv(export_germany,"state_codes_germany.csv",row.names = FALSE)
 
 
 

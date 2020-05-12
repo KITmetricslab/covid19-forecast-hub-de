@@ -151,7 +151,7 @@ format_imperial<-function(path,location="Germany", qntls=c(0.01, 0.025, seq(0.05
   #location: fips_code
   
   #get fips codes
-  state_fips_codes<-read.csv("../../template/state_codes_germany.csv",stringsAsFactors = FALSE)[,-1]
+  state_fips_codes<-read.csv("../../template/state_codes_germany.csv",stringsAsFactors = FALSE)
   location_name<-location
   location_fips<-state_fips_codes[which(location==state_fips_codes[,2]),1]
   

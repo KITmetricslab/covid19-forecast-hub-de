@@ -75,7 +75,7 @@ make_qntl_dat <- function(path, all_states = FALSE) {
   ## read state code
   state_fips_codes <-
     read.csv("../../template/state_codes_germany.csv",
-             stringsAsFactors = FALSE)[,-1]
+             stringsAsFactors = FALSE)
   
   ## code for incident deaths
   
