@@ -4,14 +4,14 @@
 ###### Author of original code: Johannes Bracher
 ###### The original file has been provided under the MIT license, and so is this adapted version.
 #################################################################################
-
+#run from top folder
 source("code/validation/functions_plausibility.R")
 
 # make sure locale is English US
 Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 
-# The previous command doesn't work for me(Jannik).
-# sys.setlocale("LC_TIME", "C")
+# The previous command doesn't work for me(Jannik) and me(Konstantin).
+#Sys.setlocale("LC_TIME", "C")
 
 directories <- list.dirs("data-processed")[-1]
 
