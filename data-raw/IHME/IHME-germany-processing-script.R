@@ -9,19 +9,26 @@
 
 ## reformat IHME forecasts
 # Run from data-raw/IHME
-source("process_IHME_functions.R")
+source("process_IHME-germany_functions.R")
 
 ## list all files and read
-filepaths <- list.files("./",pattern = "Hospitalization_all_locs.csv", recursive =TRUE,full.names = TRUE)
+filepaths <-
+  list.files("./",
+             pattern = "Hospitalization_all_locs.csv",
+             recursive = TRUE,
+             full.names = TRUE)
 
-  for(i in 1:length(filepaths)){
-    formatted_file <- make_qntl_dat(filepaths[i])
- 
-    date<-get_date(filepaths[i])
-    
-    write_csv(formatted_file,
-              path = paste0("../../data-processed/IHME-CurveFit/",
-                            date,
-                            "-Germany-IHME-CurveFit.csv"))
-  }
-
+for (i in 1:length(filepaths)) {
+  formatted_file <- make_qntl_dat(filepaths[i])
+  
+  date <- get_date(filepaths[i])
+  
+  write_csv(
+    formatted_file,
+    path = paste0(
+      "../../data-processed/IHME-CurveFit/",
+      date,
+      "-Germany-IHME-CurveFit.csv"
+    )
+  )
+}
