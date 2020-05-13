@@ -9,7 +9,7 @@ source("code/validation/functions_plausibility.R")
 
 # make sure locale is English US
 # Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
-Sys.setlocale("LC_Time","English")
+Sys.setlocale("LC_TIME","English")
 
 # The previous command doesn't work for me(Jannik) and me(Konstantin).
 #Sys.setlocale("LC_TIME", "C")
