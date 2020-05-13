@@ -12,7 +12,16 @@ library(RColorBrewer)
 
 source("code/app_functions.R")
 
-Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
+# Choose the right option, depending on your system:
+# ----------------------------------------------------------------------------
+
+# unix command
+#Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
+
+# command that should work cross-platform 
+Sys.setlocale("LC_Time","English")
+
+# ----------------------------------------------------------------------------
 
 forecasts_to_plot <- read.csv("data/forecasts_to_plot.csv")
 forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
