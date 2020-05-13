@@ -19,7 +19,7 @@ source("code/app_functions.R")
 #Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 
 # command that should work cross-platform 
-Sys.setlocale("LC_Time","English")
+Sys.setlocale(category = "LC_TIME","English")
 
 # ----------------------------------------------------------------------------
 
