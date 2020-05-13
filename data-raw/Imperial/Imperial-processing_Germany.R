@@ -30,12 +30,17 @@ get_next_saturday <- function(date) {
   new_date <- diff + date
   return(new_date)
 }
+
 #Function to extract date from Imperial Path
+#' Calculate the date of the computation from file path
+#'
+#' @param path file path of .rds file
+#'
+#' @return the date of publication as in the file name as a date object
 get_date<-function(path)
 {
   as.Date(substr(path,start=nchar(path)-13,stop=nchar(path)-4))
 }
-
 
 #Main function for Germany, adapted from Reichlab Repo
 
@@ -54,9 +59,21 @@ format_imperial<-function(path,location="Germany", qntls=c(0.01, 0.025, seq(0.05
   require(tidyverse)
   require(lubridate)
   
-  #only take first since both are identical for Germany
-  data_raw<-readRDS(path)$Predictions$Germany[[1]]  
+  #check whether new ensemble data or old DeCa Data file
+  new_format<-grepl("ensemble_model_predictions",path)
+  
+  #get date of publication
   date_publish<-get_date(path)
+  if(new_format) {
+    #take data for Germany and second column which gives main ensemble result
+    data_raw<-readRDS(path)[[as.character(date_publish)]]$Germany[[2]]
+  } else {
+    #only take first since both are identical for Germany
+    data_raw<-readRDS(path)$Predictions$Germany[[1]]
+  }
+  
+ 
+  
   #get timezero as in Reichlab function, i.e. date of official forecast collection
   timezero<-date_publish
   
