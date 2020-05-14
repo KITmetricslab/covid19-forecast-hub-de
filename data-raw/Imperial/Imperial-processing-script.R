@@ -13,20 +13,19 @@ source("Imperial-processing_Germany.R")
 #i.e. in data-raw/Imperial
 
 #read in file paths and delete those without Germany in them
-filepaths <- list.files(pattern = ".rds", recursive =FALSE,full.names = TRUE)
+filepaths <- list.files(pattern = "ensemble_model_predictions", recursive =TRUE,full.names = TRUE)
+
+#only take those where Germany was reported
 reported_countries<-list()
 germany_reported<-rep(NA,length(filepaths))
 
-#old check, now moved all wrong data into Old_Data folder and changed parameter
-#recursive
+for(i in 1:length(filepaths))
+{
+  reported_countries[[i]]<-names(readRDS(filepaths[i])[[1]])
+  germany_reported[i]<-as.logical(sum(reported_countries[[i]]=="Germany"))
 
-# for(i in 1:length(filepaths))
-# {
-#   reported_countries[[i]]<-readRDS(filepaths[i])$Country
-#   germany_reported[i]<-as.logical(sum(reported_countries[[i]]=="Germany"))
-#   
-# }
-# filepaths<-filepaths[germany_reported]
+}
+filepaths<-filepaths[germany_reported]
 
 #write final files
 

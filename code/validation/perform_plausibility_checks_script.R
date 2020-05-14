@@ -18,6 +18,6 @@ directories <- list.dirs("data-processed")[-1]
 
 plausibility_checks <- list()
 
-for(dir in directories){
+for(dir in directories[3]){
   plausibility_checks[[dir]] <- validate_directory(dir)
 }
