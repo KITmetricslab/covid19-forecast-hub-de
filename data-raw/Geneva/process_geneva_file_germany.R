@@ -44,9 +44,9 @@ process_geneva_file <- function(geneva_filepath, forecast_date){
   dat <- read.csv(geneva_filepath)
 
   # restrict to US, format:
-  dat <- subset(dat, country == "Germany" & observed == "Predicted")
+  dat <- subset(dat, country == "Germany")
   dat$date <- as.Date(dat$date)
-  dat <- subset(dat, date > forecast_date) # restrict to timepoints after forecast date
+  # dat <- subset(dat, date > forecast_date) # restrict to timepoints after forecast date
   dat$location <- "GM"
   dat$location_name <- "Germany"
   dat$country <- NULL
@@ -67,7 +67,7 @@ process_geneva_file <- function(geneva_filepath, forecast_date){
 
   # add required ones:
   daily_dat$quantile <- NA
-  daily_dat$type = "point"
+  daily_dat$type = ifelse(daily_dat$date > forecast_date, "point", "observed")
   daily_dat$forecast_date <- forecast_date
 
   # adapt colnames and order
@@ -76,7 +76,7 @@ process_geneva_file <- function(geneva_filepath, forecast_date){
   daily_dat <- daily_dat[, c("forecast_date", "target", "target_end_date", "location",
                            "location_name", "type", "quantile", "value")]
 
-  # add one-week-ahead cumulative forecast if possible:
+  # add one-week-ahead cumulative forecast if possible as well as 0 and -1-week ahead forecasts:
   # get day of the week of forecast_date:
   day <- weekdays(forecast_date, abbreviate = TRUE)
 
@@ -90,10 +90,10 @@ process_geneva_file <- function(geneva_filepath, forecast_date){
   }
   # Whether the one-week-ahead forecast can be computed depends on the day
   # the forecasts were issued:
-  if(max(daily_dat$target_end_date) > forecast_1_wk_ahead_end){
-    ends_weekly_forecasts <- data.frame(end = seq(from = forecast_1_wk_ahead_end,
+  if(max(daily_dat$target_end_date) > forecast_1_wk_ahead_end - 14){
+    ends_weekly_forecasts <- data.frame(end = seq(from = forecast_1_wk_ahead_end - 14,
                                                   by = 7, to = max(daily_dat$target_end_date)))
-    ends_weekly_forecasts$target <- paste(1:nrow(ends_weekly_forecasts), "wk ahead cum death")
+    ends_weekly_forecasts$target <- paste((-1):(nrow(ends_weekly_forecasts) -2), "wk ahead cum death")
     # restrict to respective cumulative forecasts:
     weekly_dat <- subset(daily_dat, target_end_date %in% ends_weekly_forecasts$end &
                            grepl("cum", daily_dat$target))
@@ -103,6 +103,11 @@ process_geneva_file <- function(geneva_filepath, forecast_date){
 
     daily_dat <- rbind(daily_dat, weekly_dat)
   }
+
+  # restrict to larget or equal to -1 days ahead:
+  daily_dat <- subset(daily_dat, target %in% c(paste((-1):30, "day ahead cum death"),
+                                               paste((-1):30, "day ahead inc death"),
+                                               paste((-1):7, "wk ahead cum death")))
 
   return(daily_dat)
 }
