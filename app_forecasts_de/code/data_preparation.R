@@ -1,11 +1,12 @@
-setwd("/home/johannes/Documents/COVID/covid19-forecast-hub_de/app_forecasts_de")
+setwd("/home/johannes/Documents/COVID/covid19-forecast-hub-de/app_forecasts_de")
 source("code/app_functions.R")
 
 Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 
 # get overview on processed files:
 models <- list.dirs("../data-processed", recursive = FALSE, full.names = FALSE)
-models <- c("Geneva-DeterministicGrowth", "LANL-GrowthRate", "MIT-CovidAnalytics-DELPHI", "Imperial-ensemble1")
+models <- c("Geneva-DeterministicGrowth", "LANL-GrowthRate", "MIT-CovidAnalytics-DELPHI",
+            "Imperial-ensemble1", "YYG-ParamSearch")
 
 available_dates <- relevant_dates <- list()
 
@@ -24,7 +25,7 @@ for(m in models){
                      stringsAsFactors = FALSE)
     temp$forecast_date <- as.Date(temp$forecast_date)
     temp$target_end_date <- as.Date(temp$target_end_date)
-    temp <- subset(temp, target %in% paste(1:4, "wk ahead cum death") &
+    temp <- subset(temp, target %in% paste(-1:4, "wk ahead cum death") &
                      (quantile %in% c(0.1, 0.9) | type == "point"))
     temp$timezero <- next_monday(temp$forecast_date)
     temp$model <- m
