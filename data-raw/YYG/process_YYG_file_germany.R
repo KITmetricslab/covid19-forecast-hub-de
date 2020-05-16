@@ -49,6 +49,7 @@ process_YYG_file<- function(yyg_filepath, forecast_date){
   daily_dat_mean$predicted_total_deaths_lower <- NULL
   daily_dat_mean$predicted_total_deaths_upper <- NULL
   daily_dat_mean$actual_deaths <- NULL
+  daily_dat_mean$total_deaths <- NULL
   
   # process lower quantile
   daily_dat_lower <- reshape(dat_pred, direction = "long", 
@@ -66,6 +67,7 @@ process_YYG_file<- function(yyg_filepath, forecast_date){
   daily_dat_lower$predicted_total_deaths_mean <- NULL
   daily_dat_lower$predicted_total_deaths_upper <- NULL
   daily_dat_lower$actual_deaths <- NULL
+  daily_dat_lower$total_deaths <- NULL
   
   # process upper quantile
   daily_dat_upper <- reshape(dat_pred, direction = "long", 
@@ -82,6 +84,7 @@ process_YYG_file<- function(yyg_filepath, forecast_date){
   daily_dat_upper$predicted_total_deaths_mean <- NULL
   daily_dat_upper$predicted_total_deaths_lower <- NULL
   daily_dat_upper$actual_deaths <- NULL
+  daily_dat_upper$total_deaths <- NULL
   
   
   # Process ground truth data
@@ -90,8 +93,8 @@ process_YYG_file<- function(yyg_filepath, forecast_date){
   dat_past <- subset(dat, date <= forecast_date)
   
   dat_past <- reshape(dat_past, direction = "long", 
-                      varying = list(c("actual_deaths")),
-                      times = c("day ahead cum death"))
+                      varying = list(c("actual_deaths", "total_deaths")),
+                      times = c("day ahead inc death", "day ahead cum death"))
   
   dat_past$quantile <- NA
   dat_past$type <- "observed"
@@ -163,4 +166,5 @@ process_YYG_file<- function(yyg_filepath, forecast_date){
 
 
 
+tmp_dat <- process_YYG_file("2020-05-13_global.csv", forecast_date = as.Date("2020-05-13"))
 
