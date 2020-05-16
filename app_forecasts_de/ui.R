@@ -22,6 +22,7 @@ dashboardPage(
               uiOutput("inp_select_date"),
               uiOutput("inp_select_model"),
               checkboxInput("show_pi", label = "Show 90% prediction interval where available", value = TRUE),
+              checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
               plotOutput("plot_forecasts", height = 500)
       ),
 

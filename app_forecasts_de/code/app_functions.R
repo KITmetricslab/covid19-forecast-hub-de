@@ -27,9 +27,11 @@ modify_alpha <- function(col, alpha){
 }
 
 add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
-                                 element = c("both", "points", "intervals"),
+                                 add_points = TRUE,
+                                 add_intervals = TRUE,
+                                 add_past = FALSE,
                                  col = "blue", alpha.col = 0.3){
-  if(element %in% c("both", "intervals")){
+  if(add_intervals){
     last_truth <- truth[truth$date == timezero - 2, "value"]
 
     subs_upper <- forecasts_to_plot[which(forecasts_to_plot$model == model &
@@ -50,11 +52,19 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
             c(last_truth, subs_intervals$value), col = col_transp, border = NA)
   }
 
-  if(element %in% c("both", "points")){
+  if(add_points){
     subs_points <- forecasts_to_plot[which(forecasts_to_plot$model == model &
                                               forecasts_to_plot$timezero == timezero &
                                               forecasts_to_plot$type == "point"), ]
     points(subs_points$target_end_date, subs_points$value, col = col,
+           pch = 21, lwd = 2)
+  }
+
+  if(add_past){
+    subs_past <- forecasts_to_plot[which(forecasts_to_plot$model == model &
+                                             forecasts_to_plot$timezero == timezero &
+                                             forecasts_to_plot$type == "observed"), ]
+    points(subs_past$target_end_date, subs_past$value, col = col,
            pch = 21, lwd = 2)
   }
 }
@@ -99,6 +109,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            start = as.Date("2020-03-01"), end = Sys.Date() + 28,
                            ylim = c(0, 100000),
                            show_pi = TRUE,
+                           add_model_past = FALSE,
                            cols, alpha.col = 0.5,
                            legend = TRUE){
   empty_plot(ylim = ylim)
@@ -110,7 +121,9 @@ plot_forecasts <- function(forecasts_to_plot, truth,
         add_forecast_to_plot(forecasts_to_plot = forecasts_to_plot,
                              truth = truth,
                              timezero = timezero,
-                             model = models[i], element = "intervals", col = cols[i])
+                             model = models[i], add_intervals = TRUE,
+                             add_past = FALSE, add_points = FALSE,
+                             col = cols[i])
       }
     }
 
@@ -120,7 +133,20 @@ plot_forecasts <- function(forecasts_to_plot, truth,
       add_forecast_to_plot(forecasts_to_plot = forecasts_to_plot,
                            truth = truth,
                            timezero = timezero,
-                           model = models[i], element = "points", col = cols[i])
+                           model = models[i],
+                           add_points = TRUE, add_intervals = FALSE,
+                           add_past = FALSE, col = cols[i])
+    }
+
+    if(add_model_past){
+      for(i in seq_along(models)){
+        add_forecast_to_plot(forecasts_to_plot = forecasts_to_plot,
+                             truth = truth,
+                             timezero = timezero,
+                             model = models[i],
+                             add_points = FALSE, add_intervals = FALSE,
+                             add_past = TRUE, col = cols[i])
+      }
     }
 
     if(legend){

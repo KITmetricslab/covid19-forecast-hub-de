@@ -26,7 +26,7 @@ for(m in models){
     temp$forecast_date <- as.Date(temp$forecast_date)
     temp$target_end_date <- as.Date(temp$target_end_date)
     temp <- subset(temp, target %in% paste(-1:4, "wk ahead cum death") &
-                     (quantile %in% c(0.1, 0.9) | type == "point"))
+                     (quantile %in% c(0.1, 0.9) | type == "point" | type == "observed"))
     temp$timezero <- next_monday(temp$forecast_date)
     temp$model <- m
 

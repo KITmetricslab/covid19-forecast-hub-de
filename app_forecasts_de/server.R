@@ -16,10 +16,10 @@ source("code/app_functions.R")
 # ----------------------------------------------------------------------------
 
 # unix command
-#Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
+Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 
-# command that should work cross-platform 
-Sys.setlocale(category = "LC_TIME","English")
+# command that should work cross-platform
+# Sys.setlocale(category = "LC_TIME","English")
 
 # ----------------------------------------------------------------------------
 
@@ -64,7 +64,8 @@ shinyServer(function(input, output) {
                    ylim = c(0, 12000),
                    col = cols[input$select_models], alpha.col = 0.5,
                    legend = FALSE,
-                   show_pi = input$show_pi)
+                   show_pi = input$show_pi,
+                   add_model_past = input$show_model_past)
     legend("topleft", col = cols, legend = models, lty = 0, bty = "n",
            pch = ifelse(models %in% input$select_models, 16, 1), pt.cex = 1.3)
   })
