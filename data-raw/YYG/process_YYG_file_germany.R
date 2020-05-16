@@ -106,7 +106,7 @@ process_YYG_file<- function(yyg_filepath, forecast_date){
   dat_past$predicted_total_deaths_upper <- NULL
   
   
-  daily_dat <- rbind(daily_dat_mean, daily_dat_lower, daily_dat_upper, dat_past)
+  daily_dat <- rbind(dat_past,daily_dat_mean, daily_dat_lower, daily_dat_upper)
   
   daily_dat$id <- NULL
   rownames(daily_dat) <- NULL
