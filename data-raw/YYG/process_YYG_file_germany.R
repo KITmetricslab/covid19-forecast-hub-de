@@ -165,6 +165,3 @@ process_YYG_file<- function(yyg_filepath, forecast_date){
 }
 
 
-
-tmp_dat <- process_YYG_file("2020-05-13_global.csv", forecast_date = as.Date("2020-05-13"))
-
