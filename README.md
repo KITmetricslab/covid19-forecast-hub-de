@@ -46,4 +46,6 @@ The following persons have contributed to assembling forecasts in this repositor
 
 - [Johannes Bracher](https://statistik.econ.kit.edu/mitarbeiter_2902.php)
 - Jannik Deuschel
+- [Tilmann Gneiting](https://www.h-its.org/2018/01/08/tilmann-gneiting/)
 - [Konstantin Görgen](https://statistik.econ.kit.edu/mitarbeiter_2716.php)
+- [Melanie Schienle](https://statistik.econ.kit.edu/mitarbeiter_2068.php)
