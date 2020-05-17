@@ -1,6 +1,6 @@
 # A German COVID-19 Forecast Hub
 
-*THIS PROJECT IS IN A DEVELOPMENT STAGE AND NOT OPERATIONAL YET. WE CURRENTLY CANNOT GUARANTEE THE CORRECTNESS OF THE PROVIDED DATA. THIS PROJECT IS BY NO MEANS OFFICIALLY ENDORSED BY KIT NOR HITS.*
+*THIS PROJECT IS IN A DEVELOPMENT STAGE AND NOT OPERATIONAL YET. WE CURRENTLY CANNOT GUARANTEE THE CORRECTNESS OF THE PROVIDED DATA. THE PLATFORM IS BY NO MEANS OFFICIALLY ENDORSED BY KIT NOR HITS.*
 
 ## Purpose
 
@@ -31,18 +31,18 @@ The forecasts assembled in this repository have been created by various teams, m
 
 ## Teams generating forecasts
 
-Currently we assemble forecasts from the following teams (data reuse license in brackets):
+Currently we assemble forecasts from the following teams. *Note that not all teams are using the same ground truth data.* (used data source and forecast reuse license in brackets):
 
-- [IHME](https://covid19.healthdata.org/united-states-of-america) (CC-AT-NC4.0)
-- [LANL](https://covid-19.bsvgateway.org/) (custom)
-- [Imperial](https://github.com/sangeetabhatia03/covid19-short-term-forecasts) (Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
-- [MIT](https://www.covidanalytics.io/) (Apache 2.0)
-- [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (none given)
-- [YYG](http://covid19-projections.com/) (MIT)
+- [IHME](https://covid19.healthdata.org/united-states-of-america) (unclear; CC-AT-NC4.0)
+- [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)
+- [Imperial](https://github.com/sangeetabhatia03/covid19-short-term-forecasts) (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
+- [MIT](https://www.covidanalytics.io/) (JHU; Apache 2.0)
+- [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
+- [YYG](http://covid19-projections.com/) (JHU; MIT)
 
 ## Forecast hub team
 
-The following persons have contributed to assembling forecasts in this repository (in alphabetical order):
+The following persons have contributed to this repository, either by assembling forecasts or by conceptual work in the background (in alphabetical order):
 
 - [Johannes Bracher](https://statistik.econ.kit.edu/mitarbeiter_2902.php)
 - Jannik Deuschel
