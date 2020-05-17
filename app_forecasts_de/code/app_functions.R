@@ -32,7 +32,7 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
                                  add_past = FALSE,
                                  col = "blue", alpha.col = 0.3){
   if(add_intervals){
-    last_truth <- truth[truth$date == timezero - 2, "value"]
+    # last_truth <- truth[truth$date == timezero - 2, "value"]
 
     subs_upper <- forecasts_to_plot[which(forecasts_to_plot$model == model &
                                              forecasts_to_plot$timezero == timezero &
@@ -48,8 +48,11 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
     subs_intervals <- rbind(subs_lower, subs_upper)
 
     col_transp <- modify_alpha(col, alpha.col)
-    polygon(c(timezero - 2, subs_intervals$target_end_date),
-            c(last_truth, subs_intervals$value), col = col_transp, border = NA)
+    # temporarily removed last_truth from polygon as last truth can be different from model to model
+    polygon(c(subs_intervals$target_end_date),
+            c(subs_intervals$value), col = col_transp, border = NA)
+    # polygon(c(timezero - 2, subs_intervals$target_end_date),
+    #         c(last_truth, subs_intervals$value), col = col_transp, border = NA)
   }
 
   if(add_points){
@@ -81,7 +84,7 @@ empty_plot <- function(start = as.Date("2020-03-01"), end = Sys.Date() + 28, yli
   box()
 }
 
-add_truth_to_plot <- function(truth, timezero){
+add_truth_to_plot <- function(truth, timezero, pch){
   truth <- subset(truth, weekdays(truth$date) == "Saturday")
   inds_obs <- which(truth$date < timezero)
   inds_unobs <- which(truth$date > timezero)
@@ -89,10 +92,10 @@ add_truth_to_plot <- function(truth, timezero){
   lines(truth$date[c(ind_last, inds_unobs)], truth$value[c(ind_last, inds_unobs)],
          col = "grey25", lwd = 2)
   points(truth$date[c(ind_last, inds_unobs)], truth$value[c(ind_last, inds_unobs)],
-         pch = 16, col = "grey25", bg = "white", lwd = 2)
+         pch = pch, col = "grey25", bg = "white", lwd = 2)
   lines(truth$date[inds_obs], truth$value[inds_obs], lwd = 2)
   points(truth$date[inds_obs], truth$value[inds_obs],
-         pch = 16, bg = "white", lwd = 2)
+         pch = pch, bg = "white", lwd = 2)
 }
 
 
@@ -105,12 +108,13 @@ highlight_timezero <- function(timezero, ylim = c(-1000, 100000)){
 
 
 plot_forecasts <- function(forecasts_to_plot, truth,
-                           timezero, models,
+                           timezero, models, selected_truth = names(truth)[1],
                            start = as.Date("2020-03-01"), end = Sys.Date() + 28,
                            ylim = c(0, 100000),
                            show_pi = TRUE,
                            add_model_past = FALSE,
                            cols, alpha.col = 0.5,
+                           pch_truths,
                            legend = TRUE){
   empty_plot(ylim = ylim)
   highlight_timezero(timezero)
@@ -126,9 +130,13 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                              col = cols[i])
       }
     }
+  }
 
-    add_truth_to_plot(truth, timezero)
+    for(t in selected_truth){
+      add_truth_to_plot(truth[[t]], timezero, pch = pch_truths[t])
+    }
 
+  if(length(models) > 0){
     for(i in seq_along(models)){
       add_forecast_to_plot(forecasts_to_plot = forecasts_to_plot,
                            truth = truth,
@@ -148,11 +156,10 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                              add_past = TRUE, col = cols[i])
       }
     }
-
-    if(legend){
-      legend("topleft", col = cols, pch = 21, legend = models, lwd = 2, lty = 0, bty = "n")
-    }
   }
 
+  if(legend){
+    legend("topleft", col = cols, pch = 21, legend = models, lwd = 2, lty = 0, bty = "n")
+  }
 
 }
