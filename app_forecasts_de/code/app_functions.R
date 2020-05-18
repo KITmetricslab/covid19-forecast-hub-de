@@ -15,7 +15,11 @@ choose_relevant_dates <- function(dates){
   next_mondays <- next_monday(dates)
   relevant_dates <- c()
   for(day in c("Monday", "Sunday", "Saturday", "Friday")){
-    relevant_dates <- c(relevant_dates, dates[wds == day & !(next_mondays %in% relevant_dates)])
+    relevant_dates <- c(relevant_dates, dates[wds == day &
+                                                !(next_mondays %in% relevant_dates) &
+                                                !((next_mondays - 1) %in% relevant_dates) &
+                                                !((next_mondays - 2) %in% relevant_dates)
+                                              ])
   }
   relevant_dates <- as.Date(relevant_dates, origin = "1970-01-01")
   return(as.Date(relevant_dates, origin = "1970-01-01"))
