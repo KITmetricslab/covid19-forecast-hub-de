@@ -4,20 +4,26 @@
 ###### Author of original code: Johannes Bracher
 ###### The original file has been provided under the MIT license, and so is this adapted version.
 #################################################################################
-#run from top folder
-source("code/validation/functions_plausibility.R")
+#run from source file
+source("functions_plausibility.R")
 
 # make sure locale is English US
+#see if you're on Windows or other OS
+if(Sys.info()[1]=="Windows") {
+  Sys.setlocale("LC_TIME", "English")
+} else {
+  Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
+}
 # Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
-Sys.setlocale("LC_TIME","English")
+#Sys.setlocale("LC_TIME","English")
 
 # The previous command doesn't work for me(Jannik) and me(Konstantin).
 #Sys.setlocale("LC_TIME", "C")
 
-directories <- list.dirs("data-processed")[-1]
+directories <- list.dirs("../../data-processed")[-1]
 
 plausibility_checks <- list()
 
-for(dir in directories[3]){
+for(dir in directories[2]){
   plausibility_checks[[dir]] <- validate_directory(dir)
 }

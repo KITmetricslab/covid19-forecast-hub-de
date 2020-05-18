@@ -1,4 +1,10 @@
 forecast_date,target,target_end_date,location,location_name,type,quantile,value
+2020-04-28,-1 day ahead cum death,2020-04-27,GM,Germany,observed,NA,5760.999
+2020-04-28,-1 day ahead inc death,2020-04-27,GM,Germany,observed,NA,110
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM,Germany,observed,NA,5510.999
+2020-04-28,0 day ahead cum death,2020-04-28,GM,Germany,observed,NA,5923.999
+2020-04-28,0 day ahead inc death,2020-04-28,GM,Germany,observed,NA,163
+2020-04-28,0 wk ahead cum death,2020-05-02,GM,Germany,point,NA,6373.634
 2020-04-28,1 day ahead cum death,2020-04-29,GM,Germany,point,NA,6054.632
 2020-04-28,1 day ahead inc death,2020-04-29,GM,Germany,point,NA,130.633
 2020-04-28,1 wk ahead cum death,2020-05-09,GM,Germany,point,NA,6772.224
@@ -208,6 +214,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM,Germany,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM,Germany,point,NA,6921.869
 2020-04-28,98 day ahead inc death,2020-08-04,GM,Germany,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM,Germany,quantile,0.025,6002.975
 2020-04-28,1 day ahead cum death,2020-04-29,GM,Germany,quantile,0.025,5948
 2020-04-28,1 day ahead inc death,2020-04-29,GM,Germany,quantile,0.025,24
 2020-04-28,1 wk ahead cum death,2020-05-09,GM,Germany,quantile,0.025,6052.975
@@ -417,6 +424,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM,Germany,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM,Germany,quantile,0.025,6054.975
 2020-04-28,98 day ahead inc death,2020-08-04,GM,Germany,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM,Germany,quantile,0.975,7418.575
 2020-04-28,1 day ahead cum death,2020-04-29,GM,Germany,quantile,0.975,6349.175
 2020-04-28,1 day ahead inc death,2020-04-29,GM,Germany,quantile,0.975,425.175
 2020-04-28,1 wk ahead cum death,2020-05-09,GM,Germany,quantile,0.975,8889.1
@@ -626,6 +634,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM,Germany,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM,Germany,quantile,0.975,9591.55
 2020-04-28,98 day ahead inc death,2020-08-04,GM,Germany,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM01,Baden-Wurttemberg,observed,NA,1248.999
+2020-04-28,-1 day ahead inc death,2020-04-27,GM01,Baden-Wurttemberg,observed,NA,12
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM01,Baden-Wurttemberg,observed,NA,1188.999
+2020-04-28,0 day ahead cum death,2020-04-28,GM01,Baden-Wurttemberg,observed,NA,1268.999
+2020-04-28,0 day ahead inc death,2020-04-28,GM01,Baden-Wurttemberg,observed,NA,20
+2020-04-28,0 wk ahead cum death,2020-05-02,GM01,Baden-Wurttemberg,point,NA,1360.36
 2020-04-28,1 day ahead cum death,2020-04-29,GM01,Baden-Wurttemberg,point,NA,1295.46
 2020-04-28,1 day ahead inc death,2020-04-29,GM01,Baden-Wurttemberg,point,NA,26.461
 2020-04-28,1 wk ahead cum death,2020-05-09,GM01,Baden-Wurttemberg,point,NA,1439.01
@@ -835,6 +849,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM01,Baden-Wurttemberg,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM01,Baden-Wurttemberg,point,NA,1461.484
 2020-04-28,98 day ahead inc death,2020-08-04,GM01,Baden-Wurttemberg,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM01,Baden-Wurttemberg,quantile,0.025,1288
 2020-04-28,1 day ahead cum death,2020-04-29,GM01,Baden-Wurttemberg,quantile,0.025,1275
 2020-04-28,1 day ahead inc death,2020-04-29,GM01,Baden-Wurttemberg,quantile,0.025,6
 2020-04-28,1 wk ahead cum death,2020-05-09,GM01,Baden-Wurttemberg,quantile,0.025,1301
@@ -1044,6 +1059,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM01,Baden-Wurttemberg,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM01,Baden-Wurttemberg,quantile,0.025,1302
 2020-04-28,98 day ahead inc death,2020-08-04,GM01,Baden-Wurttemberg,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM01,Baden-Wurttemberg,quantile,0.975,1586.1
 2020-04-28,1 day ahead cum death,2020-04-29,GM01,Baden-Wurttemberg,quantile,0.975,1359.05
 2020-04-28,1 day ahead inc death,2020-04-29,GM01,Baden-Wurttemberg,quantile,0.975,90.05
 2020-04-28,1 wk ahead cum death,2020-05-09,GM01,Baden-Wurttemberg,quantile,0.975,1894.1
@@ -1253,6 +1269,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM01,Baden-Wurttemberg,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM01,Baden-Wurttemberg,quantile,0.975,2005.1
 2020-04-28,98 day ahead inc death,2020-08-04,GM01,Baden-Wurttemberg,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM02,Bavaria,observed,NA,1621
+2020-04-28,-1 day ahead inc death,2020-04-27,GM02,Bavaria,observed,NA,25
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM02,Bavaria,observed,NA,1566
+2020-04-28,0 day ahead cum death,2020-04-28,GM02,Bavaria,observed,NA,1681
+2020-04-28,0 day ahead inc death,2020-04-28,GM02,Bavaria,observed,NA,60
+2020-04-28,0 wk ahead cum death,2020-05-02,GM02,Bavaria,point,NA,1785.14
 2020-04-28,1 day ahead cum death,2020-04-29,GM02,Bavaria,point,NA,1712.159
 2020-04-28,1 day ahead inc death,2020-04-29,GM02,Bavaria,point,NA,31.159
 2020-04-28,1 wk ahead cum death,2020-05-09,GM02,Bavaria,point,NA,1864.147
@@ -1462,6 +1484,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM02,Bavaria,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM02,Bavaria,point,NA,1881.965
 2020-04-28,98 day ahead inc death,2020-08-04,GM02,Bavaria,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM02,Bavaria,quantile,0.025,1699
 2020-04-28,1 day ahead cum death,2020-04-29,GM02,Bavaria,quantile,0.025,1687
 2020-04-28,1 day ahead inc death,2020-04-29,GM02,Bavaria,quantile,0.025,6
 2020-04-28,1 wk ahead cum death,2020-05-09,GM02,Bavaria,quantile,0.025,1710
@@ -1671,6 +1694,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM02,Bavaria,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM02,Bavaria,quantile,0.025,1710
 2020-04-28,98 day ahead inc death,2020-08-04,GM02,Bavaria,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM02,Bavaria,quantile,0.975,2014.2
 2020-04-28,1 day ahead cum death,2020-04-29,GM02,Bavaria,quantile,0.975,1779.05
 2020-04-28,1 day ahead inc death,2020-04-29,GM02,Bavaria,quantile,0.975,98.05
 2020-04-28,1 wk ahead cum death,2020-05-09,GM02,Bavaria,quantile,0.975,2294.45
@@ -1880,6 +1904,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM02,Bavaria,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM02,Bavaria,quantile,0.975,2372.625
 2020-04-28,98 day ahead inc death,2020-08-04,GM02,Bavaria,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM03,Bremen,observed,NA,27
+2020-04-28,-1 day ahead inc death,2020-04-27,GM03,Bremen,observed,NA,0
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM03,Bremen,observed,NA,27
+2020-04-28,0 day ahead cum death,2020-04-28,GM03,Bremen,observed,NA,27
+2020-04-28,0 day ahead inc death,2020-04-28,GM03,Bremen,observed,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM03,Bremen,point,NA,27.696
 2020-04-28,1 day ahead cum death,2020-04-29,GM03,Bremen,point,NA,27.262
 2020-04-28,1 day ahead inc death,2020-04-29,GM03,Bremen,point,NA,0.262
 2020-04-28,1 wk ahead cum death,2020-05-09,GM03,Bremen,point,NA,27.828
@@ -2089,6 +2119,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM03,Bremen,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM03,Bremen,point,NA,27.83
 2020-04-28,98 day ahead inc death,2020-08-04,GM03,Bremen,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM03,Bremen,quantile,0.025,27
 2020-04-28,1 day ahead cum death,2020-04-29,GM03,Bremen,quantile,0.025,27
 2020-04-28,1 day ahead inc death,2020-04-29,GM03,Bremen,quantile,0.025,0
 2020-04-28,1 wk ahead cum death,2020-05-09,GM03,Bremen,quantile,0.025,27
@@ -2298,6 +2329,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM03,Bremen,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM03,Bremen,quantile,0.025,27
 2020-04-28,98 day ahead inc death,2020-08-04,GM03,Bremen,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM03,Bremen,quantile,0.975,31
 2020-04-28,1 day ahead cum death,2020-04-29,GM03,Bremen,quantile,0.975,28
 2020-04-28,1 day ahead inc death,2020-04-29,GM03,Bremen,quantile,0.975,1
 2020-04-28,1 wk ahead cum death,2020-05-09,GM03,Bremen,quantile,0.975,33
@@ -2507,6 +2539,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM03,Bremen,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM03,Bremen,quantile,0.975,33
 2020-04-28,98 day ahead inc death,2020-08-04,GM03,Bremen,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM04,Hamburg,observed,NA,142
+2020-04-28,-1 day ahead inc death,2020-04-27,GM04,Hamburg,observed,NA,2
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM04,Hamburg,observed,NA,139
+2020-04-28,0 day ahead cum death,2020-04-28,GM04,Hamburg,observed,NA,142
+2020-04-28,0 day ahead inc death,2020-04-28,GM04,Hamburg,observed,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM04,Hamburg,point,NA,179.871
 2020-04-28,1 day ahead cum death,2020-04-29,GM04,Hamburg,point,NA,151.53
 2020-04-28,1 day ahead inc death,2020-04-29,GM04,Hamburg,point,NA,9.53
 2020-04-28,1 wk ahead cum death,2020-05-09,GM04,Hamburg,point,NA,234.442
@@ -2716,6 +2754,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM04,Hamburg,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM04,Hamburg,point,NA,272.768
 2020-04-28,98 day ahead inc death,2020-08-04,GM04,Hamburg,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM04,Hamburg,quantile,0.025,146
 2020-04-28,1 day ahead cum death,2020-04-29,GM04,Hamburg,quantile,0.025,143
 2020-04-28,1 day ahead inc death,2020-04-29,GM04,Hamburg,quantile,0.025,1
 2020-04-28,1 wk ahead cum death,2020-05-09,GM04,Hamburg,quantile,0.025,153
@@ -2925,6 +2964,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM04,Hamburg,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM04,Hamburg,quantile,0.025,154
 2020-04-28,98 day ahead inc death,2020-08-04,GM04,Hamburg,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM04,Hamburg,quantile,0.975,280.025
 2020-04-28,1 day ahead cum death,2020-04-29,GM04,Hamburg,quantile,0.975,177
 2020-04-28,1 day ahead inc death,2020-04-29,GM04,Hamburg,quantile,0.975,35
 2020-04-28,1 wk ahead cum death,2020-05-09,GM04,Hamburg,quantile,0.975,492.05
@@ -3134,6 +3174,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM04,Hamburg,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM04,Hamburg,quantile,0.975,664.4
 2020-04-28,98 day ahead inc death,2020-08-04,GM04,Hamburg,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM05,Hesse,observed,NA,320
+2020-04-28,-1 day ahead inc death,2020-04-27,GM05,Hesse,observed,NA,5
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM05,Hesse,observed,NA,305
+2020-04-28,0 day ahead cum death,2020-04-28,GM05,Hesse,observed,NA,333
+2020-04-28,0 day ahead inc death,2020-04-28,GM05,Hesse,observed,NA,13
+2020-04-28,0 wk ahead cum death,2020-05-02,GM05,Hesse,point,NA,369.834
 2020-04-28,1 day ahead cum death,2020-04-29,GM05,Hesse,point,NA,343.095
 2020-04-28,1 day ahead inc death,2020-04-29,GM05,Hesse,point,NA,10.095
 2020-04-28,1 wk ahead cum death,2020-05-09,GM05,Hesse,point,NA,412.465
@@ -3343,6 +3389,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM05,Hesse,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM05,Hesse,point,NA,441.297
 2020-04-28,98 day ahead inc death,2020-08-04,GM05,Hesse,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM05,Hesse,quantile,0.025,341
 2020-04-28,1 day ahead cum death,2020-04-29,GM05,Hesse,quantile,0.025,335
 2020-04-28,1 day ahead inc death,2020-04-29,GM05,Hesse,quantile,0.025,2
 2020-04-28,1 wk ahead cum death,2020-05-09,GM05,Hesse,quantile,0.025,348
@@ -3552,6 +3599,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM05,Hesse,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM05,Hesse,quantile,0.025,348
 2020-04-28,98 day ahead inc death,2020-08-04,GM05,Hesse,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM05,Hesse,quantile,0.975,442.025
 2020-04-28,1 day ahead cum death,2020-04-29,GM05,Hesse,quantile,0.975,363
 2020-04-28,1 day ahead inc death,2020-04-29,GM05,Hesse,quantile,0.975,30
 2020-04-28,1 wk ahead cum death,2020-05-09,GM05,Hesse,quantile,0.975,583.075
@@ -3761,6 +3809,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM05,Hesse,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM05,Hesse,quantile,0.975,705.075
 2020-04-28,98 day ahead inc death,2020-08-04,GM05,Hesse,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM06,Lower Saxony,observed,NA,391
+2020-04-28,-1 day ahead inc death,2020-04-27,GM06,Lower Saxony,observed,NA,7
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM06,Lower Saxony,observed,NA,377
+2020-04-28,0 day ahead cum death,2020-04-28,GM06,Lower Saxony,observed,NA,394
+2020-04-28,0 day ahead inc death,2020-04-28,GM06,Lower Saxony,observed,NA,3
+2020-04-28,0 wk ahead cum death,2020-05-02,GM06,Lower Saxony,point,NA,429.914
 2020-04-28,1 day ahead cum death,2020-04-29,GM06,Lower Saxony,point,NA,404.184
 2020-04-28,1 day ahead inc death,2020-04-29,GM06,Lower Saxony,point,NA,10.184
 2020-04-28,1 wk ahead cum death,2020-05-09,GM06,Lower Saxony,point,NA,462.94
@@ -3970,6 +4024,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM06,Lower Saxony,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM06,Lower Saxony,point,NA,472.165
 2020-04-28,98 day ahead inc death,2020-08-04,GM06,Lower Saxony,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM06,Lower Saxony,quantile,0.025,401
 2020-04-28,1 day ahead cum death,2020-04-29,GM06,Lower Saxony,quantile,0.025,396
 2020-04-28,1 day ahead inc death,2020-04-29,GM06,Lower Saxony,quantile,0.025,2
 2020-04-28,1 wk ahead cum death,2020-05-09,GM06,Lower Saxony,quantile,0.025,406
@@ -4179,6 +4234,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM06,Lower Saxony,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM06,Lower Saxony,quantile,0.025,406
 2020-04-28,98 day ahead inc death,2020-08-04,GM06,Lower Saxony,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM06,Lower Saxony,quantile,0.975,510
 2020-04-28,1 day ahead cum death,2020-04-29,GM06,Lower Saxony,quantile,0.975,426
 2020-04-28,1 day ahead inc death,2020-04-29,GM06,Lower Saxony,quantile,0.975,32
 2020-04-28,1 wk ahead cum death,2020-05-09,GM06,Lower Saxony,quantile,0.975,629
@@ -4388,6 +4444,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM06,Lower Saxony,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM06,Lower Saxony,quantile,0.975,671
 2020-04-28,98 day ahead inc death,2020-08-04,GM06,Lower Saxony,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM07,North Rhine-Westphalia,observed,NA,1131
+2020-04-28,-1 day ahead inc death,2020-04-27,GM07,North Rhine-Westphalia,observed,NA,35
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM07,North Rhine-Westphalia,observed,NA,1084
+2020-04-28,0 day ahead cum death,2020-04-28,GM07,North Rhine-Westphalia,observed,NA,1171
+2020-04-28,0 day ahead inc death,2020-04-28,GM07,North Rhine-Westphalia,observed,NA,40
+2020-04-28,0 wk ahead cum death,2020-05-02,GM07,North Rhine-Westphalia,point,NA,1231.188
 2020-04-28,1 day ahead cum death,2020-04-29,GM07,North Rhine-Westphalia,point,NA,1190.245
 2020-04-28,1 day ahead inc death,2020-04-29,GM07,North Rhine-Westphalia,point,NA,19.245
 2020-04-28,1 wk ahead cum death,2020-05-09,GM07,North Rhine-Westphalia,point,NA,1264.984
@@ -4597,6 +4659,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM07,North Rhine-Westphalia,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM07,North Rhine-Westphalia,point,NA,1268.68
 2020-04-28,98 day ahead inc death,2020-08-04,GM07,North Rhine-Westphalia,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM07,North Rhine-Westphalia,quantile,0.025,1183
 2020-04-28,1 day ahead cum death,2020-04-29,GM07,North Rhine-Westphalia,quantile,0.025,1175
 2020-04-28,1 day ahead inc death,2020-04-29,GM07,North Rhine-Westphalia,quantile,0.025,4
 2020-04-28,1 wk ahead cum death,2020-05-09,GM07,North Rhine-Westphalia,quantile,0.025,1188
@@ -4806,6 +4869,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM07,North Rhine-Westphalia,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM07,North Rhine-Westphalia,quantile,0.025,1188
 2020-04-28,98 day ahead inc death,2020-08-04,GM07,North Rhine-Westphalia,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM07,North Rhine-Westphalia,quantile,0.975,1354
 2020-04-28,1 day ahead cum death,2020-04-29,GM07,North Rhine-Westphalia,quantile,0.975,1227.025
 2020-04-28,1 day ahead inc death,2020-04-29,GM07,North Rhine-Westphalia,quantile,0.975,56.025
 2020-04-28,1 wk ahead cum death,2020-05-09,GM07,North Rhine-Westphalia,quantile,0.975,1468.075
@@ -5015,6 +5079,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM07,North Rhine-Westphalia,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM07,North Rhine-Westphalia,quantile,0.975,1485.15
 2020-04-28,98 day ahead inc death,2020-08-04,GM07,North Rhine-Westphalia,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM08,Rhineland-Palatinate,observed,NA,152
+2020-04-28,-1 day ahead inc death,2020-04-27,GM08,Rhineland-Palatinate,observed,NA,5
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM08,Rhineland-Palatinate,observed,NA,138
+2020-04-28,0 day ahead cum death,2020-04-28,GM08,Rhineland-Palatinate,observed,NA,157
+2020-04-28,0 day ahead inc death,2020-04-28,GM08,Rhineland-Palatinate,observed,NA,5
+2020-04-28,0 wk ahead cum death,2020-05-02,GM08,Rhineland-Palatinate,point,NA,173.219
 2020-04-28,1 day ahead cum death,2020-04-29,GM08,Rhineland-Palatinate,point,NA,161.756
 2020-04-28,1 day ahead inc death,2020-04-29,GM08,Rhineland-Palatinate,point,NA,4.756
 2020-04-28,1 wk ahead cum death,2020-05-09,GM08,Rhineland-Palatinate,point,NA,185.537
@@ -5224,6 +5294,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM08,Rhineland-Palatinate,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM08,Rhineland-Palatinate,point,NA,187.12
 2020-04-28,98 day ahead inc death,2020-08-04,GM08,Rhineland-Palatinate,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM08,Rhineland-Palatinate,quantile,0.025,161
 2020-04-28,1 day ahead cum death,2020-04-29,GM08,Rhineland-Palatinate,quantile,0.025,158
 2020-04-28,1 day ahead inc death,2020-04-29,GM08,Rhineland-Palatinate,quantile,0.025,1
 2020-04-28,1 wk ahead cum death,2020-05-09,GM08,Rhineland-Palatinate,quantile,0.025,161
@@ -5433,6 +5504,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM08,Rhineland-Palatinate,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM08,Rhineland-Palatinate,quantile,0.025,161
 2020-04-28,98 day ahead inc death,2020-08-04,GM08,Rhineland-Palatinate,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM08,Rhineland-Palatinate,quantile,0.975,205.025
 2020-04-28,1 day ahead cum death,2020-04-29,GM08,Rhineland-Palatinate,quantile,0.975,171
 2020-04-28,1 day ahead inc death,2020-04-29,GM08,Rhineland-Palatinate,quantile,0.975,14
 2020-04-28,1 wk ahead cum death,2020-05-09,GM08,Rhineland-Palatinate,quantile,0.975,245.075
@@ -5642,6 +5714,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM08,Rhineland-Palatinate,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM08,Rhineland-Palatinate,quantile,0.975,253.125
 2020-04-28,98 day ahead inc death,2020-08-04,GM08,Rhineland-Palatinate,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM09,Saarland,observed,NA,121
+2020-04-28,-1 day ahead inc death,2020-04-27,GM09,Saarland,observed,NA,14
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM09,Saarland,observed,NA,107
+2020-04-28,0 day ahead cum death,2020-04-28,GM09,Saarland,observed,NA,123
+2020-04-28,0 day ahead inc death,2020-04-28,GM09,Saarland,observed,NA,2
+2020-04-28,0 wk ahead cum death,2020-05-02,GM09,Saarland,point,NA,135.33
 2020-04-28,1 day ahead cum death,2020-04-29,GM09,Saarland,point,NA,126.418
 2020-04-28,1 day ahead inc death,2020-04-29,GM09,Saarland,point,NA,3.418
 2020-04-28,1 wk ahead cum death,2020-05-09,GM09,Saarland,point,NA,149.116
@@ -5851,6 +5929,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM09,Saarland,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM09,Saarland,point,NA,156.711
 2020-04-28,98 day ahead inc death,2020-08-04,GM09,Saarland,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM09,Saarland,quantile,0.025,123
 2020-04-28,1 day ahead cum death,2020-04-29,GM09,Saarland,quantile,0.025,123
 2020-04-28,1 day ahead inc death,2020-04-29,GM09,Saarland,quantile,0.025,0
 2020-04-28,1 wk ahead cum death,2020-05-09,GM09,Saarland,quantile,0.025,123
@@ -6060,6 +6139,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM09,Saarland,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM09,Saarland,quantile,0.025,123
 2020-04-28,98 day ahead inc death,2020-08-04,GM09,Saarland,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM09,Saarland,quantile,0.975,173.025
 2020-04-28,1 day ahead cum death,2020-04-29,GM09,Saarland,quantile,0.975,137
 2020-04-28,1 day ahead inc death,2020-04-29,GM09,Saarland,quantile,0.975,14
 2020-04-28,1 wk ahead cum death,2020-05-09,GM09,Saarland,quantile,0.975,228.125
@@ -6269,6 +6349,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM09,Saarland,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM09,Saarland,quantile,0.975,272.05
 2020-04-28,98 day ahead inc death,2020-08-04,GM09,Saarland,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM10,Schleswig-Holstein,observed,NA,98
+2020-04-28,-1 day ahead inc death,2020-04-27,GM10,Schleswig-Holstein,observed,NA,2
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM10,Schleswig-Holstein,observed,NA,95
+2020-04-28,0 day ahead cum death,2020-04-28,GM10,Schleswig-Holstein,observed,NA,101
+2020-04-28,0 day ahead inc death,2020-04-28,GM10,Schleswig-Holstein,observed,NA,3
+2020-04-28,0 wk ahead cum death,2020-05-02,GM10,Schleswig-Holstein,point,NA,110.368
 2020-04-28,1 day ahead cum death,2020-04-29,GM10,Schleswig-Holstein,point,NA,103.781
 2020-04-28,1 day ahead inc death,2020-04-29,GM10,Schleswig-Holstein,point,NA,2.781
 2020-04-28,1 wk ahead cum death,2020-05-09,GM10,Schleswig-Holstein,point,NA,117.137
@@ -6478,6 +6564,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM10,Schleswig-Holstein,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM10,Schleswig-Holstein,point,NA,117.802
 2020-04-28,98 day ahead inc death,2020-08-04,GM10,Schleswig-Holstein,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM10,Schleswig-Holstein,quantile,0.025,101
 2020-04-28,1 day ahead cum death,2020-04-29,GM10,Schleswig-Holstein,quantile,0.025,101
 2020-04-28,1 day ahead inc death,2020-04-29,GM10,Schleswig-Holstein,quantile,0.025,0
 2020-04-28,1 wk ahead cum death,2020-05-09,GM10,Schleswig-Holstein,quantile,0.025,101
@@ -6687,6 +6774,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM10,Schleswig-Holstein,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM10,Schleswig-Holstein,quantile,0.025,101
 2020-04-28,98 day ahead inc death,2020-08-04,GM10,Schleswig-Holstein,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM10,Schleswig-Holstein,quantile,0.975,129.025
 2020-04-28,1 day ahead cum death,2020-04-29,GM10,Schleswig-Holstein,quantile,0.975,109
 2020-04-28,1 day ahead inc death,2020-04-29,GM10,Schleswig-Holstein,quantile,0.975,8
 2020-04-28,1 wk ahead cum death,2020-05-09,GM10,Schleswig-Holstein,quantile,0.975,153
@@ -6896,6 +6984,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM10,Schleswig-Holstein,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM10,Schleswig-Holstein,quantile,0.975,157.05
 2020-04-28,98 day ahead inc death,2020-08-04,GM10,Schleswig-Holstein,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM11,Brandenburg,observed,NA,100
+2020-04-28,-1 day ahead inc death,2020-04-27,GM11,Brandenburg,observed,NA,0
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM11,Brandenburg,observed,NA,97
+2020-04-28,0 day ahead cum death,2020-04-28,GM11,Brandenburg,observed,NA,106
+2020-04-28,0 day ahead inc death,2020-04-28,GM11,Brandenburg,observed,NA,6
+2020-04-28,0 wk ahead cum death,2020-05-02,GM11,Brandenburg,point,NA,106.193
 2020-04-28,1 day ahead cum death,2020-04-29,GM11,Brandenburg,point,NA,106.152
 2020-04-28,1 day ahead inc death,2020-04-29,GM11,Brandenburg,point,NA,0.152
 2020-04-28,1 wk ahead cum death,2020-05-09,GM11,Brandenburg,point,NA,106.193
@@ -7105,6 +7199,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM11,Brandenburg,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM11,Brandenburg,point,NA,106.193
 2020-04-28,98 day ahead inc death,2020-08-04,GM11,Brandenburg,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM11,Brandenburg,quantile,0.025,106
 2020-04-28,1 day ahead cum death,2020-04-29,GM11,Brandenburg,quantile,0.025,106
 2020-04-28,1 day ahead inc death,2020-04-29,GM11,Brandenburg,quantile,0.025,0
 2020-04-28,1 wk ahead cum death,2020-05-09,GM11,Brandenburg,quantile,0.025,106
@@ -7314,6 +7409,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM11,Brandenburg,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM11,Brandenburg,quantile,0.025,106
 2020-04-28,98 day ahead inc death,2020-08-04,GM11,Brandenburg,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM11,Brandenburg,quantile,0.975,108
 2020-04-28,1 day ahead cum death,2020-04-29,GM11,Brandenburg,quantile,0.975,107
 2020-04-28,1 day ahead inc death,2020-04-29,GM11,Brandenburg,quantile,0.975,1
 2020-04-28,1 wk ahead cum death,2020-05-09,GM11,Brandenburg,quantile,0.975,108
@@ -7523,6 +7619,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM11,Brandenburg,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM11,Brandenburg,quantile,0.975,108
 2020-04-28,98 day ahead inc death,2020-08-04,GM11,Brandenburg,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM12,Mecklenburg-Vorpommern,observed,NA,16
+2020-04-28,-1 day ahead inc death,2020-04-27,GM12,Mecklenburg-Vorpommern,observed,NA,0
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM12,Mecklenburg-Vorpommern,observed,NA,16
+2020-04-28,0 day ahead cum death,2020-04-28,GM12,Mecklenburg-Vorpommern,observed,NA,17
+2020-04-28,0 day ahead inc death,2020-04-28,GM12,Mecklenburg-Vorpommern,observed,NA,1
+2020-04-28,0 wk ahead cum death,2020-05-02,GM12,Mecklenburg-Vorpommern,point,NA,17.307
 2020-04-28,1 day ahead cum death,2020-04-29,GM12,Mecklenburg-Vorpommern,point,NA,17.12
 2020-04-28,1 day ahead inc death,2020-04-29,GM12,Mecklenburg-Vorpommern,point,NA,0.12
 2020-04-28,1 wk ahead cum death,2020-05-09,GM12,Mecklenburg-Vorpommern,point,NA,17.341
@@ -7732,6 +7834,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM12,Mecklenburg-Vorpommern,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM12,Mecklenburg-Vorpommern,point,NA,17.341
 2020-04-28,98 day ahead inc death,2020-08-04,GM12,Mecklenburg-Vorpommern,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM12,Mecklenburg-Vorpommern,quantile,0.025,17
 2020-04-28,1 day ahead cum death,2020-04-29,GM12,Mecklenburg-Vorpommern,quantile,0.025,17
 2020-04-28,1 day ahead inc death,2020-04-29,GM12,Mecklenburg-Vorpommern,quantile,0.025,0
 2020-04-28,1 wk ahead cum death,2020-05-09,GM12,Mecklenburg-Vorpommern,quantile,0.025,17
@@ -7941,6 +8044,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM12,Mecklenburg-Vorpommern,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM12,Mecklenburg-Vorpommern,quantile,0.025,17
 2020-04-28,98 day ahead inc death,2020-08-04,GM12,Mecklenburg-Vorpommern,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM12,Mecklenburg-Vorpommern,quantile,0.975,21
 2020-04-28,1 day ahead cum death,2020-04-29,GM12,Mecklenburg-Vorpommern,quantile,0.975,18
 2020-04-28,1 day ahead inc death,2020-04-29,GM12,Mecklenburg-Vorpommern,quantile,0.975,1
 2020-04-28,1 wk ahead cum death,2020-05-09,GM12,Mecklenburg-Vorpommern,quantile,0.975,21
@@ -8150,6 +8254,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM12,Mecklenburg-Vorpommern,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM12,Mecklenburg-Vorpommern,quantile,0.975,21
 2020-04-28,98 day ahead inc death,2020-08-04,GM12,Mecklenburg-Vorpommern,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM13,Saxony,observed,NA,147
+2020-04-28,-1 day ahead inc death,2020-04-27,GM13,Saxony,observed,NA,0
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM13,Saxony,observed,NA,141
+2020-04-28,0 day ahead cum death,2020-04-28,GM13,Saxony,observed,NA,148
+2020-04-28,0 day ahead inc death,2020-04-28,GM13,Saxony,observed,NA,1
+2020-04-28,0 wk ahead cum death,2020-05-02,GM13,Saxony,point,NA,166.293
 2020-04-28,1 day ahead cum death,2020-04-29,GM13,Saxony,point,NA,152.99
 2020-04-28,1 day ahead inc death,2020-04-29,GM13,Saxony,point,NA,4.99
 2020-04-28,1 wk ahead cum death,2020-05-09,GM13,Saxony,point,NA,186.753
@@ -8359,6 +8469,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM13,Saxony,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM13,Saxony,point,NA,196.157
 2020-04-28,98 day ahead inc death,2020-08-04,GM13,Saxony,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM13,Saxony,quantile,0.025,152
 2020-04-28,1 day ahead cum death,2020-04-29,GM13,Saxony,quantile,0.025,149
 2020-04-28,1 day ahead inc death,2020-04-29,GM13,Saxony,quantile,0.025,1
 2020-04-28,1 wk ahead cum death,2020-05-09,GM13,Saxony,quantile,0.025,154
@@ -8568,6 +8679,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM13,Saxony,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM13,Saxony,quantile,0.025,154
 2020-04-28,98 day ahead inc death,2020-08-04,GM13,Saxony,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM13,Saxony,quantile,0.975,214
 2020-04-28,1 day ahead cum death,2020-04-29,GM13,Saxony,quantile,0.975,166
 2020-04-28,1 day ahead inc death,2020-04-29,GM13,Saxony,quantile,0.975,18
 2020-04-28,1 wk ahead cum death,2020-05-09,GM13,Saxony,quantile,0.975,294.075
@@ -8777,6 +8889,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM13,Saxony,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM13,Saxony,quantile,0.975,344.125
 2020-04-28,98 day ahead inc death,2020-08-04,GM13,Saxony,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM14,Saxony-Anhalt,observed,NA,37
+2020-04-28,-1 day ahead inc death,2020-04-27,GM14,Saxony-Anhalt,observed,NA,0
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM14,Saxony-Anhalt,observed,NA,36
+2020-04-28,0 day ahead cum death,2020-04-28,GM14,Saxony-Anhalt,observed,NA,40
+2020-04-28,0 day ahead inc death,2020-04-28,GM14,Saxony-Anhalt,observed,NA,3
+2020-04-28,0 wk ahead cum death,2020-05-02,GM14,Saxony-Anhalt,point,NA,41.348
 2020-04-28,1 day ahead cum death,2020-04-29,GM14,Saxony-Anhalt,point,NA,40.488
 2020-04-28,1 day ahead inc death,2020-04-29,GM14,Saxony-Anhalt,point,NA,0.488
 2020-04-28,1 wk ahead cum death,2020-05-09,GM14,Saxony-Anhalt,point,NA,41.678
@@ -8986,6 +9104,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM14,Saxony-Anhalt,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM14,Saxony-Anhalt,point,NA,41.679
 2020-04-28,98 day ahead inc death,2020-08-04,GM14,Saxony-Anhalt,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM14,Saxony-Anhalt,quantile,0.025,40
 2020-04-28,1 day ahead cum death,2020-04-29,GM14,Saxony-Anhalt,quantile,0.025,40
 2020-04-28,1 day ahead inc death,2020-04-29,GM14,Saxony-Anhalt,quantile,0.025,0
 2020-04-28,1 wk ahead cum death,2020-05-09,GM14,Saxony-Anhalt,quantile,0.025,40
@@ -9195,6 +9314,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM14,Saxony-Anhalt,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM14,Saxony-Anhalt,quantile,0.025,40
 2020-04-28,98 day ahead inc death,2020-08-04,GM14,Saxony-Anhalt,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM14,Saxony-Anhalt,quantile,0.975,47
 2020-04-28,1 day ahead cum death,2020-04-29,GM14,Saxony-Anhalt,quantile,0.975,42
 2020-04-28,1 day ahead inc death,2020-04-29,GM14,Saxony-Anhalt,quantile,0.975,2
 2020-04-28,1 wk ahead cum death,2020-05-09,GM14,Saxony-Anhalt,quantile,0.975,50
@@ -9404,6 +9524,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM14,Saxony-Anhalt,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM14,Saxony-Anhalt,quantile,0.975,50
 2020-04-28,98 day ahead inc death,2020-08-04,GM14,Saxony-Anhalt,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM15,Thuringia,observed,NA,84
+2020-04-28,-1 day ahead inc death,2020-04-27,GM15,Thuringia,observed,NA,1
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM15,Thuringia,observed,NA,81
+2020-04-28,0 day ahead cum death,2020-04-28,GM15,Thuringia,observed,NA,88
+2020-04-28,0 day ahead inc death,2020-04-28,GM15,Thuringia,observed,NA,4
+2020-04-28,0 wk ahead cum death,2020-05-02,GM15,Thuringia,point,NA,98.466
 2020-04-28,1 day ahead cum death,2020-04-29,GM15,Thuringia,point,NA,90.805
 2020-04-28,1 day ahead inc death,2020-04-29,GM15,Thuringia,point,NA,2.805
 2020-04-28,1 wk ahead cum death,2020-05-09,GM15,Thuringia,point,NA,111.357
@@ -9613,6 +9739,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM15,Thuringia,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM15,Thuringia,point,NA,120.318
 2020-04-28,98 day ahead inc death,2020-08-04,GM15,Thuringia,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM15,Thuringia,quantile,0.025,88
 2020-04-28,1 day ahead cum death,2020-04-29,GM15,Thuringia,quantile,0.025,88
 2020-04-28,1 day ahead inc death,2020-04-29,GM15,Thuringia,quantile,0.025,0
 2020-04-28,1 wk ahead cum death,2020-05-09,GM15,Thuringia,quantile,0.025,88
@@ -9822,6 +9949,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM15,Thuringia,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM15,Thuringia,quantile,0.025,88
 2020-04-28,98 day ahead inc death,2020-08-04,GM15,Thuringia,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM15,Thuringia,quantile,0.975,126
 2020-04-28,1 day ahead cum death,2020-04-29,GM15,Thuringia,quantile,0.975,98
 2020-04-28,1 day ahead inc death,2020-04-29,GM15,Thuringia,quantile,0.975,10
 2020-04-28,1 wk ahead cum death,2020-05-09,GM15,Thuringia,quantile,0.975,176
@@ -10031,6 +10159,12 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM15,Thuringia,quantile,0.975,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM15,Thuringia,quantile,0.975,222.075
 2020-04-28,98 day ahead inc death,2020-08-04,GM15,Thuringia,quantile,0.975,0
+2020-04-28,-1 day ahead cum death,2020-04-27,GM16,Berlin,observed,NA,125
+2020-04-28,-1 day ahead inc death,2020-04-27,GM16,Berlin,observed,NA,2
+2020-04-28,-1 wk ahead cum death,2020-04-25,GM16,Berlin,observed,NA,113
+2020-04-28,0 day ahead cum death,2020-04-28,GM16,Berlin,observed,NA,127
+2020-04-28,0 day ahead inc death,2020-04-28,GM16,Berlin,observed,NA,2
+2020-04-28,0 wk ahead cum death,2020-05-02,GM16,Berlin,point,NA,141.107
 2020-04-28,1 day ahead cum death,2020-04-29,GM16,Berlin,point,NA,131.187
 2020-04-28,1 day ahead inc death,2020-04-29,GM16,Berlin,point,NA,4.187
 2020-04-28,1 wk ahead cum death,2020-05-09,GM16,Berlin,point,NA,151.296
@@ -10240,6 +10374,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM16,Berlin,point,NA,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM16,Berlin,point,NA,152.359
 2020-04-28,98 day ahead inc death,2020-08-04,GM16,Berlin,point,NA,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM16,Berlin,quantile,0.025,129.975
 2020-04-28,1 day ahead cum death,2020-04-29,GM16,Berlin,quantile,0.025,128
 2020-04-28,1 day ahead inc death,2020-04-29,GM16,Berlin,quantile,0.025,1
 2020-04-28,1 wk ahead cum death,2020-05-09,GM16,Berlin,quantile,0.025,129.975
@@ -10449,6 +10584,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-04-28,97 day ahead inc death,2020-08-03,GM16,Berlin,quantile,0.025,0
 2020-04-28,98 day ahead cum death,2020-08-04,GM16,Berlin,quantile,0.025,129.975
 2020-04-28,98 day ahead inc death,2020-08-04,GM16,Berlin,quantile,0.025,0
+2020-04-28,0 wk ahead cum death,2020-05-02,GM16,Berlin,quantile,0.975,174.025
 2020-04-28,1 day ahead cum death,2020-04-29,GM16,Berlin,quantile,0.975,141
 2020-04-28,1 day ahead inc death,2020-04-29,GM16,Berlin,quantile,0.975,14
 2020-04-28,1 wk ahead cum death,2020-05-09,GM16,Berlin,quantile,0.975,214

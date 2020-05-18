@@ -7,6 +7,30 @@
 ###### The original file has been provided under the MIT license, and so is this adapted version.
 #################################################################################
 
+
+#Function to get real and reported forecast date
+
+#' Check when the last non-zero forecast is equal in mean, upper and lower quantil
+#'
+#' @param path the forecast file path
+#' @return vector with reported forecast date and observed forecast date, i.e. last observed value
+#'
+
+get_forecast_date<-function(path) {
+  
+  data <- read.csv(path, stringsAsFactors = FALSE) %>% filter(location_name=="Germany") %>%
+    mutate(date=as.Date(date))
+  given_forecast_date <- get_date(path)
+  is_equal_lmu<-data$deaths_mean==data$deaths_upper & data$deaths_lower==data$deaths_mean
+  is_not_zero<-data$deaths_mean!=0
+  real_date<-max(data$date[is_equal_lmu & is_not_zero])
+  
+  return(c(report_date=given_forecast_date,Real_forecast_date=real_date))
+  
+}
+
+
+
 ## Functions to process IHME files
 
 get_date <- function(path) {
@@ -36,17 +60,22 @@ coerceable_to_date <- function(x) {
 #' Transform matrix of samples for one location into a quantile-format data_frame
 #'
 #' @param path the forecast file path
+#' @param forecast_date the real forecast date as extracted from file, i.e. last date where observations, not projections are available
+#' @param submission_date the date that is indicated on the file, i.e. when the forecasts where submitted, important for target in week ahead forecasts
 #' @param all_states Should all states be forecasted or just on Federal Level, default=FALSE, not implemented yet
 #' @return long-format data_frame with quantiles
 #'
-make_qntl_dat <- function(path, all_states = FALSE) {
+make_qntl_dat <- function(path,forecast_date,submission_date, all_states = FALSE) {
   require(tidyverse)
   require(MMWRweek)
   require(lubridate)
   
-  
+  forecast_date<-as.Date(forecast_date)
+  submission_date<-as.Date(submission_date)
   data <- read.csv(path, stringsAsFactors = FALSE)
-  forecast_date <- get_date(path)
+  #forecast date is given from function now
+  #forecast_date <- get_date(path)
+  
   
   # make sure that all names are the same over different data sets
   
@@ -89,8 +118,8 @@ make_qntl_dat <- function(path, all_states = FALSE) {
     dplyr::rename(date_v = date) %>%
     # uncomment if you only want one week ahead forecasts
     # dplyr::filter(as.Date(as.character(date_v)) %in% c(forecast_date+1:7)) %>%
-    # delete non-forecasts
-    dplyr::filter(as.Date(as.character(date_v)) > forecast_date) %>%
+    # delete non-forecasts expect for 0 day and -1 day ahead that are kept
+    dplyr::filter(as.Date(as.character(date_v)) > forecast_date-2) %>%
     # add column with target_id
     dplyr::mutate(target_id = paste(
       difftime(as.Date(as.character(date_v)), forecast_date, units = "days"),
@@ -106,9 +135,15 @@ make_qntl_dat <- function(path, all_states = FALSE) {
     tidyr::pivot_longer(-c(location_name, date_v, target_id),
                         names_to = "quantile",
                         values_to = "value") %>%
-    # add type column, specifying point or quantile calculation
-    dplyr::mutate(type = ifelse(quantile == "NA", "point", "quantile"),
-                  forecast_date = forecast_date) %>%
+    # add type column, specifying point or quantile calculation and whether or
+    # not we are at observed value or forecast
+    dplyr::mutate(type = ifelse(quantile == "NA",
+                                ifelse(date_v>forecast_date,"point","observed"),
+                                "quantile")) %>%
+    #add forecast_date column
+    #dplyr::mutate(forecast_date = forecast_date) %>%
+    #remove quantiles for observed values, since they are equal to point
+    dplyr::filter(date_v>forecast_date | type!="quantile") %>%
     # add in the state fips codes
     dplyr::left_join(state_fips_codes, by = c("location_name" = "state_name")) %>%
     # rename columns to match output standard
@@ -128,7 +163,7 @@ make_qntl_dat <- function(path, all_states = FALSE) {
     # uncomment if you only want one week ahead forecasts
     # dplyr::filter(as.Date(as.character(date_v)) %in% c(forecast_date+1:7)) %>%
     # delete non-forecasts
-    dplyr::filter(as.Date(as.character(date_v)) > forecast_date) %>%
+    dplyr::filter(as.Date(as.character(date_v)) > forecast_date-2) %>%
     # add column with target_id
     dplyr::mutate(target_id = paste(
       difftime(as.Date(as.character(date_v)), forecast_date, units = "days"),
@@ -145,8 +180,11 @@ make_qntl_dat <- function(path, all_states = FALSE) {
                         names_to = "quantile",
                         values_to = "value") %>%
     # add type column, specifying point or quantile calculation
-    dplyr::mutate(type = ifelse(quantile == "NA", "point", "quantile"),
-                  forecast_date = forecast_date) %>%
+    dplyr::mutate(type = ifelse(quantile == "NA",
+                                ifelse(date_v>forecast_date,"point","observed"),
+                                "quantile")) %>%
+    #remove quantiles for observed values, since they are equal to point
+    dplyr::filter(date_v>forecast_date | type!="quantile") %>%
     # add in the state fips codes
     dplyr::left_join(state_fips_codes, by = c("location_name" = "state_name")) %>%
     # rename columns to match output standard
@@ -171,12 +209,21 @@ make_qntl_dat <- function(path, all_states = FALSE) {
   #   dplyr::rename(target_end_date=date_v)
   
   
-  # weekly forecasts
+  ## weekly forecasts
   
   # add if for forecast date weekly
-  Sys.setlocale("LC_TIME", "C")
-  if (lubridate::wday(forecast_date, label = TRUE, abbr = FALSE) == "Sunday" |
-      lubridate::wday(forecast_date, label = TRUE, abbr = FALSE) == "Monday") {
+  
+  #see if you're on Windows or other OS
+  if(Sys.info()[1]=="Windows") {
+    Sys.setlocale("LC_TIME", "English")
+  } else {
+    Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
+  }
+  
+
+  
+  if (lubridate::wday(submission_date, label = TRUE, abbr = FALSE) == "Sunday" |
+      lubridate::wday(submission_date, label = TRUE, abbr = FALSE) == "Monday") {
     death_qntl2_1 <- data[, c(col_list2)] %>%
       dplyr::rename(date_v = date) %>%
       dplyr::mutate(
@@ -186,10 +233,12 @@ make_qntl_dat <- function(path, all_states = FALSE) {
       # dplyr::filter(day_v =="Saturday" &
       #                 ew<unname(MMWRweek(forecast_date)[[2]])+6 &
       #                 ew>unname(MMWRweek(forecast_date)[[2]])-1) %>%
+      
+      #add -1, 0 week ahead (-3 in formula)
       dplyr::filter(day_v == "Saturday" &
-                      ew > unname(MMWRweek(forecast_date)[[2]]) - 1) %>%
+                      ew > unname(MMWRweek(submission_date)[[2]]) - 3) %>%
       dplyr::mutate(target_id = paste((ew - (
-        unname(MMWRweek(forecast_date)[[2]])
+        unname(MMWRweek(submission_date)[[2]])
       ) + 1), "wk ahead cum death"))
   } else {
     death_qntl2_1 <- data[, c(col_list2)] %>%
@@ -202,9 +251,9 @@ make_qntl_dat <- function(path, all_states = FALSE) {
       #                 ew<(unname(MMWRweek(forecast_date)[[2]])+1)+6 &
       #                 ew>unname(MMWRweek(forecast_date)[[2]])) %>%
       dplyr::filter(day_v == "Saturday" &
-                      ew > unname(MMWRweek(forecast_date)[[2]])) %>%
+                      ew > unname(MMWRweek(submission_date)[[2]])-2) %>%
       dplyr::mutate(target_id = paste((ew - (
-        unname(MMWRweek(forecast_date)[[2]]) + 1
+        unname(MMWRweek(submission_date)[[2]]) + 1
       )) + 1, "wk ahead cum death"))
   }
   death_qntl2_2 <- death_qntl2_1 %>%
@@ -216,13 +265,18 @@ make_qntl_dat <- function(path, all_states = FALSE) {
       names_to = "quantile",
       values_to = "value"
     ) %>%
+    # add type column, specifying point or quantile calculation
+    dplyr::mutate(type = ifelse(quantile == "NA",
+                                ifelse(date_v>forecast_date,"point","observed"),
+                                "quantile")) %>%
+    #remove quantiles for observed values, since they are equal to point
+    dplyr::filter(date_v>forecast_date | type!="quantile") %>%
     # gather(quantile, value, -c(location_name, date_v, day_v, ew, target_id)) %>%
     dplyr::left_join(state_fips_codes, by = c("location_name" = "state_name")) %>%
     dplyr::rename(location = state_code, target_end_date = date_v) %>%
-    dplyr::mutate(type = ifelse(quantile == "NA", "point", "quantile"),
-                  forecast_date = forecast_date) %>%
     dplyr::select(-"day_v",-"ew")
   
+
   
   ### combining data
   
@@ -237,7 +291,8 @@ make_qntl_dat <- function(path, all_states = FALSE) {
     dplyr::mutate(
       target_end_date = as.Date(target_end_date),
       quantile = as.numeric(quantile),
-      value = as.numeric(value)
+      value = as.numeric(value),
+      forecast_date=forecast_date
     )
   # get final data frame, i.e. order
   final <- comb %>%
