@@ -1,9 +1,9 @@
 # Author: Konstantin Görgen
 # Date: Sat May 09 12:16:26 2020
 # --------------
-# Modification: Changed variables in final matrix in function format_imperial
+# Modification: Iterate over both models now, compute weekly incidents correctly
 # Author: Konstantin Görgen
-# Date: 2020-05-10
+# Date: 2020-05-18
 # --------------
 #################################################################################
 ###### This file has been adapted from code provided in the US COVID19 forecast hub:
@@ -54,28 +54,56 @@ get_date<-function(path)
 #' 
 #' @details Assumes that the matrix gives 1 through 7 day ahead forecasts
 #'
-format_imperial<-function(path,location="Germany", qntls=c(0.01, 0.025, seq(0.05, 0.95, by=0.05), 0.975, 0.99))
+format_imperial<-function(path,ens_model,location="Germany", qntls=c(0.01, 0.025, seq(0.05, 0.95, by=0.05), 0.975, 0.99))
 {
   require(tidyverse)
   require(lubridate)
+  require(MMWRweek)
   
-  #check whether new ensemble data or old DeCa Data file
-  new_format<-grepl("ensemble_model_predictions",path)
+  #change dates to English
+  #see if you're on Windows or other OS
+  if(Sys.info()[1]=="Windows") {
+    Sys.setlocale("LC_TIME", "English")
+  } else {
+    Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
+  }
+  
   
   #get date of publication
   date_publish<-get_date(path)
-  if(new_format) {
-    #take data for Germany and second column which gives main ensemble result
-    data_raw<-readRDS(path)[[as.character(date_publish)]]$Germany[[2]]
-  } else {
-    #only take first since both are identical for Germany
-    data_raw<-readRDS(path)$Predictions$Germany[[1]]
-  }
   
- 
+  #old code, now moved old format in /data-raw/Imperial/Old_Data
+  
+  
+  #check whether new ensemble data or old DeCa Data file
+  # new_format<-grepl("ensemble_model_predictions",path)
+  
+  # if(new_format) {
+  #   #take data for Germany and second column which gives main ensemble result
+  #   data_raw<-readRDS(path)[[as.character(date_publish)]]$Germany[[2]]
+  # } else {
+  #   #only take first since both are identical for Germany
+  #   data_raw<-readRDS(path)$Predictions$Germany[[1]]
+  # }
+  
+  if(ens_model==1)
+  {
+    data_raw<-readRDS(path)[[as.character(date_publish)]]$Germany[[1]]
+  } else {
+    
+    if(ens_model==2)
+    {
+      data_raw<-readRDS(path)[[as.character(date_publish)]]$Germany[[2]]
+    } else {
+      stop("Please indicate with ens_model=x (x=1 or x=2) which of the ensemble
+         models you would like to process")
+    }
+  } 
+  
   
   #get timezero as in Reichlab function, i.e. date of official forecast collection
   timezero<-date_publish
+  
   
   ##From here, adaption of Reichlab Function
   ##
@@ -91,17 +119,35 @@ format_imperial<-function(path,location="Germany", qntls=c(0.01, 0.025, seq(0.05
     target_end_date = get_next_saturday(timezero) + (wday(timezero)>2)*7)
   
   ## make cumulative death counts
-  obs_data <- read_csv("../../data-truth/truth-Cumulative Deaths_Germany.csv") %>%
+  obs_data <- read_csv("../../data-truth/ECDC/truth_ECDC-Cumulative Deaths_Germany.csv") %>%
     mutate(date = as.Date(date, "%m/%d/%y"))
   last_obs_date <- as.Date(colnames(data_raw)[1])-1
   last_obs_death <- obs_data$value[which(obs_data$location_name=="Germany" & obs_data$date==last_obs_date)]
   sample_mat_cum <- matrixStats::rowCumsums(as.matrix(data_raw)) + last_obs_death
   
+  #get true inc counts
+  obs_data_inc <- read_csv("../../data-truth/ECDC/truth_ECDC-Incident Deaths_Germany.csv") %>%
+    mutate(date = as.Date(date, "%m/%d/%y"))
+  last_obs_death_inc <- obs_data_inc$value[which(obs_data_inc$location_name=="Germany" & obs_data_inc$date==last_obs_date)]
+  
   ## indices and samples for incident deaths 
   which_days <- which(colnames(data_raw) %in% as.character(day_aheads$target_end_date))
   which_weeks <- which(colnames(data_raw) %in% as.character(week_aheads$target_end_date))
   samples_daily <- data_raw[,which_days]
-  samples_weekly <- data_raw[,which_weeks]
+ # samples_weekly <- data_raw[,which_weeks]
+
+  #for weekly inc forecasts, use all forecasts in the epidemiological week
+  #Since forecasts usually occur on Sunday, we will add the last observed date,i.e
+  #Sunday to week counts.
+  
+  #This is based on the assumption that the last observed date is indeed a Sunday:
+  #if not, check and give warning:
+  if(!(lubridate::wday(last_obs_date, label = TRUE, abbr = FALSE) == "Sunday"))
+  {
+    warning("Last observation was not on a Sunday, 1 week ahead incident deaths
+            might be incomplete and false")
+  }
+  samples_weekly<- sample_mat_cum[,which_weeks]-last_obs_death+last_obs_death_inc
   samples_daily_cum <- sample_mat_cum[,which_days]
   samples_weekly_cum <- sample_mat_cum[,which_weeks]
   
@@ -158,10 +204,46 @@ format_imperial<-function(path,location="Germany", qntls=c(0.01, 0.025, seq(0.05
     qntl_daily_long, qntl_weekly_long,
     qntl_daily_cum_long, qntl_weekly_cum_long
   )    
-  
+  #median is included twice, is okay with Reichlab Data Submission Instructions
+  #i.e. median is our point forecast
   point_ests <- qntl_dat_long %>% 
     filter(quantile==0.5) %>% 
     mutate(quantile=NA, type="point")
+  
+  ##now add 0, -1 day and 0,-1 week ahead forecasts, inc and cum
+  #weekly forecasts mean:
+    #for 0: 
+      #inc: incidents in last complete epidemiological week
+      #cum: total deaths at the end of last complete epidemiological week
+    #for -1: 
+      #inc: incidents in the week before the last complete epidemiological week
+      #cum: total deaths at the end of the week before the last complete epidemiological week
+  
+  # what to subtract to get last day of epidemiological week
+  dist_to_ep_week<-as.numeric(MMWRweek(last_obs_date)[3]) #gives the day of the ep week
+  end_obs_week<-last_obs_date-dist_to_ep_week #gives the end date of ep week
+  
+  #get value for weekly incidents by substracting cumulative number from Week before
+  
+  #0 week ahead
+  zero_week_inc<-obs_data$value[obs_data$date==end_obs_week]-
+    obs_data$value[obs_data$date==(end_obs_week-7)]
+  minus_one_week_inc<-obs_data$value[obs_data$date==(end_obs_week-7)]-
+    obs_data$value[obs_data$date==(end_obs_week-14)]
+  
+ observed_point_ests<-
+   tibble(target ="-1 day ahead inc death",target_end_date=last_obs_date-1,value=obs_data_inc$value[obs_data_inc$date==(last_obs_date-1)]) %>%
+   add_row(target ="0 day ahead inc death",target_end_date=last_obs_date,value=obs_data_inc$value[obs_data_inc$date==(last_obs_date)]) %>%
+   add_row(target ="-1 week ahead inc death",target_end_date=end_obs_week-7,value=minus_one_week_inc) %>%
+   add_row(target ="0 week ahead inc death",target_end_date=end_obs_week,value=zero_week_inc) %>%
+   add_row(target ="-1 day ahead cum death",target_end_date=last_obs_date-1,value=obs_data$value[obs_data$date==(last_obs_date-1)]) %>%
+   add_row(target ="0 day ahead cum death",target_end_date=last_obs_date,value=obs_data$value[obs_data$date==(last_obs_date)]) %>%
+   add_row(target ="-1 week ahead cum death",target_end_date=end_obs_week-7,value=obs_data$value[obs_data$date==(end_obs_week-7)]) %>%
+   add_row(target ="0 week ahead cum death",target_end_date=end_obs_week,value=obs_data$value[obs_data$date==(end_obs_week)]) %>%
+   mutate(type="observed",quantile=NA)
+   
+
+  
   
   #before adding together data, add in additional column location_name
   #location_name: actual name
@@ -172,7 +254,7 @@ format_imperial<-function(path,location="Germany", qntls=c(0.01, 0.025, seq(0.05
   location_name<-location
   location_fips<-state_fips_codes[which(location==state_fips_codes[,2]),1]
   
-  all_dat <- bind_rows(qntl_dat_long, point_ests) %>%
+  all_dat <- bind_rows(qntl_dat_long, point_ests,observed_point_ests) %>%
     arrange(type, target, quantile) %>%
     mutate(quantile = round(quantile, 3), forecast_date = timezero,location=location_fips,location_name=location_name) %>%
     select(forecast_date, target, target_end_date,location,location_name,type,quantile,value)
