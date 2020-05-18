@@ -1,4 +1,4 @@
-https://travis-ci.com/KITmetricslab/covid19-forecast-hub-de.svg?token=tay9rBsDUDXpwELgv9Dn&branch=issue/24
+[![Build Status](https://travis-ci.com/KITmetricslab/covid19-forecast-hub-de.svg?token=tay9rBsDUDXpwELgv9Dn&branch=issue/24)](https://travis-ci.com/KITmetricslab/covid19-forecast-hub-de)
 
 # A German COVID-19 Forecast Hub
 
