@@ -7,8 +7,6 @@ git:
 node_js:
  - 7
 
-install:
-  - R -e "0" --args --bootstrap-packrat
 warnings_are_errors: false
 
 script: ./travis-main.sh
