@@ -5,7 +5,7 @@ library(shinydashboard)
 
 dashboardPage(
   title = "Interactive visualization of COVID19 death forecasts (Germany)",
-  dashboardHeader(title = "KIT-ECON"),
+  dashboardHeader(title = ""),
   skin = "yellow",
   ## Sidebar content
   dashboardSidebar(
@@ -48,9 +48,12 @@ dashboardPage(
               h3("Creators"),
               "The following persons are contributing to the forecast hub (in alphabetical order): Johannes Bracher,",
               "Jannik Deutschel, Tilmann Gneiting, Konstantin Görgen, Melanie Schienle. Details can be found",
-              tags$a("https://github.com/KITmetricslab/covid19-forecast-hub-de#forecast-hub-team", "here."),
-              "All contributors are members of the Chair of Econometrics and Statistics, Karlsruhe Institute",
-              "of Technology, and/or the Computational Statistics Group at Heidelberg Institute of Theoretical Studies.",
+              tags$a(href = "https://github.com/KITmetricslab/covid19-forecast-hub-de#forecast-hub-team", "here."),
+              "All contributors are members of the",
+              tags$a(href = "https://statistik.econ.kit.edu/index.php", "Chair of Econometrics and Statistics, Karlsruhe Institute of Technology"),
+              "and/or the",
+              tags$a(href = "https://www.h-its.org/research/cst/", "Computational Statistics Group at Heidelberg Institute of Theoretical Studies."),
+              "Note, however, that the forecast hub is not officially endorsed by neither KIT nor HITS.",
               "This Shiny app has been implemented by Johannes Bracher.")
     )
   )
