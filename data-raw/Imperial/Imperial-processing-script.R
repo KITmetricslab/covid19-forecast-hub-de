@@ -1,9 +1,9 @@
 # Author: Konstantin Görgen
 # Date: Sat May 09 12:14:22 2020
 # --------------
-# Modification: 
-# Author:
-# Date:
+# Modification: Added Submission and Forecast date
+# Author: Konstantin Görgen
+# Date: 18.05.2020
 # --------------
 
 ##File to read in Imperial Forecasts
