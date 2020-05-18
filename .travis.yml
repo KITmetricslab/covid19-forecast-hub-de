@@ -1,4 +1,17 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+language: node_js
+dist: bionic
+sudo: required
+git:
+  depth: 1
+ 
+node_js:
+ - 7
+
+install:
+  - R -e "0" --args --bootstrap-packrat
+warnings_are_errors: false
+
+script: ./travis-main.sh
+
+notifications:
+  email: false
