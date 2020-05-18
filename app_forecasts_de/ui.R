@@ -19,7 +19,7 @@ dashboardPage(
 
       # start tab:
       tabItem(tabName = "forecasts",
-              titlePanel("Interactive visualization of COVID19 death forecasts (Germany)"),
+              titlePanel("Interactive visualization of forecasts of COVID19 deaths  in Germany (in development)"),
               uiOutput("inp_select_date"),
               uiOutput("inp_select_model"),
               checkboxGroupInput("select_truths", "Select truth data to display:",

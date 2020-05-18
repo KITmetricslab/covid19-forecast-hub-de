@@ -23,7 +23,7 @@ Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 
 # ----------------------------------------------------------------------------
 
-forecasts_to_plot <- read.csv("data/forecasts_to_plot.csv")
+forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/forecasts_to_plot.csv")
 forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
@@ -39,11 +39,11 @@ names(cols_models) <- models
 # get truth data:
 truths <- c("RKI", "ECDC", "JHU")
 dat_truth <- list()
-dat_truth$RKI <- read.csv("../data-truth/RKI/truth-Cumulative Deaths_Germany.csv", stringsAsFactors = FALSE)
+dat_truth$RKI <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth-Cumulative%20Deaths_Germany.csv", stringsAsFactors = FALSE)
 dat_truth$RKI$date <- as.Date(dat_truth$RKI$date)
-dat_truth$JHU <- read.csv("../data-truth/JHU/truth_JHU-Cumulative Deaths_Germany.csv", stringsAsFactors = FALSE)
+dat_truth$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Deaths_Germany.csv", stringsAsFactors = FALSE)
 dat_truth$JHU$date <- as.Date(dat_truth$JHU$date)
-dat_truth$ECDC <- read.csv("../data-truth/ECDC/truth_ECDC-Cumulative Deaths_Germany.csv", stringsAsFactors = FALSE)
+dat_truth$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/ECDC/truth_ECDC-Cumulative%20Deaths_Germany.csv", stringsAsFactors = FALSE)
 dat_truth$ECDC$date <- as.Date(dat_truth$ECDC$date)
 
 pch_truths <- c(17, 16, 15)
