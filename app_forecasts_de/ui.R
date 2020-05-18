@@ -26,7 +26,7 @@ dashboardPage(
                                  choiceNames = c("RKI", "ECDC", "JHU"),
                                  choiceValues = c("RKI", "ECDC", "JHU"),
                                  selected = "ECDC", inline = TRUE),
-              checkboxInput("show_pi", label = "Show 90% prediction interval where available", value = TRUE),
+              checkboxInput("show_pi", label = "Show 95% prediction interval where available", value = TRUE),
               checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
               plotOutput("plot_forecasts", height = 500)
       ),
