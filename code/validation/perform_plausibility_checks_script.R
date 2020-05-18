@@ -14,16 +14,12 @@ if(Sys.info()[1]=="Windows") {
 } else {
   Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 }
-# Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
-#Sys.setlocale("LC_TIME","English")
 
-# The previous command doesn't work for me(Jannik) and me(Konstantin).
-#Sys.setlocale("LC_TIME", "C")
 
 directories <- list.dirs("../../data-processed")[-1]
 
 plausibility_checks <- list()
 
-for(dir in directories[2]){
+for(dir in directories){
   plausibility_checks[[dir]] <- validate_directory(dir)
 }

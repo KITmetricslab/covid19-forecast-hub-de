@@ -30,12 +30,17 @@ filepaths<-filepaths[germany_reported]
 #write final files
 
 for(i in 1:length(filepaths)){
-  formatted_file <- format_imperial(path=filepaths[i])
+  formatted_file_1 <- format_imperial(path=filepaths[i],ens_model=1)
+  formatted_file_2 <- format_imperial(path=filepaths[i],ens_model=2)
 
   date<-get_date(filepaths[i])
   
-  write_csv(formatted_file,
+  write_csv(formatted_file_1,
             path = paste0("../../data-processed/Imperial-ensemble1/",
                           date,
                           "-Germany-Imperial-ensemble1.csv"))
+  write_csv(formatted_file_2,
+            path = paste0("../../data-processed/Imperial-ensemble2/",
+                          date,
+                          "-Germany-Imperial-ensemble2.csv"))
 }
