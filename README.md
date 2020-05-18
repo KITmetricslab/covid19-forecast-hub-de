@@ -1,3 +1,5 @@
+https://travis-ci.com/KITmetricslab/covid19-forecast-hub-de.svg?token=tay9rBsDUDXpwELgv9Dn&branch=issue/24
+
 # A German COVID-19 Forecast Hub
 
 ### This project is in a development stage and not operational yet. The platform is not officially endorsed by KIT or HITS.
