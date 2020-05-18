@@ -22,9 +22,9 @@ dashboardPage(
               uiOutput("inp_select_date"),
               uiOutput("inp_select_model"),
               checkboxGroupInput("select_truths", "Select truth data to display:",
-                                 choiceNames = c("RKI", "JHU"),
-                                 choiceValues = c("RKI", "JHU"),
-                                 selected = "RKI", inline = TRUE),
+                                 choiceNames = c("RKI", "ECDC", "JHU"),
+                                 choiceValues = c("RKI", "ECDC", "JHU"),
+                                 selected = "ECDC", inline = TRUE),
               checkboxInput("show_pi", label = "Show 90% prediction interval where available", value = TRUE),
               checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
               plotOutput("plot_forecasts", height = 500)
