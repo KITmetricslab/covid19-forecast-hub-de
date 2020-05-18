@@ -173,11 +173,11 @@ verify_no_na <- function(entry){
 #' @return invisibly returns TRUE if problems detected, FALSE otherwise
 verify_targets <- function(entry){
   allowed_targets <- c(
-    paste(0:130, "day ahead inc death"),
-    paste(0:130, "day ahead cum death"),
-    paste(0:20, "wk ahead inc death"),
-    paste(0:20, "wk ahead cum death"),
-    paste(0:130, "day ahead inc hosp")
+    paste(-1:130, "day ahead inc death"),
+    paste(-1:130, "day ahead cum death"),
+    paste(-1:20, "wk ahead inc death"),
+    paste(-1:20, "wk ahead cum death"),
+    paste(-1:130, "day ahead inc hosp")
   )
   targets_in_entry <- unique(entry$target)
   if(!all(targets_in_entry %in% allowed_targets)){
