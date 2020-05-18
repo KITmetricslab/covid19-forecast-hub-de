@@ -6,6 +6,7 @@ library(shinydashboard)
 dashboardPage(
   title = "Interactive visualization of COVID19 death forecasts (Germany)",
   dashboardHeader(title = "KIT-ECON"),
+  skin = "yellow",
   ## Sidebar content
   dashboardSidebar(
     sidebarMenu(
@@ -31,7 +32,26 @@ dashboardPage(
       ),
 
       # tab with info on disease:
-      tabItem(tabName = "background")
+      tabItem(tabName = "background",
+              h3("Purpose"),
+              "This interactive visualization is part of the",
+              tags$a(href = "https://github.com/KITmetricslab/covid19-forecast-hub-de/",
+                     "German version of the COVID-19 forecast hub."),
+              "The forecasts shown here have been created by various independent international research groups. Links to these",
+              "groups, the respective raw data and licences can be found",
+              tags$a(href = "https://github.com/KITmetricslab/covid19-forecast-hub-de#teams-generating-forecasts", "here."),
+              "The repository also contains the",
+              tags$a(href = "https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/app_forecasts_de", "code"),
+              "behind this app.",
+              "This effort is inspired by the",
+              tags$a(href = "https://github.com/reichlab/covid19-forecast-hub", "US COVID-19 forecast hub."),
+              h3("Creators"),
+              "The following persons are contributing to the forecast hub (in alphabetical order): Johannes Bracher,",
+              "Jannik Deutschel, Tilmann Gneiting, Konstantin Görgen, Melanie Schienle. Details can be found",
+              tags$a("https://github.com/KITmetricslab/covid19-forecast-hub-de#forecast-hub-team", "here."),
+              "All contributors are members of the Chair of Econometrics and Statistics, Karlsruhe Institute",
+              "of Technology, and/or the Computational Statistics Group at Heidelberg Institute of Theoretical Studies.",
+              "This Shiny app has been implemented by Johannes Bracher.")
     )
   )
 )
