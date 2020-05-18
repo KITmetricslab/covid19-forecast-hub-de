@@ -30,12 +30,6 @@ for(dat in dates){
   ger_cum <- process_global_lanl_file(ger_cum_filename)
   ger_inc <- process_global_lanl_file(ger_inc_filename)
 
-  names(ger_cum)[names(ger_cum) == "location"] <- "location_name"
-  names(ger_inc)[names(ger_inc) == "location"] <- "location_name"
-
-  ger_cum["location"] <- "GM"
-  ger_inc["location"] <- "GM"
-
   total <- rbind(ger_cum, ger_inc)
 
   write_csv(total, 
