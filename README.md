@@ -16,6 +16,8 @@ If you are generating forecasts for COVID19 deaths in Germany and would like to 
 
 Currently we are focussing on forecasts of 1 through 130 day-ahead incident and cumulative deaths, 1 through 20 week-ahead incident and cumulative deaths. Otherwise we follow the principles outlined [here](https://github.com/reichlab/covid19-forecast-hub#what-forecasts-we-are-tracking-and-for-which-locations) for the US COVID19 forecast hub.
 
+Note that unlike the US hub we also allow for `-1 wk ahead <target>`, `0 wk ahead <target>`, `-1 day ahead <target>` and `0 day ahead <target>` which, if they have already been observed (this may or may not be the case for 0 wk ahead) are assigned `type = "observed"`. We decided to include this as there is more heterogeneity concerning the ground truths used by different teams. By also storing the last observed values as provided by teams it becomes easier to spot such differences.
+
 ## Contents of the repository
 
 The main contents of the repository are currently the following:
@@ -31,7 +33,7 @@ The forecasts assembled in this repository have been created by various independ
 
 ## Teams generating forecasts
 
-Currently we assemble forecasts from the following teams. *Note that not all teams are using the same ground truth data.* (used data source and forecast reuse license in brackets):
+Currently we assemble forecasts from the following teams. *Note that not all teams are using the same ground truth data.* (used truth data source and forecast reuse license in brackets):
 
 - [IHME](https://covid19.healthdata.org/united-states-of-america) (unclear; CC-AT-NC4.0) *Note that we are currently still facing some difficulties in the processing of the IHME files.*
 - [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)
@@ -39,6 +41,14 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [MIT](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
 - [YYG](http://covid19-projections.com/) (JHU; MIT)
+
+## Truth data
+
+Data on observed numbers of deaths come from the following surces:
+
+- [Robert Koch Institut](https://www.arcgis.com/home/item.html?id=f10774f1c63e40168479a1feb6c7ca74)
+- [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases)
+- [Johns Hopkins University](https://coronavirus.jhu.edu/)
 
 ## Forecast hub team
 
