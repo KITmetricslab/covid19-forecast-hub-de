@@ -15,3 +15,7 @@ script: ./travis-main.sh
 
 notifications:
   email: false
+
+branches:
+ only:
+   - issue/24
