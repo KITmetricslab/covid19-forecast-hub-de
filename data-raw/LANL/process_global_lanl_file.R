@@ -96,12 +96,88 @@ process_global_lanl_file <- function(lanl_filepath,
         filter(quantile==0.5) %>% 
         mutate(quantile=NA, type="point")
     
-    all_dat <- bind_rows(fcast_all, point_ests) %>%
+    
+    ## add ground_truth
+    ## ------------------
+    dat_past <- subset(dat, dates <= forecast_date)
+    dat_past <- subset(dat_past, countries == "Germany")
+    
+    value_col <- ifelse(inc_or_cum == "cum", "truth_deaths", "q.50")
+    
+    
+    dat_past <- reshape(dat_past, direction = "long", 
+                        varying = list(c(value_col)),
+                        times = c(paste("day ahead",  inc_or_cum ,"death", sep=" ")))
+    
+    # Add and rename columns
+    dat_past$quantile <- NA
+    dat_past$type <- "observed"
+    colnames(dat_past)[colnames(dat_past) == 
+                         value_col] <- "value"
+    colnames(dat_past)[colnames(dat_past) == 
+                         "countries"] <- "location_name"
+    colnames(dat_past)[colnames(dat_past) == 
+                         "fcst_date"] <- "forecast_date"
+    
+    dat_past$id <- NULL
+    rownames(dat_past) <- NULL
+    
+    # get forecast horizons:
+    dat_past$horizon <- as.numeric(dat_past$dates - forecast_date)
+    dat_past$target <- paste(dat_past$horizon, dat_past$time)
+    
+    # remove unneeded columns
+    dat_past$time <- dat_past$horizon <- NULL
+    
+    colnames(dat_past)[colnames(dat_past) == "dates"] <- "target_end_date"
+    
+    # add one-week-ahead cumulative forecast if possible as well as 0 and -1-week ahead forecasts:
+    # get day of the week of forecast_date:
+    day <- weekdays(forecast_date, abbreviate = TRUE)
+    
+    # When do the one-week-ahead forecast end?
+    next_dates <- seq(from = forecast_date, length.out = 14, by = 1)
+    next_days <- weekdays(next_dates, abbreviate = TRUE)
+    if(day %in% c("Sun", "Mon")){
+      forecast_1_wk_ahead_end <- next_dates[next_days == "Sat"][1]
+    }else{
+      forecast_1_wk_ahead_end <- next_dates[next_days == "Sat"][2]
+    }
+    # Whether the one-week-ahead forecast can be computed depends on the day
+    # the forecasts were issued:
+    if(max(dat_past$target_end_date) > forecast_1_wk_ahead_end - 14){
+      ends_weekly_forecasts <- data.frame(end = seq(from = forecast_1_wk_ahead_end - 14,
+                                                    by = 7, to = max(dat_past$target_end_date)))
+      ends_weekly_forecasts$target <- paste((-1):(nrow(ends_weekly_forecasts) -2), "wk ahead cum death")
+      # restrict to respective cumulative forecasts:
+      weekly_dat <- subset(dat_past, target_end_date %in% ends_weekly_forecasts$end &
+                             grepl("cum", dat_past$target))
+      weekly_dat$target <- NULL
+      weekly_dat <- merge(weekly_dat, ends_weekly_forecasts, by.x = "target_end_date", by.y = "end")
+      weekly_dat <- weekly_dat[, colnames(dat_past)]
+      
+      dat_past <- rbind(dat_past, weekly_dat)
+    }
+    
+    dat_past <- dat_past[, c("forecast_date", "target", "target_end_date",
+                             "location_name", "type", "quantile", "value")]
+    
+    all_dat <- bind_rows(fcast_all, point_ests, dat_past) %>%
         arrange(type, target, quantile) %>%
         mutate(quantile = round(quantile, 3)) %>%
         ## making sure ordering is right :-)
         select(forecast_date, target, target_end_date, location, type, quantile, value)
     
+    # Add country
+    all_dat$location <- NA
+    all_dat$location <- "GM"
+    
+    all_dat$location_name <- NA
+    all_dat$location_name <- "Germany"
+    
+    all_dat <- subset(all_dat, target %in% c(paste((-1):30, "day ahead cum death"),
+                                             paste((-1):30, "day ahead inc death"),
+                                             paste((-1):7, "wk ahead cum death")))
+    
     return(all_dat)
 }
-
