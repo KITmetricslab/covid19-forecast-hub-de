@@ -2,9 +2,11 @@
 
 ### This project is in a development stage and not operational yet. The platform is not officially endorsed by KIT or HITS.
 
+*Beschreibung in deutscher Sprache siehe [hier](README_DE.html).*
+
 ## Purpose
 
-This repository assembles forecasts of cumulative and incident COVID19 deaths in Germany in a standardized format. It is run by members of the [Chair of Econometrics and Statistics at Karlsruhe Institute of Technology](https://statistik.econ.kit.edu/index.php) and the [Computational Statistics Group at Heidelberg Institute of Technology](https://www.h-its.org/research/cst/), see below.
+This repository assembles forecasts of cumulative and incident COVID19 deaths in Germany in a standardized format. It is run by members of the [Chair of Econometrics and Statistics at Karlsruhe Institute of Technology](https://statistik.econ.kit.edu/index.php) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/), see below.
 
 An interactive visualization of the different forecasts can be found [here](https://jobrac.shinyapps.io/app_forecasts_de/).
 
@@ -26,7 +28,7 @@ The main contents of the repository are currently the following:
 
 - `data-raw`: the forecast files as provided by the various teams on their respective websites
 - `data-processed`: forecasts in a standardized format
-- `app_forecasts_de`: a simple R shiny app to visualize forecasts (to be run locally and soon available online)
+- `app_forecasts_de`: a simple R shiny app to visualize forecasts (also available online [here](https://jobrac.shinyapps.io/app_forecasts_de/))
 
 ## Data license and reuse
 
@@ -48,7 +50,6 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 
 Data on observed numbers of deaths come from the following surces:
 
-- [Robert Koch Institut](https://www.arcgis.com/home/item.html?id=f10774f1c63e40168479a1feb6c7ca74)
 - [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases)
 - [Johns Hopkins University](https://coronavirus.jhu.edu/)
 
