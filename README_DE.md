@@ -2,7 +2,7 @@
 
 ### Dieses Projekt befindet sich in der Entwicklungsphase und ist noch nicht operationell. Dies ist keine offizielle KIT- oder HITS-Plattform.
 
-*Description in English available [here](README.html).*
+*Description in English available [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/).*
 
 ## Zweck
 
