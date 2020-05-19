@@ -37,18 +37,19 @@ cols_models <- brewer.pal(n = 8, name = 'Dark2')
 names(cols_models) <- models
 
 # get truth data:
-truths <- c("RKI", "ECDC", "JHU")
+
 dat_truth <- list()
-dat_truth$RKI <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth-Cumulative%20Deaths_Germany.csv", stringsAsFactors = FALSE)
-dat_truth$RKI$date <- as.Date(dat_truth$RKI$date)
-dat_truth$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Deaths_Germany.csv", stringsAsFactors = FALSE)
-dat_truth$JHU$date <- as.Date(dat_truth$JHU$date)
+# dat_truth$RKI <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth-Cumulative%20Deaths_Germany.csv", stringsAsFactors = FALSE)
+# dat_truth$RKI$date <- as.Date(dat_truth$RKI$date)
 dat_truth$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/ECDC/truth_ECDC-Cumulative%20Deaths_Germany.csv", stringsAsFactors = FALSE)
 dat_truth$ECDC$date <- as.Date(dat_truth$ECDC$date)
+dat_truth$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Deaths_Germany.csv", stringsAsFactors = FALSE)
+dat_truth$JHU$date <- as.Date(dat_truth$JHU$date)
 
-pch_truths <- c(17, 16, 15)
-pch_truth_empty <- c(2, 1, 0)
-names(pch_truths) <- names(dat_truth)
+truths <- names(dat_truth)
+pch_truths <- c(17, 16)
+pch_truth_empty <- c(2, 1)
+names(pch_truths) <- truths
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
@@ -80,7 +81,7 @@ shinyServer(function(input, output) {
                    add_model_past = input$show_model_past)
     legend("topleft", col = cols_models, legend = models, lty = 0, bty = "n",
            pch = ifelse(models %in% input$select_models, 16, 1), pt.cex = 1.3)
-    legend("top", col = "black", legend = truths, lty = 0, bty = "n",
+    legend("top", col = "black", legend = c("ECDC/RKI", "JHU"), lty = 0, bty = "n",
            pch = ifelse(truths %in% input$select_truths, pch_truths, pch_truth_empty),
            pt.cex = 1.3)
   })
