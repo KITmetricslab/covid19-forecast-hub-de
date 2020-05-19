@@ -6,7 +6,7 @@ Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 # get overview on processed files:
 models <- list.dirs("../data-processed", recursive = FALSE, full.names = FALSE)
 models <- c("Geneva-DeterministicGrowth", "LANL-GrowthRate", "MIT-CovidAnalytics-DELPHI",
-            "Imperial-ensemble1", "YYG-ParamSearch")
+            "Imperial-ensemble1", "Imperial-ensemble2", "YYG-ParamSearch")
 
 available_dates <- relevant_dates <- list()
 
