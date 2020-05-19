@@ -3,7 +3,7 @@
 check_forecast_name_path <- function(forecast_file) {
     forecast_file_path <- basename(dirname(forecast_file))
     forecast_file_name <-  substring(basename(forecast_file), 
-                                        12,
+                                        20,
                                         nchar(basename(forecast_file)) - 4)
     if (forecast_file_path != forecast_file_name){
         error_message <- paste("\nERROR: Forecast file name: ",
