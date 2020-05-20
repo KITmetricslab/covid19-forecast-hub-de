@@ -1,4 +1,3 @@
-from zoltpy.covid19 import validate_quantile_csv_file
 import glob
 from pprint import pprint
 import sys
@@ -6,6 +5,10 @@ import os
 import pandas as pd
 import numpy as np
 from datetime import datetime
+from pathlib import Path
+
+sys.path.append(str(Path.cwd().joinpath("code", "validation")))
+import covid19
 
 
 # Check for metadata file
@@ -55,7 +58,7 @@ def check_formatting(my_path):
                 df = df[df['file_path'] != filepath]
 
                 # validate file
-                file_error = validate_quantile_csv_file(filepath)
+                file_error = covid19.validate_quantile_csv_file(filepath)
 
                 # Check forecast file date = forecast_date column
                 forecast_date_error = filename_match_forecast_date(filepath)
@@ -87,6 +90,7 @@ def check_formatting(my_path):
             print("\n* ERROR IN '", filename, "'")
             for error in errors:
                 print(error)
+                pass
         sys.exit("\n ERRORS FOUND EXITING BUILD...")
     else:
         print("✓ no errors")
@@ -100,3 +104,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
