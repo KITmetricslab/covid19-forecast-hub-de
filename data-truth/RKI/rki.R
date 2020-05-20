@@ -62,7 +62,7 @@ rki_inc_deaths<-rki_deaths %>%
   select(date,location,location_name,value)
 
 rki_cum_deaths<-rki_inc_deaths %>% mutate(value=cumsum(value))
-
-write.csv(rki_cum_deaths,"../truth-Cumulative Deaths_Germany.csv",row.names = FALSE)
-write.csv(rki_inc_deaths,"../truth-Incident Deaths_Germany.csv",row.names = FALSE)
+ 
+write.csv(rki_cum_deaths,"truth_RKI-Cumulative Deaths_Germany.csv",row.names = FALSE)
+write.csv(rki_inc_deaths,"truth_RKI-Incident Deaths_Germany.csv",row.names = FALSE)
 

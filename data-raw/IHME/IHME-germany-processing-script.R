@@ -45,7 +45,7 @@ forecast_dates<-real_vs_reported[keep_report,]
 
 
 for (i in 1:length(filepaths)) {
-  formatted_file <- make_qntl_dat(filepaths[i],forecast_date=forecast_dates[i,2],
+  formatted_file <- make_qntl_dat(path=filepaths[i],forecast_date=forecast_dates[i,2],
                                   submission_date=forecast_dates[i,1])
   
   date <- get_date(filepaths[i])

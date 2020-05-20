@@ -119,7 +119,9 @@ make_qntl_dat <- function(path,forecast_date,submission_date, all_states = FALSE
     # uncomment if you only want one week ahead forecasts
     # dplyr::filter(as.Date(as.character(date_v)) %in% c(forecast_date+1:7)) %>%
     # delete non-forecasts expect for 0 day and -1 day ahead that are kept
-    dplyr::filter(as.Date(as.character(date_v)) > forecast_date-2) %>%
+    # and only forecast up to 130 days into the future
+    dplyr::filter((as.Date(as.character(date_v)) > forecast_date-2) &
+                    (as.Date(as.character(date_v))-forecast_date<=130)) %>%
     # add column with target_id
     dplyr::mutate(target_id = paste(
       difftime(as.Date(as.character(date_v)), forecast_date, units = "days"),
@@ -162,8 +164,9 @@ make_qntl_dat <- function(path,forecast_date,submission_date, all_states = FALSE
     dplyr::rename(date_v = date) %>%
     # uncomment if you only want one week ahead forecasts
     # dplyr::filter(as.Date(as.character(date_v)) %in% c(forecast_date+1:7)) %>%
-    # delete non-forecasts
-    dplyr::filter(as.Date(as.character(date_v)) > forecast_date-2) %>%
+    # delete non-forecasts and only forecast up to 130 days in the future
+    dplyr::filter(as.Date(as.character(date_v)) > forecast_date-2 &
+                    (as.Date(as.character(date_v))-forecast_date<=130)) %>%
     # add column with target_id
     dplyr::mutate(target_id = paste(
       difftime(as.Date(as.character(date_v)), forecast_date, units = "days"),
@@ -234,9 +237,11 @@ make_qntl_dat <- function(path,forecast_date,submission_date, all_states = FALSE
       #                 ew<unname(MMWRweek(forecast_date)[[2]])+6 &
       #                 ew>unname(MMWRweek(forecast_date)[[2]])-1) %>%
       
-      #add -1, 0 week ahead (-3 in formula)
+      #add -1, 0 week ahead (-3 in formula) and only forecast 20 weeks ahead
+      #since 1 week ahead means difference of zero, take <20
       dplyr::filter(day_v == "Saturday" &
-                      ew > unname(MMWRweek(submission_date)[[2]]) - 3) %>%
+                      ew > unname(MMWRweek(submission_date)[[2]]) - 3 &
+                      ew-unname(MMWRweek(submission_date)[[2]]) <20) %>%
       dplyr::mutate(target_id = paste((ew - (
         unname(MMWRweek(submission_date)[[2]])
       ) + 1), "wk ahead cum death"))
