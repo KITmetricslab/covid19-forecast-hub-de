@@ -234,12 +234,12 @@ format_imperial<-function(path,ens_model,location="Germany", qntls=c(0.01, 0.025
  observed_point_ests<-
    tibble(target ="-1 day ahead inc death",target_end_date=last_obs_date-1,value=obs_data_inc$value[obs_data_inc$date==(last_obs_date-1)]) %>%
    add_row(target ="0 day ahead inc death",target_end_date=last_obs_date,value=obs_data_inc$value[obs_data_inc$date==(last_obs_date)]) %>%
-   add_row(target ="-1 week ahead inc death",target_end_date=end_obs_week-7,value=minus_one_week_inc) %>%
-   add_row(target ="0 week ahead inc death",target_end_date=end_obs_week,value=zero_week_inc) %>%
+   add_row(target ="-1 wk ahead inc death",target_end_date=end_obs_week-7,value=minus_one_week_inc) %>%
+   add_row(target ="0 wk ahead inc death",target_end_date=end_obs_week,value=zero_week_inc) %>%
    add_row(target ="-1 day ahead cum death",target_end_date=last_obs_date-1,value=obs_data$value[obs_data$date==(last_obs_date-1)]) %>%
    add_row(target ="0 day ahead cum death",target_end_date=last_obs_date,value=obs_data$value[obs_data$date==(last_obs_date)]) %>%
-   add_row(target ="-1 week ahead cum death",target_end_date=end_obs_week-7,value=obs_data$value[obs_data$date==(end_obs_week-7)]) %>%
-   add_row(target ="0 week ahead cum death",target_end_date=end_obs_week,value=obs_data$value[obs_data$date==(end_obs_week)]) %>%
+   add_row(target ="-1 wk ahead cum death",target_end_date=end_obs_week-7,value=obs_data$value[obs_data$date==(end_obs_week-7)]) %>%
+   add_row(target ="0 wk ahead cum death",target_end_date=end_obs_week,value=obs_data$value[obs_data$date==(end_obs_week)]) %>%
    mutate(type="observed",quantile=NA)
    
 
