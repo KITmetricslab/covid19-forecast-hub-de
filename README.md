@@ -1,4 +1,4 @@
-# A German COVID-19 Forecast Hub
+# A German COVID-19 Forecast Hub test
 
 ### This project is in a development stage and not operational yet. The platform is not officially endorsed by KIT or HITS.
 
