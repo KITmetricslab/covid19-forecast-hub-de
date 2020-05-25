@@ -14,6 +14,9 @@
 ## reformat IHME forecasts
 # Run from data-raw/IHME
 source("process_IHME-germany_functions.R")
+require(tidyverse)
+require(MMWRweek)
+require(lubridate)
 
 
 ## list all files and read
