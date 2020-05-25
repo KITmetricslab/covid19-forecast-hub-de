@@ -157,9 +157,9 @@ process_YYG_file<- function(yyg_filepath, forecast_date){
     daily_dat <- rbind(daily_dat, weekly_dat)
   }
   
-  daily_dat <- subset(daily_dat, target %in% c(paste((-1):30, "day ahead cum death"),
-                                               paste((-1):30, "day ahead inc death"),
-                                               paste((-1):7, "wk ahead cum death")))
+  daily_dat <- subset(daily_dat, target %in% c(paste((-1):130, "day ahead cum death"),
+                                               paste((-1):130, "day ahead inc death"),
+                                               paste((-1):20, "wk ahead cum death")))
   
   return(daily_dat) 
 }
