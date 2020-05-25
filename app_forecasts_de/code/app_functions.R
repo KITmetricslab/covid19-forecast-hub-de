@@ -53,8 +53,12 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
 
     col_transp <- modify_alpha(col, alpha.col)
     # temporarily removed last_truth from polygon as last truth can be different from model to model
-    polygon(c(subs_intervals$target_end_date),
-            c(subs_intervals$value), col = col_transp, border = NA)
+    if(nrow(subs_intervals) == 2){
+      subs_intervals <- rbind(subs_intervals, subs_intervals)
+      subs_intervals$target_end_date <- subs_intervals$target_end_date + c(0, 0, 1, 1)
+    }
+    polygon(subs_intervals$target_end_date,
+            subs_intervals$value, col = col_transp, border = NA)
     # polygon(c(timezero - 2, subs_intervals$target_end_date),
     #         c(last_truth, subs_intervals$value), col = col_transp, border = NA)
   }
