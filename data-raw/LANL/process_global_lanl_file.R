@@ -175,9 +175,9 @@ process_global_lanl_file <- function(lanl_filepath,
     all_dat$location_name <- NA
     all_dat$location_name <- "Germany"
     
-    all_dat <- subset(all_dat, target %in% c(paste((-1):30, "day ahead cum death"),
-                                             paste((-1):30, "day ahead inc death"),
-                                             paste((-1):7, "wk ahead cum death")))
+    all_dat <- subset(all_dat, target %in% c(paste((-1):130, "day ahead cum death"),
+                                             paste((-1):130, "day ahead inc death"),
+                                             paste((-1):20, "wk ahead cum death")))
     
     return(all_dat)
 }
