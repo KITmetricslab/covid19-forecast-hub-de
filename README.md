@@ -56,7 +56,7 @@ Data on observed numbers of deaths come from the following surces:
 
 ## Future submission system via pull requests
 
-In the future we are planning to install a submission system using pull requests as in the US version of the hub. The system will closely resemble the one outlined [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#data-submission-instructions), with automated formatting checks as described [here](https://github.com/reichlab/covid19-forecast-hub/wiki/Validation-Checks). Do not hesitate to get in touch with us (via [email](https://statistik.econ.kit.edu/mitarbeiter_2902.php) or github issue) to get some assistance in getting started. We also started compiling some additional information in our [Wiki](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki).
+In the future we are planning to install a submission system using pull requests as in the US version of the hub. The system will closely resemble the one outlined [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#data-submission-instructions), with automated formatting checks as described [here](https://github.com/reichlab/covid19-forecast-hub/wiki/Validation-Checks). *Note that we add the word `-Germany-` in all forecast file names after the date (see existing examples).* Do not hesitate to get in touch with us (via [email](https://statistik.econ.kit.edu/mitarbeiter_2902.php) or github issue) to get some assistance in getting started. We also started compiling some additional information in our [Wiki](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki).
 
 ## Forecast hub team
 
