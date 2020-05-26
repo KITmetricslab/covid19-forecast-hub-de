@@ -35,6 +35,16 @@ The main contents of the repository are currently the following:
 
 The forecasts assembled in this repository have been created by various independent teams, most of which provided a license with their forecasts. These licenses can be found in the respective subfolders of `data-processed`. Parts of the processing and analysis codes have been adapted from the [US COVID-19 forecast hub](COVID-19 Forecast Hub) where they were provided under an [MIT license](https://github.com/reichlab/covid19-forecast-hub/blob/master/LICENSE). All codes contained in this repository are equally under the [MIT license](LICENSE).
 
+## Data format
+
+The data format we use closely resembles the one outlined for the US Hub [here](https://github.com/reichlab/covid19-forecast-hub#data-model) and [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#data-submission-instructions). We will provide a summary on our own site shortly (highlighting differences to the US system which my arise).
+
+## Truth data
+
+Data on observed numbers of deaths come from the following surces:
+
+- [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases)
+- [Johns Hopkins University](https://coronavirus.jhu.edu/)
 
 ## Teams generating forecasts
 
@@ -47,12 +57,6 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
 - [YYG](http://covid19-projections.com/) (JHU; MIT)
 
-## Truth data
-
-Data on observed numbers of deaths come from the following surces:
-
-- [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases)
-- [Johns Hopkins University](https://coronavirus.jhu.edu/)
 
 ## Future submission system via pull requests
 
