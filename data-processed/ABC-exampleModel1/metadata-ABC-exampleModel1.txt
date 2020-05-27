@@ -1,0 +1,14 @@
+team_name: ABC
+team_abbr: ABC
+model_name: exampleModel1
+model_abbr: xMod1
+model_contributors:  Max Mustermann <mustermann@ABC.com>
+
+
+this_model_is_an_ensemble: TRUE
+this_model_is_unconditional: TRUE
+
+methods: >-
+    This model makes predictions about the future, unconditional on particular intervention strategies.
+    exampleModel1 and exampleModel2 are disease transmission models fit with different assumptions about serial
+    intervals.
