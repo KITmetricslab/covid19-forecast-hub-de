@@ -37,7 +37,8 @@ The forecasts assembled in this repository have been created by various independ
 
 ## Data format
 
-The data format we use closely resembles the one outlined for the US Hub [here](https://github.com/reichlab/covid19-forecast-hub#data-model) and [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#data-submission-instructions). We will provide a summary on our own site shortly (highlighting differences to the US system which my arise).
+We store point and quantile forecasts in a long format, including information on forecast dates and location, see [this Wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Data-Format) for details. This format is largely identical to the one outlined for the US Hub [here](https://github.com/reichlab/covid19-forecast-hub#data-model) and [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#data-submission-instructions).
+
 
 ## Truth data
 
@@ -58,9 +59,10 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [YYG](http://covid19-projections.com/) (JHU; MIT)
 
 
-## Future submission system via pull requests
+## Submission system via pull requests
 
-In the future we are planning to install a submission system using pull requests as in the US version of the hub. The system will closely resemble the one outlined [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#data-submission-instructions), with automated formatting checks as described [here](https://github.com/reichlab/covid19-forecast-hub/wiki/Validation-Checks). *Note that we add the word `-Germany-` in all forecast file names after the date (see existing examples).* Do not hesitate to get in touch with us (via [email](https://statistik.econ.kit.edu/mitarbeiter_2902.php) or github issue) to get some assistance in getting started. We also started compiling some additional information in our [Wiki](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki).
+We use a submission system based on pull requests as in the US version of the hub. The system closely resembles the one outlined [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#data-submission-instructions), with automated formatting checks as described [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Validation-Checks). *Note that we add the word `-Germany-` in all forecast file names after the date (see existing examples).* Do not hesitate to get in touch with us (via [email](https://statistik.econ.kit.edu/mitarbeiter_2902.php) or github issue) to get some assistance in getting started. 
+Additional information about the [submission format](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Submission-Format) or the [submission via pull requests](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Upload-Submission) can be found in our [Wiki](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Upload-Submission).
 
 ## Forecast hub team
 
