@@ -6,19 +6,17 @@
 
 ## Purpose
 
-This repository assembles forecasts of cumulative and incident COVID19 deaths in Germany in a standardized format. It is run by members of the [Chair of Econometrics and Statistics at Karlsruhe Institute of Technology](https://statistik.econ.kit.edu/index.php) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/), see below.
+This repository assembles forecasts of cumulative and incident COVID19 deaths in Germany in a standardized format. Other forecast targets will be added in the future. The repository is run by members of the [Chair of Econometrics and Statistics at Karlsruhe Institute of Technology](https://statistik.econ.kit.edu/index.php) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/), see below.
 
 An interactive visualization of the different forecasts can be found [here](https://jobrac.shinyapps.io/app_forecasts_de/).
 
 The effort parallels the [US COVID-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) run by the UMass-Amherst Influenza Forecasting Center of Excellence based at the [Reich Lab](https://reichlab.io/). We are in close exchange with the Reich Lab team and follow the general structure and [data format](https://github.com/reichlab/covid19-forecast-hub#data-model) defined there, see also this [Wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Data-Format) for more details.
 
-Unlike in the more advanced US COVID19 forecast hub, forecasts are currently not submitted to us by pull request. Instead, we actively collect available forecasts from various teams and re-format them in a standardized way. We are, however trying to move to a submission system based on pull requests, see this [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Preparing-your-submission).
-
-If you are generating forecasts for COVID19 deaths in Germany and would like to contribute to this repository do not hesitate to [get in touch](https://statistik.econ.kit.edu/mitarbeiter_2902.php).
+If you are generating forecasts for COVID19 cases, hospitalizations or deaths in Germany and would like to contribute to this repository do not hesitate to [get in touch](https://statistik.econ.kit.edu/mitarbeiter_2902.php).
 
 ## Forecast targets
 
-Currently we are focussing on forecasts of 1 through 130 day-ahead incident and cumulative deaths, 1 through 20 week-ahead incident and cumulative deaths in Germany (national level). This [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Data-Format) contains details on the definition of the targets. Further targets, including targets stratified by Bundesland will be added after consultation with interested teams of forecasters.
+Currently we are focussing on forecasts of 1 through 130 day-ahead incident and cumulative deaths, 1 through 20 week-ahead incident and cumulative deaths in Germany (national level). This [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets) contains details on the definition of the targets. Further targets, including targets stratified by Bundesland will be added after consultation with interested teams of forecasters.
 
 Note that our definition of targets parallels the principles outlined [here](https://github.com/reichlab/covid19-forecast-hub#what-forecasts-we-are-tracking-and-for-which-locations) for the US COVID19 forecast hub.
 
@@ -28,7 +26,7 @@ Note that unlike the US hub we also allow for `-1 wk ahead <target>`, `0 wk ahea
 
 ## Contents of the repository
 
-The main contents of the repository are currently the following:
+The main contents of the repository are currently the following (see also [this](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Structure-of-the-repository) Wiki page):
 
 - `data-raw`: the forecast files as provided by the various teams on their respective websites
 - `data-processed`: forecasts in a standardized format
@@ -37,7 +35,10 @@ The main contents of the repository are currently the following:
 
 ## Guide to submission
 
-Our Wiki contains a detailed [guide to submission](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Preparing-your-submission). Especially in the starting phase we will also try to provide direct support to teams to help overcome technical difficulties, do not hesitate to [get in touch](https://statistik.econ.kit.edu/mitarbeiter_2902.php).
+Unlike in the more advanced US COVID19 forecast hub, we actively collect available forecasts from various teams and re-format them in a standardized way. We are, however, moving to a submission system based on pull requests for new teams. Our Wiki contains a detailed [guide to submission](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Preparing-your-submission).
+
+Especially in the starting phase we will try to provide direct support to teams to help overcome technical difficulties, do not hesitate to [get in touch](https://statistik.econ.kit.edu/mitarbeiter_2902.php).
+
 
 ## Data format
 
@@ -64,12 +65,6 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [MIT](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
 - [YYG](http://covid19-projections.com/) (JHU; MIT)
-
-
-## Submission system via pull requests
-
-We use a submission system based on pull requests as in the US version of the hub. The system closely resembles the one outlined [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#data-submission-instructions), with automated formatting checks as described [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Validation-Checks). *Note that we add the word `-Germany-` in all forecast file names after the date (see existing examples).* Do not hesitate to get in touch with us (via [email](https://statistik.econ.kit.edu/mitarbeiter_2902.php) or github issue) to get some assistance in getting started. 
-Additional information about the [submission format](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Submission-Format) or the [submission via pull requests](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Upload-Submission) can be found in our [Wiki](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Upload-Submission).
 
 ## Forecast hub team
 
