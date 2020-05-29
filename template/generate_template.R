@@ -21,8 +21,8 @@ dat <- data.frame(
   value = NA
 )
 
-tgs <- c(paste(-1:30, "days ahead inc death"),
-         paste(-1:30, "days ahead cum death"),
+tgs <- c(paste(-1:30, "day ahead inc death"),
+         paste(-1:30, "day ahead cum death"),
          paste(-1:4, "wk ahead inc death"),
          paste(-1:4, "wk ahead inc death"))
 
