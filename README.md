@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/KITmetricslab/covid19-forecast-hub-de.svg?branch=master)](https://travis-ci.org/KITmetricslab/covid19-forecast-hub-de)
+
 # A German COVID-19 Forecast Hub
 
 ### This project is in a development stage and not operational yet. The platform is not officially endorsed by KIT or HITS.
