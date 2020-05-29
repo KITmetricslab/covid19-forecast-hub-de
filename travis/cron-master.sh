@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+pip3 install pandas
 
 cd ./code/auto_download
 
@@ -18,7 +19,6 @@ echo "JHU done"
 # python3 ./rki_download.py
 
 # update Shiny data
-pip3 install pandas
 cd ../../app_forecasts_de/code
 python3 ./data_preparation.py
 echo "Shiny done"
