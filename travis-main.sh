@@ -30,7 +30,7 @@ source ./travis/validate-data.sh
 
 if [[ "$TRAVIS_EVENT_TYPE" == *"cron"* ]]; then
    echo "updating truth data..."
-   bash ./travis/update-ecdc.sh
+   bash ./travis/cron-master.sh
    bash ./travis/push.sh
 fi
 
