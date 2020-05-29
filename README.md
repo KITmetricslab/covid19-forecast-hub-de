@@ -55,9 +55,9 @@ The forecasts assembled in this repository have been created by various independ
 
 ## Truth data
 
-Data on observed numbers of deaths come from the following surces:
+Data on observed numbers of deaths come from the following sources:
 
-- [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases)
+- [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases) **(This is our preferred source and will be used for evaluation and ensembling purposes.)**
 - [Johns Hopkins University](https://coronavirus.jhu.edu/)
 
 ## Teams generating forecasts
