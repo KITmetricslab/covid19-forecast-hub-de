@@ -6,7 +6,7 @@
 
 ## Purpose
 
-This repository assembles forecasts of cumulative and incident COVID19 deaths in Germany in a standardized format. Other forecast targets will be added in the future. The repository is run by members of the [Chair of Econometrics and Statistics at Karlsruhe Institute of Technology](https://statistik.econ.kit.edu/index.php) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/), see below.
+This repository assembles forecasts of cumulative and incident COVID19 deaths in Germany in a standardized format. Other forecast targets will be added in the future. The repository is run by members of the [Chair of Econometrics and Statistics at Karlsruhe Institute of Technology](https://statistik.econ.kit.edu/index.php) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/), see [below](#forecast-hub-team).
 
 An interactive visualization of the different forecasts can be found [here](https://jobrac.shinyapps.io/app_forecasts_de/).
 
@@ -35,7 +35,8 @@ The main contents of the repository are currently the following (see also [this]
 
 ## Guide to submission
 
-Unlike in the more advanced US COVID19 forecast hub, we actively collect available forecasts from various teams and re-format them in a standardized way. We are, however, moving to a submission system based on pull requests for new teams. Our Wiki contains a detailed [guide to submission](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Preparing-your-submission).
+Unlike in the more advanced US COVID19 forecast hub, at the current stage we are actively collect available forecasts from various teams and re-format them in a standardized way. We are, however, moving to a submission system based on pull requests for new teams. Our Wiki contains a detailed [guide to submission](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Preparing-your-submission). **Forecasts hould be updated in a weekly rhythm. If at all possible, new forecast should be uploaded on Mondays.** The deadline is 11.59pm and thus corresponds to the deadline of the US Hub (6pm Eastern Time). Note that we also accept additional updates on other days of the week (not more than one per day), but will not include these in visualizations or ensembles.
+
 
 Especially in the starting phase we will try to provide direct support to teams to help overcome technical difficulties, do not hesitate to [get in touch](https://statistik.econ.kit.edu/mitarbeiter_2902.php).
 
@@ -65,6 +66,10 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [MIT](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
 - [YYG](http://covid19-projections.com/) (JHU; MIT)
+
+## Ensemble building
+
+One of the goals of this forecast hub is to combine the available forecasts into an ensemble prediction as [already done in the US Forecast Hub](https://github.com/reichlab/covid19-forecast-hub#ensemble-model).
 
 ## Forecast hub team
 
