@@ -18,8 +18,9 @@ echo "JHU done"
 # python3 ./rki_download.py
 
 # update Shiny data
-#cd ../../app_forecasts_de/code
-#python3 ./data_preparation.py
-#echo "Shiny done"
+pip3 install pandas
+cd ../../app_forecasts_de/code
+python3 ./data_preparation.py
+echo "Shiny done"
 
 cd ../../
