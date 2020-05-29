@@ -52,4 +52,4 @@ dat$target_end_date <- as.Date(dat$target_end_date, origin = "1970-01-01")
 dat$type[dat$type == "point" & dat$target_end_date <= forecast_date] <- "observed"
 dat <- subset(dat, type == "observed" | target_end_date > forecast_date)
 
-write.csv(paste0(forecast_date, "-Germany-ABC-exampleModel1.csv"))
+write.csv(dat, file = paste0(forecast_date, "-Germany-ABC-exampleModel1.csv"), row.names = FALSE)
