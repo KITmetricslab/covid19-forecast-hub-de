@@ -73,7 +73,7 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 
 ## Forecast evaluation and ensemble building
 
-One of the goals of this forecast hub is to combine the available forecasts into an ensemble prediction as [already done in the US Forecast Hub](https://github.com/reichlab/covid19-forecast-hub#ensemble-model). This requires evaluating different forecasts, both those submitted by teams and those generated using different ensembling techniques. The forecast evaluation method which will be applied is described in [this preprint](https://arxiv.org/abs/2005.12881).
+One of the goals of this forecast hub is to combine the available forecasts into an ensemble prediction as [already done in the US Forecast Hub](https://github.com/reichlab/covid19-forecast-hub#ensemble-model). This requires evaluating different forecasts, both those submitted by teams and those generated using different ensembling techniques. **We want to emphasize, however, that this is not a competition, but a collaborative effort.** The forecast evaluation method which will be applied is described in [this preprint](https://arxiv.org/abs/2005.12881).
 
 ## Forecast hub team
 
