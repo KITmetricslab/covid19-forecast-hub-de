@@ -71,9 +71,9 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
 - [YYG](http://covid19-projections.com/) (JHU; MIT)
 
-## Ensemble building
+## Forecast evaluation and ensemble building
 
-One of the goals of this forecast hub is to combine the available forecasts into an ensemble prediction as [already done in the US Forecast Hub](https://github.com/reichlab/covid19-forecast-hub#ensemble-model).
+One of the goals of this forecast hub is to combine the available forecasts into an ensemble prediction as [already done in the US Forecast Hub](https://github.com/reichlab/covid19-forecast-hub#ensemble-model). This requires evaluating different forecasts, both those submitted by teams and those generated using different ensembling techniques. The forecast evaluation method which will be applied is described in [this preprint](https://arxiv.org/abs/2005.12881).
 
 ## Forecast hub team
 
