@@ -1,3 +1,4 @@
+  
 #!/usr/bin/env bash
 
 set -e
@@ -24,6 +25,13 @@ sudo apt-get install python3-pandas
 sudo apt install python3-pip
 pip3 install --upgrade setuptools
 pip3 install pymmwr click requests urllib3 selenium webdriver-manager pyyaml
-pip3 install git+https://github.com/reichlab/zoltpy/
 source ./travis/validate-data.sh
+
+
+if [[ "$TRAVIS_EVENT_TYPE" == *"cron"* ]]; then
+   echo "updating truth data..."
+   bash ./travis/cron-master.sh
+   bash ./travis/push.sh
+fi
+
 echo "build complete"
