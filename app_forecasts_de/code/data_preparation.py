@@ -50,4 +50,4 @@ df['time_zero'] = df.forecast_date.apply(next_monday)
 
 df = df[['forecast_date', 'target', 'target_end_date', 'location', 'type', 'quantile', 'value', 'time_zero', 'model']]
 
-df.to_csv('../data/forecasts_to_plot_TEST.csv', index=False)
+df.to_csv('../data/forecasts_to_plot.csv', index=False)
