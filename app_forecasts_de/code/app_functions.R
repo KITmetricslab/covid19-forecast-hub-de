@@ -81,10 +81,12 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
 }
 
 empty_plot <- function(start = as.Date("2020-03-01"), end = Sys.Date() + 28, ylim = c(0, 100000)){
-  dats <- seq(from = start, to = end, by = 1)
+  dats <- seq(from = start - 14, to = end + 14, by = 1)
 
+  par(mar = c(4.5, 5, 2, 2))
   plot(NULL, ylim = ylim, xlim = c(start, end),
-       xlab = "time", ylab = "cumulative deaths", axes = FALSE)
+       xlab = "time", ylab = "", axes = FALSE)
+  title(ylab = "cumulative deaths", line = 3.5)
   xlabs <- dats[weekdays(dats) == "Saturday"]
   abline(v = xlabs, col = "grey")
   axis(1, at = xlabs, labels = xlabs, cex = 0.7)
