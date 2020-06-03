@@ -28,7 +28,11 @@ dashboardPage(
                                  selected = "ECDC", inline = TRUE),
               checkboxInput("show_pi", label = "Show 95% prediction interval where available", value = TRUE),
               checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
-              plotOutput("plot_forecasts", height = 500)
+              tags$b("Draw rectangle to toom in, double click to zoom out."),
+              plotOutput("plot_forecasts", height = 500,
+                         click = "coord_click", hover = "coord_hover",
+                         brush = brushOpts(id = "coord_brush", resetOnNew = TRUE),
+                         dblclick = clickOpts("coord_dblclick"))
       ),
 
       # tab with info on disease:

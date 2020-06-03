@@ -55,6 +55,32 @@ names(pch_truths) <- truths
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
+  coords <- reactiveValues(click = NULL)
+  observe({
+    input$coord_click
+    if(!is.null(input$coord_click)){
+      coords$click <- input$coord_click
+    }
+  })
+  observe({
+    if(!is.null(input$coord_brush)){
+      coords$coord_brush <- list(xlim = as.Date(c(input$coord_brush$xmin, input$coord_brush$xmax), origin = "1970-01-01"),
+                                 ylim = c(input$coord_brush$ymin, input$coord_brush$ymax))
+    }
+    if(!is.null(input$coord_dblclick)){
+      coords$data_brush <- list(xlim = NULL, ylim = NULL)
+    }
+  })
+  observe({
+    if(!is.null(input$model_brush)){
+      coords$coord_brush <- list(xlim = as.Date(c(input$coord_brush$xmin, input$coord_brush$xmax), origin = "1970-01-01"),
+                                 ylim = c(input$coord_brush$ymin, input$coord_brush$ymax))
+    }
+    if(!is.null(input$coord_dblclick)){
+      coords$coord_brush <- list(xlim = NULL, ylim = NULL)
+    }
+  })
+
   output$inp_select_model <- renderUI(
     checkboxGroupInput("select_models", "Select models to display:",
                        choiceNames = models,
@@ -73,8 +99,23 @@ shinyServer(function(input, output) {
                    timezero = as.Date(input$select_date),
                    models = input$select_models,
                    selected_truth = input$select_truths,
-                   start = as.Date("2020-03-01"), end = Sys.Date() + 28,
-                   ylim = c(0, 12000),
+                   start = if(is.null(coords$coord_brush$xlim)){
+                     as.Date("2020-03-01")
+                   }else{
+                     coords$coord_brush$xlim[1]
+                   },
+                   end = if(is.null(coords$coord_brush$xlim)){
+                     Sys.Date() + 28
+                   }else{
+                     coords$coord_brush$xlim[2]
+                   },
+                   # start = as.Date("2020-03-01"),
+                   # end = Sys.Date() + 28,
+                   ylim = if(is.null(coords$coord_brush$ylim)){
+                     c(0, 12000)
+                   }else{
+                     coords$coord_brush$ylim
+                   },
                    col = cols_models[input$select_models], alpha.col = 0.5,
                    pch_truths = pch_truths,
                    legend = FALSE,

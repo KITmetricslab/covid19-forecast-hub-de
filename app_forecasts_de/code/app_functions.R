@@ -126,7 +126,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            cols, alpha.col = 0.5,
                            pch_truths,
                            legend = TRUE){
-  empty_plot(ylim = ylim)
+  empty_plot(start = start, end = end, ylim = ylim)
   highlight_timezero(timezero)
 
   if(length(models) > 0){
