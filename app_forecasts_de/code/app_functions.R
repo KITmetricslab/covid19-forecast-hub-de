@@ -54,7 +54,7 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
     col_transp <- modify_alpha(col, alpha.col)
     # temporarily removed last_truth from polygon as last truth can be different from model to model
     if(nrow(subs_intervals) == 2){
-      subs_intervals <- rbind(subs_intervals, subs_intervals)
+      subs_intervals <- rbind(subs_intervals, subs_intervals[2:1, ])
       subs_intervals$target_end_date <- subs_intervals$target_end_date + c(0, 0, 1, 1)
     }
     polygon(subs_intervals$target_end_date,
@@ -91,7 +91,7 @@ empty_plot <- function(start = as.Date("2020-03-01"), end = Sys.Date() + 28, yli
   abline(v = xlabs, col = "grey")
   axis(1, at = xlabs, labels = xlabs, cex = 0.7)
   axis(2)
-  box()
+  graphics::box()
 }
 
 add_truth_to_plot <- function(truth, timezero, pch){

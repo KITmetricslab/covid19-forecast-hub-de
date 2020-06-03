@@ -96,7 +96,7 @@ shinyServer(function(input, output) {
     par(las = 1)
     plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                    truth = dat_truth,
-                   timezero = as.Date(input$select_date),
+                   timezero = if(is.null(input$select_date)){as.Date("2020-06-01")}else{as.Date(input$select_date)},
                    models = input$select_models,
                    selected_truth = input$select_truths,
                    start = if(is.null(coords$coord_brush$xlim)){
