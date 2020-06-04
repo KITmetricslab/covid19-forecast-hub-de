@@ -89,6 +89,10 @@ empty_plot <- function(start = as.Date("2020-03-01"), end = Sys.Date() + 28, yli
   title(ylab = "cumulative deaths", line = 3.5)
   xlabs <- dats[weekdays(dats) == "Saturday"]
   abline(v = xlabs, col = "grey")
+
+  # horizontal ablines:
+  abline(h = axTicks(2), col = "grey")
+
   axis(1, at = xlabs, labels = xlabs, cex = 0.7)
   axis(2)
   graphics::box()

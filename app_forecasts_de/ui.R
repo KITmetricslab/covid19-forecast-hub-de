@@ -28,7 +28,7 @@ dashboardPage(
                                  selected = "ECDC", inline = TRUE),
               checkboxInput("show_pi", label = "Show 95% prediction interval where available", value = TRUE),
               checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
-              tags$b("Draw rectangle to zoom in, double click to zoom out. Hover over grey line to see numbers."),
+              tags$b("Draw rectangle to zoom in, double click to zoom out. Hover over grey line to display numbers (point forecasts and observed)."),
               h3(""),
               plotOutput("plot_forecasts", height = 500,
                          click = "coord_click", hover = "coord_hover",
