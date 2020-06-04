@@ -45,11 +45,13 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
     subs_upper <- subs_upper[order(subs_upper$target_end_date, decreasing = TRUE), ]
     subs_lower <- forecasts_to_plot[which(forecasts_to_plot$model == model &
                                              forecasts_to_plot$timezero == timezero &
-                                             forecasts_to_plot$type == "quantile" &
-                                             forecasts_to_plot$quantile < 0.51), ]
+                                            forecasts_to_plot$target_end_date >= timezero - 7 &
+                                             forecasts_to_plot$type %in% c("quantile", "observed") &
+                                             (forecasts_to_plot$quantile < 0.51 | is.na(forecasts_to_plot$quantile))), ]
     subs_lower <- subs_lower[order(subs_lower$target_end_date), ]
 
     subs_intervals <- rbind(subs_lower, subs_upper)
+    print(subs_intervals)
 
     col_transp <- modify_alpha(col, alpha.col)
     # temporarily removed last_truth from polygon as last truth can be different from model to model
