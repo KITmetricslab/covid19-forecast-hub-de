@@ -81,7 +81,7 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
 }
 
 empty_plot <- function(start = as.Date("2020-03-01"), end = Sys.Date() + 28, ylim = c(0, 100000)){
-  dats <- seq(from = start - 14, to = end + 14, by = 1)
+  dats <- seq(from = round(start) - 14, to = round(end) + 14, by = 1)
 
   par(mar = c(4.5, 5, 2, 2))
   plot(NULL, ylim = ylim, xlim = c(start, end),
@@ -125,9 +125,12 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            add_model_past = FALSE,
                            cols, alpha.col = 0.5,
                            pch_truths,
-                           legend = TRUE){
+                           legend = TRUE,
+                           highlight_target_end_date = NULL,
+                           point_pred_legend = NULL){
   empty_plot(start = start, end = end, ylim = ylim)
   highlight_timezero(timezero)
+  abline(v = highlight_target_end_date)
 
   if(length(models) > 0){
     if(show_pi){
@@ -169,7 +172,8 @@ plot_forecasts <- function(forecasts_to_plot, truth,
   }
 
   if(legend){
-    legend("topleft", col = cols, pch = 21, legend = models, lwd = 2, lty = 0, bty = "n")
+    legend("topleft", col = cols, pch = 21, legend = paste0(models, ":", point_pred_legend),
+           lwd = 2, lty = 0, bty = "n")
   }
 
 }

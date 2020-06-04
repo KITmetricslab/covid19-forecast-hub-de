@@ -64,20 +64,43 @@ shinyServer(function(input, output) {
   })
   observe({
     if(!is.null(input$coord_brush)){
-      coords$coord_brush <- list(xlim = as.Date(c(input$coord_brush$xmin, input$coord_brush$xmax), origin = "1970-01-01"),
+      coords$brush <- list(xlim = as.Date(c(input$coord_brush$xmin, input$coord_brush$xmax), origin = "1970-01-01"),
                                  ylim = c(input$coord_brush$ymin, input$coord_brush$ymax))
     }
     if(!is.null(input$coord_dblclick)){
-      coords$data_brush <- list(xlim = NULL, ylim = NULL)
+      coords$brush <- list(xlim = NULL, ylim = NULL)
     }
   })
   observe({
-    if(!is.null(input$model_brush)){
-      coords$coord_brush <- list(xlim = as.Date(c(input$coord_brush$xmin, input$coord_brush$xmax), origin = "1970-01-01"),
-                                 ylim = c(input$coord_brush$ymin, input$coord_brush$ymax))
+    input$coord_hover
+    if(!is.null(input$coord_hover)){
+      coords$hover <- input$coord_hover
     }
-    if(!is.null(input$coord_dblclick)){
-      coords$coord_brush <- list(xlim = NULL, ylim = NULL)
+  })
+
+  selected <- reactiveValues()
+  observe({
+    if(!is.null(coords$hover$x)){
+      hover_date <- as.Date(round(coords$hover$x), origin = "1970-01-01")
+      if(weekdays(hover_date) == "Saturday"){
+        # get date
+        selected$target_end_date <- hover_date
+        # get point estimates:
+        subs <- subset(forecasts_to_plot,
+                       timezero == as.Date(input$select_date) &
+                       target_end_date == hover_date & type %in% c("point", "observed"))
+
+        point_pred <- data.frame(model = models)
+        point_pred <- merge(point_pred, subs, by = "model", all.x = TRUE)
+        selected$point_pred <- round(point_pred$value)
+
+        selected$truths <- c(subset(dat_truth$JHU, date == as.Date(selected$target_end_date))$value,
+                             subset(dat_truth$ECDC, date == as.Date(selected$target_end_date))$value)
+      }else{
+        selected$target_end_date <- NULL
+        selected$point_pred <- NULL
+        selected$truths <- NULL
+      }
     }
   })
 
@@ -99,31 +122,32 @@ shinyServer(function(input, output) {
                    timezero = if(is.null(input$select_date)){as.Date("2020-06-01")}else{as.Date(input$select_date)},
                    models = input$select_models,
                    selected_truth = input$select_truths,
-                   start = if(is.null(coords$coord_brush$xlim)){
+                   start = if(is.null(coords$brush$xlim)){
                      as.Date("2020-03-01")
                    }else{
-                     coords$coord_brush$xlim[1]
+                     coords$brush$xlim[1]
                    },
-                   end = if(is.null(coords$coord_brush$xlim)){
+                   end = if(is.null(coords$brush$xlim)){
                      Sys.Date() + 28
                    }else{
-                     coords$coord_brush$xlim[2]
+                     coords$brush$xlim[2]
                    },
                    # start = as.Date("2020-03-01"),
                    # end = Sys.Date() + 28,
-                   ylim = if(is.null(coords$coord_brush$ylim)){
+                   ylim = if(is.null(coords$brush$ylim)){
                      c(0, 12000)
                    }else{
-                     coords$coord_brush$ylim
+                     coords$brush$ylim
                    },
                    col = cols_models[input$select_models], alpha.col = 0.5,
                    pch_truths = pch_truths,
                    legend = FALSE,
                    show_pi = input$show_pi,
-                   add_model_past = input$show_model_past)
-    legend("topleft", col = cols_models, legend = models, lty = 0, bty = "n",
+                   add_model_past = input$show_model_past,
+                   highlight_target_end_date = selected$target_end_date)
+    legend("topleft", col = cols_models, legend = paste0(models, ": ", selected$point_pred), lty = 0, bty = "n",
            pch = ifelse(models %in% input$select_models, 16, 1), pt.cex = 1.3)
-    legend("top", col = "black", legend = c("ECDC/RKI", "JHU"), lty = 0, bty = "n",
+    legend("top", col = "black", legend = paste0(c("ECDC/RKI", "JHU"), ": ", selected$truths), lty = 0, bty = "n",
            pch = ifelse(truths %in% input$select_truths, pch_truths, pch_truth_empty),
            pt.cex = 1.3)
   })
