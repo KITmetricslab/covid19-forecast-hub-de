@@ -39,7 +39,7 @@ The main contents of the repository are currently the following (see also [this]
 
 ## Guide to submission
 
-Unlike in the more advanced US COVID-19 forecast hub, at the current stage we actively collect available forecasts from various teams and re-format them in a standardized way. We are, however, moving to a submission system based on pull requests for new teams. Our wiki contains a detailed [guide to submission](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Preparing-your-submission). **Forecasts hould be updated in a weekly rhythm. If at all possible, new forecast should be uploaded on Mondays.** The deadline is 11.59pm and thus corresponds to the deadline of the US Hub (6pm Eastern Time). Note that we also accept additional updates on other days of the week (not more than one per day), but will not include these in visualizations or ensembles (if no new forecast was provided on a Monday we will, however, use forecasts from the prededing Sunday, Saturday or Friday).
+Unlike in the more advanced US COVID-19 forecast hub, at the current stage we actively collect available forecasts from various teams and re-format them in a standardized way. We are, however, moving to a submission system based on pull requests for new teams. Our wiki contains a detailed [guide to submission](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Preparing-your-submission). **Forecasts should be updated in a weekly rhythm. If at all possible, new forecast should be uploaded on Mondays.** The deadline is 11.59pm and thus corresponds to the deadline of the US Hub (6pm Eastern Time). Note that we also accept additional updates on other days of the week (not more than one per day), but will not include these in visualizations or ensembles (if no new forecast was provided on a Monday we will, however, use forecasts from the prededing Sunday, Saturday or Friday).
 
 Especially in the starting phase we will try to provide direct support to teams to help overcome technical difficulties, do not hesitate to [get in touch](https://statistik.econ.kit.edu/mitarbeiter_2902.php).
 
@@ -90,3 +90,9 @@ The following persons have contributed to this repository, either by assembling 
 
 - [US COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub) run by the [Reich Lab](https://reichlab.io/).
 - [Code repository for the SARS-CoV2 modelling initiative](https://github.com/timueh/sars-cov2-modelling-initiative)
+
+## Acknowledgements
+
+The Forecast Hub project is part of the [SIMCARD Information& Data Science Pilot Project](https://www.helmholtz.de/forschung/information-data-science/information-data-science-pilot-projekte/pilotprojekte-2/) funded by the Helmholtz Association. We moreover wish to acknowledge the [Alexander von Humboldt Foundation](http://www.humboldt-foundation.de/web/start.html) whose support facilitated early interactions and collaboration with the [Reich Lab](https://reichlab.io/) and the [US COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub).
+
+**The content of this site is solely the responsibility of the authors and does not necessarily represent the official views of KIT, HITS, the Humboldt Foundation or the Helmholtz Association.**
