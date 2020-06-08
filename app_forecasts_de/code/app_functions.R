@@ -34,6 +34,7 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
                                  add_points = TRUE,
                                  add_intervals = TRUE,
                                  add_past = FALSE,
+                                 pch = 21,
                                  col = "blue", alpha.col = 0.3){
   if(add_intervals){
     # last_truth <- truth[truth$date == timezero - 2, "value"]
@@ -45,8 +46,9 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
     subs_upper <- subs_upper[order(subs_upper$target_end_date, decreasing = TRUE), ]
     subs_lower <- forecasts_to_plot[which(forecasts_to_plot$model == model &
                                              forecasts_to_plot$timezero == timezero &
-                                             forecasts_to_plot$type == "quantile" &
-                                             forecasts_to_plot$quantile < 0.51), ]
+                                            forecasts_to_plot$target_end_date >= timezero - 7 &
+                                             forecasts_to_plot$type %in% c("quantile", "observed") &
+                                             (forecasts_to_plot$quantile < 0.51 | is.na(forecasts_to_plot$quantile))), ]
     subs_lower <- subs_lower[order(subs_lower$target_end_date), ]
 
     subs_intervals <- rbind(subs_lower, subs_upper)
@@ -54,7 +56,7 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
     col_transp <- modify_alpha(col, alpha.col)
     # temporarily removed last_truth from polygon as last truth can be different from model to model
     if(nrow(subs_intervals) == 2){
-      subs_intervals <- rbind(subs_intervals, subs_intervals)
+      subs_intervals <- rbind(subs_intervals, subs_intervals[2:1, ])
       subs_intervals$target_end_date <- subs_intervals$target_end_date + c(0, 0, 1, 1)
     }
     polygon(subs_intervals$target_end_date,
@@ -64,11 +66,12 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
   }
 
   if(add_points){
+    if(is.na(pch)) pch <- 21
     subs_points <- forecasts_to_plot[which(forecasts_to_plot$model == model &
                                               forecasts_to_plot$timezero == timezero &
                                               forecasts_to_plot$type == "point"), ]
     points(subs_points$target_end_date, subs_points$value, col = col,
-           pch = 21, lwd = 2)
+           pch = pch, lwd = 2)
   }
 
   if(add_past){
@@ -76,20 +79,26 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
                                              forecasts_to_plot$timezero == timezero &
                                              forecasts_to_plot$type == "observed"), ]
     points(subs_past$target_end_date, subs_past$value, col = col,
-           pch = 21, lwd = 2)
+           pch = pch, lwd = 2)
   }
 }
 
 empty_plot <- function(start = as.Date("2020-03-01"), end = Sys.Date() + 28, ylim = c(0, 100000)){
-  dats <- seq(from = start, to = end, by = 1)
+  dats <- seq(from = round(start) - 14, to = round(end) + 14, by = 1)
 
+  par(mar = c(4.5, 5, 2, 2))
   plot(NULL, ylim = ylim, xlim = c(start, end),
-       xlab = "time", ylab = "cumulative deaths", axes = FALSE)
+       xlab = "time", ylab = "", axes = FALSE)
+  title(ylab = "cumulative deaths", line = 3.5)
   xlabs <- dats[weekdays(dats) == "Saturday"]
   abline(v = xlabs, col = "grey")
+
+  # horizontal ablines:
+  abline(h = axTicks(2), col = "grey")
+
   axis(1, at = xlabs, labels = xlabs, cex = 0.7)
   axis(2)
-  box()
+  graphics::box()
 }
 
 add_truth_to_plot <- function(truth, timezero, pch){
@@ -121,11 +130,16 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            ylim = c(0, 100000),
                            show_pi = TRUE,
                            add_model_past = FALSE,
+                           truth_data_used = NA,
                            cols, alpha.col = 0.5,
                            pch_truths,
-                           legend = TRUE){
-  empty_plot(ylim = ylim)
+                           pch_forecasts,
+                           legend = TRUE,
+                           highlight_target_end_date = NULL,
+                           point_pred_legend = NULL){
+  empty_plot(start = start, end = end, ylim = ylim)
   highlight_timezero(timezero)
+  abline(v = highlight_target_end_date)
 
   if(length(models) > 0){
     if(show_pi){
@@ -151,6 +165,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            timezero = timezero,
                            model = models[i],
                            add_points = TRUE, add_intervals = FALSE,
+                           pch = pch_forecasts[truth_data_used[models[i]]],
                            add_past = FALSE, col = cols[i])
     }
 
@@ -161,13 +176,15 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                              timezero = timezero,
                              model = models[i],
                              add_points = FALSE, add_intervals = FALSE,
+                             pch = pch_forecasts[truth_data_used[models[i]]],
                              add_past = TRUE, col = cols[i])
       }
     }
   }
 
   if(legend){
-    legend("topleft", col = cols, pch = 21, legend = models, lwd = 2, lty = 0, bty = "n")
+    legend("topleft", col = cols, pch = 21, legend = paste0(models, ":", point_pred_legend),
+           lwd = 2, lty = 0, bty = "n")
   }
 
 }

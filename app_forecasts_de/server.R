@@ -27,6 +27,7 @@ forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/c
 forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
+forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target))
 
 # get timezeros
 timezeros <- as.character(sort(unique(forecasts_to_plot$timezero), decreasing = TRUE))
@@ -47,12 +48,67 @@ dat_truth$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid
 dat_truth$JHU$date <- as.Date(dat_truth$JHU$date)
 
 truths <- names(dat_truth)
-pch_truths <- c(17, 16)
-pch_truth_empty <- c(2, 1)
-names(pch_truths) <- truths
+pch_full <- c(17, 16)
+pch_empty <- c(2, 1)
+names(pch_full) <- names(pch_empty) <- truths
+
+# get which model uses which truth data:
+truth_data_used0 <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/truth_data_use.csv",
+                           stringsAsFactors = FALSE)
+truth_data_used <- truth_data_used0$truth_data
+names(truth_data_used) <- truth_data_used0$model
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
+
+  coords <- reactiveValues(click = NULL)
+  observe({
+    input$coord_click
+    if(!is.null(input$coord_click)){
+      coords$click <- input$coord_click
+    }
+  })
+  observe({
+    if(!is.null(input$coord_brush)){
+      coords$brush <- list(xlim = as.Date(c(input$coord_brush$xmin, input$coord_brush$xmax), origin = "1970-01-01"),
+                                 ylim = c(input$coord_brush$ymin, input$coord_brush$ymax))
+    }
+    if(!is.null(input$coord_dblclick)){
+      coords$brush <- list(xlim = NULL, ylim = NULL)
+    }
+  })
+  observe({
+    input$coord_hover
+    if(!is.null(input$coord_hover)){
+      coords$hover <- input$coord_hover
+    }
+  })
+
+  selected <- reactiveValues()
+  observe({
+    if(!is.null(coords$hover$x)){
+      hover_date <- as.Date(round(coords$hover$x), origin = "1970-01-01")
+      if(weekdays(hover_date) == "Saturday"){
+        # get date
+        selected$target_end_date <- hover_date
+        # get point estimates:
+        subs <- subset(forecasts_to_plot,
+                       timezero == as.Date(input$select_date) &
+                       target_end_date == hover_date & type %in% c("point", "observed"))
+
+        point_pred <- data.frame(model = models)
+        point_pred <- merge(point_pred, subs, by = "model", all.x = TRUE)
+        selected$point_pred <- round(point_pred$value)
+
+        selected$truths <- c(subset(dat_truth$JHU, date == as.Date(selected$target_end_date))$value,
+                             subset(dat_truth$ECDC, date == as.Date(selected$target_end_date))$value)
+      }else{
+        selected$target_end_date <- NULL
+        selected$point_pred <- NULL
+        selected$truths <- NULL
+      }
+    }
+  })
 
   output$inp_select_model <- renderUI(
     checkboxGroupInput("select_models", "Select models to display:",
@@ -69,20 +125,40 @@ shinyServer(function(input, output) {
     par(las = 1)
     plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                    truth = dat_truth,
-                   timezero = as.Date(input$select_date),
+                   timezero = if(is.null(input$select_date)){as.Date("2020-06-01")}else{as.Date(input$select_date)},
                    models = input$select_models,
+                   truth_data_used = truth_data_used,
                    selected_truth = input$select_truths,
-                   start = as.Date("2020-03-01"), end = Sys.Date() + 28,
-                   ylim = c(0, 12000),
+                   start = if(is.null(coords$brush$xlim)){
+                     as.Date("2020-03-01")
+                   }else{
+                     coords$brush$xlim[1]
+                   },
+                   end = if(is.null(coords$brush$xlim)){
+                     Sys.Date() + 28
+                   }else{
+                     coords$brush$xlim[2]
+                   },
+                   # start = as.Date("2020-03-01"),
+                   # end = Sys.Date() + 28,
+                   ylim = if(is.null(coords$brush$ylim)){
+                     c(0, 12000)
+                   }else{
+                     coords$brush$ylim
+                   },
                    col = cols_models[input$select_models], alpha.col = 0.5,
-                   pch_truths = pch_truths,
+                   pch_truths = pch_full,
+                   pch_forecasts = pch_empty,
                    legend = FALSE,
                    show_pi = input$show_pi,
-                   add_model_past = input$show_model_past)
-    legend("topleft", col = cols_models, legend = models, lty = 0, bty = "n",
-           pch = ifelse(models %in% input$select_models, 16, 1), pt.cex = 1.3)
-    legend("top", col = "black", legend = c("ECDC/RKI", "JHU"), lty = 0, bty = "n",
-           pch = ifelse(truths %in% input$select_truths, pch_truths, pch_truth_empty),
+                   add_model_past = input$show_model_past,
+                   highlight_target_end_date = selected$target_end_date)
+    legend("topleft", col = cols_models, legend = paste0(models, ": ", selected$point_pred), lty = 0, bty = "n",
+           pch = ifelse(models %in% input$select_models,
+                        pch_full[truth_data_used], pch_empty[truth_data_used]),
+           pt.cex = 1.3)
+    legend("top", col = "black", legend = paste0(c("ECDC/RKI", "JHU"), ": ", selected$truths), lty = 0, bty = "n",
+           pch = ifelse(truths %in% input$select_truths, pch_full, pch_empty),
            pt.cex = 1.3)
   })
 

@@ -46,8 +46,8 @@ df.target_end_date = pd.to_datetime(df.target_end_date)
 df = df[df.target.isin(VALID_TARGETS) & 
         (df['quantile'].isin(VALID_QUANTILES) | (df.type=='point') | (df.type=='observed'))].reset_index(drop=True)
 
-df['time_zero'] = df.forecast_date.apply(next_monday)
+df['timezero'] = df.forecast_date.apply(next_monday)
 
-df = df[['forecast_date', 'target', 'target_end_date', 'location', 'type', 'quantile', 'value', 'time_zero', 'model']]
+df = df[['forecast_date', 'target', 'target_end_date', 'location', 'type', 'quantile', 'value', 'timezero', 'model']]
 
-df.to_csv('../data/forecasts_to_plot_TEST.csv', index=False)
+df.to_csv('../data/forecasts_to_plot.csv', index=False)
