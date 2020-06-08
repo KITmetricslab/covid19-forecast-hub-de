@@ -48,9 +48,15 @@ dat_truth$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid
 dat_truth$JHU$date <- as.Date(dat_truth$JHU$date)
 
 truths <- names(dat_truth)
-pch_truths <- c(17, 16)
-pch_truth_empty <- c(2, 1)
-names(pch_truths) <- truths
+pch_full <- c(17, 16)
+pch_empty <- c(2, 1)
+names(pch_full) <- names(pch_empty) <- truths
+
+# get which model uses which truth data:
+truth_data_used0 <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/truth_data_use.csv",
+                           stringsAsFactors = FALSE)
+truth_data_used <- truth_data_used0$truth_data
+names(truth_data_used) <- truth_data_used0$model
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
@@ -121,6 +127,7 @@ shinyServer(function(input, output) {
                    truth = dat_truth,
                    timezero = if(is.null(input$select_date)){as.Date("2020-06-01")}else{as.Date(input$select_date)},
                    models = input$select_models,
+                   truth_data_used = truth_data_used,
                    selected_truth = input$select_truths,
                    start = if(is.null(coords$brush$xlim)){
                      as.Date("2020-03-01")
@@ -140,15 +147,18 @@ shinyServer(function(input, output) {
                      coords$brush$ylim
                    },
                    col = cols_models[input$select_models], alpha.col = 0.5,
-                   pch_truths = pch_truths,
+                   pch_truths = pch_full,
+                   pch_forecasts = pch_empty,
                    legend = FALSE,
                    show_pi = input$show_pi,
                    add_model_past = input$show_model_past,
                    highlight_target_end_date = selected$target_end_date)
     legend("topleft", col = cols_models, legend = paste0(models, ": ", selected$point_pred), lty = 0, bty = "n",
-           pch = ifelse(models %in% input$select_models, 16, 1), pt.cex = 1.3)
+           pch = ifelse(models %in% input$select_models,
+                        pch_full[truth_data_used], pch_empty[truth_data_used]),
+           pt.cex = 1.3)
     legend("top", col = "black", legend = paste0(c("ECDC/RKI", "JHU"), ": ", selected$truths), lty = 0, bty = "n",
-           pch = ifelse(truths %in% input$select_truths, pch_truths, pch_truth_empty),
+           pch = ifelse(truths %in% input$select_truths, pch_full, pch_empty),
            pt.cex = 1.3)
   })
 

@@ -34,6 +34,7 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
                                  add_points = TRUE,
                                  add_intervals = TRUE,
                                  add_past = FALSE,
+                                 pch = 21,
                                  col = "blue", alpha.col = 0.3){
   if(add_intervals){
     # last_truth <- truth[truth$date == timezero - 2, "value"]
@@ -51,7 +52,6 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
     subs_lower <- subs_lower[order(subs_lower$target_end_date), ]
 
     subs_intervals <- rbind(subs_lower, subs_upper)
-    print(subs_intervals)
 
     col_transp <- modify_alpha(col, alpha.col)
     # temporarily removed last_truth from polygon as last truth can be different from model to model
@@ -66,11 +66,12 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
   }
 
   if(add_points){
+    if(is.na(pch)) pch <- 21
     subs_points <- forecasts_to_plot[which(forecasts_to_plot$model == model &
                                               forecasts_to_plot$timezero == timezero &
                                               forecasts_to_plot$type == "point"), ]
     points(subs_points$target_end_date, subs_points$value, col = col,
-           pch = 21, lwd = 2)
+           pch = pch, lwd = 2)
   }
 
   if(add_past){
@@ -78,7 +79,7 @@ add_forecast_to_plot <- function(forecasts_to_plot, truth, timezero, model,
                                              forecasts_to_plot$timezero == timezero &
                                              forecasts_to_plot$type == "observed"), ]
     points(subs_past$target_end_date, subs_past$value, col = col,
-           pch = 21, lwd = 2)
+           pch = pch, lwd = 2)
   }
 }
 
@@ -129,8 +130,10 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            ylim = c(0, 100000),
                            show_pi = TRUE,
                            add_model_past = FALSE,
+                           truth_data_used = NA,
                            cols, alpha.col = 0.5,
                            pch_truths,
+                           pch_forecasts,
                            legend = TRUE,
                            highlight_target_end_date = NULL,
                            point_pred_legend = NULL){
@@ -162,6 +165,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            timezero = timezero,
                            model = models[i],
                            add_points = TRUE, add_intervals = FALSE,
+                           pch = pch_forecasts[truth_data_used[models[i]]],
                            add_past = FALSE, col = cols[i])
     }
 
@@ -172,6 +176,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                              timezero = timezero,
                              model = models[i],
                              add_points = FALSE, add_intervals = FALSE,
+                             pch = pch_forecasts[truth_data_used[models[i]]],
                              add_past = TRUE, col = cols[i])
       }
     }
