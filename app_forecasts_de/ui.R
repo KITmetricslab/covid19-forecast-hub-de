@@ -20,8 +20,10 @@ dashboardPage(
       # start tab:
       tabItem(tabName = "forecasts",
               titlePanel("Interactive visualization of forecasts of COVID19 deaths  in Germany (in development)"),
+              # input elements generated on server side:
               uiOutput("inp_select_date"),
               uiOutput("inp_select_model"),
+
               checkboxGroupInput("select_truths", "Select truth data to display:",
                                  choiceNames = c("ECDC/RKI", "JHU"),
                                  choiceValues = c("ECDC", "JHU"),
@@ -30,13 +32,14 @@ dashboardPage(
               checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
               tags$b("Draw rectangle to zoom in, double click to zoom out. Hover over grey line to display numbers (point forecasts and observed)."),
               h3(""),
+              # plot:
               plotOutput("plot_forecasts", height = 500,
                          click = "coord_click", hover = "coord_hover",
                          brush = brushOpts(id = "coord_brush", resetOnNew = TRUE),
                          dblclick = clickOpts("coord_dblclick"))
       ),
 
-      # tab with info on disease:
+      # tab on background:
       tabItem(tabName = "background",
               h3("Purpose"),
               "This interactive visualization is part of the",
