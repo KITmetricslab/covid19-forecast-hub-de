@@ -16,7 +16,12 @@
 #' @return an object of class date
 
 date_from_geneva_filepath <- function(geneva_filepath){
-  as.Date(gsub(".csv", "", gsub("predictions_deaths_", "", geneva_filepath)))
+  if(grepl("JHU", geneva_filepath)) stop("Please use ECDC rather than JHU forecast files for US COVID-19 forecast hub.")
+  # for newer files:
+  geneva_filepath <- gsub("ECDC_deaths_predictions_", "", geneva_filepath)
+  # for older files:
+  geneva_filepath <- gsub("predictions_deaths_", "", geneva_filepath)
+  as.Date(gsub(".csv", "", geneva_filepath))
 }
 
 #' turn Geneva forecast file into quantile-based format

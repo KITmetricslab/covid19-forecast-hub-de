@@ -17,7 +17,8 @@ dir.create("../../data-processed/Geneva-DeterministicGrowth", showWarnings = FAL
 
 files_to_process <- list.files("./", recursive = FALSE)
 files_to_process <- files_to_process[grepl(".csv", files_to_process) &
-                                       grepl("predictions_death", files_to_process)]
+                                       (grepl("predictions_death", files_to_process) |
+                                          grepl("deaths_predictions", files_to_process))]
 forecast_dates <- lapply(files_to_process, date_from_geneva_filepath)
 
 # proces files:
