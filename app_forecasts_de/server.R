@@ -23,6 +23,10 @@ forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
 forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target))
 
+# exclude some models because used data is neither ECDC nor JHU:
+models_to_exclude <- c("LeipzigIMISE-rkiV1")
+forecasts_to_plot <- subset(forecasts_to_plot, !(model %in% models_to_exclude) )
+
 # get timezeros, i.e. Mondays on which forecasts were made:
 timezeros <- as.character(sort(unique(forecasts_to_plot$timezero), decreasing = TRUE))
 
@@ -30,7 +34,7 @@ timezeros <- as.character(sort(unique(forecasts_to_plot$timezero), decreasing = 
 models <- sort(as.character(unique(forecasts_to_plot$model)))
 
 # assign colours to models (currently restricted to eight):
-cols_models <- brewer.pal(n = 8, name = 'Dark2')
+cols_models <- c(brewer.pal(n = 8, name = 'Dark2'), "cyan3")
 names(cols_models) <- models
 
 # get truth data:
@@ -107,8 +111,8 @@ shinyServer(function(input, output) {
         point_pred <- merge(point_pred, subs, by = "model", all.x = TRUE)
         selected$point_pred <- round(point_pred$value)
 
-        selected$truths <- c(subset(dat_truth$JHU, date == as.Date(selected$target_end_date))$value,
-                             subset(dat_truth$ECDC, date == as.Date(selected$target_end_date))$value)
+        selected$truths <- c(subset(dat_truth$ECDC, date == as.Date(selected$target_end_date))$value,
+                             subset(dat_truth$JHU, date == as.Date(selected$target_end_date))$value)
       }else{
         selected$target_end_date <- NULL
         selected$point_pred <- NULL
