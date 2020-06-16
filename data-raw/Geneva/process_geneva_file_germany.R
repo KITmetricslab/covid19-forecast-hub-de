@@ -57,6 +57,10 @@ process_geneva_file <- function(geneva_filepath, forecast_date){
   dat$country <- NULL
   dat$X <- dat$observed <- NULL
 
+  # adapt colnames where necessary (newer files):
+  colnames(dat)[colnames(dat) == "cumul"] <- "cumulative"
+  colnames(dat)[colnames(dat) == "daily"] <- "per.day"
+
   # transform to wide format, tidy up:
   daily_dat <- reshape(dat, direction = "long", varying = list(c("per.day", "cumulative")),
                  times = c("day ahead inc death", "day ahead cum death"))
