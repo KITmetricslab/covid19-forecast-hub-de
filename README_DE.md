@@ -64,6 +64,7 @@ Derzeit tragen wir Vorhersagen der folgenden Teams zusammen. *Bitte beachten Sie
 - [Johannes-Gutenberg Universität Mainz / Universität Hamburg](https://github.com/QEDHamburg/covid19) (ECDC; MIT)
 - [MIT](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; keine Lizenz verfügbar)
+- [Universität Leipzig IMISE/GenStat](https://github.com/holgerman/covid19-forecast-hub-de)
 - [YYG](http://covid19-projections.com/) (JHU; MIT)
 
 ## Vorhersageevaluation und Ensembles

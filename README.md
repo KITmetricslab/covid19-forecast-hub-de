@@ -69,6 +69,7 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [Johannes Gutenberg University Mainz / University of Hamburg](https://github.com/QEDHamburg/covid19) (ECDC; MIT)
 - [MIT](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
+- [University of Leipzig IMISE/GenStat](https://github.com/holgerman/covid19-forecast-hub-de)
 - [YYG](http://covid19-projections.com/) (JHU; MIT)
 
 ## Forecast evaluation and ensemble building
