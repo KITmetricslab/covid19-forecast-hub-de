@@ -23,4 +23,9 @@ cd ../../app_forecasts_de/code
 python3 ./data_preparation.py
 echo "Shiny done"
 
+# update Readme image
+cd ../../code/visualization
+Rscript ./plot_current_forecasts.R
+echo "Image done"
+
 cd ../../
