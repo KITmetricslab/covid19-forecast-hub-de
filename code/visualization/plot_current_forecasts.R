@@ -75,9 +75,8 @@ plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                pch_forecasts = pch_empty,
                legend = FALSE,
                show_pi = TRUE,
-               add_model_past = FALSE,
-               main = "Forecasts of total deaths from COVID19 in Germany")
-
+               add_model_past = FALSE)
+title("Forecasts of total number of deaths from COVID19 in Germany")
 # add legends manually:
 legend("topleft", col = cols_models, legend = models, lty = 0, bty = "n",
        pch = pch_full[truth_data_used[models]],
