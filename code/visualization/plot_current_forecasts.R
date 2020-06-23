@@ -48,7 +48,7 @@ truth_data_used0 <- read.csv("https://raw.githubusercontent.com/KITmetricslab/co
 truth_data_used <- truth_data_used0$truth_data
 names(truth_data_used) <- truth_data_used0$model
 
-dates <- seq(from = Sys.Date() - 8, to = Sys.Date() - 1, by = 1)
+dates <- seq(from = Sys.Date() - 7, to = Sys.Date() - 1, by = 1)
 timezero <- dates[which(weekdays(dates) == "Monday")]
 
 # subset forecasts to those for the shown forecast date:
