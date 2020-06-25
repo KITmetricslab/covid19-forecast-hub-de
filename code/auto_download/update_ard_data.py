@@ -37,11 +37,7 @@ df.head()
 # If the column 'DatenstandISO' is missing, we infer it from 'Datenstand'.
 
 if 'DatenstandISO' not in df.columns:
-    print('Column DatenstandISO missing. Infer from column Datenstand.')
-    df.loc[df.DatenstandISO.isnull(), 'DatenstandISO'] = pd.to_datetime(df[df.DatenstandISO.isnull()
-                                                                          ]['Datenstand'].str.replace('Uhr', '')).astype(str)
-else:
-    print('Column DatenstandISO exists.')
+    df['DatenstandISO'] = pd.to_datetime(df.Datenstand.str.replace('Uhr', '')).astype(str)
 
 # Aggregation on state level (Bundesländer)
 
