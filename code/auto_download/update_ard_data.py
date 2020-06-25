@@ -85,7 +85,7 @@ df_cum = pd.concat([df_agg, df_germany]).sort_values(['date', 'location']).reset
 
 # Load Current Dataframe
 
-df_all = pd.read_csv('truth_cum_deaths.csv')
+df_all = pd.read_csv('../../data-truth/RKI/truth_cum_deaths.csv')
 
 # Add New Dataframe
 
@@ -108,8 +108,8 @@ df_inc.value = df_inc.value.astype(int)
 
 ### Export Cum. Deaths
 
-df_cum.to_csv('truth_cum_deaths.csv', index=False)
+df_cum.to_csv('../../data-truth/RKI/truth_cum_deaths.csv', index=False)
 
 ### Export Inc. Deaths
 
-df_inc.to_csv('truth_inc_deaths.csv', index=False)
+df_inc.to_csv('../../data-truth/RKI/truth_inc_deaths.csv', index=False)
