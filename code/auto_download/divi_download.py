@@ -14,7 +14,7 @@ import time
 from webdriver_manager.chrome import ChromeDriverManager
 from pathlib import Path
 
-path = str(Path.cwd().parent.parent.joinpath("data-truth", "DIVI"))
+path = str(Path.cwd().parent.parent.joinpath("data-truth", "DIVI", "raw"))
 
 
 url = "https://www.divi.de/divi-intensivregister-tagesreport-archiv-2/divi-intensivregister-tagesreports-csv"
