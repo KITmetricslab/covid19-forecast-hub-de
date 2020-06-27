@@ -17,6 +17,7 @@ echo "JHU done"
 
 # update RKI data
 python3 ./rki_update.py
+echo "RKI done"
 
 # update Shiny data
 cd ../../app_forecasts_de/code
