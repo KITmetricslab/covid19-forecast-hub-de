@@ -14,7 +14,7 @@ model_targets: daily and cumulative deaths
 target_loc: Germany
 Data_format: point and the 0.025 and the 0.975 percentile estimate
 forecast_startdate: 2020-06-11
-forecast_frequency: once per week
+forecast_frequency: once per week (discontinued on 2020-06-22)
 
 data_inputs_known: case & ICU  & death counts 
 data_source_known: ECDC and DIVI
@@ -26,6 +26,7 @@ methods: >-
     SECIR type model
 
 methods_long: >-
+	Input ECDC Data (model used 2020-06-15 - 2020-06-15) discontinued as advanced model UniLeipzig_IMISE_Modell_ecdcV1 now in use
     TBD
 
 citation: publication in progress
