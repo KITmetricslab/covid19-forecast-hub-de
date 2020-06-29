@@ -32,9 +32,9 @@ driver.get(url)
 pagination = driver.find_element_by_css_selector("ul.pagination")
 pages = pagination.find_elements(By.TAG_NAME, "li")
 
-page_links = ["https://www.divi.de/divi-intensivregister-tagesreport-archiv-2/divi-intensivregister-tagesreports-csv"]
+page_links = [url]
 
-for page in pages[1:]:
+for page in pages:
     ele = page.find_elements(By.TAG_NAME, "a")[0]
     name = ele.text
     if name.isdigit():
@@ -48,11 +48,14 @@ for link in page_links:
 
     driver.get(link)
 
-    csv_table = driver.find_element_by_css_selector("div#edocman-documents.span12")
-    csvs = csv_table.find_elements(By.CLASS_NAME, "edocman-document-title-link")
+    csv_table = driver.find_element_by_css_selector("table#table-document.table-condensed.table-document")
+    csvs = csv_table.find_elements(By.CLASS_NAME, "edocman-document-title-td")
 
     for csv_link in csvs:
-        csv_links.append(csv_link.get_attribute('href'))
+        csv_link = csv_link.find_elements(By.TAG_NAME, "a")[0]
+        csv_name = csv_link.get_attribute('aria-label')
+        csv_link = csv_link.get_attribute('href')
+        csv_links.append((csv_link, csv_name))
 
 for link in csv_links:
     base_name = link.split('/')[-1][:-6]
