@@ -1,0 +1,40 @@
+team_name: Frankfurt Institute for Advanced Studies & Forschungszentrum Jülich
+team_abbr: FIAS_FZJ
+model_contributors: Maria V. Barbarossa <barbarossa@fias.uni-frankfurt.de>, Jan Fuhrmann
+<j.fuhrmann@fz-juelich.de>, Stefan Krieg <s.krieg@fz-juelich.de>, Jan H. Meinke
+<j.meinke@fz-juelich.de>
+institution_affil: Frankfurt Institute for Advanced Studies; Jülich Supercomputing Centre (JSC),
+Forschungszentrum Jülich
+team_experience: Mathematical modeling of diseases, high-performance computing
+team_funding: Institutional
+
+model_name: Core Model, Germany
+model_abbr: Epi1Ger
+model_output: 
+model_repo: 
+
+model_targets: daily incidental and cumulative deaths, weekly incidental and cumulative deaths
+target_loc: Germany
+Data_format: point forecasts and quantiles
+forecast_startdate:  2020-06-29
+forecast_frequency: 1x weekly
+
+data_inputs_known:  confirmed cases; reported fatalities; population
+data_source_known: ECDC
+
+this_model_is_an_ensemble: FALSE
+this_model_is_unconditional: TRUE
+
+methods: >-
+    An extended SEIR model with additional compartments for undetected cases is fit
+    using multiple segments to the available data for reported cases and then to reported
+    deaths. The parametrization of the last fit is used to forecast incidental and cumulative
+    deaths. Confidence intervals are determined using Monte Carlo sampling of the parameter space.
+
+methods_long: >-
+    For a detailed description of the model see the reference below.
+
+
+citation: https://doi.org/10.1101/2020.04.18.20069955
+
+
