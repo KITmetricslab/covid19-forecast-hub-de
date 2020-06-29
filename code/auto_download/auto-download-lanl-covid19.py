@@ -51,6 +51,7 @@ def download_covid_zip_files(path):
                 ele = col.find_elements(By.TAG_NAME, "a")[0]
                 name = ele.get_attribute('href').split('/')[-1]
                 filepath = path + '/' + name
+                print(filepath)
                 if os.path.exists(filepath):
                     continue
                 else:
