@@ -57,7 +57,7 @@ for col in outputs:
             # agg over bundesländer
             df_day = df[['bundesland', col]]\
                 .groupby(by="bundesland").sum()
-            df_day = df_day.rename(columns={col: str(file)[-20:-10]})
+            df_day = df_day.rename(columns={col: str(file)[-14:-4]})
             df_day = df_day.T
 
             # append to df

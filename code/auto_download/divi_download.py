@@ -8,11 +8,11 @@ Created on Wed Jun 24 18:29:53 2020
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
 from webdriver_manager.chrome import ChromeDriverManager
 from pathlib import Path
+
+from urllib.parse import urljoin  # for Python2: from urlparse import urljoin
+from urllib.request import urlretrieve
 
 path = str(Path.cwd().parent.parent.joinpath("data-truth", "DIVI", "raw"))
 
@@ -58,39 +58,17 @@ for link in page_links:
         csv_links.append((csv_link, csv_name))
 
 for link in csv_links:
-    base_name = link.split('/')[-1][:-6]
+
+    base_name = link[1][:-6]
     base_name = base_name.replace("divi", "DIVI")
-
-    # first naming convention (since 06.05)
-    first_name = list(base_name)
-    first_name[5] = "I"
-    first_name[-11] = "_"
-    first_name = "".join(first_name)
-
-    # second naming convention
-    second_name = list(base_name)
-    second_name[4] = "_"
-    second_name[5] = "I"
-    second_name[-11] = "_"
-    second_name = "".join(second_name)
 
     # list of files
     csv_files = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
 
-    flag_1 = any(first_name in x for x in csv_files)
-    flag_2 = any(second_name in x for x in csv_files)
-
-    if flag_1 or flag_2:
-        print("done")
+    if any(base_name in x for x in csv_files):
         continue
     else:
-        download_link = link.split('/')
-        del download_link[-2]
-        final_link = ""
-        for s in download_link:
-            final_link = final_link + s + "/"
-        final_link = final_link[:-1]
-        print(final_link)
-        print(name)
-        #driver.get(final_link + "/download")
-        #time.sleep(3)
+        download_link = link[0]
+        file_name = "../../data-truth/DIVI/raw/" + base_name + ".csv"
+        urlretrieve(download_link, file_name)
+        print(base_name)
