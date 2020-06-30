@@ -16,11 +16,17 @@ python3 ./jhu_preprocessing.py
 echo "JHU done"
 
 # update RKI data
-# python3 ./rki_download.py
+python3 ./rki_update.py
+echo "RKI done"
 
 # update Shiny data
 cd ../../app_forecasts_de/code
 python3 ./data_preparation.py
 echo "Shiny done"
+
+# update Readme image
+cd ../../code/visualization
+Rscript ./plot_current_forecasts.R
+echo "Image done"
 
 cd ../../

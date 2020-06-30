@@ -230,7 +230,7 @@ verify_forecast_date_end_date <- function(entry){
 
     # check that target_end_date is always a Saturday for week ahead targets
     entry_week <- subset(entry, grepl("wk", target))
-    if(any(weekdays(entry_week$target_end_date) != "Saturday")){
+    if(all( weekdays( entry_week$target_end_date)  %in% c("Saturday", "Samstag"))==F){
       warning("ERROR: target_end_date needs to be a Saturday for all week-ahead forecasts.")
       result <- FALSE
     }
@@ -388,7 +388,7 @@ verify_cumulative_geq_incident <- function(entry){
   entry_wide$quantile[entry_wide$type == "point"] <- "point"
 
   if(any(is.na(inc_exceeds_cum))){
-    warning("ERROR: NA values either in the incidence or cumulative death forecats.")
+    warning("ERROR: NA values either in the incidence or cumulative death forecasts. This message will also appear if e.g. quantiles are only provided for cumulative but not incident forecasts for weeks ahead")
   }
 
   if(any(inc_exceeds_cum, na.rm = TRUE)){
