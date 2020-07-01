@@ -58,6 +58,7 @@ Daten zu den beobachteten Todeszahlen beziehen wir aus den folgenden Quellen:
 
 Derzeit tragen wir Vorhersagen der folgenden Teams zusammen. *Bitte beachten Sie, dass nicht alle Teams ihre Vorhersagen aufgrund der selben Datengrundlage zu Todeszahlen erstellen.* (benutzte Datengrundlage und Lizenz in Klammern).
 
+- [Frankfurt Institute for Advanced Studies & Forschungszentrum Jülich](https://www.medrxiv.org/content/10.1101/2020.04.18.20069955v1)(ECDC; no license specified)
 - [IHME](https://covid19.healthdata.org/united-states-of-america) (unclear; CC-AT-NC4.0) *Gegenwärtig bestehen noch Probleme bei der Weiterverarbeitung der IHME-Vorhersagen. Sie sind deshalb derzeit nicht in den entsprechenden Visualisierungen enthalten.*
 - [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)
 - [Imperial](https://github.com/sangeetabhatia03/covid19-short-term-forecasts) (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
