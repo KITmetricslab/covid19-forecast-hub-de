@@ -20,22 +20,40 @@ cols = ['bundesland', 'gemeindeschluessel', 'anzahl_meldebereiche',
         'anzahl_standorte', 'betten_frei', 'betten_belegt']
 
 # see: https://www.divi.de/register/tagesreport
-bundesländer = {1: "Schleswig-Holstein",
-                2: "Freie und Hansestadt Hamburg",
-                3: "Niedersachsen",
-                4: "Freie Hansestadt Bremen",
-                5: "Nordrhein-Westfalen",
-                6: "Hessen",
-                7: "Rheinland-Pfalz",
-                8: "Baden-Wuerttemberg",
-                9: "Freistaat Bayern",
-                10: "Saarland",
-                11: "Berlin",
-                12: "Brandenburg",
-                13: "Mecklenburg-Vorpommern",
-                14: "Freistaat Sachsen",
-                15: "Sachsen-Anhalt",
-                16: "Freistaat Thueringen"}
+bundesländer = {1: "Schleswig-Holstein State",
+                2: "Free Hanseatic City of Hamburg",
+                3: "Lower Saxony State",
+                4: "Free Hanseatic City of Bremen",
+                5: "North Rhine-Westphalia State",
+                6: "Hesse State",
+                7: "Rhineland-Palatinate State",
+                8: "Baden-Württemberg State",
+                9: "Free State of Bavaria",
+                10: "Saarland State",
+                11: "Berlin State",
+                12: "Brandenburg State",
+                13: "Mecklenburg-Western Pomerania State",
+                14: "Free State of Saxony",
+                15: "Sachsen-Anhalt State",
+                16: "Free State of Thüringia"}
+
+state_to_code = {"Schleswig-Holstein State": "GM10",
+                 "Free Hanseatic City of Hamburg": "GM04",
+                 "Lower Saxony State" : "GM06",
+                 "Free Hanseatic City of Bremen" : "GM03",
+                 "North Rhine-Westphalia State" : "GM07",
+                 "Hesse State" : "GM05",
+                 "Rhineland-Palatinate State" : "GM08",
+                 "Baden-Württemberg State" : "GM01",
+                 "Free State of Bavaria" : "GM02",
+                 "Saarland State" : "GM09",
+                 "Berlin State" : "GM16",
+                 "Brandenburg State" : "GM11",
+                 "Mecklenburg-Western Pomerania State" : "GM12",
+                 "Free State of Saxony" : "GM13",
+                 "Sachsen-Anhalt State" : "GM14",
+                 "Free State of Thüringia" : "GM15"}
+
 
 outputs = ['anzahl_meldebereiche', 'faelle_covid_aktuell',
            'faelle_covid_aktuell_beatmet', 'anzahl_standorte',
@@ -71,4 +89,19 @@ for col in outputs:
 
     df_agg = df_agg.sort_index()
     df_agg = df_agg.rename(columns=bundesländer, errors="raise")
+    df_agg = df_agg.unstack().reset_index()
+    df_agg = df_agg.rename(columns={"level_1": "date", 0: "value", 
+                                    "bundesland": "location_name"})
+    df_agg["location"] = [state_to_code[x] for x in df_agg["location_name"].values.tolist()]
+    
+    df_sum = df_agg.groupby(df_agg['date']).aggregate("sum")
+    df_sum = df_sum.reset_index()
+    df_sum["location_name"] = "Germany"
+    df_sum["location"] = "GM"
+    
+    df_agg = pd.concat([df_agg, df_sum], ignore_index=True)
+    
+    df_agg = df_agg[["date","location", "location_name", "value"]]
+    df_agg = df_agg.sort_values(by=['date', 'location'])
+    df_agg = df_agg.reset_index(drop=True)
     df_agg.to_csv("./bundeslaender/DIVI-" + col + ".csv")
