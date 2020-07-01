@@ -104,4 +104,5 @@ for col in outputs:
     df_agg = df_agg[["date","location", "location_name", "value"]]
     df_agg = df_agg.sort_values(by=['date', 'location'])
     df_agg = df_agg.reset_index(drop=True)
+    df_agg = df_agg.set_index("date")
     df_agg.to_csv("./bundeslaender/DIVI-" + col + ".csv")
