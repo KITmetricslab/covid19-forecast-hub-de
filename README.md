@@ -56,10 +56,14 @@ The forecasts assembled in this repository have been created by various independ
 
 ## Truth data
 
-Data on observed numbers of deaths come from the following sources:
+Data on observed numbers of deaths and several other qantities come from the following sources:
 
 - [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases) **(This is our preferred source and will be used for evaluation and ensembling purposes.)**
+- [Robert Koch Institut](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0). Note that these data are subject to some processing steps, see [here](data-truth/RKI).
 - [Johns Hopkins University](https://coronavirus.jhu.edu/)
+- [DIVI Intensivregister](https://www.divi.de/register/tagesreport) These data are currently not yet used for forecasts, but we intend to extend our activities in this direction.
+
+Details can be found in the respective README files in the subfolders of `data-truth`.
 
 ## Teams generating forecasts
 
