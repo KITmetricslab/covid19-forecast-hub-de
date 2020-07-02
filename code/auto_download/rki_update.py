@@ -42,7 +42,7 @@ df_germany['location_name'] = 'Germany'
 df_cum = pd.concat([df_agg, df_germany]).sort_values(['date', 'location']).reset_index(drop=True)
 
 # Load Current Dataframe
-df_all = pd.read_csv('../../data-truth/RKI/truth_cum_deaths.csv')
+df_all = pd.read_csv('../../data-truth/RKI/truth_RKI-Cumulative Deaths_Germany.csv')
 
 # Add New Dataframe
 df_cum = pd.concat([df_all, df_cum])
@@ -59,7 +59,7 @@ df_inc.dropna(inplace=True)
 df_inc.value = df_inc.value.astype(int)
 
 ### Export Cum. Deaths
-df_cum.to_csv('../../data-truth/RKI/truth_cum_deaths.csv', index=False)
+df_cum.to_csv('../../data-truth/RKI/truth_RKI-Cumulative Deaths_Germany.csv', index=False)
 
 ### Export Inc. Deaths
-df_inc.to_csv('../../data-truth/RKI/truth_inc_deaths.csv', index=False)
+df_inc.to_csv('../../data-truth/RKI/truth_RKI-Incident Deaths_Germany.csv', index=False)
