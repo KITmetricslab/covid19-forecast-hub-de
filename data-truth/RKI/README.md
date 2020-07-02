@@ -1,6 +1,6 @@
 # Contents
 
-The file `truth_cum_deaths.csv` contains daily time series of cumulative COVID19 death counts at the Bundesland and national level (by reporting date). The file `truth_inc_deaths.csv` contains the correponding time series of incident deaths. In both, the `date`variable corresponds to the date of reporting, as is the case for the ECDC data provided in `data-truth/ECDC` (indeed, when summed over all Bundesländer, the data provided here agree almost perfectly with the ECDC data).
+The file `truth_RKI-Cumulative Deaths_Germany.csv` contains daily time series of cumulative COVID19 death counts at the Bundesland and national level (by reporting date). The file `truth_RKI-Incidence Deaths_Germany.csv` contains the correponding time series of incident deaths. In both, the `date`variable corresponds to the date of reporting, as is the case for the ECDC data provided in `data-truth/ECDC` (indeed, when summed over all Bundesländer, the data provided here agree almost perfectly with the ECDC data).
 
 # Data Source
 
