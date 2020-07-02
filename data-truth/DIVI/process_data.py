@@ -69,7 +69,7 @@ for col in outputs:
         df = pd.read_csv(file)
         correct_idx = all(elem in list(df) for elem in cols)
 
-        # filter ou dfs with wrong format
+        # filter out dfs with wrong format
         if correct_idx:
 
             # agg over bundesländer
