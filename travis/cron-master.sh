@@ -19,6 +19,12 @@ echo "JHU done"
 python3 ./rki_update.py
 echo "RKI done"
 
+# update DIVI data
+python3 ./divi_download.py
+cd ../../data-truth/DIVI
+python3 ./process_data.py
+echo "DIVI done"
+
 # update Shiny data
 cd ../../app_forecasts_de/code
 python3 ./data_preparation.py
