@@ -7,7 +7,7 @@ df = pd.read_csv('https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0
 
 # Add column 'DatenstandISO'
 if 'DatenstandISO' not in df.columns:
-    df['DatenstandISO'] = pd.to_datetime(df.Datenstand.str.replace('Uhr', '')).astype(str)
+    df['DatenstandISO'] = pd.to_datetime(df.Datenstand.str.replace('Uhr', ''), dayfirst=True).astype(str)
 
 # Aggregation on state level (Bundesländer)
 
