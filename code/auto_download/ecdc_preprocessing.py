@@ -2,21 +2,36 @@ import os
 import glob
 import pandas as pd
 
-# Get latest file
-list_of_files = glob.glob('../../data-truth/ECDC/raw/*')
-latest_file = max(list_of_files, key=os.path.getctime)
-df = pd.read_csv(latest_file)
+def preprocess_by_country(country_names=['Germany'], fips_codes=['GM']):
+                                         
+    # Get latest file
+    list_of_files = glob.glob('../../data-truth/ECDC/raw/*')
+    latest_file = max(list_of_files, key=os.path.getctime)
+    
+    # contains data from all countries
+    df_all = pd.read_csv(latest_file)
 
-# Transform to standard format
-df['date'] = pd.to_datetime(df.dateRep, dayfirst=True)
-df = df[df.countriesAndTerritories == 'Germany']
-df.rename(columns={'countriesAndTerritories' : 'location_name', 'deaths' : 'value', }, inplace=True)
-df['location'] = 'GM'
-df = df[['date', 'location', 'location_name', 'value']].sort_values('date').reset_index(drop=True)
+    df_all['date'] = pd.to_datetime(df_all.dateRep, dayfirst=True)
+    
+    
+    for country, code in zip(country_names, fips_codes):
+        print('Extracting data for {}.'.format(country))
+        
+        # select one country
+        df = df_all[df_all.countriesAndTerritories == country].copy()
+        
+        # adjust data format and naming
+        df.rename(columns={'countriesAndTerritories' : 'location_name', 'deaths' : 'value', }, inplace=True)
+        df['location'] = code
+        df = df[['date', 'location', 'location_name', 'value']].sort_values('date').reset_index(drop=True)
+        
+        # export incident deaths
+        df.to_csv('../../data-truth/ECDC/truth_ECDC-Incident Deaths_{}.csv'.format(country), index=False)
 
-# Incident
-df.to_csv('../../data-truth/ECDC/truth_ECDC-Incident Deaths_Germany.csv', index=False)
-
-# Cumulative
-df.value = df.value.cumsum()
-df.to_csv('../../data-truth/ECDC/truth_ECDC-Cumulative Deaths_Germany.csv', index=False)
+        # compute cumulative deaths
+        df.value = df.value.cumsum()
+        
+        # export cumulative deaths
+        df.to_csv('../../data-truth/ECDC/truth_ECDC-Cumulative Deaths_{}.csv'.format(country), index=False)
+        
+preprocess_by_country(['Germany', 'Poland'], ['GM', 'PL'])
