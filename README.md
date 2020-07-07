@@ -56,18 +56,23 @@ The forecasts assembled in this repository have been created by various independ
 
 ## Truth data
 
-Data on observed numbers of deaths come from the following sources:
+Data on observed numbers of deaths and several other qantities come from the following sources:
 
 - [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases) **(This is our preferred source and will be used for evaluation and ensembling purposes.)**
+- [Robert Koch Institut](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0). Note that these data are subject to some processing steps, see [here](data-truth/RKI).
 - [Johns Hopkins University](https://coronavirus.jhu.edu/)
+- [DIVI Intensivregister](https://www.divi.de/register/tagesreport) These data are currently not yet used for forecasts, but we intend to extend our activities in this direction.
+
+Details can be found in the respective README files in the subfolders of `data-truth`.
 
 ## Teams generating forecasts
 
 Currently we assemble forecasts from the following teams. *Note that not all teams are using the same ground truth data.* (used truth data source and forecast reuse license in brackets):
 
+- [Frankfurt Institute for Advanced Studies & Forschungszentrum Jülich](https://www.medrxiv.org/content/10.1101/2020.04.18.20069955v1)(ECDC; no license specified)
 - [IHME](https://covid19.healthdata.org/united-states-of-america) (unclear; CC-AT-NC4.0) *Note that we are currently still facing some difficulties in the processing of the IHME files.*
 - [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)
-- [Imperial](https://github.com/sangeetabhatia03/covid19-short-term-forecasts) (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
+- [Imperial](https://github.com/mrc-ide/covid19-forecasts-orderly) (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
 - [Johannes Gutenberg University Mainz / University of Hamburg](https://github.com/QEDHamburg/covid19) (ECDC; MIT)
 - [MIT](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
