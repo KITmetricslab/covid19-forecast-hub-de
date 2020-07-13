@@ -2,12 +2,15 @@
 
 source("../../app_forecasts_de/code/app_functions.R")
 
+# names of models which are not to be included in visualization:
+models_to_exclude <- c("LeipzigIMISE-rkiV1", "LeipzigIMISE-ecdcV1", "Imperial-ensemble1")
+
 forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/forecasts_to_plot.csv",
                               stringsAsFactors = FALSE)
 forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
-forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target))
+forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target) & !(model %in% models_to_exclude))
 
 # exclude some models because used data is neither ECDC nor JHU:
 models_to_exclude <- c("LeipzigIMISE-rkiV1")
@@ -19,6 +22,8 @@ timezeros <- as.character(sort(unique(forecasts_to_plot$timezero), decreasing = 
 
 # get names of models which appear in the data:
 models <- sort(as.character(unique(forecasts_to_plot$model)))
+
+
 
 # assign colours to models (currently restricted to eight):
 cols_models <- c("#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02",
