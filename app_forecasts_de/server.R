@@ -35,6 +35,7 @@ models <- sort(as.character(unique(forecasts_to_plot$model)))
 
 # assign colours to models (currently restricted to eight):
 cols_models <- c(brewer.pal(n = 8, name = 'Dark2'), "cyan3", "firebrick1", "tan1")
+cols_models <- cols_models[seq_along(models)]
 names(cols_models) <- models
 
 # get truth data:

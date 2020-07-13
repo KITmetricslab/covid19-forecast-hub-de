@@ -30,6 +30,7 @@ models <- sort(as.character(unique(forecasts_to_plot$model)))
 # assign colours to models (currently restricted to eight):
 cols_models <- c("#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02",
                  "#A6761D", "#666666", "cyan3", "firebrick1", "tan1")
+cols_models <- cols_models[seq_along(models)]
 names(cols_models) <- models
 
 # get truth data:
@@ -91,3 +92,4 @@ legend("topleft", col = cols_models, legend = models, lty = 0, bty = "n",
 legend("bottomleft", col = "black", legend = c("ECDC/RKI", "JHU"), lty = 0, bty = "n",
        pch = pch_full, pt.cex = 1.3)
 dev.off()
+
