@@ -2,6 +2,8 @@
 
 source("../../app_forecasts_de/code/app_functions.R")
 
+Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
+
 # names of models which are not to be included in visualization:
 models_to_exclude <- c("LeipzigIMISE-rkiV1", "LeipzigIMISE-ecdcV1", "Imperial-ensemble1")
 
@@ -27,7 +29,7 @@ models <- sort(as.character(unique(forecasts_to_plot$model)))
 
 # assign colours to models (currently restricted to eight):
 cols_models <- c("#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02",
-                 "#A6761D", "#666666", "cyan3")
+                 "#A6761D", "#666666", "cyan3", "firebrick1", "tan1")
 names(cols_models) <- models
 
 # get truth data:
