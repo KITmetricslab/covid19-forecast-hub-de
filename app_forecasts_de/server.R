@@ -21,7 +21,7 @@ forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/c
 forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
-forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target))
+forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target) & location == "GM")
 
 # exclude some models because used data is neither ECDC nor JHU:
 models_to_exclude <- c("LeipzigIMISE-rkiV1", "LeipzigIMISE-ecdcV1", "Imperial-ensemble1")

@@ -12,11 +12,10 @@ forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/c
 forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
-forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target) & !(model %in% models_to_exclude))
+forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target) &
+                              !(model %in% models_to_exclude) &
+                              location == "GM")
 
-# exclude some models because used data is neither ECDC nor JHU:
-models_to_exclude <- c("LeipzigIMISE-rkiV1")
-forecasts_to_plot <- subset(forecasts_to_plot, !(model %in% models_to_exclude) )
 
 
 # get timezeros, i.e. Mondays on which forecasts were made:
