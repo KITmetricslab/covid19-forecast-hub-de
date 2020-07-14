@@ -20,11 +20,21 @@ If you are generating forecasts for COVID-19 cases, hospitalizations or deaths i
 
 ## Forecast targets
 
-Currently we are focussing on **1 through 30 day and 1 through 4 week ahead forecasts of incident and cumulative deaths** in Germany (national level). We also accept up to 130 day-ahead and up to 20 week-ahead forecasts. This [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets) contains details on the definition of the targets. Further targets, including targets stratified by Bundesland will be added after consultation with interested teams of forecasters. There is no obligation to submit forecasts for all suggested targets and it is up to teams to decide what they feel comfortable forecasting.
+### Deaths
+
+Currently we are focussing on **1 through 30 day and 1 through 4 week ahead forecasts of incident and cumulative deaths by reporting date** in Germany (national level). We also accept up to 130 day-ahead and up to 20 week-ahead forecasts. This [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets) contains details on the definition of the targets. There is no obligation to submit forecasts for all suggested targets and it is up to teams to decide what they feel comfortable forecasting.
 
 Note that we currently treat the **ECDC data** available [here](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide) as our ground truth for which forecasts should be made. Our R script to compute cumulative deaths can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/data-truth/ECDC/ECDC.R). 
 
 Note that our definition of targets parallels the principles outlined [here](https://github.com/reichlab/covid19-forecast-hub#what-forecasts-we-are-tracking-and-for-which-locations) for the US COVID-19 forecast hub.
+
+We are moreover planning to accept the same forecast targets by **Bundesland** and will provide details soon. Data from Robert Koch Institute on daily reported deaths has been compiled [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/RKI).
+
+### Intensive care use
+
+We intend to start covering forecasts for intensive care use due to COVID19 (at the national and Bundesland levels). Details will be provided here soon. Data from the [DIVI Registry](https://www.divi.de/) have been compiled [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/DIVI) and will be used to define prediction targets.
+
+
 
 <!---
 Note that unlike the US hub we also allow for `-1 wk ahead <target>`, `0 wk ahead <target>`, `-1 day ahead <target>` and `0 day ahead <target>` which, if they have already been observed (this may or may not be the case for 0 wk ahead) are assigned `type = "observed"`. We decided to include this as there is more heterogeneity concerning the ground truths used by different teams. By also storing the last observed values as provided by teams it becomes easier to spot such differences.
@@ -72,7 +82,7 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [Frankfurt Institute for Advanced Studies & Forschungszentrum Jülich](https://www.medrxiv.org/content/10.1101/2020.04.18.20069955v1)(ECDC; no license specified)
 - [IHME](https://covid19.healthdata.org/united-states-of-america) (unclear; CC-AT-NC4.0) *Note that we are currently still facing some difficulties in the processing of the IHME files.*
 - [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)
-- [Imperial](https://github.com/sangeetabhatia03/covid19-short-term-forecasts) (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
+- [Imperial](https://github.com/mrc-ide/covid19-forecasts-orderly) (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
 - [Johannes Gutenberg University Mainz / University of Hamburg](https://github.com/QEDHamburg/covid19) (ECDC; MIT)
 - [MIT](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
