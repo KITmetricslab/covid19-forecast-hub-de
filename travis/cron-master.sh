@@ -35,4 +35,8 @@ cd ../../code/visualization
 Rscript ./plot_current_forecasts.R
 echo "Image done"
 
+cd ../validation
+python3 ./get_commit_dates.py
+echo "file dates done"
+
 cd ../../

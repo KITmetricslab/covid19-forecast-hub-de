@@ -27,7 +27,7 @@ bundesländer = {1: "Schleswig-Holstein State",
                 5: "North Rhine-Westphalia State",
                 6: "Hesse State",
                 7: "Rhineland-Palatinate State",
-                8: "Baden-Württemberg State",
+                8: "Baden-Wuerttemberg State",
                 9: "Free State of Bavaria",
                 10: "Saarland State",
                 11: "Berlin State",
@@ -35,29 +35,37 @@ bundesländer = {1: "Schleswig-Holstein State",
                 13: "Mecklenburg-Western Pomerania State",
                 14: "Free State of Saxony",
                 15: "Sachsen-Anhalt State",
-                16: "Free State of Thüringia"}
+                16: "Free State of Thueringia"}
 
 state_to_code = {"Schleswig-Holstein State": "GM10",
                  "Free Hanseatic City of Hamburg": "GM04",
-                 "Lower Saxony State" : "GM06",
-                 "Free Hanseatic City of Bremen" : "GM03",
-                 "North Rhine-Westphalia State" : "GM07",
-                 "Hesse State" : "GM05",
-                 "Rhineland-Palatinate State" : "GM08",
-                 "Baden-Württemberg State" : "GM01",
-                 "Free State of Bavaria" : "GM02",
-                 "Saarland State" : "GM09",
-                 "Berlin State" : "GM16",
-                 "Brandenburg State" : "GM11",
-                 "Mecklenburg-Western Pomerania State" : "GM12",
-                 "Free State of Saxony" : "GM13",
-                 "Sachsen-Anhalt State" : "GM14",
-                 "Free State of Thüringia" : "GM15"}
+                 "Lower Saxony State": "GM06",
+                 "Free Hanseatic City of Bremen": "GM03",
+                 "North Rhine-Westphalia State": "GM07",
+                 "Hesse State": "GM05",
+                 "Rhineland-Palatinate State": "GM08",
+                 "Baden-Wuerttemberg State": "GM01",
+                 "Free State of Bavaria": "GM02",
+                 "Saarland State": "GM09",
+                 "Berlin State": "GM16",
+                 "Brandenburg State": "GM11",
+                 "Mecklenburg-Western Pomerania State": "GM12",
+                 "Free State of Saxony": "GM13",
+                 "Sachsen-Anhalt State": "GM14",
+                 "Free State of Thueringia": "GM15"}
 
 
 outputs = ['anzahl_meldebereiche', 'faelle_covid_aktuell',
            'faelle_covid_aktuell_beatmet', 'anzahl_standorte',
            'betten_frei', 'betten_belegt']
+
+file_names = {"anzahl_meldebereiche": "reporting_areas_Germany",
+              "faelle_covid_aktuell": "cases_covid_current_Germany",
+              "faelle_covid_aktuell_beatmet": 
+                  "cases_covid_current_ventilated_Germany",
+              "anzahl_standorte": "sites_Germany",
+              "betten_frei": "beds_free_Germany",
+              "betten_belegt": "beds_occupied_Germany"}
 
 # create a file for each output
 for col in outputs:
@@ -105,4 +113,7 @@ for col in outputs:
     df_agg = df_agg.sort_values(by=['date', 'location'])
     df_agg = df_agg.reset_index(drop=True)
     df_agg = df_agg.set_index("date")
-    df_agg.to_csv("./bundeslaender/DIVI-" + col + ".csv")
+    
+    df_filename = file_names[col]
+    
+    df_agg.to_csv("./bundeslaender/truth_DIVI-" + df_filename + ".csv")
