@@ -14,7 +14,7 @@ An interactive visualization of the different forecasts can be found [here](http
 
 ![static visualization of current forecasts](code/visualization/current_forecasts.png?raw=true)
 
-The effort parallels the [US COVID-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) run by the UMass-Amherst Influenza Forecasting Center of Excellence based at the [Reich Lab](https://reichlab.io/). We are in close exchange with the Reich Lab team and follow the general structure and [data format](https://github.com/reichlab/covid19-forecast-hub#data-model) defined there, see also this [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Data-Format) for more details. We also re-use software provided by the ReichLab (see [below](#data-license-and-reuse)).
+The effort parallels the [US COVID-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) run by the UMass-Amherst Influenza Forecasting Center of Excellence based at the [Reich Lab](https://reichlab.io/). We are in close exchange with the Reich Lab team and follow the general structure and [data format](https://github.com/reichlab/covid19-forecast-hub/blob/master/data-processed/README.md) defined there, see this [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Data-Format) for more details. We also re-use software provided by the ReichLab (see [below](#data-license-and-reuse)).
 
 If you are generating forecasts for COVID-19 cases, hospitalizations or deaths in Germany and would like to contribute to this repository do not hesitate to [get in touch](https://statistik.econ.kit.edu/mitarbeiter_2902.php).
 
@@ -56,7 +56,7 @@ Especially in the starting phase we will try to provide direct support to teams 
 
 ## Data format
 
-We store point and quantile forecasts in a long format, including information on forecast dates and location, see [this wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Data-Format) for details. This format is largely identical to the one outlined for the US Hub [here](https://github.com/reichlab/covid19-forecast-hub#data-model) and [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#data-submission-instructions).
+We store point and quantile forecasts in a long format, including information on forecast dates and location, see [this wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-Data-Format) for details. This format is largely identical to the one outlined for the US Hub [here](https://github.com/reichlab/covid19-forecast-hub/tree/master/data-processed#data-submission-instructions).
 
 ## Data license and reuse
 
