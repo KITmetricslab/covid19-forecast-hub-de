@@ -12,7 +12,7 @@ check_forecast_name_path <- function(forecast_file) {
         error_message <- paste("\nERROR: Forecast file name: ",
                                 forecast_file_name_base,
                                 " does not match Forecast file naimng convention: ",
-                                paste(forecast_file_path, "(-ICU)", sep = "")
+                                "<date>-<team>-<model><possibly -ICU>.csv"
                                )
         return(stop(error_message))
     }
