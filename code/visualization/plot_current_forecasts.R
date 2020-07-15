@@ -2,16 +2,20 @@
 
 source("../../app_forecasts_de/code/app_functions.R")
 
+Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
+
+# names of models which are not to be included in visualization:
+models_to_exclude <- c("LeipzigIMISE-rkiV1", "LeipzigIMISE-ecdcV1", "Imperial-ensemble1")
+
 forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/forecasts_to_plot.csv",
                               stringsAsFactors = FALSE)
 forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
-forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target))
+forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target) &
+                              !(model %in% models_to_exclude) &
+                              location == "GM")
 
-# exclude some models because used data is neither ECDC nor JHU:
-models_to_exclude <- c("LeipzigIMISE-rkiV1")
-forecasts_to_plot <- subset(forecasts_to_plot, !(model %in% models_to_exclude) )
 
 
 # get timezeros, i.e. Mondays on which forecasts were made:
@@ -20,9 +24,12 @@ timezeros <- as.character(sort(unique(forecasts_to_plot$timezero), decreasing = 
 # get names of models which appear in the data:
 models <- sort(as.character(unique(forecasts_to_plot$model)))
 
+
+
 # assign colours to models (currently restricted to eight):
 cols_models <- c("#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02",
-                 "#A6761D", "#666666", "cyan3")
+                 "#A6761D", "#666666", "cyan3", "firebrick1", "tan1")
+cols_models <- cols_models[seq_along(models)]
 names(cols_models) <- models
 
 # get truth data:
@@ -84,3 +91,4 @@ legend("topleft", col = cols_models, legend = models, lty = 0, bty = "n",
 legend("bottomleft", col = "black", legend = c("ECDC/RKI", "JHU"), lty = 0, bty = "n",
        pch = pch_full, pt.cex = 1.3)
 dev.off()
+

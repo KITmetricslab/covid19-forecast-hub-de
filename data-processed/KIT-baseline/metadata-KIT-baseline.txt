@@ -1,0 +1,33 @@
+team_name: KITmetricslab
+team_abbr: KIT
+institution_affil: Karlsruhe Institute of Technology, Chair of Econometrics and Statistics
+team_funding: Helmholtz Information & Data Science Pilot Project "Simcard"
+team_experience: Our team organizes the German COVID19 Forecast Hub and collarborates with the US COVID19 Forecast Hub.
+
+model_name: baseline
+model_abbr: baseline
+model_output: 
+model_repo: 
+
+model_contributors: Johannes Bracher, Jannik Deuschel, Konstantin Görgen, Jakob Ketterer, Daniel Wolffram, Tilmann Gneiting, Melanie Schienle
+Model_targets: reported deaths, DIVI ICU and ventilation data
+Target_loc: Germany (federal), Bundesländer
+Data_format: 23 quantiles
+forecast_startdate: 2020-07-13
+forecast_frequency: 1x weekly
+
+data_inputs_known: reported deaths, ICU and ventilation data
+data_source_known: RKI/ECDC, DIVI
+
+this_model_is_an_ensemble: FALSE
+this_model_is_unconditional: TRUE
+
+methods: >-
+    This is a simple baseline model which uses the last observation as the mean of a predictive negative binomial distribution. The dispersion paramter is estimated from the last 5 observations.
+
+methods_long: >-
+    This is a simple baseline model which uses the last observation as the mean of
+    a predictive negative binomial distribution. The dispersion paramter is estimated
+    from the last 5 observations (using maximum likelihood and the respective preceding
+    observations as conditional means).
+citation: 

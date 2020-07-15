@@ -21,7 +21,7 @@ forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/c
 forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
-forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target))
+forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target) & location == "GM")
 
 # exclude some models because used data is neither ECDC nor JHU:
 models_to_exclude <- c("LeipzigIMISE-rkiV1", "LeipzigIMISE-ecdcV1", "Imperial-ensemble1")
@@ -34,7 +34,8 @@ timezeros <- as.character(sort(unique(forecasts_to_plot$timezero), decreasing = 
 models <- sort(as.character(unique(forecasts_to_plot$model)))
 
 # assign colours to models (currently restricted to eight):
-cols_models <- c(brewer.pal(n = 8, name = 'Dark2'), "cyan3")
+cols_models <- c(brewer.pal(n = 8, name = 'Dark2'), "cyan3", "firebrick1", "tan1")
+cols_models <- cols_models[seq_along(models)]
 names(cols_models) <- models
 
 # get truth data:
