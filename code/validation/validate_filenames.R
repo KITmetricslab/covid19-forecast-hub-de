@@ -2,19 +2,23 @@
 # Validate forecast filename equals forecast filepath
 check_forecast_name_path <- function(forecast_file) {
     forecast_file_path <- basename(dirname(forecast_file))
-    forecast_file_name <-  substring(basename(forecast_file), 
+    forecast_file_name_base <-  substring(basename(forecast_file), 
                                         20,
                                         nchar(basename(forecast_file)) - 4)
+    
+    # -ICU is allowed aswell
+    forecast_file_name <- gsub("-ICU", "", forecast_file_name_base)
     if (forecast_file_path != forecast_file_name){
         error_message <- paste("\nERROR: Forecast file name: ",
-                                forecast_file_name,
-                                " does not match Forecast file path: ",
-                                forecast_file_path)
+                                forecast_file_name_base,
+                                " does not match Forecast file naimng convention: ",
+                                paste(forecast_file_path, "(-ICU)", sep = "")
+                               )
         return(stop(error_message))
     }
     else{
         check_accepted <- paste("✔ Forecast file name = Forecast file path (",
-                                    forecast_file_name,
+                                    forecast_file_name_base,
                                     "=",
                                     forecast_file_path,
                                     ")")
