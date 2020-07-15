@@ -155,7 +155,8 @@ shinyServer(function(input, output) {
 
   # plot (all wrapped up in function plot_forecasts)
   output$plot_forecasts <- renderPlot({
-    par(las = 1)
+    par(mar = c(4.5, 5, 4, 2), las = 1)
+
     # determine ylim:
     yl <-
       if(is.null(coords$brush$ylim)){
@@ -200,6 +201,9 @@ shinyServer(function(input, output) {
     legend("top", col = "black", legend = paste0(c("ECDC/RKI", "JHU"), ": ", selected$truths), lty = 0, bty = "n",
            pch = ifelse(truths %in% input$select_truths, pch_full, pch_empty),
            pt.cex = 1.3)
+
+    # add title manually:
+    title(names(locations)[which(locations == input$select_location)])
   })
 
 })

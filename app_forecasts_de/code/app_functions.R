@@ -125,7 +125,6 @@ add_forecast_to_plot <- function(forecasts_to_plot,
 empty_plot <- function(start = as.Date("2020-03-01"), end = Sys.Date() + 28, ylim = c(0, 100000)){
   dats <- seq(from = round(start) - 14, to = round(end) + 14, by = 1)
 
-  par(mar = c(4.5, 5, 2, 2))
   plot(NULL, ylim = ylim, xlim = c(start, end),
        xlab = "time", ylab = "", axes = FALSE)
   title(ylab = "cumulative deaths", line = 3.5)
