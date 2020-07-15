@@ -23,6 +23,7 @@ dashboardPage(
               # input elements generated on server side:
               uiOutput("inp_select_date"),
               uiOutput("inp_select_model"),
+              uiOutput("inp_select_location"),
 
               checkboxGroupInput("select_truths", "Select truth data to display:",
                                  choiceNames = c("ECDC/RKI", "JHU"),

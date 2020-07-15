@@ -13,8 +13,7 @@ forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
 forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target) &
-                              !(model %in% models_to_exclude) &
-                              location == "GM")
+                              !(model %in% models_to_exclude))
 
 
 
@@ -71,6 +70,7 @@ plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                truth = dat_truth,
                timezero = timezero,
                models = models,
+               location = "GM",
                truth_data_used = truth_data_used,
                selected_truth = c("ECDC", "JHU"),
                start = Sys.Date() - 32,
