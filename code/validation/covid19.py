@@ -82,6 +82,11 @@ def covid19_row_validator(column_index_dict, row):
     location = row[column_index_dict['location']]
     if location not in FIPS_STATE_CODES:
         error_messages.append(f"invalid FIPS location: {location!r}. row={row}")
+        
+    row_type = row[column_index_dict['type']]     
+    if row_type not in ["observed", "point", "quantile"]:
+        print(row_type)
+        error_messages.append(f"invalid type: {row_type!r}. row={row}")
 
     # validate quantiles. recall at this point all row values are strings, but VALID_QUANTILES is numbers
     quantile = row[column_index_dict['quantile']]
