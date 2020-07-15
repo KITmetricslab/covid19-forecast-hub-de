@@ -149,7 +149,7 @@ def _validated_rows_for_quantile_csv(csv_fp, valid_target_names, row_validator, 
 
     :return: 2-tuple: (validated_rows, error_messages)
     """
-    from cdc_io import CDC_POINT_ROW_TYPE, CDC_OBSERVED_ROW_TYPE, _parse_value  # avoid circular imports
+    from cdc_io import CDC_POINT_ROW_TYPE, CDC_OBSERVED_ROW_TYPE, CDC_QUANTILE_ROW_TYPE, _parse_value  # avoid circular imports
 
 
     error_messages = []  # list of strings. return value. set below if any issues
@@ -185,16 +185,17 @@ def _validated_rows_for_quantile_csv(csv_fp, valid_target_names, row_validator, 
         row_type = row_type.lower()
         is_point_row = (row_type == CDC_POINT_ROW_TYPE.lower())
         is_observed_row = (row_type == CDC_OBSERVED_ROW_TYPE.lower())
+        is_quantile_row = (row_type == CDC_QUANTILE_ROW_TYPE.lower())
         
         if is_observed_row:
             is_point_row = is_observed_row
        # print(is_observed_row)
         quantile = _parse_value(quantile)  # None if not an int, float, or Date. float might be inf or nan
         value = _parse_value(value)  # ""
-        if not (is_point_row or is_observed_row) and ((quantile is None) or
+        if not (is_point_row or is_observed_row) and ((quantile is None)  or
                                    (isinstance(quantile, datetime.date)) or
                                    (not math.isfinite(quantile)) or  # inf, nan
-                                   not (0 <= quantile <= 1)):
+                                   not (0 <= quantile <= 1)) and is_quantile_row:
             error_messages.append(f"entries in the `quantile` column must be an int or float in [0, 1]: "
                                   f"{quantile}. row={row}")
         elif is_point_row and ((value is None) or
