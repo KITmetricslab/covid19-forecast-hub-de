@@ -16,6 +16,7 @@ python3 ./jhu_preprocessing.py
 echo "JHU done"
 
 # update RKI data
+python3 ./rki_download.py
 python3 ./rki_update.py
 echo "RKI done"
 
