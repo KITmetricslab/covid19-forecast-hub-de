@@ -56,10 +56,16 @@ def check_formatting(my_path):
             if filepath not in previous_checked:
                 # delete validated file if currrently present
                 df = df[df['file_path'] != filepath]
-
+                
+                if "-ICU" in filepath:
+                    mode = "ICU"
+                
+                else:
+                    mode = "deaths"
+                
                 # validate file
-                file_error = covid19.validate_quantile_csv_file(filepath)
-
+                file_error = covid19.validate_quantile_csv_file(filepath, mode)
+                #file_error = "no errors"
                 # Check forecast file date = forecast_date column
                 forecast_date_error = filename_match_forecast_date(filepath)
                 if forecast_date_error is not None:

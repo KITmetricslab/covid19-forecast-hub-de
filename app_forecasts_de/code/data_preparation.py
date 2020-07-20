@@ -23,7 +23,9 @@ path = Path('../../data-processed')
 models = [f.name for f in path.iterdir() if f.name !='ABC-exampleModel1']
 
 VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(-1, 5)] + \
-                [f"{_} wk ahead cum death" for _ in range(-1, 5)]
+                [f"{_} wk ahead cum death" for _ in range(-1, 5)] + \
+                [f"{_} wk ahead curr ICU" for _ in range(-1, 5)]+ \
+                [f"{_} wk ahead curr ventilated" for _ in range(-1, 5)]
 
 VALID_QUANTILES = [0.025, 0.975]
 

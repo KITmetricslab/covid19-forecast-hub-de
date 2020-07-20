@@ -16,6 +16,7 @@ python3 ./jhu_preprocessing.py
 echo "JHU done"
 
 # update RKI data
+python3 ./rki_download.py
 python3 ./rki_update.py
 echo "RKI done"
 
@@ -34,5 +35,9 @@ echo "Shiny done"
 cd ../../code/visualization
 Rscript ./plot_current_forecasts.R
 echo "Image done"
+
+cd ../validation
+python3 ./get_commit_dates.py
+echo "file dates done"
 
 cd ../../
