@@ -5,19 +5,19 @@ institution_affil: Universitaet Leipzig, IMISE
 team_experience: Modelling Infection / Haematopoesis in humans and animals
 team_funding: TBD
 
-model_name: Leipzig_IMISE_Modell_ecdcV2
-model_abbr: LeipzigV2
+model_name: LeipzigIMISE-SECIR
+model_abbr: LE-SECIR
 model_output: https://github.com/holgerman/covid19-forecast-hub-de
 model_repo: https://github.com/holgerman/covid19-forecast-hub-de
 
 model_targets: daily and cumulative deaths
 target_loc: Germany
 Data_format: point and percentile estimates 
-forecast_startdate: 2020-06-22
+forecast_startdate: 2020-06-15
 forecast_frequency: once per week
 
 data_inputs_known: case & ICU  & death counts, age distributions 
-data_source_known: RKI and DIVI, ECDC only used for reporting observed values, age distributions for cases and deaths from RKI, age distribution from ICU from CDC (http://dx.doi.org/10.15585/mmwr.mm6912e2external), Santé publique France, and Svenska Intensivvårdsregistret (SIR)
+data_source_known: RKI and DIVI, ECDC only used for reporting observed values, age distributions for cases and deaths from RKI
 
 this_model_is_an_ensemble: no
 this_model_is_unconditional: no
@@ -27,9 +27,10 @@ methods: >-
 	
 
 methods_long: >-
-	2020-07-14 - present 		Leipzig_IMISE_Modell_ecdcV2: additionally including age structure
-	2020-06-22 - 2020-07-13  	Leipzig_IMISE_Modell_ecdcV2: Input RKI Data instead of ECDC data, output accounts for reporting delays and is compatible with EDCDC data.
-    2020-06-15 - 2020-06-21  	Leipzig_IMISE_Modell_ecdcV1: Input ECDC Data
+	2020-07-21 - present 		instead of using age structure for death prediction using empirical weekly death rate
+	2020-07-14 - 2020-07-20 	additionally including age structure for deaths
+	2020-06-22 - 2020-07-13  	Input RKI Data instead of ECDC data, output accounts for reporting delays and is compatible with EDCDC data.
+    2020-06-15 - 2020-06-21  	Input ECDC Data
 	
 	Open ISSUES: Quantile for weekly incident forecast, constrain lower estimate of cumulative counts to last empirical value
 	More Details TBD
