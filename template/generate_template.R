@@ -8,7 +8,9 @@
 # Note that weekly incidence forecasts are always from Sunday (included) to Saturday (included; this is target_end_date)
 
 # define the date on which forecasts are generated:
-forecast_date <- as.Date("2020-06-01")
+forecast_date <- as.Date("2020-07-13")
+
+locations <- read.csv("state_codes_germany.csv")
 
 dat <- data.frame(
   forecast_date = forecast_date,
@@ -35,17 +37,20 @@ quantiles <- c(0.01, 0.025, 1:19/20, 0.975, 0.99)
 
 weekdays(end_dates)
 
-for(t in seq_along(tgs)){
-  new_dat <- data.frame(forecast_date = forecast_date,
-                        target = tgs[t],
-                        target_end_date = end_dates[t],
-                        location = "GM",
-                        location_name = "Germany",
-                        type = c("point", rep("quantile", length(quantiles))),
-                        quantile = c(NA, quantiles),
-                        value = NA)
-  dat <- rbind(dat, new_dat)
+for(loc in 1:nrow(locations)){
+  for(t in seq_along(tgs)){
+    new_dat <- data.frame(forecast_date = forecast_date,
+                          target = tgs[t],
+                          target_end_date = end_dates[t],
+                          location = locations$state_code[loc],
+                          location_name = locations$state_name[loc],
+                          type = c("point", rep("quantile", length(quantiles))),
+                          quantile = c(NA, quantiles),
+                          value = NA)
+    dat <- rbind(dat, new_dat)
+  }
 }
+
 
 dat$target_end_date <- as.Date(dat$target_end_date, origin = "1970-01-01")
 # set type = "observed" for past dates:

@@ -25,6 +25,7 @@ YYYY_MM_DD_DATE_FORMAT = '%Y-%m-%d'  # e.g., '2017-01-17'
 
 CDC_OBSERVED_ROW_TYPE = "Observed"
 CDC_POINT_ROW_TYPE = 'Point'
+CDC_QUANTILE_ROW_TYPE = "Quantile"
 CDC_BIN_ROW_TYPE = 'Bin'
 CDC_CSV_HEADER = ['location', 'target', 'type', 'unit', 'bin_start_incl', 'bin_end_notincl', 'value']
 

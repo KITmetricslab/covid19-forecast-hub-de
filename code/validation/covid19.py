@@ -10,17 +10,26 @@ from quantile_io import json_io_dict_from_quantile_csv_file
 # functions specific to the COVID19 project
 #
 
-# from https://en.wikipedia.org/wiki/List_of_FIPS_region_codes_(G%E2%80%93I)#GM:_Germany:
-FIPS_STATE_CODES = ["GM", "GM01", "GM02", "GM03", "GM04", "GM05", "GM06",
-                    "GM07", "GM08", "GM09", "GM10", "GM11", "GM12", "GM13",
-                    "GM14", "GM15", "GM16"]  # 'GM' is extra
+FIPS_CODES =  {"Germany": ["GM", "GM01", "GM02", "GM03", "GM04", "GM05", "GM06",
+                            "GM07", "GM08", "GM09", "GM10", "GM11", "GM12",
+                            "GM13", "GM14", "GM15", "GM16"],
+               "Poland": ["PL", "PL72", "PL73", "PL74", "PL75", "PL76", "PL77",
+                           "PL78", "PL79","PL80", "PL81", "PL82", "PL83", 
+                           "PL84", "PL85", "PL86", "PL87"]}
+
 
 # b/c there are so many possible targets, we generate using a range
-VALID_TARGET_NAMES = [f"{_} day ahead inc death" for _ in range(-1, 131)] + \
-                     [f"{_} day ahead cum death" for _ in range(-1, 131)] + \
-                     [f"{_} wk ahead inc death" for _ in range(-1, 21)] + \
-                     [f"{_} wk ahead cum death" for _ in range(-1, 21)] + \
-                     [f"{_} day ahead inc hosp" for _ in range(131)]
+VALID_TARGET_NAMES_DEATH = [f"{_} day ahead inc death" for _ in range(-1, 131)] + \
+                           [f"{_} day ahead cum death" for _ in range(-1, 131)] + \
+                           [f"{_} wk ahead inc death" for _ in range(-1, 21)] + \
+                           [f"{_} wk ahead cum death" for _ in range(-1, 21)] + \
+                           [f"{_} day ahead inc hosp" for _ in range(131)]
+                           
+VALID_TARGET_NAMES_ICU = [f"{_} day ahead curr ventilated" for _ in range(-1, 131)] + \
+                         [f"{_} day ahead curr ICU" for _ in range(-1, 131)] + \
+                         [f"{_} wk ahead curr ventilated" for _ in range(-1, 21)] + \
+                         [f"{_} wk ahead curr ICU" for _ in range(-1, 21)]
+
 
 VALID_QUANTILES = [0.010, 0.025, 0.050, 0.100, 0.150, 0.200, 0.250, 0.300, 0.350, 0.400, 0.450, 0.500, 0.550, 0.600,
                    0.650, 0.700, 0.750, 0.800, 0.850, 0.900, 0.950, 0.975, 0.990]  # incoming must be a subset of these
@@ -30,7 +39,7 @@ VALID_QUANTILES = [0.010, 0.025, 0.050, 0.100, 0.150, 0.200, 0.250, 0.300, 0.350
 # validate_quantile_csv_file()
 #
 
-def validate_quantile_csv_file(csv_fp):
+def validate_quantile_csv_file(csv_fp, mode, country):
     """
     A simple wrapper of `json_io_dict_from_quantile_csv_file()` that tosses the json_io_dict and just prints validation
     error_messages.
@@ -42,8 +51,17 @@ def validate_quantile_csv_file(csv_fp):
     click.echo(f"* validating quantile_csv_file '{quantile_csv_file}'...")
     with open(quantile_csv_file) as cdc_csv_fp:
         # toss json_io_dict:
-        _, error_messages = json_io_dict_from_quantile_csv_file(cdc_csv_fp, VALID_TARGET_NAMES, covid19_row_validator,
-                                                                ['forecast_date', 'target_end_date'])
+        if mode == "deaths":
+            target_names = VALID_TARGET_NAMES_DEATH
+        else:
+            target_names = VALID_TARGET_NAMES_ICU
+        
+        fips_codes = FIPS_CODES[country]
+        
+            
+        _, error_messages = json_io_dict_from_quantile_csv_file(cdc_csv_fp, target_names, fips_codes, covid19_row_validator,
+                                                                    ['forecast_date', 'target_end_date'])    
+        
         if error_messages:
             return error_messages
         else:
@@ -54,7 +72,7 @@ def validate_quantile_csv_file(csv_fp):
 # `json_io_dict_from_quantile_csv_file()` row validator
 #
 
-def covid19_row_validator(column_index_dict, row):
+def covid19_row_validator(column_index_dict, row, fips_codes):
     """
     Does COVID19-specific row validation. Notes:
 
@@ -68,8 +86,13 @@ def covid19_row_validator(column_index_dict, row):
 
     # validate location (FIPS code)
     location = row[column_index_dict['location']]
-    if location not in FIPS_STATE_CODES:
+    if location not in fips_codes:
         error_messages.append(f"invalid FIPS location: {location!r}. row={row}")
+        
+    row_type = row[column_index_dict['type']]     
+    if row_type not in ["observed", "point", "quantile"]:
+        print(row_type)
+        error_messages.append(f"invalid type: {row_type!r}. row={row}")
 
     # validate quantiles. recall at this point all row values are strings, but VALID_QUANTILES is numbers
     quantile = row[column_index_dict['quantile']]

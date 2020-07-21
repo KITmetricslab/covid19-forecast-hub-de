@@ -60,9 +60,9 @@ outputs = ['anzahl_meldebereiche', 'faelle_covid_aktuell',
            'betten_frei', 'betten_belegt']
 
 file_names = {"anzahl_meldebereiche": "reporting_areas_Germany",
-              "faelle_covid_aktuell": "cases_covid_current_Germany",
+              "faelle_covid_aktuell": "Current ICU_Germany",
               "faelle_covid_aktuell_beatmet": 
-                  "cases_covid_current_ventilated_Germany",
+                  "Current Ventilated_Germany",
               "anzahl_standorte": "sites_Germany",
               "betten_frei": "beds_free_Germany",
               "betten_belegt": "beds_occupied_Germany"}
@@ -116,4 +116,8 @@ for col in outputs:
     
     df_filename = file_names[col]
     
-    df_agg.to_csv("./bundeslaender/truth_DIVI-" + df_filename + ".csv")
+    if col == "faelle_covid_aktuell" or col == "faelle_covid_aktuell_beatmet":
+        df_agg.to_csv("./truth_DIVI-" + df_filename + ".csv")
+    
+    else:
+        df_agg.to_csv("./others/truth_DIVI-" + df_filename + ".csv")
