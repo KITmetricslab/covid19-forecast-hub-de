@@ -48,6 +48,7 @@ modify_alpha <- function(col, alpha){
 # alpha.col: the degree of transparenca for shaded areas
 add_forecast_to_plot <- function(forecasts_to_plot,
                                  timezero,
+                                 location,
                                  model,
                                  add_points = TRUE,
                                  add_intervals = TRUE,
@@ -59,6 +60,7 @@ add_forecast_to_plot <- function(forecasts_to_plot,
   if(add_intervals){
     # get upper bounds:
     subs_upper <- forecasts_to_plot[which(forecasts_to_plot$model == model &
+                                            forecasts_to_plot$location == location &
                                             forecasts_to_plot$timezero == timezero &
                                             forecasts_to_plot$type == "quantile" &
                                             forecasts_to_plot$quantile > 0.51), ]
@@ -66,6 +68,7 @@ add_forecast_to_plot <- function(forecasts_to_plot,
     # get lower bounds:
     subs_lower <- forecasts_to_plot[which(forecasts_to_plot$model == model &
                                             forecasts_to_plot$timezero == timezero &
+                                            forecasts_to_plot$location == location &
                                             forecasts_to_plot$target_end_date >= timezero - 7 &
                                             forecasts_to_plot$type %in% c("quantile", "observed") &
                                             (forecasts_to_plot$quantile < 0.51 | is.na(forecasts_to_plot$quantile))), ]
@@ -93,6 +96,7 @@ add_forecast_to_plot <- function(forecasts_to_plot,
     # select the relevant points:
     subs_points <- forecasts_to_plot[which(forecasts_to_plot$model == model &
                                              forecasts_to_plot$timezero == timezero &
+                                             forecasts_to_plot$location == location &
                                              forecasts_to_plot$type == "point"), ]
     # draw points
     points(subs_points$target_end_date, subs_points$value, col = col,
@@ -105,6 +109,7 @@ add_forecast_to_plot <- function(forecasts_to_plot,
     # select relevant points:
     subs_past <- forecasts_to_plot[which(forecasts_to_plot$model == model &
                                            forecasts_to_plot$timezero == timezero &
+                                           forecasts_to_plot$location == location &
                                            forecasts_to_plot$type == "observed"), ]
     # draw points:
     points(subs_past$target_end_date, subs_past$value, col = col,
@@ -120,7 +125,6 @@ add_forecast_to_plot <- function(forecasts_to_plot,
 empty_plot <- function(start = as.Date("2020-03-01"), end = Sys.Date() + 28, ylim = c(0, 100000)){
   dats <- seq(from = round(start) - 14, to = round(end) + 14, by = 1)
 
-  par(mar = c(4.5, 5, 2, 2))
   plot(NULL, ylim = ylim, xlim = c(start, end),
        xlab = "time", ylab = "", axes = FALSE)
   title(ylab = "cumulative deaths", line = 3.5)
@@ -140,8 +144,9 @@ empty_plot <- function(start = as.Date("2020-03-01"), end = Sys.Date() + 28, yli
 # truth: data.frame containing dates and truth values
 # timezero: the forecast date considered (truths to the right of this date are shown in grey)
 # pch: the point shape
-add_truth_to_plot <- function(truth, timezero, pch){
-  truth <- subset(truth, weekdays(truth$date) == "Saturday")
+add_truth_to_plot <- function(truth, location, timezero, pch){
+  truth <- truth[weekdays(truth$date) == "Saturday" &
+                   truth$location == location, ]
   inds_obs <- which(truth$date < timezero)
   inds_unobs <- which(truth$date > timezero)
   ind_last <- which(truth$date == timezero - 2)
@@ -167,6 +172,7 @@ highlight_timezero <- function(timezero, ylim = c(-1000, 100000)){
 # forecasts_to_plot: the data.frame data_to_plot containing the relevant forecasts
 # truth: named list containing truth data.frames
 # timezero: forecasts from which date are to be shown?
+# location: which location is to be shown?
 # models: the model sfrom which forecasts are to be shown
 # selected_truth: names of the truth data sets to be shown
 # start: left xlim
@@ -184,6 +190,7 @@ highlight_timezero <- function(timezero, ylim = c(-1000, 100000)){
 # point_pred_legend: text to paste into the legend (can be used to show point forecasts)
 plot_forecasts <- function(forecasts_to_plot, truth,
                            timezero, models, selected_truth = names(truth)[1],
+                           location = "GM",
                            start = as.Date("2020-03-01"), end = Sys.Date() + 28,
                            ylim = c(0, 100000),
                            show_pi = TRUE,
@@ -207,6 +214,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
       for(i in seq_along(models)){
         add_forecast_to_plot(forecasts_to_plot = forecasts_to_plot,
                              timezero = timezero,
+                             location = location,
                              model = models[i], add_intervals = TRUE,
                              add_past = FALSE, add_points = FALSE,
                              col = cols[i])
@@ -216,7 +224,8 @@ plot_forecasts <- function(forecasts_to_plot, truth,
 
   # add truths:
   for(t in selected_truth){
-    add_truth_to_plot(truth[[t]], timezero, pch = pch_truths[t])
+    add_truth_to_plot(truth = truth[[t]], location = location, timezero = timezero,
+                      pch = pch_truths[t])
   }
 
   # add point forecasts:
@@ -224,6 +233,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
     for(i in seq_along(models)){
       add_forecast_to_plot(forecasts_to_plot = forecasts_to_plot,
                            timezero = timezero,
+                           location = location,
                            model = models[i],
                            add_points = TRUE, add_intervals = FALSE,
                            pch = pch_forecasts[truth_data_used[models[i]]],
@@ -235,6 +245,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
       for(i in seq_along(models)){
         add_forecast_to_plot(forecasts_to_plot = forecasts_to_plot,
                              timezero = timezero,
+                             location = location,
                              model = models[i],
                              add_points = FALSE, add_intervals = FALSE,
                              pch = pch_forecasts[truth_data_used[models[i]]],

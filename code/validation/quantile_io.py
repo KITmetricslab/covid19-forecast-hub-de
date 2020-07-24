@@ -36,7 +36,7 @@ REQUIRED_COLUMNS = ('location', 'target', 'type', 'quantile', 'value')
 # json_io_dict_from_quantile_csv_file()
 #
 
-def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, row_validator=None, addl_req_cols=()):
+def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, fips_codes, row_validator=None, addl_req_cols=()):
     """
     Utility that validates and extracts the two types of predictions found in quantile CSV files (PointPredictions and
     QuantileDistributions), returning them as a "JSON IO dict" suitable for loading into the database (see
@@ -66,7 +66,7 @@ def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, row_validato
         if there were errors
     """
     # load and validate the rows (validation step 1/2). error_messages is one of the the return values (filled next)
-    rows, error_messages = _validated_rows_for_quantile_csv(csv_fp, valid_target_names, row_validator, addl_req_cols)
+    rows, error_messages = _validated_rows_for_quantile_csv(csv_fp, valid_target_names, fips_codes, row_validator, addl_req_cols)
 
     if error_messages:
         return None, error_messages  # terminate processing b/c we can't proceed to step 1/2 with invalid rows
@@ -143,13 +143,13 @@ def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, row_validato
     return {'meta': {}, 'predictions': prediction_dicts}, error_messages
 
 
-def _validated_rows_for_quantile_csv(csv_fp, valid_target_names, row_validator, addl_req_cols):
+def _validated_rows_for_quantile_csv(csv_fp, valid_target_names, fips_codes,  row_validator, addl_req_cols):
     """
     `json_io_dict_from_quantile_csv_file()` helper function.
 
     :return: 2-tuple: (validated_rows, error_messages)
     """
-    from cdc_io import CDC_POINT_ROW_TYPE, CDC_OBSERVED_ROW_TYPE, _parse_value  # avoid circular imports
+    from cdc_io import CDC_POINT_ROW_TYPE, CDC_OBSERVED_ROW_TYPE, CDC_QUANTILE_ROW_TYPE, _parse_value  # avoid circular imports
 
 
     error_messages = []  # list of strings. return value. set below if any issues
@@ -175,7 +175,7 @@ def _validated_rows_for_quantile_csv(csv_fp, valid_target_names, row_validator, 
         location, target_name, row_type, quantile, value = [row[column_index_dict[column]] for column in
                                                             REQUIRED_COLUMNS]
         if row_validator:
-            error_messages.extend(row_validator(column_index_dict, row))
+            error_messages.extend(row_validator(column_index_dict, row, fips_codes))
 
         # validate target_name
         if target_name not in valid_target_names:
@@ -185,16 +185,17 @@ def _validated_rows_for_quantile_csv(csv_fp, valid_target_names, row_validator, 
         row_type = row_type.lower()
         is_point_row = (row_type == CDC_POINT_ROW_TYPE.lower())
         is_observed_row = (row_type == CDC_OBSERVED_ROW_TYPE.lower())
+        is_quantile_row = (row_type == CDC_QUANTILE_ROW_TYPE.lower())
         
         if is_observed_row:
             is_point_row = is_observed_row
        # print(is_observed_row)
         quantile = _parse_value(quantile)  # None if not an int, float, or Date. float might be inf or nan
         value = _parse_value(value)  # ""
-        if not (is_point_row or is_observed_row) and ((quantile is None) or
+        if not (is_point_row or is_observed_row) and ((quantile is None)  or
                                    (isinstance(quantile, datetime.date)) or
                                    (not math.isfinite(quantile)) or  # inf, nan
-                                   not (0 <= quantile <= 1)):
+                                   not (0 <= quantile <= 1)) and is_quantile_row:
             error_messages.append(f"entries in the `quantile` column must be an int or float in [0, 1]: "
                                   f"{quantile}. row={row}")
         elif is_point_row and ((value is None) or

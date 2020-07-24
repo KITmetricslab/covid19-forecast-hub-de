@@ -1,9 +1,12 @@
+import os
+import glob
 import pandas as pd
 
 # Load latest file 
-# Download from https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0
+list_of_files = glob.glob('../../data-truth/RKI/raw/*')
+latest_file = max(list_of_files, key=os.path.getctime)
 
-df = pd.read_csv('https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.csv')
+df = pd.read_csv(latest_file, compression='gzip')
 
 # Add column 'DatenstandISO'
 if 'DatenstandISO' not in df.columns:
@@ -40,6 +43,10 @@ df_germany['location_name'] = 'Germany'
 
 # add data for Germany to dataframe with states
 df_cum = pd.concat([df_agg, df_germany]).sort_values(['date', 'location']).reset_index(drop=True)
+
+# save as csv
+current_date = pd.to_datetime('today').date()
+df_cum.to_csv('../../data-truth/RKI/processed/' + str(current_date) + '_RKI_processed.csv', index=False)
 
 # Load Current Dataframe
 df_all = pd.read_csv('../../data-truth/RKI/truth_RKI-Cumulative Deaths_Germany.csv')
