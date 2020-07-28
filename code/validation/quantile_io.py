@@ -36,7 +36,7 @@ REQUIRED_COLUMNS = ('location', 'target', 'type', 'quantile', 'value')
 # json_io_dict_from_quantile_csv_file()
 #
 
-def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, row_validator=None, addl_req_cols=()):
+def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, fips_codes, row_validator=None, addl_req_cols=()):
     """
     Utility that validates and extracts the two types of predictions found in quantile CSV files (PointPredictions and
     QuantileDistributions), returning them as a "JSON IO dict" suitable for loading into the database (see
@@ -66,7 +66,7 @@ def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, row_validato
         if there were errors
     """
     # load and validate the rows (validation step 1/2). error_messages is one of the the return values (filled next)
-    rows, error_messages = _validated_rows_for_quantile_csv(csv_fp, valid_target_names, row_validator, addl_req_cols)
+    rows, error_messages = _validated_rows_for_quantile_csv(csv_fp, valid_target_names, fips_codes, row_validator, addl_req_cols)
 
     if error_messages:
         return None, error_messages  # terminate processing b/c we can't proceed to step 1/2 with invalid rows
@@ -143,7 +143,7 @@ def json_io_dict_from_quantile_csv_file(csv_fp, valid_target_names, row_validato
     return {'meta': {}, 'predictions': prediction_dicts}, error_messages
 
 
-def _validated_rows_for_quantile_csv(csv_fp, valid_target_names, row_validator, addl_req_cols):
+def _validated_rows_for_quantile_csv(csv_fp, valid_target_names, fips_codes,  row_validator, addl_req_cols):
     """
     `json_io_dict_from_quantile_csv_file()` helper function.
 
@@ -175,7 +175,7 @@ def _validated_rows_for_quantile_csv(csv_fp, valid_target_names, row_validator, 
         location, target_name, row_type, quantile, value = [row[column_index_dict[column]] for column in
                                                             REQUIRED_COLUMNS]
         if row_validator:
-            error_messages.extend(row_validator(column_index_dict, row))
+            error_messages.extend(row_validator(column_index_dict, row, fips_codes))
 
         # validate target_name
         if target_name not in valid_target_names:

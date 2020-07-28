@@ -17,7 +17,7 @@ from urllib.request import urlretrieve
 path = str(Path.cwd().parent.parent.joinpath("data-truth", "DIVI", "raw"))
 
 
-url = "https://www.divi.de/divi-intensivregister-tagesreport-archiv-2/divi-intensivregister-tagesreports-csv"
+url = "https://www.divi.de/divi-intensivregister-tagesreport-archiv-csv"
 options = webdriver.ChromeOptions()
 prefs = {'download.default_directory': path}
 options.add_argument('--no-sandbox')
