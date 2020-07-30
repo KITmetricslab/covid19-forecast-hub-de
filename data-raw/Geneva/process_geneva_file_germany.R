@@ -21,7 +21,7 @@ date_from_geneva_filepath <- function(geneva_filepath){
   geneva_filepath <- gsub("ECDC_deaths_predictions_", "", geneva_filepath)
   # for older files:
   geneva_filepath <- gsub("predictions_deaths_", "", geneva_filepath)
-  as.Date(gsub(".csv", "", geneva_filepath))
+  as.Date(gsub("_", "-", gsub(".csv", "", geneva_filepath)))
 }
 
 #' turn Geneva forecast file into quantile-based format
