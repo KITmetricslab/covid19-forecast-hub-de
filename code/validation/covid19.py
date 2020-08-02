@@ -29,6 +29,11 @@ VALID_TARGET_NAMES_ICU = [f"{_} day ahead curr ventilated" for _ in range(-1, 13
                          [f"{_} day ahead curr ICU" for _ in range(-1, 131)] + \
                          [f"{_} wk ahead curr ventilated" for _ in range(-1, 21)] + \
                          [f"{_} wk ahead curr ICU" for _ in range(-1, 21)]
+                         
+VALID_TARGET_NAMES_CASE = [f"{_} day ahead inc case" for _ in range(-1, 131)] + \
+                          [f"{_} day ahead cum case" for _ in range(-1, 131)] + \
+                          [f"{_} wk ahead inc case" for _ in range(-1, 21)] + \
+                          [f"{_} wk ahead cum case" for _ in range(-1, 21)]
 
 
 VALID_QUANTILES = [0.010, 0.025, 0.050, 0.100, 0.150, 0.200, 0.250, 0.300, 0.350, 0.400, 0.450, 0.500, 0.550, 0.600,
@@ -53,6 +58,10 @@ def validate_quantile_csv_file(csv_fp, mode, country):
         # toss json_io_dict:
         if mode == "deaths":
             target_names = VALID_TARGET_NAMES_DEATH
+            
+        elif mode == "case":
+            target_names = VALID_TARGET_NAMES_CASE
+            
         else:
             target_names = VALID_TARGET_NAMES_ICU
         
