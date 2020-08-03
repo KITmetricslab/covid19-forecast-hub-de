@@ -20,7 +20,7 @@ cols = ['bundesland', 'gemeindeschluessel', 'anzahl_meldebereiche',
         'anzahl_standorte', 'betten_frei', 'betten_belegt']
 
 # see: https://www.divi.de/register/tagesreport
-bundesländer = {1: "Schleswig-Holstein State",
+bundeslaender = {1: "Schleswig-Holstein State",
                 2: "Free Hanseatic City of Hamburg",
                 3: "Lower Saxony State",
                 4: "Free Hanseatic City of Bremen",
@@ -96,7 +96,7 @@ for col in outputs:
             continue
 
     df_agg = df_agg.sort_index()
-    df_agg = df_agg.rename(columns=bundesländer, errors="raise")
+    df_agg = df_agg.rename(columns=bundeslaender, errors="raise")
     df_agg = df_agg.unstack().reset_index()
     df_agg = df_agg.rename(columns={"level_1": "date", 0: "value", 
                                     "bundesland": "location_name"})
