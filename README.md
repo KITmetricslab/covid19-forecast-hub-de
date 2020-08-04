@@ -28,6 +28,10 @@ Note that our definition of targets parallels the principles outlined [here](htt
 
 Note that we currently treat the **ECDC data** available [here](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide) as our ground truth for the national level death forecasts. Our R script to compute cumulative deaths can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/data-truth/ECDC/ECDC.R). For deaths at the Bundeland level we extract data from the [RKI/arcgis Dashboard](https://www.arcgis.com/home/item.html?id=f10774f1c63e40168479a1feb6c7ca74) on a daily level. For historical data we use the archive provided by [ard-data](https://github.com/ard-data/2020-rki-archive). The resulting data set on daily reported deaths can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/RKI).
 
+### Cases
+
+We are currently extending our repository can to also accept forecasts for case numbers, see the [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets) for more targets. This is currently only operational for the national level and not yet included in our visualization.
+
 ### Intensive care use
 
 We intend to start covering forecasts for intensive care use due to COVID19 (at the national and Bundesland levels). Details will be provided here soon. Data from the [DIVI Registry](https://www.divi.de/) have been compiled [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/DIVI) and will be used to define prediction targets.
