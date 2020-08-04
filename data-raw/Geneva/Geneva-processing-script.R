@@ -21,12 +21,19 @@ files_to_process <- files_to_process[grepl(".csv", files_to_process) &
                                           grepl("deaths_predictions", files_to_process))]
 forecast_dates <- lapply(files_to_process, date_from_geneva_filepath)
 
+vector_countries <- c("Germany", "Poland")
+vector_fips <- c("GM", "PL")
+
 # proces files:
 for(i in 1:length(files_to_process)) {
-  tmp_dat <- process_geneva_file(files_to_process[i], forecast_date = forecast_dates[[i]])
-  write.csv(tmp_dat,
-            paste0("../../data-processed/Geneva-DeterministicGrowth/", forecast_dates[[i]],
-                   "-Germany-Geneva-DeterministicGrowth.csv"),
-            row.names = FALSE)
+  for(j in seq_along(vector_countries)){
+    tmp_dat <- process_geneva_file(files_to_process[i], forecast_date = forecast_dates[[i]],
+                                      country = vector_countries[j], location = vector_fips[j])
+    write.csv(tmp_dat,
+              paste0("../../data-processed/Geneva-DeterministicGrowth/", forecast_dates[[i]],
+                     "-", vector_countries[j], "-Geneva-DeterministicGrowth.csv"),
+              row.names = FALSE)
+  }
+  cat("processing ", i, "/", length(files_to_process))
 }
 
