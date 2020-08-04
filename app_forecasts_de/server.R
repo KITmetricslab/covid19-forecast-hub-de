@@ -38,7 +38,8 @@ names(locations) <- location_codes$state_name
 # re-order:
 locations <- locations[locations != "GM"]
 locations <- locations[order(names(locations))]
-locations <- c("Germany" = "GM", locations)
+names(locations) <- paste0(".. ", names(locations))
+locations <- c("Germany" = "GM", "Poland" = "PL", locations)
 
 # get names of models which appear in the data:
 models <- sort(as.character(unique(forecasts_to_plot$model)))
@@ -51,12 +52,18 @@ names(cols_models) <- models
 # get truth data:
 dat_truth <- list()
 # ECDC:
-dat_truth$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Cumulative%20Deaths_Germany.csv",
-                           stringsAsFactors = FALSE)
+dat_truth_ECDC_Germany <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Cumulative%20Deaths_Germany.csv",
+         stringsAsFactors = FALSE)
+dat_truth_ECDC_Poland <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/ECDC/truth_ECDC-Cumulative%20Deaths_Poland.csv",
+                                  stringsAsFactors = FALSE)
+dat_truth$ECDC <- rbind(dat_truth_ECDC_Germany, dat_truth_ECDC_Poland)
 dat_truth$ECDC$date <- as.Date(dat_truth$ECDC$date)
 # JHU;
-dat_truth$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Deaths_Germany.csv",
-                          stringsAsFactors = FALSE)
+dat_truth_JHU_Germany <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Deaths_Germany.csv",
+                                  stringsAsFactors = FALSE)
+dat_truth_JHU_Poland <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Deaths_Poland.csv",
+                                  stringsAsFactors = FALSE)
+dat_truth$JHU <- rbind(dat_truth_JHU_Germany, dat_truth_JHU_Poland)
 dat_truth$JHU$date <- as.Date(dat_truth$JHU$date)
 
 # define point shapes for different truth data sources:
