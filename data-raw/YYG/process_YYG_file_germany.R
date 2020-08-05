@@ -23,6 +23,7 @@ date_from_YYG_filepath <- function(YGG_filepath){
 
 process_YYG_file<- function(yyg_filepath, forecast_date, func_country, abbr){
   
+  dat <- NULL
   dat <- read.csv(yyg_filepath)
   dat <- subset(dat, country == func_country)
   
