@@ -14,19 +14,24 @@ date_from_YYG_filepath <- function(YGG_filepath){
 #'
 #' @param yyg_filepath path to a YYG submission file
 #' @param forecast_date the time at which the forecast was issued;
+#' @param country the desired country 
+#' @param abr abbreviation of the country used in location col
 #' @details 
 #' 
 #' 
 #' @return a data.frame in quantile format
 
-process_YYG_file<- function(yyg_filepath, forecast_date){
+process_YYG_file<- function(yyg_filepath, forecast_date, func_country, abbr){
   
   dat <- read.csv(yyg_filepath)
-  dat <- subset(dat, country == "Germany")
-
+  dat <- subset(dat, country == func_country)
+  
+  if (nrow(dat) == 0){
+    return (NULL)
+  }
   dat$date <- as.Date(dat$date)
   dat$location <- NA
-  dat$location <- "GM"
+  dat$location <- abbr
   dat$country <- NULL
   
   # Process predictions
@@ -123,7 +128,7 @@ process_YYG_file<- function(yyg_filepath, forecast_date){
   
   # add required ones:
   daily_dat$forecast_date <- forecast_date
-  daily_dat$location_name <- "Germany"
+  daily_dat$location_name <- func_country
   colnames(daily_dat)[colnames(daily_dat) == "date"] <- "target_end_date"
   
   daily_dat <- daily_dat[, c("forecast_date", "target", "target_end_date", "location",
