@@ -18,7 +18,7 @@ source("../../code/processing-fxns/get_next_saturday.R")
 #' @details designed to process either an incidence or cumulative death forecast
 #'
 #' @return a data.frame in quantile format
-process_global_lanl_file <- function(lanl_filepath, 
+process_global_lanl_file <- function(lanl_filepath, country, abbr,
                               forecast_dates_file = "../../template/covid19-death-forecast-dates.csv") {
     require(tidyverse)
     require(MMWRweek)
@@ -47,13 +47,17 @@ process_global_lanl_file <- function(lanl_filepath,
     dat_long <- tidyr::pivot_longer(dat, cols=starts_with("q."), 
                              names_to = "q", 
                              values_to = "cum_deaths") %>%
-        dplyr::filter(dates > forecast_date, countries == "Germany") %>%
+        dplyr::filter(dates > forecast_date, countries == country) %>%
         dplyr::mutate(quantile = as.numeric(sub("q", "0", q)), type="quantile") %>%
         dplyr::select(countries, type, quantile, cum_deaths, dates) %>%
         dplyr::rename(
             location = countries, 
             value = cum_deaths,
             target_end_date = dates)
+    
+    if (ncol(dat_long)==0){
+      return (NULL)
+    }
     
     ## create tables corresponding to the days for each of the targets
     n_day_aheads <- length(unique(dat_long$target_end_date))
@@ -100,7 +104,7 @@ process_global_lanl_file <- function(lanl_filepath,
     ## add ground_truth
     ## ------------------
     dat_past <- subset(dat, dates <= forecast_date)
-    dat_past <- subset(dat_past, countries == "Germany")
+    dat_past <- subset(dat_past, countries == country)
     
     value_col <- ifelse(inc_or_cum == "cum", "truth_deaths", "q.50")
     
@@ -170,10 +174,10 @@ process_global_lanl_file <- function(lanl_filepath,
     
     # Add country
     all_dat$location <- NA
-    all_dat$location <- "GM"
+    all_dat$location <- abbr
     
     all_dat$location_name <- NA
-    all_dat$location_name <- "Germany"
+    all_dat$location_name <- country
     
     all_dat <- subset(all_dat, target %in% c(paste((-1):130, "day ahead cum death"),
                                              paste((-1):130, "day ahead inc death"),
