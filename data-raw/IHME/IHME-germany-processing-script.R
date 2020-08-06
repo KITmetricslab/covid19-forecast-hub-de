@@ -65,9 +65,9 @@ for(country in c("Germany","Poland"))
     write_csv(
       formatted_file,
       path = paste0(
-        "../../data-processed/IHME-Hybrid-SEIR/",
+        "../../data-processed/IHME-CurveFit/",
         date,
-        "-",country,"-IHME-Hybrid-SEIR.csv"
+        "-",country,"-IHME-CurveFit.csv"
       )
     )
     print(paste0("Finished with date ",date," in country ", country) )
