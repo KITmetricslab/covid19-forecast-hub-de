@@ -2,7 +2,7 @@
 
 # validate file names
 echo "TESTING FILENAMES..."
-Rscript code/validation/validate_filenames.R
+python3 code/validation/validate_filenames.py
 
 # test covid forecast submission formatting
 echo "TESTING SUBMISSIONS..."

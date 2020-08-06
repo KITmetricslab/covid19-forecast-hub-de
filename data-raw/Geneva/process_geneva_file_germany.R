@@ -21,7 +21,7 @@ date_from_geneva_filepath <- function(geneva_filepath){
   geneva_filepath <- gsub("ECDC_deaths_predictions_", "", geneva_filepath)
   # for older files:
   geneva_filepath <- gsub("predictions_deaths_", "", geneva_filepath)
-  as.Date(gsub(".csv", "", geneva_filepath))
+  as.Date(gsub("_", "-", gsub(".csv", "", geneva_filepath)))
 }
 
 #' turn Geneva forecast file into quantile-based format
@@ -29,13 +29,15 @@ date_from_geneva_filepath <- function(geneva_filepath){
 #' @param geneva_filepath path to a Geneva submission file
 #' @param forecast_date the time at which the forecast was issued; is internally compared
 #'  to date indicated in file name
+#' @param country The name of the country in order to subset the Geneva data frame
+#' @param location the FIPS code to be used for the location variable
 #'
 #' @details typically timezero will be a Monday and the 1-week ahead
 #' forecast will be for the EW of the Monday. 1-day-ahead would be Tuesday.
 #'
 #' @return a data.frame in quantile format
 
-process_geneva_file <- function(geneva_filepath, forecast_date){
+process_geneva_file <- function(geneva_filepath, forecast_date, country = "Germany", location = "GM"){
 
   # extract Geneva forecast date from path:
   check_forecast_date <- date_from_geneva_filepath(geneva_filepath)
@@ -49,11 +51,11 @@ process_geneva_file <- function(geneva_filepath, forecast_date){
   dat <- read.csv(geneva_filepath)
 
   # restrict to US, format:
-  dat <- subset(dat, country == "Germany")
+  dat <- dat[dat$country == country, ]
   dat$date <- as.Date(dat$date)
   # dat <- subset(dat, date > forecast_date) # restrict to timepoints after forecast date
-  dat$location <- "GM"
-  dat$location_name <- "Germany"
+  dat$location <- location
+  dat$location_name <- country
   dat$country <- NULL
   dat$X <- dat$observed <- NULL
 

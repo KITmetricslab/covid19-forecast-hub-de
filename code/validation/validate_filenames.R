@@ -3,11 +3,26 @@
 check_forecast_name_path <- function(forecast_file) {
     forecast_file_path <- basename(dirname(forecast_file))
     forecast_file_name_base <-  substring(basename(forecast_file), 
-                                        20,
+                                        12,
                                         nchar(basename(forecast_file)) - 4)
+    
+    countries <- list("Germany", "Poland")
+    
+    for (country in countries){
+        if (grepl(country, forecast_file_name_base, fixed=TRUE)){
+            forecast_file_name_base <- substr(forecast_file_name_base,
+                                              nchar(country)+2, 
+                                              nchar(forecast_file_name_base))
+            print(forecast_file_name_base)
+        }
+    }
+    
+    
     
     # -ICU is allowed aswell
     forecast_file_name <- gsub("-ICU", "", forecast_file_name_base)
+    forecast_file_name <- gsub("-case", "", forecast_file_name)
+    
     if (forecast_file_path != forecast_file_name){
         error_message <- paste("\nERROR: Forecast file name: ",
                                basename(forecast_file),

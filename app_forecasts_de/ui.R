@@ -19,17 +19,22 @@ dashboardPage(
 
       # start tab:
       tabItem(tabName = "forecasts",
-              titlePanel("Interactive visualization of forecasts of COVID19 deaths  in Germany (in development)"),
+              titlePanel("Interactive visualization of forecasts of COVID19 deaths  in Germany"),
               # input elements generated on server side:
-              uiOutput("inp_select_date"),
+              div(style="display:inline-block", uiOutput("inp_select_date")),
+              div(style="display:inline-block", selectInput("select_target", label = "Select target:",
+                                                            choices = list("cumulative deaths" = "cum death",
+                                                                           "incident deaths" = "inc death"))),
+              div(style="display:inline-block", uiOutput("inp_select_location")),
               uiOutput("inp_select_model"),
-              uiOutput("inp_select_location"),
+
+              checkboxInput("show_pi", label = "Show 95% prediction interval where available", value = TRUE),
 
               checkboxGroupInput("select_truths", "Select truth data to display:",
                                  choiceNames = c("ECDC/RKI", "JHU"),
                                  choiceValues = c("ECDC", "JHU"),
                                  selected = "ECDC", inline = TRUE),
-              checkboxInput("show_pi", label = "Show 95% prediction interval where available", value = TRUE),
+
               checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
               tags$b("Draw rectangle to zoom in, double click to zoom out. Hover over grey line to display numbers (point forecasts and observed)."),
               h3(""),

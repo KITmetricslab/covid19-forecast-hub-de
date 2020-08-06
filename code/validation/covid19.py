@@ -10,10 +10,13 @@ from quantile_io import json_io_dict_from_quantile_csv_file
 # functions specific to the COVID19 project
 #
 
-# from https://en.wikipedia.org/wiki/List_of_FIPS_region_codes_(G%E2%80%93I)#GM:_Germany:
-FIPS_STATE_CODES = ["GM", "GM01", "GM02", "GM03", "GM04", "GM05", "GM06",
-                    "GM07", "GM08", "GM09", "GM10", "GM11", "GM12", "GM13",
-                    "GM14", "GM15", "GM16"]  # 'GM' is extra
+FIPS_CODES =  {"Germany": ["GM", "GM01", "GM02", "GM03", "GM04", "GM05", "GM06",
+                            "GM07", "GM08", "GM09", "GM10", "GM11", "GM12",
+                            "GM13", "GM14", "GM15", "GM16"],
+               "Poland": ["PL", "PL72", "PL73", "PL74", "PL75", "PL76", "PL77",
+                           "PL78", "PL79","PL80", "PL81", "PL82", "PL83", 
+                           "PL84", "PL85", "PL86", "PL87"]}
+
 
 # b/c there are so many possible targets, we generate using a range
 VALID_TARGET_NAMES_DEATH = [f"{_} day ahead inc death" for _ in range(-1, 131)] + \
@@ -26,6 +29,11 @@ VALID_TARGET_NAMES_ICU = [f"{_} day ahead curr ventilated" for _ in range(-1, 13
                          [f"{_} day ahead curr ICU" for _ in range(-1, 131)] + \
                          [f"{_} wk ahead curr ventilated" for _ in range(-1, 21)] + \
                          [f"{_} wk ahead curr ICU" for _ in range(-1, 21)]
+                         
+VALID_TARGET_NAMES_CASE = [f"{_} day ahead inc case" for _ in range(-1, 131)] + \
+                          [f"{_} day ahead cum case" for _ in range(-1, 131)] + \
+                          [f"{_} wk ahead inc case" for _ in range(-1, 21)] + \
+                          [f"{_} wk ahead cum case" for _ in range(-1, 21)]
 
 
 VALID_QUANTILES = [0.010, 0.025, 0.050, 0.100, 0.150, 0.200, 0.250, 0.300, 0.350, 0.400, 0.450, 0.500, 0.550, 0.600,
@@ -36,7 +44,7 @@ VALID_QUANTILES = [0.010, 0.025, 0.050, 0.100, 0.150, 0.200, 0.250, 0.300, 0.350
 # validate_quantile_csv_file()
 #
 
-def validate_quantile_csv_file(csv_fp, mode):
+def validate_quantile_csv_file(csv_fp, mode, country):
     """
     A simple wrapper of `json_io_dict_from_quantile_csv_file()` that tosses the json_io_dict and just prints validation
     error_messages.
@@ -49,12 +57,19 @@ def validate_quantile_csv_file(csv_fp, mode):
     with open(quantile_csv_file) as cdc_csv_fp:
         # toss json_io_dict:
         if mode == "deaths":
-            _, error_messages = json_io_dict_from_quantile_csv_file(cdc_csv_fp, VALID_TARGET_NAMES_DEATH, covid19_row_validator,
-                                                                    ['forecast_date', 'target_end_date'])
-        else:
-            _, error_messages = json_io_dict_from_quantile_csv_file(cdc_csv_fp, VALID_TARGET_NAMES_ICU, covid19_row_validator,
-                                                                    ['forecast_date', 'target_end_date'])
+            target_names = VALID_TARGET_NAMES_DEATH
             
+        elif mode == "case":
+            target_names = VALID_TARGET_NAMES_CASE
+            
+        else:
+            target_names = VALID_TARGET_NAMES_ICU
+        
+        fips_codes = FIPS_CODES[country]
+        
+            
+        _, error_messages = json_io_dict_from_quantile_csv_file(cdc_csv_fp, target_names, fips_codes, covid19_row_validator,
+                                                                    ['forecast_date', 'target_end_date'])    
         
         if error_messages:
             return error_messages
@@ -66,7 +81,7 @@ def validate_quantile_csv_file(csv_fp, mode):
 # `json_io_dict_from_quantile_csv_file()` row validator
 #
 
-def covid19_row_validator(column_index_dict, row):
+def covid19_row_validator(column_index_dict, row, fips_codes):
     """
     Does COVID19-specific row validation. Notes:
 
@@ -80,7 +95,7 @@ def covid19_row_validator(column_index_dict, row):
 
     # validate location (FIPS code)
     location = row[column_index_dict['location']]
-    if location not in FIPS_STATE_CODES:
+    if location not in fips_codes:
         error_messages.append(f"invalid FIPS location: {location!r}. row={row}")
         
     row_type = row[column_index_dict['type']]     
