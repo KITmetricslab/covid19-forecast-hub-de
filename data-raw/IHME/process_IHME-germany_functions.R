@@ -13,17 +13,18 @@
 #' Check when the last non-zero forecast is equal in mean, upper and lower quantil
 #'
 #' @param path the forecast file path
+#' @param country country you want to check the forecast date for
 #' @return vector with reported forecast date and observed forecast date, i.e. last observed value
 #'
 
-get_forecast_date<-function(path) {
+get_forecast_date<-function(path,country="Germany") {
   
-  data <- read.csv(path, stringsAsFactors = FALSE) %>% filter(location_name=="Germany") %>%
+  data <- data.table::fread(path, stringsAsFactors = FALSE,data.table=FALSE) %>% filter(location_name==country) %>%
     mutate(date=as.Date(date))
   given_forecast_date <- get_date(path)
   is_equal_lmu<-data$deaths_mean==data$deaths_upper & data$deaths_lower==data$deaths_mean
   is_not_zero<-data$deaths_mean!=0
-  real_date<-max(data$date[is_equal_lmu & is_not_zero])
+  real_date<-max(data$date[is_equal_lmu & is_not_zero],na.rm = TRUE)
   
   return(c(report_date=given_forecast_date,Real_forecast_date=real_date))
   
@@ -62,17 +63,24 @@ coerceable_to_date <- function(x) {
 #' @param path the forecast file path
 #' @param forecast_date the real forecast date as extracted from file, i.e. last date where observations, not projections are available
 #' @param submission_date the date that is indicated on the file, i.e. when the forecasts where submitted, important for target in week ahead forecasts
-#' @param all_states Should all states be forecasted or just on Federal Level, default=FALSE, not implemented yet
+#' @param country the country you want the forecast for, currently supported: Germany and Poland
 #' @return long-format data_frame with quantiles
 #'
-make_qntl_dat <- function(path,forecast_date,submission_date, all_states = FALSE) {
+make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany") {
   require(tidyverse)
   require(MMWRweek)
   require(lubridate)
+  require(data.table)
   
   forecast_date<-as.Date(forecast_date)
   submission_date<-as.Date(submission_date)
-  data <- read.csv(path, stringsAsFactors = FALSE)
+  #use data.table package, faster to read in
+  #leave data type as data.frame for compatibility with tidyverse
+  #use utf-8 to keep Umlaut-characters
+  data <-fread(path, stringsAsFactors = FALSE,data.table=FALSE,encoding="UTF-8")
+  #change ü to u
+  data$location_name<-gsub("ü","u",data$location_name)
+ 
   #forecast date is given from function now
   #forecast_date <- get_date(path)
   
@@ -102,8 +110,10 @@ make_qntl_dat <- function(path,forecast_date,submission_date, all_states = FALSE
   #  dplyr::select(-names(data)[which(grepl("location",names(data)))])#[-which(names(data)[which(grepl("location",names(data))==TRUE)]=="location")])
   
   ## read state code
+  state_name<-ifelse(country=="Germany","germany","poland")
+  code_fips<-paste0("../../template/state_codes_",state_name,".csv")
   state_fips_codes <-
-    read.csv("../../template/state_codes_germany.csv",
+    fread(code_fips,data.table = FALSE,encoding = "UTF-8",
              stringsAsFactors = FALSE)
   
   ## code for incident deaths
