@@ -15,8 +15,6 @@
 
 # Warnings can be ignored
 
-setwd("C:\\Users\\jakob\\Documents\\forecast_hub\\covid19-forecast-hub-de\\data-raw\\LANL")
-
 library(tidyverse)
 
 Sys.setlocale("LC_TIME", "C")
