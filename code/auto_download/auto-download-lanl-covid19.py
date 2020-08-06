@@ -41,13 +41,7 @@ def download_covid_zip_files(path):
             
             cols = row.find_elements(By.TAG_NAME, "td")
             
-            # second column
-            col1 = cols[1]
-            
-            # 4th column
-            col2 = cols[3]
-            
-            cols = [col1, col2]
+            cols = cols[0:4]
             for col in cols:
                 
                 # extract download path
@@ -61,7 +55,7 @@ def download_covid_zip_files(path):
                 else:
                     # download file
                     driver.get(ele.get_attribute('href'))
-                    time.sleep(3)
+                    time.sleep(4)
     finally:
         driver.quit()
 
