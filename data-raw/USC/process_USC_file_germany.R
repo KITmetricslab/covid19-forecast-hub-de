@@ -6,7 +6,7 @@
 #################################################################################
 
 ## USC death data functions
-## Johannes Bracher, Jakob Ketterer
+## Jakob Ketterer
 ## July 2020
 
 # convert colnames to forecast dates

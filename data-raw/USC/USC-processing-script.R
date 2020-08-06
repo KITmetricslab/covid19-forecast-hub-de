@@ -6,11 +6,8 @@
 #################################################################################
 
 ## script for processing USC data
-## Johannes Bracher
-## April 2020
-
-# optional working dir setting
-setwd("./data-raw/USC/")
+## Jakob Ketterer
+## July 2020
 
 source("process_USC_file_germany.R")
 # make sure that English names of days and months are used
