@@ -9,6 +9,10 @@
 ## Jannik Deuschel
 ## April 2020
 
+
+# Warnings can be ignored
+
+
 library(tidyverse)
 
 Sys.setlocale("LC_TIME", "C")
@@ -19,22 +23,30 @@ lanl_filenames <- list.files(".", pattern=".csv", full.names=FALSE)
 dates <- unlist(lapply(lanl_filenames, FUN = function(x) substr(basename(x), 0, 10)))
 #most_recent_date <- max(as.Date(dates))
 
+countries = list(c("Germany", "GM"), c("Poland", "PL"))
+
 for(dat in dates){
   cum_filename <- paste0(dat, "_deaths_quantiles_global_website.csv")
   inc_filename <- paste0(dat, "_deaths_incidence_quantiles_global_website.csv")
-  print(cum_filename)
-
+  
+  for (combination in countries){
   ### 
-  ger_cum_filename <- paste0(dat, "_deaths_quantiles_global_website.csv")
-  ger_inc_filename <- paste0(dat, "_deaths_incidence_quantiles_global_website.csv")
-
-  ger_cum <- process_global_lanl_file(ger_cum_filename)
-  ger_inc <- process_global_lanl_file(ger_inc_filename)
-
-  total <- rbind(ger_cum, ger_inc)
-
-  write_csv(total, 
-            paste0("../../data-processed/LANL-GrowthRate/", 
-                            dat, 
-                            "-Germany-LANL-GrowthRate.csv"))
+    ger_cum_filename <- paste0(dat, "_deaths_quantiles_global_website.csv")
+    ger_inc_filename <- paste0(dat, "_deaths_incidence_quantiles_global_website.csv")
+  
+    ger_cum <- process_global_lanl_file(ger_cum_filename, country=combination[1],
+                                        abbr=combination[2])
+    ger_inc <- process_global_lanl_file(ger_inc_filename, country=combination[1],
+                                        abbr=combination[2])
+    
+    if (!(is.null(ger_cum))){
+  
+      total <- rbind(ger_cum, ger_inc)
+    
+      write_csv(total, 
+                paste0("../../data-processed/LANL-GrowthRate/", 
+                                dat, 
+                                "-", combination[1], "-LANL-GrowthRate.csv"))
+    }
+  }
 }
