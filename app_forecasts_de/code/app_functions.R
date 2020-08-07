@@ -269,7 +269,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
   # fresh plot:
   empty_plot(start = start, target = target, end = end, ylim = ylim)
   # highlight the forecast date:
-  highlight_timezero(timezero)
+  highlight_timezero(timezero, ylim = ylim + c(-1, 1)*diff(ylim))
   abline(v = highlight_target_end_date)
 
   # add forecast bands:

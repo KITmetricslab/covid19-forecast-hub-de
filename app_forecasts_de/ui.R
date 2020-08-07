@@ -24,7 +24,9 @@ dashboardPage(
               div(style="display:inline-block", uiOutput("inp_select_date")),
               div(style="display:inline-block", selectInput("select_target", label = "Select target:",
                                                             choices = list("cumulative deaths" = "cum death",
-                                                                           "incident deaths" = "inc death"))),
+                                                                           "incident deaths" = "inc death",
+                                                                           "cumulative cases" = "cum case",
+                                                                           "incident cases" = "inc case"))),
               div(style="display:inline-block", uiOutput("inp_select_location")),
               uiOutput("inp_select_model"),
 
