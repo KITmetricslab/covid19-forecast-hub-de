@@ -31,6 +31,8 @@ for(i in 1:length(files_to_process)) {
   
   for (pair in countries){
 
+    # print(forecast_dates[[i]])
+
     processed_data <- process_YYG_file(files_to_process[i], 
                                 forecast_date = forecast_dates[[i]],
                                 func_country=pair[1],
