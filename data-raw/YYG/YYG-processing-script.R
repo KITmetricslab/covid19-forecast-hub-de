@@ -11,7 +11,6 @@
 ## Jakob Ketterer
 ## August 2020
 ## Support for case forecasts
-
 source("process_YYG_file_germany.R")
 # make sure that English names of days and months are used
 Sys.setlocale("LC_TIME", "C")
@@ -32,8 +31,6 @@ for(i in 1:length(files_to_process)) {
   
   for (pair in countries){
 
-#     print(forecast_dates[[i]])
-
     processed_data <- process_YYG_file(files_to_process[i], 
                                 forecast_date = forecast_dates[[i]],
                                 func_country=pair[1],
@@ -47,13 +44,17 @@ for(i in 1:length(files_to_process)) {
               row.names = FALSE)
     }
     
-    if (!is.null(processed_data$cases)) {
-       # write case forecasts
-       write.csv(processed_data$cases,
-                     paste0("../../data-processed/YYG-ParamSearch/", forecast_dates[[i]],
-                            "-", pair[1],"-YYG-ParamSearch-case.csv"),
-                     row.names = FALSE)
-    }
+    ########################
+    # NOT IN USE: case forecasts include estimates of unreported cases and don't comply with our standards!
+    ########################
+
+    # if (!is.null(processed_data$cases)) {
+    #    # write case forecasts
+    #    write.csv(processed_data$cases,
+    #                  paste0("../../data-processed/YYG-ParamSearch/", forecast_dates[[i]],
+    #                         "-", pair[1],"-YYG-ParamSearch-case.csv"),
+    #                  row.names = FALSE)
+    # }
   }
 }
 
