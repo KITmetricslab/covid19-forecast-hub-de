@@ -57,10 +57,10 @@ for(country in c("Germany","Poland"))
   for (i in 1:length(filepaths)) {
     #changed submission date to real forecast date, to change back, change to [i,1] in submission_date=forecast_dates[i,2]
     formatted_file <- make_qntl_dat(path=filepaths[i],forecast_date=forecast_dates[i,2],
-                                    submission_date=forecast_dates[i,2],country=country) 
+                                    submission_date=forecast_dates[i,1],country=country) 
     
-    #date <- get_date(filepaths[i])
-    date<-forecast_dates[i,2]
+    date <- get_date(filepaths[i])
+    #date<-forecast_dates[i,2]
     
     write_csv(
       formatted_file,
