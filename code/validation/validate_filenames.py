@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 
-p = Path('../../data-processed/')
+p = Path('./data-processed/')
 
 # all folders in data-processed
 folders = [f for f in p.iterdir()]

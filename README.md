@@ -28,6 +28,10 @@ Note that our definition of targets parallels the principles outlined [here](htt
 
 Note that we currently treat the **ECDC data** available [here](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide) as our ground truth for the national level death forecasts. Our R script to compute cumulative deaths can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/data-truth/ECDC/ECDC.R). For deaths at the Bundeland level we extract data from the [RKI/arcgis Dashboard](https://www.arcgis.com/home/item.html?id=f10774f1c63e40168479a1feb6c7ca74) on a daily level. For historical data we use the archive provided by [ard-data](https://github.com/ard-data/2020-rki-archive). The resulting data set on daily reported deaths can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/RKI).
 
+### Cases
+
+We are currently extending our repository can to also accept forecasts for case numbers, see the [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets) for more targets. This is currently only operational for the national level and not yet included in our visualization.
+
 ### Intensive care use
 
 We intend to start covering forecasts for intensive care use due to COVID19 (at the national and Bundesland levels). Details will be provided here soon. Data from the [DIVI Registry](https://www.divi.de/) have been compiled [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/DIVI) and will be used to define prediction targets.
@@ -78,14 +82,15 @@ Details can be found in the respective README files in the subfolders of `data-t
 Currently we assemble forecasts from the following teams. *Note that not all teams are using the same ground truth data.* (used truth data source and forecast reuse license in brackets):
 
 - [Frankfurt Institute for Advanced Studies & Forschungszentrum Jülich](https://www.medrxiv.org/content/10.1101/2020.04.18.20069955v1)(ECDC; no license specified)
-- [IHME](https://covid19.healthdata.org/united-states-of-america) (unclear; CC-AT-NC4.0) *Note that we are currently still facing some difficulties in the processing of the IHME files.*
-- [KIT](https://github.com/KITmetricslab/KIT-baseline) (ECDC; MIT) *This is a simple baseline model run by the Forecast Hub Team*
+- [IHME](https://covid19.healthdata.org/united-states-of-america) (JHU; CC-AT-NC4.0)
+- [KIT](https://github.com/KITmetricslab/KIT-baseline) (ECDC; MIT) *This is a simple baseline model run by the Forecast Hub Team. Part of these forecasts were created retrospectively, but using only data available at the respective forecast date.*
 - [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)
 - [Imperial](https://github.com/mrc-ide/covid19-forecasts-orderly) (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
 - [Johannes Gutenberg University Mainz / University of Hamburg](https://github.com/QEDHamburg/covid19) (ECDC; MIT)
 - [MIT](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
 - [University of Leipzig IMISE/GenStat](https://github.com/holgerman/covid19-forecast-hub-de) (ECDC; none given)
+- [University of Southern California Data Science Lab](https://scc-usc.github.io/ReCOVER-COVID-19)(JHU; MIT) (MIT)
 - [YYG](http://covid19-projections.com/) (JHU; MIT)
 
 ## Forecast evaluation and ensemble building

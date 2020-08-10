@@ -30,33 +30,32 @@ def download_covid_zip_files(path):
     driver = webdriver.Chrome(ChromeDriverManager().install(),
                               chrome_options=options)
     driver.get(url)
+    time.sleep(3)
     try:
         # Get Global data
         element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "global-model-outputs-links")))
         rows = element.find_elements(By.TAG_NAME, "tr")
         # Get the columns (all the column 2)
-        
+        time.sleep(3)
         for row in rows[1:]:
             
             cols = row.find_elements(By.TAG_NAME, "td")
             
-            # second column
-            col1 = cols[1]
-            
-            # 4th column
-            col2 = cols[3]
-            
-            cols = [col1, col2]
+            cols = cols[0:4]
             for col in cols:
+                
+                # extract download path
                 ele = col.find_elements(By.TAG_NAME, "a")[0]
                 name = ele.get_attribute('href').split('/')[-1]
                 filepath = path + '/' + name
                 print(filepath)
+                # check if already downloaded
                 if os.path.exists(filepath):
                     continue
                 else:
+                    # download file
                     driver.get(ele.get_attribute('href'))
-                    time.sleep(3)
+                    time.sleep(4)
     finally:
         driver.quit()
 

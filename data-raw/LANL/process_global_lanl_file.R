@@ -9,6 +9,10 @@
 ## Jannik Deuschel
 ## April 2020
 
+## support for case forecasts
+## Jakob Ketterer
+## August 2020
+
 source("../../code/processing-fxns/get_next_saturday.R")
 
 #' turn LANL forecast file into quantile-based format
@@ -18,50 +22,71 @@ source("../../code/processing-fxns/get_next_saturday.R")
 #' @details designed to process either an incidence or cumulative death forecast
 #'
 #' @return a data.frame in quantile format
-process_global_lanl_file <- function(lanl_filepath, 
+process_global_lanl_file <- function(lanl_filepath, country, abbr,
                               forecast_dates_file = "../../template/covid19-death-forecast-dates.csv") {
     require(tidyverse)
     require(MMWRweek)
     require(lubridate)
-  
-    if(!grepl("deaths", lanl_filepath)) 
-      stop("check to make sure this is a deaths file")
+    
+    ## check this is an deaths file or not
+    death_or_case <- ifelse(grepl("deaths", basename(lanl_filepath)), "death", "case") 
 
     ## check this is an incident deaths file or not
-    inc_or_cum <- ifelse(grepl("incidence", basename(lanl_filepath)),
-        "inc", "cum")
+    inc_or_cum <- ifelse(grepl("incidence", basename(lanl_filepath)), "inc", "cum")
     
     ## read in forecast dates
     fcast_dates <- read_csv(forecast_dates_file)
     timezero <- as.Date(substr(basename(lanl_filepath), 0, 10))
     
     ## read in data
-    dat <- read_csv(lanl_filepath)
-    forecast_date <- unique(dat$fcst_date)
+    if (file.exists(lanl_filepath)){
+        dat <- read_csv(lanl_filepath)
+        forecast_date <- unique(dat$fcst_date)
+    } else {
+        return (NULL)
+    }
     
     if(forecast_date != timezero)
         stop("timezero in the filename is not equal to the forecast date in the data")
     
+
     
     ## put into long format
-    dat_long <- tidyr::pivot_longer(dat, cols=starts_with("q."), 
-                             names_to = "q", 
-                             values_to = "cum_deaths") %>%
-        dplyr::filter(dates > forecast_date, countries == "Germany") %>%
+    if (death_or_case == "death"){
+        dat_long <- tidyr::pivot_longer(dat, cols=starts_with("q."), 
+                                names_to = "q", 
+                                values_to = "cum_deaths") %>%
+        dplyr::filter(dates > forecast_date, countries == country) %>%
         dplyr::mutate(quantile = as.numeric(sub("q", "0", q)), type="quantile") %>%
         dplyr::select(countries, type, quantile, cum_deaths, dates) %>%
         dplyr::rename(
             location = countries, 
             value = cum_deaths,
             target_end_date = dates)
+    } else if (death_or_case == "case"){
+        dat_long <- tidyr::pivot_longer(dat, cols=starts_with("q."), 
+                             names_to = "q", 
+                             values_to = "cum_cases") %>%
+        dplyr::filter(dates > forecast_date, countries == country) %>%
+        dplyr::mutate(quantile = as.numeric(sub("q", "0", q)), type="quantile") %>%
+        dplyr::select(countries, type, quantile, cum_cases, dates) %>%
+        dplyr::rename(
+            location = countries, 
+            value = cum_cases,
+            target_end_date = dates)
+    }
+
+    if (ncol(dat_long)==0){
+      return (NULL)
+    }
     
     ## create tables corresponding to the days for each of the targets
     n_day_aheads <- length(unique(dat_long$target_end_date))
     n_week_aheads <- sum(wday(unique(dat_long$target_end_date))==7)
-        
+    
     day_aheads <- tibble(
-        target = paste(1:n_day_aheads, "day ahead", inc_or_cum, "death"), 
-        target_end_date = forecast_date+1:n_day_aheads)
+            target = paste(1:n_day_aheads, "day ahead", inc_or_cum, death_or_case), 
+            target_end_date = forecast_date+1:n_day_aheads)
 
     ## merge so targets are aligned with dates
     fcast_days <- inner_join(day_aheads, dat_long) 
@@ -73,13 +98,13 @@ process_global_lanl_file <- function(lanl_filepath,
         if(wday(forecast_date) <= 2 ) { ## sunday = 1, ..., saturday = 7
             ## if timezero is Sun or Mon, then the current epiweek ending on Saturday is the "1 week-ahead"
             week_aheads <- tibble(
-                target = paste(1:n_week_aheads, "wk ahead cum death"),
+                target = paste(1:n_week_aheads, "wk ahead cum", death_or_case),
                 target_end_date = get_next_saturday(forecast_date+seq(0, by=7, length.out = n_week_aheads))
             )
         } else {
             ## if timezero is after Monday, then the next epiweek is "1 week-ahead"
             week_aheads <- tibble(
-                target = paste(1:n_week_aheads, "wk ahead cum death"), 
+                target = paste(1:n_week_aheads, "wk ahead cum", death_or_case), 
                 target_end_date = get_next_saturday(forecast_date+seq(7, by=7, length.out = n_week_aheads))
             )
         }
@@ -100,14 +125,14 @@ process_global_lanl_file <- function(lanl_filepath,
     ## add ground_truth
     ## ------------------
     dat_past <- subset(dat, dates <= forecast_date)
-    dat_past <- subset(dat_past, countries == "Germany")
+    dat_past <- subset(dat_past, countries == country)
     
-    value_col <- ifelse(inc_or_cum == "cum", "truth_deaths", "q.50")
-    
+    truth_col <- ifelse (death_or_case == "death", "truth_deaths", "truth_confirmed")
+    value_col <- ifelse(inc_or_cum == "cum", truth_col, "q.50")
     
     dat_past <- reshape(dat_past, direction = "long", 
                         varying = list(c(value_col)),
-                        times = c(paste("day ahead",  inc_or_cum ,"death", sep=" ")))
+                        times = c(paste("day ahead",  inc_or_cum, death_or_case)))
     
     # Add and rename columns
     dat_past$quantile <- NA
@@ -148,7 +173,7 @@ process_global_lanl_file <- function(lanl_filepath,
     if(max(dat_past$target_end_date) > forecast_1_wk_ahead_end - 14){
       ends_weekly_forecasts <- data.frame(end = seq(from = forecast_1_wk_ahead_end - 14,
                                                     by = 7, to = max(dat_past$target_end_date)))
-      ends_weekly_forecasts$target <- paste((-1):(nrow(ends_weekly_forecasts) -2), "wk ahead cum death")
+      ends_weekly_forecasts$target <- paste((-1):(nrow(ends_weekly_forecasts) -2), "wk ahead cum", death_or_case)
       # restrict to respective cumulative forecasts:
       weekly_dat <- subset(dat_past, target_end_date %in% ends_weekly_forecasts$end &
                              grepl("cum", dat_past$target))
@@ -170,14 +195,14 @@ process_global_lanl_file <- function(lanl_filepath,
     
     # Add country
     all_dat$location <- NA
-    all_dat$location <- "GM"
+    all_dat$location <- abbr
     
     all_dat$location_name <- NA
-    all_dat$location_name <- "Germany"
+    all_dat$location_name <- country
     
-    all_dat <- subset(all_dat, target %in% c(paste((-1):130, "day ahead cum death"),
-                                             paste((-1):130, "day ahead inc death"),
-                                             paste((-1):20, "wk ahead cum death")))
+    all_dat <- subset(all_dat, target %in% c(paste((-1):130, "day ahead cum", death_or_case),
+                                             paste((-1):130, "day ahead inc", death_or_case),
+                                             paste((-1):20, "wk ahead cum", death_or_case)))
     
     return(all_dat)
 }

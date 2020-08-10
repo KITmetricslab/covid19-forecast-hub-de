@@ -1,3 +1,53 @@
+# load all truth data from one source:
+get_truths <- function(file_cum_death, file_inc_death, file_cum_case, file_inc_case){
+  cum_death <- read.csv(file_cum_death,
+                        stringsAsFactors = FALSE, colClasses = list(date = "Date"))
+  colnames(cum_death)[colnames(cum_death) == "value"] <- "cum death"
+  cum_death$epi_week <- MMWRweek::MMWRweek(cum_death$date)$MMWRweek
+  cum_death$epi_year <- MMWRweek::MMWRweek(cum_death$date)$MMWRyear
+  cum_death <- subset(cum_death, weekdays(date) == "Saturday")
+
+  inc_death <- read.csv(file_inc_death,
+                        stringsAsFactors = FALSE, colClasses = list(date = "Date"))
+  colnames(inc_death)[colnames(inc_death) == "value"] <- "inc death"
+  inc_death$epi_week <- MMWRweek::MMWRweek(inc_death$date)$MMWRweek
+  inc_death$epi_year <- MMWRweek::MMWRweek(inc_death$date)$MMWRyear
+  inc_death <- aggregate(inc_death[, "inc death"], by = list("location" = inc_death$location,
+                                                             "epi_week" = inc_death$epi_week,
+                                                             "epi_year" = inc_death$epi_year),
+                         FUN = sum)
+  colnames(inc_death)[colnames(inc_death) == "x"] <- "inc death"
+
+  death <- merge(cum_death, inc_death[, c("location", "epi_week", "epi_year", "inc death")],
+                 by = c("epi_week", "epi_year", "location"), sort = FALSE)
+
+  cum_case <- read.csv(file_cum_case,
+                       stringsAsFactors = FALSE, colClasses = list(date = "Date"))
+  colnames(cum_case)[colnames(cum_case) == "value"] <- "cum case"
+  cum_case$epi_week <- MMWRweek::MMWRweek(cum_case$date)$MMWRweek
+  cum_case$epi_year <- MMWRweek::MMWRweek(cum_case$date)$MMWRyear
+  cum_case <- subset(cum_case, weekdays(date) == "Saturday")
+
+  inc_case <- read.csv(file_inc_case,
+                       stringsAsFactors = FALSE, colClasses = list(date = "Date"))
+  colnames(inc_case)[colnames(inc_case) == "value"] <- "inc case"
+  inc_case$epi_week <- MMWRweek::MMWRweek(inc_case$date)$MMWRweek
+  inc_case$epi_year <- MMWRweek::MMWRweek(inc_case$date)$MMWRyear
+  inc_case <- aggregate(inc_case[, "inc case"], by = list("location" = inc_case$location,
+                                                          "epi_week" = inc_case$epi_week,
+                                                          "epi_year" = inc_case$epi_year),
+                        FUN = sum)
+  colnames(inc_case)[colnames(inc_case) == "x"] <- "inc case"
+
+  case <- merge(cum_case, inc_case[, c("location", "epi_week", "epi_year", "inc case")],
+                by = c("epi_week", "epi_year", "location"), sort = FALSE)
+
+  all <- merge(death, case[, c("location", "epi_week", "epi_year", "inc case", "cum case")],
+               by = c("epi_week", "epi_year", "location"), sort = FALSE)
+
+  return(all)
+}
+
 # extract the date from a file name in our standardized format
 get_date_from_filename <- function(filename){
   as.Date(substr(filename, start = 1, stop = 10))
@@ -49,6 +99,7 @@ modify_alpha <- function(col, alpha){
 add_forecast_to_plot <- function(forecasts_to_plot,
                                  timezero,
                                  location,
+                                 target,
                                  model,
                                  add_points = TRUE,
                                  add_intervals = TRUE,
@@ -60,6 +111,7 @@ add_forecast_to_plot <- function(forecasts_to_plot,
   if(add_intervals){
     # get upper bounds:
     subs_upper <- forecasts_to_plot[which(forecasts_to_plot$model == model &
+                                            grepl(target, forecasts_to_plot$target) &
                                             forecasts_to_plot$location == location &
                                             forecasts_to_plot$timezero == timezero &
                                             forecasts_to_plot$type == "quantile" &
@@ -67,6 +119,7 @@ add_forecast_to_plot <- function(forecasts_to_plot,
     subs_upper <- subs_upper[order(subs_upper$target_end_date, decreasing = TRUE), ]
     # get lower bounds:
     subs_lower <- forecasts_to_plot[which(forecasts_to_plot$model == model &
+                                            grepl(target, forecasts_to_plot$target) &
                                             forecasts_to_plot$timezero == timezero &
                                             forecasts_to_plot$location == location &
                                             forecasts_to_plot$target_end_date >= timezero - 7 &
@@ -95,6 +148,7 @@ add_forecast_to_plot <- function(forecasts_to_plot,
     if(is.na(pch)) pch <- 0 # if truth data is unknown: set to squares
     # select the relevant points:
     subs_points <- forecasts_to_plot[which(forecasts_to_plot$model == model &
+                                             grepl(target, forecasts_to_plot$target) &
                                              forecasts_to_plot$timezero == timezero &
                                              forecasts_to_plot$location == location &
                                              forecasts_to_plot$type == "point"), ]
@@ -108,6 +162,7 @@ add_forecast_to_plot <- function(forecasts_to_plot,
     if(is.na(pch)) pch <- 0 # if truth data is unknown: set to squares
     # select relevant points:
     subs_past <- forecasts_to_plot[which(forecasts_to_plot$model == model &
+                                           grepl(target, forecasts_to_plot$target) &
                                            forecasts_to_plot$timezero == timezero &
                                            forecasts_to_plot$location == location &
                                            forecasts_to_plot$type == "observed"), ]
@@ -122,12 +177,20 @@ add_forecast_to_plot <- function(forecasts_to_plot,
 # start: left xlim
 # end: right xlim
 # ylim
-empty_plot <- function(start = as.Date("2020-03-01"), end = Sys.Date() + 28, ylim = c(0, 100000)){
+empty_plot <- function(start = as.Date("2020-03-01"), target = "cum death",
+                       end = Sys.Date() + 28, ylim = c(0, 100000)){
   dats <- seq(from = round(start) - 14, to = round(end) + 14, by = 1)
 
   plot(NULL, ylim = ylim, xlim = c(start, end),
        xlab = "time", ylab = "", axes = FALSE)
-  title(ylab = "cumulative deaths", line = 3.5)
+
+  yl <- switch (target,
+    "cum death" = "cumulative deaths",
+    "inc death" = "incident deaths",
+    "inc case" = "incident cases",
+    "cum case" = "cumulative cases"
+  )
+  title(ylab = yl, line = 3.5)
   xlabs <- dats[weekdays(dats) == "Saturday"]
   abline(v = xlabs, col = "grey")
 
@@ -144,18 +207,18 @@ empty_plot <- function(start = as.Date("2020-03-01"), end = Sys.Date() + 28, yli
 # truth: data.frame containing dates and truth values
 # timezero: the forecast date considered (truths to the right of this date are shown in grey)
 # pch: the point shape
-add_truth_to_plot <- function(truth, location, timezero, pch){
+add_truth_to_plot <- function(truth, target, location, timezero, pch){
   truth <- truth[weekdays(truth$date) == "Saturday" &
                    truth$location == location, ]
   inds_obs <- which(truth$date < timezero)
   inds_unobs <- which(truth$date > timezero)
   ind_last <- which(truth$date == timezero - 2)
-  lines(truth$date[c(ind_last, inds_unobs)], truth$value[c(ind_last, inds_unobs)],
+  lines(truth$date[c(ind_last, inds_unobs)], truth[c(ind_last, inds_unobs), target],
         col = "grey25", lwd = 2)
-  points(truth$date[c(ind_last, inds_unobs)], truth$value[c(ind_last, inds_unobs)],
+  points(truth$date[c(ind_last, inds_unobs)], truth[c(ind_last, inds_unobs), target],
          pch = pch, col = "grey25", bg = "white", lwd = 2)
-  lines(truth$date[inds_obs], truth$value[inds_obs], lwd = 2)
-  points(truth$date[inds_obs], truth$value[inds_obs],
+  lines(truth$date[inds_obs], truth[inds_obs, target], lwd = 2)
+  points(truth$date[inds_obs], truth[inds_obs, target],
          pch = pch, bg = "white", lwd = 2)
 }
 
@@ -189,6 +252,7 @@ highlight_timezero <- function(timezero, ylim = c(-1000, 100000)){
 # highlight_target_end_date: target_end_date to highlight (when user hovers over it)
 # point_pred_legend: text to paste into the legend (can be used to show point forecasts)
 plot_forecasts <- function(forecasts_to_plot, truth,
+                           target = "cum death",
                            timezero, models, selected_truth = names(truth)[1],
                            location = "GM",
                            start = as.Date("2020-03-01"), end = Sys.Date() + 28,
@@ -203,9 +267,9 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            highlight_target_end_date = NULL,
                            point_pred_legend = NULL){
   # fresh plot:
-  empty_plot(start = start, end = end, ylim = ylim)
+  empty_plot(start = start, target = target, end = end, ylim = ylim)
   # highlight the forecast date:
-  highlight_timezero(timezero)
+  highlight_timezero(timezero, ylim = ylim + c(-1, 1)*diff(ylim))
   abline(v = highlight_target_end_date)
 
   # add forecast bands:
@@ -213,6 +277,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
     if(show_pi){
       for(i in seq_along(models)){
         add_forecast_to_plot(forecasts_to_plot = forecasts_to_plot,
+                             target = target,
                              timezero = timezero,
                              location = location,
                              model = models[i], add_intervals = TRUE,
@@ -224,7 +289,8 @@ plot_forecasts <- function(forecasts_to_plot, truth,
 
   # add truths:
   for(t in selected_truth){
-    add_truth_to_plot(truth = truth[[t]], location = location, timezero = timezero,
+    add_truth_to_plot(truth = truth[[t]], target = target,
+                      location = location, timezero = timezero,
                       pch = pch_truths[t])
   }
 
@@ -232,6 +298,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
   if(length(models) > 0){
     for(i in seq_along(models)){
       add_forecast_to_plot(forecasts_to_plot = forecasts_to_plot,
+                           target = target,
                            timezero = timezero,
                            location = location,
                            model = models[i],
@@ -244,6 +311,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
     if(add_model_past){
       for(i in seq_along(models)){
         add_forecast_to_plot(forecasts_to_plot = forecasts_to_plot,
+                             target = target,
                              timezero = timezero,
                              location = location,
                              model = models[i],
