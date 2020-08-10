@@ -98,7 +98,7 @@ def check_formatting(my_path):
     df = df[~df['file_path'].isin(deleted_files)]
 
     # update previously checked files
-    df.to_csv('code/validation/locally_validated_files.csv', index=False)
+    # df.to_csv('code/validation/locally_validated_files.csv', index=False)
 
     # Output list of Errors
     if len(output_errors) > 0:
