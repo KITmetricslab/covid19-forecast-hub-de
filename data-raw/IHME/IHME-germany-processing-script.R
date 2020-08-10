@@ -56,7 +56,10 @@ for(country in c("Germany","Poland"))
   
   for (i in 1:length(filepaths)) {
     #changed submission date to real forecast date, to change back, change to [i,1] in submission_date=forecast_dates[i,2]
-    formatted_file <- make_qntl_dat(path=filepaths[i],forecast_date=forecast_dates[i,2],
+    #Update 10.08: Set forecast date to submission date for consistency reasons, i.e. forecast_date=forecast_dates[i,1] instead of [i,2]
+    # Sometimes, values that are actually forecasts will be labeled as observations now
+    # Idea is the assumptions that submission should be on same day as forecast generation 
+    formatted_file <- make_qntl_dat(path=filepaths[i],forecast_date=forecast_dates[i,1],
                                     submission_date=forecast_dates[i,1],country=country) 
     
     date <- get_date(filepaths[i])
