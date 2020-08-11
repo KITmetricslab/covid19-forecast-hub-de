@@ -82,7 +82,7 @@ Details can be found in the respective README files in the subfolders of `data-t
 Currently we assemble forecasts from the following teams. *Note that not all teams are using the same ground truth data.* (used truth data source and forecast reuse license in brackets):
 
 - [Frankfurt Institute for Advanced Studies & Forschungszentrum Jülich](https://www.medrxiv.org/content/10.1101/2020.04.18.20069955v1)(ECDC; no license specified)
-- [IHME](https://covid19.healthdata.org/united-states-of-america) (unclear; CC-AT-NC4.0) *Note that we are currently still facing some difficulties in the processing of the IHME files.*
+- [IHME](https://covid19.healthdata.org/united-states-of-america) (JHU; CC-AT-NC4.0)
 - [KIT](https://github.com/KITmetricslab/KIT-baseline) (ECDC; MIT) *This is a simple baseline model run by the Forecast Hub Team. Part of these forecasts were created retrospectively, but using only data available at the respective forecast date.*
 - [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)
 - [Imperial](https://github.com/mrc-ide/covid19-forecasts-orderly) (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
@@ -90,6 +90,7 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [MIT](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
 - [University of Leipzig IMISE/GenStat](https://github.com/holgerman/covid19-forecast-hub-de) (ECDC; none given)
+- [University of Southern California Data Science Lab](https://scc-usc.github.io/ReCOVER-COVID-19)(JHU; MIT) (MIT)
 - [YYG](http://covid19-projections.com/) (JHU; MIT)
 
 ## Forecast evaluation and ensemble building

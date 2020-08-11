@@ -6,7 +6,7 @@
 #################################################################################
 
 ## script for processing USC data
-## Jakob Ketterer
+## Jakob Ketterer & Johannes Bracher
 ## July 2020
 
 source("process_USC_file_germany.R")
@@ -18,22 +18,47 @@ processed_path <- gsub(" ", "", processed_path)
 
 dir.create(processed_path, showWarnings = FALSE)
 
-files_to_process <- list.files("./", recursive = FALSE)
-files_to_process <- files_to_process[grepl("global_deaths_quarantine_1.csv", files_to_process)]
-# TODO: handle multiple source csv files with different names vs overwriting
+dirs_to_process <- gsub("./", "", list.dirs(recursive = FALSE))
 
-forecast_dates <- lapply(files_to_process, date_from_usc_filepath)
-
-# determine forecast horizon
-horizon.days = 30
-horizon.wks = 4
+forecast_dates <- as.Date(dirs_to_process)
 
 # proces files:
-for(i in 1:length(files_to_process)) {
-  tmp_dat <- process_usc_file(usc_filepath = files_to_process[i], 
-                              date_zero = forecast_dates[[i]], 
-                              horizon.days = horizon.days, 
-                              horizon.wks = horizon.wks)
-  file_name <- paste0(processed_path, forecast_dates[[i]], "-Germany-USC-SIkJalpha.csv")
-  write.csv(tmp_dat, file_name, row.names = FALSE)
+for(i in 1:length(dirs_to_process)) {
+  # Deaths, Germany:
+  dat_germany_death <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/global_forecasts_deaths.csv"),
+                                        forecast_date = forecast_dates[[i]],
+                                        type = "death",
+                                        country = "Germany",
+                                        location = "GM")
+  file_name_germany_death <- paste0(processed_path, forecast_dates[[i]], "-Germany-USC-SIkJalpha.csv")
+  write.csv(dat_germany_death, file_name_germany_death, row.names = FALSE)
+
+  # Cases, Germany:
+  dat_germany_case <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/global_forecasts_cases.csv"),
+                                        forecast_date = forecast_dates[[i]],
+                                        type = "case",
+                                        country = "Germany",
+                                        location = "GM")
+  file_name_germany_case <- paste0(processed_path, forecast_dates[[i]], "-Germany-USC-SIkJalpha-case.csv")
+  write.csv(dat_germany_case, file_name_germany_case, row.names = FALSE)
+
+  # Deaths, Poland:
+  dat_poland_death <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/global_forecasts_deaths.csv"),
+                                       forecast_date = forecast_dates[[i]],
+                                       type = "death",
+                                       country = "Poland",
+                                       location = "PL")
+  file_name_poland_death <- paste0(processed_path, forecast_dates[[i]], "-Poland-USC-SIkJalpha.csv")
+  write.csv(dat_poland_death, file_name_poland_death, row.names = FALSE)
+
+  # Cases, Poland:
+  dat_poland_case <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/global_forecasts_cases.csv"),
+                                      forecast_date = forecast_dates[[i]],
+                                      type = "case",
+                                      country = "Poland",
+                                      location = "PL")
+  file_name_poland_case <- paste0(processed_path, forecast_dates[[i]], "-Poland-USC-SIkJalpha-case.csv")
+  write.csv(dat_poland_case, file_name_poland_case, row.names = FALSE)
+
+  cat("File", i, "/", length(dirs_to_process), "\n")
 }
