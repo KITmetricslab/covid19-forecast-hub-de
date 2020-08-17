@@ -10,7 +10,7 @@ def get_relevant_dates(dates):
     next_mondays = pd.Series(next_monday(d) for d in dates)
     relevant_dates = []
     
-    for day in ['Monday', 'Sunday', 'Saturday', 'Friday']:
+    for day in ['Monday','Tuesday','Wednesday','Thursday', 'Sunday', 'Saturday', 'Friday']:
         relevant_dates.extend(dates[(wds == day) &
                                    ~pd.Series(n in relevant_dates for n in next_mondays) &
                                    ~pd.Series(n in relevant_dates for n in (next_mondays - pd.offsets.Day(1))) &

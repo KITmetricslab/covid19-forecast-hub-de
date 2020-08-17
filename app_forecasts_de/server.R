@@ -214,9 +214,9 @@ shinyServer(function(input, output) {
     # add legends manually:
     legend("topleft", col = cols_models, legend = paste0(models, ": ", selected$point_pred), lty = 0, bty = "n",
            pch = ifelse(models %in% input$select_models,
-                        pch_full[truth_data_used], pch_empty[truth_data_used]),
+                        pch_full[truth_data_used[models]], pch_empty[truth_data_used[models]]),
            pt.cex = 1.3, ncol = 3)
-    legend("top", col = "black", legend = paste0(c("ECDC/RKI", "JHU"), ": ", selected$truths), lty = 0, bty = "n",
+    legend("top", col = "black", legend = paste0(c("JHU", "ECDC/RKI"), ": ", selected$truths), lty = 0, bty = "n",
            pch = ifelse(truths %in% input$select_truths, pch_full, pch_empty),
            pt.cex = 1.3)
 
