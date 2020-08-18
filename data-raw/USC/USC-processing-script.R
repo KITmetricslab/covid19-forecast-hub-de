@@ -22,23 +22,29 @@ dirs_to_process <- gsub("./", "", list.dirs(recursive = FALSE))
 
 forecast_dates <- as.Date(dirs_to_process)
 
+fips_codes_germany <-  c("GM",
+                         "GM01", "GM02", "GM03", "GM04",
+                         "GM05", "GM06", "GM07", "GM08",
+                         "GM09", "GM10", "GM11", "GM12",
+                         "GM13", "GM14", "GM15", "GM16")
+
 # proces files:
 for(i in 1:length(dirs_to_process)) {
   # Deaths, Germany:
-  dat_germany_death <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/global_forecasts_deaths.csv"),
+  dat_germany_death <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/other_forecasts_deaths.csv"),
                                         forecast_date = forecast_dates[[i]],
                                         type = "death",
-                                        country = "Germany",
-                                        location = "GM")
+                                        country = fips_codes_germany,
+                                        location = fips_codes_germany)
   file_name_germany_death <- paste0(processed_path, forecast_dates[[i]], "-Germany-USC-SIkJalpha.csv")
   write.csv(dat_germany_death, file_name_germany_death, row.names = FALSE)
 
   # Cases, Germany:
-  dat_germany_case <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/global_forecasts_cases.csv"),
+  dat_germany_case <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/other_forecasts_cases.csv"),
                                         forecast_date = forecast_dates[[i]],
                                         type = "case",
-                                        country = "Germany",
-                                        location = "GM")
+                                        country = fips_codes_germany,
+                                        location = fips_codes_germany)
   file_name_germany_case <- paste0(processed_path, forecast_dates[[i]], "-Germany-USC-SIkJalpha-case.csv")
   write.csv(dat_germany_case, file_name_germany_case, row.names = FALSE)
 

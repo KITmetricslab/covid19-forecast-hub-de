@@ -28,6 +28,23 @@ col_to_date <- function(col) {
 #' @return a data.frame in quantile format
 
 process_usc_file <- function(usc_filepath, forecast_date, country = "Germany", location = "GM", type = "death"){
+  if(length(country) != length(location)) stop("country and location need to have the same length.")
+  for(i in 1:length(country)){
+    to_add <- process_usc_file0(usc_filepath = usc_filepath,
+                                forecast_date = forecast_date,
+                                country = country[i],
+                                location = location[i],
+                                type = type)
+    if(i == 1){
+      ret <- to_add
+    }else{
+      ret <- rbind(ret, to_add)
+    }
+  }
+  return(ret)
+}
+
+process_usc_file0 <- function(usc_filepath, forecast_date, country = "Germany", location = "GM", type = "death"){
   # # read in JHU data to be able to extract one week ahead inc forecast:
   # jhu_filepath <- paste0("../../data-truth/JHU/raw/", forecast_date, "-Deaths-JHU.csv")
   # jhu_dat <- read.csv(jhu_filepath)

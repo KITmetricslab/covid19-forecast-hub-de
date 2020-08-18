@@ -177,7 +177,10 @@ shinyServer(function(input, output) {
         if(is.null(input$select_location)){
           c(0, 12000)
         }else{
-          c(0, 1.2*max(dat_truth$ECDC[dat_truth$ECDC$location == input$select_location, input$select_target]))
+          c(0, 1.2*max(c(dat_truth$ECDC[dat_truth$ECDC$location == input$select_location, input$select_target],
+                         forecasts_to_plot[forecasts_to_plot$forecast_date == as.Date(input$select_date) &
+                                             grepl(input$select_target, forecasts_to_plot$target) &
+                                             forecasts_to_plot$location == input$select_location, "value"])))
         }
       }else{
         coords$brush$ylim
