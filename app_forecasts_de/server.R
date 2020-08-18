@@ -16,8 +16,15 @@ Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 # ----------------------------------------------------------------------------
 
 # read in data set compiled specificaly for Shiny app:
-forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/forecasts_to_plot.csv",
-                              stringsAsFactors = FALSE)
+local <- TRUE
+if(local){
+  forecasts_to_plot <- read.csv("data/forecasts_to_plot.csv",
+                                stringsAsFactors = FALSE)
+}else{
+  forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/forecasts_to_plot.csv",
+                                stringsAsFactors = FALSE)
+}
+
 forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
