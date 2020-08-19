@@ -24,9 +24,8 @@ target <- "cum death"
 
 
 # assign colours to models (currently restricted to 11):
-cols_models <- c("#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02",
-                 "#A6761D", "#666666", "cyan3", "firebrick1", "tan1")
-cols_models <- cols_models[seq_along(models)]
+# assign colours to models (currently restricted to eight):
+cols_models <- glasbey(length(models))
 names(cols_models) <- models
 
 # get truth data:
@@ -68,7 +67,8 @@ last_truths <- dat_truth[["ECDC"]][[target]][dat_truth$ECDC$date >= Sys.Date() -
 # compute ylim from these values:
 ylim <- c(0.95*min(last_truths), 1.05*max(subs_current$value))
 
-png("current_forecasts.png", width = 720, height = 360)
+png("current_forecasts.png", width = 800, height = 400)
+par(mar = c(4.5, 5, 4.5, 2))
 # plot:
 plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                truth = dat_truth,
@@ -92,7 +92,7 @@ title("Forecasts of total number of deaths from COVID19 in Germany")
 # add legends manually:
 legend("topleft", col = cols_models, legend = models, lty = 0, bty = "n",
        pch = pch_full[truth_data_used[models]],
-       pt.cex = 1.3)
+       pt.cex = 1.3, ncol = 2)
 legend("bottomleft", col = "black", legend = c("ECDC/RKI", "JHU"), lty = 0, bty = "n",
        pch = pch_full, pt.cex = 1.3)
 dev.off()
