@@ -25,7 +25,7 @@ target <- "cum death"
 
 # assign colours to models (currently restricted to 11):
 # assign colours to models (currently restricted to eight):
-cols_models <- glasbey(length(models))
+cols_models <- glasbey(length(models) + 1)[-1] # omit first color, gives nicer contrasts
 names(cols_models) <- models
 
 # get truth data:
