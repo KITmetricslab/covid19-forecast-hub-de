@@ -25,7 +25,12 @@ target <- "cum death"
 
 # assign colours to models (currently restricted to 11):
 # assign colours to models (currently restricted to eight):
-cols_models <- glasbey(length(models) + 1)[-1] # omit first color, gives nicer contrasts
+cols_models <- c("#FF0000", "#00FF00", "#000033", "#FF00B6", "#005300", "#FFD300",
+                 "#009FFF", "#9A4D42", "#00FFBE", "#783FC1", "#1F9698",
+                 "#FFACFD", "#B1CC71", "#F1085C", "#FE8F42", "#DD00FF", "#201A01",
+                 "#720055", "#766C95", "#02AD24", "#C8FF00", "#886C00",
+                 "#FFB79F", "#858567")
+cols_models <- cols_models[1:length(models)]
 names(cols_models) <- models
 
 # get truth data:
@@ -68,7 +73,7 @@ last_truths <- dat_truth[["ECDC"]][[target]][dat_truth$ECDC$date >= Sys.Date() -
 ylim <- c(0.95*min(last_truths), 1.05*max(subs_current$value))
 
 png("current_forecasts.png", width = 800, height = 400)
-par(mar = c(4.5, 5, 4.5, 2))
+par(mar = c(4.5, 5.5, 4.5, 2))
 # plot:
 plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                truth = dat_truth,
