@@ -76,5 +76,5 @@ for(country in c("Germany","Poland"))
     print(paste0("Finished with date ",date," in country ", country) )
   }
 }
-
+#Warning: "NAs introduced by coercion" is fine and issued when NA is written in column quantile for observed values
 
