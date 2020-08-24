@@ -2,13 +2,13 @@
 
 # A German COVID-19 Forecast Hub
 
-### This project is still in development and only starting to be operational. The platform is not officially endorsed by KIT or HITS.
+#### *This platform is not officially endorsed by KIT or HITS.*
 
 *Beschreibung in deutscher Sprache siehe [hier](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/README_DE.md).*
 
 ## Purpose
 
-This repository assembles forecasts of cumulative and incident COVID-19 deaths in Germany in a standardized format. Forecasts for ICU need will be added in the near future, other forecast targets may follow. The repository is run by members of the [Chair of Econometrics and Statistics at Karlsruhe Institute of Technology](https://statistik.econ.kit.edu/index.php) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/), see [below](#forecast-hub-team).
+This repository assembles forecasts of cumulative and incident COVID-19 deaths and cases in Germany in a standardized format. Forecasts for ICU need will be added in the near future, other forecast targets may follow. The repository is run by members of the [Chair of Econometrics and Statistics at Karlsruhe Institute of Technology](https://statistik.econ.kit.edu/index.php) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/), see [below](#forecast-hub-team).
 
 An interactive visualization of the different forecasts can be found [here](https://jobrac.shinyapps.io/app_forecasts_de/).
 
@@ -22,7 +22,7 @@ If you are generating forecasts for COVID-19 cases, hospitalizations or deaths i
 
 ### Deaths
 
-Currently we are focussing on **1 through 30 day and 1 through 4 week ahead forecasts of incident and cumulative deaths by reporting date in Germany (national level) and the German states (Bundesländer)**. We also accept up to 130 day-ahead and up to 20 week-ahead forecasts. This [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets) contains details on the definition of the targets. There is no obligation to submit forecasts for all suggested targets and it is up to teams to decide what they feel comfortable forecasting.
+Our main focus is on **1 through 30 day and 1 through 4 week ahead forecasts of incident and cumulative deaths by reporting date in Germany (national level) and the German states (Bundesländer)**. We also accept up to 130 day-ahead and up to 20 week-ahead forecasts. This [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets) contains details on the definition of the targets. There is no obligation to submit forecasts for all suggested targets and it is up to teams to decide what they feel comfortable forecasting.
 
 Note that our definition of targets parallels the principles outlined [here](https://github.com/reichlab/covid19-forecast-hub#what-forecasts-we-are-tracking-and-for-which-locations) for the US COVID-19 forecast hub.
 
@@ -30,7 +30,7 @@ Note that we currently treat the **ECDC data** available [here](https://www.ecdc
 
 ### Cases
 
-We are currently extending our repository can to also accept forecasts for case numbers, see the [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets) for more targets. This is currently only operational for the national level and not yet included in our visualization.
+We are also accepting **1 through 30 day and 1 through 4 week ahead forecasts of incident and cumulative confirmed cases by reporting date in Germany (national level) and the German states (Bundesländer)**, see the [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets). The respective truth data from RKI can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/RKI).
 
 ### Intensive care use
 
@@ -68,11 +68,11 @@ The forecasts assembled in this repository have been created by various independ
 
 ## Truth data
 
-Data on observed numbers of deaths and several other qantities come from the following sources:
+Data on observed numbers of deaths and several other quantities are compiled [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth) and come from the following sources:
 
-- [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases) **(This is our preferred source and will be used for evaluation and ensembling purposes.)**
-- [Robert Koch Institut](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0). Note that these data are subject to some processing steps, see [here](data-truth/RKI).
-- [Johns Hopkins University](https://coronavirus.jhu.edu/)
+- [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases) **(This is our preferred source for national level counts.)**
+- [Robert Koch Institut](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0). Note that these data are subject to some processing steps, see [here](data-truth/RKI). **(This is our preferred source for Bundesland level counts. The data are coherent with the national level data from ECDC.)**
+- [Johns Hopkins University](https://coronavirus.jhu.edu/). These data are used by a number of teams generating forecasts. Currently (August 2020) the agreement with ECDC is good, but in the past there have been larger discrepancies.
 - [DIVI Intensivregister](https://www.divi.de/register/tagesreport) These data are currently not yet used for forecasts, but we intend to extend our activities in this direction.
 
 Details can be found in the respective README files in the subfolders of `data-truth`.
@@ -81,7 +81,7 @@ Details can be found in the respective README files in the subfolders of `data-t
 
 Currently we assemble forecasts from the following teams. *Note that not all teams are using the same ground truth data.* (used truth data source and forecast reuse license in brackets):
 
-- [Frankfurt Institute for Advanced Studies & Forschungszentrum Jülich](https://www.medrxiv.org/content/10.1101/2020.04.18.20069955v1)(ECDC; no license specified)
+- [Frankfurt Institute for Advanced Studies & Forschungszentrum Jülich](https://www.medrxiv.org/content/10.1101/2020.04.18.20069955v1) (ECDC; no license specified)
 - [IHME](https://covid19.healthdata.org/united-states-of-america) (JHU; CC-AT-NC4.0)
 - [KIT](https://github.com/KITmetricslab/KIT-baseline) (ECDC; MIT) *This is a simple baseline model run by the Forecast Hub Team. Part of these forecasts were created retrospectively, but using only data available at the respective forecast date.*
 - [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)

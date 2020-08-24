@@ -40,4 +40,7 @@ cd ../validation
 python3 ./get_commit_dates.py
 echo "file dates done"
 
+python3 ./validate_truth.py
+echo "All checks executed"
+
 cd ../../

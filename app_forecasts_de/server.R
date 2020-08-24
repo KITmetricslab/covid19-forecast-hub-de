@@ -1,5 +1,5 @@
 library(shiny)
-library(RColorBrewer)
+library(pals)
 
 # read in plotting functions etc
 source("code/app_functions.R")
@@ -16,14 +16,21 @@ Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 # ----------------------------------------------------------------------------
 
 # read in data set compiled specificaly for Shiny app:
-forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/forecasts_to_plot.csv",
-                              stringsAsFactors = FALSE)
+local <- FALSE
+if(local){
+  forecasts_to_plot <- read.csv("data/forecasts_to_plot.csv",
+                                stringsAsFactors = FALSE)
+}else{
+  forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/forecasts_to_plot.csv",
+                                stringsAsFactors = FALSE)
+}
+
 forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
 
 # exclude some models because used data is neither ECDC nor JHU:
-models_to_exclude <- c("LeipzigIMISE-rkiV1", "LeipzigIMISE-ecdcV1", "Imperial-ensemble1")
+models_to_exclude <- c("Imperial-ensemble1")
 forecasts_to_plot <- subset(forecasts_to_plot, !(model %in% models_to_exclude) )
 
 # get timezeros, i.e. Mondays on which forecasts were made:
@@ -44,8 +51,7 @@ locations <- c("Germany" = "GM", "Poland" = "PL", locations)
 models <- sort(as.character(unique(forecasts_to_plot$model)))
 
 # assign colours to models (currently restricted to eight):
-cols_models <- c(brewer.pal(n = 8, name = 'Dark2'), "cyan3", "firebrick1", "tan1")
-cols_models <- cols_models[seq_along(models)]
+cols_models <- glasbey(length(models) + 1)[-1]
 names(cols_models) <- models
 
 # get truth data:
@@ -86,7 +92,7 @@ truth_data_used <- truth_data_used0$truth_data
 names(truth_data_used) <- truth_data_used0$model
 
 # Define server logic:
-shinyServer(function(input, output) {
+shinyServer(function(input, output, session) {
 
   # reactive values to store various mouse coordinates (prefer this to using coordinates
   # directly as NULL values can be avoided):
@@ -156,6 +162,24 @@ shinyServer(function(input, output) {
                        choiceValues = models,
                        selected = models, inline = TRUE)
   )
+
+  # uncheck all:
+  observe({
+    input$hide_all
+    updateCheckboxGroupInput(session, "select_models",
+                             choiceNames = models,
+                             choiceValues = models,
+                             selected = NULL, inline = TRUE)
+  })
+
+  # check all:
+  observe({
+    input$show_all
+    updateCheckboxGroupInput(session, "select_models",
+                             choiceNames = models,
+                             choiceValues = models,
+                             selected = models, inline = TRUE)
+  })
 
   # input element to select forecast date:
   output$inp_select_date <- renderUI(
