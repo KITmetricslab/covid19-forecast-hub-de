@@ -30,8 +30,11 @@ dashboardPage(
               div(style="display:inline-block", uiOutput("inp_select_location")),
               uiOutput("inp_select_model"),
 
-              checkboxInput("show_pi", label = "Show 95% prediction interval where available", value = TRUE),
-
+              actionButton("show_all", "Show all"),
+              actionButton("hide_all", "Hide all"),
+              div(style="display:inline-block",
+                  checkboxInput("show_pi", label = "Show 95% prediction interval where available", value = TRUE)
+              ),
               checkboxGroupInput("select_truths", "Select truth data to display:",
                                  choiceNames = c("ECDC/RKI", "JHU"),
                                  choiceValues = c("ECDC", "JHU"),
