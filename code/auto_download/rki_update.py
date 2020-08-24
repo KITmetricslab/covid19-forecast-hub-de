@@ -9,9 +9,9 @@ latest_file = max(list_of_files, key=os.path.getctime)
 df = pd.read_csv(latest_file, compression='gzip')
 
 # Add column 'DatenstandISO'
-if 'DatenstandISO' not in df.columns:
-    df['DatenstandISO'] = pd.to_datetime(df.Datenstand.str.replace('Uhr', ''), dayfirst=True).astype(str)
-
+# if 'DatenstandISO' not in df.columns:
+#     df['DatenstandISO'] = pd.to_datetime(df.Datenstand.str.replace('Uhr', ''), dayfirst=True).astype(str)
+df['DatenstandISO'] = str((pd.to_datetime('today') - pd.Timedelta('1 days')).date())
     
 for target in ['Deaths', 'Cases']:
     print('Extracting data for cumulative {}.'.format(target.lower()))
@@ -55,10 +55,10 @@ for target in ['Deaths', 'Cases']:
     df_cum = pd.concat([df_agg, df_germany]).sort_values(['date', 'location']).reset_index(drop=True)
 
     # save as csv
-    current_date = pd.to_datetime('today').date()
+    #current_date = pd.to_datetime('today').date()
     
     if target == 'Deaths':
-        df_cum.to_csv('../../data-truth/RKI/processed/' + str(current_date) + '_RKI_processed.csv', index=False)
+        df_cum.to_csv('../../data-truth/RKI/processed/' + df_cum.date[0] + '_RKI_processed.csv', index=False)
 
     # Load Current Dataframe
     df_all = pd.read_csv('../../data-truth/RKI/truth_RKI-Cumulative {}_Germany.csv'.format(target))
