@@ -29,4 +29,4 @@ methods_long: >-
     This is a simple quantile-wise average of other models submitted to the Forecast Hub. We account for
     use of different truth data by different models, aligning all forecasts of cumulative deaths with the
     last observed value from the ECDC data.
-citation: 
+citation: https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble
