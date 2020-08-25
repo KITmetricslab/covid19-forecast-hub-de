@@ -10,7 +10,7 @@ source("functions_ensemble.R") # read in functions
 # basic settings:
 country <- "Germany"
 location <- "GM"
-forecast_date <- as.Date("2020-08-17")
+forecast_date <- as.Date("2020-08-24")
 if(!weekdays(forecast_date) == "Monday") stop("forecast_date should be a Monday.")
 
 # read in which models to include:
@@ -111,7 +111,7 @@ point_forecasts$type <- "point"
 point_forecasts$quantile <- NA
 
 # add last observed values:
-observed <- subset(ecdc, date %in% (last_saturday - c(0, 7)))
+observed <- ecdc[ecdc$date %in% (last_saturday - c(0, 7)) & ecdc$location %in% location, ]
 observed$target_end_date <- observed$date
 observed$type <- "observed"
 observed$quantile <- NA
@@ -129,4 +129,4 @@ tail(ensemble)
 
 # store
 write.csv(ensemble, file = paste0("../../data-processed/KITCOVIDhub-ensemble/", forecast_date,
-                                  "-", country, "-KITCOVIDhub-ensemble.csv"))
+                                  "-", country, "-KITCOVIDhub-ensemble.csv"), row.names = FALSE)
