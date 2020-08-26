@@ -129,7 +129,8 @@ empty_plot <- function(start = as.Date("2020-03-01"), target = "cum death",
                 "cum death" = "cumulative deaths",
                 "inc death" = "incident deaths",
                 "inc case" = "incident cases",
-                "cum case" = "cumulative cases"
+                "cum case" = "cumulative cases",
+                "wis" = "WIS or absolute error"
   )
   title(ylab = yl, line = 3.5)
   xlabs <- dats[weekdays(dats) == "Saturday"]

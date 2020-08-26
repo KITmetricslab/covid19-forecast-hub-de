@@ -2,8 +2,8 @@ library(shiny)
 library(pals)
 
 # read in plotting functions etc
-source("../code/R/plot_functions.R")
-source("../code/R/auxiliary_functions.R")
+source("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/code/R/plot_functions.R")
+source("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/code/R/auxiliary_functions.R")
 
 # Choose the right option, depending on your system:
 # ----------------------------------------------------------------------------
@@ -126,7 +126,12 @@ shinyServer(function(input, output, session) {
         selected$target_end_date <- hover_date
         # get point estimates:
         subs <- subset(forecasts_to_plot,
-                       timezero == as.Date(input$select_date) &
+                       (if(input$select_stratification == "forecast_date"){
+                         timezero == as.Date(input$select_date)
+                       } else TRUE) &
+                         (if(input$select_stratification == "horizon" & !is.null(input$select_horizon)){
+                           grepl(input$select_horizon, target)
+                         } else TRUE) &
                          grepl(input$select_target, target) &
                          location == input$select_location &
                          target_end_date == hover_date & type %in% c("point", "observed"))

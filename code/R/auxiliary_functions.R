@@ -12,6 +12,12 @@ next_monday <- function(date){
   return(as.Date(nm, origin = "1970-01-01"))
 }
 
+# get last Saturday:
+get_last_saturday <- function(forecast_date){
+  # if(!weekdays(forecast_date) == "Monday") warning("forecast_date should be a Monday.")
+  (forecast_date - (0:6))[weekdays(forecast_date - (0:6)) == "Saturday"]
+}
+
 # among a set of forecast dates: choose those which are Mondays and those which are Sundays,
 # Saturdays or Fridays if no forecast is available from Monday (or a day closer to Monday)
 choose_relevant_dates <- function(dates){
@@ -33,4 +39,22 @@ choose_relevant_dates <- function(dates){
 modify_alpha <- function(col, alpha){
   x <- col2rgb(col)/255
   rgb(x[1], x[2], x[3], alpha = alpha)
+}
+
+
+get_target_type <- function(target){
+  ret <- sapply(target, function(x) paste(strsplit(x, " ")[[1]][-1:-3], collapse = " "))
+  names(ret) <- NULL
+  return(ret)
+}
+
+truth_to_long <- function(truth_wide){
+  data.frame(date = rep(truth_wide$date, 4),
+             location = rep(truth_wide$location, 4),
+             target = c(rep("inc death", nrow(truth_wide)),
+                        rep("cum death", nrow(truth_wide)),
+                        rep("inc case", nrow(truth_wide)),
+                        rep("cum case", nrow(truth_wide))),
+             value = c(truth_wide$inc_death, truth_wide$cum_death,
+                       truth_wide$inc_case, truth_wide$cum_case))
 }
