@@ -56,27 +56,16 @@ names(cols_models) <- models
 
 # get truth data:
 dat_truth <- list()
-dat_truth$JHU <- rbind(
-  get_truths(file_cum_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Deaths_Germany.csv",
-             file_inc_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Incident%20Deaths_Germany.csv",
-             file_cum_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Cases_Germany.csv",
-             file_inc_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Incident%20Cases_Germany.csv"),
-  get_truths(file_cum_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Deaths_Poland.csv",
-             file_inc_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Incident%20Deaths_Poland.csv",
-             file_cum_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Cases_Poland.csv",
-             file_inc_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Incident%20Cases_Poland.csv")
-)
+dat_truth$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/truth_to_plot_jhu.csv",
+                          colClasses = list("date" = "Date"))
+colnames(dat_truth$JHU) <- gsub("inc_", "inc ", colnames(dat_truth$JHU)) # for matching with targets
+colnames(dat_truth$JHU) <- gsub("cum_", "cum ", colnames(dat_truth$JHU)) # for matching with targets
 
-dat_truth$ECDC <- rbind(
-  get_truths(file_cum_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Cumulative%20Deaths_Germany.csv",
-             file_inc_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Incident%20Deaths_Germany.csv",
-             file_cum_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Cumulative%20Cases_Germany.csv",
-             file_inc_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Incident%20Cases_Germany.csv"),
-  get_truths(file_cum_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/ECDC/truth_ECDC-Cumulative%20Deaths_Poland.csv",
-             file_inc_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/ECDC/truth_ECDC-Incident%20Deaths_Poland.csv",
-             file_cum_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/ECDC/truth_ECDC-Cumulative%20Cases_Poland.csv",
-             file_inc_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/ECDC/truth_ECDC-Incident%20Cases_Poland.csv")
-)
+
+dat_truth$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/truth_to_plot_ecdc.csv",
+                          colClasses = list("date" = "Date"))
+colnames(dat_truth$ECDC) <- gsub("inc_", "inc ", colnames(dat_truth$ECDC)) # for matching with targets
+colnames(dat_truth$ECDC) <- gsub("cum_", "cum ", colnames(dat_truth$ECDC)) # for matching with targets
 
 
 # define point shapes for different truth data sources:
