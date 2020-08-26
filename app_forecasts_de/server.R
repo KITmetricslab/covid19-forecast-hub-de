@@ -2,7 +2,8 @@ library(shiny)
 library(pals)
 
 # read in plotting functions etc
-source("code/app_functions.R")
+source("../code/R/plot_functions.R")
+source("../code/R/auxiliary_functions.R")
 
 # Choose the right option, depending on your system:
 # ----------------------------------------------------------------------------
@@ -28,6 +29,8 @@ if(local){
 forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
+forecasts_to_plot <- subset(forecasts_to_plot, !grepl("-1 wk ahead", target))
+# forecasts_to_plot <- subset(forecasts_to_plot, !(grepl("0 wk ahead", target) & type != "observed"))
 
 # exclude some models because used data is neither ECDC nor JHU:
 models_to_exclude <- c("Imperial-ensemble1")
@@ -63,7 +66,7 @@ colnames(dat_truth$JHU) <- gsub("cum_", "cum ", colnames(dat_truth$JHU)) # for m
 
 
 dat_truth$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/truth_to_plot_ecdc.csv",
-                          colClasses = list("date" = "Date"))
+                           colClasses = list("date" = "Date"))
 colnames(dat_truth$ECDC) <- gsub("inc_", "inc ", colnames(dat_truth$ECDC)) # for matching with targets
 colnames(dat_truth$ECDC) <- gsub("cum_", "cum ", colnames(dat_truth$ECDC)) # for matching with targets
 
@@ -149,7 +152,8 @@ shinyServer(function(input, output, session) {
     checkboxGroupInput("select_models", "Select models to display:",
                        choiceNames = models,
                        choiceValues = models,
-                       selected = models, inline = TRUE)
+                       selected = models,
+                       inline = TRUE)
   )
 
   # uncheck all:
@@ -172,7 +176,12 @@ shinyServer(function(input, output, session) {
 
   # input element to select forecast date:
   output$inp_select_date <- renderUI(
-    selectInput("select_date", "Select forecast date:", choices = timezeros)
+    if(input$select_stratification == "forecast_date" || is.null(input$select_stratification)){
+      selectInput("select_date", "Select forecast date:", choices = timezeros)
+    }else{
+      selectInput("select_horizon", "Select forecast horizon:",
+                  choices = c("1 wk ahead", "2 wk ahead", "3 wk ahead", "4 wk ahead"))
+    }
   )
 
   # input element to select location:
@@ -184,10 +193,21 @@ shinyServer(function(input, output, session) {
   output$plot_forecasts <- renderPlot({
     par(mar = c(4.5, 5, 4, 2), las = 1)
 
+    horizon <- if(input$select_stratification == "horizon") input$select_horizon else NULL
+    timezero <- if(is.null(input$select_stratification)){
+      as.Date("2020-08-24")
+    }else{
+      if(!is.null(input$select_date)){
+        if(input$select_stratification == "forecast_date") as.Date(input$select_date) else NULL
+      }else{
+        as.Date("2020-08-24")
+      }
+    }
+
     # determine ylim:
     yl <-
       if(is.null(coords$brush$ylim)){
-        if(is.null(input$select_location)){
+        if(is.null(input$select_location) | is.null(input$select_stratification)){
           c(0, 12000)
         }else{
           c(0, 1.2*max(c(dat_truth$ECDC[dat_truth$ECDC$location == input$select_location, input$select_target],
@@ -202,7 +222,8 @@ shinyServer(function(input, output, session) {
     plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                    truth = dat_truth,
                    target = input$select_target,
-                   timezero = if(is.null(input$select_date)){as.Date("2020-06-01")}else{as.Date(input$select_date)},
+                   timezero = timezero,
+                   horizon = horizon,
                    models = input$select_models,
                    location = input$select_location,
                    truth_data_used = truth_data_used,
@@ -223,7 +244,7 @@ shinyServer(function(input, output, session) {
                    pch_forecasts = pch_empty,
                    legend = FALSE,
                    show_pi = input$show_pi,
-                   add_model_past = input$show_model_past,
+                   add_model_past = TRUE, #input$show_model_past,
                    highlight_target_end_date = selected$target_end_date)
     abline(h = 0)
 

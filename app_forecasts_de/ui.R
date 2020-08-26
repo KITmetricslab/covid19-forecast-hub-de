@@ -21,6 +21,11 @@ dashboardPage(
       tabItem(tabName = "forecasts",
               titlePanel("Interactive visualization of forecasts of COVID19 deaths  in Germany"),
               # input elements generated on server side:
+              radioButtons("select_stratification", "Show forecasts by:",
+                           choices = list("Forecast date" = "forecast_date",
+                                          "Forecast horizon" = "horizon"),
+                           selected = "forecast_date", inline = TRUE),
+
               div(style="display:inline-block", uiOutput("inp_select_date")),
               div(style="display:inline-block", selectInput("select_target", label = "Select target:",
                                                             choices = list("cumulative deaths" = "cum death",
@@ -40,7 +45,7 @@ dashboardPage(
                                  choiceValues = c("ECDC", "JHU"),
                                  selected = "ECDC", inline = TRUE),
 
-              checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
+              # checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
               tags$b("Draw rectangle to zoom in, double click to zoom out. Hover over grey line to display numbers (point forecasts and observed)."),
               h3(""),
               # plot:
