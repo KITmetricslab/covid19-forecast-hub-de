@@ -2,15 +2,13 @@
 
 # A German COVID-19 Forecast Hub
 
-#### *This platform is not officially endorsed by KIT or HITS.*
-
 *Beschreibung in deutscher Sprache siehe [hier](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/README_DE.md).*
 
 ## Purpose
 
 This repository assembles forecasts of cumulative and incident COVID-19 deaths and cases in Germany in a standardized format. Forecasts for ICU need will be added in the near future, other forecast targets may follow. The repository is run by members of the [Chair of Econometrics and Statistics at Karlsruhe Institute of Technology](https://statistik.econ.kit.edu/index.php) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/), see [below](#forecast-hub-team).
 
-An interactive visualization of the different forecasts can be found [here](https://jobrac.shinyapps.io/app_forecasts_de/).
+An **interactive visualization** of the different forecasts can be found [here](https://jobrac.shinyapps.io/app_forecasts_de/).
 
 ![static visualization of current forecasts](code/visualization/current_forecasts.png?raw=true)
 
@@ -26,7 +24,7 @@ Our main focus is on **1 through 30 day and 1 through 4 week ahead forecasts of 
 
 Note that our definition of targets parallels the principles outlined [here](https://github.com/reichlab/covid19-forecast-hub#what-forecasts-we-are-tracking-and-for-which-locations) for the US COVID-19 forecast hub.
 
-Note that we currently treat the **ECDC data** available [here](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide) as our ground truth for the national level death forecasts. Our R script to compute cumulative deaths can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/data-truth/ECDC/ECDC.R). For deaths at the Bundeland level we extract data from the [RKI/arcgis Dashboard](https://www.arcgis.com/home/item.html?id=f10774f1c63e40168479a1feb6c7ca74) on a daily level. For historical data we use the archive provided by [ard-data](https://github.com/ard-data/2020-rki-archive). The resulting data set on daily reported deaths can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/RKI).
+Note that we currently treat the **ECDC data** available [here](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide) as our ground truth for the national level death forecasts. Our R script to compute cumulative deaths can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/data-truth/ECDC/ECDC.R). For deaths at the Bundeland level we extract data from the [RKI/arcgis Dashboard](https://www.arcgis.com/home/item.html?id=f10774f1c63e40168479a1feb6c7ca74) on a daily basis. For historical data we use the archive provided by [ard-data](https://github.com/ard-data/2020-rki-archive). The resulting data set on daily reported deaths can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/RKI).
 
 ### Cases
 
@@ -64,7 +62,7 @@ We store point and quantile forecasts in a long format, including information on
 
 ## Data license and reuse
 
-The forecasts assembled in this repository have been created by various independent teams, most of which provided a license with their forecasts. These licenses can be found in the respective subfolders of `data-processed`. Parts of the processing, analysis and validation codes have taken or been adapted from the [US COVID-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) where they were provided under an [MIT license](https://github.com/reichlab/covid19-forecast-hub/blob/master/LICENSE). All codes contained in this repository are equally under the [MIT license](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/LICENSE).
+The forecasts assembled in this repository have been created by various independent teams, most of which provided a license with their forecasts. These licenses can be found in the respective subfolders of `data-processed`. Parts of the processing, analysis and validation codes have been taken or adapted from the [US COVID-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) where they were provided under an [MIT license](https://github.com/reichlab/covid19-forecast-hub/blob/master/LICENSE). All codes contained in this repository are equally under the [MIT license](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/LICENSE).
 
 ## Truth data
 
@@ -95,7 +93,7 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 
 ## Forecast evaluation and ensemble building
 
-One of the goals of this forecast hub is to combine the available forecasts into an ensemble prediction as [already done in the US Forecast Hub](https://github.com/reichlab/covid19-forecast-hub#ensemble-model). This requires evaluating different forecasts, both those submitted by teams and those generated using different ensembling techniques. **We want to emphasize, however, that this is not a competition, but a collaborative effort.** The forecast evaluation method which will be applied is described in [this preprint](https://arxiv.org/abs/2005.12881).
+One of the goals of this forecast hub is to combine the available forecasts into an ensemble prediction, see [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble) for a description of the current unweighted ensemble approach. At a later stage we intend to generate more data-driven ensembles, which requires evaluating different forecasts, both those submitted by teams and those generated using different ensembling techniques. **We want to emphasize, however, that this is not a competition, but a collaborative effort.** The forecast evaluation method which will be applied is described in [this preprint](https://arxiv.org/abs/2005.12881).
 
 ## Forecast hub team
 
@@ -111,7 +109,7 @@ The following persons have contributed to this repository, either by assembling 
 
 ## Related efforts
 
-- [US COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub) run by the [Reich Lab](https://reichlab.io/).
+- [US COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub) run by the [Reich Lab](https://reichlab.io/), see also [this proprint](https://www.medrxiv.org/content/10.1101/2020.08.19.20177493v1).
 - [Code repository for the SARS-CoV2 modelling initiative](https://github.com/timueh/sars-cov2-modelling-initiative)
 
 ## Acknowledgements
