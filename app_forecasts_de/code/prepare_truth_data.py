@@ -18,15 +18,25 @@ def load_ecdc():
     '''
     Loads all relevant RKI and ECDC files.
     '''
+    # ECDC data for Germany
+    df_cd = read_saturdays('ECDC', 'cum_death', 'Germany')
+    df_cc = read_saturdays('ECDC', 'cum_case', 'Germany')
+    df1 = df_cd.merge(df_cc, on=['date', 'location', 'location_name'])
+    
+    # RKI data for Germany and Bundesländer
     df_cd = read_saturdays('RKI', 'cum_death', 'Germany')
     df_cc = read_saturdays('RKI', 'cum_case', 'Germany')
-    df1 = df_cd.merge(df_cc, on=['date', 'location', 'location_name'])
-
+    df2 = df_cd.merge(df_cc, on=['date', 'location', 'location_name'])
+    
+    # Only use ECDC data until RKI data was available
+    df1 = df1[df1.date < df2.date.iloc[0]]
+    
+    # ECDC data for Poland
     df_cd = read_saturdays('ECDC', 'cum_death', 'Poland')
     df_cc = read_saturdays('ECDC', 'cum_case', 'Poland')
-    df2 = df_cd.merge(df_cc, on=['date', 'location', 'location_name'])
+    df3 = df_cd.merge(df_cc, on=['date', 'location', 'location_name'])
 
-    df = pd.concat([df1, df2]).reset_index(drop=True)
+    df = pd.concat([df1, df2, df3]).reset_index(drop=True)
     
     return df
 
