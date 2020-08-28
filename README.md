@@ -12,7 +12,7 @@ An **interactive visualization** of the different forecasts can be found [here](
 
 ![static visualization of current forecasts](code/visualization/current_forecasts.png?raw=true)
 
-The effort parallels the [US COVID-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) run by the UMass-Amherst Influenza Forecasting Center of Excellence based at the [Reich Lab](https://reichlab.io/). We are in close exchange with the Reich Lab team and follow the general structure and [data format](https://github.com/reichlab/covid19-forecast-hub/blob/master/data-processed/README.md) defined there, see this [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Data-Format) for more details. We also re-use software provided by the ReichLab (see [below](#data-license-and-reuse)).
+The effort parallels the [US COVID-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) run by the UMass-Amherst Influenza Forecasting Center of Excellence based at the [Reich Lab](https://reichlab.io/). We are in close exchange with the Reich Lab team and follow the general structure and [data format](https://github.com/reichlab/covid19-forecast-hub/blob/master/data-processed/README.md) defined there, see this [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-Data-Format) for more details. We also re-use software provided by the ReichLab (see [below](#data-license-and-reuse)).
 
 If you are generating forecasts for COVID-19 cases, hospitalizations or deaths in Germany and would like to contribute to this repository do not hesitate to [get in touch](https://statistik.econ.kit.edu/mitarbeiter_2902.php).
 
