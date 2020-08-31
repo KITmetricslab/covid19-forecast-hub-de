@@ -156,7 +156,15 @@ shinyServer(function(input, output, session) {
                          target_end_date == hover_date & type %in% c("point", "observed"))
         point_pred <- data.frame(model = models)
         point_pred <- merge(point_pred, subs, by = "model", all.x = TRUE)
-        selected$point_pred <- round(point_pred$value)
+        # need to shift to fit respective truth data:
+        shift <- rep(0, nrow(point_pred))
+        if(input$select_truths == "ECDC"){
+          shift <- point_pred$shift_ECDC
+        }
+        if(input$select_truths == "JHU"){
+          shift <- point_pred$shift_JHU
+        }
+        selected$point_pred <- round(point_pred$value + shift)
 
         # get truths:
         selected$truths <- c(subset(dat_truth$JHU, date == as.Date(selected$target_end_date) &
@@ -340,10 +348,10 @@ shinyServer(function(input, output, session) {
                   )
                 }))
     pch_full_ae <-
-    legend("topleft", col = cols_models, legend = paste0(models, ": ", selected$point_pred),
-           pt.lwd = 2, bty = "n",
-           pch = 23, pt.bg = ifelse(models %in% input$select_models, cols_models, "white"),
-           pt.cex = 1.3, ncol = 3)
+      legend("topleft", col = cols_models, legend = paste0(models, ": ", selected$point_pred),
+             pt.lwd = 2, bty = "n",
+             pch = 23, pt.bg = ifelse(models %in% input$select_models, cols_models, "white"),
+             pt.cex = 1.3, ncol = 3)
   })
 
 })
