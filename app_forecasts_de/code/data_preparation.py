@@ -35,7 +35,7 @@ VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(-1, 5)] + \
                 [f"{_} wk ahead curr ICU" for _ in range(-1, 5)]+ \
                 [f"{_} wk ahead curr ventilated" for _ in range(-1, 5)]
 
-VALID_QUANTILES = [0.025, 0.975]
+VALID_QUANTILES = [0.025, 0.25, 0.75, 0.975]
 
 dfs = []
 for m in models:
@@ -116,5 +116,33 @@ df.loc[df.location.isin(['GM01', 'GM02', 'GM03', 'GM04', 'GM05', 'GM06', 'GM07',
        'GM08', 'GM09', 'GM10', 'GM11', 'GM12', 'GM13', 'GM14', 'GM15', 'GM16']), 'shift_JHU'] = np.nan
 
 df.drop(columns=['saturday0', 'date', 'shift_target'], inplace=True)
+
+
+# adding first_commit_date
+
+commit_dates = pd.read_csv('../../code/validation/commit_dates.csv')
+
+commit_dates = commit_dates.iloc[1:].reset_index(drop=True)
+
+commit_dates['forecast_date'] = pd.to_datetime(commit_dates.filename.str[:10])
+commit_dates['country'] = commit_dates.filename.transform(lambda x: x[11:].split('-')[0])
+commit_dates['model'] = commit_dates.filename.transform(lambda x: x[11:].split('-', 1)[1][:-4])
+
+GM = ['GM', 'GM01', 'GM02', 'GM03', 'GM04', 'GM05', 'GM06', 'GM07', 'GM08', 
+      'GM09', 'GM10', 'GM11', 'GM12', 'GM13', 'GM14', 'GM15', 'GM16']
+
+location_dict = dict()
+for gm in GM:
+    location_dict[gm] = 'Germany'
+location_dict['PL'] = 'Poland'
+
+df['country'] = df.location.replace(location_dict)
+
+commit_dates.drop(columns=['filename', 'latest_commit'], inplace=True)
+
+df = df.merge(commit_dates, left_on=['forecast_date', 'country', 'model'], right_on=['forecast_date', 'country', 'model'])
+
+df.drop(columns=['country'], inplace=True)
+df.rename(columns={'first_commit': 'first_commit_date'}, inplace=True)
 
 df.to_csv('../data/forecasts_to_plot.csv', index=False)
