@@ -1,7 +1,7 @@
 library(shiny)
 library(pals)
 
-local <- TRUE
+local <- FALSE
 
 # read in plotting functions etc
 if(local){
@@ -37,6 +37,7 @@ forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
 forecasts_to_plot <- subset(forecasts_to_plot, !grepl("-1 wk ahead", target))
+forecasts_to_plot <- subset(forecasts_to_plot, quantile %in% c(0.025, 0.5, 0.975) | is.na(quantile))
 # forecasts_to_plot <- subset(forecasts_to_plot, !(grepl("0 wk ahead", target) & type != "observed"))
 
 # exclude some models because used data is neither ECDC nor JHU:
