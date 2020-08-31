@@ -18,6 +18,20 @@ get_last_saturday <- function(forecast_date){
   (forecast_date - (0:6))[weekdays(forecast_date - (0:6)) == "Saturday"]
 }
 
+# get the truth data source which was used by a certain model on a given date and for a given location
+get_used_truth <- function(truth_data_use, model, location, date){
+  subs <- truth_data_use[truth_data_use$model == model &
+                           truth_data_use$location == location &
+                           truth_data_use$starting_from < date, ]
+  subs <- subs[order(subs$starting_from), ]
+  truth_used <- tail(subs$truth_data_source, 1)
+  if(length(truth_used) == 0){
+    return(NA)
+  }else{
+    return(truth_used)
+  }
+}
+
 # among a set of forecast dates: choose those which are Mondays and those which are Sundays,
 # Saturdays or Fridays if no forecast is available from Monday (or a day closer to Monday)
 choose_relevant_dates <- function(dates){
