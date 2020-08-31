@@ -40,10 +40,10 @@ dashboardPage(
               div(style="display:inline-block",
                   checkboxInput("show_pi", label = "Show 95% prediction interval where available", value = TRUE)
               ),
-              checkboxGroupInput("select_truths", "Select truth data to display:",
-                                 choiceNames = c("ECDC/RKI", "JHU"),
-                                 choiceValues = c("ECDC", "JHU"),
-                                 selected = "ECDC", inline = TRUE),
+              radioButtons("select_truths", "Select handling of truth data:",
+                                 choiceNames = c("Show original forecasts", "Shift all forecasts to ECDC/RKI data", "Shift all forecasts to JHU data"),
+                                 choiceValues = c("both", "ECDC", "JHU"),
+                                 selected = c("both"), inline = TRUE),
 
               # checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
               tags$b("Draw rectangle to zoom in, double click to zoom out. Hover over grey line to display numbers (point forecasts and observed)."),

@@ -21,6 +21,7 @@ add_forecast_to_plot <- function(forecasts_to_plot,
                                  location,
                                  target,
                                  model,
+                                 shift_to = NULL,
                                  add_points = TRUE,
                                  add_intervals = TRUE,
                                  add_past = FALSE,
@@ -31,6 +32,12 @@ add_forecast_to_plot <- function(forecasts_to_plot,
   if((is.null(timezero) & is.null(horizon)) |
      (!is.null(timezero) & ! is.null(horizon))){
     cat("Please specify exactly one out of timezero and horizon.")
+  }
+
+  # shift to desired truth data source if specified:
+  if(!is.null(shift_to)){
+    if(shift_to == "ECDC") forecasts_to_plot$value <- forecasts_to_plot$value + forecasts_to_plot$shift_ECDC
+    if(shift_to == "JHU") forecasts_to_plot$value <- forecasts_to_plot$value + forecasts_to_plot$shift_JHU
   }
 
   selection_target <- grepl(paste(horizon, target), forecasts_to_plot$target) # target matched target against either only "type"
@@ -79,6 +86,7 @@ add_forecast_to_plot <- function(forecasts_to_plot,
                                                selection_timezero &
                                                forecasts_to_plot$location == location &
                                                forecasts_to_plot$type %in% c("point", "observed")), ]
+      subs_points_truth <- subs_points_truth[order(subs_points_truth$target_end_date), ]
       # draw points
       points(subs_points_truth$target_end_date, subs_points_truth$value, col = col,
              pch = pch, lwd = 1, type = "b")
@@ -202,7 +210,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            timezero = NULL,
                            horizon = NULL,
                            models,
-                           selected_truth = "ECDC",
+                           selected_truth = "both",
                            location = "GM",
                            start = as.Date("2020-03-01"), end = Sys.Date() + 28,
                            ylim = c(0, 100000),
@@ -223,6 +231,9 @@ plot_forecasts <- function(forecasts_to_plot, truth,
   }
   abline(v = highlight_target_end_date)
 
+  # should forecasts be shifted in plot and if yes, to which truth data source?
+  shift_to <- if(selected_truth == "both") NULL else selected_truth
+
   # add forecast bands:
   if(length(models) > 0){
     if(show_pi){
@@ -231,6 +242,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                              target = target,
                              timezero = timezero,
                              horizon = horizon,
+                             shift_to = shift_to,
                              location = location,
                              model = models[i], add_intervals = TRUE,
                              add_past = FALSE, add_points = FALSE,
@@ -240,10 +252,15 @@ plot_forecasts <- function(forecasts_to_plot, truth,
   }
 
   # add truths:
-  for(t in selected_truth){
-    add_truth_to_plot(truth = truth[[t]], target = target,
+  if(selected_truth %in% c("ECDC", "both")){
+    add_truth_to_plot(truth = truth[["ECDC"]], target = target,
                       location = location, timezero = timezero,
-                      pch = pch_truths[t])
+                      pch = pch_truths["ECDC"])
+  }
+  if(selected_truth %in% c("JHU", "both")){
+    add_truth_to_plot(truth = truth[["JHU"]], target = target,
+                      location = location, timezero = timezero,
+                      pch = pch_truths["JHU"])
   }
 
   # add point forecasts:
@@ -254,6 +271,7 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            timezero = timezero,
                            location = location,
                            horizon = horizon,
+                           shift_to = shift_to,
                            model = models[i],
                            add_points = TRUE, add_intervals = FALSE,
                            pch = pch_forecasts[truth_data_used[models[i]]],

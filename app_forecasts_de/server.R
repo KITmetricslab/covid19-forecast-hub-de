@@ -1,9 +1,17 @@
 library(shiny)
 library(pals)
 
+local <- TRUE
+
 # read in plotting functions etc
-source("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/code/R/plot_functions.R")
-source("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/code/R/auxiliary_functions.R")
+if(local){
+  source(("../code/R/plot_functions.R"))
+  source("../code/R/auxiliary_functions.R")
+
+}else{
+  source("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/code/R/plot_functions.R")
+  source("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/code/R/auxiliary_functions.R")
+}
 
 # Choose the right option, depending on your system:
 # ----------------------------------------------------------------------------
@@ -17,7 +25,6 @@ Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 # ----------------------------------------------------------------------------
 
 # read in data set compiled specificaly for Shiny app:
-local <- FALSE
 if(local){
   forecasts_to_plot <- read.csv("data/forecasts_to_plot.csv",
                                 stringsAsFactors = FALSE)
@@ -52,6 +59,9 @@ locations <- c("Germany" = "GM", "Poland" = "PL", locations)
 
 # get names of models which appear in the data:
 models <- sort(as.character(unique(forecasts_to_plot$model)))
+
+# set default for selected models at start:
+default_models <- if("KITCOVIDhub-ensemble" %in% models) "KITCOVIDhub-ensemble" else models
 
 # assign colours to models (currently restricted to eight):
 cols_models <- glasbey(length(models) + 1)[-1]
@@ -140,9 +150,9 @@ shinyServer(function(input, output, session) {
         selected$point_pred <- round(point_pred$value)
 
         # get truths:
-        selected$truths <- c(subset(dat_truth$ECDC, date == as.Date(selected$target_end_date) &
+        selected$truths <- c(subset(dat_truth$JHU, date == as.Date(selected$target_end_date) &
                                       location == input$select_location)[, input$select_target],
-                             subset(dat_truth$JHU, date == as.Date(selected$target_end_date) &
+                             subset(dat_truth$ECDC, date == as.Date(selected$target_end_date) &
                                       location == input$select_location)[, input$select_target])
       }else{
         selected$target_end_date <- NULL
@@ -157,7 +167,7 @@ shinyServer(function(input, output, session) {
     checkboxGroupInput("select_models", "Select models to display:",
                        choiceNames = models,
                        choiceValues = models,
-                       selected = models,
+                       selected = default_models,
                        inline = TRUE)
   )
 
@@ -177,6 +187,14 @@ shinyServer(function(input, output, session) {
                              choiceNames = models,
                              choiceValues = models,
                              selected = models, inline = TRUE)
+  })
+
+  # set to default (necessary upon launch):
+  observe({
+    updateCheckboxGroupInput(session, "select_models",
+                             choiceNames = models,
+                             choiceValues = models,
+                             selected = default_models, inline = TRUE)
   })
 
   # input element to select forecast date:
@@ -258,8 +276,9 @@ shinyServer(function(input, output, session) {
            pch = ifelse(models %in% input$select_models,
                         pch_full[truth_data_used[models]], pch_empty[truth_data_used[models]]),
            pt.cex = 1.3, ncol = 3)
-    legend("top", col = "black", legend = paste0(c("JHU", "ECDC/RKI"), ": ", selected$truths), lty = 0, bty = "n",
-           pch = ifelse(truths %in% input$select_truths, pch_full, pch_empty),
+    legend("left", col = "black", legend = paste0(c("Truth data", "JHU", "ECDC/RKI"), ": ",
+                                                  c("", selected$truths)), lty = 0, bty = "n",
+           pch = c(NA, ifelse(truths %in% input$select_truths, pch_full, pch_empty)),
            pt.cex = 1.3)
 
     # add title manually:
