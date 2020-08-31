@@ -93,6 +93,15 @@ truth_data_used0 <- read.csv("https://raw.githubusercontent.com/KITmetricslab/co
 truth_data_used <- truth_data_used0$truth_data
 names(truth_data_used) <- truth_data_used0$model
 
+# get evaluation data:
+dat_evaluation <- list()
+dat_evaluation$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/evaluation/evaluation-ECDC.csv",
+                                colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
+                                stringsAsFactors = FALSE)
+dat_evaluation$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/evaluation/evaluation-JHU.csv",
+                               colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
+                               stringsAsFactors = FALSE)
+
 # Define server logic:
 shinyServer(function(input, output, session) {
 
@@ -283,6 +292,58 @@ shinyServer(function(input, output, session) {
 
     # add title manually:
     title(names(locations)[which(locations == input$select_location)])
+  })
+
+  # plot (all wrapped up in function plot_forecasts)
+  output$plot_evaluation <- renderPlot({
+    par(mar = c(4.5, 5, 4, 2), las = 1)
+
+    horizon <- if(input$select_stratification == "horizon") input$select_horizon else NULL
+    timezero <- if(is.null(input$select_stratification)){
+      as.Date("2020-08-24")
+    }else{
+      if(!is.null(input$select_date)){
+        if(input$select_stratification == "forecast_date") as.Date(input$select_date) else NULL
+      }else{
+        as.Date("2020-08-24")
+      }
+    }
+
+    # plot scores:
+    plot_scores(scores = dat_evaluation,
+                target = input$select_target,
+                timezero = timezero,
+                horizon = horizon,
+                selected_truth = input$select_truths,
+                models = input$select_models,
+                location = input$select_location,
+                start = if(is.null(coords$brush$xlim)){
+                  as.Date("2020-04-01")
+                }else{
+                  coords$brush$xlim[1]
+                },
+                end = if(is.null(coords$brush$xlim)){
+                  Sys.Date() + 28
+                }else{
+                  coords$brush$xlim[2]
+                },
+                col = cols_models[input$select_models], alpha.col = 0.5)
+    abline(h = 0)
+
+    # add title manually:
+    title(paste("Forecast evaluation using weighted interval score and absolute error",
+                if(input$select_truths %in% c("ECDC", "JHU")){
+                  paste(
+                    "based on",
+                    input$select_truths, "data",
+                    "(all forecasts have been shifted so that last available observations are aligned)"
+                  )
+                }))
+    pch_full_ae <-
+    legend("topleft", col = cols_models, legend = paste0(models, ": ", selected$point_pred),
+           pt.lwd = 2, bty = "n",
+           pch = 23, pt.bg = ifelse(models %in% input$select_models, cols_models, "white"),
+           pt.cex = 1.3, ncol = 3)
   })
 
 })

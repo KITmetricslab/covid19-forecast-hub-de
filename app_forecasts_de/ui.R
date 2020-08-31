@@ -44,6 +44,7 @@ dashboardPage(
                                  choiceNames = c("Show original forecasts", "Shift all forecasts to ECDC/RKI data", "Shift all forecasts to JHU data"),
                                  choiceValues = c("both", "ECDC", "JHU"),
                                  selected = c("both"), inline = TRUE),
+              checkboxInput("show_evaluation", label = "Show evaluation (in development)", value = FALSE),
 
               # checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
               tags$b("Draw rectangle to zoom in, double click to zoom out. Hover over grey line to display numbers (point forecasts and observed)."),
@@ -52,7 +53,11 @@ dashboardPage(
               plotOutput("plot_forecasts", height = 500,
                          click = "coord_click", hover = "coord_hover",
                          brush = brushOpts(id = "coord_brush", resetOnNew = TRUE),
-                         dblclick = clickOpts("coord_dblclick"))
+                         dblclick = clickOpts("coord_dblclick")),
+              # evaluation plot:
+              conditionalPanel("input.show_evaluation",
+                               plotOutput("plot_evaluation", height = 500))
+
       ),
 
       # tab on background:

@@ -82,10 +82,10 @@ add_forecast_to_plot <- function(forecasts_to_plot,
     if(!is.null(timezero)){
       # select the relevant points:
       subs_points_truth <- forecasts_to_plot[which(forecasts_to_plot$model == model &
-                                               selection_target &
-                                               selection_timezero &
-                                               forecasts_to_plot$location == location &
-                                               forecasts_to_plot$type %in% c("point", "observed")), ]
+                                                     selection_target &
+                                                     selection_timezero &
+                                                     forecasts_to_plot$location == location &
+                                                     forecasts_to_plot$type %in% c("point", "observed")), ]
       subs_points_truth <- subs_points_truth[order(subs_points_truth$target_end_date), ]
       # draw points
       points(subs_points_truth$target_end_date, subs_points_truth$value, col = col,
@@ -188,7 +188,9 @@ highlight_timezero <- function(timezero, ylim = c(-1000, 100000)){
 # Arguments:
 # forecasts_to_plot: the data.frame data_to_plot containing the relevant forecasts
 # truth: named list containing truth data.frames
-# timezero: forecasts from which date are to be shown?
+# timezero: the timezero if showing forecasts by when they were issued
+# horizon: the horizon if showing forecasts by horizon
+# NOTE; Only one out of timezero and horizon can be specified
 # location: which location is to be shown?
 # models: the model sfrom which forecasts are to be shown
 # selected_truth: names of the truth data sets to be shown
@@ -287,6 +289,12 @@ plot_forecasts <- function(forecasts_to_plot, truth,
 
 }
 
+# helper function to split a vector into a list of vectors, splitting
+# whenever diff > step
+# needed to plot band which are interrupted when teams do not forecast a given week
+# Arguments:
+# x: the vector
+# step: the "usual" difference between two subsequent values usually 7 days. Split if exceeded.
 split_indices_at_gaps <- function(x, step = 7){
   indices <- seq_along(x)
   ret <- list()
@@ -301,6 +309,11 @@ split_indices_at_gaps <- function(x, step = 7){
   return(ret)
 }
 
+# Plot one connected forecast band, i.e. where all forecasts are available for a
+# row of consecutive weeks
+# Arguments:
+# dates: the dates, i.e. x-values
+# lower, upper: coordinates of the lower and upper end of the forecast band.
 plot_one_band <- function(dates, lower, upper, ...){
   if(length(dates) == 1){
     dates <- c(dates - 2, dates, dates + 2)
@@ -310,6 +323,13 @@ plot_one_band <- function(dates, lower, upper, ...){
   polygon(c(dates, rev(dates)), c(lower, rev(upper)), ...)
 }
 
+# Plot forecast bands for weekly forecasts where there is potentially a gap in covered
+# forecast dates
+# Arguments:
+# dates: the dates
+# lower, upper: coordinates of the lower and upper end of the forecast band.
+# separate_all: Show separate rectangles for each forecast rather than a connected band
+# This is currently used when displaying forecasts by horizon
 plot_weekly_bands <- function(dates, lower, upper, separate_all = FALSE, ...){
   indices <- split_indices_at_gaps(as.numeric(dates),
                                    step = ifelse(separate_all, 1, 7))
@@ -317,5 +337,165 @@ plot_weekly_bands <- function(dates, lower, upper, separate_all = FALSE, ...){
     plot_one_band(dates[indices[[i]]],
                   lower[indices[[i]]],
                   upper[indices[[i]]], ...)
+  }
+}
+
+
+# Plot scores (WIS and AE)
+# Arguments:
+# scores: the data.frame containing all scores
+# target: the target
+# timezero: the timezero if showing forecasts by when they were issued
+# horizon: the horizon if showing forecasts by horizon
+# NOTE; Only one out of timezero and horizon can be specified
+# models: the models to be shown
+# location: the selected location
+# start: left xlim
+# end: right xlim
+# cols: colours
+# alpha.col: the degree of transparenca for shaded areas
+plot_scores <- function(scores,
+                        target  ="cum death",
+                        timezero = NULL, horizon = NULL,
+                        selected_truth,
+                        models,
+                        location = "GM",
+                        start = as.Date("2020-03-01"), end = Sys.Date() + 28,
+                        cols,
+                        alpha.col = 0.5,
+                        location_legend = "left"){
+
+
+  if(!selected_truth %in% names(scores)){
+    plot(NULL, xlim = 0:1, ylim = 0:1)
+    legend("center", legend = "Evaluation requires selecting a preferred truth data source.")
+  }else{
+    # select scores for the chosen truth data source:
+    scores <- scores[[selected_truth]]
+
+    # some subsetting to be able to compute ylim:
+
+    # logic vector describing which rows contain correct target; removing 0 wk ahead
+    selection_target <- grepl(paste(horizon, target), scores$target) &
+      !grepl("0 wk ahead", scores$target)
+    # logic vector describing which rows contain correct timezero
+    # all TRUE if forecasts shown by horizon
+    selection_timezero <- if(is.null(timezero)){
+      rep(TRUE, nrow(scores))
+    }else{
+      scores$timezero == timezero
+    }
+
+    # select relevant subset of scores data:
+    scores <- scores[which(scores$model %in% models &
+                             selection_target &
+                             scores$location == location &
+                             selection_timezero), ]
+
+    # compute ylim:
+    yl <- c(0, 1.2*max(c(10, scores$wis, scores$ae), na.rm = TRUE))
+
+    # initialize empty plot:
+    empty_plot(start = start, target = "wis", end = end, ylim = yl)
+
+    # horizontal shifts for scores of different models
+    shifts <- c(0, 1, -1, 2, -2)
+
+    # add scores per model:
+    if(length(models) <= 5){
+      for(i in seq_along(models)){
+        add_scores_to_plot(scores = scores,
+                           target = target,
+                           timezero = timezero, horizon = horizon,
+                           model = models[i],
+                           location = location,
+                           col = cols[i], alpha.col = alpha.col,
+                           shift = shifts[i])
+      }
+    }else{
+      # message to select less models if too many selected
+      legend("center", legend = "Evaluation can be shown for at most five models. Please select fewer models.")
+    }
+
+    # add legend:
+    legend(location_legend, legend = c("Absolute error", "",
+                                       "Decomposition of WIS:", "penalties for under-prediction",
+                                       "spread of forecasts", "penalties for over-prediction"),
+           pch = c(5, NA, NA, 22, 22, 22),
+           pt.bg = c(NA, NA, NA, modify_alpha("black", 0.3), "black", "white"), bty = "n")
+  }
+}
+
+# Adding scores for a given model to the plot:
+# Arguments:
+# scores: the data.frame containing the scores
+# target: the target
+# timezero: the timezero if showing forecasts by when they were issued
+# horizon: the horizon if showing forecasts by horizon
+# NOTE; Only one out of timezero and horizon can be specified
+# model: the model for which to add scores to plot
+# location: the selected location
+# col: color
+# alpha.col: alpha value for lighter/transparent colur used in upper "bin"
+# shift: horizontal shift to avoid overplotting
+add_scores_to_plot <- function(scores, target  ="cum death",
+                               timezero = NULL, horizon = NULL,
+                               model,
+                               location = "GM",
+                               col = "black", alpha.col = 0.5, shift = 0){
+
+  # logic vector indicating which rows contain relevant target
+  # target matched against either only "type" of target (death or case) or also horizon.
+  # moreover exclude 0 wk ahead
+  selection_target <- grepl(paste(horizon, target), scores$target) &!grepl("0 wk ahead", scores$target)
+  # logic vector indicating which rows contain relevant timezero
+  selection_timezero <- if(is.null(timezero)){
+    rep(TRUE, nrow(scores))
+  }else{
+    scores$timezero == timezero
+  }
+
+  # select relevant rows of score data:
+  scores <- scores[which(scores$model == model &
+                           selection_target &
+                           scores$location == location &
+                           selection_timezero), ]
+
+  # add little barplots for scores
+  for(i in seq_along(scores$target_end_date)){
+    add_score_decomp(x = scores$target_end_date[i] + shift,
+                     pen_l = scores$wgt_pen_l[i],
+                     pen_u = scores$wgt_pen_u[i],
+                     iw = scores$wgt_iw[i], col = col)
+  }
+  # add points for absolute errors:
+  points(scores$target_end_date + shift, scores$ae, pch = 23, col = col, bg = "white",
+         lwd = 3, cex = 1.1)
+}
+
+# Helper function to show WIS decomposition using little stackec barplots.
+# Arguments:
+# x: the x values, typically dates
+# pen_l: penalties for overprediction
+# pen_u: penalties for underprediction
+# iw: average interval widths
+# col: color
+# alpha.col: alpha value for lighter/transparent colur used in upper "bin"
+# width: the width of the bar
+add_score_decomp <- function(x, pen_l, pen_u, iw, col, alpha.col = 0.3, width = 0.8){
+  # generate transparent color
+  col_transp <- modify_alpha(col, alpha.col)
+  if(!is.na(pen_u)){ # plot only when pen_u is available. Otherwise wi can get plotted even though the others are NA
+    # bottom bar: penalty for overprediction
+    if(pen_l > 0) rect(xleft = x - width/2, ybottom = 0, xright = x + width/2, ytop = pen_l,
+                       col = "white", border = col)
+    # middle bar: width of prediction intervals
+    rect(xleft = x - width/2, ybottom = pen_l, xright = x + width/2, ytop = pen_l + iw,
+         col = col, border = col)
+    # top bar: penalty for underprediction
+    if(pen_u > 0){
+      rect(xleft = x - width/2, ybottom = pen_l + iw, xright = x + width/2, ytop = pen_l + iw + pen_u,
+           col = col_transp, border = col)
+    }
   }
 }
