@@ -367,7 +367,7 @@ plot_scores <- function(scores,
 
 
   if(!selected_truth %in% names(scores)){
-    plot(NULL, xlim = 0:1, ylim = 0:1)
+    plot(NULL, xlim = 0:1, ylim = 0:1, axes = FALSE, xlab = "", ylab = "")
     legend("center", legend = "Evaluation requires selecting a preferred truth data source.")
   }else{
     # select scores for the chosen truth data source:
@@ -390,6 +390,8 @@ plot_scores <- function(scores,
     scores <- scores[which(scores$model %in% models &
                              selection_target &
                              scores$location == location &
+                             scores$target_end_date >= start & # restrict to selected window
+                             scores$target_end_date <= end &
                              selection_timezero), ]
 
     # compute ylim:
