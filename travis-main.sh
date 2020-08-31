@@ -33,6 +33,7 @@ if [[ "$TRAVIS_EVENT_TYPE" == *"pull_request"* ]]; then
 fi
 
 if [[ "$TRAVIS_EVENT_TYPE" == *"cron"* ]]; then
+   pip3 install -U epiweeks
    echo "updating truth data..."
    bash ./travis/cron-master.sh
    bash ./travis/push.sh

@@ -1,8 +1,17 @@
 library(shiny)
 library(pals)
 
+local <- FALSE
+
 # read in plotting functions etc
-source("code/app_functions.R")
+if(local){
+  source(("../code/R/plot_functions.R"))
+  source("../code/R/auxiliary_functions.R")
+
+}else{
+  source("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/code/R/plot_functions.R")
+  source("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/code/R/auxiliary_functions.R")
+}
 
 # Choose the right option, depending on your system:
 # ----------------------------------------------------------------------------
@@ -16,7 +25,6 @@ Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 # ----------------------------------------------------------------------------
 
 # read in data set compiled specificaly for Shiny app:
-local <- FALSE
 if(local){
   forecasts_to_plot <- read.csv("data/forecasts_to_plot.csv",
                                 stringsAsFactors = FALSE)
@@ -28,6 +36,9 @@ if(local){
 forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
 forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
 forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
+forecasts_to_plot <- subset(forecasts_to_plot, !grepl("-1 wk ahead", target))
+forecasts_to_plot <- subset(forecasts_to_plot, quantile %in% c(0.025, 0.5, 0.975) | is.na(quantile))
+# forecasts_to_plot <- subset(forecasts_to_plot, !(grepl("0 wk ahead", target) & type != "observed"))
 
 # exclude some models because used data is neither ECDC nor JHU:
 models_to_exclude <- c("Imperial-ensemble1")
@@ -50,33 +61,25 @@ locations <- c("Germany" = "GM", "Poland" = "PL", locations)
 # get names of models which appear in the data:
 models <- sort(as.character(unique(forecasts_to_plot$model)))
 
+# set default for selected models at start:
+default_models <- if("KITCOVIDhub-ensemble" %in% models) "KITCOVIDhub-ensemble" else models
+
 # assign colours to models (currently restricted to eight):
 cols_models <- glasbey(length(models) + 1)[-1]
 names(cols_models) <- models
 
 # get truth data:
 dat_truth <- list()
-dat_truth$JHU <- rbind(
-  get_truths(file_cum_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Deaths_Germany.csv",
-             file_inc_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Incident%20Deaths_Germany.csv",
-             file_cum_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Cases_Germany.csv",
-             file_inc_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Incident%20Cases_Germany.csv"),
-  get_truths(file_cum_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Deaths_Poland.csv",
-             file_inc_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Incident%20Deaths_Poland.csv",
-             file_cum_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Cases_Poland.csv",
-             file_inc_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Incident%20Cases_Poland.csv")
-)
+dat_truth$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/truth_to_plot_jhu.csv",
+                          colClasses = list("date" = "Date"))
+colnames(dat_truth$JHU) <- gsub("inc_", "inc ", colnames(dat_truth$JHU)) # for matching with targets
+colnames(dat_truth$JHU) <- gsub("cum_", "cum ", colnames(dat_truth$JHU)) # for matching with targets
 
-dat_truth$ECDC <- rbind(
-  get_truths(file_cum_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Cumulative%20Deaths_Germany.csv",
-             file_inc_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Incident%20Deaths_Germany.csv",
-             file_cum_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Cumulative%20Cases_Germany.csv",
-             file_inc_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Incident%20Cases_Germany.csv"),
-  get_truths(file_cum_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/ECDC/truth_ECDC-Cumulative%20Deaths_Poland.csv",
-             file_inc_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/ECDC/truth_ECDC-Incident%20Deaths_Poland.csv",
-             file_cum_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/ECDC/truth_ECDC-Cumulative%20Cases_Poland.csv",
-             file_inc_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/ECDC/truth_ECDC-Incident%20Cases_Poland.csv")
-)
+
+dat_truth$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/truth_to_plot_ecdc.csv",
+                           colClasses = list("date" = "Date"))
+colnames(dat_truth$ECDC) <- gsub("inc_", "inc ", colnames(dat_truth$ECDC)) # for matching with targets
+colnames(dat_truth$ECDC) <- gsub("cum_", "cum ", colnames(dat_truth$ECDC)) # for matching with targets
 
 
 # define point shapes for different truth data sources:
@@ -90,6 +93,15 @@ truth_data_used0 <- read.csv("https://raw.githubusercontent.com/KITmetricslab/co
                              stringsAsFactors = FALSE)
 truth_data_used <- truth_data_used0$truth_data
 names(truth_data_used) <- truth_data_used0$model
+
+# get evaluation data:
+dat_evaluation <- list()
+dat_evaluation$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/evaluation/evaluation-ECDC.csv",
+                                colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
+                                stringsAsFactors = FALSE)
+dat_evaluation$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/evaluation/evaluation-JHU.csv",
+                               colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
+                               stringsAsFactors = FALSE)
 
 # Define server logic:
 shinyServer(function(input, output, session) {
@@ -134,18 +146,31 @@ shinyServer(function(input, output, session) {
         selected$target_end_date <- hover_date
         # get point estimates:
         subs <- subset(forecasts_to_plot,
-                       timezero == as.Date(input$select_date) &
+                       (if(input$select_stratification == "forecast_date"){
+                         timezero == as.Date(input$select_date)
+                       } else TRUE) &
+                         (if(input$select_stratification == "horizon" & !is.null(input$select_horizon)){
+                           grepl(input$select_horizon, target)
+                         } else TRUE) &
                          grepl(input$select_target, target) &
                          location == input$select_location &
                          target_end_date == hover_date & type %in% c("point", "observed"))
         point_pred <- data.frame(model = models)
         point_pred <- merge(point_pred, subs, by = "model", all.x = TRUE)
-        selected$point_pred <- round(point_pred$value)
+        # need to shift to fit respective truth data:
+        shift <- rep(0, nrow(point_pred))
+        if(input$select_truths == "ECDC"){
+          shift <- point_pred$shift_ECDC
+        }
+        if(input$select_truths == "JHU"){
+          shift <- point_pred$shift_JHU
+        }
+        selected$point_pred <- round(point_pred$value + shift)
 
         # get truths:
-        selected$truths <- c(subset(dat_truth$ECDC, date == as.Date(selected$target_end_date) &
+        selected$truths <- c(subset(dat_truth$JHU, date == as.Date(selected$target_end_date) &
                                       location == input$select_location)[, input$select_target],
-                             subset(dat_truth$JHU, date == as.Date(selected$target_end_date) &
+                             subset(dat_truth$ECDC, date == as.Date(selected$target_end_date) &
                                       location == input$select_location)[, input$select_target])
       }else{
         selected$target_end_date <- NULL
@@ -160,7 +185,8 @@ shinyServer(function(input, output, session) {
     checkboxGroupInput("select_models", "Select models to display:",
                        choiceNames = models,
                        choiceValues = models,
-                       selected = models, inline = TRUE)
+                       selected = default_models,
+                       inline = TRUE)
   )
 
   # uncheck all:
@@ -181,9 +207,22 @@ shinyServer(function(input, output, session) {
                              selected = models, inline = TRUE)
   })
 
+  # set to default (necessary upon launch):
+  observe({
+    updateCheckboxGroupInput(session, "select_models",
+                             choiceNames = models,
+                             choiceValues = models,
+                             selected = default_models, inline = TRUE)
+  })
+
   # input element to select forecast date:
   output$inp_select_date <- renderUI(
-    selectInput("select_date", "Select forecast date:", choices = timezeros)
+    if(input$select_stratification == "forecast_date" || is.null(input$select_stratification)){
+      selectInput("select_date", "Select forecast date:", choices = timezeros)
+    }else{
+      selectInput("select_horizon", "Select forecast horizon:",
+                  choices = c("1 wk ahead", "2 wk ahead", "3 wk ahead", "4 wk ahead"))
+    }
   )
 
   # input element to select location:
@@ -195,10 +234,21 @@ shinyServer(function(input, output, session) {
   output$plot_forecasts <- renderPlot({
     par(mar = c(4.5, 5, 4, 2), las = 1)
 
+    horizon <- if(input$select_stratification == "horizon") input$select_horizon else NULL
+    timezero <- if(is.null(input$select_stratification)){
+      as.Date("2020-08-24")
+    }else{
+      if(!is.null(input$select_date)){
+        if(input$select_stratification == "forecast_date") as.Date(input$select_date) else NULL
+      }else{
+        as.Date("2020-08-24")
+      }
+    }
+
     # determine ylim:
     yl <-
       if(is.null(coords$brush$ylim)){
-        if(is.null(input$select_location)){
+        if(is.null(input$select_location) | is.null(input$select_stratification)){
           c(0, 12000)
         }else{
           c(0, 1.2*max(c(dat_truth$ECDC[dat_truth$ECDC$location == input$select_location, input$select_target],
@@ -213,7 +263,8 @@ shinyServer(function(input, output, session) {
     plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                    truth = dat_truth,
                    target = input$select_target,
-                   timezero = if(is.null(input$select_date)){as.Date("2020-06-01")}else{as.Date(input$select_date)},
+                   timezero = timezero,
+                   horizon = horizon,
                    models = input$select_models,
                    location = input$select_location,
                    truth_data_used = truth_data_used,
@@ -234,7 +285,7 @@ shinyServer(function(input, output, session) {
                    pch_forecasts = pch_empty,
                    legend = FALSE,
                    show_pi = input$show_pi,
-                   add_model_past = input$show_model_past,
+                   add_model_past = TRUE, #input$show_model_past,
                    highlight_target_end_date = selected$target_end_date)
     abline(h = 0)
 
@@ -243,12 +294,65 @@ shinyServer(function(input, output, session) {
            pch = ifelse(models %in% input$select_models,
                         pch_full[truth_data_used[models]], pch_empty[truth_data_used[models]]),
            pt.cex = 1.3, ncol = 3)
-    legend("top", col = "black", legend = paste0(c("JHU", "ECDC/RKI"), ": ", selected$truths), lty = 0, bty = "n",
-           pch = ifelse(truths %in% input$select_truths, pch_full, pch_empty),
+    legend("left", col = "black", legend = paste0(c("Truth data", "JHU", "ECDC/RKI"), ": ",
+                                                  c("", selected$truths)), lty = 0, bty = "n",
+           pch = c(NA, ifelse(truths %in% input$select_truths, pch_full, pch_empty)),
            pt.cex = 1.3)
 
     # add title manually:
     title(names(locations)[which(locations == input$select_location)])
+  })
+
+  # plot (all wrapped up in function plot_forecasts)
+  output$plot_evaluation <- renderPlot({
+    par(mar = c(4.5, 5, 4, 2), las = 1)
+
+    horizon <- if(input$select_stratification == "horizon") input$select_horizon else NULL
+    timezero <- if(is.null(input$select_stratification)){
+      as.Date("2020-08-24")
+    }else{
+      if(!is.null(input$select_date)){
+        if(input$select_stratification == "forecast_date") as.Date(input$select_date) else NULL
+      }else{
+        as.Date("2020-08-24")
+      }
+    }
+
+    # plot scores:
+    plot_scores(scores = dat_evaluation,
+                target = input$select_target,
+                timezero = timezero,
+                horizon = horizon,
+                selected_truth = input$select_truths,
+                models = input$select_models,
+                location = input$select_location,
+                start = if(is.null(coords$brush$xlim)){
+                  as.Date("2020-04-01")
+                }else{
+                  coords$brush$xlim[1]
+                },
+                end = if(is.null(coords$brush$xlim)){
+                  Sys.Date() + 28
+                }else{
+                  coords$brush$xlim[2]
+                },
+                col = cols_models[input$select_models], alpha.col = 0.5)
+    abline(h = 0)
+
+    # add title manually:
+    title(paste("Forecast evaluation using weighted interval score and absolute error",
+                if(input$select_truths %in% c("ECDC", "JHU")){
+                  paste(
+                    "based on",
+                    input$select_truths, "data",
+                    "(all forecasts have been shifted so that last available observations are aligned)"
+                  )
+                }))
+    pch_full_ae <-
+      legend("topleft", col = cols_models, legend = paste0(models, ": ", selected$point_pred),
+             pt.lwd = 2, bty = "n",
+             pch = 23, pt.bg = ifelse(models %in% input$select_models, cols_models, "white"),
+             pt.cex = 1.3, ncol = 3)
   })
 
 })

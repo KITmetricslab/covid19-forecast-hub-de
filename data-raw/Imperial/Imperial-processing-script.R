@@ -76,3 +76,4 @@ for(i in 1:length(filepaths)){
   }
   
 }
+#Might get warning for is.na CALL, should be fine

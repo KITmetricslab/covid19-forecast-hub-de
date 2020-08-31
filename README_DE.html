@@ -182,22 +182,31 @@ summary {
 
 <div id="a-german-covid-19-forecast-hub---zusammenstellung-von-vorhersagen-für-covid-19-todesfälle-in-deutschland" class="section level1">
 <h1>A German COVID-19 Forecast Hub - Zusammenstellung von Vorhersagen für COVID-19 Todesfälle in Deutschland</h1>
-<div id="dieses-projekt-befindet-sich-in-der-entwicklungsphase-und-ist-noch-nicht-operationell.-dies-ist-keine-offizielle-kit--oder-hits-plattform." class="section level3">
-<h3>Dieses Projekt befindet sich in der Entwicklungsphase und ist noch nicht operationell. Dies ist keine offizielle KIT- oder HITS-Plattform.</h3>
 <p><em>Description in English available <a href="https://github.com/KITmetricslab/covid19-forecast-hub-de/">here</a>.</em></p>
-</div>
 <div id="zweck" class="section level2">
 <h2>Zweck</h2>
 <p>Dieses Repository dient dazu, Vorhersagen für kumulative und inzidente COVID-19-Todeszahlen in einem standardisierten Format zusammenzutragen. Es wird von Mitgliedern des <a href="https://statistik.econ.kit.edu/index.php">Lehrstuhl für Ökonometrie und Statistik am Karslruher Institut für Technologie</a> und der <a href="https://www.h-its.org/research/cst/">Computational Statistics Gruppe am Heidelberger Institut für Theoretische Studien</a> betrieben, siehe Auflistung unten.</p>
-<p>Eine interaktive Visualisierung der verschiedenen Vorhersagen ist <a href="https://jobrac.shinyapps.io/app_forecasts_de/">hier</a> verfügbar.</p>
+<p>Eine <strong>interaktive Visualisierung</strong> der verschiedenen Vorhersagen ist <a href="https://jobrac.shinyapps.io/app_forecasts_de/">hier</a> verfügbar.</p>
 <p>Dieses Projekt ist vom <a href="https://github.com/reichlab/covid19-forecast-hub">US COVID-19 Forecast Hub</a> inspiriert, der vom <a href="https://reichlab.io/">Reich Lab</a> / UMass-Amherst Influenza Forecasting Center of Excellence betrieben wird. Wir stehen in engem Austausch mit dem Reich Lab und übernehmen weitgehend die dort festgelegten Strukturen und <a href="https://github.com/reichlab/covid19-forecast-hub#data-model">Datenformate</a>, siehe auch diesen <a href="https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Data-Format">Wiki-Eintrag</a> (auf englisch). Ausserdem verwenden wir vom ReichLab zur Verfügung gestellte Software (siehe <a href="#lizenz-und-weiterverwendung-der-vorhersagedaten">unten</a>).</p>
 <p>Falls Sie an Vorhersagen für COVID-19-Todesfälle in Deutschland arbeiten und gerne zu diesem Repository beitragen möchten treten Sie bitte mit uns in <a href="https://statistik.econ.kit.edu/mitarbeiter_2902.php">Kontakt</a></p>
 </div>
 <div id="vorhersageziele" class="section level2">
 <h2>Vorhersageziele</h2>
-<p>Derzeit liegt unser Fokus auf 1 bis 130 Tage und 1 bis 20 Wochen Vorhersagen für inzidente und kumulative Todeszahlen. Wir akzeptieren auch Vorhersagen bis zu 130 Tage oder 20 Wochen voraus. Dieser <a href="https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets">Wiki-Eintrag</a> (auf englisch) beinhaltet eine genauere Beschreibung der Vorhersageziele. In Absprache mit den beteiligten Gruppen planen wir in Zukunft weitere Ziele sowie Vorhersagen auf Landesebene mit einzubeziehen. Es gibt keine Verpflichtung, Vorhersagen für alle genannten Ziele abzugeben und es bleibt den einzelnen Gruppen überlassen, einzuschätzen, für welche Ziele ihr Modell sinnvolle Vorhersagen generieren kann.</p>
-<p>Derzeit betrachten wir die <a href="https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide">ECDC Daten</a> als die zugrundeliegende und vorherzusagende ``Wahrheit’’ (<em>ground truth</em>). Unser R-Skript zur Berechnung der kumuativen Todeszahlen ist <a href="https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/data-truth/ECDC/ECDC.R">hier</a> verfügbar.</p>
+<div id="todeszahlen" class="section level3">
+<h3>Todeszahlen</h3>
+<p>Unser Hauptfokus liegt auf <strong>1 bis 30 Tages und 1 bis 4 Wochen-Vorhersagen für inzidente und kumulative Todeszahlen</strong>. Wir akzeptieren auch Vorhersagen bis zu 130 Tage oder 20 Wochen voraus. Dieser <a href="https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets">Wiki-Eintrag</a> (auf englisch) beinhaltet eine genauere Beschreibung der Vorhersageziele. Es gibt keine Verpflichtung, Vorhersagen für alle genannten Ziele abzugeben und es bleibt den einzelnen Gruppen überlassen, einzuschätzen, für welche Ziele ihr Modell sinnvolle Vorhersagen generieren kann.</p>
 <p>Die Definition unserer Vorhersageziele folgt den <a href="https://github.com/reichlab/covid19-forecast-hub#what-forecasts-we-are-tracking-and-for-which-locations">hier</a> für den US COVID-19 forecast hub beschriebenen Prinzipien.</p>
+<p>Derzeit betrachten wir die <a href="https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide">ECDC Daten</a> als die zugrundeliegende und vorherzusagende ``Wahrheit’’ (<em>ground truth</em>). Unser R-Skript zur Berechnung der kumuativen Todeszahlen ist <a href="https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/data-truth/ECDC/ECDC.R">hier</a> verfügbar. Für Todeszahlen auf der Bundeslanebene beziehen wir täglich Daten aus dem <a href="https://www.arcgis.com/home/item.html?id=f10774f1c63e40168479a1feb6c7ca74">RKI/arcgis Dashboard</a>. Für historische Todeszahlen ziehen wir ausserdem Daten aus dem <a href="https://github.com/ard-data/2020-rki-archive">ard-data</a> Archiv heran. Die resultierenden Datensätze zu täglichen Todeszahlen sind <a href="https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/RKI">hier</a> verfügbar.</p>
+</div>
+<div id="fälle" class="section level3">
+<h3>Fälle</h3>
+<p>Wir akzeptieren ausserdem <strong>1 bis 30 Tages und 1 bis 4 Wochen-Vorhersagen für inzidente und kumulative Fallzahlen</strong>, siehe auch Beschreibung <a href="https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets">hier</a>. Die entsprechenden Wahrheitsdaten basierend auf RKI-Daten sind <a href="https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/RKI">hier</a> verfügbar.</p>
+</div>
+<div id="intensivmedizinische-versorgung" class="section level3">
+<h3>Intensivmedizinische Versorgung</h3>
+<p>Wir beabsichtigen, demnächst auch Vorhersagen für den Bedarf an intensivmedizinischer Versorgung aufgrund von COVID19-Erkrankungen abzudecken. Daten aus dem <a href="https://www.divi.de/">DIVI Register</a> werden als Gundlage für die Definition von Vorhersagezielen dienen.</p>
+<p>Die Definition unserer Vorhersageziele folgt den <a href="https://github.com/reichlab/covid19-forecast-hub#what-forecasts-we-are-tracking-and-for-which-locations">hier</a> für den US COVID-19 forecast hub beschriebenen Prinzipien.</p>
+</div>
 </div>
 <div id="inhalt-des-repositories" class="section level2">
 <h2>Inhalt des Repositories</h2>
@@ -226,27 +235,33 @@ summary {
 <p>Daten zu den beobachteten Todeszahlen beziehen wir aus den folgenden Quellen:</p>
 <ul>
 <li><a href="https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases">European Centre for Disease Prevention and Control</a> <strong>(Dies ist unsere bevorzugte Quelle und wird bei der Evaluierung zugrundegelegt.)</strong></li>
-<li><a href="https://coronavirus.jhu.edu/">Johns Hopkins University</a></li>
+<li><p><a href="https://coronavirus.jhu.edu/">Johns Hopkins University</a></p></li>
+<li><a href="https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases">European Centre for Disease Prevention and Control</a> <strong>(Dies ist unsere bevorzugte Quelle und wird bei der Evaluierung zugrundegelegt.)</strong></li>
+<li><a href="https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0">Robert Koch Institut</a>. Die Generierung dieser Datensätze erfordert einige Pre-Processing-Schritte, sieher <a href="data-truth/RKI">hier</a>. <strong>(Dies ist unsere bevorzugte Quelle für Daten auf der Bundesland-Ebene. Die Daten sind kompatibel mit den ECDC-DAten auf der Bundesebene.)</strong></li>
+<li><a href="https://coronavirus.jhu.edu/">Johns Hopkins University</a>. Diese Daten werden von einer Reihe von Teams zur Generierung von Vorhersagen genutzt. Derzeit (August 2020) ist die Übereinstimmung mit den ECDC-DAten gut, in der Vergangenheit gab es allerdings stärkere Diskrepanzen.</li>
+<li><p><a href="https://www.divi.de/register/tagesreport">DIVI Intensivregister</a> Diese Daten werden derzeit nicht genutzt, wir planen jedoch, künftig auch Vorhersagen basierend auf diesen Daten zusammenzutragen.</p></li>
 </ul>
 </div>
 <div id="teams-die-vorhersagen-bereitstellen" class="section level2">
 <h2>Teams, die Vorhersagen bereitstellen</h2>
 <p>Derzeit tragen wir Vorhersagen der folgenden Teams zusammen. <em>Bitte beachten Sie, dass nicht alle Teams ihre Vorhersagen aufgrund der selben Datengrundlage zu Todeszahlen erstellen.</em> (benutzte Datengrundlage und Lizenz in Klammern).</p>
 <ul>
-<li><a href="https://www.medrxiv.org/content/10.1101/2020.04.18.20069955v1">Frankfurt Institute for Advanced Studies &amp; Forschungszentrum Jülich</a>(ECDC; no license specified)</li>
-<li><a href="https://covid19.healthdata.org/united-states-of-america">IHME</a> (unclear; CC-AT-NC4.0) <em>Gegenwärtig bestehen noch Probleme bei der Weiterverarbeitung der IHME-Vorhersagen. Sie sind deshalb derzeit nicht in den entsprechenden Visualisierungen enthalten.</em></li>
+<li><a href="https://www.medrxiv.org/content/10.1101/2020.04.18.20069955v1">Frankfurt Institute for Advanced Studies &amp; Forschungszentrum Jülich</a> (ECDC; no license specified)</li>
+<li><a href="https://covid19.healthdata.org/united-states-of-america">IHME</a> (JHU; CC-AT-NC4.0)</li>
+<li><a href="https://github.com/KITmetricslab/KIT-baseline">KIT</a> (ECDC; MIT) <em>This is a simple baseline model run by the Forecast Hub Team. Part of these forecasts were created retrospectively, but using only data available at the respective forecast date.</em></li>
 <li><a href="https://covid-19.bsvgateway.org/">LANL</a> (JHU; custom)</li>
-<li><a href="https://github.com/sangeetabhatia03/covid19-short-term-forecasts">Imperial</a> (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)</li>
-<li><a href="https://github.com/QEDHamburg/covid19">Johannes-Gutenberg Universität Mainz / Universität Hamburg</a> (ECDC; MIT)</li>
+<li><a href="https://github.com/mrc-ide/covid19-forecasts-orderly">Imperial</a> (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)</li>
+<li><a href="https://github.com/QEDHamburg/covid19">Johannes Gutenberg University Mainz / University of Hamburg</a> (ECDC; MIT)</li>
 <li><a href="https://www.covidanalytics.io/">MIT</a> (JHU; Apache 2.0)</li>
-<li><a href="https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/">University of Geneva / Swiss Data Science Center</a> (ECDC; keine Lizenz verfügbar)</li>
-<li><a href="https://github.com/holgerman/covid19-forecast-hub-de">Universität Leipzig IMISE/GenStat</a> (ECDC; keine Lizenz verfügbar)</li>
+<li><a href="https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/">University of Geneva / Swiss Data Science Center</a> (ECDC; none given)</li>
+<li><a href="https://github.com/holgerman/covid19-forecast-hub-de">University of Leipzig IMISE/GenStat</a> (ECDC; none given)</li>
+<li><a href="https://scc-usc.github.io/ReCOVER-COVID-19">University of Southern California Data Science Lab</a>(JHU; MIT) (MIT)</li>
 <li><a href="http://covid19-projections.com/">YYG</a> (JHU; MIT)</li>
 </ul>
 </div>
 <div id="vorhersageevaluation-und-ensembles" class="section level2">
 <h2>Vorhersageevaluation und Ensembles</h2>
-<p>Eines der Ziele des Forecast Hubs ist es, verschiedene Vorhersagen in einer Ensemble-Vorhersage zusammenzuführen, <a href="https://github.com/reichlab/covid19-forecast-hub#ensemble-model">wie bereits im US Forecast Hub praktiziert</a>. Dies setzt voraus, dass verschiedene Vorhersagen, sowohl Ensemble-Vorhersagen als auch Vorhersagen einzelner Teams evaluiert und verglichen werden. <strong>Wir möchten jedoch betonen, dass es sich hierbei nicht um einen Wettbewerb, sondern um ein kollaboratives Projekt handelt.</strong> Die Methoden zur Vorhersageevaluation die Anwendung finden werden sind <a href="https://arxiv.org/abs/2005.12881">hier</a> beschrieben.</p>
+<p>Eines der Ziele des Forecast Hubs ist es, verschiedene Vorhersagen in einer Ensemble-Vorhersage zusammenzuführen, siehe <a href="https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble">hier</a> für eine kurze Beschreibung des derzeit verwendeten Ansatzes ohne Gewichtung. Aufwändigere datengetriebene Verfahren setzen voraus, dass verschiedene Vorhersagen, sowohl Ensemble-Vorhersagen als auch Vorhersagen einzelner Teams evaluiert und verglichen werden. <strong>Wir möchten jedoch betonen, dass es sich hierbei nicht um einen Wettbewerb, sondern um ein kollaboratives Projekt handelt.</strong> Die Methoden zur Vorhersageevaluation die Anwendung finden werden sind <a href="https://arxiv.org/abs/2005.12881">hier</a> beschrieben.</p>
 </div>
 <div id="forecast-hub-team" class="section level2">
 <h2>Forecast hub team</h2>
@@ -256,6 +271,7 @@ summary {
 <li>Jannik Deuschel</li>
 <li><a href="https://www.h-its.org/2018/01/08/tilmann-gneiting/">Tilmann Gneiting</a></li>
 <li><a href="https://statistik.econ.kit.edu/mitarbeiter_2716.php">Konstantin Görgen</a></li>
+<li>Jakob Ketterer</li>
 <li><a href="https://statistik.econ.kit.edu/mitarbeiter_2068.php">Melanie Schienle</a></li>
 <li>Daniel Wolffram</li>
 </ul>
@@ -263,7 +279,7 @@ summary {
 <div id="verwandte-projekte" class="section level2">
 <h2>Verwandte Projekte</h2>
 <ul>
-<li><a href="https://github.com/reichlab/covid19-forecast-hub">US COVID-19 Forecast Hub</a>, betrieben vom <a href="https://reichlab.io/">Reich Lab</a>.</li>
+<li><a href="https://github.com/reichlab/covid19-forecast-hub">US COVID-19 Forecast Hub</a>, betrieben vom <a href="https://reichlab.io/">Reich Lab</a> (Preprint <a href="https://www.medrxiv.org/content/10.1101/2020.08.19.20177493v1">hier</a> verfügbar).</li>
 <li><a href="https://github.com/timueh/sars-cov2-modelling-initiative">Code repository der SARS-CoV2 modelling initiative</a></li>
 </ul>
 </div>
