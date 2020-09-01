@@ -1,0 +1,21 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-06-11,"7 day ahead inc death",2020-06-18,"PL","Poland","point",NA,14.8487548828125
+2020-06-11,"6 day ahead inc death",2020-06-17,"PL","Poland","point",NA,14.8447265625
+2020-06-11,"5 day ahead inc death",2020-06-16,"PL","Poland","point",NA,14.8408203125
+2020-06-11,"4 day ahead inc death",2020-06-15,"PL","Poland","point",NA,14.8372802734375
+2020-06-11,"3 day ahead inc death",2020-06-14,"PL","Poland","point",NA,14.83447265625
+2020-06-11,"2 day ahead inc death",2020-06-13,"PL","Poland","point",NA,14.8319091796875
+2020-06-11,"1 day ahead inc death",2020-06-12,"PL","Poland","point",NA,14.8287353515625
+2020-06-11,"0 day ahead inc death",2020-06-11,"PL","Poland","observed",NA,23
+2020-06-11,"-1 day ahead inc death",2020-06-10,"PL","Poland","observed",NA,17
+2020-06-11,"7 day ahead cum death",2020-06-18,"PL","Poland","point",NA,1309.86669921875
+2020-06-11,"6 day ahead cum death",2020-06-17,"PL","Poland","point",NA,1295.01794433594
+2020-06-11,"5 day ahead cum death",2020-06-16,"PL","Poland","point",NA,1280.17321777344
+2020-06-11,"4 day ahead cum death",2020-06-15,"PL","Poland","point",NA,1265.33239746094
+2020-06-11,"3 day ahead cum death",2020-06-14,"PL","Poland","point",NA,1250.4951171875
+2020-06-11,"2 day ahead cum death",2020-06-13,"PL","Poland","point",NA,1235.66064453125
+2020-06-11,"1 day ahead cum death",2020-06-12,"PL","Poland","point",NA,1220.82873535156
+2020-06-11,"0 day ahead cum death",2020-06-11,"PL","Poland","observed",NA,1206
+2020-06-11,"-1 day ahead cum death",2020-06-10,"PL","Poland","observed",NA,1183
+2020-06-11,"-1 wk ahead cum death",2020-06-06,"PL","Poland","observed",NA,1137
+2020-06-11,"0 wk ahead cum death",2020-06-13,"PL","Poland","point",NA,1235.66064453125

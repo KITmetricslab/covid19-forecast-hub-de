@@ -2,7 +2,7 @@ language: node_js
 dist: bionic
 sudo: required
 git:
-  depth: 1000000
+  depth: false
  
 node_js:
  - 7

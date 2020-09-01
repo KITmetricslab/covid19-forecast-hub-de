@@ -19,25 +19,45 @@ dashboardPage(
 
       # start tab:
       tabItem(tabName = "forecasts",
-              titlePanel("Interactive visualization of forecasts of COVID19 deaths  in Germany (in development)"),
+              titlePanel("Interactive visualization of forecasts of COVID19 deaths  in Germany"),
               # input elements generated on server side:
-              uiOutput("inp_select_date"),
-              uiOutput("inp_select_model"),
-              uiOutput("inp_select_location"),
+              radioButtons("select_stratification", "Show forecasts by:",
+                           choices = list("Forecast date" = "forecast_date",
+                                          "Forecast horizon" = "horizon"),
+                           selected = "forecast_date", inline = TRUE),
 
-              checkboxGroupInput("select_truths", "Select truth data to display:",
-                                 choiceNames = c("ECDC/RKI", "JHU"),
-                                 choiceValues = c("ECDC", "JHU"),
-                                 selected = "ECDC", inline = TRUE),
-              checkboxInput("show_pi", label = "Show 95% prediction interval where available", value = TRUE),
-              checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
+              div(style="display:inline-block", uiOutput("inp_select_date")),
+              div(style="display:inline-block", selectInput("select_target", label = "Select target:",
+                                                            choices = list("cumulative deaths" = "cum death",
+                                                                           "incident deaths" = "inc death",
+                                                                           "cumulative cases" = "cum case",
+                                                                           "incident cases" = "inc case"))),
+              div(style="display:inline-block", uiOutput("inp_select_location")),
+              uiOutput("inp_select_model"),
+
+              actionButton("show_all", "Show all"),
+              actionButton("hide_all", "Hide all"),
+              div(style="display:inline-block",
+                  checkboxInput("show_pi", label = "Show 95% prediction interval where available", value = TRUE)
+              ),
+              radioButtons("select_truths", "Select handling of truth data:",
+                                 choiceNames = c("Show original forecasts", "Shift all forecasts to ECDC/RKI data", "Shift all forecasts to JHU data"),
+                                 choiceValues = c("both", "ECDC", "JHU"),
+                                 selected = c("both"), inline = TRUE),
+              checkboxInput("show_evaluation", label = "Show evaluation (in development)", value = FALSE),
+
+              # checkboxInput("show_model_past", label = "Show past values assumed by models where available", value = TRUE),
               tags$b("Draw rectangle to zoom in, double click to zoom out. Hover over grey line to display numbers (point forecasts and observed)."),
               h3(""),
               # plot:
               plotOutput("plot_forecasts", height = 500,
                          click = "coord_click", hover = "coord_hover",
                          brush = brushOpts(id = "coord_brush", resetOnNew = TRUE),
-                         dblclick = clickOpts("coord_dblclick"))
+                         dblclick = clickOpts("coord_dblclick")),
+              # evaluation plot:
+              conditionalPanel("input.show_evaluation",
+                               plotOutput("plot_evaluation", height = 500))
+
       ),
 
       # tab on background:

@@ -29,6 +29,7 @@ echo "DIVI done"
 # update Shiny data
 cd ../../app_forecasts_de/code
 python3 ./data_preparation.py
+python3 ./prepare_truth_data.py
 echo "Shiny done"
 
 # update Readme image
@@ -39,5 +40,8 @@ echo "Image done"
 cd ../validation
 python3 ./get_commit_dates.py
 echo "file dates done"
+
+python3 ./validate_truth.py
+echo "All checks executed"
 
 cd ../../

@@ -1,46 +1,53 @@
 # setwd("/home/johannes/Documents/COVID/covid19-forecast-hub-de/code/visualization")
 
-source("../../app_forecasts_de/code/app_functions.R")
+source("../../code/R/plot_functions.R")
+source("../../code/R/auxiliary_functions.R")
 
+
+# set locale to English:
 Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 
 # names of models which are not to be included in visualization:
 models_to_exclude <- c("LeipzigIMISE-rkiV1", "LeipzigIMISE-ecdcV1", "Imperial-ensemble1")
 
+# read in forecasts:
 forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/forecasts_to_plot.csv",
-                              stringsAsFactors = FALSE)
-forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
-forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
-forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
-forecasts_to_plot <- subset(forecasts_to_plot, grepl("cum", target) &
-                              !(model %in% models_to_exclude))
-
-
+                              stringsAsFactors = FALSE, colClasses = list(timezero = "Date", forecast_date = "Date", target_end_date = "Date"))
+# exclude some models:
+forecasts_to_plot <- subset(forecasts_to_plot, !(model %in% models_to_exclude))
 
 # get timezeros, i.e. Mondays on which forecasts were made:
 timezeros <- as.character(sort(unique(forecasts_to_plot$timezero), decreasing = TRUE))
 
 # get names of models which appear in the data:
 models <- sort(as.character(unique(forecasts_to_plot$model)))
+target <- "cum death"
 
 
 
+# assign colours to models (currently restricted to 11):
 # assign colours to models (currently restricted to eight):
-cols_models <- c("#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02",
-                 "#A6761D", "#666666", "cyan3", "firebrick1", "tan1")
-cols_models <- cols_models[seq_along(models)]
+cols_models <- c("#FF0000", "#00FF00", "#000033", "#FF00B6", "#005300", "#FFD300",
+                 "#009FFF", "#9A4D42", "#00FFBE", "#783FC1", "#1F9698",
+                 "#FFACFD", "#B1CC71", "#F1085C", "#FE8F42", "#DD00FF", "#201A01",
+                 "#720055", "#766C95", "#02AD24", "#C8FF00", "#886C00",
+                 "#FFB79F", "#858567")
+cols_models <- cols_models[1:length(models)]
 names(cols_models) <- models
 
 # get truth data:
 dat_truth <- list()
-# ECDC:
-dat_truth$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/ECDC/truth_ECDC-Cumulative%20Deaths_Germany.csv",
-                           stringsAsFactors = FALSE)
-dat_truth$ECDC$date <- as.Date(dat_truth$ECDC$date)
-# JHU;
-dat_truth$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Deaths_Germany.csv",
-                          stringsAsFactors = FALSE)
-dat_truth$JHU$date <- as.Date(dat_truth$JHU$date)
+dat_truth$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/truth_to_plot_jhu.csv",
+                          colClasses = list("date" = "Date"))
+colnames(dat_truth$JHU) <- gsub("inc_", "inc ", colnames(dat_truth$JHU)) # for matching with targets
+colnames(dat_truth$JHU) <- gsub("cum_", "cum ", colnames(dat_truth$JHU)) # for matching with targets
+
+
+dat_truth$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/truth_to_plot_ecdc.csv",
+                           colClasses = list("date" = "Date"))
+colnames(dat_truth$ECDC) <- gsub("inc_", "inc ", colnames(dat_truth$ECDC)) # for matching with targets
+colnames(dat_truth$ECDC) <- gsub("cum_", "cum ", colnames(dat_truth$ECDC)) # for matching with targets
+
 
 # define point shapes for different truth data sources:
 truths <- names(dat_truth)
@@ -58,21 +65,25 @@ dates <- seq(from = Sys.Date() - 7, to = Sys.Date() - 1, by = 1)
 timezero <- dates[which(weekdays(dates) == "Monday")]
 
 # subset forecasts to those for the shown forecast date:
-subs_current <- forecasts_to_plot[forecasts_to_plot$forecast_date >= (timezero - 7), ]
+subs_current <- forecasts_to_plot[forecasts_to_plot$forecast_date >= (timezero - 7) &
+                                    grepl(target, forecasts_to_plot$target), ]
 # get last truth values shown in plot:
-last_truths <- dat_truth[["ECDC"]]$value[dat_truth$ECDC$date >= Sys.Date() - 32]
+last_truths <- dat_truth[["ECDC"]][[target]][dat_truth$ECDC$date >= Sys.Date() - 32 &
+                                                 dat_truth$ECDC$location == "GM"]
 # compute ylim from these values:
-ylim <- c(0.9*min(last_truths), 1.05*max(subs_current$value))
+ylim <- c(0.95*min(last_truths), 1.05*max(subs_current$value))
 
-png("current_forecasts.png", width = 720, height = 360)
+png("current_forecasts.png", width = 800, height = 400)
+par(mar = c(4.5, 5.5, 4.5, 2))
 # plot:
 plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                truth = dat_truth,
+               target = target,
                timezero = timezero,
                models = models,
                location = "GM",
                truth_data_used = truth_data_used,
-               selected_truth = c("ECDC", "JHU"),
+               selected_truth = c("both"),
                start = Sys.Date() - 32,
                end = Sys.Date() + 28,
                ylim = ylim,
@@ -87,7 +98,7 @@ title("Forecasts of total number of deaths from COVID19 in Germany")
 # add legends manually:
 legend("topleft", col = cols_models, legend = models, lty = 0, bty = "n",
        pch = pch_full[truth_data_used[models]],
-       pt.cex = 1.3)
+       pt.cex = 1.3, ncol = 2)
 legend("bottomleft", col = "black", legend = c("ECDC/RKI", "JHU"), lty = 0, bty = "n",
        pch = pch_full, pt.cex = 1.3)
 dev.off()

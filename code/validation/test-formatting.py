@@ -67,6 +67,9 @@ def check_formatting(my_path):
                 if "-ICU" in filepath:
                     mode = "ICU"
                 
+                elif "-case" in filepath:
+                    mode = "case"
+                
                 else:
                     mode = "deaths"
                 
