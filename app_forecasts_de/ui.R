@@ -38,10 +38,15 @@ dashboardPage(
               actionButton("show_all", "Show all"),
               actionButton("hide_all", "Hide all"),
               div(style="display:inline-block",
-                  checkboxInput("show_pi", label = "Show 95% prediction interval where available", value = TRUE)
+                  checkboxInput("show_pi.50", label = "Show 50% prediction interval where available", value = FALSE)              ),
+              div(style="display:inline-block",
+                  checkboxInput("show_pi.95", label = "Show 95% prediction interval where available", value = TRUE)
               ),
+              # div(style="display:inline-block",
+              #     checkboxInput("remove_retrospective", label = "Remove forecasts added retrospectively.", value = FALSE)
+              # ),
               radioButtons("select_truths", "Select handling of truth data:",
-                                 choiceNames = c("Show original forecasts", "Shift all forecasts to ECDC/RKI data", "Shift all forecasts to JHU data"),
+                                 choiceNames = c("Show original forecasts", "Shift all forecasts to ECDC/RKI data", "Shift all forecasts to JHU data (only national level)"),
                                  choiceValues = c("both", "ECDC", "JHU"),
                                  selected = c("both"), inline = TRUE),
               checkboxInput("show_evaluation", label = "Show evaluation (in development)", value = FALSE),
