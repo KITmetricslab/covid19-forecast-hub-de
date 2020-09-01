@@ -122,8 +122,6 @@ df.drop(columns=['saturday0', 'date', 'shift_target'], inplace=True)
 
 commit_dates = pd.read_csv('../../code/validation/commit_dates.csv')
 
-commit_dates = commit_dates.iloc[1:].reset_index(drop=True)
-
 commit_dates['forecast_date'] = pd.to_datetime(commit_dates.filename.str[:10])
 commit_dates['country'] = commit_dates.filename.transform(lambda x: x[11:].split('-')[0])
 commit_dates['model_case'] = commit_dates.filename.transform(lambda x: x[11:].split('-', 1)[1][:-4])
@@ -148,8 +146,8 @@ df['model_case'] = df.apply(lambda x: append_case(x), axis=1)
 
 commit_dates.drop(columns=['filename', 'latest_commit'], inplace=True)
 
-df = df.merge(commit_dates.iloc[:-10], how='left', 
-              left_on=['forecast_date', 'country', 'model_case'], right_on=['forecast_date', 'country', 'model_case'])
+df = df.merge(commit_dates, how='left', left_on=['forecast_date', 'country', 'model_case'], 
+              right_on=['forecast_date', 'country', 'model_case'])
 
 df.drop(columns=['country', 'model_case'], inplace=True)
 df.rename(columns={'first_commit': 'first_commit_date'}, inplace=True)
