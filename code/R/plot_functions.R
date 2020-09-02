@@ -41,8 +41,9 @@ add_forecast_to_plot <- function(forecasts_to_plot,
 
   # restrict to forecasts where difference between commit date and timezero
   # is within a certain tolerance:
-  forecasts_to_plot <- forecasts_to_plot[(forecasts_to_plot$first_commit_date -
-                                           forecasts_to_plot$timezero) < tolerance_retrospective, ]
+  # still causes errors when commit_date NA
+  # forecasts_to_plot <- forecasts_to_plot[(forecasts_to_plot$first_commit_date -
+  #                                          forecasts_to_plot$timezero) < tolerance_retrospective, ]
 
   # shift to desired truth data source if specified:
   if(!is.null(shift_to)){
