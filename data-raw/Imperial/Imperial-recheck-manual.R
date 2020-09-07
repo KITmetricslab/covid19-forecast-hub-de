@@ -48,3 +48,11 @@ quantile(dat_raw$si_2[, as.character(tg_end_date)], probs = ps)
 
 subset(dat_processed, target_end_date %in% tg_end_date & quantile %in% c(0.1, 0.5, 0.9))
 # cumulative seem alright, but week-ahead incident deaths seem faulty
+
+# get LANL for comparison:
+dat_processed_lanl <- read.csv(paste0("../../data-processed/LANL-GrowthRate/", forecast_date,
+                                 "-Germany-LANL-GrowthRate.csv"))
+dat_processed_lanl$forecast_date <- as.Date(dat_processed_lanl$forecast_date)
+dat_processed_lanl$target_end_date <- as.Date(dat_processed_lanl$target_end_date)
+
+subset(dat_processed_lanl, target_end_date %in% tg_end_date & quantile %in% c(0.1, 0.5, 0.9))

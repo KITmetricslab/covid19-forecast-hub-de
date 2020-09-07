@@ -9,9 +9,8 @@ latest_file = max(list_of_files, key=os.path.getctime)
 df = pd.read_csv(latest_file, compression='gzip')
 
 # Add column 'DatenstandISO'
-# if 'DatenstandISO' not in df.columns:
-#     df['DatenstandISO'] = pd.to_datetime(df.Datenstand.str.replace('Uhr', ''), dayfirst=True).astype(str)
-df['DatenstandISO'] = str((pd.to_datetime('today') - pd.Timedelta('1 days')).date())
+df['DatenstandISO'] = pd.to_datetime(df.Datenstand.str.replace('Uhr', ''), dayfirst=True).astype(str)
+#df['DatenstandISO'] = str((pd.to_datetime('today') - pd.Timedelta('1 days')).date())
     
 for target in ['Deaths', 'Cases']:
     print('Extracting data for cumulative {}.'.format(target.lower()))

@@ -1,6 +1,8 @@
 # setwd("/home/johannes/Documents/COVID/covid19-forecast-hub-de/code/visualization")
 
-source("../../app_forecasts_de/code/app_functions.R")
+source("../../code/R/plot_functions.R")
+source("../../code/R/auxiliary_functions.R")
+
 
 # set locale to English:
 Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
@@ -35,17 +37,16 @@ names(cols_models) <- models
 
 # get truth data:
 dat_truth <- list()
-# JHU:
-dat_truth$JHU <- get_truths(file_cum_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Deaths_Germany.csv",
-                            file_inc_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Incident%20Deaths_Germany.csv",
-                            file_cum_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Cumulative%20Cases_Germany.csv",
-                            file_inc_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/JHU/truth_JHU-Incident%20Cases_Germany.csv")
-# RKI/ECDC:
-dat_truth$ECDC <- get_truths(file_cum_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Cumulative%20Deaths_Germany.csv",
-                             file_inc_death = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Incident%20Deaths_Germany.csv",
-                             file_cum_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Cumulative%20Cases_Germany.csv",
-                             file_inc_case = "https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/data-truth/RKI/truth_RKI-Incident%20Cases_Germany.csv")
+dat_truth$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/truth_to_plot_jhu.csv",
+                          colClasses = list("date" = "Date"))
+colnames(dat_truth$JHU) <- gsub("inc_", "inc ", colnames(dat_truth$JHU)) # for matching with targets
+colnames(dat_truth$JHU) <- gsub("cum_", "cum ", colnames(dat_truth$JHU)) # for matching with targets
 
+
+dat_truth$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/truth_to_plot_ecdc.csv",
+                           colClasses = list("date" = "Date"))
+colnames(dat_truth$ECDC) <- gsub("inc_", "inc ", colnames(dat_truth$ECDC)) # for matching with targets
+colnames(dat_truth$ECDC) <- gsub("cum_", "cum ", colnames(dat_truth$ECDC)) # for matching with targets
 
 
 # define point shapes for different truth data sources:
@@ -82,7 +83,7 @@ plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                models = models,
                location = "GM",
                truth_data_used = truth_data_used,
-               selected_truth = c("ECDC", "JHU"),
+               selected_truth = c("both"),
                start = Sys.Date() - 32,
                end = Sys.Date() + 28,
                ylim = ylim,
@@ -91,7 +92,8 @@ plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                pch_truths = pch_full,
                pch_forecasts = pch_empty,
                legend = FALSE,
-               show_pi = TRUE,
+               add_intervals.95 = TRUE,
+               add_intervals.50 = FALSE,
                add_model_past = FALSE)
 title("Forecasts of total number of deaths from COVID19 in Germany")
 # add legends manually:
