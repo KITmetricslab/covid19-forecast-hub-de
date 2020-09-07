@@ -4321,7 +4321,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-07-18,83 day ahead inc death,2020-10-09,GM06,Lower Saxony,point,NA,0.70023260712026
 2020-07-18,84 day ahead cum death,2020-10-10,GM06,Lower Saxony,point,NA,688.447055379505
 2020-07-18,84 day ahead inc death,2020-10-10,GM06,Lower Saxony,point,NA,0.71239943129968
-2020-07-18,85 day ahead cum death,2020-10-11,GM06,Lower Saxony,point,NA,689.17221144821406
+2020-07-18,85 day ahead cum death,2020-10-11,GM06,Lower Saxony,point,NA,689.17221144821394
 2020-07-18,85 day ahead inc death,2020-10-11,GM06,Lower Saxony,point,NA,0.725156068709084
 2020-07-18,86 day ahead cum death,2020-10-12,GM06,Lower Saxony,point,NA,689.910921462516
 2020-07-18,86 day ahead inc death,2020-10-12,GM06,Lower Saxony,point,NA,0.738710014301647
@@ -5612,7 +5612,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-07-18,48 day ahead cum death,2020-09-04,GM08,Rhineland-Palatinate,point,NA,240.915936708719
 2020-07-18,48 day ahead inc death,2020-09-04,GM08,Rhineland-Palatinate,point,NA,0.134052948217225
 2020-07-18,49 day ahead cum death,2020-09-05,GM08,Rhineland-Palatinate,point,NA,241.051076050004
-2020-07-18,49 day ahead inc death,2020-09-05,GM08,Rhineland-Palatinate,point,NA,0.13513934128441699
+2020-07-18,49 day ahead inc death,2020-09-05,GM08,Rhineland-Palatinate,point,NA,0.13513934128441701
 2020-07-18,5 day ahead cum death,2020-07-23,GM08,Rhineland-Palatinate,point,NA,235.627382912438
 2020-07-18,5 day ahead inc death,2020-07-23,GM08,Rhineland-Palatinate,point,NA,0.121922899921321
 2020-07-18,5 wk ahead cum death,2020-08-22,GM08,Rhineland-Palatinate,point,NA,239.237060304467
@@ -6320,7 +6320,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-07-18,57 day ahead cum death,2020-09-13,GM09,Saarland,point,NA,181.003504087212
 2020-07-18,57 day ahead inc death,2020-09-13,GM09,Saarland,point,NA,0.158709989220039
 2020-07-18,58 day ahead cum death,2020-09-14,GM09,Saarland,point,NA,181.162955298771
-2020-07-18,58 day ahead inc death,2020-09-14,GM09,Saarland,point,NA,0.15945121155869799
+2020-07-18,58 day ahead inc death,2020-09-14,GM09,Saarland,point,NA,0.15945121155869801
 2020-07-18,59 day ahead cum death,2020-09-15,GM09,Saarland,point,NA,181.323216684083
 2020-07-18,59 day ahead inc death,2020-09-15,GM09,Saarland,point,NA,0.160261385312407
 2020-07-18,6 day ahead cum death,2020-07-24,GM09,Saarland,point,NA,173.418377032584
@@ -6783,7 +6783,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-07-18,60 day ahead cum death,2020-09-16,GM09,Saarland,quantile,0.975,192.470967763089
 2020-07-18,60 day ahead inc death,2020-09-16,GM09,Saarland,quantile,0.975,0.4575303214423
 2020-07-18,61 day ahead cum death,2020-09-17,GM09,Saarland,quantile,0.975,192.900193680725
-2020-07-18,61 day ahead inc death,2020-09-17,GM09,Saarland,quantile,0.975,0.46355711716000497
+2020-07-18,61 day ahead inc death,2020-09-17,GM09,Saarland,quantile,0.975,0.46355711716000503
 2020-07-18,62 day ahead cum death,2020-09-18,GM09,Saarland,quantile,0.975,193.376300764602
 2020-07-18,62 day ahead inc death,2020-09-18,GM09,Saarland,quantile,0.975,0.469518546896114
 2020-07-18,63 day ahead cum death,2020-09-19,GM09,Saarland,quantile,0.975,193.870153157748
@@ -6860,7 +6860,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-07-18,94 day ahead cum death,2020-10-20,GM09,Saarland,quantile,0.975,213.688527452902
 2020-07-18,94 day ahead inc death,2020-10-20,GM09,Saarland,quantile,0.975,0.880816576344659
 2020-07-18,95 day ahead cum death,2020-10-21,GM09,Saarland,quantile,0.975,214.577428251085
-2020-07-18,95 day ahead inc death,2020-10-21,GM09,Saarland,quantile,0.975,0.90273325408790706
+2020-07-18,95 day ahead inc death,2020-10-21,GM09,Saarland,quantile,0.975,0.90273325408790694
 2020-07-18,96 day ahead cum death,2020-10-22,GM09,Saarland,quantile,0.975,215.490056037363
 2020-07-18,96 day ahead inc death,2020-10-22,GM09,Saarland,quantile,0.975,0.933145044181371
 2020-07-18,97 day ahead cum death,2020-10-23,GM09,Saarland,quantile,0.975,216.428788041191
@@ -9665,7 +9665,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-07-18,18 day ahead cum death,2020-08-05,GM14,Saxony-Anhalt,point,NA,66.0670726990594
 2020-07-18,18 day ahead inc death,2020-08-05,GM14,Saxony-Anhalt,point,NA,0.0874061924790315
 2020-07-18,19 day ahead cum death,2020-08-06,GM14,Saxony-Anhalt,point,NA,66.1467721451416
-2020-07-18,19 day ahead inc death,2020-08-06,GM14,Saxony-Anhalt,point,NA,0.079699446082137207
+2020-07-18,19 day ahead inc death,2020-08-06,GM14,Saxony-Anhalt,point,NA,0.079699446082137193
 2020-07-18,2 day ahead cum death,2020-07-20,GM14,Saxony-Anhalt,point,NA,63.1999574718877
 2020-07-18,2 day ahead inc death,2020-07-20,GM14,Saxony-Anhalt,point,NA,0.303961190164058
 2020-07-18,2 wk ahead cum death,2020-08-01,GM14,Saxony-Anhalt,point,NA,65.6636231336384
