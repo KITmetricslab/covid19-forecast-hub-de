@@ -23,16 +23,27 @@ add_forecast_to_plot <- function(forecasts_to_plot,
                                  model,
                                  shift_to = NULL,
                                  add_points = TRUE,
-                                 add_intervals = TRUE,
+                                 add_intervals.95 = TRUE,
+                                 add_intervals.50 = FALSE,
                                  add_past = FALSE,
                                  pch = 21,
                                  col = "blue",
-                                 alpha.col = 0.3){
+                                 alpha.col = 0.3,
+                                 tolerance_retrospective = 1000){
 
   if((is.null(timezero) & is.null(horizon)) |
      (!is.null(timezero) & ! is.null(horizon))){
     cat("Please specify exactly one out of timezero and horizon.")
   }
+
+  # -1 wk ahead causes trouble when matching horizon 1 wk, thus remove
+  if(!is.null(horizon)) forecasts_to_plot <- subset(forecasts_to_plot, !grepl("-1 wk ahead", target))
+
+  # restrict to forecasts where difference between commit date and timezero
+  # is within a certain tolerance:
+  # still causes errors when commit_date NA
+  # forecasts_to_plot <- forecasts_to_plot[(forecasts_to_plot$first_commit_date -
+  #                                          forecasts_to_plot$timezero) < tolerance_retrospective, ]
 
   # shift to desired truth data source if specified:
   if(!is.null(shift_to)){
@@ -49,14 +60,17 @@ add_forecast_to_plot <- function(forecasts_to_plot,
   }
 
   # shaded areas for forecast intervals:
-  if(add_intervals){
+  # obtain transparent colour
+  col_transp <- modify_alpha(col, alpha.col)
+
+  if(add_intervals.95){
     # get upper bounds:
     subs_upper <- forecasts_to_plot[which(forecasts_to_plot$model == model &
                                             selection_target &
                                             forecasts_to_plot$location == location &
                                             selection_timezero &
                                             forecasts_to_plot$type %in% c("quantile", "observed") &
-                                            (forecasts_to_plot$quantile > 0.51 | is.na(forecasts_to_plot$quantile))), ]
+                                            (forecasts_to_plot$quantile == 0.975 | is.na(forecasts_to_plot$quantile))), ]
     subs_upper <- subs_upper[order(subs_upper$target_end_date), ]
     # get lower bounds:
     subs_lower <- forecasts_to_plot[which(forecasts_to_plot$model == model &
@@ -64,11 +78,30 @@ add_forecast_to_plot <- function(forecasts_to_plot,
                                             selection_timezero &
                                             forecasts_to_plot$location == location &
                                             forecasts_to_plot$type %in% c("quantile", "observed") &
-                                            (forecasts_to_plot$quantile < 0.49 | is.na(forecasts_to_plot$quantile))), ]
+                                            (forecasts_to_plot$quantile == 0.025 | is.na(forecasts_to_plot$quantile))), ]
     subs_lower <- subs_lower[order(subs_lower$target_end_date), ]
 
-    # obtain transparent colour
-    col_transp <- modify_alpha(col, alpha.col)
+    plot_weekly_bands(dates = subs_upper$target_end_date, lower = subs_lower$value, upper = subs_upper$value,
+                      col = col_transp, border = NA, separate_all = !is.null(horizon))
+  }
+
+  if(add_intervals.50){
+    # get upper bounds:
+    subs_upper <- forecasts_to_plot[which(forecasts_to_plot$model == model &
+                                            selection_target &
+                                            forecasts_to_plot$location == location &
+                                            selection_timezero &
+                                            forecasts_to_plot$type %in% c("quantile", "observed") &
+                                            (forecasts_to_plot$quantile == 0.75 | is.na(forecasts_to_plot$quantile))), ]
+    subs_upper <- subs_upper[order(subs_upper$target_end_date), ]
+    # get lower bounds:
+    subs_lower <- forecasts_to_plot[which(forecasts_to_plot$model == model &
+                                            selection_target &
+                                            selection_timezero &
+                                            forecasts_to_plot$location == location &
+                                            forecasts_to_plot$type %in% c("quantile", "observed") &
+                                            (forecasts_to_plot$quantile == 0.25 | is.na(forecasts_to_plot$quantile))), ]
+    subs_lower <- subs_lower[order(subs_lower$target_end_date), ]
 
     plot_weekly_bands(dates = subs_upper$target_end_date, lower = subs_lower$value, upper = subs_upper$value,
                       col = col_transp, border = NA, separate_all = !is.null(horizon))
@@ -216,7 +249,8 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            location = "GM",
                            start = as.Date("2020-03-01"), end = Sys.Date() + 28,
                            ylim = c(0, 100000),
-                           show_pi = TRUE,
+                           add_intervals.95 = TRUE,
+                           add_intervals.50 = FALSE,
                            add_model_past = FALSE,
                            truth_data_used = NA,
                            cols, alpha.col = 0.5,
@@ -224,7 +258,8 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            pch_forecasts,
                            legend = TRUE,
                            highlight_target_end_date = NULL,
-                           point_pred_legend = NULL){
+                           point_pred_legend = NULL,
+                           tolerance_retrospective = 1000){
   # fresh plot:
   empty_plot(start = start, target = target, end = end, ylim = ylim)
   # highlight the forecast date:
@@ -238,18 +273,19 @@ plot_forecasts <- function(forecasts_to_plot, truth,
 
   # add forecast bands:
   if(length(models) > 0){
-    if(show_pi){
-      for(i in seq_along(models)){
-        add_forecast_to_plot(forecasts_to_plot = forecasts_to_plot,
-                             target = target,
-                             timezero = timezero,
-                             horizon = horizon,
-                             shift_to = shift_to,
-                             location = location,
-                             model = models[i], add_intervals = TRUE,
-                             add_past = FALSE, add_points = FALSE,
-                             col = cols[i])
-      }
+    for(i in seq_along(models)){
+      add_forecast_to_plot(forecasts_to_plot = forecasts_to_plot,
+                           target = target,
+                           timezero = timezero,
+                           horizon = horizon,
+                           shift_to = shift_to,
+                           location = location,
+                           model = models[i],
+                           add_intervals.95 = add_intervals.95,
+                           add_intervals.50 = add_intervals.50,
+                           add_past = FALSE, add_points = FALSE,
+                           col = cols[i],
+                           tolerance_retrospective = tolerance_retrospective)
     }
   }
 
@@ -275,9 +311,12 @@ plot_forecasts <- function(forecasts_to_plot, truth,
                            horizon = horizon,
                            shift_to = shift_to,
                            model = models[i],
-                           add_points = TRUE, add_intervals = FALSE,
+                           add_points = TRUE,
+                           add_intervals.95 = FALSE,
+                           add_intervals.50 = FALSE,
                            pch = pch_forecasts[truth_data_used[models[i]]],
-                           add_past = add_model_past, col = cols[i])
+                           add_past = add_model_past, col = cols[i],
+                           tolerance_retrospective = tolerance_retrospective)
     }
   }
 

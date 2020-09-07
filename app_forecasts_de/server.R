@@ -1,7 +1,7 @@
 library(shiny)
 library(pals)
 
-local <- FALSE
+local <- TRUE
 
 # read in plotting functions etc
 if(local){
@@ -27,18 +27,19 @@ Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 # read in data set compiled specificaly for Shiny app:
 if(local){
   forecasts_to_plot <- read.csv("data/forecasts_to_plot.csv",
-                                stringsAsFactors = FALSE)
+                                stringsAsFactors = FALSE,
+                                colClasses = c("forecast_date" = "Date",
+                                               "timezero" = "Date",
+                                               "target_end_date" = "Date",
+                                               "first_commit_date" = "Date"))
 }else{
   forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/forecasts_to_plot.csv",
-                                stringsAsFactors = FALSE)
+                                stringsAsFactors = FALSE,
+                                colClasses = c("forecast_date" = "Date",
+                                               "timezero" = "Date",
+                                               "target_end_date" = "Date",
+                                               "first_commit_date" = "Date"))
 }
-
-forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
-forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
-forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
-forecasts_to_plot <- subset(forecasts_to_plot, !grepl("-1 wk ahead", target))
-forecasts_to_plot <- subset(forecasts_to_plot, quantile %in% c(0.025, 0.5, 0.975) | is.na(quantile))
-# forecasts_to_plot <- subset(forecasts_to_plot, !(grepl("0 wk ahead", target) & type != "observed"))
 
 # exclude some models because used data is neither ECDC nor JHU:
 models_to_exclude <- c("Imperial-ensemble1")
@@ -284,9 +285,11 @@ shinyServer(function(input, output, session) {
                    pch_truths = pch_full,
                    pch_forecasts = pch_empty,
                    legend = FALSE,
-                   show_pi = input$show_pi,
+                   add_intervals.95 = input$show_pi.95,
+                   add_intervals.50 = input$show_pi.50,
                    add_model_past = TRUE, #input$show_model_past,
-                   highlight_target_end_date = selected$target_end_date)
+                   highlight_target_end_date = selected$target_end_date,
+                   tolerance_retrospective = 1000)
     abline(h = 0)
 
     # add legends manually:

@@ -92,7 +92,8 @@ plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                pch_truths = pch_full,
                pch_forecasts = pch_empty,
                legend = FALSE,
-               show_pi = TRUE,
+               add_intervals.95 = TRUE,
+               add_intervals.50 = FALSE,
                add_model_past = FALSE)
 title("Forecasts of total number of deaths from COVID19 in Germany")
 # add legends manually:
