@@ -116,13 +116,25 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany")
     fread(code_fips,data.table = FALSE,encoding = "UTF-8",
              stringsAsFactors = FALSE)
   
+  
+  #first filter data so only your desired countries/regions are manipulated (speeds up procedure)
+  
+  data<-data %>% left_join(state_fips_codes, by = c("location_name" = "state_name")) %>% 
+    dplyr::filter(!is.na(state_code))
+  
   ## code for incident deaths
   
   col_list1 <-
     c(
-      grep("location_name", colnames(data)),
-      grep("date", colnames(data)),
-      grep("death", colnames(data))
+      setdiff(
+        c(
+          grep("location_name", colnames(data)),
+          grep("date", colnames(data)),
+          grep("death", colnames(data)) ),
+        c(
+          grep("rate",colnames(data))
+        )
+      )
     )
   death_qntl1 <- data[, col_list1] %>% # only take important rows
     dplyr::rename(date_v = date) %>%
@@ -163,12 +175,17 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany")
     dplyr::rename(target_end_date = date_v)
   
   ## code for cumulative deaths
-  
   col_list2 <-
     c(
-      grep("location_name", colnames(data)),
-      grep("date", colnames(data)),
-      grep("totdea", colnames(data))
+      setdiff(
+        c(
+          grep("location_name", colnames(data)),
+          grep("date", colnames(data)),
+          grep("totdea", colnames(data)) ),
+        c(
+          grep("rate",colnames(data))
+        )
+      )
     )
   death_qntl2 <- data[, col_list2] %>% # only take important rows
     dplyr::rename(date_v = date) %>%
