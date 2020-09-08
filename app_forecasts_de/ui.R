@@ -19,7 +19,7 @@ dashboardPage(
 
       # start tab:
       tabItem(tabName = "forecasts",
-              titlePanel("Interactive visualization of forecasts of COVID19 deaths  in Germany"),
+              titlePanel("Interactive visualization of forecasts of COVID19 deaths in Germany and Poland"),
               # input elements generated on server side:
               radioButtons("select_stratification", "Show forecasts by:",
                            choices = list("Forecast date" = "forecast_date",

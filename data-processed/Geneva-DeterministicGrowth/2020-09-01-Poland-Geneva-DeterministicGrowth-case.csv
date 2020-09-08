@@ -1,0 +1,21 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-09-01,"7 day ahead inc case",2020-09-08,"PL","Poland","point",NA,727.8671875
+2020-09-01,"6 day ahead inc case",2020-09-07,"PL","Poland","point",NA,727.796875
+2020-09-01,"5 day ahead inc case",2020-09-06,"PL","Poland","point",NA,727.71875
+2020-09-01,"4 day ahead inc case",2020-09-05,"PL","Poland","point",NA,727.640625
+2020-09-01,"3 day ahead inc case",2020-09-04,"PL","Poland","point",NA,727.5625
+2020-09-01,"2 day ahead inc case",2020-09-03,"PL","Poland","point",NA,727.484375
+2020-09-01,"1 day ahead inc case",2020-09-02,"PL","Poland","point",NA,727.3984375
+2020-09-01,"0 day ahead inc case",2020-09-01,"PL","Poland","observed",NA,502
+2020-09-01,"-1 day ahead inc case",2020-08-31,"PL","Poland","observed",NA,631
+2020-09-01,"7 day ahead cum case",2020-09-08,"PL","Poland","point",NA,72465.46875
+2020-09-01,"6 day ahead cum case",2020-09-07,"PL","Poland","point",NA,71737.6015625
+2020-09-01,"5 day ahead cum case",2020-09-06,"PL","Poland","point",NA,71009.8046875
+2020-09-01,"4 day ahead cum case",2020-09-05,"PL","Poland","point",NA,70282.0859375
+2020-09-01,"3 day ahead cum case",2020-09-04,"PL","Poland","point",NA,69554.4453125
+2020-09-01,"2 day ahead cum case",2020-09-03,"PL","Poland","point",NA,68826.8828125
+2020-09-01,"1 day ahead cum case",2020-09-02,"PL","Poland","point",NA,68099.3984375
+2020-09-01,"0 day ahead cum case",2020-09-01,"PL","Poland","observed",NA,67372
+2020-09-01,"-1 day ahead cum case",2020-08-31,"PL","Poland","observed",NA,66870
+2020-09-01,"-1 wk ahead cum case",2020-08-29,"PL","Poland","observed",NA,65480
+2020-09-01,"0 wk ahead cum case",2020-09-05,"PL","Poland","point",NA,70282.0859375
