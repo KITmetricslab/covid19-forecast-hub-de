@@ -47,4 +47,9 @@ cd ../validation
 python3 ./validate_truth.py
 echo "All checks executed"
 
+# Evaluate forecasts
+cd ../../evaluation
+Rscript ./evaluate_forecasts.R
+echo "executed forecast evaluation"
+
 cd ../../
