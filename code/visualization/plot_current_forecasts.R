@@ -81,11 +81,15 @@ last_truths_PL <- dat_truth[["ECDC"]][[target]][dat_truth$ECDC$date >= Sys.Date(
 ylim_GM <- c(0.95*min(last_truths_GM), 1.05*max(subs_current_GM$value))
 ylim_PL <- c(0.95*min(last_truths_PL), 1.05*max(subs_current_PL$value))
 
+# get model names:
+models_GM <- unique(subs_current_GM$model)
+models_PL <- unique(subs_current_PL$model)
+
 
 
 
 png("current_forecasts.png", width = 800, height = 800)
-par(mar = c(4.5, 5.5, 4.5, 2), mfrow = 1:2)
+par(mar = c(4.5, 5.5, 4.5, 2), mfrow = 2:1, las = 1)
 # plot:
 plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                truth = dat_truth,
@@ -108,9 +112,10 @@ plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                add_model_past = FALSE)
 title("Forecasts of total number of deaths from COVID19 in Germany")
 # add legends manually:
-legend("topleft", col = cols_models, legend = models, lty = 0, bty = "n",
-       pch = pch_full[truth_data_used[models]],
+legend("topleft", col = cols_models[models_GM], legend = models_GM, lty = 0, bty = "n",
+       pch = pch_full[truth_data_used[models_GM]],
        pt.cex = 1.3, ncol = 2)
+
 legend("bottomleft", col = "black", legend = c("ECDC/RKI", "JHU"), lty = 0, bty = "n",
        pch = pch_full, pt.cex = 1.3)
 
@@ -124,7 +129,7 @@ plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                selected_truth = c("both"),
                start = Sys.Date() - 32,
                end = Sys.Date() + 28,
-               ylim = ylim_pl,
+               ylim = ylim_PL,
                col = cols_models,
                alpha.col = 0.5,
                pch_truths = pch_full,
@@ -133,6 +138,14 @@ plot_forecasts(forecasts_to_plot = forecasts_to_plot,
                add_intervals.95 = TRUE,
                add_intervals.50 = FALSE,
                add_model_past = FALSE)
+
+# add legends manually:
+legend("topleft", col = cols_models[models_PL], legend = models_PL, lty = 0, bty = "n",
+       pch = pch_full[truth_data_used[models_PL]],
+       pt.cex = 1.3, ncol = 2)
+
+legend("bottomleft", col = "black", legend = c("ECDC/RKI", "JHU"), lty = 0, bty = "n",
+       pch = pch_full, pt.cex = 1.3)
 title("Forecasts of total number of deaths from COVID19 in Poland")
 dev.off()
 
