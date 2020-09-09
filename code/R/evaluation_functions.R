@@ -130,7 +130,7 @@ evaluate_quantiles <- function(forecasts, name_truth_eval, dat_truth,
   }
 
   # select relevant columns:
-  if(!detailed) forecasts_wide <- forecasts_wide[, c("forecast_date", "target_end_date", "location",
+  if(!detailed) forecasts_wide <- forecasts_wide[, c("forecast_date", "target_end_date", "target", "location",
                                                      "value.0.025", "value.0.25", "value.0.5", "value.0.75", "value.0.975",
                                                      "truth", "truth_data_eval", "truth_data_model", "shift",
                                                      "wgt_iw", "wgt_pen_u", "wgt_pen_l", "wis",
@@ -265,7 +265,7 @@ evaluate_forecasts <- function(forecasts, name_truth_eval, dat_truth){
                                          truth_data_use = truth_data_use,
                                          detailed = FALSE)
 
-    eval_point <- merge(eval_point, eval_quantiles, by = c("forecast_date", "target_end_date",
+    eval_point <- merge(eval_point, eval_quantiles, by = c("forecast_date", "target_end_date", "target",
                                                            "location", "truth_data_eval",
                                                            "truth_data_model", "truth", "shift"))
   }else{
