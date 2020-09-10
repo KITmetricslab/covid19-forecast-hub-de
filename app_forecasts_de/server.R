@@ -1,7 +1,7 @@
 library(shiny)
 library(pals)
 
-local <- TRUE
+local <- FALSE
 
 # read in plotting functions etc
 if(local){
@@ -136,6 +136,11 @@ shinyServer(function(input, output, session) {
     if(!is.null(input$coord_dblclick)){
       coords$brush <- list(xlim = NULL, ylim = NULL)
     }
+  })
+  # reset if target changed:
+  observe({
+    input$select_target
+    coords$brush <- list(xlim = NULL, ylim = NULL)
   })
   # hover:
   observe({

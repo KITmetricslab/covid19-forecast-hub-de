@@ -5,7 +5,7 @@ library(shinyBS)
 
 
 dashboardPage(
-  title = "Interactive visualization of COVID19 death forecasts (Germany and Poland)",
+  title = "Interactive visualization of COVID19 case and death forecasts (Germany and Poland)",
   dashboardHeader(title = ""),
   skin = "yellow",
   ## Sidebar content
@@ -20,7 +20,7 @@ dashboardPage(
 
       # start tab:
       tabItem(tabName = "forecasts",
-              titlePanel("Interactive visualization of forecasts of COVID19 deaths in Germany and Poland"),
+              titlePanel("Assembling forecasts of COVID19 cases and deaths in Germany and Poland"),
               # input elements generated on server side:
               div(style="display:inline-block",
                   radioButtons("select_stratification", "Show forecasts by:",
@@ -85,7 +85,7 @@ dashboardPage(
                                          "The absolute error (AE) serves to assess the accuracy of the point forecast ",
                                          "typically the predictive median).",
                                          "The weighted interval score (WIS) assesses all prediction intervals (or quantiles) ",
-                                         "simulataneously and thus also takes into account the uncertainty of a distribution. See ",
+                                         "simulataneously and thus also takes into account the uncertainty of a distribution. ",
                                          "See our github repo/wiki for more information.")
               ),
               br(),
