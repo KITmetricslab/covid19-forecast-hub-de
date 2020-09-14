@@ -1,6 +1,7 @@
 model,truth_data
 FIAS_FZJ-Epi1Ger,ECDC
 Geneva-DeterministicGrowth,ECDC
+ICM-agentModel,ECDC
 IHME-CurveFit,JHU
 Imperial-ensemble1,ECDC
 Imperial-ensemble2,ECDC
@@ -10,5 +11,6 @@ KITCOVIDhub-ensemble,ECDC
 LANL-GrowthRate,JHU
 LeipzigIMISE-SECIR,ECDC
 MIT_CovidAnalytics-DELPHI,JHU
+MOCOS-agent1,JHU
 USC-SIkJalpha,ECDC
 YYG-ParamSearch,JHU
