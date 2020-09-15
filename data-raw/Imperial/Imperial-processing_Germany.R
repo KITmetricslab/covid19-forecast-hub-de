@@ -1,9 +1,9 @@
-# Author: Konstantin Görgen
+# Author: Konstantin G?rgen
 # Date: Sat May 09 12:16:26 2020
 # --------------
 # Modification: Iterate over both models now, compute weekly incidents correctly
 #Modification 2: Include forecasts for poland
-# Author: Konstantin Görgen
+# Author: Konstantin G?rgen
 # Date: 2020-07-30
 # --------------
 #################################################################################
@@ -101,7 +101,13 @@ format_imperial<-function(path,ens_model,location=if(poland)c("Germany","Poland"
   for( k in 1:length(loop))
   {
     
-    data_raw<-readRDS(path)[[as.character(date_publish)]]
+   data_raw<-readRDS(path)[[as.character(date_publish)]]
+   if(is.null(data_raw)) 
+   {
+     return(Print("data is null, Date in File name is probably not equal to
+                  prediction date. Check predictions manually and change file
+                  name to day before first prediction date"))
+   }
     if(sum(names(data_raw)==loop[k])<1)
     {
       final[[k]]<-NA
