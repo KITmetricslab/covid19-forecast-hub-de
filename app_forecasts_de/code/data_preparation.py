@@ -122,11 +122,9 @@ df.drop(columns=['saturday0', 'date', 'shift_target'], inplace=True)
 
 commit_dates = pd.read_csv('../../code/validation/commit_dates.csv')
 
-commit_dates = commit_dates.iloc[1:].reset_index(drop=True)
-
 commit_dates['forecast_date'] = pd.to_datetime(commit_dates.filename.str[:10])
 commit_dates['country'] = commit_dates.filename.transform(lambda x: x[11:].split('-')[0])
-commit_dates['model'] = commit_dates.filename.transform(lambda x: x[11:].split('-', 1)[1][:-4])
+commit_dates['model_case'] = commit_dates.filename.transform(lambda x: x[11:].split('-', 1)[1][:-4])
 
 GM = ['GM', 'GM01', 'GM02', 'GM03', 'GM04', 'GM05', 'GM06', 'GM07', 'GM08', 
       'GM09', 'GM10', 'GM11', 'GM12', 'GM13', 'GM14', 'GM15', 'GM16']
@@ -138,11 +136,20 @@ location_dict['PL'] = 'Poland'
 
 df['country'] = df.location.replace(location_dict)
 
+def append_case(x):
+    if 'case' in x.target:
+        return '-'.join([x.model, 'case'])
+    else:
+        return x.model
+
+df['model_case'] = df.apply(lambda x: append_case(x), axis=1)
+
 commit_dates.drop(columns=['filename', 'latest_commit'], inplace=True)
 
-df = df.merge(commit_dates, left_on=['forecast_date', 'country', 'model'], right_on=['forecast_date', 'country', 'model'])
+df = df.merge(commit_dates, how='left', left_on=['forecast_date', 'country', 'model_case'], 
+              right_on=['forecast_date', 'country', 'model_case'])
 
-df.drop(columns=['country'], inplace=True)
+df.drop(columns=['country', 'model_case'], inplace=True)
 df.rename(columns={'first_commit': 'first_commit_date'}, inplace=True)
 
 df.to_csv('../data/forecasts_to_plot.csv', index=False)

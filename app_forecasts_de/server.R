@@ -27,18 +27,19 @@ Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 # read in data set compiled specificaly for Shiny app:
 if(local){
   forecasts_to_plot <- read.csv("data/forecasts_to_plot.csv",
-                                stringsAsFactors = FALSE)
+                                stringsAsFactors = FALSE,
+                                colClasses = c("forecast_date" = "Date",
+                                               "timezero" = "Date",
+                                               "target_end_date" = "Date",
+                                               "first_commit_date" = "Date"))
 }else{
   forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/forecasts_to_plot.csv",
-                                stringsAsFactors = FALSE)
+                                stringsAsFactors = FALSE,
+                                colClasses = c("forecast_date" = "Date",
+                                               "timezero" = "Date",
+                                               "target_end_date" = "Date",
+                                               "first_commit_date" = "Date"))
 }
-
-forecasts_to_plot$forecast_date <- as.Date(forecasts_to_plot$forecast_date)
-forecasts_to_plot$timezero <- as.Date(forecasts_to_plot$timezero)
-forecasts_to_plot$target_end_date <- as.Date(forecasts_to_plot$target_end_date)
-forecasts_to_plot <- subset(forecasts_to_plot, !grepl("-1 wk ahead", target))
-forecasts_to_plot <- subset(forecasts_to_plot, quantile %in% c(0.025, 0.5, 0.975) | is.na(quantile))
-# forecasts_to_plot <- subset(forecasts_to_plot, !(grepl("0 wk ahead", target) & type != "observed"))
 
 # exclude some models because used data is neither ECDC nor JHU:
 models_to_exclude <- c("Imperial-ensemble1")
@@ -96,12 +97,22 @@ names(truth_data_used) <- truth_data_used0$model
 
 # get evaluation data:
 dat_evaluation <- list()
-dat_evaluation$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/evaluation/evaluation-ECDC.csv",
-                                colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
-                                stringsAsFactors = FALSE)
-dat_evaluation$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/evaluation/evaluation-JHU.csv",
-                               colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
-                               stringsAsFactors = FALSE)
+if(local){
+  dat_evaluation$ECDC <- read.csv("../evaluation/evaluation-ECDC.csv",
+                                  colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
+                                  stringsAsFactors = FALSE)
+  dat_evaluation$JHU <- read.csv("../evaluation/evaluation-JHU.csv",
+                                 colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
+                                 stringsAsFactors = FALSE)
+}else{
+  dat_evaluation$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/evaluation/evaluation-ECDC.csv",
+                                  colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
+                                  stringsAsFactors = FALSE)
+  dat_evaluation$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/evaluation/evaluation-JHU.csv",
+                                 colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
+                                 stringsAsFactors = FALSE)
+}
+
 
 # Define server logic:
 shinyServer(function(input, output, session) {
@@ -125,6 +136,11 @@ shinyServer(function(input, output, session) {
     if(!is.null(input$coord_dblclick)){
       coords$brush <- list(xlim = NULL, ylim = NULL)
     }
+  })
+  # reset if target changed:
+  observe({
+    input$select_target
+    coords$brush <- list(xlim = NULL, ylim = NULL)
   })
   # hover:
   observe({
@@ -154,7 +170,9 @@ shinyServer(function(input, output, session) {
                          } else TRUE) &
                          grepl(input$select_target, target) &
                          location == input$select_location &
-                         target_end_date == hover_date & type %in% c("point", "observed"))
+                         target_end_date == hover_date &
+                         type %in% c("point", if(input$select_stratification == "forecast_date") "observed"))
+        print(subs)
         point_pred <- data.frame(model = models)
         point_pred <- merge(point_pred, subs, by = "model", all.x = TRUE)
         # need to shift to fit respective truth data:
@@ -284,9 +302,11 @@ shinyServer(function(input, output, session) {
                    pch_truths = pch_full,
                    pch_forecasts = pch_empty,
                    legend = FALSE,
-                   show_pi = input$show_pi,
+                   add_intervals.95 = input$show_pi.95,
+                   add_intervals.50 = input$show_pi.50,
                    add_model_past = TRUE, #input$show_model_past,
-                   highlight_target_end_date = selected$target_end_date)
+                   highlight_target_end_date = selected$target_end_date,
+                   tolerance_retrospective = 1000)
     abline(h = 0)
 
     # add legends manually:
@@ -294,6 +314,7 @@ shinyServer(function(input, output, session) {
            pch = ifelse(models %in% input$select_models,
                         pch_full[truth_data_used[models]], pch_empty[truth_data_used[models]]),
            pt.cex = 1.3, ncol = 3)
+    print(selected)
     legend("left", col = "black", legend = paste0(c("Truth data", "JHU", "ECDC/RKI"), ": ",
                                                   c("", selected$truths)), lty = 0, bty = "n",
            pch = c(NA, ifelse(truths %in% input$select_truths, pch_full, pch_empty)),

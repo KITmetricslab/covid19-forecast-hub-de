@@ -2928,7 +2928,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-08-21,28 day ahead cum death,2020-09-18,GM04,Hamburg,quantile,0.025,271.348808127196
 2020-08-21,28 day ahead inc death,2020-09-18,GM04,Hamburg,quantile,0.025,0.339635106037753
 2020-08-21,29 day ahead cum death,2020-09-19,GM04,Hamburg,quantile,0.025,271.710309765009
-2020-08-21,29 day ahead inc death,2020-09-19,GM04,Hamburg,quantile,0.025,0.34547276972422303
+2020-08-21,29 day ahead inc death,2020-09-19,GM04,Hamburg,quantile,0.025,0.34547276972422297
 2020-08-21,3 day ahead cum death,2020-08-24,GM04,Hamburg,quantile,0.025,264.93168151827
 2020-08-21,3 day ahead inc death,2020-08-24,GM04,Hamburg,quantile,0.025,0.117759967031313
 2020-08-21,3 wk ahead cum death,2020-09-12,GM04,Hamburg,quantile,0.025,269.360187978417
@@ -5138,7 +5138,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-08-21,3 day ahead inc death,2020-08-24,GM07,North Rhine-Westphalia,quantile,0.975,3.43690766867497
 2020-08-21,3 wk ahead cum death,2020-09-12,GM07,North Rhine-Westphalia,quantile,0.975,1866.20504331863
 2020-08-21,30 day ahead cum death,2020-09-20,GM07,North Rhine-Westphalia,quantile,0.975,1907.1961409352
-2020-08-21,30 day ahead inc death,2020-09-20,GM07,North Rhine-Westphalia,quantile,0.975,5.7127309508368596
+2020-08-21,30 day ahead inc death,2020-09-20,GM07,North Rhine-Westphalia,quantile,0.975,5.7127309508368604
 2020-08-21,31 day ahead cum death,2020-09-21,GM07,North Rhine-Westphalia,quantile,0.975,1912.99626458014
 2020-08-21,31 day ahead inc death,2020-09-21,GM07,North Rhine-Westphalia,quantile,0.975,5.88270196505446
 2020-08-21,32 day ahead cum death,2020-09-22,GM07,North Rhine-Westphalia,quantile,0.975,1918.97017091464
@@ -9535,7 +9535,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-08-21,21 day ahead inc death,2020-09-11,GM14,Saxony-Anhalt,quantile,0.025,8.36737949294708e-4
 2020-08-21,22 day ahead cum death,2020-09-12,GM14,Saxony-Anhalt,quantile,0.025,63.2231523911324
 2020-08-21,22 day ahead inc death,2020-09-12,GM14,Saxony-Anhalt,quantile,0.025,7.59491955243163e-4
-2020-08-21,23 day ahead cum death,2020-09-13,GM14,Saxony-Anhalt,quantile,0.025,63.223848606472004
+2020-08-21,23 day ahead cum death,2020-09-13,GM14,Saxony-Anhalt,quantile,0.025,63.223848606471996
 2020-08-21,23 day ahead inc death,2020-09-13,GM14,Saxony-Anhalt,quantile,0.025,6.92566517141913e-4
 2020-08-21,24 day ahead cum death,2020-09-14,GM14,Saxony-Anhalt,quantile,0.025,63.2244729270161
 2020-08-21,24 day ahead inc death,2020-09-14,GM14,Saxony-Anhalt,quantile,0.025,6.24841502508922e-4

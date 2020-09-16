@@ -26,6 +26,11 @@ cd ../../data-truth/DIVI
 python3 ./process_data.py
 echo "DIVI done"
 
+# update commit dates
+cd ../validation
+python3 ./get_commit_dates.py
+echo "file dates done"
+
 # update Shiny data
 cd ../../app_forecasts_de/code
 python3 ./data_preparation.py
@@ -37,11 +42,14 @@ cd ../../code/visualization
 Rscript ./plot_current_forecasts.R
 echo "Image done"
 
+# validate RKI truth
 cd ../validation
-python3 ./get_commit_dates.py
-echo "file dates done"
-
 python3 ./validate_truth.py
 echo "All checks executed"
+
+# Evaluate forecasts
+cd ../../evaluation
+Rscript ./evaluate_forecasts.R
+echo "executed forecast evaluation"
 
 cd ../../
