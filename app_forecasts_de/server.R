@@ -1,7 +1,7 @@
 library(shiny)
 library(pals)
 
-local <- TRUE
+local <- FALSE
 
 # read in plotting functions etc
 if(local){
@@ -97,12 +97,22 @@ names(truth_data_used) <- truth_data_used0$model
 
 # get evaluation data:
 dat_evaluation <- list()
-dat_evaluation$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/evaluation/evaluation-ECDC.csv",
-                                colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
-                                stringsAsFactors = FALSE)
-dat_evaluation$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/evaluation/evaluation-JHU.csv",
-                               colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
-                               stringsAsFactors = FALSE)
+if(local){
+  dat_evaluation$ECDC <- read.csv("../evaluation/evaluation-ECDC.csv",
+                                  colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
+                                  stringsAsFactors = FALSE)
+  dat_evaluation$JHU <- read.csv("../evaluation/evaluation-JHU.csv",
+                                 colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
+                                 stringsAsFactors = FALSE)
+}else{
+  dat_evaluation$ECDC <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/evaluation/evaluation-ECDC.csv",
+                                  colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
+                                  stringsAsFactors = FALSE)
+  dat_evaluation$JHU <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/evaluation/evaluation-JHU.csv",
+                                 colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
+                                 stringsAsFactors = FALSE)
+}
+
 
 # Define server logic:
 shinyServer(function(input, output, session) {
@@ -126,6 +136,11 @@ shinyServer(function(input, output, session) {
     if(!is.null(input$coord_dblclick)){
       coords$brush <- list(xlim = NULL, ylim = NULL)
     }
+  })
+  # reset if target changed:
+  observe({
+    input$select_target
+    coords$brush <- list(xlim = NULL, ylim = NULL)
   })
   # hover:
   observe({
@@ -155,7 +170,9 @@ shinyServer(function(input, output, session) {
                          } else TRUE) &
                          grepl(input$select_target, target) &
                          location == input$select_location &
-                         target_end_date == hover_date & type %in% c("point", "observed"))
+                         target_end_date == hover_date &
+                         type %in% c("point", if(input$select_stratification == "forecast_date") "observed"))
+        print(subs)
         point_pred <- data.frame(model = models)
         point_pred <- merge(point_pred, subs, by = "model", all.x = TRUE)
         # need to shift to fit respective truth data:
@@ -297,6 +314,7 @@ shinyServer(function(input, output, session) {
            pch = ifelse(models %in% input$select_models,
                         pch_full[truth_data_used[models]], pch_empty[truth_data_used[models]]),
            pt.cex = 1.3, ncol = 3)
+    print(selected)
     legend("left", col = "black", legend = paste0(c("Truth data", "JHU", "ECDC/RKI"), ": ",
                                                   c("", selected$truths)), lty = 0, bty = "n",
            pch = c(NA, ifelse(truths %in% input$select_truths, pch_full, pch_empty)),
