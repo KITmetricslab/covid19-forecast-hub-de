@@ -10,7 +10,7 @@ source("functions_ensemble.R") # read in functions
 # basic settings:
 country <- "Germany"
 location <- "GM"
-forecast_date <- as.Date("2020-08-24")
+forecast_date <- as.Date("2020-09-21")
 if(!weekdays(forecast_date) == "Monday") stop("forecast_date should be a Monday.")
 
 # read in which models to include:
@@ -128,5 +128,5 @@ head(ensemble)
 tail(ensemble)
 
 # store
-write.csv(ensemble, file = paste0("../../data-processed/KITCOVIDhub-ensemble/", forecast_date,
-                                  "-", country, "-KITCOVIDhub-ensemble.csv"), row.names = FALSE)
+write.csv(ensemble, file = paste0("../../data-processed/KITCOVIDhub-mean_ensemble/", forecast_date,
+                                  "-", country, "-KITCOVIDhub-mean_ensemble.csv"), row.names = FALSE)

@@ -1,0 +1,36 @@
+team_name: KITmetricslab / German COVID19 Forecat Hub
+team_abbr: KITCOVIDhub
+institution_affil: Karlsruhe Institute of Technology, Chair of Econometrics and Statistics
+team_funding: Helmholtz Information & Data Science Pilot Project "Simcard"
+team_experience: Our team organizes the German COVID19 Forecast Hub and collarborates with the US COVID19 Forecast Hub.
+
+model_name: ensemble
+model_abbr: ensemble
+model_output: 
+model_repo: https://github.com/KITmetricslab/covid19-forecast-hub-de
+
+model_contributors: Johannes Bracher, Jannik Deuschel, Konstantin Görgen, Jakob Ketterer, Daniel Wolffram, Tilmann Gneiting, Melanie Schienle
+Model_targets: reported deaths
+Target_loc: Germany (federal)
+Data_format: 23 quantiles
+forecast_startdate: 2020-08-17
+forecast_frequency: 1x weekly
+
+data_inputs_known: other forecasts submitted to the Forecast Hub
+data_source_known:
+
+this_model_is_an_ensemble: TRUE
+this_model_is_unconditional: TRUE
+
+methods: >-
+    This is a simple quantile-wise average of other models submitted to the Forecast Hub.
+
+methods_long: >-
+    This is a simple quantile-wise average of other models submitted to the Forecast Hub. We account for
+    use of different truth data by different models, aligning all forecasts of cumulative deaths with the
+    last observed value from the ECDC data.
+    To assess the performance of ensemble forecast we added ensemble forecasts retrospectively for weeks 
+    prior to 2020-09-21 in September 2020. This is documented in code/validation/commit_dates.csv.
+    From 2020-09-21 onwards, this is our main ensemble as it showed better overall performance than the mean ensemble.
+    We also keep producing the mean ensemble to monitor its performance.
+citation: https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble
