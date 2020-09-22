@@ -31,4 +31,6 @@ methods_long: >-
     last observed value from the ECDC data.
     To assess the performance of ensemble forecast we added ensemble forecasts retrospectively for weeks 
     prior to 2020-08-17 in September 2020. This is documented in code/validation/commit_dates.csv.
+    From 2020-09-21 onwards, our main ensemble is the median ensemble as it showed better overall performance.
+    We keep producing the mean ensemble to monitor its performance.
 citation: https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble
