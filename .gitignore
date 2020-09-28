@@ -8,3 +8,8 @@
 __pycache__/
 covid19-forecast-hub-de.Rproj
 data-raw/IHME/2020_09_02/Reference_hospitalization_all_locs.csv
+
+#ignore all IHME base files since they are too large
+Reference_hospitalization_all_locs.csv
+Best_mask_hospitalization_all_locs.csv
+Worse_hospitalization_all_locs.csv

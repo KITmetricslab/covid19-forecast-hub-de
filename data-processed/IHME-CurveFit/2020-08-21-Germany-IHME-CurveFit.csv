@@ -978,7 +978,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-08-21,43 day ahead cum death,2020-10-03,GM01,Baden-Wurttemberg,quantile,0.025,1909.02525365978
 2020-08-21,43 day ahead inc death,2020-10-03,GM01,Baden-Wurttemberg,quantile,0.025,1.87864383164613
 2020-08-21,44 day ahead cum death,2020-10-04,GM01,Baden-Wurttemberg,quantile,0.025,1911.05518274407
-2020-08-21,44 day ahead inc death,2020-10-04,GM01,Baden-Wurttemberg,quantile,0.025,1.9040821649267201
+2020-08-21,44 day ahead inc death,2020-10-04,GM01,Baden-Wurttemberg,quantile,0.025,1.9040821649267199
 2020-08-21,45 day ahead cum death,2020-10-05,GM01,Baden-Wurttemberg,quantile,0.025,1913.12779377269
 2020-08-21,45 day ahead inc death,2020-10-05,GM01,Baden-Wurttemberg,quantile,0.025,1.94124842569838
 2020-08-21,46 day ahead cum death,2020-10-06,GM01,Baden-Wurttemberg,quantile,0.025,1915.24513864699
@@ -3563,7 +3563,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-08-21,16 day ahead cum death,2020-09-06,GM05,Hesse,quantile,0.025,528.394593155089
 2020-08-21,16 day ahead inc death,2020-09-06,GM05,Hesse,quantile,0.025,0.227362494007357
 2020-08-21,17 day ahead cum death,2020-09-07,GM05,Hesse,quantile,0.025,528.613563170124
-2020-08-21,17 day ahead inc death,2020-09-07,GM05,Hesse,quantile,0.025,0.22702924352408899
+2020-08-21,17 day ahead inc death,2020-09-07,GM05,Hesse,quantile,0.025,0.22702924352408901
 2020-08-21,18 day ahead cum death,2020-09-08,GM05,Hesse,quantile,0.025,528.829600745453
 2020-08-21,18 day ahead inc death,2020-09-08,GM05,Hesse,quantile,0.025,0.226694219619191
 2020-08-21,19 day ahead cum death,2020-09-09,GM05,Hesse,quantile,0.025,529.044289481178
@@ -5138,7 +5138,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2020-08-21,3 day ahead inc death,2020-08-24,GM07,North Rhine-Westphalia,quantile,0.975,3.43690766867497
 2020-08-21,3 wk ahead cum death,2020-09-12,GM07,North Rhine-Westphalia,quantile,0.975,1866.20504331863
 2020-08-21,30 day ahead cum death,2020-09-20,GM07,North Rhine-Westphalia,quantile,0.975,1907.1961409352
-2020-08-21,30 day ahead inc death,2020-09-20,GM07,North Rhine-Westphalia,quantile,0.975,5.7127309508368604
+2020-08-21,30 day ahead inc death,2020-09-20,GM07,North Rhine-Westphalia,quantile,0.975,5.7127309508368596
 2020-08-21,31 day ahead cum death,2020-09-21,GM07,North Rhine-Westphalia,quantile,0.975,1912.99626458014
 2020-08-21,31 day ahead inc death,2020-09-21,GM07,North Rhine-Westphalia,quantile,0.975,5.88270196505446
 2020-08-21,32 day ahead cum death,2020-09-22,GM07,North Rhine-Westphalia,quantile,0.975,1918.97017091464
