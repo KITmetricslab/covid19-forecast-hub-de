@@ -86,7 +86,8 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [Johannes Gutenberg University Mainz / University of Hamburg](https://github.com/QEDHamburg/covid19) (ECDC; MIT)
 - [KIT](https://github.com/KITmetricslab/KIT-baseline) (ECDC; MIT) *This is a simple baseline model run by the Forecast Hub Team. Part of these forecasts were created retrospectively, but using only data available at the respective forecast date. The commit dates of all forecasts can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/code/validation/commit_dates.csv).*
 - [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)
-- [MIT](https://www.covidanalytics.io/) (JHU; Apache 2.0)
+- [MIM / University of Warsaw](https://www.mimuw.edu.pl/en/faculty) (ECDC; to be specified)
+- [MIT Covid Analytics](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [MOCOS Group](https://mocos.pl/) (ECDC; to be specified)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
 - [University of Leipzig IMISE/GenStat](https://github.com/holgerman/covid19-forecast-hub-de) (ECDC; none given)
@@ -95,7 +96,7 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 
 ## Forecast evaluation and ensemble building
 
-One of the goals of this forecast hub is to combine the available forecasts into an ensemble prediction, see [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble) for a description of the current unweighted ensemble approach. *Note that we only started generating ensemble forecasts each week on 17 August 2020. Ensemble forecasts from earlier weeks have been generated retrospectively to assess performance. As the ensemble is only a simple average of other models this should not affect the behaviour of the ensemble forecasts. The commit dates of all forecasts can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/code/validation/commit_dates.csv)*
+One of the goals of this forecast hub is to combine the available forecasts into an ensemble prediction, see [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble) for a description of the current unweighted ensemble approach. *Note that we only started generating ensemble forecasts each week on 17 August 2020. Ensemble forecasts from earlier weeks have been generated retrospectively to assess performance. As the ensemble is only a simple average of other models this should not affect the behaviour of the ensemble forecasts. The commit dates of all forecasts can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/code/validation/commit_dates.csv). Starting from 2020-09-21, our main ensemble is the median rather than the mean ensemble, as the former showed better performance in evaluations.*
 
 
 At a later stage we intend to generate more data-driven ensembles, which requires evaluating different forecasts, both those submitted by teams and those generated using different ensembling techniques. **We want to emphasize, however, that this is not a competition, but a collaborative effort.** The forecast evaluation method which will be applied is described in [this preprint](https://arxiv.org/abs/2005.12881).

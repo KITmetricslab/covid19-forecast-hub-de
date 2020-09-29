@@ -30,5 +30,7 @@ methods_long: >-
     use of different truth data by different models, aligning all forecasts of cumulative deaths with the
     last observed value from the ECDC data.
     To assess the performance of ensemble forecast we added ensemble forecasts retrospectively for weeks 
-    prior to 2020-08-17 in September 2020. This is documented in code/validation/commit_dates.csv.
+    prior to 2020-09-21 in September 2020. This is documented in code/validation/commit_dates.csv.
+    From 2020-09-21 onwards, this is our main ensemble as it showed better overall performance than the mean ensemble.
+    We also keep producing the mean ensemble to monitor its performance.
 citation: https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble
