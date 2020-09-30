@@ -53,6 +53,8 @@ The main contents of the repository are currently the following (see also [this]
 
 Unlike in the more advanced US COVID-19 forecast hub, at the current stage we actively collect available forecasts from various teams and re-format them in a standardized way. We are, however, moving to a submission system based on pull requests for new teams. Our wiki contains a detailed [guide to submission](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Preparing-your-submission). **Forecasts should be updated in a weekly rhythm. If at all possible, new forecast should be uploaded on Mondays.** The deadline is 11.59pm and thus corresponds to the deadline of the US Hub (6pm Eastern Time). Note that we also accept additional updates on other days of the week (not more than one per day), but will not include these in visualizations or ensembles (if no new forecast was provided on a Monday we will, however, use forecasts from the preceding Sunday, Saturday or Friday).
 
+We strongly encourage teams to visually inspect their final forecasts prior to submission. We created a [Shiny app](https://jobrac.shinyapps.io/app_check_submission/) to help you in this process.
+
 Especially in the starting phase we will try to provide direct support to teams to help overcome technical difficulties, do not hesitate to [get in touch](https://statistik.econ.kit.edu/mitarbeiter_2902.php).
 
 
