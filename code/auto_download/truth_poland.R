@@ -22,11 +22,12 @@ new_cases_long <- pivot_longer(new_cases, -c(Województwo, location), values_to="
 new_cases_long <- new_cases_long %>% rename(location_name = Województwo)
 
 new_cases_long_df <- as.data.frame(new_cases_long)
-new_cases_long_df$date <- as.Date(gsub(".", "/", paste(new_cases_long_df$date, "2020", sep="."), fixed = TRUE), format = "%d/%m/%y")
+#shift dates to mach ECDC
+new_cases_long_df$date <- as.Date(gsub(".", "/", paste(new_cases_long_df$date, "2020", sep="."), fixed = TRUE), format = "%d/%m/%y") + 1
 
 new_cases_long_df$location_name <- gsub("ó", "o", new_cases_long_df$location_name)
 
-write.csv(new_cases_long_df, "../../data-truth/MZ/truth_MZ-Incident Cases_Poland.csv", sep=",")
+write.csv(new_cases_long_df, "../../data-truth/MZ/truth_MZ-Incident Cases_Poland.csv", sep=",", row.names=FALSE)
 
 # process cum cases
 cum_cases <- read_sheet("1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E", 
@@ -43,11 +44,11 @@ cum_cases_long <- pivot_longer(cum_cases, -c(Województwo, location), values_to="
 cum_cases_long <- cum_cases_long %>% rename(location_name = Województwo) 
 
 cum_cases_long_df <- as.data.frame(cum_cases_long)
-cum_cases_long_df$date <- as.Date(gsub(".", "/", paste(cum_cases_long_df$date, "2020", sep="."), fixed = TRUE), format = "%d/%m/%y")
+cum_cases_long_df$date <- as.Date(gsub(".", "/", paste(cum_cases_long_df$date, "2020", sep="."), fixed = TRUE), format = "%d/%m/%y") + 1
 
 cum_cases_long_df$location_name <- gsub("ó", "o", cum_cases_long_df$location_name)
 
-write.csv(cum_cases_long_df, "../../data-truth/MZ/truth_MZ-Cumulative Cases_Poland.csv", sep=",")
+write.csv(cum_cases_long_df, "../../data-truth/MZ/truth_MZ-Cumulative Cases_Poland.csv", sep=",", row.names=FALSE)
 
 # process new deaths
 new_deaths <- read_sheet("1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E", 
@@ -64,11 +65,11 @@ new_deaths_long <- pivot_longer(new_deaths, -c(Województwo, location), values_to
 new_deaths_long <- new_deaths_long %>% rename(location_name = Województwo) 
 
 new_deaths_long_df <- as.data.frame(new_deaths_long)
-new_deaths_long_df$date <- as.Date(gsub(".", "/", paste(new_deaths_long_df$date, "2020", sep="."), fixed = TRUE), format = "%d/%m/%y")
+new_deaths_long_df$date <- as.Date(gsub(".", "/", paste(new_deaths_long_df$date, "2020", sep="."), fixed = TRUE), format = "%d/%m/%y") + 1
 
 new_deaths_long_df$location_name <- gsub("ó", "o", new_deaths_long_df$location_name)
 
-write.csv(new_deaths_long_df, "../../data-truth/MZ/truth_MZ-Incident Deaths_Poland.csv", sep=",")
+write.csv(new_deaths_long_df, "../../data-truth/MZ/truth_MZ-Incident Deaths_Poland.csv", sep=",", row.names=FALSE)
 
 # process cum deaths
 cum_deaths <- read_sheet("1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E", 
@@ -85,8 +86,8 @@ cum_deaths_long <- pivot_longer(cum_deaths, -c(Województwo, location), values_to
 cum_deaths_long <- cum_deaths_long %>% rename(location_name = Województwo) 
 
 cum_deaths_long_df <- as.data.frame(cum_deaths_long)
-cum_deaths_long_df$date <- as.Date(gsub(".", "/", paste(cum_deaths_long_df$date, "2020", sep="."), fixed = TRUE), format = "%d/%m/%y")
+cum_deaths_long_df$date <- as.Date(gsub(".", "/", paste(cum_deaths_long_df$date, "2020", sep="."), fixed = TRUE), format = "%d/%m/%y") + 1
 
 cum_deaths_long_df$location_name <- gsub("ó", "o", cum_deaths_long_df$location_name)
 
-write.csv(cum_deaths_long_df, "../../data-truth/MZ/truth_MZ-Cumulative Deaths_Poland.csv", sep=",")
+write.csv(cum_deaths_long_df, "../../data-truth/MZ/truth_MZ-Cumulative Deaths_Poland.csv", sep=",", row.names=FALSE)
