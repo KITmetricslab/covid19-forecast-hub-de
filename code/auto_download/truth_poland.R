@@ -32,6 +32,8 @@ write.csv(new_cases_long_df, "../../data-truth/MZ/truth_MZ-Incident Cases_Poland
 cum_cases <- read_sheet("1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E", 
                         range = "Wzrost w województwach!31:47")
 
+cum_cases <- subset(cum_cases, select = -c(SUMA))
+
 cum_cases <- cum_cases %>%
   bind_rows(summarise_all(., funs(if(is.numeric(.)) sum(.) else "Poland"))) %>% 
   add_column(location = abbr_vois)
@@ -51,6 +53,8 @@ write.csv(cum_cases_long_df, "../../data-truth/MZ/truth_MZ-Cumulative Cases_Pola
 new_deaths <- read_sheet("1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E", 
                                       range = "Wzrost w województwach!51:67")
 
+new_deaths <- subset(new_deaths, select = -c(SUMA))
+
 new_deaths <- new_deaths %>%
   bind_rows(summarise_all(., funs(if(is.numeric(.)) sum(.) else "Poland"))) %>% 
   add_column(location = abbr_vois)
@@ -68,7 +72,9 @@ write.csv(new_deaths_long_df, "../../data-truth/MZ/truth_MZ-Incident Deaths_Pola
 
 # process cum deaths
 cum_deaths <- read_sheet("1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E", 
-                                      range = "Wzrost w województwach!51:67")
+                                      range = "Wzrost w województwach!71:87")
+
+cum_deaths <- subset(cum_deaths, select = -c(SUMA))
 
 cum_deaths <- cum_deaths %>%
   bind_rows(summarise_all(., funs(if(is.numeric(.)) sum(.) else "Poland"))) %>% 
