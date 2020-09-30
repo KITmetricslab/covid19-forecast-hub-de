@@ -71,9 +71,10 @@ The forecasts assembled in this repository have been created by various independ
 Data on observed numbers of deaths and several other quantities are compiled [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth) and come from the following sources:
 
 - [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases) **(This is our preferred source for national level counts.)**
-- [Robert Koch Institut](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0). Note that these data are subject to some processing steps, see [here](data-truth/RKI). **(This is our preferred source for Bundesland level counts. The data are coherent with the national level data from ECDC.)**
+- [Polish Ministry of Health](https://www.gov.pl/web/zdrowie). We pull these data from [this Google Sheet](bit.ly/covid19-poland) run by [Michal Rogalski](https://twitter.com/micalrg). **(This is our preferred source for Polish voivodeship level counts. The data are coherent with the national level data from ECDC. To align with the ECDC time scale we have shifted them by one day.)**
+- [Robert Koch Institut](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0). Note that these data are subject to some processing steps, see [here](data-truth/RKI). **(This is our preferred source for German Bundesland level counts. The data are coherent with the national level data from ECDC.)**
 - [Johns Hopkins University](https://coronavirus.jhu.edu/). These data are used by a number of teams generating forecasts. Currently (August 2020) the agreement with ECDC is good, but in the past there have been larger discrepancies.
-- [DIVI Intensivregister](https://www.divi.de/register/tagesreport) These data are currently not yet used for forecasts, but we intend to extend our activities in this direction.
+- [DIVI Intensivregister.](https://www.divi.de/register/tagesreport) These data are currently not yet used for forecasts, but we intend to extend our activities in this direction.
 
 Details can be found in the respective README files in the subfolders of `data-truth`.
 
