@@ -19,7 +19,9 @@ new_cases <- new_cases %>%
 
 new_cases_long <- pivot_longer(new_cases, -c(Województwo, location), values_to="value", names_to="date")
 
-write.table(new_cases_long, "../../data-truth/POLAND/truth-Incident Cases_Germany.csv")
+new_cases_long <- new_cases_long %>% rename(location_name = Województwo) 
+
+write.table(new_cases_long, "../../data-truth/POLAND/truth-Incident Cases_Poland.csv")
 
 # process cum cases
 cum_cases <- read_sheet("1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E", 
@@ -31,7 +33,9 @@ cum_cases <- cum_cases %>%
 
 cum_cases_long <- pivot_longer(cum_cases, -c(Województwo, location), values_to="value", names_to="date")
 
-write.table(cum_cases_long, "../../data-truth/POLAND/truth-Cumulative Cases_Germany.csv")
+cum_cases_long <- cum_cases_long %>% rename(location_name = Województwo) 
+
+write.table(cum_cases_long, "../../data-truth/POLAND/truth-Cumulative Cases_Poland.csv")
 
 # process new deaths
 new_deaths <- read_sheet("1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E", 
@@ -43,7 +47,9 @@ new_deaths <- new_deaths %>%
 
 new_deaths_long <- pivot_longer(new_deaths, -c(Województwo, location), values_to="value", names_to="date")
 
-write.table(new_deaths_long, "../../data-truth/POLAND/truth-Incident Deaths_Germany.csv")
+new_deaths_long <- new_deaths_long %>% rename(location_name = Województwo) 
+
+write.table(new_deaths_long, "../../data-truth/POLAND/truth-Incident Deaths_Poland.csv")
 
 # process cum deaths
 cum_deaths <- read_sheet("1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E", 
@@ -55,4 +61,6 @@ cum_deaths <- cum_deaths %>%
 
 cum_deaths_long <- pivot_longer(cum_deaths, -c(Województwo, location), values_to="value", names_to="date")
 
-write.table(new_deaths_long, "../../data-truth/POLAND/truth-Cumulative Deaths_Germany.csv")
+cum_deaths_long <- cum_deaths_long %>% rename(location_name = Województwo) 
+
+write.table(new_deaths_long, "../../data-truth/POLAND/truth-Cumulative Deaths_Poland.csv")
