@@ -35,8 +35,16 @@ def load_ecdc():
     df_cd = read_saturdays('ECDC', 'cum_death', 'Poland')
     df_cc = read_saturdays('ECDC', 'cum_case', 'Poland')
     df3 = df_cd.merge(df_cc, on=['date', 'location', 'location_name'])
+    
+    # MZ data for Poland and Voivodeships
+    df_cd = read_saturdays('MZ', 'cum_death', 'Poland')
+    df_cc = read_saturdays('MZ', 'cum_case', 'Poland')
+    df4 = df_cd.merge(df_cc, on=['date', 'location', 'location_name'])
+    
+    # Use ECDC data for national level
+    df4 = df4[df4.location != 'PL']
 
-    df = pd.concat([df1, df2, df3]).reset_index(drop=True)
+    df = pd.concat([df1, df2, df3, df4]).reset_index(drop=True)
     
     return df
 
