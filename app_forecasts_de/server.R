@@ -1,7 +1,7 @@
 library(shiny)
 library(pals)
 
-local <- FALSE
+local <- TRUE
 
 # read in plotting functions etc
 if(local){
@@ -63,7 +63,7 @@ locations <- c("Germany" = "GM", "Poland" = "PL", locations)
 models <- sort(as.character(unique(forecasts_to_plot$model)))
 
 # set default for selected models at start:
-default_models <- if("KITCOVIDhub-ensemble" %in% models) "KITCOVIDhub-ensemble" else models
+default_models <- if("KITCOVIDhub-median_ensemble" %in% models) "KITCOVIDhub-median_ensemble" else models
 
 # assign colours to models (currently restricted to eight):
 cols_models <- glasbey(length(models) + 1)[-1]
