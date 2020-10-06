@@ -93,7 +93,7 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [MIT Covid Analytics](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [MOCOS Group](https://mocos.pl/) (ECDC; to be specified)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
-- [University of Leipzig IMISE/GenStat](https://github.com/holgerman/covid19-forecast-hub-de) (ECDC; none given)
+- [University of Leipzig IMISE/GenStat](https://github.com/holgerman/covid19-forecast-hub-de) (ECDC; MIT)
 - [University of Southern California Data Science Lab](https://scc-usc.github.io/ReCOVER-COVID-19)(JHU; MIT) (MIT)
 - [YYG](http://covid19-projections.com/) (JHU; MIT)
 
