@@ -1,72 +1,667 @@
 date,location,location_name,value
-2020-03-27,GM,Germany,42288
-2020-03-27,GM01,Baden-Württemberg State,8161
-2020-03-27,GM02,Free State of Bavaria,9481
-2020-03-27,GM03,Free Hanseatic City of Bremen,241
-2020-03-27,GM04,Free Hanseatic City of Hamburg,1693
-2020-03-27,GM05,Hesse State,2323
-2020-03-27,GM06,Lower Saxony State,2810
-2020-03-27,GM07,North Rhine-Westphalia State,9235
-2020-03-27,GM08,Rhineland-Palatinate State,1971
-2020-03-27,GM09,Saarland State,505
-2020-03-27,GM10,Schleswig-Holstein State,812
-2020-03-27,GM11,Brandenburg State,537
+2020-02-04,GM,Germany,0
+2020-02-04,GM02,Free State of Bavaria,0
+2020-02-05,GM,Germany,0
+2020-02-05,GM02,Free State of Bavaria,0
+2020-02-06,GM,Germany,0
+2020-02-06,GM02,Free State of Bavaria,0
+2020-02-07,GM,Germany,0
+2020-02-07,GM02,Free State of Bavaria,0
+2020-02-08,GM,Germany,0
+2020-02-08,GM02,Free State of Bavaria,0
+2020-02-09,GM,Germany,0
+2020-02-09,GM02,Free State of Bavaria,0
+2020-02-10,GM,Germany,0
+2020-02-10,GM02,Free State of Bavaria,0
+2020-02-11,GM,Germany,0
+2020-02-11,GM02,Free State of Bavaria,0
+2020-02-12,GM,Germany,2
+2020-02-12,GM02,Free State of Bavaria,2
+2020-02-13,GM,Germany,2
+2020-02-13,GM02,Free State of Bavaria,2
+2020-02-14,GM,Germany,2
+2020-02-14,GM02,Free State of Bavaria,2
+2020-02-15,GM,Germany,2
+2020-02-15,GM02,Free State of Bavaria,2
+2020-02-16,GM,Germany,2
+2020-02-16,GM02,Free State of Bavaria,2
+2020-02-17,GM,Germany,2
+2020-02-17,GM02,Free State of Bavaria,2
+2020-02-18,GM,Germany,2
+2020-02-18,GM02,Free State of Bavaria,2
+2020-02-19,GM,Germany,2
+2020-02-19,GM02,Free State of Bavaria,2
+2020-02-20,GM,Germany,2
+2020-02-20,GM02,Free State of Bavaria,2
+2020-02-21,GM,Germany,2
+2020-02-21,GM02,Free State of Bavaria,2
+2020-02-22,GM,Germany,2
+2020-02-22,GM02,Free State of Bavaria,2
+2020-02-23,GM,Germany,2
+2020-02-23,GM02,Free State of Bavaria,2
+2020-02-24,GM,Germany,2
+2020-02-24,GM01,Baden-Württemberg State,0
+2020-02-24,GM02,Free State of Bavaria,2
+2020-02-24,GM03,Free Hanseatic City of Bremen,0
+2020-02-24,GM04,Free Hanseatic City of Hamburg,0
+2020-02-24,GM05,Hesse State,0
+2020-02-24,GM06,Lower Saxony State,0
+2020-02-24,GM07,North Rhine-Westphalia State,0
+2020-02-24,GM08,Rhineland-Palatinate State,0
+2020-02-24,GM09,Saarland State,0
+2020-02-24,GM10,Schleswig-Holstein State,0
+2020-02-24,GM11,Brandenburg State,0
+2020-02-24,GM12,Mecklenburg-Western Pomerania State,0
+2020-02-24,GM13,Free State of Saxony,0
+2020-02-24,GM14,Sachsen-Anhalt State,0
+2020-02-24,GM15,Free State of Thüringia,0
+2020-02-24,GM16,Berlin State,0
+2020-02-25,GM,Germany,4
+2020-02-25,GM01,Baden-Württemberg State,1
+2020-02-25,GM02,Free State of Bavaria,2
+2020-02-25,GM03,Free Hanseatic City of Bremen,0
+2020-02-25,GM04,Free Hanseatic City of Hamburg,0
+2020-02-25,GM05,Hesse State,0
+2020-02-25,GM06,Lower Saxony State,0
+2020-02-25,GM07,North Rhine-Westphalia State,1
+2020-02-25,GM08,Rhineland-Palatinate State,0
+2020-02-25,GM09,Saarland State,0
+2020-02-25,GM10,Schleswig-Holstein State,0
+2020-02-25,GM11,Brandenburg State,0
+2020-02-25,GM12,Mecklenburg-Western Pomerania State,0
+2020-02-25,GM13,Free State of Saxony,0
+2020-02-25,GM14,Sachsen-Anhalt State,0
+2020-02-25,GM15,Free State of Thüringia,0
+2020-02-25,GM16,Berlin State,0
+2020-02-26,GM,Germany,7
+2020-02-26,GM01,Baden-Württemberg State,3
+2020-02-26,GM02,Free State of Bavaria,2
+2020-02-26,GM03,Free Hanseatic City of Bremen,0
+2020-02-26,GM04,Free Hanseatic City of Hamburg,0
+2020-02-26,GM05,Hesse State,0
+2020-02-26,GM06,Lower Saxony State,0
+2020-02-26,GM07,North Rhine-Westphalia State,2
+2020-02-26,GM08,Rhineland-Palatinate State,0
+2020-02-26,GM09,Saarland State,0
+2020-02-26,GM10,Schleswig-Holstein State,0
+2020-02-26,GM11,Brandenburg State,0
+2020-02-26,GM12,Mecklenburg-Western Pomerania State,0
+2020-02-26,GM13,Free State of Saxony,0
+2020-02-26,GM14,Sachsen-Anhalt State,0
+2020-02-26,GM15,Free State of Thüringia,0
+2020-02-26,GM16,Berlin State,0
+2020-02-27,GM,Germany,12
+2020-02-27,GM01,Baden-Württemberg State,6
+2020-02-27,GM02,Free State of Bavaria,2
+2020-02-27,GM03,Free Hanseatic City of Bremen,0
+2020-02-27,GM04,Free Hanseatic City of Hamburg,0
+2020-02-27,GM05,Hesse State,0
+2020-02-27,GM06,Lower Saxony State,0
+2020-02-27,GM07,North Rhine-Westphalia State,4
+2020-02-27,GM08,Rhineland-Palatinate State,0
+2020-02-27,GM09,Saarland State,0
+2020-02-27,GM10,Schleswig-Holstein State,0
+2020-02-27,GM11,Brandenburg State,0
+2020-02-27,GM12,Mecklenburg-Western Pomerania State,0
+2020-02-27,GM13,Free State of Saxony,0
+2020-02-27,GM14,Sachsen-Anhalt State,0
+2020-02-27,GM15,Free State of Thüringia,0
+2020-02-27,GM16,Berlin State,0
+2020-02-28,GM,Germany,39
+2020-02-28,GM01,Baden-Württemberg State,10
+2020-02-28,GM02,Free State of Bavaria,3
+2020-02-28,GM03,Free Hanseatic City of Bremen,0
+2020-02-28,GM04,Free Hanseatic City of Hamburg,0
+2020-02-28,GM05,Hesse State,0
+2020-02-28,GM06,Lower Saxony State,0
+2020-02-28,GM07,North Rhine-Westphalia State,25
+2020-02-28,GM08,Rhineland-Palatinate State,0
+2020-02-28,GM09,Saarland State,0
+2020-02-28,GM10,Schleswig-Holstein State,1
+2020-02-28,GM11,Brandenburg State,0
+2020-02-28,GM12,Mecklenburg-Western Pomerania State,0
+2020-02-28,GM13,Free State of Saxony,0
+2020-02-28,GM14,Sachsen-Anhalt State,0
+2020-02-28,GM15,Free State of Thüringia,0
+2020-02-28,GM16,Berlin State,0
+2020-02-29,GM,Germany,52
+2020-02-29,GM01,Baden-Württemberg State,13
+2020-02-29,GM02,Free State of Bavaria,3
+2020-02-29,GM03,Free Hanseatic City of Bremen,0
+2020-02-29,GM04,Free Hanseatic City of Hamburg,0
+2020-02-29,GM05,Hesse State,3
+2020-02-29,GM06,Lower Saxony State,0
+2020-02-29,GM07,North Rhine-Westphalia State,30
+2020-02-29,GM08,Rhineland-Palatinate State,1
+2020-02-29,GM09,Saarland State,0
+2020-02-29,GM10,Schleswig-Holstein State,1
+2020-02-29,GM11,Brandenburg State,0
+2020-02-29,GM12,Mecklenburg-Western Pomerania State,0
+2020-02-29,GM13,Free State of Saxony,0
+2020-02-29,GM14,Sachsen-Anhalt State,0
+2020-02-29,GM15,Free State of Thüringia,0
+2020-02-29,GM16,Berlin State,0
+2020-03-01,GM,Germany,103
+2020-03-01,GM01,Baden-Württemberg State,14
+2020-03-01,GM02,Free State of Bavaria,6
+2020-03-01,GM03,Free Hanseatic City of Bremen,1
+2020-03-01,GM04,Free Hanseatic City of Hamburg,1
+2020-03-01,GM05,Hesse State,8
+2020-03-01,GM06,Lower Saxony State,1
+2020-03-01,GM07,North Rhine-Westphalia State,66
+2020-03-01,GM08,Rhineland-Palatinate State,2
+2020-03-01,GM09,Saarland State,0
+2020-03-01,GM10,Schleswig-Holstein State,2
+2020-03-01,GM11,Brandenburg State,0
+2020-03-01,GM12,Mecklenburg-Western Pomerania State,0
+2020-03-01,GM13,Free State of Saxony,0
+2020-03-01,GM14,Sachsen-Anhalt State,0
+2020-03-01,GM15,Free State of Thüringia,0
+2020-03-01,GM16,Berlin State,0
+2020-03-02,GM,Germany,136
+2020-03-02,GM01,Baden-Württemberg State,18
+2020-03-02,GM02,Free State of Bavaria,12
+2020-03-02,GM03,Free Hanseatic City of Bremen,1
+2020-03-02,GM04,Free Hanseatic City of Hamburg,1
+2020-03-02,GM05,Hesse State,9
+2020-03-02,GM06,Lower Saxony State,1
+2020-03-02,GM07,North Rhine-Westphalia State,86
+2020-03-02,GM08,Rhineland-Palatinate State,2
+2020-03-02,GM09,Saarland State,0
+2020-03-02,GM10,Schleswig-Holstein State,2
+2020-03-02,GM11,Brandenburg State,0
+2020-03-02,GM12,Mecklenburg-Western Pomerania State,0
+2020-03-02,GM13,Free State of Saxony,0
+2020-03-02,GM14,Sachsen-Anhalt State,0
+2020-03-02,GM15,Free State of Thüringia,0
+2020-03-02,GM16,Berlin State,1
+2020-03-03,GM,Germany,174
+2020-03-03,GM01,Baden-Württemberg State,25
+2020-03-03,GM02,Free State of Bavaria,22
+2020-03-03,GM03,Free Hanseatic City of Bremen,1
+2020-03-03,GM04,Free Hanseatic City of Hamburg,2
+2020-03-03,GM05,Hesse State,9
+2020-03-03,GM06,Lower Saxony State,1
+2020-03-03,GM07,North Rhine-Westphalia State,101
+2020-03-03,GM08,Rhineland-Palatinate State,2
+2020-03-03,GM09,Saarland State,0
+2020-03-03,GM10,Schleswig-Holstein State,2
+2020-03-03,GM11,Brandenburg State,1
+2020-03-03,GM12,Mecklenburg-Western Pomerania State,0
+2020-03-03,GM13,Free State of Saxony,1
+2020-03-03,GM14,Sachsen-Anhalt State,0
+2020-03-03,GM15,Free State of Thüringia,1
+2020-03-03,GM16,Berlin State,3
+2020-03-04,GM,Germany,249
+2020-03-04,GM01,Baden-Württemberg State,49
+2020-03-04,GM02,Free State of Bavaria,34
+2020-03-04,GM03,Free Hanseatic City of Bremen,3
+2020-03-04,GM04,Free Hanseatic City of Hamburg,3
+2020-03-04,GM05,Hesse State,11
+2020-03-04,GM06,Lower Saxony State,7
+2020-03-04,GM07,North Rhine-Westphalia State,115
+2020-03-04,GM08,Rhineland-Palatinate State,7
+2020-03-04,GM09,Saarland State,1
+2020-03-04,GM10,Schleswig-Holstein State,2
+2020-03-04,GM11,Brandenburg State,1
+2020-03-04,GM12,Mecklenburg-Western Pomerania State,4
+2020-03-04,GM13,Free State of Saxony,1
+2020-03-04,GM15,Free State of Thüringia,1
+2020-03-04,GM16,Berlin State,7
+2020-03-05,GM,Germany,387
+2020-03-05,GM01,Baden-Württemberg State,72
+2020-03-05,GM02,Free State of Bavaria,56
+2020-03-05,GM03,Free Hanseatic City of Bremen,3
+2020-03-05,GM04,Free Hanseatic City of Hamburg,5
+2020-03-05,GM05,Hesse State,13
+2020-03-05,GM06,Lower Saxony State,18
+2020-03-05,GM07,North Rhine-Westphalia State,181
+2020-03-05,GM08,Rhineland-Palatinate State,8
+2020-03-05,GM09,Saarland State,1
+2020-03-05,GM10,Schleswig-Holstein State,7
+2020-03-05,GM11,Brandenburg State,1
+2020-03-05,GM12,Mecklenburg-Western Pomerania State,4
+2020-03-05,GM13,Free State of Saxony,1
+2020-03-05,GM15,Free State of Thüringia,1
+2020-03-05,GM16,Berlin State,12
+2020-03-06,GM,Germany,626
+2020-03-06,GM01,Baden-Württemberg State,95
+2020-03-06,GM02,Free State of Bavaria,103
+2020-03-06,GM03,Free Hanseatic City of Bremen,3
+2020-03-06,GM04,Free Hanseatic City of Hamburg,11
+2020-03-06,GM05,Hesse State,15
+2020-03-06,GM06,Lower Saxony State,18
+2020-03-06,GM07,North Rhine-Westphalia State,329
+2020-03-06,GM08,Rhineland-Palatinate State,9
+2020-03-06,GM09,Saarland State,2
+2020-03-06,GM10,Schleswig-Holstein State,7
+2020-03-06,GM11,Brandenburg State,2
+2020-03-06,GM12,Mecklenburg-Western Pomerania State,4
+2020-03-06,GM13,Free State of Saxony,2
+2020-03-06,GM15,Free State of Thüringia,1
+2020-03-06,GM16,Berlin State,18
+2020-03-07,GM,Germany,781
+2020-03-07,GM01,Baden-Württemberg State,167
+2020-03-07,GM02,Free State of Bavaria,120
+2020-03-07,GM03,Free Hanseatic City of Bremen,3
+2020-03-07,GM04,Free Hanseatic City of Hamburg,12
+2020-03-07,GM05,Hesse State,15
+2020-03-07,GM06,Lower Saxony State,18
+2020-03-07,GM07,North Rhine-Westphalia State,373
+2020-03-07,GM08,Rhineland-Palatinate State,12
+2020-03-07,GM09,Saarland State,3
+2020-03-07,GM10,Schleswig-Holstein State,8
+2020-03-07,GM11,Brandenburg State,2
+2020-03-07,GM12,Mecklenburg-Western Pomerania State,4
+2020-03-07,GM13,Free State of Saxony,4
+2020-03-07,GM15,Free State of Thüringia,2
+2020-03-07,GM16,Berlin State,27
+2020-03-08,GM,Germany,888
+2020-03-08,GM01,Baden-Württemberg State,179
+2020-03-08,GM02,Free State of Bavaria,157
+2020-03-08,GM03,Free Hanseatic City of Bremen,3
+2020-03-08,GM04,Free Hanseatic City of Hamburg,12
+2020-03-08,GM05,Hesse State,17
+2020-03-08,GM06,Lower Saxony State,20
+2020-03-08,GM07,North Rhine-Westphalia State,398
+2020-03-08,GM08,Rhineland-Palatinate State,18
+2020-03-08,GM09,Saarland State,9
+2020-03-08,GM10,Schleswig-Holstein State,8
+2020-03-08,GM11,Brandenburg State,3
+2020-03-08,GM12,Mecklenburg-Western Pomerania State,7
+2020-03-08,GM13,Free State of Saxony,4
+2020-03-08,GM15,Free State of Thüringia,2
+2020-03-08,GM16,Berlin State,39
+2020-03-09,GM,Germany,1125
+2020-03-09,GM01,Baden-Württemberg State,200
+2020-03-09,GM02,Free State of Bavaria,241
+2020-03-09,GM03,Free Hanseatic City of Bremen,3
+2020-03-09,GM04,Free Hanseatic City of Hamburg,15
+2020-03-09,GM05,Hesse State,23
+2020-03-09,GM06,Lower Saxony State,37
+2020-03-09,GM07,North Rhine-Westphalia State,483
+2020-03-09,GM08,Rhineland-Palatinate State,18
+2020-03-09,GM09,Saarland State,9
+2020-03-09,GM10,Schleswig-Holstein State,10
+2020-03-09,GM11,Brandenburg State,5
+2020-03-09,GM12,Mecklenburg-Western Pomerania State,8
+2020-03-09,GM13,Free State of Saxony,12
+2020-03-09,GM15,Free State of Thüringia,2
+2020-03-09,GM16,Berlin State,47
+2020-03-10,GM,Germany,1281
+2020-03-10,GM01,Baden-Württemberg State,233
+2020-03-10,GM02,Free State of Bavaria,298
+2020-03-10,GM03,Free Hanseatic City of Bremen,3
+2020-03-10,GM04,Free Hanseatic City of Hamburg,26
+2020-03-10,GM05,Hesse State,31
+2020-03-10,GM06,Lower Saxony State,48
+2020-03-10,GM07,North Rhine-Westphalia State,483
+2020-03-10,GM08,Rhineland-Palatinate State,26
+2020-03-10,GM09,Saarland State,9
+2020-03-10,GM10,Schleswig-Holstein State,10
+2020-03-10,GM11,Brandenburg State,7
+2020-03-10,GM12,Mecklenburg-Western Pomerania State,11
+2020-03-10,GM13,Free State of Saxony,22
+2020-03-10,GM14,Sachsen-Anhalt State,7
+2020-03-10,GM15,Free State of Thüringia,4
+2020-03-10,GM16,Berlin State,47
+2020-03-11,GM,Germany,1553
+2020-03-11,GM01,Baden-Württemberg State,273
+2020-03-11,GM02,Free State of Bavaria,350
+2020-03-11,GM03,Free Hanseatic City of Bremen,20
+2020-03-11,GM04,Free Hanseatic City of Hamburg,46
+2020-03-11,GM05,Hesse State,44
+2020-03-11,GM06,Lower Saxony State,73
+2020-03-11,GM07,North Rhine-Westphalia State,483
+2020-03-11,GM08,Rhineland-Palatinate State,26
+2020-03-11,GM09,Saarland State,16
+2020-03-11,GM10,Schleswig-Holstein State,28
+2020-03-11,GM11,Brandenburg State,22
+2020-03-11,GM12,Mecklenburg-Western Pomerania State,14
+2020-03-11,GM13,Free State of Saxony,25
+2020-03-11,GM14,Sachsen-Anhalt State,15
+2020-03-11,GM15,Free State of Thüringia,9
+2020-03-11,GM16,Berlin State,89
+2020-03-12,GM,Germany,2355
+2020-03-12,GM01,Baden-Württemberg State,448
+2020-03-12,GM02,Free State of Bavaria,484
+2020-03-12,GM03,Free Hanseatic City of Bremen,37
+2020-03-12,GM04,Free Hanseatic City of Hamburg,88
+2020-03-12,GM05,Hesse State,94
+2020-03-12,GM06,Lower Saxony State,127
+2020-03-12,GM07,North Rhine-Westphalia State,687
+2020-03-12,GM08,Rhineland-Palatinate State,53
+2020-03-12,GM09,Saarland State,16
+2020-03-12,GM10,Schleswig-Holstein State,31
+2020-03-12,GM11,Brandenburg State,27
+2020-03-12,GM12,Mecklenburg-Western Pomerania State,20
+2020-03-12,GM13,Free State of Saxony,44
+2020-03-12,GM14,Sachsen-Anhalt State,27
+2020-03-12,GM15,Free State of Thüringia,13
+2020-03-12,GM16,Berlin State,135
+2020-03-13,GM,Germany,3047
+2020-03-13,GM01,Baden-Württemberg State,448
+2020-03-13,GM02,Free State of Bavaria,542
+2020-03-13,GM03,Free Hanseatic City of Bremen,40
+2020-03-13,GM04,Free Hanseatic City of Hamburg,98
+2020-03-13,GM05,Hesse State,143
+2020-03-13,GM06,Lower Saxony State,228
+2020-03-13,GM07,North Rhine-Westphalia State,934
+2020-03-13,GM08,Rhineland-Palatinate State,103
+2020-03-13,GM09,Saarland State,41
+2020-03-13,GM10,Schleswig-Holstein State,48
+2020-03-13,GM11,Brandenburg State,41
+2020-03-13,GM12,Mecklenburg-Western Pomerania State,30
+2020-03-13,GM13,Free State of Saxony,82
+2020-03-13,GM14,Sachsen-Anhalt State,42
+2020-03-13,GM15,Free State of Thüringia,28
+2020-03-13,GM16,Berlin State,172
+2020-03-14,GM,Germany,3776
+2020-03-14,GM01,Baden-Württemberg State,562
+2020-03-14,GM02,Free State of Bavaria,665
+2020-03-14,GM03,Free Hanseatic City of Bremen,47
+2020-03-14,GM04,Free Hanseatic City of Hamburg,159
+2020-03-14,GM05,Hesse State,197
+2020-03-14,GM06,Lower Saxony State,250
+2020-03-14,GM07,North Rhine-Westphalia State,1152
+2020-03-14,GM08,Rhineland-Palatinate State,122
+2020-03-14,GM09,Saarland State,41
+2020-03-14,GM10,Schleswig-Holstein State,60
+2020-03-14,GM11,Brandenburg State,53
+2020-03-14,GM12,Mecklenburg-Western Pomerania State,42
+2020-03-14,GM13,Free State of Saxony,92
+2020-03-14,GM14,Sachsen-Anhalt State,44
+2020-03-14,GM15,Free State of Thüringia,45
+2020-03-14,GM16,Berlin State,214
+2020-03-15,GM,Germany,4794
+2020-03-15,GM01,Baden-Württemberg State,817
+2020-03-15,GM02,Free State of Bavaria,870
+2020-03-15,GM03,Free Hanseatic City of Bremen,50
+2020-03-15,GM04,Free Hanseatic City of Hamburg,162
+2020-03-15,GM05,Hesse State,280
+2020-03-15,GM06,Lower Saxony State,284
+2020-03-15,GM07,North Rhine-Westphalia State,1405
+2020-03-15,GM08,Rhineland-Palatinate State,169
+2020-03-15,GM09,Saarland State,41
+2020-03-15,GM10,Schleswig-Holstein State,103
+2020-03-15,GM11,Brandenburg State,54
+2020-03-15,GM12,Mecklenburg-Western Pomerania State,47
+2020-03-15,GM13,Free State of Saxony,128
+2020-03-15,GM14,Sachsen-Anhalt State,46
+2020-03-15,GM15,Free State of Thüringia,50
+2020-03-15,GM16,Berlin State,262
+2020-03-16,GM,Germany,5965
+2020-03-16,GM01,Baden-Württemberg State,1092
+2020-03-16,GM02,Free State of Bavaria,1051
+2020-03-16,GM03,Free Hanseatic City of Bremen,52
+2020-03-16,GM04,Free Hanseatic City of Hamburg,264
+2020-03-16,GM05,Hesse State,336
+2020-03-16,GM06,Lower Saxony State,388
+2020-03-16,GM07,North Rhine-Westphalia State,1538
+2020-03-16,GM08,Rhineland-Palatinate State,326
+2020-03-16,GM09,Saarland State,92
+2020-03-16,GM10,Schleswig-Holstein State,123
+2020-03-16,GM11,Brandenburg State,61
+2020-03-16,GM12,Mecklenburg-Western Pomerania State,48
+2020-03-16,GM13,Free State of Saxony,138
+2020-03-16,GM14,Sachsen-Anhalt State,76
+2020-03-16,GM15,Free State of Thüringia,53
+2020-03-16,GM16,Berlin State,297
+2020-03-17,GM,Germany,7136
+2020-03-17,GM01,Baden-Württemberg State,1462
+2020-03-17,GM02,Free State of Bavaria,1092
+2020-03-17,GM03,Free Hanseatic City of Bremen,53
+2020-03-17,GM04,Free Hanseatic City of Hamburg,316
+2020-03-17,GM05,Hesse State,366
+2020-03-17,GM06,Lower Saxony State,388
+2020-03-17,GM07,North Rhine-Westphalia State,2102
+2020-03-17,GM08,Rhineland-Palatinate State,443
+2020-03-17,GM09,Saarland State,92
+2020-03-17,GM10,Schleswig-Holstein State,126
+2020-03-17,GM11,Brandenburg State,69
+2020-03-17,GM12,Mecklenburg-Western Pomerania State,48
+2020-03-17,GM13,Free State of Saxony,180
+2020-03-17,GM14,Sachsen-Anhalt State,76
+2020-03-17,GM15,Free State of Thüringia,53
+2020-03-17,GM16,Berlin State,342
+2020-03-18,GM,Germany,8179
+2020-03-18,GM01,Baden-Württemberg State,1591
+2020-03-18,GM02,Free State of Bavaria,1226
+2020-03-18,GM03,Free Hanseatic City of Bremen,65
+2020-03-18,GM04,Free Hanseatic City of Hamburg,365
+2020-03-18,GM05,Hesse State,425
+2020-03-18,GM06,Lower Saxony State,541
+2020-03-18,GM07,North Rhine-Westphalia State,2369
+2020-03-18,GM08,Rhineland-Palatinate State,475
+2020-03-18,GM09,Saarland State,104
+2020-03-18,GM10,Schleswig-Holstein State,158
+2020-03-18,GM11,Brandenburg State,88
+2020-03-18,GM12,Mecklenburg-Western Pomerania State,59
+2020-03-18,GM13,Free State of Saxony,195
+2020-03-18,GM14,Sachsen-Anhalt State,123
+2020-03-18,GM15,Free State of Thüringia,76
+2020-03-18,GM16,Berlin State,387
+2020-03-19,GM,Germany,10976
+2020-03-19,GM01,Baden-Württemberg State,2131
+2020-03-19,GM02,Free State of Bavaria,1674
+2020-03-19,GM03,Free Hanseatic City of Bremen,76
+2020-03-19,GM04,Free Hanseatic City of Hamburg,441
+2020-03-19,GM05,Hesse State,674
+2020-03-19,GM06,Lower Saxony State,732
+2020-03-19,GM07,North Rhine-Westphalia State,3029
+2020-03-19,GM08,Rhineland-Palatinate State,638
+2020-03-19,GM09,Saarland State,115
+2020-03-19,GM10,Schleswig-Holstein State,200
+2020-03-19,GM11,Brandenburg State,129
+2020-03-19,GM12,Mecklenburg-Western Pomerania State,101
+2020-03-19,GM13,Free State of Saxony,272
+2020-03-19,GM14,Sachsen-Anhalt State,158
+2020-03-19,GM15,Free State of Thüringia,100
+2020-03-19,GM16,Berlin State,569
+2020-03-20,GM,Germany,13932
+2020-03-20,GM01,Baden-Württemberg State,2716
+2020-03-20,GM02,Free State of Bavaria,2383
+2020-03-20,GM03,Free Hanseatic City of Bremen,116
+2020-03-20,GM04,Free Hanseatic City of Hamburg,601
+2020-03-20,GM05,Hesse State,805
+2020-03-20,GM06,Lower Saxony State,865
+2020-03-20,GM07,North Rhine-Westphalia State,3493
+2020-03-20,GM08,Rhineland-Palatinate State,802
+2020-03-20,GM09,Saarland State,161
+2020-03-20,GM10,Schleswig-Holstein State,264
+2020-03-20,GM11,Brandenburg State,185
+2020-03-20,GM12,Mecklenburg-Western Pomerania State,133
+2020-03-20,GM13,Free State of Saxony,391
+2020-03-20,GM14,Sachsen-Anhalt State,197
+2020-03-20,GM15,Free State of Thüringia,150
+2020-03-20,GM16,Berlin State,727
+2020-03-21,GM,Germany,16625
+2020-03-21,GM01,Baden-Württemberg State,3628
+2020-03-21,GM02,Free State of Bavaria,2942
+2020-03-21,GM03,Free Hanseatic City of Bremen,137
+2020-03-21,GM04,Free Hanseatic City of Hamburg,602
+2020-03-21,GM05,Hesse State,1072
+2020-03-21,GM06,Lower Saxony State,1085
+2020-03-21,GM07,North Rhine-Westphalia State,3538
+2020-03-21,GM08,Rhineland-Palatinate State,938
+2020-03-21,GM09,Saarland State,201
+2020-03-21,GM10,Schleswig-Holstein State,306
+2020-03-21,GM11,Brandenburg State,246
+2020-03-21,GM12,Mecklenburg-Western Pomerania State,167
+2020-03-21,GM13,Free State of Saxony,564
+2020-03-21,GM14,Sachsen-Anhalt State,205
+2020-03-21,GM15,Free State of Thüringia,188
+2020-03-21,GM16,Berlin State,862
+2020-03-22,GM,Germany,18582
+2020-03-22,GM01,Baden-Württemberg State,3765
+2020-03-22,GM02,Free State of Bavaria,3631
+2020-03-22,GM03,Free Hanseatic City of Bremen,159
+2020-03-22,GM04,Free Hanseatic City of Hamburg,898
+2020-03-22,GM05,Hesse State,1166
+2020-03-22,GM06,Lower Saxony State,1367
+2020-03-22,GM07,North Rhine-Westphalia State,3541
+2020-03-22,GM08,Rhineland-Palatinate State,1053
+2020-03-22,GM09,Saarland State,201
+2020-03-22,GM10,Schleswig-Holstein State,344
+2020-03-22,GM11,Brandenburg State,266
+2020-03-22,GM12,Mecklenburg-Western Pomerania State,173
+2020-03-22,GM13,Free State of Saxony,602
+2020-03-22,GM14,Sachsen-Anhalt State,228
+2020-03-22,GM15,Free State of Thüringia,217
+2020-03-22,GM16,Berlin State,1019
+2020-03-23,GM,Germany,22647
+2020-03-23,GM01,Baden-Württemberg State,3769
+2020-03-23,GM02,Free State of Bavaria,4873
+2020-03-23,GM03,Free Hanseatic City of Bremen,163
+2020-03-23,GM04,Free Hanseatic City of Hamburg,971
+2020-03-23,GM05,Hesse State,1338
+2020-03-23,GM06,Lower Saxony State,1544
+2020-03-23,GM07,North Rhine-Westphalia State,5611
+2020-03-23,GM08,Rhineland-Palatinate State,1177
+2020-03-23,GM09,Saarland State,213
+2020-03-23,GM10,Schleswig-Holstein State,380
+2020-03-23,GM11,Brandenburg State,279
+2020-03-23,GM12,Mecklenburg-Western Pomerania State,173
+2020-03-23,GM13,Free State of Saxony,649
+2020-03-23,GM14,Sachsen-Anhalt State,228
+2020-03-23,GM15,Free State of Thüringia,249
+2020-03-23,GM16,Berlin State,1072
+2020-03-24,GM,Germany,27394
+2020-03-24,GM01,Baden-Württemberg State,5289
+2020-03-24,GM02,Free State of Bavaria,5735
+2020-03-24,GM03,Free Hanseatic City of Bremen,176
+2020-03-24,GM04,Free Hanseatic City of Hamburg,1075
+2020-03-24,GM05,Hesse State,1610
+2020-03-24,GM06,Lower Saxony State,1825
+2020-03-24,GM07,North Rhine-Westphalia State,6313
+2020-03-24,GM08,Rhineland-Palatinate State,1370
+2020-03-24,GM09,Saarland State,347
+2020-03-24,GM10,Schleswig-Holstein State,474
+2020-03-24,GM11,Brandenburg State,333
+2020-03-24,GM12,Mecklenburg-Western Pomerania State,200
+2020-03-24,GM13,Free State of Saxony,807
+2020-03-24,GM14,Sachsen-Anhalt State,337
+2020-03-24,GM15,Free State of Thüringia,326
+2020-03-24,GM16,Berlin State,1215
+2020-03-25,GM,Germany,31508
+2020-03-25,GM01,Baden-Württemberg State,6002
+2020-03-25,GM02,Free State of Bavaria,6538
+2020-03-25,GM03,Free Hanseatic City of Bremen,193
+2020-03-25,GM04,Free Hanseatic City of Hamburg,1302
+2020-03-25,GM05,Hesse State,1744
+2020-03-25,GM06,Lower Saxony State,2200
+2020-03-25,GM07,North Rhine-Westphalia State,7192
+2020-03-25,GM08,Rhineland-Palatinate State,1590
+2020-03-25,GM09,Saarland State,411
+2020-03-25,GM10,Schleswig-Holstein State,572
+2020-03-25,GM11,Brandenburg State,417
+2020-03-25,GM12,Mecklenburg-Western Pomerania State,219
+2020-03-25,GM13,Free State of Saxony,954
+2020-03-25,GM14,Sachsen-Anhalt State,391
+2020-03-25,GM15,Free State of Thüringia,393
+2020-03-25,GM16,Berlin State,1422
+2020-03-26,GM,Germany,36447
+2020-03-26,GM01,Baden-Württemberg State,7203
+2020-03-26,GM02,Free State of Bavaria,7973
+2020-03-26,GM03,Free Hanseatic City of Bremen,204
+2020-03-26,GM04,Free Hanseatic City of Hamburg,1305
+2020-03-26,GM05,Hesse State,2147
+2020-03-26,GM06,Lower Saxony State,2407
+2020-03-26,GM07,North Rhine-Westphalia State,7918
+2020-03-26,GM08,Rhineland-Palatinate State,1815
+2020-03-26,GM09,Saarland State,440
+2020-03-26,GM10,Schleswig-Holstein State,670
+2020-03-26,GM11,Brandenburg State,464
+2020-03-26,GM12,Mecklenburg-Western Pomerania State,244
+2020-03-26,GM13,Free State of Saxony,1136
+2020-03-26,GM14,Sachsen-Anhalt State,433
+2020-03-26,GM15,Free State of Thüringia,467
+2020-03-26,GM16,Berlin State,1650
+2020-03-27,GM,Germany,42231
+2020-03-27,GM01,Baden-Württemberg State,8072
+2020-03-27,GM02,Free State of Bavaria,9461
+2020-03-27,GM03,Free Hanseatic City of Bremen,233
+2020-03-27,GM04,Free Hanseatic City of Hamburg,1749
+2020-03-27,GM05,Hesse State,2313
+2020-03-27,GM06,Lower Saxony State,2870
+2020-03-27,GM07,North Rhine-Westphalia State,9229
+2020-03-27,GM08,Rhineland-Palatinate State,1970
+2020-03-27,GM09,Saarland State,509
+2020-03-27,GM10,Schleswig-Holstein State,806
+2020-03-27,GM11,Brandenburg State,523
 2020-03-27,GM12,Mecklenburg-Western Pomerania State,259
-2020-03-27,GM13,Free State of Saxony,1305
-2020-03-27,GM14,Sachsen-Anhalt State,458
-2020-03-27,GM15,Free State of Thüringia,542
-2020-03-27,GM16,Berlin State,1955
-2020-03-28,GM,Germany,48582
-2020-03-28,GM01,Baden-Württemberg State,9781
-2020-03-28,GM02,Free State of Bavaria,11150
-2020-03-28,GM03,Free Hanseatic City of Bremen,260
-2020-03-28,GM04,Free Hanseatic City of Hamburg,1765
-2020-03-28,GM05,Hesse State,2604
-2020-03-28,GM06,Lower Saxony State,3150
-2020-03-28,GM07,North Rhine-Westphalia State,10607
-2020-03-28,GM08,Rhineland-Palatinate State,2212
-2020-03-28,GM09,Saarland State,550
-2020-03-28,GM10,Schleswig-Holstein State,915
-2020-03-28,GM11,Brandenburg State,645
+2020-03-27,GM13,Free State of Saxony,1300
+2020-03-27,GM14,Sachsen-Anhalt State,473
+2020-03-27,GM15,Free State of Thüringia,541
+2020-03-27,GM16,Berlin State,1949
+2020-03-28,GM,Germany,48507
+2020-03-28,GM01,Baden-Württemberg State,9675
+2020-03-28,GM02,Free State of Bavaria,11130
+2020-03-28,GM03,Free Hanseatic City of Bremen,252
+2020-03-28,GM04,Free Hanseatic City of Hamburg,1824
+2020-03-28,GM05,Hesse State,2593
+2020-03-28,GM06,Lower Saxony State,3209
+2020-03-28,GM07,North Rhine-Westphalia State,10601
+2020-03-28,GM08,Rhineland-Palatinate State,2210
+2020-03-28,GM09,Saarland State,553
+2020-03-28,GM10,Schleswig-Holstein State,909
+2020-03-28,GM11,Brandenburg State,628
 2020-03-28,GM12,Mecklenburg-Western Pomerania State,308
-2020-03-28,GM13,Free State of Saxony,1432
-2020-03-28,GM14,Sachsen-Anhalt State,458
-2020-03-28,GM15,Free State of Thüringia,584
-2020-03-28,GM16,Berlin State,2161
-2020-03-30,GM,Germany,57298
-2020-03-30,GM01,Baden-Württemberg State,10943
-2020-03-30,GM02,Free State of Bavaria,13989
-2020-03-30,GM03,Free Hanseatic City of Bremen,286
-2020-03-30,GM04,Free Hanseatic City of Hamburg,2053
-2020-03-30,GM05,Hesse State,3091
-2020-03-30,GM06,Lower Saxony State,3732
-2020-03-30,GM07,North Rhine-Westphalia State,12178
-2020-03-30,GM08,Rhineland-Palatinate State,2584
-2020-03-30,GM09,Saarland State,706
-2020-03-30,GM10,Schleswig-Holstein State,1049
-2020-03-30,GM11,Brandenburg State,761
-2020-03-30,GM12,Mecklenburg-Western Pomerania State,356
-2020-03-30,GM13,Free State of Saxony,1795
-2020-03-30,GM14,Sachsen-Anhalt State,592
-2020-03-30,GM15,Free State of Thüringia,719
-2020-03-30,GM16,Berlin State,2464
-2020-03-31,GM,Germany,61913
-2020-03-31,GM01,Baden-Württemberg State,12334
-2020-03-31,GM02,Free State of Bavaria,14810
-2020-03-31,GM03,Free Hanseatic City of Bremen,294
-2020-03-31,GM04,Free Hanseatic City of Hamburg,2191
-2020-03-31,GM05,Hesse State,3283
-2020-03-31,GM06,Lower Saxony State,4063
-2020-03-31,GM07,North Rhine-Westphalia State,13225
-2020-03-31,GM08,Rhineland-Palatinate State,2726
-2020-03-31,GM09,Saarland State,782
-2020-03-31,GM10,Schleswig-Holstein State,1120
-2020-03-31,GM11,Brandenburg State,798
-2020-03-31,GM12,Mecklenburg-Western Pomerania State,366
-2020-03-31,GM13,Free State of Saxony,1882
-2020-03-31,GM14,Sachsen-Anhalt State,680
-2020-03-31,GM15,Free State of Thüringia,784
-2020-03-31,GM16,Berlin State,2575
+2020-03-28,GM13,Free State of Saxony,1426
+2020-03-28,GM14,Sachsen-Anhalt State,473
+2020-03-28,GM15,Free State of Thüringia,582
+2020-03-28,GM16,Berlin State,2154
+2020-03-29,GM,Germany,52473
+2020-03-29,GM01,Baden-Württemberg State,9687
+2020-03-29,GM02,Free State of Bavaria,12860
+2020-03-29,GM03,Free Hanseatic City of Bremen,267
+2020-03-29,GM04,Free Hanseatic City of Hamburg,1908
+2020-03-29,GM05,Hesse State,2594
+2020-03-29,GM06,Lower Saxony State,3509
+2020-03-29,GM07,North Rhine-Westphalia State,11394
+2020-03-29,GM08,Rhineland-Palatinate State,2394
+2020-03-29,GM09,Saarland State,563
+2020-03-29,GM10,Schleswig-Holstein State,999
+2020-03-29,GM11,Brandenburg State,701
+2020-03-29,GM12,Mecklenburg-Western Pomerania State,347
+2020-03-29,GM13,Free State of Saxony,1611
+2020-03-29,GM14,Sachsen-Anhalt State,606
+2020-03-29,GM15,Free State of Thüringia,695
+2020-03-29,GM16,Berlin State,2353
+2020-03-30,GM,Germany,57215
+2020-03-30,GM01,Baden-Württemberg State,10824
+2020-03-30,GM02,Free State of Bavaria,13968
+2020-03-30,GM03,Free Hanseatic City of Bremen,277
+2020-03-30,GM04,Free Hanseatic City of Hamburg,2123
+2020-03-30,GM05,Hesse State,3079
+2020-03-30,GM06,Lower Saxony State,3790
+2020-03-30,GM07,North Rhine-Westphalia State,12171
+2020-03-30,GM08,Rhineland-Palatinate State,2582
+2020-03-30,GM09,Saarland State,705
+2020-03-30,GM10,Schleswig-Holstein State,1042
+2020-03-30,GM11,Brandenburg State,740
+2020-03-30,GM12,Mecklenburg-Western Pomerania State,354
+2020-03-30,GM13,Free State of Saxony,1789
+2020-03-30,GM14,Sachsen-Anhalt State,606
+2020-03-30,GM15,Free State of Thüringia,716
+2020-03-30,GM16,Berlin State,2457
+2020-03-31,GM,Germany,61816
+2020-03-31,GM01,Baden-Württemberg State,12200
+2020-03-31,GM02,Free State of Bavaria,14788
+2020-03-31,GM03,Free Hanseatic City of Bremen,285
+2020-03-31,GM04,Free Hanseatic City of Hamburg,2266
+2020-03-31,GM05,Hesse State,3271
+2020-03-31,GM06,Lower Saxony State,4121
+2020-03-31,GM07,North Rhine-Westphalia State,13218
+2020-03-31,GM08,Rhineland-Palatinate State,2723
+2020-03-31,GM09,Saarland State,778
+2020-03-31,GM10,Schleswig-Holstein State,1112
+2020-03-31,GM11,Brandenburg State,775
+2020-03-31,GM12,Mecklenburg-Western Pomerania State,364
+2020-03-31,GM13,Free State of Saxony,1875
+2020-03-31,GM14,Sachsen-Anhalt State,694
+2020-03-31,GM15,Free State of Thüringia,781
+2020-03-31,GM16,Berlin State,2568
 2020-04-01,GM,Germany,67366
 2020-04-01,GM01,Baden-Württemberg State,13410
 2020-04-01,GM02,Free State of Bavaria,16497
