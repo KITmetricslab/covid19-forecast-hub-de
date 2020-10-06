@@ -8,8 +8,8 @@ Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8") # set locale to Engli
 source("functions_ensemble.R") # read in functions
 
 # basic settings:
-country <- "Poland"
-location <- "PL"
+country <- "Germany"
+location <- "GM"
 forecast_date <- as.Date("2020-10-05")
 if(!weekdays(forecast_date) == "Monday") stop("forecast_date should be a Monday.")
 
@@ -31,7 +31,6 @@ if(country == "Poland"){
   jhu <- read.csv("../../data-truth/JHU/truth_JHU-Cumulative Deaths_Poland.csv", colClasses = list("date" = "Date"))
   jhu$truth_data <- "JHU"
 }
-
 
 # extract last observed values in both truth data sets:
 last_saturday <- get_last_saturday(forecast_date)
@@ -86,7 +85,7 @@ ensemble<- aggregate(forecasts$cum_since_last_observed,
                   by = list(target_end_date = forecasts$target_end_date,
                             target = forecasts$target,
                             location = forecasts$location,
-                            quantile = forecasts$quantile), FUN = mean)
+                            quantile = forecasts$quantile), FUN = median)
 colnames(ensemble)[colnames(ensemble) == "x"] <- "cum_since_last_observed"
 ensemble$truth_data <- "ECDC"
 
@@ -99,7 +98,6 @@ ensemble$value <- ensemble$last_observed + ensemble$cum_since_last_observed
 # merge in location names:
 state_codes <- rbind(read.csv("../../template/state_codes_germany.csv")[, c("state_code", "state_name")],
                      read.csv("../../template/state_codes_poland.csv")[, c("state_code", "state_name")])
-state_codes <- state_codes[, c("state_code", "state_name")]
 colnames(state_codes) <- c("location", "location_name")
 ensemble <- merge(ensemble, state_codes, by = "location")
 
@@ -139,5 +137,6 @@ head(ensemble)
 tail(ensemble)
 
 # store
-write.csv(ensemble, file = paste0("../../data-processed/KITCOVIDhub-mean_ensemble/", forecast_date,
-                                  "-", country, "-KITCOVIDhub-mean_ensemble.csv"), row.names = FALSE)
+write.csv(ensemble, file = paste0("../../data-processed/KITCOVIDhub-median_ensemble/", forecast_date,
+                                  "-", country, "-KITCOVIDhub-median_ensemble.csv"), row.names = FALSE)
+
