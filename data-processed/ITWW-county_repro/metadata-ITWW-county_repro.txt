@@ -1,0 +1,35 @@
+team_name: ITWW
+team_abbr: ITWW
+model_contributors: Przemyslaw Biecek (przemyslaw.biecek@gmail.com), Viktor Bezborodov (integral2008-1@mail.ru), Marcin Bodych (bodychmarcin@gmail.com), Jan Pablo Burgard (burgardj@uni-trier.de), Stefan Heyder (stefan.heyder@tu-ilmenau.de), Thomas Hotz (thomas.hotz@tu-ilmenau.de), Tyll Krüger (tyll.krueger@googlemail.com)
+institution_affil: Warsaw University of Technology, Wroclaw University of Science and Technology, Wroclaw University of Science and Technology, Universität Trier, Technische Universität Ilmenau, Wroclaw University of Science and Technology
+team_experience: 
+team_funding: 
+
+model_name: county_repro
+model_abbr: county_repro
+model_output: 
+model_repo: 
+
+model_targets: weekly / cumulative incidences & deaths
+target_loc: Germany and Poland
+Data_format: percentile estimates
+forecast_startdate: 2020-10-12
+forecast_frequency: once per week
+
+data_inputs_known: county level incidences by age group; distribution for time to death and proportion of deaths in each age group
+data_source_known: RKI, ECDC, Polish patient data
+
+this_model_is_an_ensemble: no
+this_model_is_unconditional: yes
+
+methods: >-
+    Forecasts of county level incidence based on regional reproduction numbers.
+
+methods_long: >-
+    Using county level incidence data we estimate regional reproduction numbers
+    with a small area estimation approach. These estimates are the basis for 
+    simulations of future incidences which are then aggregated to the state or
+    national level. Deaths are predicted by age groups and use estimated case fatality
+    ratios.
+
+citation: N/A
