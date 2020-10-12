@@ -14,8 +14,18 @@ COUNTRIES = ["Germany", "Poland"]
 
 
 # Check for metadata file
-def check_for_metadata(my_path):
-    for path in glob.iglob(my_path + "**/**/", recursive=False):
+def check_for_metadata(my_path, model=None):
+    
+    
+    if model:
+        paths = glob.iglob(my_path + "/" + model +  "**/", recursive=False)
+        
+    else:
+        paths = glob.iglob(my_path + "**/**/", recursive=False)
+        
+
+        
+    for path in paths:
         team_model = os.path.basename(os.path.dirname(path))
         metadata_filename = "metadata-" + team_model + ".txt"
         txt_files = []
@@ -44,13 +54,21 @@ def filename_match_forecast_date(filename):
 # Check forecast formatting
 
 
-def check_formatting(my_path):
+def check_formatting(my_path, model=None):
     output_errors = {}
     df = pd.read_csv('code/validation/validated_files.csv')
     previous_checked = list(df['file_path'])
     files_in_repository = []
+    
+    if model:
+        paths = glob.iglob(my_path + "/" + model +  "**/", recursive=False)
+        
+    else:
+        paths = glob.iglob(my_path + "**/**/", recursive=False)
+        
+        
     # Iterate through processed csvs
-    for path in glob.iglob(my_path + "**/**/", recursive=False):
+    for path in paths:
         for filepath in glob.iglob(path + "*.csv", recursive=False):
             files_in_repository += [filepath]
 
@@ -98,7 +116,8 @@ def check_formatting(my_path):
     df = df[~df['file_path'].isin(deleted_files)]
 
     # update previously checked files
-    df.to_csv('code/validation/locally_validated_files.csv', index=False)
+    if not model:
+        df.to_csv('code/validation/locally_validated_files.csv', index=False)
 
     # Output list of Errors
     if len(output_errors) > 0:
@@ -114,8 +133,14 @@ def check_formatting(my_path):
 
 def main():
     my_path = "./data-processed"
-    check_for_metadata(my_path)
-    check_formatting(my_path)
+    
+    try:
+        model = sys.argv[1]
+    except IndexError:
+        model=None
+
+    check_for_metadata(my_path, model)
+    check_formatting(my_path, model)
 
 
 if __name__ == "__main__":
