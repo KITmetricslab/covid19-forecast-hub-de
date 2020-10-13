@@ -91,6 +91,7 @@ process_usc_file0 <- function(usc_filepath, forecast_date, truth, country = "Ger
                           type = ifelse(dat_country_long$target_end_date > forecast_date, "point", "observed"),
                           quantile = NA,
                           value = dat_country_long$inc_value)
+  daily_inc <- daily_inc[order(daily_inc$target_end_date), ]
 
   # weekly:
   weekly_inc0 <- aggregate(dat_country_long$inc_value, by = list(epi_week = dat_country_long$epi_week),
@@ -100,7 +101,8 @@ process_usc_file0 <- function(usc_filepath, forecast_date, truth, country = "Ger
   dat_country_long_sat <- subset(dat_country_long, weekday == "Saturday")
   current_epi_week <- MMWRweek::MMWRweek(forecast_date)$MMWRweek - ifelse(weekdays(forecast_date) %in% c("Sunday", "Monday"), 1, 0)
   weekly_inc <- data.frame(forecast_date = forecast_date,
-                           target = paste(dat_country_long_sat$epi_week - current_epi_week,
+                           target = paste(ceiling(as.numeric(dat_country_long_sat$target_end_date - forecast_date)/7) -
+                                            (weekdays(forecast_date) %in% c("Tuesday", "Wednesday", "Thursday", "Friday")),
                                           "wk ahead inc", type),
                            target_end_date = dat_country_long_sat$target_end_date,
                            location = location,
@@ -108,6 +110,7 @@ process_usc_file0 <- function(usc_filepath, forecast_date, truth, country = "Ger
                            type = ifelse(dat_country_long_sat$target_end_date > forecast_date, "point", "observed"),
                            quantile = NA,
                            value = dat_country_long_sat$weekly_inc_value)
+  weekly_inc <- weekly_inc[order(weekly_inc$target_end_date), ]
 
   ### cumulative targets:
   # daily:
@@ -120,10 +123,12 @@ process_usc_file0 <- function(usc_filepath, forecast_date, truth, country = "Ger
                           type = ifelse(dat_country_long$target_end_date > forecast_date, "point", "observed"),
                           quantile = NA,
                           value = dat_country_long$cum_value)
+  daily_cum <- daily_cum[order(daily_cum$target_end_date), ]
 
   # weekly:
   weekly_cum <- data.frame(forecast_date = forecast_date,
-                           target = paste(dat_country_long_sat$epi_week - current_epi_week,
+                           target = paste(ceiling(as.numeric(dat_country_long_sat$target_end_date - forecast_date)/7 -
+                                                    (weekdays(forecast_date) %in% c("Tuesday", "Wednesday", "Thursday", "Friday"))),
                                           "wk ahead cum", type),
                            target_end_date = dat_country_long_sat$target_end_date,
                            location = location,
@@ -131,14 +136,19 @@ process_usc_file0 <- function(usc_filepath, forecast_date, truth, country = "Ger
                            type = ifelse(dat_country_long_sat$target_end_date > forecast_date, "point", "observed"),
                            quantile = NA,
                            value = dat_country_long_sat$cum_value)
+  weekly_cum <- weekly_cum[order(weekly_cum$target_end_date), ]
 
   # pool:
   result <- rbind(weekly_inc, weekly_cum, daily_inc, daily_cum)
 
-  # remove superfluous observed values:
-  allowed_targets <- c(paste(-1:100, "day ahead", type, "death"),
-                       paste(-1:100, "day ahead", type, "case"))
-  result <- subset(result, target %in% allowed_targets) # remove NAs
+  # remove superfluous observed values and NAs:
+  allowed_targets <- c(paste(-1:100, "day ahead inc", type),
+                       paste(-1:100, "day ahead cum", type),
+                       paste(-1:30, "wk ahead inc", type),
+                       paste(-1:30, "wk ahead cum", type))
+
+  result <- subset(result, target %in% allowed_targets &
+                     !is.na(value))
 
   return(result)
 }

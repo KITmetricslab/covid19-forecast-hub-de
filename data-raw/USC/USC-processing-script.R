@@ -18,7 +18,11 @@ processed_path <- gsub(" ", "", processed_path)
 
 dir.create(processed_path, showWarnings = FALSE)
 
-dirs_to_process <- gsub("./", "", list.dirs(recursive = FALSE))
+# identify files which remain to be processed:
+all_dirs <- gsub("./", "", list.dirs(recursive = FALSE))
+already_processed0 <- list.files(processed_path)
+already_processed <- substr(already_processed0[grepl("2020-", already_processed0)], 1, 10)
+dirs_to_process <- all_dirs[!(all_dirs %in% already_processed)]
 
 forecast_dates <- as.Date(dirs_to_process)
 
@@ -34,16 +38,15 @@ cum_truth$GM$case <- read.csv("../../data-truth/RKI/truth_RKI-Cumulative Cases_G
                               colClasses = c(date = "Date"))
 cum_truth$GM$death <- read.csv("../../data-truth/RKI/truth_RKI-Cumulative Deaths_Germany.csv",
                                colClasses = c(date = "Date"))
-cum_truth$PL$case <- read.csv("../../data-truth/ECDC/truth_ECDC-Cumulative Cases_Poland.csv",
+cum_truth$PL$case <- read.csv("../../data-truth/JHU/truth_JHU-Cumulative Cases_Poland.csv",
                               colClasses = c(date = "Date"))
-cum_truth$PL$death <- read.csv("../../data-truth/ECDC/truth_ECDC-Cumulative Deaths_Poland.csv",
+cum_truth$PL$death <- read.csv("../../data-truth/JHU/truth_JHU-Cumulative Deaths_Poland.csv",
                                colClasses = c(date = "Date"))
 
 
 # process files:
 for(i in 1:length(dirs_to_process)) {
   # Deaths, Germany:
-  debug(process_usc_file)
   dat_germany_death <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/other_forecasts_deaths.csv"),
                                         forecast_date = forecast_dates[[i]],
                                         truth = cum_truth$GM$death,
@@ -51,20 +54,22 @@ for(i in 1:length(dirs_to_process)) {
                                         country = fips_codes_germany,
                                         location = fips_codes_germany)
   file_name_germany_death <- paste0(processed_path, forecast_dates[[i]], "-Germany-USC-SIkJalpha.csv")
-  # write.csv(dat_germany_death, file_name_germany_death, row.names = FALSE)
+  write.csv(dat_germany_death, file_name_germany_death, row.names = FALSE)
 
   # Cases, Germany:
   dat_germany_case <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/other_forecasts_cases.csv"),
-                                        forecast_date = forecast_dates[[i]],
-                                        type = "case",
-                                        country = fips_codes_germany,
-                                        location = fips_codes_germany)
+                                       forecast_date = forecast_dates[[i]],
+                                       truth = cum_truth$GM$case,
+                                       type = "case",
+                                       country = fips_codes_germany,
+                                       location = fips_codes_germany)
   file_name_germany_case <- paste0(processed_path, forecast_dates[[i]], "-Germany-USC-SIkJalpha-case.csv")
   write.csv(dat_germany_case, file_name_germany_case, row.names = FALSE)
 
   # Deaths, Poland:
   dat_poland_death <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/global_forecasts_deaths.csv"),
                                        forecast_date = forecast_dates[[i]],
+                                       truth = cum_truth$PL$death,
                                        type = "death",
                                        country = "Poland",
                                        location = "PL")
@@ -74,11 +79,15 @@ for(i in 1:length(dirs_to_process)) {
   # Cases, Poland:
   dat_poland_case <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/global_forecasts_cases.csv"),
                                       forecast_date = forecast_dates[[i]],
+                                      truth = cum_truth$PL$case,
                                       type = "case",
                                       country = "Poland",
                                       location = "PL")
   file_name_poland_case <- paste0(processed_path, forecast_dates[[i]], "-Poland-USC-SIkJalpha-case.csv")
-  # write.csv(dat_poland_case, file_name_poland_case, row.names = FALSE)
+  write.csv(dat_poland_case, file_name_poland_case, row.names = FALSE)
 
   cat("File", i, "/", length(dirs_to_process), "\n")
+  i <- i + 1
 }
+# check warnings (indicate if something went wrong with truth data alignment)
+warnings()
