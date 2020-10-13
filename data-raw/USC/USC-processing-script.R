@@ -28,16 +28,30 @@ fips_codes_germany <-  c("GM",
                          "GM09", "GM10", "GM11", "GM12",
                          "GM13", "GM14", "GM15", "GM16")
 
-# proces files:
+# read in truths:
+cum_truth <- list()
+cum_truth$GM$case <- read.csv("../../data-truth/RKI/truth_RKI-Cumulative Cases_Germany.csv",
+                              colClasses = c(date = "Date"))
+cum_truth$GM$death <- read.csv("../../data-truth/RKI/truth_RKI-Cumulative Deaths_Germany.csv",
+                               colClasses = c(date = "Date"))
+cum_truth$PL$case <- read.csv("../../data-truth/ECDC/truth_ECDC-Cumulative Cases_Poland.csv",
+                              colClasses = c(date = "Date"))
+cum_truth$PL$death <- read.csv("../../data-truth/ECDC/truth_ECDC-Cumulative Deaths_Poland.csv",
+                               colClasses = c(date = "Date"))
+
+
+# process files:
 for(i in 1:length(dirs_to_process)) {
   # Deaths, Germany:
+  debug(process_usc_file)
   dat_germany_death <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/other_forecasts_deaths.csv"),
                                         forecast_date = forecast_dates[[i]],
+                                        truth = cum_truth$GM$death,
                                         type = "death",
                                         country = fips_codes_germany,
                                         location = fips_codes_germany)
   file_name_germany_death <- paste0(processed_path, forecast_dates[[i]], "-Germany-USC-SIkJalpha.csv")
-  write.csv(dat_germany_death, file_name_germany_death, row.names = FALSE)
+  # write.csv(dat_germany_death, file_name_germany_death, row.names = FALSE)
 
   # Cases, Germany:
   dat_germany_case <- process_usc_file(usc_filepath = paste0(dirs_to_process[i], "/other_forecasts_cases.csv"),
@@ -64,7 +78,7 @@ for(i in 1:length(dirs_to_process)) {
                                       country = "Poland",
                                       location = "PL")
   file_name_poland_case <- paste0(processed_path, forecast_dates[[i]], "-Poland-USC-SIkJalpha-case.csv")
-  write.csv(dat_poland_case, file_name_poland_case, row.names = FALSE)
+  # write.csv(dat_poland_case, file_name_poland_case, row.names = FALSE)
 
   cat("File", i, "/", length(dirs_to_process), "\n")
 }

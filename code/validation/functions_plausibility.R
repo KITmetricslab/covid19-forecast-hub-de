@@ -177,6 +177,10 @@ verify_targets <- function(entry){
     paste(-1:130, "day ahead cum death"),
     paste(-1:20, "wk ahead inc death"),
     paste(-1:20, "wk ahead cum death"),
+    paste(-1:130, "day ahead inc case"),
+    paste(-1:130, "day ahead cum case"),
+    paste(-1:20, "wk ahead inc case"),
+    paste(-1:20, "wk ahead cum case"),
     paste(-1:130, "day ahead inc hosp")
   )
   targets_in_entry <- unique(entry$target)

@@ -1,7 +1,7 @@
 library(shiny)
 library(pals)
 
-local <- TRUE
+local <- FALSE
 
 # read in plotting functions etc
 if(local){
@@ -172,7 +172,6 @@ shinyServer(function(input, output, session) {
                          location == input$select_location &
                          target_end_date == hover_date &
                          type %in% c("point", if(input$select_stratification == "forecast_date") "observed"))
-        print(subs)
         point_pred <- data.frame(model = models)
         point_pred <- merge(point_pred, subs, by = "model", all.x = TRUE)
         # need to shift to fit respective truth data:

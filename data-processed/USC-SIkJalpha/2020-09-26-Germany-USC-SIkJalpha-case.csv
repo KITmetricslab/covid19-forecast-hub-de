@@ -128,7 +128,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM","GM","point",NA,3509
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM","GM","point",NA,3491
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM","GM","point",NA,3473
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM","GM","point",NA,591409
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM","GM","observed",NA,280223
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM","GM","observed",NA,282105
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM","GM","point",NA,284018
@@ -229,6 +228,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM","GM","point",NA,580936
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM","GM","point",NA,584445
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM","GM","point",NA,587936
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM","GM","point",NA,591409
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM01","GM01","point",NA,1921
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM01","GM01","point",NA,1983
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM01","GM01","point",NA,2034
@@ -358,7 +358,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM01","GM01","point",NA,234
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM01","GM01","point",NA,232
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM01","GM01","point",NA,231
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM01","GM01","point",NA,76182
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM01","GM01","observed",NA,48135
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM01","GM01","observed",NA,48402
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM01","GM01","point",NA,48671
@@ -459,6 +458,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM01","GM01","point",NA,75485
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM01","GM01","point",NA,75719
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM01","GM01","point",NA,75951
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM01","GM01","point",NA,76182
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM02","GM02","point",NA,2579
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM02","GM02","point",NA,2360
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM02","GM02","point",NA,2146
@@ -588,7 +588,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM02","GM02","point",NA,78
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM02","GM02","point",NA,75
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM02","GM02","point",NA,75
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM02","GM02","point",NA,86793
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM02","GM02","observed",NA,66557
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM02","GM02","observed",NA,66938
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM02","GM02","point",NA,67318
@@ -689,6 +688,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM02","GM02","point",NA,86565
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM02","GM02","point",NA,86643
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM02","GM02","point",NA,86718
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM02","GM02","point",NA,86793
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM03","GM03","point",NA,101
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM03","GM03","point",NA,109
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM03","GM03","point",NA,116
@@ -818,7 +818,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM03","GM03","point",NA,21
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM03","GM03","point",NA,21
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM03","GM03","point",NA,21
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM03","GM03","point",NA,4239
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM03","GM03","observed",NA,2280
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM03","GM03","observed",NA,2294
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM03","GM03","point",NA,2308
@@ -919,6 +918,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM03","GM03","point",NA,4176
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM03","GM03","point",NA,4197
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM03","GM03","point",NA,4218
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM03","GM03","point",NA,4239
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM04","GM04","point",NA,451
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM04","GM04","point",NA,509
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM04","GM04","point",NA,574
@@ -1048,7 +1048,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM04","GM04","point",NA,156
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM04","GM04","point",NA,156
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM04","GM04","point",NA,155
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM04","GM04","point",NA,19419
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM04","GM04","observed",NA,7431
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM04","GM04","observed",NA,7491
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM04","GM04","point",NA,7552
@@ -1149,6 +1148,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM04","GM04","point",NA,18952
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM04","GM04","point",NA,19108
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM04","GM04","point",NA,19264
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM04","GM04","point",NA,19419
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM05","GM05","point",NA,937
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM05","GM05","point",NA,1035
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM05","GM05","point",NA,1134
@@ -1278,7 +1278,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM05","GM05","point",NA,320
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM05","GM05","point",NA,321
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM05","GM05","point",NA,322
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM05","GM05","point",NA,41242
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM05","GM05","observed",NA,18221
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM05","GM05","observed",NA,18348
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM05","GM05","point",NA,18476
@@ -1379,6 +1378,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM05","GM05","point",NA,40279
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM05","GM05","point",NA,40599
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM05","GM05","point",NA,40920
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM05","GM05","point",NA,41242
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM06","GM06","point",NA,1214
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM06","GM06","point",NA,1477
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM06","GM06","point",NA,1792
@@ -1508,7 +1508,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM06","GM06","point",NA,1104
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM06","GM06","point",NA,1108
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM06","GM06","point",NA,1112
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM06","GM06","point",NA,79175
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM06","GM06","observed",NA,19443
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM06","GM06","observed",NA,19598
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM06","GM06","point",NA,19757
@@ -1609,6 +1608,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM06","GM06","point",NA,75851
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM06","GM06","point",NA,76955
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM06","GM06","point",NA,78063
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM06","GM06","point",NA,79175
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM07","GM07","point",NA,3817
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM07","GM07","point",NA,4588
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM07","GM07","point",NA,5487
@@ -1738,7 +1738,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM07","GM07","point",NA,2396
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM07","GM07","point",NA,2391
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM07","GM07","point",NA,2387
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM07","GM07","point",NA,221124
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM07","GM07","observed",NA,67278
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM07","GM07","observed",NA,67763
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM07","GM07","point",NA,68263
@@ -1839,6 +1838,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM07","GM07","point",NA,213950
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM07","GM07","point",NA,216346
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM07","GM07","point",NA,218737
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM07","GM07","point",NA,221124
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM08","GM08","point",NA,421
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM08","GM08","point",NA,443
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM08","GM08","point",NA,464
@@ -1968,7 +1968,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM08","GM08","point",NA,81
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM08","GM08","point",NA,80
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM08","GM08","point",NA,81
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM08","GM08","point",NA,17842
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM08","GM08","observed",NA,10381
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM08","GM08","observed",NA,10439
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM08","GM08","point",NA,10498
@@ -2069,6 +2068,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM08","GM08","point",NA,17600
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM08","GM08","point",NA,17681
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM08","GM08","point",NA,17761
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM08","GM08","point",NA,17842
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM09","GM09","point",NA,17
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM09","GM09","point",NA,14
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM09","GM09","point",NA,12
@@ -2198,7 +2198,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM09","GM09","point",NA,0
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM09","GM09","point",NA,0
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM09","GM09","point",NA,1
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM09","GM09","point",NA,3383
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM09","GM09","observed",NA,3270
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM09","GM09","observed",NA,3272
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM09","GM09","point",NA,3275
@@ -2299,6 +2298,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM09","GM09","point",NA,3382
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM09","GM09","point",NA,3382
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM09","GM09","point",NA,3382
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM09","GM09","point",NA,3383
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM10","GM10","point",NA,330
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM10","GM10","point",NA,451
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM10","GM10","point",NA,614
@@ -2428,7 +2428,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM10","GM10","point",NA,491
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM10","GM10","point",NA,482
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM10","GM10","point",NA,475
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM10","GM10","point",NA,34713
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM10","GM10","observed",NA,4603
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM10","GM10","observed",NA,4642
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM10","GM10","point",NA,4683
@@ -2529,6 +2528,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM10","GM10","point",NA,33265
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM10","GM10","point",NA,33756
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM10","GM10","point",NA,34238
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM10","GM10","point",NA,34713
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM11","GM11","point",NA,131
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM11","GM11","point",NA,157
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM11","GM11","point",NA,189
@@ -2658,7 +2658,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM11","GM11","point",NA,140
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM11","GM11","point",NA,142
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM11","GM11","point",NA,143
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM11","GM11","point",NA,10825
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM11","GM11","observed",NA,4178
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM11","GM11","observed",NA,4195
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM11","GM11","point",NA,4212
@@ -2759,6 +2758,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM11","GM11","point",NA,10400
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM11","GM11","point",NA,10540
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM11","GM11","point",NA,10682
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM11","GM11","point",NA,10825
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM12","GM12","point",NA,62
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM12","GM12","point",NA,71
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM12","GM12","point",NA,81
@@ -2888,7 +2888,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM12","GM12","point",NA,41
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM12","GM12","point",NA,41
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM12","GM12","point",NA,42
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM12","GM12","point",NA,3332
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM12","GM12","observed",NA,1144
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM12","GM12","observed",NA,1152
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM12","GM12","point",NA,1161
@@ -2989,6 +2988,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM12","GM12","point",NA,3208
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM12","GM12","point",NA,3249
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM12","GM12","point",NA,3290
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM12","GM12","point",NA,3332
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM13","GM13","point",NA,420
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM13","GM13","point",NA,496
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM13","GM13","point",NA,582
@@ -3118,7 +3118,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM13","GM13","point",NA,264
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM13","GM13","point",NA,265
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM13","GM13","point",NA,266
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM13","GM13","point",NA,22937
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM13","GM13","observed",NA,6942
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM13","GM13","observed",NA,6996
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM13","GM13","point",NA,7052
@@ -3219,6 +3218,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM13","GM13","point",NA,22142
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM13","GM13","point",NA,22406
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM13","GM13","point",NA,22671
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM13","GM13","point",NA,22937
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM14","GM14","point",NA,158
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM14","GM14","point",NA,209
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM14","GM14","point",NA,278
@@ -3348,7 +3348,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM14","GM14","point",NA,338
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM14","GM14","point",NA,339
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM14","GM14","point",NA,339
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM14","GM14","point",NA,17998
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM14","GM14","observed",NA,2525
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM14","GM14","observed",NA,2544
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM14","GM14","point",NA,2564
@@ -3449,6 +3448,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM14","GM14","point",NA,16982
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM14","GM14","point",NA,17320
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM14","GM14","point",NA,17659
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM14","GM14","point",NA,17998
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM15","GM15","point",NA,132
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM15","GM15","point",NA,121
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM15","GM15","point",NA,112
@@ -3578,7 +3578,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM15","GM15","point",NA,5
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM15","GM15","point",NA,5
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM15","GM15","point",NA,5
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM15","GM15","point",NA,5138
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM15","GM15","observed",NA,4024
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM15","GM15","observed",NA,4044
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM15","GM15","point",NA,4063
@@ -3679,6 +3678,7 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM15","GM15","point",NA,5123
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM15","GM15","point",NA,5128
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM15","GM15","point",NA,5133
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM15","GM15","point",NA,5138
 2020-09-26,"1 wk ahead inc case",2020-10-03,"GM16","GM16","point",NA,1304
 2020-09-26,"2 wk ahead inc case",2020-10-10,"GM16","GM16","point",NA,1669
 2020-09-26,"3 wk ahead inc case",2020-10-17,"GM16","GM16","point",NA,2096
@@ -3808,7 +3808,6 @@
 2020-09-26,"97 day ahead inc case",2021-01-01,"GM16","GM16","point",NA,284
 2020-09-26,"98 day ahead inc case",2021-01-02,"GM16","GM16","point",NA,274
 2020-09-26,"99 day ahead inc case",2021-01-03,"GM16","GM16","point",NA,265
-2020-09-26,"99 day ahead cum case",2021-01-03,"GM16","GM16","point",NA,55634
 2020-09-26,"-1 day ahead cum case",2020-09-25,"GM16","GM16","observed",NA,13811
 2020-09-26,"0 day ahead cum case",2020-09-26,"GM16","GM16","observed",NA,13971
 2020-09-26,"1 day ahead cum case",2020-09-27,"GM16","GM16","point",NA,14137
@@ -3909,3 +3908,4 @@
 2020-09-26,"96 day ahead cum case",2020-12-31,"GM16","GM16","point",NA,54811
 2020-09-26,"97 day ahead cum case",2021-01-01,"GM16","GM16","point",NA,55095
 2020-09-26,"98 day ahead cum case",2021-01-02,"GM16","GM16","point",NA,55369
+2020-09-26,"99 day ahead cum case",2021-01-03,"GM16","GM16","point",NA,55634
