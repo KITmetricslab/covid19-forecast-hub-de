@@ -8,9 +8,9 @@ Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8") # set locale to Engli
 source("functions_ensemble.R") # read in functions
 
 # basic settings:
-country <- "Germany"
-location <- "GM"
-forecast_date <- as.Date("2020-09-21")
+country <- "Poland"
+location <- "PL"
+forecast_date <- as.Date("2020-10-05")
 if(!weekdays(forecast_date) == "Monday") stop("forecast_date should be a Monday.")
 
 # read in which models to include:
@@ -18,10 +18,20 @@ models_to_include0 <- read.csv(paste0("included_models/included_models-", foreca
 models_to_include <- models_to_include0$model[models_to_include0[, location]]
 
 # read in truth data:
-ecdc <- read.csv("../../data-truth/RKI/truth_RKI-Cumulative Deaths_Germany.csv", colClasses = list("date" = "Date"))
-ecdc$truth_data <- "ECDC"
-jhu <- read.csv("../../data-truth/JHU/truth_JHU-Cumulative Deaths_Germany.csv", colClasses = list("date" = "Date"))
-jhu$truth_data <- "JHU"
+if(country == "Germany"){
+  ecdc <- read.csv("../../data-truth/RKI/truth_RKI-Cumulative Deaths_Germany.csv", colClasses = list("date" = "Date"))
+  ecdc$truth_data <- "ECDC"
+  jhu <- read.csv("../../data-truth/JHU/truth_JHU-Cumulative Deaths_Germany.csv", colClasses = list("date" = "Date"))
+  jhu$truth_data <- "JHU"
+}
+
+if(country == "Poland"){
+  ecdc <- read.csv("../../data-truth/ECDC/truth_ECDC-Cumulative Deaths_Poland.csv", colClasses = list("date" = "Date"))
+  ecdc$truth_data <- "ECDC"
+  jhu <- read.csv("../../data-truth/JHU/truth_JHU-Cumulative Deaths_Poland.csv", colClasses = list("date" = "Date"))
+  jhu$truth_data <- "JHU"
+}
+
 
 # extract last observed values in both truth data sets:
 last_saturday <- get_last_saturday(forecast_date)
@@ -87,7 +97,8 @@ ensemble <- merge(ensemble, last_observations, by = c("location", "truth_data"))
 ensemble$value <- ensemble$last_observed + ensemble$cum_since_last_observed
 
 # merge in location names:
-state_codes <- read.csv("../../template/state_codes_germany.csv")
+state_codes <- rbind(read.csv("../../template/state_codes_germany.csv")[, c("state_code", "state_name")],
+                     read.csv("../../template/state_codes_poland.csv")[, c("state_code", "state_name")])
 state_codes <- state_codes[, c("state_code", "state_name")]
 colnames(state_codes) <- c("location", "location_name")
 ensemble <- merge(ensemble, state_codes, by = "location")

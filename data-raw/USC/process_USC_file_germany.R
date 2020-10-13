@@ -27,11 +27,12 @@ col_to_date <- function(col) {
 #'
 #' @return a data.frame in quantile format
 
-process_usc_file <- function(usc_filepath, forecast_date, country = "Germany", location = "GM", type = "death"){
+process_usc_file <- function(usc_filepath, forecast_date, truth, country = "Germany", location = "GM", type = "death"){
   if(length(country) != length(location)) stop("country and location need to have the same length.")
   for(i in 1:length(country)){
     to_add <- process_usc_file0(usc_filepath = usc_filepath,
                                 forecast_date = forecast_date,
+                                truth = truth,
                                 country = country[i],
                                 location = location[i],
                                 type = type)
@@ -44,23 +45,34 @@ process_usc_file <- function(usc_filepath, forecast_date, country = "Germany", l
   return(ret)
 }
 
-process_usc_file0 <- function(usc_filepath, forecast_date, country = "Germany", location = "GM", type = "death"){
-  # # read in JHU data to be able to extract one week ahead inc forecast:
-  # jhu_filepath <- paste0("../../data-truth/JHU/raw/", forecast_date, "-Deaths-JHU.csv")
-  # jhu_dat <- read.csv(jhu_filepath)
-  # jhu_dat <- subset(jhu_dat, `Country/Region` == country)
-  # colnames(jhu_dat)[-1:-3] <- as.character(as.Date(colnames(jhu_dat)[-1:-3], format = "m/d/Y"))
+process_usc_file0 <- function(usc_filepath, forecast_date, truth, country = "Germany", location = "GM", type = "death"){
 
   # read in data:
   dat_orig <- read.csv(usc_filepath)
   # restrict to country:
   dat_country <- subset(dat_orig, Country == country)
 
+  # restrict truth to country
+  truth <- truth[truth$location == location, ]
+
   # bring to long format, extract necessary values from old data frame
   dat_country_long <- data.frame(
     target_end_date = col_to_date(colnames(dat_country)[-1:-2]),
     cum_value = as.numeric(dat_country[1, -1:-2])# cum deaths
   )
+
+  # check that truth data agrees with first entries of USC files:
+  truth_to_check <- truth[truth$date == min(dat_country_long$target_end_date), "value"]
+  if(dat_country_long$cum_value[which.min(dat_country_long$target_end_date)] != truth_to_check){
+    warning("Mismatch with truth data in", location, " - forecast_date:", forecast_date)
+  }
+
+  # add last 14 truth values:
+  truth_to_add <- truth[truth$date %in% (min(dat_country_long$target_end_date) - (1:14)),
+                        c("date", "value")]
+  colnames(truth_to_add) <- c("target_end_date", "cum_value")
+  dat_country_long <- rbind(truth_to_add, dat_country_long)
+
   dat_country_long$weekday <- weekdays(dat_country_long$target_end_date)
   dat_country_long$inc_value = c(NA, diff(dat_country_long$cum_value, lag = 1))# inc deaths
 
@@ -120,9 +132,13 @@ process_usc_file0 <- function(usc_filepath, forecast_date, country = "Germany", 
                            quantile = NA,
                            value = dat_country_long_sat$cum_value)
 
-  # pool_
+  # pool:
   result <- rbind(weekly_inc, weekly_cum, daily_inc, daily_cum)
-  result <- subset(result, !is.na(value)) # remove NAs
+
+  # remove superfluous observed values:
+  allowed_targets <- c(paste(-1:100, "day ahead", type, "death"),
+                       paste(-1:100, "day ahead", type, "case"))
+  result <- subset(result, target %in% allowed_targets) # remove NAs
 
   return(result)
 }
