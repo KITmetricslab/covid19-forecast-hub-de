@@ -71,8 +71,8 @@ The forecasts assembled in this repository have been created by various independ
 Data on observed numbers of deaths and several other quantities are compiled [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth) and come from the following sources:
 
 - [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases) **(This is our preferred source for national level counts.)**
-- [Polish Ministry of Health](https://www.gov.pl/web/zdrowie). We pull these data from [this Google Sheet](bit.ly/covid19-poland) run by [Michal Rogalski](https://twitter.com/micalrg). **(This is our preferred source for Polish voivodeship level counts. The data are coherent with the national level data from ECDC. To align with the ECDC time scale we have shifted them by one day.)**
-- [Robert Koch Institut](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0). Note that these data are subject to some processing steps, see [here](data-truth/RKI). **(This is our preferred source for German Bundesland level counts. The data are coherent with the national level data from ECDC.)**
+- [Polish Ministry of Health](https://www.gov.pl/web/zdrowie). We pull these data from [this Google Sheet](bit.ly/covid19-poland) run by [Michal Rogalski](https://twitter.com/micalrg). (**This is our preferred source for Polish voivodeship level counts.** The data are coherent with the national level data from ECDC. To align with the ECDC time scale we have shifted them by one day.)**
+- [Robert Koch Institut](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0). Note that these data are subject to some processing steps (see [here](data-truth/RKI)) and are in part based on manual data extraction performed by [IHME](https://covid19.healthdata.org/united-states-of-america). (**This is our preferred source for German Bundesland level counts.** The data are coherent with the national level data from ECDC.)**
 - [Johns Hopkins University](https://coronavirus.jhu.edu/). These data are used by a number of teams generating forecasts. Currently (August 2020) the agreement with ECDC is good, but in the past there have been larger discrepancies.
 - [DIVI Intensivregister.](https://www.divi.de/register/tagesreport) These data are currently not yet used for forecasts, but we intend to extend our activities in this direction.
 
@@ -82,18 +82,21 @@ Details can be found in the respective README files in the subfolders of `data-t
 
 Currently we assemble forecasts from the following teams. *Note that not all teams are using the same ground truth data.* (used truth data source and forecast reuse license in brackets):
 
+- [epiforecasts.io / London School of Hygiene and Tropical Medicine](https://epiforecasts.io/) (ECDC; no license specified)
 - [Frankfurt Institute for Advanced Studies & Forschungszentrum Jülich](https://www.medrxiv.org/content/10.1101/2020.04.18.20069955v1) (ECDC; no license specified)
 - [ICM / University of Warsaw](https://icm.edu.pl/en/) (ECDC; to be specified)
 - [IHME](https://covid19.healthdata.org/united-states-of-america) (JHU; CC-AT-NC4.0)
-- [Imperial](https://github.com/mrc-ide/covid19-forecasts-orderly) (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
+- [Imperial College](https://github.com/mrc-ide/covid19-forecasts-orderly) (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
 - [Johannes Gutenberg University Mainz / University of Hamburg](https://github.com/QEDHamburg/covid19) (ECDC; MIT)
 - [KIT](https://github.com/KITmetricslab/KIT-baseline) (ECDC; MIT) *This is a simple baseline model run by the Forecast Hub Team. Part of these forecasts were created retrospectively, but using only data available at the respective forecast date. The commit dates of all forecasts can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/code/validation/commit_dates.csv).*
 - [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)
 - [MIM / University of Warsaw](https://www.mimuw.edu.pl/en/faculty) (ECDC; to be specified)
 - [MIT Covid Analytics](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [MOCOS Group](https://mocos.pl/) (ECDC; to be specified)
+- ITTW (Universities of Ilmenau, Trier, Wrozlaw, Warsaw) (ECDC; no license specified)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
-- [University of Leipzig IMISE/GenStat](https://github.com/holgerman/covid19-forecast-hub-de) (ECDC; none given)
+- [University of Leipzig IMISE/GenStat](https://github.com/holgerman/covid19-forecast-hub-de) (ECDC; MIT)
+- [UCLA Statistical Machine Learning Lab](https://covid19.uclaml.org/) (JHU; cc-by-4.0)
 - [University of Southern California Data Science Lab](https://scc-usc.github.io/ReCOVER-COVID-19)(JHU; MIT) (MIT)
 - [YYG](http://covid19-projections.com/) (JHU; MIT)
 
