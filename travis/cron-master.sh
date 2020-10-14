@@ -20,6 +20,10 @@ python3 ./rki_download.py
 python3 ./rki_update.py
 echo "RKI done"
 
+# update Poland data
+python3 ./truth_poland_p.py
+echo "Poland done"
+
 # update DIVI data
 python3 ./divi_download.py
 cd ../../data-truth/DIVI
