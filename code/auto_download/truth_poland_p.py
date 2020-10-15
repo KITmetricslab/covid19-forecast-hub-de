@@ -17,10 +17,10 @@ a = gc.open_by_key('1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E')
 worksheet = a.worksheet('title','Wzrost w województwach')
 
 abbr_vois = {"Śląskie": "PL83", "Mazowieckie": "PL78", "Małopolskie": "PL77", 
-             "Wielkopolskie": "PL86", "Łódzkie": "PL74", "Pomorskie": "PL72", 
-             "Dolnośląskie": "PL82", "Podkarpackie": "PL80",
-             "Kujawsko-Pomorskie": "PL75", "Lubelskie": "PL79", 
-             "Opolskie": "PL73", "Świętokrzyskie": "PL84", "Podlaskie": "PL81",
+             "Wielkopolskie": "PL86", "Łódzkie": "PL74", "Dolnośląskie": "PL72", 
+             "Pomorskie": "PL82", "Podkarpackie": "PL80",
+             "Kujawsko-Pomorskie": "PL73", "Lubelskie": "PL75", 
+             "Opolskie": "PL79", "Świętokrzyskie": "PL84", "Podlaskie": "PL81",
              "Zachodniopomorskie": "PL87", "Warmińsko-Mazurskie": "PL85", 
              "Lubuskie": "PL76", "Poland": "PL"}
 
@@ -73,12 +73,11 @@ for relevant_rows in [inc_case_rows, cum_case_rows, inc_death_rows, cum_death_ro
     # handle polish characters
     df["location_name"] = df["location_name"].apply(lambda x: unidecode(x))
     
-    df = df.set_index("location_name")
-    
     #shift to ecdc
     df["date"] = df["date"]. apply(lambda x: x + datetime.timedelta(days=1))
+    df = df.set_index("date")
     
-    df = df[["location", "date", "value"]]
+    df = df[["location_name", "location", "value"]]
     
     result.append(df)
     
