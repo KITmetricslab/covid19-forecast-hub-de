@@ -1,20 +1,3 @@
-# read in week ahead forecasts from a given file
-read_week_ahead <- function(path){
-  dat <- read.csv(path, colClasses = c(location = "character", forecast_date = "Date", target_end_date = "Date"),
-                  stringsAsFactors = FALSE)
-  return(subset(dat, target %in% c(paste(1:4, "wk ahead inc death"), paste(1:4, "wk ahead cum death"))))
-}
-
-# get shift between cumulative numbers in two truth data sets. Differences for incident counts are set to zero
-# get_shift <- function(truth1, truth2, date){
-#   truth1 <- truth1[truth1$date == date, ]
-#   truth2 <- truth2[truth2$date == date, ]
-#   both_truth <- merge(truth1, truth2, by = c("date", "location", "target"))
-#   both_truth$shift <- both_truth$value.x - both_truth$value.y
-#   both_truth$shift[grepl("inc", both_truth$target)] <- 0
-#   return(both_truth[, c("date", "location", "target", "shift")])
-# }
-
 # get shift between truth data used in a model and the ECDC and JHU data
 get_shift <- function(model, dat_truth, truth_data_use, date){
 
@@ -39,6 +22,8 @@ get_shift <- function(model, dat_truth, truth_data_use, date){
   # compute shifts:
   both$shift_ECDC <-  both$value.ECDC - both$value_model
   both$shift_JHU <- both$value.JHU - both$value_model
+  ind_cum <- which(grepl("inc", both$target))
+  both$shift_ECDC[ind_cum] <- both$shift_JHU[ind_cum] <- 0
 
   # remove unnecessary columns:
   both$value.ECDC <- both$value.JHU <- NULL
@@ -167,6 +152,7 @@ evaluate_point <- function(forecasts, name_truth_eval, dat_truth, truth_data_use
 
   # subset to point forecasts:
   forecasts <- subset(forecasts, type == "point")
+  if(nrow(forecasts) == 0) return(NULL) # stop here if no point forecasts available.
   colnames(forecasts)[colnames(forecasts) == "value"] <- "value.point"
   forecasts$target_type <- get_target_type(forecasts$target)
   forecasts$type <- NULL
