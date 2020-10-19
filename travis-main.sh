@@ -26,6 +26,8 @@ sudo apt install python3-pip
 pip3 install --upgrade setuptools
 pip3 install pymmwr click requests urllib3 selenium webdriver-manager pyyaml
 pip3 install gitpython
+pip3 install pygsheets
+pip3 install unidecode
 
 # only validate data on builds triggered by pull requests
 if [[ "$TRAVIS_EVENT_TYPE" == *"pull_request"* ]]; then

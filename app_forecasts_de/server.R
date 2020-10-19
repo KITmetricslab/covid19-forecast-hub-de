@@ -37,8 +37,7 @@ if(local){
                                 stringsAsFactors = FALSE,
                                 colClasses = c("forecast_date" = "Date",
                                                "timezero" = "Date",
-                                               "target_end_date" = "Date",
-                                               "first_commit_date" = "Date"))
+                                               "target_end_date" = "Date"))
 }
 
 # exclude some models because used data is neither ECDC nor JHU:
@@ -63,7 +62,7 @@ locations <- c("Germany" = "GM", "Poland" = "PL", locations)
 models <- sort(as.character(unique(forecasts_to_plot$model)))
 
 # set default for selected models at start:
-default_models <- if("KITCOVIDhub-median_ensemble" %in% models) "KITCOVIDhub-median_ensemble" else models
+default_models <- models # if("KITCOVIDhub-median_ensemble" %in% models) "KITCOVIDhub-median_ensemble" else models
 
 # assign colours to models (currently restricted to eight):
 cols_models <- glasbey(length(models) + 1)[-1]
@@ -313,7 +312,7 @@ shinyServer(function(input, output, session) {
            pch = ifelse(models %in% input$select_models,
                         pch_full[truth_data_used[models]], pch_empty[truth_data_used[models]]),
            pt.cex = 1.3, ncol = 3)
-    print(selected)
+    # print(selected)
     legend("left", col = "black", legend = paste0(c("Truth data", "JHU", "ECDC/RKI"), ": ",
                                                   c("", selected$truths)), lty = 0, bty = "n",
            pch = c(NA, ifelse(truths %in% input$select_truths, pch_full, pch_empty)),

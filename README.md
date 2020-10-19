@@ -93,7 +93,7 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [MIM / University of Warsaw](https://www.mimuw.edu.pl/en/faculty) (ECDC; to be specified)
 - [MIT Covid Analytics](https://www.covidanalytics.io/) (JHU; Apache 2.0)
 - [MOCOS Group](https://mocos.pl/) (ECDC; to be specified)
-- ITTW (Universities of Ilmenau, Trier, Wrozlaw, Warsaw) (ECDC; no license specified)
+- ITTW (Universities of Ilmenau, Trier, Wroclaw, Warsaw) (ECDC; no license specified)
 - [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
 - [University of Leipzig IMISE/GenStat](https://github.com/holgerman/covid19-forecast-hub-de) (ECDC; MIT)
 - [UCLA Statistical Machine Learning Lab](https://covid19.uclaml.org/) (JHU; cc-by-4.0)
