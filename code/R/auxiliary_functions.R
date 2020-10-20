@@ -1,3 +1,29 @@
+# read in week ahead forecasts from a given file
+read_week_ahead <- function(path){
+  dat <- read.csv(path, colClasses = c(location = "character", forecast_date = "Date", target_end_date = "Date"),
+                  stringsAsFactors = FALSE)
+
+    return(subset(dat, target %in% c(paste(1:4, "wk ahead inc death"),
+                                     paste(1:4, "wk ahead cum death"),
+                                     paste(1:4, "wk ahead inc case"),
+                                     paste(1:4, "wk ahead cum case"))))
+}
+
+# transform incidence data to weekly scale:
+inc_truth_to_weekly <- function(truth_inc0){
+  truth_inc0 <- subset(truth_inc0, nchar(location) == 2)
+  truth_inc0$epi_week <- MMWRweek::MMWRweek(truth_inc0$date)$MMWRweek
+  truth_inc <- aggregate(truth_inc0$value,
+                         by = list(epi_week = truth_inc0$epi_week, location = truth_inc0$location),
+                         FUN = sum)
+  colnames(truth_inc)[3] <- "value"
+  truth_inc <- merge(truth_inc,
+                     truth_inc0[weekdays(truth_inc0$date) == "Saturday", c("date", "epi_week", "location", "location_name")],
+                     by = c("epi_week", "location"))
+  truth_inc <- truth_inc[order(truth_inc$date), ]
+  return(truth_inc)
+}
+
 # extract the date from a file name in our standardized format
 get_date_from_filename <- function(filename){
   as.Date(substr(filename, start = 1, stop = 10))

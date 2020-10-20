@@ -66,7 +66,7 @@ coerceable_to_date <- function(x) {
 #' @param country the country you want the forecast for, currently supported: Germany and Poland
 #' @return long-format data_frame with quantiles
 #'
-make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany") {
+make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",cases=FALSE) {
   require(tidyverse)
   require(MMWRweek)
   require(lubridate)
@@ -92,7 +92,7 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany")
     data <- data %>%
       dplyr::rename(date = names(data)[grep("date", names(data))])
   }
-  # remove death smoothed column, only NA for Germany
+  # remove death or case smoothed column, not regarded (yet)
   if (length(grep("smoothed", names(data))) > 0) {
     data <- data %>%
       dplyr::select(-grep("smoothed", names(data)))
@@ -122,7 +122,8 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany")
   data<-data %>% left_join(state_fips_codes, by = c("location_name" = "state_name")) %>% 
     dplyr::filter(!is.na(state_code))
   
-  ## code for incident deaths
+  ## code for incident deaths or cases (var names might be confusing since they
+  #seem only to cover cases, but are general)
   
   col_list1 <-
     c(

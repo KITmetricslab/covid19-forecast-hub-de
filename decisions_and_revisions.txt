@@ -1,0 +1,14 @@
+Documentation of revisions to forecasts
+
+This file was created at the staart of the pre-specified evaluation period on 14 Oct 2020.
+
+### Documentation of decisions on ensemble:
+
+Tue 11 Oct: LeipzigIMISE-SECIR omitted from ensembles due to extremely low forecast uncertainty.
+
+### Documentation of forecast revisions:
+
+Wed 14 Oct: revision of cumulative case and death forecasts in epiforecasts-EpiNow2. These were obviously subject to a technical error (exported last observed cumulative + incident from respective week rather than cumulative sum).
+Wed 14 Oct: revision of ensembles to include corrected epiforecasts-EpiNow2 preditions
+Wed 14 Oct: adding Saxony forecasts to LeipzigIMISE-SECIR. These had been submitted in a separate file on Tuesday.
+Fri 16 Oct: MIT model had been accidentially omitted from 2020-10-12 "inc death ensembles". Correcting these files.
