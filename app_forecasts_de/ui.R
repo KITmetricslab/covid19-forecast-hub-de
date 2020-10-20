@@ -62,7 +62,7 @@ dashboardPage(
                   radioButtons("select_truths", "Select handling of truth data:",
                                  choiceNames = c("Show original forecasts irrespective of used truth data", "Shift all forecasts to ECDC/RKI data", "Shift all forecasts to JHU data (only national level)"),
                                  choiceValues = c("both", "ECDC", "JHU"),
-                                 selected = c("both"), inline = TRUE)
+                                 selected = c("ECDC"), inline = TRUE)
                   ),
               span(HTML("&nbsp")),
               bsButton("truths", label = "", icon = icon("question"), style = "info", size = "extra-small"),

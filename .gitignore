@@ -13,3 +13,6 @@ data-raw/IHME/2020_09_02/Reference_hospitalization_all_locs.csv
 Reference_hospitalization_all_locs.csv
 Best_mask_hospitalization_all_locs.csv
 Worse_hospitalization_all_locs.csv
+
+# ignore developement credentials
+/code/auto_download/creds.json
