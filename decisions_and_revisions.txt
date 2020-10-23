@@ -15,4 +15,4 @@ Wed 14 Oct: adding Saxony forecasts to LeipzigIMISE-SECIR. These had been submit
 Fri 16 Oct: MIT model had been accidentially omitted from 2020-10-12 "inc death ensembles". Correcting these files.
 Tue 20 Oct: ITTW revised forecasts for Polish voivodeships from 2020-10-12. This was necessary as the truth data made available in the Forecast Hub repository had been erroneous.
 Wed 21 Oct: Retrospectively added KIT-time_ series_baseline model (exponential smoothing)
-
+Fri 23 Oct: Temporally removing MIT Covid Analytics forecasts for Poland, 19 Oct. These were likely subject to a technical problem. The handling of these forecasts for evaluation remains to be determined.
