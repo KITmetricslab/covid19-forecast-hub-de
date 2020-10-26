@@ -109,13 +109,20 @@ compute_ensemble <- function(forecast_date,
   # inverse WIS ensemble:
   if(ensemble_type == "inverse_wis"){
     inverse_wis_weights <- get_inverse_wis_weights(forecast_date = forecast_date,
-                                                   members = members, eval = eval)
+                                                   members = members, eval = eval,
+                                                   target_type = target_type, inc_or_cum = inc_or_cum)
     forecasts <- merge(forecasts, inverse_wis_weights, by = "model")
     # apply weighting:
     forecasts$value <- forecasts$value * forecasts$inverse_wis_weight
     ensemble <- aggregate(formula = value ~ target + target_end_date + location + type + quantile,
                           data = forecasts, FUN = sum)
   }
+
+  # add point forecasts:
+  ensemble_point <- subset(ensemble, abs(quantile - 0.5) < 0.01)
+  ensemble_point$type <- "point"
+  ensemble_point$quantile <- NA
+  ensemble <- rbind(ensemble_point, ensemble)
 
   # some formatting:
   ensemble$forecast_date <- forecast_date
@@ -128,7 +135,7 @@ compute_ensemble <- function(forecast_date,
 }
 
 # get the weights for the inverse WIS ensemble:
-get_inverse_wis_weights <- function(forecast_date, members, eval){
+get_inverse_wis_weights <- function(forecast_date, members, eval, target_type, inc_or_cum){
   if(weekdays(forecast_date) != "Monday"){
     stop("Forecast date needs to be a Monday (if already the case set language to English).")
   }
