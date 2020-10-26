@@ -46,9 +46,10 @@ cd ../../code/visualization
 Rscript ./plot_current_forecasts.R
 echo "Image done"
 
-# validate RKI truth
+# validate truth
 cd ../validation
 python3 ./validate_truth.py
+python3 ./check_truth.py
 echo "All checks executed"
 
 # Evaluate forecasts
