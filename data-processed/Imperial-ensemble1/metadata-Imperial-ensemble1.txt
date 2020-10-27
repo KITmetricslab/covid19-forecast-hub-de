@@ -1,14 +1,17 @@
 team_name: Imperial
-team_abbr: Imperial
 model_name: Ensemble1
-model_abbr: Ensemble1
+model_abbr: Imperial-ensemble1
 model_contributors: Sangeeta Bhatia <s.bhatia@imperial.ac.uk>
-
-
-this_model_is_an_ensemble: TRUE
-this_model_is_unconditional: TRUE
-
-methods: >-
-    This model makes predictions about the future, unconditional on particular intervention strategies.
+website_url: https://mrc-ide.github.io/covid19-short-term-forecasts/
+repo_url: https://github.com/mrc-ide/covid19-forecasts-orderly
+license: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
+team_funding:
+institional_affil: MRC Centre for Global Infectious Disease Analysis, Imperial College London
+team_model_designation: other
+data_inputs: ECDC
+methods: This model makes predictions about the future, unconditional on particular intervention strategies.
     Ensemble1 and Ensemble2 are disease transmission models fit with different assumptions about serial
     intervals.
+methods_long:
+citation:
+twitter_handles:
