@@ -9,7 +9,7 @@ team_funding: Helmholtz Information & Data Science Pilot Project "Simcard"
 institional_affil: Karlsruhe Institute of Technology, Chair of Statistics and Econometrics
 team_model_designation: other
 data_inputs: other forecasts submitted to the Forecast Hub
-methods: This is a simple quantile-wise average of other models submitted to the Forecast Hub.
+methods: This is a simple quantile-wise median of other models submitted to the Forecast Hub.
 methods_long: This is a simple quantile-wise average of other models submitted to the Forecast Hub. We account for
     use of different truth data by different models, aligning all forecasts of cumulative deaths with the
     last observed value from the ECDC data.
