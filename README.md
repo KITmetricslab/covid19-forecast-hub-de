@@ -146,7 +146,7 @@ The following persons have contributed to this repository, either by assembling 
 Members of our group have contributed to the following papers and preprints on collaborative COVID-19 forecasting:
 
 - J. Bracher, E.L. Ray, T. Gneiting, N.G. Reich: [Evaluating epidemic forecasts in an interval format](https://arxiv.org/abs/2005.12881).
-- L.C. Brooks, E.L. Ray, J. Bien, J. Bracher, A. Rumack, R.J. Tibshirani, N.G. Reich: (Comparing ensemble approaches for short-term probabilistic COVID-19 forecasts in the U.S.)[https://forecasters.org/blog/2020/10/28/comparing-ensemble-approaches-for-short-term-probabilistic-covid-19-forecasts-in-the-u-s/]
+- L.C. Brooks, E.L. Ray, J. Bien, J. Bracher, A. Rumack, R.J. Tibshirani, N.G. Reich: [Comparing ensemble approaches for short-term probabilistic COVID-19 forecasts in the U.S.](https://forecasters.org/blog/2020/10/28/comparing-ensemble-approaches-for-short-term-probabilistic-covid-19-forecasts-in-the-u-s/)
 - E.L. Ray, N. Wattanachit, J. Niemi et al: [Ensemble Forecasts of Coronavirus Disease 2019 (COVID-19) in the U.S.](https://www.medrxiv.org/content/10.1101/2020.08.19.20177493v1).
 
 
