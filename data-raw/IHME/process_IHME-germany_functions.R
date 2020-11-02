@@ -1,4 +1,4 @@
-# Author: Konstantin Görgen
+# Author: Konstantin G?rgen
 # Date: Fri May 08 14:51:21 2020
 # --------------
 #################################################################################
@@ -78,8 +78,12 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
   #leave data type as data.frame for compatibility with tidyverse
   #use utf-8 to keep Umlaut-characters
   data <-fread(path, stringsAsFactors = FALSE,data.table=FALSE,encoding="UTF-8")
-  #change ü to u
-  data$location_name<-gsub("ü","u",data$location_name)
+  #change ? to u
+  #data$location_name<-gsub("?","u",data$location_name)
+  
+  #New Change in IHME location names, u is now ÃƒÂ¼
+  data$location_name<-gsub("Ã¼","u",data$location_name)
+
  
   #forecast date is given from function now
   #forecast_date <- get_date(path)
@@ -122,6 +126,25 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
   data<-data %>% left_join(state_fips_codes, by = c("location_name" = "state_name")) %>% 
     dplyr::filter(!is.na(state_code))
   
+  #if there are NA-values for cum-deaths, replace them with value from last day
+  
+  count<-0
+  if(1%in%which(is.na(data$totdea_mean))) #check if first entry is NA, omit that one
+  {
+    data<-data[-1,]
+  }
+    
+  while(sum(is.na(data$totdea_mean))>0 ) #stop if there is no NA left
+  {
+    count<-count+1
+    data$totdea_mean[is.na(data$totdea_mean)]<-data$totdea_mean[which(is.na(data$totdea_mean))-1]
+    data$totdea_lower[is.na(data$totdea_lower)]<-data$totdea_lower[which(is.na(data$totdea_lower))-1]
+    data$totdea_upper[is.na(data$totdea_upper)]<-data$totdea_upper[which(is.na(data$totdea_upper))-1]
+    
+  }
+    
+
+  
   ## code for incident deaths or cases (var names might be confusing since they
   #seem only to cover cases, but are general)
   
@@ -133,7 +156,7 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
           grep("date", colnames(data)),
           grep("death", colnames(data)) ),
         c(
-          grep("rate",colnames(data))
+          grep("rate",colnames(data)),grep("data",colnames(data))
         )
       )
     )
