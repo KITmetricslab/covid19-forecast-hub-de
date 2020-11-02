@@ -14,7 +14,7 @@ COUNTRIES = ["Germany", "Poland"]
 
 
 # Check for metadata file
-def check_for_metadata(my_path):
+def check_for_metadata(my_path, team=None):
     for path in glob.iglob(my_path + "**/**/", recursive=False):
         team_model = os.path.basename(os.path.dirname(path))
         metadata_filename = "metadata-" + team_model + ".txt"

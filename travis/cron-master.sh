@@ -20,6 +20,10 @@ python3 ./rki_download.py
 python3 ./rki_update.py
 echo "RKI done"
 
+# update Poland data
+python3 ./truth_poland_p.py
+echo "Poland done"
+
 # update DIVI data
 python3 ./divi_download.py
 cd ../../data-truth/DIVI
@@ -35,6 +39,7 @@ echo "file dates done"
 cd ../../app_forecasts_de/code
 python3 ./data_preparation.py
 python3 ./prepare_truth_data.py
+python3 ./add_last_observed.py
 echo "Shiny done"
 
 # update Readme image
@@ -42,9 +47,10 @@ cd ../../code/visualization
 Rscript ./plot_current_forecasts.R
 echo "Image done"
 
-# validate RKI truth
+# validate truth
 cd ../validation
 python3 ./validate_truth.py
+python3 ./check_truth.py
 echo "All checks executed"
 
 # Evaluate forecasts
