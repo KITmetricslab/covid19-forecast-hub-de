@@ -81,7 +81,7 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
   #change ? to u
   #data$location_name<-gsub("?","u",data$location_name)
   
-  #New Change in IHME location names, u is now ü
+  #New Change in IHME location names, u is now Ã¼
   data$location_name<-gsub("ü","u",data$location_name)
 
  
@@ -156,7 +156,7 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
           grep("date", colnames(data)),
           grep("death", colnames(data)) ),
         c(
-          grep("rate",colnames(data))
+          grep("rate",colnames(data)),grep("data",colnames(data))
         )
       )
     )
