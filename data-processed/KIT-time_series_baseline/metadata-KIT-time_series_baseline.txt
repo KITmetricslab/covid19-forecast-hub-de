@@ -1,0 +1,15 @@
+team_name: KITmetricslab
+model_name: time_series_baseline
+model_abbr: KIT-time_series_baseline
+model_contributors: Johannes Bracher, Jannik Deuschel, Konstantin Görgen, Jakob Ketterer, Daniel Wolffram, Tilmann Gneiting, Melanie Schienle
+website_url: https://kitmetricslab.github.io/forecasthub/forecast
+repo_url: https://github.com/KITmetricslab/KIT-baseline
+license: MIT
+team_funding: Helmholtz Information & Data Science Pilot Project "Simcard"
+institional_affil: Karlsruhe Institute of Technology, Chair of Statistics and Econometrics
+team_model_designation: other
+data_inputs: RKI/ECDC, DIVI, reported deaths, ICU and ventilation data
+methods: This is a simple time series forecast which serves as a non-naive baseline. The forecast comes from an exponential smoothing model fitted to the most recent twelve weeks of data. Forecasts are obtained using the R function forecast::ets with setting model="MMN". This approach is taken from Petropolous and Makridakis (2020): Forecasting the novel coronavirus COVID-19, Plos One.
+methods_long: 
+citation:
+twitter_handles:

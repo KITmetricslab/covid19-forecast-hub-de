@@ -16,6 +16,7 @@
 # Warnings can be ignored
 
 library(tidyverse)
+suppressWarnings(library(tidyverse))
 
 Sys.setlocale("LC_TIME", "C")
 
