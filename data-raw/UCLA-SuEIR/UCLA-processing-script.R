@@ -18,20 +18,17 @@ files_to_process <- all_files[grepl("pred_world", all_files)]
 
 forecast_dates <- as.Date(paste0("2020-", gsub(".csv", "", gsub("pred_world_", "", files_to_process))))
 
-dat_orig <- read.csv(files_to_process[1], colClasses = c("Date" = "Date"))
-
-
 for(j in seq_along(locations)){
   for(i in seq_along(files_to_process)){
-    cases <- process_ucla_file(files_to_process[i], forecast_dates[1], type = "case",
+    cases <- process_ucla_file(files_to_process[i], forecast_dates[i], type = "case",
                                country = location_names[j], location = locations[j])
-    write.csv(cases, file = paste("../../data-processed/UCLA-SuEIR/",
+    write.csv(cases, file = paste0("../../data-processed/UCLA-SuEIR/",
                                   forecast_dates[i], "-", location_names[j], "-",
                                   "UCLA-SuEIR-case.csv"), row.names = FALSE)
 
-    deaths <- process_ucla_file(files_to_process[i], forecast_dates[1], type = "case",
+    deaths <- process_ucla_file(files_to_process[i], forecast_dates[i], type = "death",
                                 country = location_names[j], location = locations[j])
-    write.csv(cases, file = paste("../../data-processed/UCLA-SuEIR/",
+    write.csv(deaths, file = paste0("../../data-processed/UCLA-SuEIR/",
                                   forecast_dates[i], "-", location_names[j], "-",
                                   "UCLA-SuEIR.csv"), row.names = FALSE)
 

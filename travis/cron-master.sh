@@ -39,6 +39,7 @@ echo "file dates done"
 cd ../../app_forecasts_de/code
 python3 ./data_preparation.py
 python3 ./prepare_truth_data.py
+python3 ./add_last_observed.py
 echo "Shiny done"
 
 # update Readme image

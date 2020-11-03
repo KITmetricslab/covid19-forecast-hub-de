@@ -34,7 +34,8 @@ cum_death_rows = range(71, 88)
 result = []
 
 for relevant_rows in [inc_case_rows, cum_case_rows, inc_death_rows, cum_death_rows]:
-
+    
+    
     rows = []
     
     for row in relevant_rows:
