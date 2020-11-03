@@ -28,6 +28,7 @@ pip3 install pymmwr click requests urllib3 selenium webdriver-manager pyyaml
 pip3 install gitpython
 pip3 install pygsheets
 pip3 install unidecode
+python -c "import fcntl; fcntl.fcntl(1, fcntl.F_SETFL, 0)"
 
 # only validate data on builds triggered by pull requests
 if [[ "$TRAVIS_EVENT_TYPE" == *"pull_request"* ]]; then
