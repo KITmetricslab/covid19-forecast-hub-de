@@ -14,6 +14,7 @@
 ## August 2020
 
 ## support for weekly incidence forecasts
+## remove causes for warnings
 ## Changes in LANL output format
 ## 1) separation in daily and weekly forecast files
 ## 2) change in colnames for daily files as of 2020-10-28

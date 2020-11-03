@@ -13,6 +13,20 @@
 ## Jakob Ketterer
 ## August 2020
 
+## support for weekly incidence forecasts
+## remove causes for warnings
+## Changes in LANL output format
+## 1) separation in daily and weekly forecast files
+## 2) change in colnames for daily files as of 2020-10-28
+    # Details:
+    # old colname -> newcolname
+    # dates -> dat
+    # simple_countries -> key
+    # countries -> name
+    # _ -> big_group  
+## Jakob Ketterer
+## November 2020
+
 # Warnings can be ignored
 
 library(tidyverse)
