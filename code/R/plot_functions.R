@@ -122,7 +122,7 @@ add_forecast_to_plot <- function(forecasts_to_plot,
       subs_points_truth <- subs_points_truth[order(subs_points_truth$target_end_date), ]
       # draw points
       points(subs_points_truth$target_end_date, subs_points_truth$value, col = col,
-             pch = pch, lwd = 1, type = "b")
+             pch = pch, lwd = 2, type = "b")
     }
 
     # if plotting by horizon:
@@ -139,8 +139,8 @@ add_forecast_to_plot <- function(forecasts_to_plot,
                                                forecasts_to_plot$type %in% c("observed")), ]
       subs_points_truths <- rbind(subs_points, subs_truths)
 
-      lines_by_timezero(subs_points_truths, type = "b", pch = NA, col = col)
-      points(subs_points$target_end_date, subs_points$value, col = col)
+      lines_by_timezero(subs_points_truths, type = "b", pch = NA, col = col, lwd = 1, lty = "dotted")
+      points(subs_points$target_end_date, subs_points$value, col = col, lwd = 2)
     }
   }
 }
@@ -402,7 +402,8 @@ plot_scores <- function(scores,
                         start = as.Date("2020-03-01"), end = Sys.Date() + 28,
                         cols,
                         alpha.col = 0.5,
-                        location_legend = "left"){
+                        location_legend = "left",
+                        display = "temporal"){
 
 
   if(!selected_truth %in% names(scores)){
@@ -433,37 +434,63 @@ plot_scores <- function(scores,
                              scores$target_end_date <= end &
                              selection_timezero), ]
 
-    # compute ylim:
-    yl <- c(0, 1.2*max(c(10, scores$wis, scores$ae), na.rm = TRUE))
+    if(display == "temporal"){
+      # compute ylim:
+      yl <- c(0, 1.2*max(c(10, scores$wis, scores$ae), na.rm = TRUE))
 
-    # initialize empty plot:
-    empty_plot(start = start, target = "wis", end = end, ylim = yl)
+      # initialize empty plot:
+      empty_plot(start = start, target = "wis", end = end, ylim = yl)
 
-    # horizontal shifts for scores of different models
-    shifts <- c(0, 1, -1, 2, -2)
+      # horizontal shifts for scores of different models
+      shifts <- c(0, 2, -2, 1, -1)
 
-    # add scores per model:
-    if(length(models) <= 5){
-      for(i in seq_along(models)){
-        add_scores_to_plot(scores = scores,
-                           target = target,
-                           timezero = timezero, horizon = horizon,
-                           model = models[i],
-                           location = location,
-                           col = cols[i], alpha.col = alpha.col,
-                           shift = shifts[i])
+      # add scores per model:
+      if(length(models) <= 5){
+        for(i in seq_along(models)){
+          add_scores_to_plot(scores = scores,
+                             target = target,
+                             timezero = timezero, horizon = horizon,
+                             model = models[i],
+                             location = location,
+                             col = cols[i], alpha.col = alpha.col,
+                             shift = shifts[i])
+        }
+      }else{
+        # message to select less models if too many selected
+        legend("center", legend = "Evaluation can be shown for at most five models. Please select fewer models.")
       }
-    }else{
-      # message to select less models if too many selected
-      legend("center", legend = "Evaluation can be shown for at most five models. Please select fewer models.")
+
+      # add legend:
+      legend(location_legend, legend = c("Absolute error", "",
+                                         "Decomposition of WIS:", "penalties for under-prediction",
+                                         "spread of forecasts", "penalties for over-prediction"),
+             pch = c(5, NA, NA, 22, 22, 22),
+             pt.bg = c(NA, NA, NA, modify_alpha("black", 0.3), "black", "white"), bty = "n")
     }
 
-    # add legend:
-    legend(location_legend, legend = c("Absolute error", "",
-                                       "Decomposition of WIS:", "penalties for under-prediction",
-                                       "spread of forecasts", "penalties for over-prediction"),
-           pch = c(5, NA, NA, 22, 22, 22),
-           pt.bg = c(NA, NA, NA, modify_alpha("black", 0.3), "black", "white"), bty = "n")
+    if(display == "PIT"){
+      if(length(models) > 1) stop("Please select exactly one model if display == 'PIT'")
+      hist((scores$pit_lower + scores$pit_upper)/2, main = "", xlab = "PIT",
+           ylab = "rel. frequency", freq = TRUE, breaks = 0:10/10, col = cols)
+    }
+
+    if(display == "average_scores"){
+      mean_scores <- aggregate(cbind(wgt_iw, wgt_pen_l, wgt_pen_u, wis, ae) ~ model,
+                data = scores,
+                FUN = mean)
+      plot(NULL, xlim = c(-2, length(models) + 3), ylim = c(0, 1.3*max(c(mean_scores$ae, mean_scores$wis))),
+           xlab = "model", ylab = "average WIS or AE", axes = FALSE)
+      for(i in 1:length(models)){
+        ind <- which(mean_scores$model == models[i])
+        add_score_decomp(x = i, pen_l = mean_scores$wgt_pen_l[ind],
+                         pen_u = mean_scores$wgt_pen_u[ind],
+                         iw = mean_scores$wgt_iw[ind],
+                         col = cols[i])
+        points(i, mean_scores$ae[ind], col = cols[i], lwd = 2, pch = 23, bg = "white")
+        axis(2); box()
+      }
+    }
+
   }
 }
 
