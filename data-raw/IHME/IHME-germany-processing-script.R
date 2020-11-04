@@ -1,8 +1,8 @@
-# Author: Konstantin Görgen
+# Author: Konstantin GÃ¶rgen
 # Date: Mon May 11 13:57:10 2020
 # --------------
 # Modification: Added Submission and Forecast date
-# Author: Konstantin Görgen
+# Author: Konstantin GÃ¶rgen
 # Date: 18.05.2020
 # --------------
 #################################################################################
@@ -28,7 +28,8 @@ filepaths <-
              ignore.case = TRUE)
 
 #remove files that are not main model
-filepaths<-filepaths[-c(grep("Best",filepaths),grep("Worse",filepaths))]
+filepaths<-filepaths[-c(grep("Best",filepaths),grep("Worse",filepaths),
+                        grep("best",filepaths),grep("worse",filepaths))]
 for(country in c("Germany","Poland"))
 {
   #check for IHME first forecast date

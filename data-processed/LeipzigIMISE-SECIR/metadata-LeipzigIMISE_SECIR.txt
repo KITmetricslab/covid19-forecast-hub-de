@@ -1,33 +1,16 @@
 team_name: Universitaet Leipzig IMISE/GenStat
-team_abbr: LeipzigIMISE
-model_contributors:  Yuri Kheifetz <Yuri.Kheifetz@imise.uni-leipzig.de>, Holger Kirsten <holger.kirsten@imise.uni-leipzig.de>, Markus Scholz <Markus.Scholz@imise.uni-leipzig.de>
-institution_affil: Universitaet Leipzig, IMISE
-team_experience: Modelling Infection / Haematopoesis in humans and animals
-team_funding: TBD
-
-model_name: LeipzigIMISE-SECIR
-model_abbr: LE-SECIR
-model_output: https://github.com/holgerman/covid19-forecast-hub-de
-model_repo: https://github.com/holgerman/covid19-forecast-hub-de
-
-model_targets: daily and cumulative deaths
-target_loc: Germany
-Data_format: point and percentile estimates 
-forecast_startdate: 2020-06-15
-forecast_frequency: once per week
-
-data_inputs_known: case & ICU  & death counts, age distributions 
-data_source_known: RKI and DIVI, ECDC, age distributions for cases and deaths from RKI as described in methods
-
-this_model_is_an_ensemble: no
-this_model_is_unconditional: no
-
-methods: >-
-    SECIR type model 
-	
-
-methods_long: >-
-	2020-09-22 - present 		Allowing influx of compartment death from cases directly in addition to influx from compartment icu
+model_name: SECIR
+model_abbr: LeipzigIMISE-SECIR
+model_contributors: Yuri Kheifetz <Yuri.Kheifetz@imise.uni-leipzig.de>, Holger Kirsten <holger.kirsten@imise.uni-leipzig.de>, Markus Scholz <Markus.Scholz@imise.uni-leipzig.de>
+website_url: 
+repo_url: https://github.com/holgerman/covid19-forecast-hub-de
+license: MIT
+team_funding:
+institional_affil: Universitaet Leipzig, IMISE
+team_model_designation: primary
+data_inputs: RKI and DIVI, ECDC, age distributions for cases and deaths from RKI as described in methods, case & ICU  & death counts
+methods: SECIR type model 
+methods_long: 2020-09-22 - present 		Allowing influx of compartment death from cases directly in addition to influx from compartment icu
 	2020-09-14 - 2020-09-21 	Input ECDC Data, including case and ICU predictions, using incident data for cumulative prediction instead of providing an independent cumulative fit as done previously
 	2020-07-21 - 2020-09-14 	instead of using age structure for death prediction using empirical weekly death rate / weekly ICU rate
 	2020-07-14 - 2020-07-20 	additionally including age structure for deaths
@@ -36,5 +19,5 @@ methods_long: >-
 	
 	Open ISSUES: Quantile for weekly incident forecast, constrain lower estimate of cumulative counts to last empirical value
 	More Details TBD
-
 citation: publication in progress
+twitter_handles: @GenStatLeipzig

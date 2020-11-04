@@ -1,34 +1,18 @@
 team_name: Johannes Gutenberg University Mainz / University of Hamburg
-team_abbr: JGU_UHH
-model_contributors:  Jean Roch Donsimoni jdonsimo@uni-mainz.de, René Glawion rene.glawion@uni-hamburg.de, Bodo Plachter plachter@uni-mainz.de, Klaus Wälde waelde@uni-mainz.de
-institution_affil: Johannes Gutenberg University Mainz, University of Hamburg
-team_experience: Klaus Wäldes's model, Jean Roch Donsimoni collected the data, René Glawion did the numerics, and Bodo Plachter is deputy director of the  Institute of Virology in Mainz
-team_funding: 
-
 model_name: Search and matching Model
-model_abbr: SMM
-model_output: https://github.com/QEDHamburg/covid19
-model_repo: https://github.com/QEDHamburg/covid19
-
-model_targets: reported confirmed cases (1-250-day-ahead); reported deaths (1-250-day-ahead); 
-target_loc: Germany
-Data_format: point forecasts
-forecast_startdate:  2020-06-08
-forecast_frequency: 1x weekly
-
-data_inputs_known:  confirmed cases; reported fatalities; population
-data_source_known: ECDC
-
-this_model_is_an_ensemble: FALSE
-this_model_is_unconditional: TRUE
-
-methods: >
-    This model makes predictions about the future, unconditional on particular intervention strategies.
+model_abbr: JGU_UHH-SMM
+model_contributors: Jean Roch Donsimoni jdonsimo@uni-mainz.de, René Glawion rene.glawion@uni-hamburg.de, Bodo Plachter plachter@uni-mainz.de, Klaus Wälde waelde@uni-mainz.de
+website_url: https://github.com/QEDHamburg/covid19
+repo_url: https://github.com/QEDHamburg/covid19
+license: MIT
+team_funding:
+institional_affil: Johannes Gutenberg University Mainz, University of Hamburg
+team_model_designation: primary
+data_inputs: ECDC, confirmed cases, reported fatalities, population
+methods: This model makes predictions about the future, unconditional on particular intervention strategies.
     Statistical dynamical growth model accounting for population susceptibility. 
     Uses Search-and-Matching Markov-Model.
-
-methods_long: >-
-    We model the evolution of the number of individuals that are reported to be sick with
+methods_long: We model the evolution of the number of individuals that are reported to be sick with
 COVID-19 in Germany. Our theoretical framework builds on a continuous time Markov
 chain with four states: healthy without infection, sick, healthy after recovery or after
 infection but without symptoms and dead. Our quantitative solution matches the number
@@ -36,5 +20,5 @@ of sick individuals up to the most recent observation and ends with a share of s
 following from infection rates and sickness probabilities. We employ this framework to
 study inter alia the expected peak of the number of sick individuals in a scenario without
 public regulation of social contacts. 
-
 citation: https://doi.org/10.1515/ger-2020-0031
+twitter_handles:
