@@ -2,7 +2,7 @@
 
 # Johannes Bracher, August 2020
 
-# setwd("/home/johannes/Documents/COVID/covid19-forecast-hub-de/code/ensemble")
+# setwd("/home/johannes/Documents/COVID/fork_de/covid19-forecast-hub-de/code/ensemble")
 
 Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8") # set locale to English
 
@@ -17,7 +17,7 @@ locations <- c("GM", "PL")
 
 
 # set date:
-forecast_date <- as.Date("2020-10-19")
+forecast_date <- as.Date("2020-11-02")
 if(!weekdays(forecast_date) == "Monday") stop("forecast_date should be a Monday.")
 
 
@@ -44,6 +44,7 @@ eval <- read.csv("../../evaluation/evaluation-ECDC.csv",
                                    "target_end_date" = "Date"))
 
 
+summary_inverse_wis_weights <- NULL
 
 for(location in locations){
   for(target_type in c("case", "death")){
@@ -75,7 +76,8 @@ for(location in locations){
                        eval = NULL,
                        directory_data_processed = "../../data-processed")
 
-    median_ensemble <- rbind(median_ensemble_inc, median_ensemble_cum)
+    median_ensemble <- rbind(median_ensemble_inc$ensemble,
+                             median_ensemble_cum$ensemble)
 
     write.csv(median_ensemble,
               paste0("../../data-processed/KITCOVIDhub-median_ensemble/",
@@ -112,7 +114,7 @@ for(location in locations){
                        eval = NULL,
                        directory_data_processed = "../../data-processed")
 
-    mean_ensemble <- rbind(mean_ensemble_inc, mean_ensemble_cum)
+    mean_ensemble <- rbind(mean_ensemble_inc$ensemble, mean_ensemble_cum$ensemble)
 
     write.csv(mean_ensemble,
               paste0("../../data-processed/KITCOVIDhub-mean_ensemble/",
@@ -122,41 +124,60 @@ for(location in locations){
                      ".csv"),
               row.names = FALSE)
 
-    # # inverse WIS ensemble:
-    # inverse_wis_ensemble_inc <-
-    #   compute_ensemble(forecast_date = forecast_date,
-    #                    location = location,
-    #                    country = countries[location],
-    #                    target_type = target_type,
-    #                    inc_or_cum = "inc",
-    #                    dat_truth = dat_truth,
-    #                    ensemble_type = "inverse_wis",
-    #                    models_to_include = models_to_include,
-    #                    truth_data_use = truth_data_use,
-    #                    eval = eval,
-    #                    directory_data_processed = "../../data-processed")
-    #
-    # inverse_wis_ensemble_cum <-
-    #   compute_ensemble(forecast_date = forecast_date,
-    #                    location = location,
-    #                    country = countries[location],
-    #                    target_type = target_type,
-    #                    inc_or_cum = "cum",
-    #                    dat_truth = dat_truth,
-    #                    ensemble_type = "inverse_wis",
-    #                    models_to_include = models_to_include,
-    #                    truth_data_use = truth_data_use,
-    #                    eval = eval,
-    #                    directory_data_processed = "../../data-processed")
-#
-#     inverse_wis_ensemble <- rbind(inverse_wis_ensemble_inc, inverse_wis_ensemble_cum)
-#
-#     write.csv(inverse_wis_ensemble,
-#               paste0("../../data-processed/KITCOVIDhub-inverse_wis_ensemble/",
-#                      forecast_date, "-", countries[location], "-",
-#                      "KITCOVIDhub-inverse_wis_ensemble",
-#                      ifelse(target_type == "case", "-case", ""),
-#                      ".csv"),
-#               row.names = FALSE)
+    # inverse WIS ensemble:
+    inverse_wis_ensemble_inc <-
+      compute_ensemble(forecast_date = forecast_date,
+                       location = location,
+                       country = countries[location],
+                       target_type = target_type,
+                       inc_or_cum = "inc",
+                       dat_truth = dat_truth,
+                       ensemble_type = "inverse_wis",
+                       models_to_include = models_to_include,
+                       truth_data_use = truth_data_use,
+                       eval = eval,
+                       directory_data_processed = "../../data-processed")
+
+    inverse_wis_ensemble_cum <-
+      compute_ensemble(forecast_date = forecast_date,
+                       location = location,
+                       country = countries[location],
+                       target_type = target_type,
+                       inc_or_cum = "cum",
+                       dat_truth = dat_truth,
+                       ensemble_type = "inverse_wis",
+                       models_to_include = models_to_include,
+                       truth_data_use = truth_data_use,
+                       eval = eval,
+                       directory_data_processed = "../../data-processed")
+
+    inverse_wis_ensemble <- rbind(inverse_wis_ensemble_inc$ensemble, inverse_wis_ensemble_cum$ensemble)
+
+    write.csv(inverse_wis_ensemble,
+              paste0("../../data-processed/KITCOVIDhub-inverse_wis_ensemble/",
+                     forecast_date, "-", countries[location], "-",
+                     "KITCOVIDhub-inverse_wis_ensemble",
+                     ifelse(target_type == "case", "-case", ""),
+                     ".csv"),
+              row.names = FALSE)
+
+    weights_invers_wis_ensemble_inc <- cbind(location = location, target = paste("inc", target_type),
+                                             inverse_wis_ensemble_inc$weights)
+    weights_invers_wis_ensemble_cum <- cbind(location = location, target = paste("cum", target_type),
+                                             inverse_wis_ensemble_cum$weights)
+
+    if(is.null(weights_invers_wis_ensemble_inc)){
+      summary_inverse_wis_weights <- rbind(weights_invers_wis_ensemble_inc,
+                                           weights_invers_wis_ensemble_cum)
+    }else{
+      summary_inverse_wis_weights <- rbind(summary_inverse_wis_weights,
+                                           weights_invers_wis_ensemble_inc,
+                                           weights_invers_wis_ensemble_cum)
+    }
   }
 }
+
+write.csv(summary_inverse_wis_weights,
+          file = paste0("inverse_wis_weights/inverse_wis_weights-", forecast_date, ".csv"),
+          row.names = FALSE)
+

@@ -106,12 +106,15 @@ compute_ensemble <- function(forecast_date,
                           data = forecasts, FUN = median)
   }
 
+  inverse_wis_weights <- NULL
+
   # inverse WIS ensemble:
   if(ensemble_type == "inverse_wis"){
     inverse_wis_weights <- get_inverse_wis_weights(forecast_date = forecast_date,
                                                    members = members, eval = eval,
                                                    target_type = target_type, inc_or_cum = inc_or_cum)
-    forecasts <- merge(forecasts, inverse_wis_weights, by = "model")
+    if(nrow(inverse_wis_weights) != length(members)) stop("Weights could not be computed for all member models.")
+    forecasts <- merge(forecasts, inverse_wis_weights, by = "model", all.x = TRUE)
     # apply weighting:
     forecasts$value <- forecasts$value * forecasts$inverse_wis_weight
     ensemble <- aggregate(formula = value ~ target + target_end_date + location + type + quantile,
@@ -131,7 +134,7 @@ compute_ensemble <- function(forecast_date,
   ensemble <- ensemble[, c("forecast_date",	"target",	"target_end_date",	"location",
                            "type",	"quantile",	"value",	"location_name")]
 
-  return(ensemble)
+  return(list(ensemble = ensemble, weights = inverse_wis_weights))
 }
 
 # get the weights for the inverse WIS ensemble:
@@ -158,6 +161,14 @@ get_inverse_wis_weights <- function(forecast_date, members, eval, target_type, i
                        v.names = "wis",
                        idvar = "model",
                        timevar = "time_identifier")
+  # add models which were missing:
+  missing_models <- members[!(members %in% eval_wide$model)]
+
+  eval_wide <- rbind(
+    eval_wide,
+    cbind(model = missing_models, NA*eval_wide[rep(1, length(missing_models)), -1])
+  )
+
 
   # fill in worst WIS where missing:
   for(col in colnames(eval_wide)[grepl("wis.", colnames(eval_wide))]){
@@ -165,7 +176,7 @@ get_inverse_wis_weights <- function(forecast_date, members, eval, target_type, i
   }
 
   # ompute averages:
-  eval_wide$mean_wis <- rowMeans(eval_wide[, grepl("wis.", colnames(eval_wide))])
+  eval_wide$mean_wis <- rowMeans(eval_wide[, grepl("wis.", colnames(eval_wide)), drop = FALSE])
 
   # compute weights:
   eval_wide$inverse_wis_weight <- (1/eval_wide$mean_wis)/sum(1/eval_wide$mean_wis)
