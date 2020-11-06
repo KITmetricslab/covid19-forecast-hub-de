@@ -25,3 +25,4 @@ Mon 2 Nov: Set ITTW Poland foecasts from 12 Oct back to original version. These 
 Mon 2 Nov: Removed all-zero forecasts by USC from 26 Oct. For Germany national level replaced by forecasts from respective "global" (instead of "other") file.
 Tue 23 Nov: MOCOS forecast arrived slightly late, but delay had been communicated in advance.
 Wed 4 Nov: Retrospectively added inverse WIS ensemble for first four weeks. This had not been operational before. The implementation, however, follows strictly the one described in the pre-registration.
+Fri 6 Nov: Added simple baseline which had been forgotten this week (unproblematic as no tuning involved).
