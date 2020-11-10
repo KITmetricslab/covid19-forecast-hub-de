@@ -69,9 +69,9 @@ last_truths_PL <- dat_truth[["ECDC"]][[target]][dat_truth$ECDC$date >= Sys.Date(
 
 # compute ylim from these values:
 ylim_GM <- c(0.95*min(last_truths_GM), 1.05*min(max(subs_current_GM$value),
-                                                1.5*max(subs_current_GM$value[subs_current_GM$type == "point"])))
+                                                1.5*max(subs_current_GM$value[subs_current_GM$type == "point"], na.rm = TRUE)))
 ylim_PL <- c(0.95*min(last_truths_PL), 1.05*min(max(subs_current_PL$value),
-                                                1.5*max(subs_current_PL$value[subs_current_GM$type == "point"])))
+                                                1.5*max(subs_current_PL$value[subs_current_GM$type == "point"], na.rm = TRUE)))
 
 # get model names:
 models_GM <- unique(subs_current_GM$model)
