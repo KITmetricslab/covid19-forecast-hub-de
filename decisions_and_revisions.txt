@@ -7,6 +7,7 @@ This file was created at the staart of the pre-specified evaluation period on 14
 Tue 11 Oct: LeipzigIMISE-SECIR omitted from ensembles due to extremely low forecast uncertainty.
 Wed 21 Oct: LeipzigIMISE-SECIR omitted from ensembles as PR accidentially did not contain required files. MIT_CovidAnalytics-Delphi omitted from all Poland ensembles as we believe there was a technical error (all numbers considerably too low). MIT_CovidAnalytics-Delphi was kept in Germany ensembles, though. KIT-baseline was removed from all ensembles as we consider the last-observation-carried-forward approach inappropriate in the current phase. MOCOS model omitted from all ensembles as only one- and two week ahead forecasts were available.
 Tue 27 Oct: LeipzigIMISE-SECIR and ITWW-county_repro omitted from ensembles due to extremely low forecast uncertainty. LANL-growthRate omitted from Germany ensembles due to unrealistically low forecasts.
+Tue 4 Nov: LANL omitted from ensemble as last available forecast dated from Wed 28 Oct. KIT-time_series_baseline omitted due to excessively wide uncertainty bands.
 
 ### Documentation of forecast revisions:
 
@@ -20,3 +21,8 @@ Fri 23 Oct: Temporally removing MIT Covid Analytics forecasts for Poland, 19 Oct
 Tue 27 Oct: Retrospectively adding UCLA forecasts from 4, 11, 18 Oct. which had appeared online with a delay
 Wed 28 Oct: ICM model submitted late on Tuesday evening included (as specified in protocol)
 Wed 28 Oct: MOCOC team provided three and four week ahead forecasts from last week which had been missing due to problems writing out the results of their model. These have been included, but this will be mentioned in a footnote in the respective summaries. Added UCLA forecast from 26 Oct which had appeared online ~Tuesday 5pm.
+Mon 2 Nov: Set ITTW Poland foecasts from 12 Oct back to original version. These had accidentially been revised on 20 Oct (only forecasts for voivodeships should have been revised).
+Mon 2 Nov: Removed all-zero forecasts by USC from 26 Oct. For Germany national level replaced by forecasts from respective "global" (instead of "other") file.
+Tue 23 Nov: MOCOS forecast arrived slightly late, but delay had been communicated in advance.
+Wed 4 Nov: Retrospectively added inverse WIS ensemble for first four weeks. This had not been operational before. The implementation, however, follows strictly the one described in the pre-registration.
+Fri 6 Nov: Added simple baseline which had been forgotten this week (unproblematic as no tuning involved).
