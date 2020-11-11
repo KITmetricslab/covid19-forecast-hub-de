@@ -20,6 +20,7 @@ OBS_PREDICTION_CLASS = "obs"
 # quantile csv I/O
 
 REQUIRED_COLUMNS = ('location', 'target', 'type', 'quantile', 'value')
+POSSIBLE_COLUMNS = ['location', 'target', 'type', 'quantile', 'value', 'target_end_date', 'forecast_date', 'location_name']
 
 
 #
@@ -232,6 +233,13 @@ def _validate_header(header, addl_req_cols):
     required_columns = list(REQUIRED_COLUMNS)
     required_columns.extend(addl_req_cols)
     counts = [header.count(required_column) == 1 for required_column in required_columns]
+    
+    for elem in header:
+        if elem not in POSSIBLE_COLUMNS:
+            raise RuntimeError(f"invalid header. contains invalid column. column={elem}, "
+                                f"possible_columns={POSSIBLE_COLUMNS}")
+    
+
     if not all(counts):
         raise RuntimeError(f"invalid header. did not contain the required columns. header={header}, "
                            f"required_columns={required_columns}")
