@@ -474,6 +474,29 @@ plot_scores <- function(scores,
            ylab = "rel. frequency", freq = TRUE, breaks = 0:10/10, col = cols)
     }
 
+    if(display == "coverage"){
+      # define variables for coverage per forecast:
+      scores$coverage.0.5 <- (scores$truth >= scores$value.0.25 & scores$truth <= scores$value.0.75)
+      scores$coverage.0.95 <- (scores$truth >= scores$value.0.025 & scores$truth <= scores$value.0.975)
+
+      # compute coverage proportion:
+      mean_scores <- aggregate(cbind(coverage.0.5, coverage.0.95) ~ model,
+                               data = scores,
+                               FUN = mean)
+
+      # initialize plot
+      plot(NULL, xlim = c(-2, length(models) + 3), ylim = c(0, 1),
+           xlab = "model", ylab = "empirical coverage", axes = FALSE)
+      axis(2); graphics::box()
+      abline(h = c(0.5, 0.95), lty = 3)
+      # add coverages:
+      for(i in 1:length(models)){
+        ind <- which(mean_scores$model == models[i])
+        points(i - 0.2, mean_scores$coverage.0.5[ind], col = cols[i], type = "h", lwd = 5)
+        points(i + 0.2, mean_scores$coverage.0.95[ind], col = modify_alpha(cols[i], alpha = alpha.col), type = "h", lwd = 5)
+      }
+    }
+
     if(display == "average_scores"){
       mean_scores <- aggregate(cbind(wgt_iw, wgt_pen_l, wgt_pen_u, wis, ae) ~ model,
                 data = scores,
@@ -487,7 +510,7 @@ plot_scores <- function(scores,
                          iw = mean_scores$wgt_iw[ind],
                          col = cols[i])
         points(i, mean_scores$ae[ind], col = cols[i], lwd = 2, pch = 23, bg = "white")
-        axis(2); box()
+        axis(2); graphics::box()
       }
     }
 
