@@ -8,7 +8,7 @@
 
 **Website:**: https://kitmetricslab.github.io/forecasthub/
 
-**Old versio of visualization incl. evaluation scores:** https://jobrac.shinyapps.io/app_forecasts_de/
+**Old version of visualization incl. evaluation scores:** https://jobrac.shinyapps.io/app_forecasts_de/
 
 **Study protocol:**: https://osf.io/cy937/registrations
 
