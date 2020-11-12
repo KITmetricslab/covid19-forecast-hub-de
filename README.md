@@ -16,6 +16,8 @@
 
 **Web tool to visualize submission files:** https://jobrac.shinyapps.io/app_check_submission/
 
+**Web tool to explore forecast evaluations (still in development):** https://jobrac.shinyapps.io/app_evaluation/
+
 **Contact**: forecasthub@econ.kit.edu
 
 ## Purpose
