@@ -500,17 +500,19 @@ plot_scores <- function(scores,
     if(display == "average_scores"){
       mean_scores <- aggregate(cbind(wgt_iw, wgt_pen_l, wgt_pen_u, wis, ae) ~ model,
                 data = scores,
-                FUN = mean)
-      plot(NULL, xlim = c(-2, length(models) + 3), ylim = c(0, 1.3*max(c(mean_scores$ae, mean_scores$wis))),
+                FUN = mean, na.action = na.pass, na.rm = TRUE)
+      plot(NULL, xlim = c(-2, length(models) + 3), ylim = c(0, 1.3*max(c(mean_scores$ae, mean_scores$wis), na.rm = TRUE)),
            xlab = "model", ylab = "average WIS or AE", axes = FALSE)
       for(i in 1:length(models)){
         ind <- which(mean_scores$model == models[i])
-        add_score_decomp(x = i, pen_l = mean_scores$wgt_pen_l[ind],
-                         pen_u = mean_scores$wgt_pen_u[ind],
-                         iw = mean_scores$wgt_iw[ind],
-                         col = cols[i])
-        points(i, mean_scores$ae[ind], col = cols[i], lwd = 2, pch = 23, bg = "white")
-        axis(2); graphics::box()
+        if(length(ind > 0)){
+          add_score_decomp(x = i, pen_l = mean_scores$wgt_pen_l[ind],
+                           pen_u = mean_scores$wgt_pen_u[ind],
+                           iw = mean_scores$wgt_iw[ind],
+                           col = cols[i])
+          points(i, mean_scores$ae[ind], col = cols[i], lwd = 2, pch = 23, bg = "white")
+          axis(2); graphics::box()
+        }
       }
     }
 
