@@ -353,9 +353,9 @@ split_indices_at_gaps <- function(x, step = 7){
 # Arguments:
 # dates: the dates, i.e. x-values
 # lower, upper: coordinates of the lower and upper end of the forecast band.
-plot_one_band <- function(dates, lower, upper, ...){
+plot_one_band <- function(dates, lower, upper, width = 4, shift = 0, ...){
   if(length(dates) == 1){
-    dates <- c(dates - 2, dates, dates + 2)
+    dates <- c(dates - width/2, dates, dates + width/2) + shift
     lower <- rep(lower, 3)
     upper <- rep(upper, 3)
   }
@@ -393,6 +393,7 @@ plot_weekly_bands <- function(dates, lower, upper, separate_all = FALSE, ...){
 # end: right xlim
 # cols: colours
 # alpha.col: the degree of transparenca for shaded areas
+#mshifts: the horizontal shifts for scores from different models
 plot_scores <- function(scores,
                         target  ="cum death",
                         timezero = NULL, horizon = NULL,
@@ -402,8 +403,10 @@ plot_scores <- function(scores,
                         start = as.Date("2020-03-01"), end = Sys.Date() + 28,
                         cols,
                         alpha.col = 0.5,
+                        width = 0.8,
                         location_legend = "left",
-                        display = "temporal"){
+                        display = "temporal",
+                        shifts = c(0, 2, -2, 1, -1)){
 
 
   if(!selected_truth %in% names(scores)){
@@ -441,9 +444,6 @@ plot_scores <- function(scores,
       # initialize empty plot:
       empty_plot(start = start, target = "wis", end = end, ylim = yl)
 
-      # horizontal shifts for scores of different models
-      shifts <- c(0, 2, -2, 1, -1)
-
       # add scores per model:
       if(length(models) <= 5){
         for(i in seq_along(models)){
@@ -453,7 +453,7 @@ plot_scores <- function(scores,
                              model = models[i],
                              location = location,
                              col = cols[i], alpha.col = alpha.col,
-                             shift = shifts[i])
+                             shift = shifts[i], width = width)
         }
       }else{
         # message to select less models if too many selected
@@ -503,6 +503,10 @@ plot_scores <- function(scores,
                 FUN = mean, na.action = na.pass, na.rm = TRUE)
       plot(NULL, xlim = c(-2, length(models) + 3), ylim = c(0, 1.3*max(c(mean_scores$ae, mean_scores$wis), na.rm = TRUE)),
            xlab = "model", ylab = "average WIS or AE", axes = FALSE)
+      # horizontal ablines:
+      abline(h = axTicks(2), col = "grey")
+      axis(2); graphics::box()
+
       for(i in 1:length(models)){
         ind <- which(mean_scores$model == models[i])
         if(length(ind > 0)){
@@ -511,7 +515,6 @@ plot_scores <- function(scores,
                            iw = mean_scores$wgt_iw[ind],
                            col = cols[i])
           points(i, mean_scores$ae[ind], col = cols[i], lwd = 2, pch = 23, bg = "white")
-          axis(2); graphics::box()
         }
       }
     }
@@ -535,7 +538,7 @@ add_scores_to_plot <- function(scores, target  ="cum death",
                                timezero = NULL, horizon = NULL,
                                model,
                                location = "GM",
-                               col = "black", alpha.col = 0.5, shift = 0){
+                               col = "black", alpha.col = 0.5, shift = 0, width = 0.8){
 
   # logic vector indicating which rows contain relevant target
   # target matched against either only "type" of target (death or case) or also horizon.
@@ -559,7 +562,7 @@ add_scores_to_plot <- function(scores, target  ="cum death",
     add_score_decomp(x = scores$target_end_date[i] + shift,
                      pen_l = scores$wgt_pen_l[i],
                      pen_u = scores$wgt_pen_u[i],
-                     iw = scores$wgt_iw[i], col = col)
+                     iw = scores$wgt_iw[i], col = col, width = width)
   }
   # add points for absolute errors:
   points(scores$target_end_date + shift, scores$ae, pch = 23, col = col, bg = "white",
