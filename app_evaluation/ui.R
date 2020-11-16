@@ -22,7 +22,10 @@ shinyUI(fluidPage(
                                                                  "Summary table" = "tab")),
       conditionalPanel("input.select_view == 'plot'",
                        uiOutput("inp_select_model1"),
-                       uiOutput("inp_select_model2")
+                       uiOutput("inp_select_model2"),
+                       uiOutput("inp_select_model3"),
+                       uiOutput("inp_select_model4"),
+                       uiOutput("inp_select_model5")
       ),
       uiOutput("inp_select_location"),
       radioButtons("select_inc_or_cum", "Select incidence or cumulative scale:", choices = c("inc", "cum")),
@@ -48,9 +51,11 @@ shinyUI(fluidPage(
     # Plot
     mainPanel(
       conditionalPanel("input.select_view == 'plot'",
-                       # h4("The following plots show a comparison of forecasts from various models"),
-                       plotOutput("plot", height = "1200px")),
+                       h4("Take a detailed look at scores achieved by up to five models."),
+                       plotOutput("plot", height = "800px")),
       conditionalPanel("input.select_view == 'tab'",
+                       h4("Average scores achieved by all models covering the selected target for all specified time points.
+                          Models with missing weeks have been removed."),
                        DT::dataTableOutput("tab"))
 
     )

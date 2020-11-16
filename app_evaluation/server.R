@@ -10,7 +10,11 @@
 library(shiny)
 library(colorspace)
 library(DT)
-options(scipen=999)
+library(pals)
+
+cols_models <- glasbey(5)
+
+# options(scipen=999)
 
 timezeros <- 1:10
 
@@ -43,13 +47,16 @@ lighten_colour <- function(col, power = 0.5){
 
 timezeros <- sort(unique(dat_evaluation$ECDC$timezero), decreasing = TRUE)
 models <- sort(unique(dat_evaluation$ECDC$model))
+to_exclude <- c("JGU_UHH-SMM", "IHME-CurveFit", "Imperial-ensemble1", "Imperial-ensemble2", "YYG-ParamSearch")
+models <- models[!models %in% to_exclude]
 locations <- c("GM", "PL")
 
 # function for time series plot based on evaluation data:
 plot_from_eval <- function(dat_eval, model, location,
                            target_type, inc_or_cum, horizon = NULL, forecast_date = NULL,
                            ylim = NULL, start = NULL, end = NULL,
-                           col = "steelblue", alpha.col = 0.3, add = FALSE){
+                           col = "steelblue", alpha.col = 0.3, add = FALSE,
+                           shifts = c(0, 1, -1, -0.5, -0.5)){
 
   # restrict to relevant rows:
   dat_eval <- dat_eval[  grepl(target_type, dat_eval$target) &
@@ -63,7 +70,7 @@ plot_from_eval <- function(dat_eval, model, location,
   all_truths <- dat_eval$truth[!duplicated(dat_eval$target_end_date)]
 
   # restrict to model and forecast date or horizon:
-  dat_eval <- dat_eval[dat_eval$model == model, ]
+  dat_eval <- dat_eval[dat_eval$model %in% model, ]
   if(!is.null(forecast_date)) dat_eval <- dat_eval[dat_eval$timezero == forecast_date, ]
   if(!is.null(horizon)){
     dat_eval <- dat_eval[grepl(horizon, dat_eval$target), ]
@@ -91,34 +98,43 @@ plot_from_eval <- function(dat_eval, model, location,
     # initialize plot if necessary:
     if(!add){
       plot(dat_eval$target_end_date, dat_eval$truth, ylim = ylim, xlim = c(start, end),
-           xlab = "time", ylab = paste(inc_or_cum, target_type), col  ="white")
+           xlab = "time", ylab = "", col  ="white")
+      # horizontal ablines:
+      abline(h = axTicks(2), col = "grey")
     }
     # create transparent color:
     col_transp <- modify_alpha(col, alpha.col)
 
-    # add forecasts:
-    plot_weekly_bands(dates = dat_eval$target_end_date, lower = dat_eval$value.0.025,
-                      upper = dat_eval$value.0.975, separate_all = is.null(forecast_date),
-                      col = lighten(col, 0.5), border = NA)
-    plot_weekly_bands(dates = dat_eval$target_end_date, lower = dat_eval$value.0.25,
-                      upper = dat_eval$value.0.75, separate_all = is.null(forecast_date),
-                      col = lighten(col, 0.3), border = NA)
-    points(dat_eval$target_end_date, dat_eval$value.point, pch = 21, col = col, bg = "white")
+    for(i in seq_along(model)){
+      dat_eval_m <- dat_eval[dat_eval$model == model[i], ]
+      # add forecasts:
+      plot_weekly_bands(dates = dat_eval_m$target_end_date, lower = dat_eval_m$value.0.025,
+                        upper = dat_eval_m$value.0.975, separate_all = is.null(forecast_date),
+                        col = lighten(col[i], 0.5), border = NA, width = 0.5, shift = shifts[i])
+      plot_weekly_bands(dates = dat_eval_m$target_end_date, lower = dat_eval_m$value.0.25,
+                        upper = dat_eval_m$value.0.75, separate_all = is.null(forecast_date),
+                        col = lighten(col[i], 0.3), border = NA, width = 0.5, shift = shifts[i])
+      points(dat_eval_m$target_end_date + shifts[i], dat_eval_m$value.point, pch = 21, col = col[i], bg = "white")
+    }
+
     points(all_dates, all_truths, pch = 15, cex = 0.7)
     lines(all_dates[order(all_dates)], all_truths[order(all_dates)])
+
 
     # mark forecast date if necessary:
     if(!is.null(forecast_date)) abline(v = forecast_date, lty = 2)
 
-    if(!add){
-      title(paste(horizon, inc_or_cum, target_type, "-", location, "-", model,
-                  ifelse(!is.null(forecast_date), "- Forecast from", ""), forecast_date))
-    }
+    # if(!add){
+    #   title(paste(horizon, inc_or_cum, target_type, "-", location, "-", model,
+    #               ifelse(!is.null(forecast_date), "- Forecast from", ""), forecast_date))
+    # }
 
     # return ylim so it can be used in second plot:
     return(invisible(list(ylim = ylim)))
   }
 }
+
+shifts <- c(-0.6, 0, 0.6, 1.2, 1.8)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
@@ -126,15 +142,36 @@ shinyServer(function(input, output) {
   # input element to select first model to show in plot:
   output$inp_select_model1 <- renderUI(
     selectInput("select_model1", "Select model 1:",
-                choices = models,
-                selected = "KITCOVIDhub-mean_ensemble")
+                choices = c("none", models),
+                selected = c("KITCOVIDhub-mean_ensemble"))
   )
 
   # input element to select second model to show in plot:
   output$inp_select_model2 <- renderUI(
     selectInput("select_model2", "Select model 2:",
-                choices = models,
+                choices = c("none", models),
                 selected = "KIT-baseline")
+  )
+
+  # input element to select third model to show in plot:
+  output$inp_select_model3 <- renderUI(
+    selectInput("select_model3", "Select model 3:",
+                choices = c("none", models),
+                selected = "none")
+  )
+
+  # input element to select fourth model to show in plot:
+  output$inp_select_model4 <- renderUI(
+    selectInput("select_model4", "Select model 4:",
+                choices = c("none", models),
+                selected = "none")
+  )
+
+  # input element to select fifth model to show in plot:
+  output$inp_select_model5 <- renderUI(
+    selectInput("select_model5", "Select model 5:",
+                choices = c("none", models),
+                selected = "none")
   )
 
   # input element to select start date of evaluation period if horizon is used
@@ -196,57 +233,66 @@ shinyServer(function(input, output) {
                   as.Date(input$select_last_date) + 28,
                   as.Date(input$select_date) + 42)
 
+    selected_models <- c(input$select_model1, input$select_model2,
+                         input$select_model3, input$select_model4,
+                         input$select_model5)
 
     # plot settings:
-    par(las = 1, mar = c(4, 6, 4, 1), mfrow = c(5, 1), cex = 1)
+    par(las = 1, mar = c(4, 6, 4, 1), mfrow = c(3, 1), cex = 1)
 
 
-        # plot forecasts from first model, coloured
+    # plot forecasts from first model, coloured
     plot1 <- plot_from_eval(dat_eval = dat_evaluation_restricted$ECDC,
-                   model = input$select_model1,
+                   model = selected_models,
                    location = input$select_location,
                    target_type = input$select_target_type,
                    inc_or_cum = input$select_inc_or_cum,
                    start = start, end = end,
                    forecast_date = if(input$select_stratification == "forecast_date") input$select_date else NULL,
                    horizon = if(input$select_stratification == "horizon") input$select_horizon else NULL,
-                   col = "red")
-
-
-    # plot forecasts from second model, coloured
-    plot_from_eval(dat_eval = dat_evaluation_restricted$ECDC,
-                   model = input$select_model2,
-                   location = input$select_location,
-                   target_type = input$select_target_type,
-                   inc_or_cum = input$select_inc_or_cum,
-                   start = start, end = end, ylim = plot1$ylim,
-                   forecast_date = if(input$select_stratification == "forecast_date") input$select_date else NULL,
-                   horizon = if(input$select_stratification == "horizon") input$select_horizon else NULL,
-                   col = "blue")
+                   col = cols_models, shifts = shifts)
+    title(paste(input$select_horizon, input$select_inc_or_cum, input$select_target_type, "-",
+                input$select_location,
+                ifelse(!is.null(input$select_date), "- Forecast from", ""), input$select_date))
+#
+#     # plot forecasts from second model, coloured
+#     plot_from_eval(dat_eval = dat_evaluation_restricted$ECDC,
+#                    model = input$select_model2,
+#                    location = input$select_location,
+#                    target_type = input$select_target_type,
+#                    inc_or_cum = input$select_inc_or_cum,
+#                    start = start, end = end, ylim = plot1$ylim,
+#                    forecast_date = if(input$select_stratification == "forecast_date") input$select_date else NULL,
+#                    horizon = if(input$select_stratification == "horizon") input$select_horizon else NULL,
+#                    col = "blue")
 
     # plot scores
     plot_scores(scores = dat_evaluation_restricted,
                 target = paste(input$select_inc_or_cum, input$select_target_type),
                 timezero = if(input$select_stratification == "forecast_date") input$select_date else NULL,
                 horizon = if(input$select_stratification == "horizon") input$select_horizon else NULL,
-                selected_truth = "ECDC", models = c(input$select_model1, input$select_model2),
+                selected_truth = "ECDC",
+                models = selected_models,
                 location = input$select_location,
                 start = as.Date(start, origin = "1970-01-01"),
                 end = as.Date(end, origin = "1970-01-01"),
-                cols = c("red", "blue"))
-    title("Indvidual scores")
+                cols = cols_models, shifts = shifts, width = 0.5)
+    title("Indvidual scores: mean absolute error and WIS")
 
     # plot average scores:
     plot_scores(scores = dat_evaluation_restricted,
                 target = paste(input$select_inc_or_cum, input$select_target_type),
                 timezero = if(input$select_stratification == "forecast_date") input$select_date else NULL,
                 horizon = if(input$select_stratification == "horizon") input$select_horizon else NULL,
-                selected_truth = "ECDC", models = c(input$select_model1, input$select_model2),
+                selected_truth = "ECDC",
+                models = selected_models,
                 location = input$select_location,
                 start = as.Date(start, origin = "1970-01-01"),
                 end = as.Date(end, origin = "1970-01-01"),
-                cols = c("red", "blue"), display = "average_scores")
+                cols = cols_models, display = "average_scores")
     title("Average scores")
+    legend("right", legend = selected_models[selected_models != "none"],
+           col = cols_models[selected_models != "none"], bty = "n", pch = 15)
 
     # # plot coverage:
     # plot_scores(scores = dat_evaluation_restricted,
