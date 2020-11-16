@@ -13,7 +13,9 @@
 ## Jakob Ketterer
 ## August 2020
 
-## support for weekly incidence forecasts
+## LANL model v1 -> v2
+## added support for weekly incidence forecasts
+## adapted to changes in filenames
 ## remove causes for warnings
 ## Changes in LANL output format
 ## 1) separation in daily and weekly forecast files
