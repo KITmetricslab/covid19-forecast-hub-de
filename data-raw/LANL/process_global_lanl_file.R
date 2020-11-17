@@ -99,6 +99,7 @@ process_global_lanl_file <- function(lanl_filepath, country, abbr){
                                       names_to = "q",
                                       values_to = "value") %>%
         dplyr::filter(end_date > forecast_date, name == country) %>%  # adjust here for -1 and 0 wk ahead?
+        dplyr::filter(obs == 0) %>% # only include forecasts
         dplyr::mutate(quantile = as.numeric(sub("q", "0", q)), type="quantile") %>%
         dplyr::mutate(target = paste(week_ahead, "wk ahead",inc_or_cum, death_or_case)) %>%
         dplyr::select(name, type, quantile, value, end_date, target) %>%
@@ -131,6 +132,7 @@ process_global_lanl_file <- function(lanl_filepath, country, abbr){
                                     names_to = "q",
                                     values_to = "value") %>%
       dplyr::filter(date > forecast_date, name == country) %>%
+      dplyr::filter(obs == 0) %>% # only include forecasts
       dplyr::mutate(quantile = as.numeric(sub("q", "0", q)), type="quantile") %>%
       dplyr::select(name, type, quantile, value, date) %>%
       dplyr::rename(

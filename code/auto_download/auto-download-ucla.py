@@ -22,7 +22,8 @@ if __name__ == "__main__":
     
     if file_list:
         # manually add current year
-        latest_fc_date_str = str(datetime.today().year) + "-" + file_list[0].replace(prefix, "").strip(".csv")
+        cur_year = str(datetime.today().year)
+        latest_fc_date_str = cur_year + "-" + file_list[0].replace(prefix, "").strip(".csv")
     else:
         raise Exception("Set most_current_date_str manually!")
     
@@ -46,7 +47,8 @@ if __name__ == "__main__":
     root = "https://raw.githubusercontent.com/uclaml/ucla-covid19-forecasts/master/projection_result/"
 
     # generate date specific death forecast url
-    file_names = [prefix + date.strftime("%Y_%m_%d") + ".csv" for date in date_list]
+    # reformat date
+    file_names = [prefix + date.strftime("%m-%d") + ".csv" for date in date_list]
     urls = [root + name for name in file_names]
 
 

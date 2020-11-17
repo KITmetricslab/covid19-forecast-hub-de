@@ -44,9 +44,7 @@ lanl_filenames_processed <- list.files("../../data-processed/LANL-GrowthRate/", 
 lanl_filenames_raw <- list.files(".", pattern=".csv", full.names=FALSE)
 
 dates_processed <- unlist(lapply(lanl_filenames_processed, FUN = function(x) substr(basename(x), 0, 10)))
-dates_processed
 dates_raw <- unlist(lapply(lanl_filenames_raw, FUN = function(x) substr(basename(x), 0, 10)))
-dates_raw
 
 dates <- setdiff(dates_raw, dates_processed)
 print(c("Generating forecasts for the following dates:", dates))
