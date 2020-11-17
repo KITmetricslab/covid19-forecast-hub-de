@@ -8,13 +8,15 @@
 
 **Website:**: https://kitmetricslab.github.io/forecasthub/
 
-**Old versio of visualization incl. evaluation scores:** https://jobrac.shinyapps.io/app_forecasts_de/
+**Old version of visualization incl. evaluation scores:** https://jobrac.shinyapps.io/app_forecasts_de/
 
 **Study protocol:**: https://osf.io/cy937/registrations
 
 **Reference:** Bracher J, Wolffram D, Deuschel, J, Görgen, K, Ketterer, J, Gneiting, T, Schienle, M (2020): *The German and Polish COVID-19 Forecast Hub.* https://github.com/KITmetricslab/covid19-forecast-hub-de.
 
 **Web tool to visualize submission files:** https://jobrac.shinyapps.io/app_check_submission/
+
+**Web tool to explore forecast evaluations (still in development):** https://jobrac.shinyapps.io/app_evaluation/
 
 **Contact**: forecasthub@econ.kit.edu
 

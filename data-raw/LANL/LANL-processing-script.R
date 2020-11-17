@@ -41,10 +41,13 @@ countries = list(c("Germany", "GM"), c("Poland", "PL"))
 lanl_filenames_processed <- list.files("../../data-processed/LANL-GrowthRate/", pattern=".csv", full.names=FALSE)
 lanl_filenames_raw <- list.files(".", pattern=".csv", full.names=FALSE)
 
-dates_processed <- unlist(lapply(lanl_processed_filenames, FUN = function(x) substr(basename(x), 0, 10)))
-dates_raw <- unlist(lapply(lanl_filenames, FUN = function(x) substr(basename(x), 0, 10)))
+dates_processed <- unlist(lapply(lanl_filenames_processed, FUN = function(x) substr(basename(x), 0, 10)))
+dates_processed
+dates_raw <- unlist(lapply(lanl_filenames_raw, FUN = function(x) substr(basename(x), 0, 10)))
+dates_raw
 
-dates <- setdiff(dates, dates_processed)
+dates <- setdiff(dates_raw, dates_processed)
+print(c("Generating forecasts for the following dates:", dates))
 
 for(dat in dates){
 
@@ -53,15 +56,15 @@ for(dat in dates){
     ## death forecasts
     # death forecast filenames per date
       # daily
-      cum_daily_deaths_filename <- paste0(dat, "_deaths_quantiles_global_website.csv")
+      cum_daily_deaths_filename <- paste0(dat, "_global_cumulative_daily_deaths_website.csv")
       filenames <- list(cum_daily_deaths_filename)
-      inc_daily_deaths_filename <- paste0(dat, "_deaths_incidence_quantiles_global_website.csv")
+      inc_daily_deaths_filename <- paste0(dat, "_global_incidence_daily_deaths_website.csv")
       filenames <- append(filenames, inc_daily_deaths_filename)
 
       # weekly
-      cum_weekly_deaths_filename <- paste0(dat, "_weekly_deaths_quantiles.csv")
+      cum_weekly_deaths_filename <- paste0(dat, "_global_cumulative_weekly_deaths_website.csv")
       filenames <- append(filenames, cum_weekly_deaths_filename)
-      inc_weekly_deaths_filename <- paste0(dat, "_weekly_deaths_incidence_quantiles.csv")
+      inc_weekly_deaths_filename <- paste0(dat, "_global_incidence_weekly_deaths_website.csv")
       filenames <- append(filenames, inc_weekly_deaths_filename)
 
     # process death data
@@ -72,6 +75,8 @@ for(dat in dates){
                                           abbr=combination[2])
         if (!(is.null(frame))){
           final_frame <- rbind(final_frame, sub_frame)
+        } else {
+          print(c("Processed data of", filename, "is empty!"))
         }
       }
 
@@ -85,15 +90,15 @@ for(dat in dates){
     ## case forecasts
     # case forecast filenames per date
       # daily
-      cum_daily_cases_filename <- paste0(dat, "_confirmed_quantiles_global_website.csv")
+      cum_daily_cases_filename <- paste0(dat, "_global_cumulative_daily_cases_website.csv")
       filenames <- list(cum_daily_cases_filename)
-      inc_daily_cases_filename <- paste0(dat, "_confirmed_incidence_quantiles_global_website.csv")
+      inc_daily_cases_filename <- paste0(dat, "_global_incidence_daily_cases_website.csv")
       filenames <- append(filenames, inc_daily_cases_filename)
 
       # weekly
-      cum_weekly_cases_filename <- paste0(dat, "_weekly_confirmed_quantiles.csv")
+      cum_weekly_cases_filename <- paste0(dat, "_global_cumulative_weekly_cases_website.csv")
       filenames <- append(filenames, cum_weekly_cases_filename)
-      inc_weekly_cases_filename <- paste0(dat, "_weekly_confirmed_incidence_quantiles.csv")
+      inc_weekly_cases_filename <- paste0(dat, "_global_incidence_weekly_cases_website.csv")
       filenames <- append(filenames, inc_weekly_cases_filename)
 
     # process death data
@@ -104,6 +109,8 @@ for(dat in dates){
                                               abbr=combination[2])
         if (!(is.null(frame))){
           final_frame <- rbind(final_frame, sub_frame)
+        } else {
+          print(c("Processed data of", filename, "is empty!"))
         }
       }
 

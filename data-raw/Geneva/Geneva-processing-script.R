@@ -26,6 +26,15 @@ death_files_to_process <- death_files_to_process[grepl(".csv", death_files_to_pr
                                           grepl("deaths_predictions", death_files_to_process))]
 death_forecast_dates <- lapply(death_files_to_process, date_from_geneva_filepath)
 
+# check which ones are already processed:
+files_already_processed <- list.files("../../data-processed/Geneva-DeterministicGrowth")
+dates_already_processed <- as.Date(substr(files_already_processed, start = 1, stop = 10))
+
+# restrict to those not yet processed:
+death_files_to_process <- death_files_to_process[!death_forecast_dates %in% dates_already_processed]
+death_forecast_dates <- death_forecast_dates[!death_forecast_dates %in% dates_already_processed]
+
+
 for(i in 1:length(death_files_to_process)) {
   for(j in seq_along(vector_countries)){
     tmp_dat <- process_geneva_file(death_files_to_process[i], forecast_date = death_forecast_dates[[i]],
@@ -45,6 +54,10 @@ case_files_to_process <- case_files_to_process[grepl(".csv", case_files_to_proce
                                                    (grepl("predictions_case", case_files_to_process) |
                                                       grepl("cases_predictions", case_files_to_process))]
 case_forecast_dates <- lapply(case_files_to_process, date_from_geneva_filepath)
+
+# restrict to those not yet processed:
+death_files_to_process <- death_files_to_process[!death_forecast_dates %in% dates_already_processed]
+death_forecast_dates <- death_forecast_dates[!death_forecast_dates %in% dates_already_processed]
 
 for(i in 1:length(case_files_to_process)) {
   for(j in seq_along(vector_countries)){

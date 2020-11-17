@@ -1,0 +1,24 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-11-09,"7 day ahead inc death",2020-11-16,"GM","Germany","point",NA,134.829005654983
+2020-11-09,"6 day ahead inc death",2020-11-15,"GM","Germany","point",NA,131.315676604945
+2020-11-09,"5 day ahead inc death",2020-11-14,"GM","Germany","point",NA,127.802347554907
+2020-11-09,"4 day ahead inc death",2020-11-13,"GM","Germany","point",NA,124.289018504871
+2020-11-09,"3 day ahead inc death",2020-11-12,"GM","Germany","point",NA,120.775689454835
+2020-11-09,"2 day ahead inc death",2020-11-11,"GM","Germany","point",NA,117.262360404797
+2020-11-09,"1 day ahead inc death",2020-11-10,"GM","Germany","point",NA,113.749031354759
+2020-11-09,"0 day ahead inc death",2020-11-09,"GM","Germany","observed",NA,63
+2020-11-09,"-1 day ahead inc death",2020-11-08,"GM","Germany","observed",NA,63
+2020-11-09,"7 day ahead cum death",2020-11-16,"GM","Germany","point",NA,12222.0231295341
+2020-11-09,"6 day ahead cum death",2020-11-15,"GM","Germany","point",NA,12087.1941238791
+2020-11-09,"5 day ahead cum death",2020-11-14,"GM","Germany","point",NA,11955.8784472742
+2020-11-09,"4 day ahead cum death",2020-11-13,"GM","Germany","point",NA,11828.0760997193
+2020-11-09,"3 day ahead cum death",2020-11-12,"GM","Germany","point",NA,11703.7870812144
+2020-11-09,"2 day ahead cum death",2020-11-11,"GM","Germany","point",NA,11583.0113917596
+2020-11-09,"1 day ahead cum death",2020-11-10,"GM","Germany","point",NA,11465.7490313548
+2020-11-09,"0 day ahead cum death",2020-11-09,"GM","Germany","observed",NA,11352
+2020-11-09,"-1 day ahead cum death",2020-11-08,"GM","Germany","observed",NA,11289
+2020-11-09,"0 wk ahead inc death",2020-11-07,"GM","Germany","observed",NA,774
+2020-11-09,"1 wk ahead inc death",2020-11-14,"GM","Germany","point",NA,729.878447274168
+2020-11-09,"-1 wk ahead cum death",2020-10-31,"GM","Germany","observed",NA,10452
+2020-11-09,"0 wk ahead cum death",2020-11-07,"GM","Germany","observed",NA,11226
+2020-11-09,"1 wk ahead cum death",2020-11-14,"GM","Germany","point",NA,11955.8784472742

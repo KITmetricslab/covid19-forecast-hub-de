@@ -8,6 +8,7 @@ Tue 11 Oct: LeipzigIMISE-SECIR omitted from ensembles due to extremely low forec
 Wed 21 Oct: LeipzigIMISE-SECIR omitted from ensembles as PR accidentially did not contain required files. MIT_CovidAnalytics-Delphi omitted from all Poland ensembles as we believe there was a technical error (all numbers considerably too low). MIT_CovidAnalytics-Delphi was kept in Germany ensembles, though. KIT-baseline was removed from all ensembles as we consider the last-observation-carried-forward approach inappropriate in the current phase. MOCOS model omitted from all ensembles as only one- and two week ahead forecasts were available.
 Tue 27 Oct: LeipzigIMISE-SECIR and ITWW-county_repro omitted from ensembles due to extremely low forecast uncertainty. LANL-growthRate omitted from Germany ensembles due to unrealistically low forecasts.
 Tue 4 Nov: LANL omitted from ensemble as last available forecast dated from Wed 28 Oct. KIT-time_series_baseline omitted due to excessively wide uncertainty bands.
+Wed 11 Nov: Ensemble only created on Wednesday to be able to include MOCOS forecasts. MIT cumulative forecasts excluded as much too sharp relative to incidence forecasts. ICM forecast not included as forecasts seem shifted by one week. LeipzigIMISE forecasts excluded due to missingness of quantiles for incident forecasts and unlikely non-monotonic pattern over next four weeks.
 
 ### Documentation of forecast revisions:
 
@@ -26,3 +27,5 @@ Mon 2 Nov: Removed all-zero forecasts by USC from 26 Oct. For Germany national l
 Tue 23 Nov: MOCOS forecast arrived slightly late, but delay had been communicated in advance.
 Wed 4 Nov: Retrospectively added inverse WIS ensemble for first four weeks. This had not been operational before. The implementation, however, follows strictly the one described in the pre-registration.
 Fri 6 Nov: Added simple baseline which had been forgotten this week (unproblematic as no tuning involved).
+Sun 8 Nov: Adding case forecasts for Geneva which had not been extracted for certain weeks. These are not delayed forecasts, but just files we overlooked when the Geneva team published them on their website.
+Tue 10 Nov: Added LANL forecasts from 1 Nov that haven't been available on 3 Nov

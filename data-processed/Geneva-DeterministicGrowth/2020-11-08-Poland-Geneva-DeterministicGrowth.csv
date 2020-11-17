@@ -1,0 +1,24 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-11-08,"7 day ahead inc death",2020-11-15,"PL","Poland","point",NA,380.026047468338
+2020-11-08,"6 day ahead inc death",2020-11-14,"PL","Poland","point",NA,368.932062002028
+2020-11-08,"5 day ahead inc death",2020-11-13,"PL","Poland","point",NA,357.83807653572
+2020-11-08,"4 day ahead inc death",2020-11-12,"PL","Poland","point",NA,346.744091069409
+2020-11-08,"3 day ahead inc death",2020-11-11,"PL","Poland","point",NA,335.650105603101
+2020-11-08,"2 day ahead inc death",2020-11-10,"PL","Poland","point",NA,324.556120136794
+2020-11-08,"1 day ahead inc death",2020-11-09,"PL","Poland","point",NA,313.462134670483
+2020-11-08,"0 day ahead inc death",2020-11-08,"PL","Poland","observed",NA,349
+2020-11-08,"-1 day ahead inc death",2020-11-07,"PL","Poland","observed",NA,445
+2020-11-08,"7 day ahead cum death",2020-11-15,"PL","Poland","point",NA,10063.2086374859
+2020-11-08,"6 day ahead cum death",2020-11-14,"PL","Poland","point",NA,9683.18259001754
+2020-11-08,"5 day ahead cum death",2020-11-13,"PL","Poland","point",NA,9314.25052801551
+2020-11-08,"4 day ahead cum death",2020-11-12,"PL","Poland","point",NA,8956.41245147979
+2020-11-08,"3 day ahead cum death",2020-11-11,"PL","Poland","point",NA,8609.66836041038
+2020-11-08,"2 day ahead cum death",2020-11-10,"PL","Poland","point",NA,8274.01825480728
+2020-11-08,"1 day ahead cum death",2020-11-09,"PL","Poland","point",NA,7949.46213467048
+2020-11-08,"0 day ahead cum death",2020-11-08,"PL","Poland","observed",NA,7636
+2020-11-08,"-1 day ahead cum death",2020-11-07,"PL","Poland","observed",NA,7287
+2020-11-08,"0 wk ahead inc death",2020-11-07,"PL","Poland","observed",NA,1936
+2020-11-08,"1 wk ahead inc death",2020-11-14,"PL","Poland","point",NA,2396.18259001754
+2020-11-08,"-1 wk ahead cum death",2020-10-31,"PL","Poland","observed",NA,5351
+2020-11-08,"0 wk ahead cum death",2020-11-07,"PL","Poland","observed",NA,7287
+2020-11-08,"1 wk ahead cum death",2020-11-14,"PL","Poland","point",NA,9683.18259001754

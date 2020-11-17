@@ -1,0 +1,24 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-10-17,"7 day ahead inc case",2020-10-24,"PL","Poland","point",NA,9466.91564919043
+2020-10-17,"6 day ahead inc case",2020-10-23,"PL","Poland","point",NA,9088.95583025526
+2020-10-17,"5 day ahead inc case",2020-10-22,"PL","Poland","point",NA,8710.99601132012
+2020-10-17,"4 day ahead inc case",2020-10-21,"PL","Poland","point",NA,8333.03619238499
+2020-10-17,"3 day ahead inc case",2020-10-20,"PL","Poland","point",NA,7955.07637344985
+2020-10-17,"2 day ahead inc case",2020-10-19,"PL","Poland","point",NA,7577.11655451468
+2020-10-17,"1 day ahead inc case",2020-10-18,"PL","Poland","point",NA,7199.15673557954
+2020-10-17,"0 day ahead inc case",2020-10-17,"PL","Poland","observed",NA,7705
+2020-10-17,"-1 day ahead inc case",2020-10-16,"PL","Poland","observed",NA,8099
+2020-10-17,"7 day ahead cum case",2020-10-24,"PL","Poland","point",NA,215939.253346695
+2020-10-17,"6 day ahead cum case",2020-10-23,"PL","Poland","point",NA,206472.337697504
+2020-10-17,"5 day ahead cum case",2020-10-22,"PL","Poland","point",NA,197383.381867249
+2020-10-17,"4 day ahead cum case",2020-10-21,"PL","Poland","point",NA,188672.385855929
+2020-10-17,"3 day ahead cum case",2020-10-20,"PL","Poland","point",NA,180339.349663544
+2020-10-17,"2 day ahead cum case",2020-10-19,"PL","Poland","point",NA,172384.273290094
+2020-10-17,"1 day ahead cum case",2020-10-18,"PL","Poland","point",NA,164807.15673558
+2020-10-17,"0 day ahead cum case",2020-10-17,"PL","Poland","observed",NA,157608
+2020-10-17,"-1 day ahead cum case",2020-10-16,"PL","Poland","observed",NA,149903
+2020-10-17,"0 wk ahead inc case",2020-10-17,"PL","Poland","observed",NA,41270
+2020-10-17,"1 wk ahead inc case",2020-10-24,"PL","Poland","point",NA,58331.2533466949
+2020-10-17,"-1 wk ahead cum case",2020-10-10,"PL","Poland","observed",NA,116338
+2020-10-17,"0 wk ahead cum case",2020-10-17,"PL","Poland","observed",NA,157608
+2020-10-17,"1 wk ahead cum case",2020-10-24,"PL","Poland","point",NA,215939.253346695
