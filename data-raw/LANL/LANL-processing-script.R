@@ -13,7 +13,9 @@
 ## Jakob Ketterer
 ## August 2020
 
-## support for weekly incidence forecasts
+## LANL model v1 -> v2
+## added support for weekly incidence forecasts
+## adapted to changes in filenames
 ## remove causes for warnings
 ## Changes in LANL output format
 ## 1) separation in daily and weekly forecast files
@@ -42,9 +44,7 @@ lanl_filenames_processed <- list.files("../../data-processed/LANL-GrowthRate/", 
 lanl_filenames_raw <- list.files(".", pattern=".csv", full.names=FALSE)
 
 dates_processed <- unlist(lapply(lanl_filenames_processed, FUN = function(x) substr(basename(x), 0, 10)))
-dates_processed
 dates_raw <- unlist(lapply(lanl_filenames_raw, FUN = function(x) substr(basename(x), 0, 10)))
-dates_raw
 
 dates <- setdiff(dates_raw, dates_processed)
 print(c("Generating forecasts for the following dates:", dates))
