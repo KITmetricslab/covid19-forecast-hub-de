@@ -3,7 +3,7 @@ name: "Update RKI data"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 10,22 * * *"
+    - cron: "0 4,14 * * *"
   
 
 jobs:
@@ -20,6 +20,8 @@ jobs:
       with:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+
+    - name: Install requirenments
       run: |
         pip3 install -r github-actions/pr_requirements.txt
 
