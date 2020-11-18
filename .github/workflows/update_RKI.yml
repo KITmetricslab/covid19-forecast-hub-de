@@ -31,6 +31,7 @@ jobs:
         python3 ./rki_download.py
         python3 ./rki_update.py
         cd ../../
+        
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
