@@ -1,4 +1,4 @@
-name: "Update visualization"
+name: "Visualization/Validation/Evaluation"
 on:
   workflow_dispatch:
   schedule:
@@ -24,7 +24,7 @@ jobs:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
 
-    - name: Create local changes
+    - name: Visualization
       run: |
         pip3 install -r github-actions/pr_requirements.txt
         cd ./app_forecasts_de/code
@@ -34,6 +34,20 @@ jobs:
         cd ../../code/visualization
         Rscript ./plot_current_forecasts.R	
         cd ../../
+        
+    - name: Validation
+      run: |
+        cd ./code/validation
+        python3 ./get_commit_dates.py
+        python3 ./validate_truth.py
+        python3 ./check_truth.py
+        cd ../../
+
+    - name: Evaluation
+      run: |
+        cd ./code/validation
+        python3 ./validate_truth.py
+        python3 ./check_truth.py
 
     - name: Commit files
       run: |
