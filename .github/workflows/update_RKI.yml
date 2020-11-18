@@ -3,7 +3,7 @@ name: "Update RKI data"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 10,22 * * *"
+    - cron: "0 4,14 * * *"
   
 
 jobs:
