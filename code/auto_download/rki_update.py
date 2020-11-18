@@ -13,7 +13,7 @@ df = pd.read_csv(latest_file, compression='gzip')
 if df.Bundesland.nunique() < 16:
     sys.exit('Some states are missing. Try again later.')
 
-print('WARNING: This is a warning!)
+print('WARNING: This is a warning!')
 
 # Add column 'DatenstandISO'
 df['DatenstandISO'] = pd.to_datetime(df.Datenstand.str.replace('Uhr', ''), dayfirst=True).astype(str)
