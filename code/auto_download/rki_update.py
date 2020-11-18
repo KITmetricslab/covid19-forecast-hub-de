@@ -1,5 +1,7 @@
 import os
+import sys
 import glob
+import warnings
 import pandas as pd
 
 # Load latest file 
@@ -7,6 +9,11 @@ list_of_files = glob.glob('../../data-truth/RKI/raw/*')
 latest_file = max(list_of_files, key=os.path.getctime)
 
 df = pd.read_csv(latest_file, compression='gzip')
+
+if df.Bundesland.nunique() < 16:
+    sys.exit('Some states are missing. Try again later.')
+
+warnings.warn('WARNING: This is a test warning.')
 
 # Add column 'DatenstandISO'
 df['DatenstandISO'] = pd.to_datetime(df.Datenstand.str.replace('Uhr', ''), dayfirst=True).astype(str)
