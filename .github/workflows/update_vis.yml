@@ -14,7 +14,7 @@ jobs:
     - name: Setup R
       run: |
         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
-	sudo apt-get install libv8-3.14-dev r-base r-base-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev fish -y
+        sudo apt-get install libv8-3.14-dev r-base r-base-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev fish -y
 
     - name: Setup Python
       uses: actions/setup-python@v2
@@ -35,11 +35,12 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action - Vis Update"
         git commit -m "Daily visualization update" -a
+        
     - name: Push changes
       env:
-	AUTH: ${{ secrets.GITHUBTOKEN }}
+        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
-	git remote rm origin
-  	git remote add origin https://${AUTH}@github.com/KITmetricslab/covid19-forecast-hub-de.git > /dev/null 2>&1
-  	git push --quiet --set-upstream origin HEAD:master
-  	echo "pushed to github"
+        git remote rm origin
+        git remote add origin https://${AUTH}@github.com/KITmetricslab/covid19-forecast-hub-de.git > /dev/null 2>&1
+        git push --quiet --set-upstream origin HEAD:master
+        echo "pushed to github"
