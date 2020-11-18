@@ -29,4 +29,4 @@ jobs:
 #     - run: npm install
     - run: pip3 install -r github-actions/pr_requirements.txt
     - run: python3 code/validation/validate_filenames.py
-    - run: python3 code/validation/test_formatting.py
+    - run: python3 code/validation/test-formatting.py
