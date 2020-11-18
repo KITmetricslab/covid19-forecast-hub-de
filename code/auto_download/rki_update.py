@@ -13,8 +13,6 @@ df = pd.read_csv(latest_file, compression='gzip')
 if df.Bundesland.nunique() < 16:
     sys.exit('Some states are missing. Try again later.')
 
-warnings.warn('WARNING: This is a test warning.')
-
 # Add column 'DatenstandISO'
 df['DatenstandISO'] = pd.to_datetime(df.Datenstand.str.replace('Uhr', ''), dayfirst=True).astype(str)
 #df['DatenstandISO'] = str((pd.to_datetime('today') - pd.Timedelta('1 days')).date())
