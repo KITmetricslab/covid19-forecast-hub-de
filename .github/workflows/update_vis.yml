@@ -24,10 +24,13 @@ jobs:
     - name: Create local changes
       run: |
         pip3 install -r github-actions/pr_requirements.txt
-        python3 app_forecasts_de/code/data_preparation.py
-        python3 app_forecasts_de/code/prepare_truth_data.py
-        python3 app_forecasts_de/code/add_last_observed.py
+        cd ./app_forecasts_de/code
+        python3 ./data_preparation.py
+        python3 ./prepare_truth_data.py
+        python3 ./add_last_observed.py
+        cd ../../code/visualization
         Rscript code/visualization/plot_current_forecasts.R	
+        cd ../../
 
     - name: Commit files
       run: |
