@@ -1,7 +1,7 @@
 name: "Update visualization"
 on:
   schedule:
-  - cron: "35 11 * * *"
+  - cron: "40 11 * * *"
 
 jobs:
   build:
@@ -24,11 +24,11 @@ jobs:
 
     - name: Create local changes
       run: |
-	pip3 install -r github-actions/pr_requirements.txt
-	python3 app_forecasts_de/code/data_preparation.py
-	python3 app_forecasts_de/code/prepare_truth_data.py
-	python3 app_forecasts_de/code/add_last_observed.py
-	Rscript code/visualization/plot_current_forecasts.R	
+        pip3 install -r github-actions/pr_requirements.txt
+        python3 app_forecasts_de/code/data_preparation.py
+        python3 app_forecasts_de/code/prepare_truth_data.py
+        python3 app_forecasts_de/code/add_last_observed.py
+        Rscript code/visualization/plot_current_forecasts.R	
 
     - name: Commit files
       run: |
