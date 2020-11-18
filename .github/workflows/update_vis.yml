@@ -29,7 +29,7 @@ jobs:
         python3 ./prepare_truth_data.py
         python3 ./add_last_observed.py
         cd ../../code/visualization
-        Rscript code/visualization/plot_current_forecasts.R	
+        Rscript ./plot_current_forecasts.R	
         cd ../../
 
     - name: Commit files
