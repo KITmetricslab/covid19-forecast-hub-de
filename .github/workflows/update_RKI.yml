@@ -29,8 +29,16 @@ jobs:
       run: |
         cd ./code/auto_download
         python3 ./rki_download.py
-        python3 ./rki_update.py
-        cd ../../
+        output=$(python3 ./rki_update.py)
+        output="${output//'%'/'%25'}"
+        output="${output//$'\n'/'%0A'}"
+        output="${output//$'\r'/'%0D'}" 
+        echo "::set-output name=warning_out::$output"
+        cd ../../         
+      id: step1
+        
+    - name: Print warning
+      run: echo "::warning ::${{ steps.step1.outputs.warning_out }}"
         
     - name: Commit files
       run: |
