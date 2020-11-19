@@ -38,7 +38,8 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action - RKI Update"
-        git commit -m "Daily RKI update" -a
+        git add --all
+        git commit -m "Daily RKI update"
         
     - name: Push changes
       env:
