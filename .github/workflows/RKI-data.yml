@@ -35,6 +35,8 @@ jobs:
         cd ../../         
         
     - name: Commit files
+      env:
+        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action - RKI Update"
