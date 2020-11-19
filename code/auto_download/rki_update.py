@@ -12,13 +12,13 @@ latest_file = max(list_of_files, key=os.path.getctime)
 df = pd.read_csv(latest_file, compression='gzip')
 
 if df.Bundesland.nunique() < 16:
-    send_notification(title='RKI Data: Check Failed', message='Some states are missing.', details='A, B und C', 
-                  link='https://github.com/KITmetricslab/covid19-forecast-hub-de/actions', color='danger')
+    send_notification(title='RKI Data', message='Check Failed', details='Some states are missing.', 
+                  link='https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/RKI', color='danger')
     sys.exit('Some states are missing. Try again later.')
 
 else:
-    send_notification(title='RKI Data: Check Passed', message='Data for all states available.', details=None, 
-                  link='https://github.com/KITmetricslab/covid19-forecast-hub-de/actions', color='danger')
+    send_notification(title='RKI Data', message='Check Passed', details='Data for all states available.', 
+                  link='https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/RKI', color='good')
     
 # Add column 'DatenstandISO'
 df['DatenstandISO'] = pd.to_datetime(df.Datenstand.str.replace('Uhr', ''), dayfirst=True).astype(str)

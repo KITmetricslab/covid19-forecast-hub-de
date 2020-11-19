@@ -24,7 +24,7 @@ def send_notification(title, message, details, link, color='danger'):
         ]
     }
     response = requests.post(
-        webhook_url, data = json.dumps(slack_data),
+        webhook, data = json.dumps(slack_data),
         headers={'Content-Type': 'application/json'}
     )
     if response.status_code != 200:
