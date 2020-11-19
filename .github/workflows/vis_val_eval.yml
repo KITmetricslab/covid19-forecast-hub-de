@@ -56,7 +56,8 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action - Vis Update"
-        git commit -m "Daily visualization update" -a
+        git add --all
+        git commit -m "Daily visualization update"
         
     - name: Push changes
       env:
