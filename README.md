@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/KITmetricslab/covid19-forecast-hub-de.svg?branch=master)](https://travis-ci.org/KITmetricslab/covid19-forecast-hub-de)
-
+[![RKI update](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/Update RKI data/badge.svg)](https://github.com/KITmetricslab/covid19-forecast-hub-de/actions)
 # German and Polish COVID-19 Forecast Hub
 
 #### A collaborative forecasting project
