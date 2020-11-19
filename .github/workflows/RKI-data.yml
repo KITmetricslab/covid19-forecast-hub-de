@@ -1,5 +1,5 @@
   
-name: "Update RKI data"
+name: "RKI-data"
 on:
   workflow_dispatch:
   schedule:
