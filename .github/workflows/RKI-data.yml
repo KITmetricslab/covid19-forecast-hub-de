@@ -47,8 +47,6 @@ jobs:
         git commit -m "Daily RKI update"
         
     - name: Push changes
-      env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git push --quiet --set-upstream origin HEAD:master
         echo "pushed to github"
