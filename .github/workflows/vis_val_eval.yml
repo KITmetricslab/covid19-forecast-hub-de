@@ -52,7 +52,7 @@ jobs:
         python3 ./validate_truth.py
         python3 ./check_truth.py
 
-    -- name: Commit files
+    - name: Commit files
       env:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
