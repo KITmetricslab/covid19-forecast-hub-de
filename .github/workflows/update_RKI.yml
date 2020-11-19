@@ -27,7 +27,7 @@ jobs:
 
     - name: Download RKI data
       env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       run: |
         cd ./code/auto_download
         python3 ./rki_download.py
