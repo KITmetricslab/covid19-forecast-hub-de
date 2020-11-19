@@ -61,7 +61,8 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action - truth Update"
-        git commit -m "Daily truth data update" -a
+        git add --all
+        git commit -m "Daily truth data update"
         
     - name: Push changes
       env:
