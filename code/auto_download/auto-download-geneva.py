@@ -1,11 +1,9 @@
 # Auto-download forecasts of Geneva-Team
 # Jakob Ketterer, November 2020
 
-import urllib.request
-import pandas as pd
-import numpy as np
-from datetime import datetime, timedelta
 import os
+import urllib.request
+from datetime import datetime, timedelta
 
 if __name__ == "__main__":
 
@@ -51,8 +49,8 @@ if __name__ == "__main__":
     deaths_date_list = [latest_deaths_fc_date + timedelta(days=x) for x in range(1, (download_up_to_date-latest_deaths_fc_date).days+1)]
     cases_date_list = [latest_cases_fc_date + timedelta(days=x) for x in range(1, (download_up_to_date-latest_cases_fc_date).days+1)]
 
-    print("Trying to download deaths forecasts for the following dates: \n", ["".join(str(d.date())) for d in deaths_date_list])
-    print("Trying to download deaths forecasts for the following dates: \n", ["".join(str(d.date())) for d in cases_date_list])
+    print("Trying to download death forecasts for the following dates: \n", ["".join(str(d.date())) for d in deaths_date_list])
+    print("Trying to download case forecasts for the following dates: \n", ["".join(str(d.date())) for d in cases_date_list])
 
 
     ############ url generation and download of files
