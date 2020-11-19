@@ -26,6 +26,8 @@ jobs:
         pip3 install -r github-actions/pr_requirements.txt
 
     - name: Download RKI data
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }
       run: |
         cd ./code/auto_download
         python3 ./rki_download.py
