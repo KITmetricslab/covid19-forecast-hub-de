@@ -1,4 +1,4 @@
-[![RKI update](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/RKI-data/badge.svg)](https://github.com/KITmetricslab/covid19-forecast-hub-de/actions)
+![example workflow file path](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/.github/workflows/RKI-data.yml/badge.svg)
 # German and Polish COVID-19 Forecast Hub
 
 #### A collaborative forecasting project
