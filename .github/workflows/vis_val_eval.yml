@@ -52,18 +52,19 @@ jobs:
         python3 ./validate_truth.py
         python3 ./check_truth.py
 
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action - Vis Update"
-        git add --all
-        git commit -m "Daily visualization update"
-        
-    - name: Push changes
+    -- name: Commit files
       env:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action - Vis/Val/Eval Update"
         git remote rm origin
         git remote add origin https://${AUTH}@github.com/KITmetricslab/covid19-forecast-hub-de.git > /dev/null 2>&1
+        git pull origin master
+        git add --all
+        git commit -m "Daily Vis/Val/Eval update"
+        
+    - name: Push changes
+      run: |
         git push --quiet --set-upstream origin HEAD:master
         echo "pushed to github"
