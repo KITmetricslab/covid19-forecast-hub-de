@@ -1,5 +1,5 @@
   
-name: "Update truth data"
+name: "truth-data"
 on:
   workflow_dispatch:
   schedule:
