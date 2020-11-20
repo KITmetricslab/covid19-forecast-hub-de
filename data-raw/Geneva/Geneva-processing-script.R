@@ -11,7 +11,7 @@
 
 source("process_geneva_file_germany.R")
 # make sure that English names of days and months are used
-Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
+Sys.setlocale(category = "LC_TIME", locale = "English")
 
 dir.create("../../data-processed/Geneva-DeterministicGrowth", showWarnings = FALSE)
 
@@ -56,8 +56,8 @@ case_files_to_process <- case_files_to_process[grepl(".csv", case_files_to_proce
 case_forecast_dates <- lapply(case_files_to_process, date_from_geneva_filepath)
 
 # restrict to those not yet processed:
-death_files_to_process <- death_files_to_process[!death_forecast_dates %in% dates_already_processed]
-death_forecast_dates <- death_forecast_dates[!death_forecast_dates %in% dates_already_processed]
+case_files_to_process <- case_files_to_process[!case_forecast_dates %in% dates_already_processed]
+case_forecast_dates <- case_forecast_dates[!case_forecast_dates %in% dates_already_processed]
 
 for(i in 1:length(case_files_to_process)) {
   for(j in seq_along(vector_countries)){
