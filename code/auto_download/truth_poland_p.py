@@ -10,9 +10,10 @@ import pygsheets
 import pandas as pd
 from unidecode import unidecode
 import datetime
+import numpy as np
 
-gc = pygsheets.authorize(service_account_env_var ='SHEETS_CREDS')
-#gc = pygsheets.authorize(service_file='creds.json')
+#gc = pygsheets.authorize(service_account_env_var ='SHEETS_CREDS')
+gc = pygsheets.authorize(service_file='creds.json')
 a = gc.open_by_key('1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E')
 
 worksheet = a.worksheet('title','Wzrost w województwach')
@@ -56,6 +57,7 @@ for relevant_rows in [inc_case_rows, cum_case_rows, inc_death_rows, cum_death_ro
         
     df = df.rename(columns={"Województwo": "location_name"})
     df = df.set_index("location_name")
+    df = df.replace(r'^\s*$', np.nan, regex=True)
     df = df.astype(float)
     df.loc['Poland']= df.sum(axis=0)
     
