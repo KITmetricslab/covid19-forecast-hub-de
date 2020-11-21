@@ -45,25 +45,25 @@ def download_covid_zip_files(path):
             for col in cols:
                 
                 # extract download path
-                ele = col.find_elements(By.TAG_NAME, "a")[0]
-                name = ele.get_attribute('href').split('/')[-1]
-                filepath = path + '/' + name
-                print(filepath)
-                # check if already downloaded
-                if os.path.exists(filepath):
-                    continue
-                else:
-                    # download file
-                    driver.get(ele.get_attribute('href'))
-                    time.sleep(4)
+                elements = col.find_elements(By.TAG_NAME, "a")
+                for ele in elements:
+                    name = ele.get_attribute('href').split('/')[-1]
+                    filepath = path + '/' + name
+                    print(filepath)
+                    # check if already downloaded
+                    if os.path.exists(filepath):
+                        continue
+                    else:
+                        # download file
+                        driver.get(ele.get_attribute('href'))
+                        time.sleep(4)
     finally:
         driver.quit()
 
 
 if __name__ == '__main__':
-    
     try:
-        path = sys.argv[1]
+        path = Path.cwd().joinpath("data-raw", "LANL")
         download_covid_zip_files(path)
     except IndexError:
         path=str(Path.cwd().parent.parent.joinpath("data-raw", "LANL"))

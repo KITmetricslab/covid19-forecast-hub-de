@@ -1,0 +1,24 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-11-16,"7 day ahead inc case",2020-11-23,"PL","Poland","point",NA,24921.5928571664
+2020-11-16,"6 day ahead inc case",2020-11-22,"PL","Poland","point",NA,24804.6579585207
+2020-11-16,"5 day ahead inc case",2020-11-21,"PL","Poland","point",NA,24687.7230598753
+2020-11-16,"4 day ahead inc case",2020-11-20,"PL","Poland","point",NA,24570.7881612297
+2020-11-16,"3 day ahead inc case",2020-11-19,"PL","Poland","point",NA,24453.8532625842
+2020-11-16,"2 day ahead inc case",2020-11-18,"PL","Poland","point",NA,24336.9183639386
+2020-11-16,"1 day ahead inc case",2020-11-17,"PL","Poland","point",NA,24219.9834652931
+2020-11-16,"0 day ahead inc case",2020-11-16,"PL","Poland","observed",NA,21854
+2020-11-16,"-1 day ahead inc case",2020-11-15,"PL","Poland","observed",NA,25571
+2020-11-16,"7 day ahead cum case",2020-11-23,"PL","Poland","point",NA,884967.517128608
+2020-11-16,"6 day ahead cum case",2020-11-22,"PL","Poland","point",NA,860045.924271442
+2020-11-16,"5 day ahead cum case",2020-11-21,"PL","Poland","point",NA,835241.266312921
+2020-11-16,"4 day ahead cum case",2020-11-20,"PL","Poland","point",NA,810553.543253046
+2020-11-16,"3 day ahead cum case",2020-11-19,"PL","Poland","point",NA,785982.755091816
+2020-11-16,"2 day ahead cum case",2020-11-18,"PL","Poland","point",NA,761528.901829232
+2020-11-16,"1 day ahead cum case",2020-11-17,"PL","Poland","point",NA,737191.983465293
+2020-11-16,"0 day ahead cum case",2020-11-16,"PL","Poland","observed",NA,712972
+2020-11-16,"-1 day ahead cum case",2020-11-15,"PL","Poland","observed",NA,691118
+2020-11-16,"0 wk ahead inc case",2020-11-14,"PL","Poland","observed",NA,171782
+2020-11-16,"1 wk ahead inc case",2020-11-21,"PL","Poland","point",NA,169694.266312921
+2020-11-16,"-1 wk ahead cum case",2020-11-07,"PL","Poland","observed",NA,493765
+2020-11-16,"0 wk ahead cum case",2020-11-14,"PL","Poland","observed",NA,665547
+2020-11-16,"1 wk ahead cum case",2020-11-21,"PL","Poland","point",NA,835241.266312921

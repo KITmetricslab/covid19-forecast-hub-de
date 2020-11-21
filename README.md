@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/KITmetricslab/covid19-forecast-hub-de.svg?branch=master)](https://travis-ci.org/KITmetricslab/covid19-forecast-hub-de)
+![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/RKI-data/badge.svg)
+![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/truth-data/badge.svg)
+![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/Visualization/Validation/Evaluation/badge.svg)
 
 # German and Polish COVID-19 Forecast Hub
 
@@ -8,11 +10,15 @@
 
 **Website:**: https://kitmetricslab.github.io/forecasthub/
 
+**Old version of visualization incl. evaluation scores:** https://jobrac.shinyapps.io/app_forecasts_de/
+
 **Study protocol:**: https://osf.io/cy937/registrations
 
 **Reference:** Bracher J, Wolffram D, Deuschel, J, Görgen, K, Ketterer, J, Gneiting, T, Schienle, M (2020): *The German and Polish COVID-19 Forecast Hub.* https://github.com/KITmetricslab/covid19-forecast-hub-de.
 
 **Web tool to visualize submission files:** https://jobrac.shinyapps.io/app_check_submission/
+
+**Web tool to explore forecast evaluations (still in development):** https://jobrac.shinyapps.io/app_evaluation/
 
 **Contact**: forecasthub@econ.kit.edu
 

@@ -115,13 +115,26 @@ process_geneva_file <- function(geneva_filepath, forecast_date, country = "Germa
     weekly_dat <- merge(weekly_dat, ends_weekly_forecasts, by.x = "target_end_date", by.y = "end")
     weekly_dat <- weekly_dat[, colnames(daily_dat)]
 
-    daily_dat <- rbind(daily_dat, weekly_dat)
+    # add incident forecast: start with cumulative forecasts
+    weekly_dat_inc <- weekly_dat
+    # override target:
+    weekly_dat_inc$target <- gsub("cum", "inc", weekly_dat_inc$target)
+    # sort (just to be sure)
+    weekly_dat_inc <- weekly_dat_inc[order(weekly_dat_inc$target_end_date), ]
+    # compute differences
+    weekly_dat_inc$value <- c(NA, diff(weekly_dat_inc$value))
+    # remove rist row with NA
+    weekly_dat_inc <- weekly_dat_inc[-1, ]
+
+    # add to data frame:
+    daily_dat <- rbind(daily_dat, weekly_dat_inc, weekly_dat)
   }
 
-  # restrict to larget or equal to -1 days ahead:
+  # restrict to target greater or equal to -1 days ahead:
   daily_dat <- daily_dat[daily_dat$target %in% c(paste((-1):30, "day ahead cum", type),
                                                  paste((-1):30, "day ahead inc", type),
-                                                 paste((-1):7, "wk ahead cum", type)), ]
+                                                 paste((-1):7, "wk ahead cum", type),
+                                                 paste((-1):7, "wk ahead inc", type)), ]
 
   return(daily_dat)
 }

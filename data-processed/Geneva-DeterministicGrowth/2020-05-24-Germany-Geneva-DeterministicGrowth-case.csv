@@ -1,0 +1,26 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-05-24,"-1 day ahead inc case",2020-05-23,"GM","Germany","observed",NA,638
+2020-05-24,"0 day ahead inc case",2020-05-24,"GM","Germany","observed",NA,431
+2020-05-24,"1 day ahead inc case",2020-05-25,"GM","Germany","point",NA,569
+2020-05-24,"2 day ahead inc case",2020-05-26,"GM","Germany","point",NA,535
+2020-05-24,"3 day ahead inc case",2020-05-27,"GM","Germany","point",NA,535
+2020-05-24,"4 day ahead inc case",2020-05-28,"GM","Germany","point",NA,535
+2020-05-24,"5 day ahead inc case",2020-05-29,"GM","Germany","point",NA,535
+2020-05-24,"6 day ahead inc case",2020-05-30,"GM","Germany","point",NA,535
+2020-05-24,"7 day ahead inc case",2020-05-31,"GM","Germany","point",NA,535
+2020-05-24,"8 day ahead inc case",2020-06-01,"GM","Germany","point",NA,535
+2020-05-24,"-1 day ahead cum case",2020-05-23,"GM","Germany","observed",NA,177850
+2020-05-24,"0 day ahead cum case",2020-05-24,"GM","Germany","observed",NA,178281
+2020-05-24,"1 day ahead cum case",2020-05-25,"GM","Germany","point",NA,178850
+2020-05-24,"2 day ahead cum case",2020-05-26,"GM","Germany","point",NA,179385
+2020-05-24,"3 day ahead cum case",2020-05-27,"GM","Germany","point",NA,179919
+2020-05-24,"4 day ahead cum case",2020-05-28,"GM","Germany","point",NA,180454
+2020-05-24,"5 day ahead cum case",2020-05-29,"GM","Germany","point",NA,180988
+2020-05-24,"6 day ahead cum case",2020-05-30,"GM","Germany","point",NA,181523
+2020-05-24,"7 day ahead cum case",2020-05-31,"GM","Germany","point",NA,182057
+2020-05-24,"8 day ahead cum case",2020-06-01,"GM","Germany","point",NA,182592
+2020-05-24,"0 wk ahead inc case",2020-05-23,"GM","Germany","observed",NA,4078
+2020-05-24,"1 wk ahead inc case",2020-05-30,"GM","Germany","point",NA,3673
+2020-05-24,"-1 wk ahead cum case",2020-05-16,"GM","Germany","observed",NA,173772
+2020-05-24,"0 wk ahead cum case",2020-05-23,"GM","Germany","observed",NA,177850
+2020-05-24,"1 wk ahead cum case",2020-05-30,"GM","Germany","point",NA,181523

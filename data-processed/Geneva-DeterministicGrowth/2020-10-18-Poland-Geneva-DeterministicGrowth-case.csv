@@ -1,0 +1,24 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-10-18,"7 day ahead inc case",2020-10-25,"PL","Poland","point",NA,10115.7316741447
+2020-10-18,"6 day ahead inc case",2020-10-24,"PL","Poland","point",NA,9725.71932786595
+2020-10-18,"5 day ahead inc case",2020-10-23,"PL","Poland","point",NA,9335.70698158719
+2020-10-18,"4 day ahead inc case",2020-10-22,"PL","Poland","point",NA,8945.69463530841
+2020-10-18,"3 day ahead inc case",2020-10-21,"PL","Poland","point",NA,8555.68228902968
+2020-10-18,"2 day ahead inc case",2020-10-20,"PL","Poland","point",NA,8165.66994275089
+2020-10-18,"1 day ahead inc case",2020-10-19,"PL","Poland","point",NA,7775.65759647213
+2020-10-18,"0 day ahead inc case",2020-10-18,"PL","Poland","observed",NA,9622
+2020-10-18,"-1 day ahead inc case",2020-10-17,"PL","Poland","observed",NA,7705
+2020-10-18,"7 day ahead cum case",2020-10-25,"PL","Poland","point",NA,229849.862447159
+2020-10-18,"6 day ahead cum case",2020-10-24,"PL","Poland","point",NA,219734.130773014
+2020-10-18,"5 day ahead cum case",2020-10-23,"PL","Poland","point",NA,210008.411445148
+2020-10-18,"4 day ahead cum case",2020-10-22,"PL","Poland","point",NA,200672.704463561
+2020-10-18,"3 day ahead cum case",2020-10-21,"PL","Poland","point",NA,191727.009828253
+2020-10-18,"2 day ahead cum case",2020-10-20,"PL","Poland","point",NA,183171.327539223
+2020-10-18,"1 day ahead cum case",2020-10-19,"PL","Poland","point",NA,175005.657596472
+2020-10-18,"0 day ahead cum case",2020-10-18,"PL","Poland","observed",NA,167230
+2020-10-18,"-1 day ahead cum case",2020-10-17,"PL","Poland","observed",NA,157608
+2020-10-18,"0 wk ahead inc case",2020-10-17,"PL","Poland","observed",NA,41270
+2020-10-18,"1 wk ahead inc case",2020-10-24,"PL","Poland","point",NA,62126.1307730142
+2020-10-18,"-1 wk ahead cum case",2020-10-10,"PL","Poland","observed",NA,116338
+2020-10-18,"0 wk ahead cum case",2020-10-17,"PL","Poland","observed",NA,157608
+2020-10-18,"1 wk ahead cum case",2020-10-24,"PL","Poland","point",NA,219734.130773014

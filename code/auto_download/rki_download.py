@@ -1,7 +1,7 @@
 import pandas as pd
 
-# Download data from https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0/data
-df = pd.read_csv('https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.csv')
+# Download data from https://www.arcgis.com/home/item.html?id=f10774f1c63e40168479a1feb6c7ca74
+df = pd.read_csv('https://www.arcgis.com/sharing/rest/content/items/f10774f1c63e40168479a1feb6c7ca74/data')
 
 # Save as compressed csv-file
 date = pd.to_datetime('today').date()

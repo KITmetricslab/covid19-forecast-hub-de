@@ -5,7 +5,7 @@
 source("process_UCLA_file_germany.R")
 
 # make sure that English names of days and months are used
-Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
+Sys.setlocale(category = "LC_TIME", locale = "English")
 
 dir.create("../../data-processed/UCLA-SuEIR/", showWarnings = FALSE)
 

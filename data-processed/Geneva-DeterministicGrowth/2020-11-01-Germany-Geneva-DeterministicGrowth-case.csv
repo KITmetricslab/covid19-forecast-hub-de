@@ -1,0 +1,24 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-11-01,"7 day ahead inc case",2020-11-08,"GM","Germany","point",NA,21665.4169566203
+2020-11-01,"6 day ahead inc case",2020-11-07,"GM","Germany","point",NA,20946.9297899802
+2020-11-01,"5 day ahead inc case",2020-11-06,"GM","Germany","point",NA,20228.4426233401
+2020-11-01,"4 day ahead inc case",2020-11-05,"GM","Germany","point",NA,19509.9554567001
+2020-11-01,"3 day ahead inc case",2020-11-04,"GM","Germany","point",NA,18791.4682900601
+2020-11-01,"2 day ahead inc case",2020-11-03,"GM","Germany","point",NA,18072.9811234199
+2020-11-01,"1 day ahead inc case",2020-11-02,"GM","Germany","point",NA,17354.4939567798
+2020-11-01,"0 day ahead inc case",2020-11-01,"GM","Germany","observed",NA,14177
+2020-11-01,"-1 day ahead inc case",2020-10-31,"GM","Germany","observed",NA,19059
+2020-11-01,"7 day ahead cum case",2020-11-08,"GM","Germany","point",NA,669499.6881969
+2020-11-01,"6 day ahead cum case",2020-11-07,"GM","Germany","point",NA,647834.27124028
+2020-11-01,"5 day ahead cum case",2020-11-06,"GM","Germany","point",NA,626887.3414503
+2020-11-01,"4 day ahead cum case",2020-11-05,"GM","Germany","point",NA,606658.89882696
+2020-11-01,"3 day ahead cum case",2020-11-04,"GM","Germany","point",NA,587148.94337026
+2020-11-01,"2 day ahead cum case",2020-11-03,"GM","Germany","point",NA,568357.4750802
+2020-11-01,"1 day ahead cum case",2020-11-02,"GM","Germany","point",NA,550284.49395678
+2020-11-01,"0 day ahead cum case",2020-11-01,"GM","Germany","observed",NA,532930
+2020-11-01,"-1 day ahead cum case",2020-10-31,"GM","Germany","observed",NA,518753
+2020-11-01,"0 wk ahead inc case",2020-10-31,"GM","Germany","observed",NA,100748
+2020-11-01,"1 wk ahead inc case",2020-11-07,"GM","Germany","point",NA,129081.27124028
+2020-11-01,"-1 wk ahead cum case",2020-10-24,"GM","Germany","observed",NA,418005
+2020-11-01,"0 wk ahead cum case",2020-10-31,"GM","Germany","observed",NA,518753
+2020-11-01,"1 wk ahead cum case",2020-11-07,"GM","Germany","point",NA,647834.27124028

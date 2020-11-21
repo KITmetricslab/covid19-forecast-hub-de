@@ -28,6 +28,8 @@ path = Path('../../data-processed')
 
 models = [f.name for f in path.iterdir() if not f.name.endswith('.csv')]
 
+forecasts_to_exclude = pd.read_csv('../data/forecasts_to_exclude.csv').filename.to_list()
+
 VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(-1, 5)] + \
                 [f"{_} wk ahead cum death" for _ in range(-1, 5)] + \
                 [f"{_} wk ahead inc case" for _ in range(-1, 5)] + \
@@ -40,7 +42,7 @@ VALID_QUANTILES = [0.025, 0.25, 0.75, 0.975]
 dfs = []
 for m in models:
     p = path/m
-    forecasts = [f.name for f in p.iterdir() if '.csv' in f.name]
+    forecasts = [f.name for f in p.iterdir() if '.csv' in f.name and f.name not in forecasts_to_exclude]
     available_dates = pd.Series(pd.to_datetime(filename[:10]) for filename in forecasts)
     relevant_dates = get_relevant_dates(available_dates)
     relevant_forecasts = [f for f in forecasts if f[:10] in relevant_dates]
