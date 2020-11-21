@@ -1,11 +1,9 @@
 # Auto-download forecasts of UCLA-Team
 # Jakob Ketterer, November 2020
 
-import urllib.request
-import pandas as pd
-import numpy as np
-from datetime import datetime, timedelta
 import os
+import urllib.request
+from datetime import datetime, timedelta
 
 if __name__ == "__main__":
 
