@@ -41,6 +41,7 @@ source("../../code/processing-fxns/get_next_saturday.R")
 
 process_global_lanl_file <- function(lanl_filepath, country, abbr){
     
+    library(crayon, lib.loc="../../Rdeps"))
     library(tidyverse, lib.loc="../../Rdeps"))
     library(MMWRweek, lib.loc="../../Rdeps"))
     library(lubridate, lib.loc="../../Rdeps"))
