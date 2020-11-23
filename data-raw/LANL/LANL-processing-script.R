@@ -31,6 +31,7 @@
 
 # Warnings can be ignored
 
+install.packages("tidyverse")
 library(tidyverse)
 
 Sys.setlocale("LC_TIME", "C")
