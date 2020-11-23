@@ -45,7 +45,7 @@ jobs:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git checkout Geneva_actions
-        python3 python code/auto_download/auto-download-geneva.py
+        python3 code/auto_download/auto-download-geneva.py
         cd ./data-raw/Geneva
         Rscript Geneva-processing-script.R
         
