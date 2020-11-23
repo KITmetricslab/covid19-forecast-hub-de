@@ -24,8 +24,8 @@ jobs:
     - name: Install requirenments
       run: |
         pip3 install -r github-actions/LANL_Geneva_req.txt
-	
-	- name: Setup R
+        
+    - name: Setup R
       run: |
         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
         sudo apt-get install libv8-3.14-dev r-base r-base-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev fish -y
@@ -34,10 +34,10 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       run: |
-	    git checkout Geneva_actions
+	git checkout Geneva_actions
         python3 code/auto_download/auto-download-lanl-covid19.py
-		cd ./data-raw/LANL
-		Rscript LANL-processing-script.R       
+	cd ./data-raw/LANL
+	Rscript LANL-processing-script.R       
         
     - name: Commit files
       env:
