@@ -34,7 +34,7 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       run: |
-        git checkout Geneva_actions
+        git checkout LANL_actions
         python3 code/auto_download/auto-download-lanl-covid19.py
         cd ./data-raw/LANL
         Rscript LANL-processing-script.R       
