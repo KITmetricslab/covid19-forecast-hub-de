@@ -31,6 +31,7 @@
 
 # Warnings can be ignored
 
+install.packages("crayon", lib="../../Rdeps")
 install.packages("tidyverse", lib="../../Rdeps")
 install.packages("MMWRweek", lib="../../Rdeps")
 install.packages("lubridate", lib="../../Rdeps")
