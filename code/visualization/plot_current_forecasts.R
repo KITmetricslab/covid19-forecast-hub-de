@@ -8,7 +8,8 @@ source("../../code/R/auxiliary_functions.R")
 Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 
 # names of models which are not to be included in visualization:
-models_to_exclude <- c("LeipzigIMISE-rkiV1", "LeipzigIMISE-ecdcV1", "Imperial-ensemble1", "KITCOVIDhub-mean_ensemble")
+models_to_exclude <- c("LeipzigIMISE-rkiV1", "LeipzigIMISE-ecdcV1", "Imperial-ensemble1", 
+                       "KITCOVIDhub-mean_ensemble", "KIT-time_series_baseline")
 
 # read in forecasts:
 forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/forecasts_to_plot.csv",

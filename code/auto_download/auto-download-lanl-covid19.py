@@ -62,9 +62,8 @@ def download_covid_zip_files(path):
 
 
 if __name__ == '__main__':
-    
     try:
-        path = sys.argv[1]
+        path = str(Path.cwd().joinpath("data-raw", "LANL"))
         download_covid_zip_files(path)
     except IndexError:
         path=str(Path.cwd().parent.parent.joinpath("data-raw", "LANL"))
