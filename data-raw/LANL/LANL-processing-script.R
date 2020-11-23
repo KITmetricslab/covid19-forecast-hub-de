@@ -32,7 +32,11 @@
 # Warnings can be ignored
 
 install.packages("tidyverse", lib="../../Rdeps")
-library(tidyverse)
+install.packages("MMWRweek", lib="../../Rdeps")
+install.packages("lubridate", lib="../../Rdeps")
+
+
+library(tidyverse, lib.loc="../../Rdeps")
 
 Sys.setlocale("LC_TIME", "C")
 
