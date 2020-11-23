@@ -29,7 +29,6 @@ jobs:
       run: |
         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
         sudo apt-get install libv8-3.14-dev r-base r-base-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev fish -y
-        sudo apt-get install r-cran-curl r-cran-openssl r-cran-xml2
 
     - name: Process LANL
       env:
