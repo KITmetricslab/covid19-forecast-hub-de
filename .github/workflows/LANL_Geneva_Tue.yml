@@ -34,25 +34,33 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       run: |
-        git checkout LANL_actions
-        mkdir Rdeps
-        python3 code/auto_download/auto-download-lanl-covid19.py
-        cd ./data-raw/LANL
-        Rscript LANL-processing-script.R       
+        #git checkout LANL_actions
+        #mkdir Rdeps
+        #python3 code/auto_download/auto-download-lanl-covid19.py
+        #cd ./data-raw/LANL
+        #Rscript LANL-processing-script.R    
+      
+    - name: Process Geneva
+      env:
+        AUTH: ${{ secrets.GITHUBTOKEN }}
+      run: |
+        git checkout Geneva_actions
+        python3 python code/auto_download/auto-download-geneva.py
+        cd ./data-raw/Geneva
+        Rscript Geneva-processing-script.R
         
     - name: Commit files
       env:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         #git config --local user.email "action@github.com"
-        #git config --local user.name "GitHub Action - RKI Update"
+        #git config --local user.name "GitHub Action - Geneva Forecasts"
         #git remote rm origin
         #git remote add origin https://${AUTH}@github.com/KITmetricslab/covid19-forecast-hub-de.git > /dev/null 2>&1
-        #git pull origin master
         #git add --all
-        #git commit -m "Daily RKI update"
+        #git commit -m "Weekly Geneva forecasts"
         
     - name: Push changes
       run: |
-        #git push --quiet --set-upstream origin HEAD:master
+        #git push --quiet --set-upstream origin HEAD:Geneva_actions
         #echo "pushed to github"
