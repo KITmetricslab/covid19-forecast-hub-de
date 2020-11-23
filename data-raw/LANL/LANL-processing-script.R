@@ -31,7 +31,7 @@
 
 # Warnings can be ignored
 
-install.packages("tidyverse")
+install.packages("tidyverse", lib="../../Rdeps)
 library(tidyverse)
 
 Sys.setlocale("LC_TIME", "C")
