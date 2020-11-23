@@ -41,10 +41,10 @@ source("../../code/processing-fxns/get_next_saturday.R")
 
 process_global_lanl_file <- function(lanl_filepath, country, abbr){
     
-    library(crayon, lib.loc="../../Rdeps"))
-    library(tidyverse, lib.loc="../../Rdeps"))
-    library(MMWRweek, lib.loc="../../Rdeps"))
-    library(lubridate, lib.loc="../../Rdeps"))
+    library(tidyverse)
+    library(MMWRweek)
+    library(lubridate)
+    #library(lubridate, lib.loc="../../Rdeps"))
     
     ## check this is an deaths file or not
     death_or_case <- ifelse(grepl("deaths", basename(lanl_filepath)), "death", "case") 
