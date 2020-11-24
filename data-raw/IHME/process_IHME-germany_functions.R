@@ -78,13 +78,16 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
   #leave data type as data.frame for compatibility with tidyverse
   #use utf-8 to keep Umlaut-characters
   data <-fread(path, stringsAsFactors = FALSE,data.table=FALSE,encoding="UTF-8")
+ 
+  #Get Baden-Wurttemberg (with umlaut u) and replace with u
+  data$location_name[grep("Baden-W",data$location_name)]<-"Baden-Wurttemberg"
+  
   #change ? to u
   #data$location_name<-gsub("?","u",data$location_name)
   
   #New Change in IHME location names, u is now Ã¼
-  data$location_name<-gsub("ü","u",data$location_name)
+  #data$location_name<-gsub("ü","u",data$location_name)
 
- 
   #forecast date is given from function now
   #forecast_date <- get_date(path)
   
