@@ -11,7 +11,10 @@
 
 source("process_geneva_file_germany.R")
 # make sure that English names of days and months are used
-Sys.setlocale(category = "LC_TIME", locale = "English")
+#Sys.setlocale(category = "LC_TIME", locale = "English")
+
+# this is necessary for Linux VMs
+Sys.setlocale("LC_TIME", "C")
 
 dir.create("../../data-processed/Geneva-DeterministicGrowth", showWarnings = FALSE)
 
