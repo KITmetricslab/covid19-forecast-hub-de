@@ -14,7 +14,7 @@ source("process_geneva_file_germany.R")
 #Sys.setlocale(category = "LC_TIME", locale = "English")
 
 # this is necessary for Linux VMs
-Sys.setlocale("LC_TIME", "C")
+Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 
 dir.create("../../data-processed/Geneva-DeterministicGrowth", showWarnings = FALSE)
 
