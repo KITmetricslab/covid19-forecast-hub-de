@@ -40,7 +40,7 @@ jobs:
         # Execute Scripts
         git checkout UCLA_actions
         python3 code/auto_download/auto-download-ucla.py
-        cd ./data-raw/UCLA_SuEIR
+        cd ./data-raw/UCLA-SuEIR
         Rscript UCLA-processing-script.R
         
         # Push to Github
