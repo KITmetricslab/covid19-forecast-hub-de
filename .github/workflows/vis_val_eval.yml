@@ -43,14 +43,12 @@ jobs:
         cd ./code/validation
         python3 ./get_commit_dates.py
         python3 ./validate_truth.py
-        python3 ./check_truth.py
         cd ../../
 
     - name: Evaluation
       run: |
         cd ./code/validation
         python3 ./validate_truth.py
-        python3 ./check_truth.py
 
     - name: Commit files
       env:
