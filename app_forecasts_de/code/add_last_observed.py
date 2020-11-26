@@ -43,8 +43,19 @@ temp.target_end_date = temp.saturday0
 # concat old forecasts_to_plot and newly added last observed values (0 wk ahead)
 df_new = pd.concat([df, temp])
 
-# adjust format
-df_new = df_new.sort_values(['forecast_date', 'target_end_date', 'location', 'target', 'model', 'type', 'quantile']).reset_index(drop=True)
+# sort models and adjust format
+models = df_new.model.unique().tolist()
+models.sort(key=str.casefold)
+
+ensembles = ['KITCOVIDhub-mean_ensemble', 'KITCOVIDhub-median_ensemble', 'KITCOVIDhub-inverse_wis_ensemble']
+baselines = [m for m in models if 'baseline' in m]
+individual_models = [m for m in models if m not in ensembles + baselines ]
+
+models = ensembles + individual_models +  baselines
+
+df_new.model = pd.Categorical(df_new.model, models, ordered=True)
+df_new = df_new.sort_values(['model', 'forecast_date', 'target_end_date', 'location', 'target', 'type', 'quantile']).reset_index(drop=True)
+
 df_new = df_new[['forecast_date', 'target', 'target_end_date', 'location', 'type',
        'quantile', 'value', 'timezero', 'model', 'truth_data_source',
        'shift_ECDC', 'shift_JHU', 'first_commit_date']]
