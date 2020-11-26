@@ -26,7 +26,7 @@ jobs:
     - name: Setup R
       run: |
         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
-        sudo apt-get install libv8-3.14-dev r-base r-base-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev fish -y --fix-missing
+        sudo apt-get install libv8-3.14-dev r-base r-base-dev libudunits2-dev libgdal-dev
         
     - name: Setup Git
       run: |
