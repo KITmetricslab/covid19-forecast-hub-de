@@ -2,6 +2,8 @@
 name: "Lanl_Geneva"
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * 2
   
 
 jobs:
