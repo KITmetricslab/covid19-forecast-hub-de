@@ -25,13 +25,23 @@ jobs:
         
     - name: Setup R
       run: |
-        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
-        sudo apt-get install libv8-3.14-dev r-base r-base-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev fish -y
+         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+         sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/'
+         sudo apt update
+         sudo apt install r-base
+         
+    - name: Setup Git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action - Weekly Forecasts"
 
     - name: Process LANL
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       run: |
+        
+        # TODO 
+        # ---------------------
         #git checkout LANL_actions
         #mkdir Rdeps
         #python3 code/auto_download/auto-download-lanl-covid19.py
@@ -42,23 +52,18 @@ jobs:
       env:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
+        # Execute Scripts
         git checkout Geneva_actions
         python3 code/auto_download/auto-download-geneva.py
         cd ./data-raw/Geneva
         Rscript Geneva-processing-script.R
         
-    - name: Commit files
-      env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
-      run: |
-        #git config --local user.email "action@github.com"
-        #git config --local user.name "GitHub Action - Geneva Forecasts"
-        #git remote rm origin
-        #git remote add origin https://${AUTH}@github.com/KITmetricslab/covid19-forecast-hub-de.git > /dev/null 2>&1
-        #git add --all
-        #git commit -m "Weekly Geneva forecasts"
+        # Push to Github
+        git remote rm origin
+        git remote add origin https://${AUTH}@github.com/KITmetricslab/covid19-forecast-hub-de.git > /dev/null 2>&1
+        git add --all
+        git commit -m "Weekly Geneva forecasts"
+        git push --quiet --set-upstream origin HEAD:Geneva_actions
+        echo "pushed to github"
         
-    - name: Push changes
-      run: |
-        #git push --quiet --set-upstream origin HEAD:Geneva_actions
-        #echo "pushed to github"
+        

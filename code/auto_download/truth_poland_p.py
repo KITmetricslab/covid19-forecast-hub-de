@@ -11,9 +11,10 @@ import pandas as pd
 from unidecode import unidecode
 import datetime
 import numpy as np
+import time
 
-#gc = pygsheets.authorize(service_account_env_var ='SHEETS_CREDS')
-gc = pygsheets.authorize(service_file='creds.json')
+gc = pygsheets.authorize(service_account_env_var ='SHEETS_CREDS')
+#gc = pygsheets.authorize(service_file='creds.json')
 a = gc.open_by_key('1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E')
 
 worksheet = a.worksheet('title','Wzrost w województwach')
@@ -41,6 +42,8 @@ for relevant_rows in [inc_case_rows, cum_case_rows, inc_death_rows, cum_death_ro
     
     for row in relevant_rows:
         rows.append(worksheet.get_row(row))
+        time.sleep(1)
+        print("hi")
         
     df = pd.DataFrame(rows[1:], columns=rows[0])
     
