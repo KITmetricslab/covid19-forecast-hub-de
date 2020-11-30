@@ -49,7 +49,7 @@ process_geneva_file <- function(geneva_filepath, forecast_date, country = "Germa
   }else{
     if(check_forecast_date != forecast_date) stop("forecast_date and date in file name differ.")
   }
-
+  
   dat <- read.csv(geneva_filepath)
 
   # restrict to US, format:

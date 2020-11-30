@@ -10,11 +10,15 @@ institional_affil: Universitaet Leipzig, IMISE
 team_model_designation: primary
 data_inputs: RKI and DIVI, ECDC, age distributions for cases and deaths from RKI as described in methods, case & ICU  & death counts
 methods: SECIR type model 
-methods_long: 2020-09-22 - present 		Allowing influx of compartment death from cases directly in addition to influx from compartment icu
-	2020-09-14 - 2020-09-21 	Input ECDC Data, including case and ICU predictions, using incident data for cumulative prediction instead of providing an independent cumulative fit as done previously
-	2020-07-21 - 2020-09-14 	instead of using age structure for death prediction using empirical weekly death rate / weekly ICU rate
+methods_long: 
+	2020-11-23 - present 		Simple adjustment of near-future-predictions by vertically shifting prediction of day/week zero to last observed value at day zero  
+	2020-11-16 - present		Quantifying variance from 	time-dependent death rate / time-dependent weekly ICU rate estimation into uncertainty of forecast
+	2020-11-02 - 2020-11-22		Infectivity simulated based on four scenarios of different lockdown-efficiencies
+	2020-09-22 - present		Allowing influx of compartment death from cases directly in addition to influx from compartment icu
+	2020-09-14 - present	 	Input ECDC Data, including case and ICU predictions, using incident data for cumulative prediction instead of providing directly results from independent cumulative fit as done previously
+	2020-07-21 - present	 	instead of using age structure for death prediction using empirical time-dependent death rate / time-dependent weekly ICU rate
 	2020-07-14 - 2020-07-20 	additionally including age structure for deaths
-	2020-06-22 - 2020-07-13  	Input RKI Data instead of ECDC data, output accounts for reporting delays and is compatible with EDCDC data.
+	2020-06-22 - 2020-09-21	  	Input RKI Data instead of ECDC data, output accounts for reporting delays and is compatible with EDCDC data.
     2020-06-15 - 2020-06-21  	Input ECDC Data
 	
 	Open ISSUES: Quantile for weekly incident forecast, constrain lower estimate of cumulative counts to last empirical value
