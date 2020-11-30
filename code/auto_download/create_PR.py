@@ -12,7 +12,7 @@ import os
 
 if __name__ == "__main__":
     
-    creds = os.environ['GITHUBTOKEN']
+    creds = os.environ['AUTH']
     base = "master"
     title = sys.argv[1]
     body =  "This PR was created by Github actions"
