@@ -50,8 +50,9 @@ jobs:
 
     - name: Evaluation
       run: |
-        cd ./code/validation
-        python3 ./validate_truth.py
+        cd ./evaluation
+        Rscript ./evaluate_forecasts.R
+        cd ../
 
     - name: Commit files
       env:
