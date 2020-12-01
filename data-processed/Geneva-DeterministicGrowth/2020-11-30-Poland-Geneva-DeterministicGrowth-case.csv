@@ -1,0 +1,24 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-11-30,"7 day ahead inc case",2020-12-07,"PL","Poland","point",NA,8746.86519524385
+2020-11-30,"6 day ahead inc case",2020-12-06,"PL","Poland","point",NA,9268.8946273193
+2020-11-30,"5 day ahead inc case",2020-12-05,"PL","Poland","point",NA,9822.07620015997
+2020-11-30,"4 day ahead inc case",2020-12-04,"PL","Poland","point",NA,10408.2689198183
+2020-11-30,"3 day ahead inc case",2020-12-03,"PL","Poland","point",NA,11029.4427286569
+2020-11-30,"2 day ahead inc case",2020-12-02,"PL","Poland","point",NA,11687.685125478
+2020-11-30,"1 day ahead inc case",2020-12-01,"PL","Poland","point",NA,12385.2081807124
+2020-11-30,"0 day ahead inc case",2020-11-30,"PL","Poland","observed",NA,11482
+2020-11-30,"-1 day ahead inc case",2020-11-29,"PL","Poland","observed",NA,15177
+2020-11-30,"7 day ahead cum case",2020-12-07,"PL","Poland","point",NA,1058423.44097739
+2020-11-30,"6 day ahead cum case",2020-12-06,"PL","Poland","point",NA,1049676.57578214
+2020-11-30,"5 day ahead cum case",2020-12-05,"PL","Poland","point",NA,1040407.68115483
+2020-11-30,"4 day ahead cum case",2020-12-04,"PL","Poland","point",NA,1030585.60495467
+2020-11-30,"3 day ahead cum case",2020-12-03,"PL","Poland","point",NA,1020177.33603485
+2020-11-30,"2 day ahead cum case",2020-12-02,"PL","Poland","point",NA,1009147.89330619
+2020-11-30,"1 day ahead cum case",2020-12-01,"PL","Poland","point",NA,997460.208180712
+2020-11-30,"0 day ahead cum case",2020-11-30,"PL","Poland","observed",NA,985075
+2020-11-30,"-1 day ahead cum case",2020-11-29,"PL","Poland","observed",NA,973593
+2020-11-30,"0 wk ahead inc case",2020-11-28,"PL","Poland","observed",NA,139154
+2020-11-30,"1 wk ahead inc case",2020-12-05,"PL","Poland","point",NA,81991.6811548256
+2020-11-30,"-1 wk ahead cum case",2020-11-21,"PL","Poland","observed",NA,819262
+2020-11-30,"0 wk ahead cum case",2020-11-28,"PL","Poland","observed",NA,958416
+2020-11-30,"1 wk ahead cum case",2020-12-05,"PL","Poland","point",NA,1040407.68115483

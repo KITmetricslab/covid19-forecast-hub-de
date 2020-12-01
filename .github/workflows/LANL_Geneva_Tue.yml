@@ -2,7 +2,8 @@
 name: "Lanl_Geneva"
 on:
   workflow_dispatch:
-  
+  schedule:
+    - cron: "0 7 * * 2"
 
 jobs:
   build:
@@ -25,9 +26,11 @@ jobs:
         
     - name: Setup R
       run: |
-        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
-        sudo apt-get install libv8-3.14-dev r-base r-base-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev fish -y
-        
+         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+         sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/'
+         sudo apt update
+         sudo apt install r-base
+         
     - name: Setup Git
       run: |
         git config --local user.email "action@github.com"
@@ -55,6 +58,7 @@ jobs:
         python3 code/auto_download/auto-download-geneva.py
         cd ./data-raw/Geneva
         Rscript Geneva-processing-script.R
+        cd ../../
         
         # Push to Github
         git remote rm origin
@@ -63,5 +67,10 @@ jobs:
         git commit -m "Weekly Geneva forecasts"
         git push --quiet --set-upstream origin HEAD:Geneva_actions
         echo "pushed to github"
+        
+        #create PR
+        cd ./code/auto_download
+        python3 create_PR.py "Weekly Geneva forecasts" "Geneva_actions"
+        cd ../../
         
         
