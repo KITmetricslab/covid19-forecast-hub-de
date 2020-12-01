@@ -1,5 +1,8 @@
-process_ucla_file <- function(ucla_filepath, forecast_date, country = "Germany", location = "GM", type = "death"){
+process_ucla_file <- function(ucla_filepath, truth_jhu_cum, forecast_date, country = "Germany", location = "GM", type = "death"){
 
+  # check forecast date
+  if(!(weekdays(forecast_date) %in% c("Saturday", "Sunday", "Monday"))) stop("Extraction function requires forecast day to be a Sat, Sun or Mon.")
+  
   # read in data:
   dat_orig <- read.csv(ucla_filepath, colClasses = list(Date = "Date"))
   # restrict to country:
@@ -50,8 +53,19 @@ process_ucla_file <- function(ucla_filepath, forecast_date, country = "Germany",
                           quantile = rep(c(NA, 0.025, 0.975), each = nrow(dat_country))
   )
   daily_inc$target <- paste(as.numeric(daily_inc$target_end_date - daily_inc$forecast_date), "day ahead inc", type)
+  
+  ### incident targets weekly
+  last_jhu_cum <- subset(truth_jhu_cum, weekdays(date) == "Saturday" &
+                        date <= forecast_date & date >= forecast_date - 7)
+  if(nrow(last_jhu_cum) != 1) stop("Please update JHU truth data.")
 
-  result <- rbind(weekly_cum, daily_cum, daily_inc)
+  weekly_inc <- subset(weekly_cum, type == "point")
+  weekly_inc <- weekly_inc[order(weekly_inc$target_end_date), ] # be sure that sorted
+  weekly_inc$target <- gsub("cum", "inc", weekly_inc$target)
+  weekly_inc$value[-1] <- diff(weekly_inc$value)
+  weekly_inc$value[1] <- weekly_inc$value[1] - last_jhu_cum$value
+
+  result <- rbind(weekly_cum, weekly_inc, daily_cum, daily_inc)
 
   return(result)
 }
