@@ -46,6 +46,7 @@ jobs:
         python3 code/auto_download/auto-download-ucla.py
         cd ./data-raw/UCLA-SuEIR
         Rscript UCLA-processing-script.R
+        cd ../../
         
         # Push to Github
         git remote rm origin
