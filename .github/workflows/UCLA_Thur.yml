@@ -52,3 +52,8 @@ jobs:
         git commit -m "Weekly UCLA forecasts"
         git push --quiet --set-upstream origin HEAD:UCLA_actions
         echo "pushed to github"
+        
+        #create PR
+        cd ./code/auto_download
+        python3 create_PR.py "Weekly UCLA forecasts" "UCLA_actions"
+        cd ../../
