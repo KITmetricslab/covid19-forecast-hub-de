@@ -25,9 +25,9 @@ seq_forecast_dates <- seq(from = min(forecast_dates, na.rm = TRUE),
                           to = max(forecast_dates, na.rm = TRUE), by = 1)
 mondays <- seq_forecast_dates[weekdays(seq_forecast_dates) == "Monday"]
 
-# already_processed0 <- list.files(processed_path)
-# already_processed <- substr(already_processed0[grepl("2020-", already_processed0)], 1, 10)
-# dirs_to_process <- all_dirs[!(all_dirs %in% already_processed)]
+already_processed0 <- list.files(processed_path)
+already_processed <- substr(already_processed0[grepl("2020-", already_processed0)], 1, 10)
+mondays <- mondays[!(as.character(mondays) %in% already_processed)]
 
 
 fips_codes_germany <-  c("GM01", "GM02", "GM03", "GM04",
