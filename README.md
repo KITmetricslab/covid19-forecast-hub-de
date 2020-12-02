@@ -3,6 +3,7 @@
 ![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/MZ/badge.svg)
 ![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/Visualization/Validation/Evaluation/badge.svg)
 ![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/Lanl_Geneva/badge.svg)
+![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/UCLA/badge.svg)
 
 # German and Polish COVID-19 Forecast Hub
 
