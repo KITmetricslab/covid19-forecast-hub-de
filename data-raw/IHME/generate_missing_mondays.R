@@ -1,3 +1,7 @@
+# Takes already processed IHME files and generates forecasts for missing Mondays
+# Jakob Ketterer
+# December 2020
+
 Sys.setlocale(category = "LC_TIME", locale = "English")
 
 countries <- c("Germany", "Poland")
