@@ -2,7 +2,8 @@
 name: "Lanl_Geneva"
 on:
   workflow_dispatch:
-  
+  schedule:
+    - cron: "0 7 * * 2"
 
 jobs:
   build:
@@ -57,6 +58,7 @@ jobs:
         python3 code/auto_download/auto-download-geneva.py
         cd ./data-raw/Geneva
         Rscript Geneva-processing-script.R
+        cd ../../
         
         # Push to Github
         git remote rm origin
@@ -65,5 +67,10 @@ jobs:
         git commit -m "Weekly Geneva forecasts"
         git push --quiet --set-upstream origin HEAD:Geneva_actions
         echo "pushed to github"
+        
+        #create PR
+        cd ./code/auto_download
+        python3 create_PR.py "Weekly Geneva forecasts" "Geneva_actions"
+        cd ../../
         
         

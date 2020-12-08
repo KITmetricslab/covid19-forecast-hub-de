@@ -1,0 +1,24 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-11-28,"7 day ahead inc death",2020-12-05,"PL","Poland","point",NA,577.398986193126
+2020-11-28,"6 day ahead inc death",2020-12-04,"PL","Poland","point",NA,568.966817153952
+2020-11-28,"5 day ahead inc death",2020-12-03,"PL","Poland","point",NA,560.534648114783
+2020-11-28,"4 day ahead inc death",2020-12-02,"PL","Poland","point",NA,552.102479075606
+2020-11-28,"3 day ahead inc death",2020-12-01,"PL","Poland","point",NA,543.670310036432
+2020-11-28,"2 day ahead inc death",2020-11-30,"PL","Poland","point",NA,535.238140997259
+2020-11-28,"1 day ahead inc death",2020-11-29,"PL","Poland","point",NA,526.805971958085
+2020-11-28,"0 day ahead inc death",2020-11-28,"PL","Poland","observed",NA,579
+2020-11-28,"-1 day ahead inc death",2020-11-27,"PL","Poland","observed",NA,580
+2020-11-28,"7 day ahead cum death",2020-12-05,"PL","Poland","point",NA,20011.7173535292
+2020-11-28,"6 day ahead cum death",2020-12-04,"PL","Poland","point",NA,19434.3183673361
+2020-11-28,"5 day ahead cum death",2020-12-03,"PL","Poland","point",NA,18865.3515501822
+2020-11-28,"4 day ahead cum death",2020-12-02,"PL","Poland","point",NA,18304.8169020674
+2020-11-28,"3 day ahead cum death",2020-12-01,"PL","Poland","point",NA,17752.7144229918
+2020-11-28,"2 day ahead cum death",2020-11-30,"PL","Poland","point",NA,17209.0441129553
+2020-11-28,"1 day ahead cum death",2020-11-29,"PL","Poland","point",NA,16673.8059719581
+2020-11-28,"0 day ahead cum death",2020-11-28,"PL","Poland","observed",NA,16147
+2020-11-28,"-1 day ahead cum death",2020-11-27,"PL","Poland","observed",NA,15568
+2020-11-28,"0 wk ahead inc death",2020-11-28,"PL","Poland","observed",NA,3433
+2020-11-28,"1 wk ahead inc death",2020-12-05,"PL","Poland","point",NA,3864.71735352924
+2020-11-28,"-1 wk ahead cum death",2020-11-21,"PL","Poland","observed",NA,12714
+2020-11-28,"0 wk ahead cum death",2020-11-28,"PL","Poland","observed",NA,16147
+2020-11-28,"1 wk ahead cum death",2020-12-05,"PL","Poland","point",NA,20011.7173535292
