@@ -29,7 +29,8 @@ filepaths <-
 
 #remove files that are not main model
 filepaths<-filepaths[-c(grep("Best",filepaths),grep("Worse",filepaths),
-                        grep("best",filepaths),grep("worse",filepaths))]
+                        grep("best",filepaths),grep("worse",filepaths),
+                        grep("vaccine",filepaths))]
 for(country in c("Germany","Poland"))
 {
   #check for IHME first forecast date
