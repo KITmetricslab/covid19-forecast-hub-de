@@ -35,6 +35,8 @@ filename,first_commit,latest_commit
 2020-11-23-Germany-FIAS_FZJ-Epi1Ger.csv,2020-11-23,2020-11-23
 2020-11-30-Germany-FIAS_FZJ-Epi1Ger-case.csv,2020-11-30,2020-11-30
 2020-11-30-Germany-FIAS_FZJ-Epi1Ger.csv,2020-11-30,2020-11-30
+2020-12-07-Germany-FIAS_FZJ-Epi1Ger-case.csv,2020-12-07,2020-12-07
+2020-12-07-Germany-FIAS_FZJ-Epi1Ger.csv,2020-12-07,2020-12-07
 2020-04-15-Germany-Geneva-DeterministicGrowth.csv,2020-05-08,2020-11-13
 2020-04-15-Poland-Geneva-DeterministicGrowth.csv,2020-08-04,2020-11-13
 2020-04-16-Germany-Geneva-DeterministicGrowth.csv,2020-05-08,2020-11-13
@@ -865,6 +867,8 @@ filename,first_commit,latest_commit
 2020-11-23-Poland-ICM-agentModel.csv,2020-11-24,2020-11-24
 2020-11-30-Poland-ICM-agentModel-case.csv,2020-11-30,2020-11-30
 2020-11-30-Poland-ICM-agentModel.csv,2020-11-30,2020-11-30
+2020-12-07-Poland-ICM-agentModel-case.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-ICM-agentModel.csv,2020-12-08,2020-12-08
 2020-07-04-Germany-IHME-CurveFit.csv,2020-08-06,2020-11-23
 2020-07-04-Poland-IHME-CurveFit.csv,2020-08-06,2020-08-06
 2020-07-11-Germany-IHME-CurveFit.csv,2020-08-06,2020-11-23
@@ -933,6 +937,10 @@ filename,first_commit,latest_commit
 2020-11-30-Germany-ITWW-county_repro.csv,2020-12-01,2020-12-02
 2020-11-30-Poland-ITWW-county_repro-case.csv,2020-12-02,2020-12-02
 2020-11-30-Poland-ITWW-county_repro.csv,2020-12-02,2020-12-02
+2020-12-07-Germany-ITWW-county_repro-case.csv,2020-12-08,2020-12-08
+2020-12-07-Germany-ITWW-county_repro.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-ITWW-county_repro-case.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-ITWW-county_repro.csv,2020-12-08,2020-12-08
 2020-03-29-Germany-Imperial-ensemble1.csv,2020-05-09,2020-05-20
 2020-04-05-Germany-Imperial-ensemble1.csv,2020-05-09,2020-05-20
 2020-04-05-Poland-Imperial-ensemble1.csv,2020-07-30,2020-07-30
@@ -1187,6 +1195,10 @@ filename,first_commit,latest_commit
 2020-11-30-Germany-KIT-baseline.csv,2020-12-01,2020-12-01
 2020-11-30-Poland-KIT-baseline-case.csv,2020-12-01,2020-12-01
 2020-11-30-Poland-KIT-baseline.csv,2020-12-01,2020-12-01
+2020-12-07-Germany-KIT-baseline-case.csv,2020-12-08,2020-12-08
+2020-12-07-Germany-KIT-baseline.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-KIT-baseline-case.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-KIT-baseline.csv,2020-12-08,2020-12-08
 2020-10-12-Germany-KIT-time_series_baseline-case.csv,2020-10-21,2020-10-21
 2020-10-12-Germany-KIT-time_series_baseline.csv,2020-10-21,2020-10-21
 2020-10-12-Poland-KIT-time_series_baseline-case.csv,2020-10-21,2020-11-02
@@ -1219,6 +1231,10 @@ filename,first_commit,latest_commit
 2020-11-30-Germany-KIT-time_series_baseline.csv,2020-12-01,2020-12-01
 2020-11-30-Poland-KIT-time_series_baseline-case.csv,2020-12-01,2020-12-01
 2020-11-30-Poland-KIT-time_series_baseline.csv,2020-12-01,2020-12-01
+2020-12-07-Germany-KIT-time_series_baseline-case.csv,2020-12-08,2020-12-08
+2020-12-07-Germany-KIT-time_series_baseline.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-KIT-time_series_baseline-case.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-KIT-time_series_baseline.csv,2020-12-08,2020-12-08
 2020-10-12-Germany-KITCOVIDhub-inverse_wis_ensemble-case.csv,2020-11-04,2020-11-04
 2020-10-12-Germany-KITCOVIDhub-inverse_wis_ensemble.csv,2020-11-04,2020-11-04
 2020-10-12-Poland-KITCOVIDhub-inverse_wis_ensemble-case.csv,2020-11-04,2020-11-04
@@ -1345,6 +1361,8 @@ filename,first_commit,latest_commit
 2020-11-30-Germany-KITCOVIDhub-median_ensemble.csv,2020-12-01,2020-12-02
 2020-11-30-Poland-KITCOVIDhub-median_ensemble-case.csv,2020-12-01,2020-12-02
 2020-11-30-Poland-KITCOVIDhub-median_ensemble.csv,2020-12-01,2020-12-01
+2020-12-06-Germany-Karlen-pypm-case.csv,2020-12-07,2020-12-07
+2020-12-06-Germany-Karlen-pypm.csv,2020-12-07,2020-12-07
 2020-04-26-Germany-LANL-GrowthRate-case.csv,2020-08-06,2020-08-06
 2020-04-26-Germany-LANL-GrowthRate.csv,2020-05-09,2020-05-25
 2020-04-26-Poland-LANL-GrowthRate-case.csv,2020-08-06,2020-08-06
@@ -1597,6 +1615,14 @@ filename,first_commit,latest_commit
 2020-11-29-Germany-LANL-GrowthRate.csv,2020-12-01,2020-12-01
 2020-11-29-Poland-LANL-GrowthRate-case.csv,2020-12-01,2020-12-01
 2020-11-29-Poland-LANL-GrowthRate.csv,2020-12-01,2020-12-01
+2020-12-02-Germany-LANL-GrowthRate-case.csv,2020-12-08,2020-12-08
+2020-12-02-Germany-LANL-GrowthRate.csv,2020-12-08,2020-12-08
+2020-12-02-Poland-LANL-GrowthRate-case.csv,2020-12-08,2020-12-08
+2020-12-02-Poland-LANL-GrowthRate.csv,2020-12-08,2020-12-08
+2020-12-06-Germany-LANL-GrowthRate-case.csv,2020-12-08,2020-12-08
+2020-12-06-Germany-LANL-GrowthRate.csv,2020-12-08,2020-12-08
+2020-12-06-Poland-LANL-GrowthRate-case.csv,2020-12-08,2020-12-08
+2020-12-06-Poland-LANL-GrowthRate.csv,2020-12-08,2020-12-08
 2020-06-15-Germany-LeipzigIMISE-SECIR.csv,2020-07-21,2020-07-21
 2020-06-22-Germany-LeipzigIMISE-SECIR.csv,2020-07-21,2020-07-21
 2020-06-29-Germany-LeipzigIMISE-SECIR.csv,2020-07-21,2020-07-21
@@ -1636,6 +1662,7 @@ filename,first_commit,latest_commit
 2020-11-22-Germany-LeipzigIMISE-SECIR-ICU.csv,2020-11-24,2020-11-24
 2020-11-23-Germany-LeipzigIMISE-SECIR-case.csv,2020-11-24,2020-11-25
 2020-11-23-Germany-LeipzigIMISE-SECIR.csv,2020-11-24,2020-11-24
+2020-11-29-Germany-LeipzigIMISE-SECIR-ICU.csv,2020-12-02,2020-12-02
 2020-11-30-Germany-LeipzigIMISE-SECIR-case.csv,2020-12-01,2020-12-01
 2020-11-30-Germany-LeipzigIMISE-SECIR.csv,2020-12-01,2020-12-01
 2020-11-16-Poland-MIMUW-StochSEIR-case.csv,2020-11-18,2020-11-18
@@ -1728,6 +1755,8 @@ filename,first_commit,latest_commit
 2020-11-22-Poland-MIT_CovidAnalytics-DELPHI.csv,2020-11-23,2020-11-23
 2020-11-30-Poland-MIT_CovidAnalytics-DELPHI-case.csv,2020-11-30,2020-11-30
 2020-11-30-Poland-MIT_CovidAnalytics-DELPHI.csv,2020-11-30,2020-11-30
+2020-12-07-Poland-MIT_CovidAnalytics-DELPHI-case.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-MIT_CovidAnalytics-DELPHI.csv,2020-12-08,2020-12-08
 2020-09-07-Poland-MOCOS-agent1-case.csv,2020-09-08,2020-09-11
 2020-09-07-Poland-MOCOS-agent1.csv,2020-09-08,2020-09-11
 2020-09-14-Poland-MOCOS-agent1-case.csv,2020-09-13,2020-09-13
@@ -1838,6 +1867,10 @@ filename,first_commit,latest_commit
 2020-11-30-Germany-USC-SIkJalpha.csv,2020-12-02,2020-12-02
 2020-11-30-Poland-USC-SIkJalpha-case.csv,2020-12-02,2020-12-02
 2020-11-30-Poland-USC-SIkJalpha.csv,2020-12-02,2020-12-02
+2020-12-07-Germany-USC-SIkJalpha-case.csv,2020-12-08,2020-12-08
+2020-12-07-Germany-USC-SIkJalpha.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-USC-SIkJalpha-case.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-USC-SIkJalpha.csv,2020-12-08,2020-12-08
 2020-04-03-Germany-YYG-ParamSearch.csv,2020-05-11,2020-05-16
 2020-04-04-Germany-YYG-ParamSearch.csv,2020-05-11,2020-05-25
 2020-04-05-Germany-YYG-ParamSearch.csv,2020-05-11,2020-05-25
@@ -2236,6 +2269,12 @@ filename,first_commit,latest_commit
 2020-11-30-Germany-epiforecasts-EpiExpert.csv,2020-12-01,2020-12-01
 2020-11-30-Poland-epiforecasts-EpiExpert-case.csv,2020-12-01,2020-12-01
 2020-11-30-Poland-epiforecasts-EpiExpert.csv,2020-12-01,2020-12-01
+2020-12-07-Germany-epiforecasts-EpiExpert-case.csv,2020-12-08,2020-12-08
+2020-12-07-Germany-epiforecasts-EpiExpert.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-epiforecasts-EpiExpert-case.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-epiforecasts-EpiExpert.csv,2020-12-08,2020-12-08
+2020-12-07-Germany-epiforecasts-EpiNow2-secondary.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-epiforecasts-EpiNow2-secondary.csv,2020-12-08,2020-12-08
 2020-10-12-Germany-epiforecasts-EpiNow2-case.csv,2020-10-13,2020-10-14
 2020-10-12-Germany-epiforecasts-EpiNow2.csv,2020-10-13,2020-10-14
 2020-10-12-Poland-epiforecasts-EpiNow2-case.csv,2020-10-13,2020-10-14
@@ -2268,3 +2307,7 @@ filename,first_commit,latest_commit
 2020-11-30-Germany-epiforecasts-EpiNow2.csv,2020-12-01,2020-12-01
 2020-11-30-Poland-epiforecasts-EpiNow2-case.csv,2020-12-01,2020-12-01
 2020-11-30-Poland-epiforecasts-EpiNow2.csv,2020-12-01,2020-12-01
+2020-12-07-Germany-epiforecasts-EpiNow2-case.csv,2020-12-08,2020-12-08
+2020-12-07-Germany-epiforecasts-EpiNow2.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-epiforecasts-EpiNow2-case.csv,2020-12-08,2020-12-08
+2020-12-07-Poland-epiforecasts-EpiNow2.csv,2020-12-08,2020-12-08
