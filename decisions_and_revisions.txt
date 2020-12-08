@@ -9,7 +9,8 @@ Wed 21 Oct: LeipzigIMISE-SECIR omitted from ensembles as PR accidentially did no
 Tue 27 Oct: LeipzigIMISE-SECIR and ITWW-county_repro omitted from ensembles due to extremely low forecast uncertainty. LANL-growthRate omitted from Germany ensembles due to unrealistically low forecasts.
 Tue 4 Nov: LANL omitted from ensemble as last available forecast dated from Wed 28 Oct. KIT-time_series_baseline omitted due to excessively wide uncertainty bands.
 Wed 11 Nov: Ensemble only created on Wednesday to be able to include MOCOS forecasts. MIT cumulative forecasts excluded as much too sharp relative to incidence forecasts. ICM forecast not included as forecasts seem shifted by one week. LeipzigIMISE forecasts excluded due to missingness of quantiles for incident forecasts and unlikely non-monotonic pattern over next four weeks.
-Tue 1 Dec: ITWW not included in deaths, Germany due to strong misalignment with past values. KIT-time_series_baseline excluded from due to unrealistically large values for several quantities.
+Tue 1 Dec: ITWW not included in deaths, Germany due to strong misalignment with past values. KIT-time_series_baseline excluded due to unrealistically large values for several quantities.
+Tue 8 Dec: KIT-time_series_baseline excluded from death forecasts due to unplausible behaviour. ICM model excluded due to very pronounced divergence from other models.
 
 ### Documentation of forecast revisions:
 
@@ -37,3 +38,4 @@ Wed 25 Nov: Removing ITWW from Germany case ensemble due to implausibly high val
 Wed 2 Dec: MIMUW forecast added late.
 Wed 2 Dec: Adding FIAS/FZJ and Leipzig forecasts back into Germany/deaths ensemble after FIAS/FZJ team confirmed that forecast was considered sound. Also adding Leipzig to incident cases from which it had been missing accidentially. Time series baseline removed as values unrealistically large for some quantities.
 Wed 2 Dec: Revised extraction scripts for USC. Now always using JHU-based forecasts also shown in USC dashboard at national level. Using the ECDC-based forecasts only at Bundesland level as they are not always available.
+Tue 8 Dec: MOCOS model arrived late (~18:45)
