@@ -406,7 +406,8 @@ plot_scores <- function(scores,
                         width = 0.8,
                         location_legend = "left",
                         display = "temporal",
-                        shifts = c(0, 2, -2, 1, -1)){
+                        shifts = c(0, 2, -2, 1, -1),
+                        shift.coverage = 0.2){
 
 
   if(!selected_truth %in% names(scores)){
@@ -492,8 +493,8 @@ plot_scores <- function(scores,
       # add coverages:
       for(i in 1:length(models)){
         ind <- which(mean_scores$model == models[i])
-        points(i - 0.2, mean_scores$coverage.0.5[ind], col = cols[i], type = "h", lwd = 5)
-        points(i + 0.2, mean_scores$coverage.0.95[ind], col = modify_alpha(cols[i], alpha = alpha.col), type = "h", lwd = 5)
+        points(i - shift.coverage, mean_scores$coverage.0.5[ind], col = cols[i], type = "h", lwd = 5)
+        points(i + shift.coverage, mean_scores$coverage.0.95[ind], col = modify_alpha(cols[i], alpha = alpha.col), type = "h", lwd = 5)
       }
     }
 
