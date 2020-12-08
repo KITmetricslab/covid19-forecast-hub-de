@@ -27,30 +27,65 @@ col_to_date <- function(col) {
 #'
 #' @return a data.frame in quantile format
 
-process_usc_file <- function(usc_filepath, forecast_date, truth, country = "Germany", location = "GM", type = "death"){
+process_usc_file <- function(monday, truth, country = "Germany", location = "GM", type = "death"){
   if(length(country) != length(location)) stop("country and location need to have the same length.")
+  
+  # run through locations:
   for(i in 1:length(country)){
-    to_add <- process_usc_file0(usc_filepath = usc_filepath,
-                                forecast_date = forecast_date,
-                                truth = truth,
-                                country = country[i],
-                                location = location[i],
-                                type = type)
+    to_add <- NULL
+    # counter for moving back if no file available:
+    j <- 0
+    # try to process until a suitable file is found:
+    while (is.null(to_add) & j <= 5) {
+      to_add <- process_usc_file0(forecast_date = monday - j,
+                                  truth = truth,
+                                  country = country[i],
+                                  location = location[i],
+                                  type = type)
+      
+      if(is.null(to_add) & j < 5) cat(country[i], ": No file or no entries found for", as.character(monday - j),
+                                          "Trying previous day...\n")
+      if(is.null(to_add) & j == 5) cat("Giving up.\n")
+      
+      j <- j + 1
+    }
+    
     if(i == 1){
       ret <- to_add
     }else{
       ret <- rbind(ret, to_add)
     }
   }
+  
+  # set forecast date to Monday (may not always be the case if files were missing)
+  if(!is.null(ret)) ret$forecast_date <- monday
+  
   return(ret)
 }
 
-process_usc_file0 <- function(usc_filepath, forecast_date, truth, country = "Germany", location = "GM", type = "death"){
+process_usc_file0 <- function(forecast_date, truth, country = "Germany", location = "GM", type = "death"){
 
+  # choose where to look for forecats: national level taken from global* files, regional level from other* files
+  if(location %in% c("GM", "PL")){
+    usc_filepath <- paste0(forecast_date, "/global_forecasts_", type, "s.csv")
+  }else{
+    usc_filepath <- paste0(forecast_date, "/other_forecasts_", type, "s.csv")
+  }
+  
+  # if file is missing: return NULL. Wrapper will then jump to next file.
+  if(!file.exists(usc_filepath)){
+    # cat("File", usc_filepath, "does not exist, skip processing.")
+    return(NULL)
+  }
+  
   # read in data:
   dat_orig <- read.csv(usc_filepath)
   # restrict to country:
   dat_country <- subset(dat_orig, Country == country)
+  
+  if(nrow(dat_country) == 0){
+    return(NULL)
+  }
 
   # restrict truth to country
   truth <- truth[truth$location == location, ]
@@ -61,10 +96,17 @@ process_usc_file0 <- function(usc_filepath, forecast_date, truth, country = "Ger
     cum_value = as.numeric(dat_country[1, -1:-2])# cum deaths
   )
 
-  # check that truth data agrees with first entries of USC files:
+  # sometimes dates are shifted by one wrt truth data. Correct this if possible:
+  shifted_truth_to_check <- truth[truth$date == min(dat_country_long$target_end_date) + 1, "value"]
+  if(dat_country_long$cum_value[which.min(dat_country_long$target_end_date)] == shifted_truth_to_check){
+    cat("Corrected mismatch with truth data in ", location, ", ", as.character(forecast_date), "\n")
+    dat_country_long$target_end_date <- dat_country_long$target_end_date + 1
+  }
+  
+  # check that truth data now agrees with first entries of USC files:
   truth_to_check <- truth[truth$date == min(dat_country_long$target_end_date), "value"]
   if(dat_country_long$cum_value[which.min(dat_country_long$target_end_date)] != truth_to_check){
-    warning("Mismatch with truth data in", location, " - forecast_date:", forecast_date)
+    warning("Mismatch with truth data in ", location, " - forecast_date: ", forecast_date)
   }
 
   # add last 14 truth values:
@@ -141,9 +183,9 @@ process_usc_file0 <- function(usc_filepath, forecast_date, truth, country = "Ger
   # pool:
   result <- rbind(weekly_inc, weekly_cum, daily_inc, daily_cum)
 
-  # remove superfluous observed values and NAs:
-  allowed_targets <- c(paste(-1:100, "day ahead inc", type),
-                       paste(-1:100, "day ahead cum", type),
+  # remove superfluous observed values and NAs. Switched to using only week-ahead targets:
+  allowed_targets <- c(# paste(-1:100, "day ahead inc", type),
+                       # paste(-1:100, "day ahead cum", type),
                        paste(-1:30, "wk ahead inc", type),
                        paste(-1:30, "wk ahead cum", type))
 

@@ -11,9 +11,11 @@ team_model_designation: primary
 data_inputs: RKI and DIVI, ECDC, age distributions for cases and deaths from RKI as described in methods, case & ICU  & death counts
 methods: SECIR type model 
 methods_long: 
+	2020-11-30 - present		Longer MCMC Chains to better explore parameter space
+	2020-11-30 - present		Prior for mean of time-dependent variables last estimated value instead of mean of last four
 	2020-11-23 - present 		Simple adjustment of near-future-predictions by vertically shifting prediction of day/week zero to last observed value at day zero  
 	2020-11-16 - present		Quantifying variance from 	time-dependent death rate / time-dependent weekly ICU rate estimation into uncertainty of forecast
-	2020-11-02 - 2020-11-22		Infectivity simulated based on four scenarios of different lockdown-efficiencies
+	2020-11-02 - 2020-11-22		Infectivity simulated based on multiple scenarios of different lockdown-efficiencies, 2020-11-02 -2020-11-15 four scenarious integrated in a single forecast, 2020-11-16 2020-11-16 one scenario integrated
 	2020-09-22 - present		Allowing influx of compartment death from cases directly in addition to influx from compartment icu
 	2020-09-14 - present	 	Input ECDC Data, including case and ICU predictions, using incident data for cumulative prediction instead of providing directly results from independent cumulative fit as done previously
 	2020-07-21 - present	 	instead of using age structure for death prediction using empirical time-dependent death rate / time-dependent weekly ICU rate
