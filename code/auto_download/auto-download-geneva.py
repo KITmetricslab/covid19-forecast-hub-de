@@ -55,7 +55,7 @@ if __name__ == "__main__":
 
     ############ url generation and download of files
     # root url
-    root = "https://renkulab.io/gitlab/covid-19/covid-19-forecast/-/raw/master/data/ECDC/raw_prediction/"
+    root = "https://renkulab.io/gitlab/covid-19/covid-19-forecast/-/raw/31ec01cf018211a8240014c4c1b6bb9c7f67771c/data/ECDC/raw_prediction/"
 
     # generate date specific death forecast url
     deaths_file_names = [deaths_prefix + date.strftime("%Y_%m_%d") + ".csv" for date in deaths_date_list]
