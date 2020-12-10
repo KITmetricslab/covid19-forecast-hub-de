@@ -3,7 +3,7 @@ name: "UCLA"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 17 * * 2"
+    - cron: "0 17 * * 3"
   
 
 jobs:
