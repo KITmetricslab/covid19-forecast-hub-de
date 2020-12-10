@@ -55,7 +55,7 @@ if __name__ == "__main__":
 
     ############ url generation and download of files
     # root url
-    root = "https://renkulab.io/gitlab/covid-19/covid-19-forecast/-/raw/master/data/ECDC/raw_prediction/"
+    root = "https://renkulab.io/gitlab/covid-19/covid-19-forecast/-/raw/31ec01cf018211a8240014c4c1b6bb9c7f67771c/data/ECDC/raw_prediction/"
 
     # generate date specific death forecast url
     deaths_file_names = [deaths_prefix + date.strftime("%Y_%m_%d") + ".csv" for date in deaths_date_list]
@@ -72,7 +72,19 @@ if __name__ == "__main__":
     # download and safe csv files
     urls = deaths_urls + cases_urls
     dir_names = deaths_dirs + cases_dirs
+    dates_list = deaths_date_list + cases_date_list
 
-    for url, dir_name in zip(urls, dir_names):
-        urllib.request.urlretrieve(url, dir_name)
-        print("Downloaded and saved forecast to", dir_name)
+    # download and safe csv files
+    errors = False
+    for url, dir_name, date in zip(urls, dir_names, dates_list):
+        try:
+            urllib.request.urlretrieve(url, dir_name)
+            print(f"Downloaded forecast from {date.date()} and saved it to", dir_name)
+        except urllib.error.URLError as e:
+            print(f"URL-ERROR: Download failed for {date.date()}. The file probably doesn't exist in the Geneva repo yet OR the root URL may have changed.")
+            errors = True
+
+    if errors:
+        print("\n↯ Errors occured while downloading Geneva forecasts! See download history for details!\n")
+    else:
+        print("\n✓ No errors occured\n")
