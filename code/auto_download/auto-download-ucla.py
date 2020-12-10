@@ -56,14 +56,18 @@ if __name__ == "__main__":
     # download and safe csv files
     errors = False
     for url, dir_name, date in zip(urls, dir_names, date_list):
-        try:
-            urllib.request.urlretrieve(url, dir_name)
-            print(f"Downloaded forecast from {date.date()} and saved it to", dir_name)
-        except urllib.error.URLError as e:
-            print(f"URL-ERROR: Download failed for {date.date()}. The file probably doesn't exist in the UCLA repo yet.")
-            errors = True
+        urllib.request.urlretrieve(url, dir_name)
+        print(f"Downloaded forecast from {date.date()} and saved it to", dir_name)
+        
+    # catch URL Errors: 
+    #     try:
+    #         urllib.request.urlretrieve(url, dir_name)
+    #         print(f"Downloaded forecast from {date.date()} and saved it to", dir_name)
+    #     except urllib.error.URLError as e:
+    #         print(f"URL-ERROR: Download failed for {date.date()}. The file probably doesn't exist in the UCLA repo yet.")
+    #         errors = True
 
-    if errors:
-        print("\n↯ Errors occured while downloading UCLA forecasts! See download history for details!\n")
-    else:
-        print("\n✓ No errors occured\n")
+    # if errors:
+    #     print("\n↯ Errors occured while downloading UCLA forecasts! See download history for details!\n")
+    # else:
+    #     print("\n✓ No errors occured\n")
