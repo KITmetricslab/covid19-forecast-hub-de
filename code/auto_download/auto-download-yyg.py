@@ -48,8 +48,12 @@ if __name__ == "__main__":
         PATH = DIR + FILENAME
 
         # download and safe raw file
-        try:
-            urllib.request.urlretrieve(URL, PATH)
-            print("Successfully downloaded", FILENAME, "and saved it to", DIR)
-        except:
-            print("Error downloading", FILENAME, ". It probably doesn't exist in the repo yet.")
+        urllib.request.urlretrieve(URL, PATH)
+        print("Successfully downloaded", FILENAME, "and saved it to", DIR)
+        
+        # catch URL Errors: 
+        # try:
+        #     urllib.request.urlretrieve(URL, PATH)
+        #     print("Successfully downloaded", FILENAME, "and saved it to", DIR)
+        # except:
+        #     print("Error downloading", FILENAME, ". It probably doesn't exist in the repo yet.")
