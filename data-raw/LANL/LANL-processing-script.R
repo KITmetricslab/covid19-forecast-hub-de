@@ -18,23 +18,12 @@
 ## adapted to changes in filenames
 ## remove causes for warnings
 ## Changes in LANL output format
-## 1) separation in daily and weekly forecast files
-## 2) change in colnames for daily files as of 2020-10-28
-    # Details:
-    # old colname -> newcolname
-    # dates -> dat
-    # simple_countries -> key
-    # countries -> name
-    # _ -> big_group  
 ## Jakob Ketterer
 ## November 2020
 
-# Warnings can be ignored
-
-#install.packages("MMWRweek", lib="../../Rdeps")
-#install.packages("lubridate", lib="../../Rdeps")
-
-library(tidyverse)
+## Replace packages with base-R
+## Jakob Ketterer
+## December 2020
 
 Sys.setlocale("LC_TIME", "C")
 
@@ -84,9 +73,11 @@ for(dat in dates){
       }
 
       if (!(is.null(final_frame))){
-        write_csv(final_frame,
-                  paste0("../../data-processed/LANL-GrowthRate/", dat,
-                       "-", combination[1], "-LANL-GrowthRate.csv"))
+        write.csv(final_frame,
+                  file=paste0("../../data-processed/LANL-GrowthRate/", dat,
+                       "-", combination[1], "-LANL-GrowthRate.csv"),
+                  quote = FALSE,
+                  row.names = FALSE)
       }
 
 
@@ -118,9 +109,11 @@ for(dat in dates){
       }
 
       if (!(is.null(final_frame))){
-        write_csv(final_frame,
-                  paste0("../../data-processed/LANL-GrowthRate/", dat,
-                         "-", combination[1], "-LANL-GrowthRate-case.csv"))
+        write.csv(final_frame,
+                  file=paste0("../../data-processed/LANL-GrowthRate/", dat,
+                         "-", combination[1], "-LANL-GrowthRate-case.csv"), 
+                  quote = FALSE,
+                  row.names = FALSE)
       }
   }
 }

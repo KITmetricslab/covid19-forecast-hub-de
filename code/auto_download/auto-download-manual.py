@@ -10,8 +10,11 @@ if __name__ == "__main__":
     file_name = "pred_world_11-15.csv"
     dir_name = os.path.join("./data-raw/UCLA-SuEIR", file_name)
 
-    try:
-        urllib.request.urlretrieve(url, dir_name)
-        print("Downloaded and saved forecast to", dir_name)
-    except:
-        print("Download failed for", file_name, ". The file probably doesn't exist in the UCLA repo yet.")
+    urllib.request.urlretrieve(url, dir_name)
+    print("Downloaded and saved forecast to", dir_name)
+
+    # try:
+    #     urllib.request.urlretrieve(url, dir_name)
+    #     print("Downloaded and saved forecast to", dir_name)
+    # except:
+    #     print("Download failed for", file_name, ". The file probably doesn't exist.")
