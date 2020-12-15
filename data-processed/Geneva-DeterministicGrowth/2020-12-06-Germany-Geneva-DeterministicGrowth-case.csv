@@ -1,0 +1,24 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-12-06,"7 day ahead inc case",2020-12-13,"GM","Germany","point",NA,18732.3434900916
+2020-12-06,"6 day ahead inc case",2020-12-12,"GM","Germany","point",NA,18676.4698316548
+2020-12-06,"5 day ahead inc case",2020-12-11,"GM","Germany","point",NA,18620.5961732178
+2020-12-06,"4 day ahead inc case",2020-12-10,"GM","Germany","point",NA,18564.7225147809
+2020-12-06,"3 day ahead inc case",2020-12-09,"GM","Germany","point",NA,18508.8488563439
+2020-12-06,"2 day ahead inc case",2020-12-08,"GM","Germany","point",NA,18452.9751979068
+2020-12-06,"1 day ahead inc case",2020-12-07,"GM","Germany","point",NA,18397.10153947
+2020-12-06,"0 day ahead inc case",2020-12-06,"GM","Germany","observed",NA,17767
+2020-12-06,"-1 day ahead inc case",2020-12-05,"GM","Germany","observed",NA,23318
+2020-12-06,"7 day ahead cum case",2020-12-13,"GM","Germany","point",NA,1301275.05760347
+2020-12-06,"6 day ahead cum case",2020-12-12,"GM","Germany","point",NA,1282542.71411337
+2020-12-06,"5 day ahead cum case",2020-12-11,"GM","Germany","point",NA,1263866.24428172
+2020-12-06,"4 day ahead cum case",2020-12-10,"GM","Germany","point",NA,1245245.6481085
+2020-12-06,"3 day ahead cum case",2020-12-09,"GM","Germany","point",NA,1226680.92559372
+2020-12-06,"2 day ahead cum case",2020-12-08,"GM","Germany","point",NA,1208172.07673738
+2020-12-06,"1 day ahead cum case",2020-12-07,"GM","Germany","point",NA,1189719.10153947
+2020-12-06,"0 day ahead cum case",2020-12-06,"GM","Germany","observed",NA,1171322
+2020-12-06,"-1 day ahead cum case",2020-12-05,"GM","Germany","observed",NA,1153555
+2020-12-06,"0 wk ahead inc case",2020-12-05,"GM","Germany","observed",NA,125466
+2020-12-06,"1 wk ahead inc case",2020-12-12,"GM","Germany","point",NA,128987.714113374
+2020-12-06,"-1 wk ahead cum case",2020-11-28,"GM","Germany","observed",NA,1028089
+2020-12-06,"0 wk ahead cum case",2020-12-05,"GM","Germany","observed",NA,1153555
+2020-12-06,"1 wk ahead cum case",2020-12-12,"GM","Germany","point",NA,1282542.71411337
