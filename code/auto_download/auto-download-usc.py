@@ -79,8 +79,12 @@ if __name__ == "__main__":
         
         # download and save files
         for url, dir_name in zip(urls, dir_names):
-            try:
-                urllib.request.urlretrieve(url, dir_name)
-                print("Downloaded and saved forecast to", dir_name)
-            except:
-                print("Download failed for", url)
+            urllib.request.urlretrieve(url, dir_name)
+            print("Downloaded and saved forecast to", dir_name)
+            
+            # catch URL Errors: 
+            # try:
+            #     urllib.request.urlretrieve(url, dir_name)
+            #     print("Downloaded and saved forecast to", dir_name)
+            # except:
+            #     print("Download failed for", url)
