@@ -23,11 +23,11 @@ local <- TRUE
 
 dat_evaluation <- list()
 if(local){
-  source("../code/R/plot_functions.R")
-  dat_evaluation$ECDC <- read.csv("../evaluation/evaluation-ECDC.csv",
+  source("../R/plot_functions.R")
+  dat_evaluation$ECDC <- read.csv("../../evaluation/evaluation-ECDC.csv",
                                   colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
                                   stringsAsFactors = FALSE)
-  dat_evaluation$JHU <- read.csv("../evaluation/evaluation-JHU.csv",
+  dat_evaluation$JHU <- read.csv("../../evaluation/evaluation-JHU.csv",
                                  colClasses = list("target_end_date" = "Date", "forecast_date" = "Date", "timezero" = "Date"),
                                  stringsAsFactors = FALSE)
 }else{
