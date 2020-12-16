@@ -1,0 +1,18 @@
+team_name: KITmetricslab
+model_name: extrapolation_baseline
+model_abbr: KIT-extrapolation_baseline
+model_contributors: Johannes Bracher, Jannik Deuschel, Konstantin Görgen, Jakob Ketterer, Daniel Wolffram, Tilmann Gneiting, Melanie Schienle
+website_url: https://kitmetricslab.github.io/forecasthub/forecast
+repo_url: https://github.com/KITmetricslab/KIT-baseline
+license: MIT
+team_funding: Helmholtz Information & Data Science Pilot Project "Simcard"
+institional_affil: Karlsruhe Institute of Technology, Chair of Statistics and Econometrics
+team_model_designation: other
+data_inputs: RKI/ECDC, DIVI, reported deaths, ICU and ventilation data
+methods: This is a simple multiplicative extrapolation baseline model. The dispersion paramter is estimated from the last 5 observations.
+methods_long: This is a simple baseline model which uses a multiplicative interpolation of the last two 
+    observations as the mean of a predictive negative binomial distribution. The dispersion paramter is estimated
+    from the last 5 observations (using maximum likelihood; excludig the last observation as by construction it agrees 
+    with its conditional expectation).
+citation:
+twitter_handles:
