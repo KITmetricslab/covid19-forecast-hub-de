@@ -238,11 +238,11 @@ get_last_truths <- function(forecasts, name_truth_eval, dat_truth, truth_data_us
 }
 
 # wrapper around evaluation functions for point and quantile forecasts
-evaluate_forecasts <- function(forecasts, name_truth_eval, dat_truth){
+evaluate_forecasts <- function(forecasts, name_truth_eval, dat_truth, truth_data_use){
 
   # evaluate point forecasts:
   eval_point <- evaluate_point(forecasts = forecasts,  name_truth_eval = name_truth_eval,
-                               dat_truth = dat_truth, truth_data_use  =truth_data_use)
+                               dat_truth = dat_truth, truth_data_use = truth_data_use)
   # evaluate quantile forecasts, if any:
   if(any(forecasts$type == "quantile" & length(unique(forecasts$quantile)) >= 23)){
     eval_quantiles <- evaluate_quantiles(forecasts = forecasts,

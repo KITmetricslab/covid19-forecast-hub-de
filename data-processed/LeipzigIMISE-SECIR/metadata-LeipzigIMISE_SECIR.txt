@@ -11,6 +11,7 @@ team_model_designation: primary
 data_inputs: RKI and DIVI, ECDC, age distributions for cases and deaths from RKI as described in methods, case & ICU  & death counts
 methods: SECIR type model 
 methods_long: 
+	2020-12-14 - present		Assuming average reduction in infectivity of 20% (i.e. infectivity level 80% compared with infectivity seen in beginn of December)
 	2020-11-30 - present		Longer MCMC Chains to better explore parameter space
 	2020-11-30 - present		Prior for mean of time-dependent variables last estimated value instead of mean of last four
 	2020-11-23 - present 		Simple adjustment of near-future-predictions by vertically shifting prediction of day/week zero to last observed value at day zero  

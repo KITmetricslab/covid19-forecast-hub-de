@@ -1,0 +1,1837 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-12-07,"-1 day ahead inc death",2020-12-06,"GM","Germany","observed",NA,255
+2020-12-07,"0 day ahead inc death",2020-12-07,"GM","Germany","observed",NA,147
+2020-12-07,"-1 day ahead cum death",2020-12-06,"GM","Germany","observed",NA,18781
+2020-12-07,"0 day ahead cum death",2020-12-07,"GM","Germany","observed",NA,18928
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","point",NA,146.8117597
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","point",NA,147.238082
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","point",NA,147.1751373
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","point",NA,147.3093587
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","point",NA,147.6066901
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","point",NA,147.6094328
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","point",NA,147.9016441
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","point",NA,147.6228717
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","point",NA,147.6488359
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","point",NA,147.7726068
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","point",NA,147.74391
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","point",NA,147.8814495
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","point",NA,147.9312623
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","point",NA,147.7249052
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","point",NA,147.7215369
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","point",NA,147.5898719
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","point",NA,147.3757194
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","point",NA,147.4547886
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","point",NA,147.1904084
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","point",NA,147.2625262
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","point",NA,146.7353074
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","point",NA,146.6464141
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","point",NA,146.2943909
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","point",NA,146.1042952
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","point",NA,145.7229534
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","point",NA,145.7121437
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","point",NA,145.1023105
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","point",NA,144.8679335
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","point",NA,144.4741417
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","point",NA,144.0500408
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.01",70.8583679
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.01",71.1693442
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.01",71.1803148
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.01",71.0398375
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.01",71.6287116
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.01",71.5726613
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.01",71.7628919
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.01",71.6588579
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.01",71.4622172
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.01",71.4744861
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.01",71.7881091
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.01",71.5304401
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.01",71.3398233
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.01",71.6324302
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.01",70.6557039
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.01",71.356369
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.01",71.396031
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.01",70.5372233
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.01",70.786535
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.01",70.4699674
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.01",69.8874497
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.01",69.661488
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.01",70.0371121
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.01",69.3137703
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.01",69.0496406
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.01",69.0420787
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.01",67.9936127
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.01",68.5090859
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.01",67.8137739
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.01",67.3569566
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.025",81.0322527
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.025",81.4171979
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.025",81.0741921
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.025",81.6269764
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.025",81.899902
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.025",81.9410909
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.025",81.9379149
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.025",82.049826
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.025",81.8269779
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.025",81.7820943
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.025",81.7927866
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.025",82.1140864
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.025",81.5371556
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.025",81.8003766
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.025",81.0426217
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.025",81.5014781
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.025",81.3583009
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.025",80.6485543
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.025",80.5207041
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.025",80.6862927
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.025",80.0885023
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.025",80.0883984
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.025",80.1385713
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.025",79.2613526
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.025",79.4783169
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.025",79.2974759
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.025",78.3428431
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.025",78.4165707
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.025",77.8170846
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.025",77.5823299
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.05",90.2868376
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.05",90.7262156
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.05",90.4684903
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.05",91.0343339
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.05",91.1723362
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.05",91.4658215
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.05",90.9957596
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.05",91.3311677
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.05",91.022481
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.05",91.1949944
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.05",91.0103001
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.05",91.1871134
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.05",90.9504453
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.05",91.1822245
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.05",90.5735853
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.05",90.8079547
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.05",90.481381
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.05",90.0688204
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.05",90.2268169
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.05",90.1218176
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.05",89.5799514
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.05",89.5171033
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.05",89.2116004
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.05",88.6621334
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.05",88.9205608
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.05",88.4731132
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.05",87.7455358
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.05",87.7235513
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.05",87.1600801
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.05",86.760673
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.1",101.6173429
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.1",101.9082975
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.1",101.6759662
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.1",102.2912554
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.1",102.4330112
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.1",102.5590828
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.1",102.3590067
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.1",102.4111355
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.1",102.2712544
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.1",102.6389721
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.1",102.3456346
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.1",102.5572832
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.1",102.3082738
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.1",102.5524759
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.1",102.165405
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.1",102.1315927
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.1",101.8228791
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.1",101.694837
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.1",101.460907
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.1",101.6465169
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.1",100.9669238
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.1",100.9271173
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.1",100.8623433
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.1",100.1660782
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.1",100.0509005
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.1",99.9901661
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.1",99.2327267
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.1",98.9913742
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.1",98.4485789
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.1",98.2440054
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.15",109.6368509
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.15",109.914061
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.15",109.6520003
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.15",110.2368174
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.15",110.3913231
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.15",110.4785354
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.15",110.337328
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.15",110.4422785
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.15",110.2639795
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.15",110.6699787
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.15",110.436446
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.15",110.4169938
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.15",110.4648952
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.15",110.3795507
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.15",110.0028511
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.15",109.9991824
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.15",109.8058526
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.15",109.6671837
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.15",109.6806624
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.15",109.7188214
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.15",109.0086208
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.15",109.1016427
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.15",108.8697216
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.15",108.4206009
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.15",108.1387349
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.15",107.8684298
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.15",107.3187787
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.15",107.1411255
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.15",106.602664
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.15",106.5045255
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.2",116.2210288
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.2",116.5627301
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.2",116.4333323
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.2",116.862062
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.2",117.0809487
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.2",116.9703544
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.2",117.020387
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.2",116.9761855
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.2",116.8650279
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.2",117.2183519
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.2",116.9188145
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.2",117.0687689
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.2",116.9751303
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.2",116.9323701
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.2",116.7520624
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.2",116.6463735
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.2",116.5993059
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.2",116.4210464
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.2",116.2583103
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.2",116.3677307
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.2",115.6430824
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.2",115.5980365
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.2",115.3423901
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.2",115.0245413
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.2",114.7564493
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.2",114.4619671
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.2",113.9418234
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.2",113.6633204
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.2",113.2606773
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.2",113.0580767
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.25",122.12278
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.25",122.4828097
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.25",122.283553
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.25",122.6263076
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.25",122.9454563
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.25",122.8348032
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.25",122.8838989
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.25",122.8222817
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.25",122.7545176
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.25",122.9695198
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.25",122.8472136
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.25",122.8137747
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.25",122.9312251
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.25",122.7429948
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.25",122.6402683
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.25",122.5770676
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.25",122.4084758
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.25",122.3067963
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.25",122.1181995
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.25",122.2295509
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.25",121.522303
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.25",121.4403774
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.25",121.2243478
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.25",121.0208225
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.25",120.7559796
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.25",120.33687
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.25",119.7816283
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.25",119.5055481
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.25",119.2186574
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.25",118.8514646
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.3",127.388421
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.3",127.8173365
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.3",127.746033
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.3",127.8844083
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.3",128.2057772
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.3",128.0119607
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.3",128.1823178
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.3",128.1378991
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.3",128.0562682
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.3",128.2683067
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.3",128.2547824
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.3",128.163445
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.3",128.3223136
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.3",128.0745738
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.3",128.0880514
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.3",127.9628639
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.3",127.765908
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.3",127.6684177
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.3",127.5615472
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.3",127.5263842
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.3",126.8953719
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.3",126.833525
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.3",126.5733303
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.3",126.2877403
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.3",126.18957
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.3",125.7372048
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.3",125.2631153
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.3",124.9189515
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.3",124.69759
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.3",124.2884499
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.35",132.4491087
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.35",132.7545907
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.35",132.673406
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.35",132.9762175
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.35",133.1265102
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.35",133.0307184
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.35",133.2771259
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.35",133.1623125
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.35",133.0261691
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.35",133.3705052
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.35",133.3982976
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.35",133.2399608
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.35",133.5302607
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.35",133.1516806
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.35",133.1267506
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.35",132.9871072
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.35",132.8093783
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.35",132.793912
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.35",132.5626385
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.35",132.5382482
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.35",132.0776407
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.35",131.9157132
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.35",131.6654201
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.35",131.4073385
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.35",131.2203901
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.35",130.8100071
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.35",130.4482281
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.35",129.9769958
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.35",129.8045117
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.35",129.4092868
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.4",137.291121
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.4",137.6686432
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.4",137.4665347
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.4",137.8203867
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.4",137.8997134
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.4",137.9826226
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.4",138.3068854
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.4",138.0385651
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.4",137.9508236
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.4",138.2927381
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.4",138.2090107
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.4",138.114364
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.4",138.4616574
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.4",138.168649
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.4",137.9825624
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.4",137.8309993
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.4",137.7403035
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.4",137.8602063
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.4",137.5726303
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.4",137.5267058
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.4",137.10047
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.4",136.8424212
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.4",136.5760242
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.4",136.3660917
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.4",136.2041781
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.4",135.8662145
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.4",135.3178253
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.4",134.9864888
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.4",134.720499
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.4",134.4394972
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.45",142.1382657
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.45",142.5005662
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.45",142.3159284
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.45",142.6023472
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.45",142.8143655
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.45",142.7982178
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.45",143.1180483
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.45",142.8830249
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.45",142.8644922
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.45",142.9832175
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.45",142.9917319
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.45",143.0351863
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.45",143.280662
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.45",142.9092068
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.45",142.8163633
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.45",142.6976656
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.45",142.5130415
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.45",142.7241466
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.45",142.4225193
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.45",142.3388438
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.45",141.8845854
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.45",141.7698384
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.45",141.3503298
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.45",141.2424779
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.45",140.8197992
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.45",140.8300955
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.45",140.1624247
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.45",139.8553924
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.45",139.6669084
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.45",139.2505751
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.5",146.8117597
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.5",147.238082
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.5",147.1751373
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.5",147.3093587
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.5",147.6066901
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.5",147.6094328
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.5",147.9016441
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.5",147.6228717
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.5",147.6488359
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.5",147.7726068
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.5",147.74391
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.5",147.8814495
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.5",147.9312623
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.5",147.7249052
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.5",147.7215369
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.5",147.5898719
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.5",147.3757194
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.5",147.4547886
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.5",147.1904084
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.5",147.2625262
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.5",146.7353074
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.5",146.6464141
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.5",146.2943909
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.5",146.1042952
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.5",145.7229534
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.5",145.7121437
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.5",145.1023105
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.5",144.8679335
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.5",144.4741417
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.5",144.0500408
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.55",151.6906882
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.55",152.1061892
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.55",152.1302857
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.55",152.2253084
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.55",152.6138303
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.55",152.4434183
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.55",152.7843173
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.55",152.6426618
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.55",152.5428844
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.55",152.6278827
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.55",152.6163984
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.55",152.759535
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.55",152.9344402
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.55",152.5723316
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.55",152.6775703
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.55",152.4680329
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.55",152.3849104
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.55",152.3179761
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.55",152.2220401
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.55",152.0477545
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.55",151.678482
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.55",151.531127
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.55",151.1659612
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.55",151.0036612
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.55",150.6412042
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.55",150.718315
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.55",150.1059534
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.55",149.8465223
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.55",149.4016311
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.55",149.1221559
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.6",156.8143437
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.6",157.1016807
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.6",157.0716416
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.6",157.2907686
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.6",157.604773
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.6",157.5454684
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.6",157.7670422
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.6",157.6122249
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.6",157.6851415
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.6",157.6374949
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.6",157.6720011
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.6",157.7495448
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.6",158.0714713
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.6",157.567558
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.6",157.7999122
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.6",157.4419995
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.6",157.5431234
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.6",157.4273697
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.6",157.3892543
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.6",157.1620967
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.6",156.722094
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.6",156.6731542
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.6",156.1884815
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.6",156.2143198
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.6",155.7290119
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.6",155.8293213
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.6",155.4343008
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.6",154.9575284
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.6",154.5132122
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.6",154.164877
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.65",162.1400937
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.65",162.4103606
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.65",162.4419113
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.65",162.5255077
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.65",162.9329689
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.65",162.8475051
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.65",163.0241114
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.65",162.8975272
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.65",162.9614521
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.65",162.9628867
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.65",162.9584207
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.65",163.0474833
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.65",163.365645
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.65",162.9417339
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.65",163.1010929
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.65",162.8164317
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.65",162.8801602
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.65",162.7348112
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.65",162.8014455
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.65",162.514868
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.65",162.0961772
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.65",161.99213
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.65",161.5759063
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.65",161.662096
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.65",161.1830683
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.65",161.2247382
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.65",160.8440696
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.65",160.465247
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.65",159.881742
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.65",159.5844294
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.7",167.7820783
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.7",168.1716733
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.7",168.2525588
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.7",168.1203186
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.7",168.7040892
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.7",168.4971107
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.7",168.7399807
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.7",168.7036705
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.7",168.7210799
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.7",168.7275601
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.7",168.6181292
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.7",168.7019588
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.7",168.9031034
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.7",168.6109211
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.7",168.930003
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.7",168.6796295
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.7",168.5736874
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.7",168.5632324
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.7",168.5372368
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.7",168.296782
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.7",167.8363952
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.7",167.7609656
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.7",167.4599018
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.7",167.4891189
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.7",166.8917186
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.7",166.986872
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.7",166.6624757
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.7",166.283443
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.7",165.7132764
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.7",165.4622068
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.75",173.8711414
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.75",174.3284944
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.75",174.5500999
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.75",174.3106762
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.75",175.03031
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.75",174.7148354
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.75",175.0533251
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.75",174.8824436
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.75",174.9785501
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.75",175.0226382
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.75",174.9911126
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.75",174.9944123
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.75",175.1272275
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.75",174.8812625
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.75",175.2153181
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.75",174.8270244
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.75",175.0147069
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.75",174.8476365
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.75",174.853873
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.75",174.7276364
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.75",174.2723416
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.75",174.0243379
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.75",173.8126216
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.75",173.9423797
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.75",173.2615943
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.75",173.2527842
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.75",173.1955874
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.75",172.6655289
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.75",171.9750264
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.75",171.7016949
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.8",180.8612476
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.8",181.5314565
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.8",181.6124013
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.8",181.5038973
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.8",182.04444
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.8",181.7494017
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.8",182.0745932
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.8",181.9551138
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.8",182.052374
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.8",182.0408846
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.8",182.1891856
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.8",182.0466451
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.8",182.1560935
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.8",182.0905784
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.8",182.3258928
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.8",181.903132
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.8",182.0101334
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.8",182.1470102
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.8",182.012817
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.8",181.9396164
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.8",181.597178
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.8",181.339071
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.8",181.2216034
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.8",181.1251042
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.8",180.5865759
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.8",180.429838
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.8",180.3791479
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.8",179.7753625
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.8",179.0638766
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.8",178.8883752
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.85",189.3284232
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.85",189.8682287
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.85",190.0117724
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.85",189.7965771
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.85",190.4497509
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.85",190.1355937
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.85",190.3807156
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.85",190.367845
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.85",190.534134
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.85",190.4792808
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.85",190.6195218
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.85",190.5648658
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.85",190.7693315
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.85",190.7704713
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.85",190.8494788
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.85",190.3950244
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.85",190.4488505
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.85",190.630617
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.85",190.4563846
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.85",190.4860514
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.85",190.3750701
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.85",189.8695685
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.85",189.8730609
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.85",189.6231708
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.85",189.1645676
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.85",189.1805857
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.85",188.8935572
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.85",188.2348611
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.85",187.7780923
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.85",187.3900396
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.9",200.3136622
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.9",200.7278094
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.9",200.7449954
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.9",200.6987354
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.9",201.2628076
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.9",200.971669
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.9",201.2888835
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.9",201.3021052
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.9",201.3090815
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.9",201.617583
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.9",201.5076483
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.9",201.2576537
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.9",201.8653089
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.9",201.644512
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.9",201.7963838
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.9",201.7664683
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.9",201.5884747
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.9",201.4994646
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.9",201.4758349
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.9",201.5087251
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.9",201.4840634
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.9",200.9390649
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.9",200.8465738
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.9",200.6083821
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.9",200.557134
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.9",200.1746732
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.9",199.9933075
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.9",199.6010399
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.9",199.0038767
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.9",198.5113101
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.95",216.8807244
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.95",217.5592245
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.95",217.3098755
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.95",217.1845802
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.95",217.7147181
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.95",217.8475942
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.95",218.0466709
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.95",217.5883585
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.95",217.7802953
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.95",218.4535017
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.95",218.2438013
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.95",218.1902345
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.95",218.9066735
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.95",218.6492595
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.95",218.421442
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.95",218.9246364
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.95",218.6847515
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.95",218.3668218
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.95",218.4867962
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.95",218.5433295
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.95",218.4281398
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.95",217.6554153
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.95",217.8600067
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.95",217.8923553
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.95",217.9882549
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.95",216.8486126
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.95",216.8074854
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.95",216.8673992
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.95",216.1334241
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.95",215.8267191
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.975",232.2252438
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.975",232.7773504
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.975",232.4155623
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.975",232.3453035
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.975",233.1437182
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.975",231.8996601
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.975",232.9070071
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.975",232.3624502
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.975",232.5583791
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.975",233.2520349
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.975",233.4383593
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.975",233.0014219
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.975",234.1346757
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.975",233.8241075
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.975",233.2139086
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.975",233.6140968
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.975",234.0234615
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.975",233.4987137
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.975",233.5130033
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.975",233.6531461
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.975",233.5120548
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.975",232.6967933
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.975",233.2383107
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.975",232.4284276
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.975",233.5428991
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.975",231.8930327
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.975",232.2009782
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.975",232.2633964
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.975",231.6999399
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.975",230.6134542
+2020-12-07,"1 day ahead inc death",2020-12-08,"GM","Germany","quantile","0.99",250.1156513
+2020-12-07,"2 day ahead inc death",2020-12-09,"GM","Germany","quantile","0.99",250.9734076
+2020-12-07,"3 day ahead inc death",2020-12-10,"GM","Germany","quantile","0.99",250.5896203
+2020-12-07,"4 day ahead inc death",2020-12-11,"GM","Germany","quantile","0.99",250.8063997
+2020-12-07,"5 day ahead inc death",2020-12-12,"GM","Germany","quantile","0.99",250.7855501
+2020-12-07,"6 day ahead inc death",2020-12-13,"GM","Germany","quantile","0.99",250.8433792
+2020-12-07,"7 day ahead inc death",2020-12-14,"GM","Germany","quantile","0.99",250.6508771
+2020-12-07,"8 day ahead inc death",2020-12-15,"GM","Germany","quantile","0.99",250.381308
+2020-12-07,"9 day ahead inc death",2020-12-16,"GM","Germany","quantile","0.99",250.6027751
+2020-12-07,"10 day ahead inc death",2020-12-17,"GM","Germany","quantile","0.99",251.3882785
+2020-12-07,"11 day ahead inc death",2020-12-18,"GM","Germany","quantile","0.99",252.2317517
+2020-12-07,"12 day ahead inc death",2020-12-19,"GM","Germany","quantile","0.99",251.31991
+2020-12-07,"13 day ahead inc death",2020-12-20,"GM","Germany","quantile","0.99",252.298228
+2020-12-07,"14 day ahead inc death",2020-12-21,"GM","Germany","quantile","0.99",252.8272173
+2020-12-07,"15 day ahead inc death",2020-12-22,"GM","Germany","quantile","0.99",251.1399499
+2020-12-07,"16 day ahead inc death",2020-12-23,"GM","Germany","quantile","0.99",251.4491726
+2020-12-07,"17 day ahead inc death",2020-12-24,"GM","Germany","quantile","0.99",252.8055584
+2020-12-07,"18 day ahead inc death",2020-12-25,"GM","Germany","quantile","0.99",252.2019775
+2020-12-07,"19 day ahead inc death",2020-12-26,"GM","Germany","quantile","0.99",251.4102656
+2020-12-07,"20 day ahead inc death",2020-12-27,"GM","Germany","quantile","0.99",253.2088909
+2020-12-07,"21 day ahead inc death",2020-12-28,"GM","Germany","quantile","0.99",251.4451593
+2020-12-07,"22 day ahead inc death",2020-12-29,"GM","Germany","quantile","0.99",251.6061044
+2020-12-07,"23 day ahead inc death",2020-12-30,"GM","Germany","quantile","0.99",251.5232719
+2020-12-07,"24 day ahead inc death",2020-12-31,"GM","Germany","quantile","0.99",251.3429785
+2020-12-07,"25 day ahead inc death",2021-01-01,"GM","Germany","quantile","0.99",252.1302981
+2020-12-07,"26 day ahead inc death",2021-01-02,"GM","Germany","quantile","0.99",251.0381125
+2020-12-07,"27 day ahead inc death",2021-01-03,"GM","Germany","quantile","0.99",250.9732327
+2020-12-07,"28 day ahead inc death",2021-01-04,"GM","Germany","quantile","0.99",250.4273015
+2020-12-07,"29 day ahead inc death",2021-01-05,"GM","Germany","quantile","0.99",250.387396
+2020-12-07,"30 day ahead inc death",2021-01-06,"GM","Germany","quantile","0.99",249.5300453
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","point",NA,19074.8117597
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","point",NA,19222.0498417
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","point",NA,19369.224979
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","point",NA,19516.5343377
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","point",NA,19664.1410278
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","point",NA,19811.7504606
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","point",NA,19959.6521048
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","point",NA,20107.2749764
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","point",NA,20254.9238124
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","point",NA,20402.6964192
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","point",NA,20550.4403292
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","point",NA,20698.3217786
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","point",NA,20846.2530409
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","point",NA,20993.9779461
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","point",NA,21141.6994831
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","point",NA,21289.289355
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","point",NA,21436.6650744
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","point",NA,21584.119863
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","point",NA,21731.3102714
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","point",NA,21878.5727976
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","point",NA,22025.308105
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","point",NA,22171.9545192
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","point",NA,22318.2489101
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","point",NA,22464.3532053
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","point",NA,22610.0761587
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","point",NA,22755.7883024
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","point",NA,22900.8906129
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","point",NA,23045.7585464
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","point",NA,23190.2326882
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","point",NA,23334.282729
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.01",18998.8583679
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.01",19070.027712
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.01",19141.2080269
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.01",19212.2478644
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.01",19283.876576
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.01",19355.4492373
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.01",19427.2121293
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.01",19498.8709872
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.01",19570.3332044
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.01",19641.8076905
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.01",19713.5957997
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.01",19785.1262398
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.01",19856.4660631
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.01",19928.0984933
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.01",19998.7541972
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.01",20070.1105662
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.01",20141.5065972
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.01",20212.0438205
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.01",20282.8303556
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.01",20353.3003229
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.01",20423.1877726
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.01",20492.8492606
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.01",20562.8863727
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.01",20632.200143
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.01",20701.2497836
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.01",20770.2918624
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.01",20838.2854751
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.01",20906.7945609
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.01",20974.6083348
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.01",21041.9652914
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.025",19009.0322527
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.025",19090.4494507
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.025",19171.5236427
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.025",19253.1506192
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.025",19335.0505212
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.025",19416.9916121
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.025",19498.929527
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.025",19580.9793529
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.025",19662.8063308
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.025",19744.5884251
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.025",19826.3812117
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.025",19908.4952982
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.025",19990.0324537
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.025",20071.8328304
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.025",20152.875452
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.025",20234.3769302
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.025",20315.7352311
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.025",20396.3837853
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.025",20476.9044894
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.025",20557.5907821
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.025",20637.6792845
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.025",20717.7676828
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.025",20797.9062542
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.025",20877.1676068
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.025",20956.6459237
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.025",21035.9433996
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.025",21114.2862427
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.025",21192.7028134
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.025",21270.519898
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.025",21348.102228
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.05",19018.2868376
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.05",19109.0130532
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.05",19199.4815435
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.05",19290.5158774
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.05",19381.6882136
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.05",19473.154035
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.05",19564.1497946
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.05",19655.4809624
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.05",19746.5034434
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.05",19837.6984378
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.05",19928.7087378
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.05",20019.8958513
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.05",20110.8462966
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.05",20202.0285211
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.05",20292.6021064
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.05",20383.410061
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.05",20473.8914421
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.05",20563.9602625
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.05",20654.1870794
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.05",20744.308897
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.05",20833.8888484
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.05",20923.4059517
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.05",21012.6175521
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.05",21101.2796855
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.05",21190.2002463
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.05",21278.6733595
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.05",21366.4188954
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.05",21454.1424466
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.05",21541.3025267
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.05",21628.0631997
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.1",19029.6173429
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.1",19131.5256404
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.1",19233.2016066
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.1",19335.492862
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.1",19437.9258731
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.1",19540.484956
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.1",19642.8439627
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.1",19745.2550981
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.1",19847.5263525
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.1",19950.1653246
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.1",20052.5109592
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.1",20155.0682423
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.1",20257.3765161
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.1",20359.928992
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.1",20462.0943971
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.1",20564.2259898
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.1",20666.0488688
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.1",20767.7437058
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.1",20869.2046128
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.1",20970.8511297
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.1",21071.8180535
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.1",21172.7451708
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.1",21273.6075142
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.1",21373.7735924
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.1",21473.8244929
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.1",21573.8146591
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.1",21673.0473858
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.1",21772.03876
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.1",21870.4873388
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.1",21968.7313443
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.15",19037.6368509
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.15",19147.5509119
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.15",19257.2029122
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.15",19367.4397295
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.15",19477.8310526
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.15",19588.309588
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.15",19698.646916
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.15",19809.0891945
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.15",19919.353174
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.15",20030.0231526
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.15",20140.4595986
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.15",20250.8765924
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.15",20361.3414876
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.15",20471.7210383
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.15",20581.7238893
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.15",20691.7230717
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.15",20801.5289242
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.15",20911.1961079
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.15",21020.8767703
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.15",21130.5955917
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.15",21239.6042125
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.15",21348.7058552
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.15",21457.5755767
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.15",21565.9961776
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.15",21674.1349126
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.15",21782.0033424
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.15",21889.322121
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.15",21996.4632465
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.15",22103.0659104
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.15",22209.570436
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.2",19044.2210288
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.2",19160.7837589
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.2",19277.2170912
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.2",19394.0791532
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.2",19511.1601019
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.2",19628.1304563
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.2",19745.1508433
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.2",19862.1270288
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.2",19978.9920567
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.2",20096.2104085
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.2",20213.1292231
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.2",20330.1979919
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.2",20447.1731223
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.2",20564.1054924
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.2",20680.8575548
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.2",20797.5039283
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.2",20914.1032342
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.2",21030.5242806
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.2",21146.7825909
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.2",21263.1503216
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.2",21378.793404
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.2",21494.3914404
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.2",21609.7338306
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.2",21724.7583719
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.2",21839.5148212
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.2",21953.9767882
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.2",22067.9186117
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.2",22181.5819321
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.2",22294.8426093
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.2",22407.9006861
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.25",19050.12278
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.25",19172.6055896
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.25",19294.8891426
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.25",19417.5154502
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.25",19540.4609065
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.25",19663.2957097
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.25",19786.1796085
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.25",19909.0018902
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.25",20031.7564078
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.25",20154.7259276
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.25",20277.5731412
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.25",20400.3869158
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.25",20523.318141
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.25",20646.0611357
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.25",20768.701404
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.25",20891.2784716
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.25",21013.6869474
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.25",21135.9937437
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.25",21258.1119432
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.25",21380.3414941
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.25",21501.8637971
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.25",21623.3041745
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.25",21744.5285224
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.25",21865.5493448
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.25",21986.3053244
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.25",22106.6421944
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.25",22226.4238227
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.25",22345.9293708
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.25",22465.1480282
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.25",22583.9994927
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.3",19055.388421
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.3",19183.2057575
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.3",19310.9517905
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.3",19438.8361988
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.3",19567.041976
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.3",19695.0539367
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.3",19823.2362545
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.3",19951.3741536
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.3",20079.4304218
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.3",20207.6987285
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.3",20335.9535108
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.3",20464.1169558
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.3",20592.4392694
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.3",20720.5138433
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.3",20848.6018946
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.3",20976.5647585
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.3",21104.3306665
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.3",21231.9990842
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.3",21359.5606314
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.3",21487.0870156
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.3",21613.9823875
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.3",21740.8159125
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.3",21867.3892428
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.3",21993.6769831
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.3",22119.8665531
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.3",22245.6037579
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.3",22370.8668732
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.3",22495.7858246
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.3",22620.4834146
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.3",22744.7718644
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.35",19060.4491087
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.35",19193.2036994
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.35",19325.8771054
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.35",19458.8533229
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.35",19591.9798331
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.35",19725.0105516
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.35",19858.2876774
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.35",19991.4499899
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.35",20124.476159
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.35",20257.8466642
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.35",20391.2449618
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.35",20524.4849226
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.35",20658.0151833
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.35",20791.1668639
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.35",20924.2936145
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.35",21057.2807217
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.35",21190.0901
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.35",21322.884012
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.35",21455.4466505
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.35",21587.9848988
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.35",21720.0625394
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.35",21851.9782526
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.35",21983.6436727
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.35",22115.0510112
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.35",22246.2714013
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.35",22377.0814084
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.35",22507.5296365
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.35",22637.5066323
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.35",22767.3111439
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.35",22896.7204307
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.4",19065.291121
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.4",19202.9597643
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.4",19340.426299
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.4",19478.2466858
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.4",19616.1463992
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.4",19754.1290218
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.4",19892.4359072
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.4",20030.4744723
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.4",20168.4252959
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.4",20306.718034
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.4",20444.9270447
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.4",20583.0414087
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.4",20721.503066
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.4",20859.671715
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.4",20997.6542774
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.4",21135.4852767
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.4",21273.2255801
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.4",21411.0857865
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.4",21548.6584168
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.4",21686.1851226
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.4",21823.2855926
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.4",21960.1280138
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.4",22096.7040381
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.4",22233.0701298
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.4",22369.2743079
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.4",22505.1405224
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.4",22640.4583477
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.4",22775.4448364
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.4",22910.1653354
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.4",23044.6048327
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.45",19070.1382657
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.45",19212.6388319
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.45",19354.9547602
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.45",19497.5571075
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.45",19640.371473
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.45",19783.1696908
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.45",19926.2877391
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.45",20069.170764
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.45",20212.0352562
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.45",20355.0184736
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.45",20498.0102055
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.45",20641.0453918
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.45",20784.3260538
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.45",20927.2352606
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.45",21070.0516238
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.45",21212.7492894
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.45",21355.2623309
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.45",21497.9864775
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.45",21640.4089968
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.45",21782.7478406
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.45",21924.632426
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.45",22066.4022643
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.45",22207.7525942
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.45",22348.9950721
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.45",22489.8148712
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.45",22630.6449668
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.45",22770.8073915
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.45",22910.6627839
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.45",23050.3296923
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.45",23189.5802674
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.5",19074.8117597
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.5",19222.0498417
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.5",19369.224979
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.5",19516.5343377
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.5",19664.1410278
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.5",19811.7504606
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.5",19959.6521048
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.5",20107.2749764
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.5",20254.9238124
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.5",20402.6964192
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.5",20550.4403292
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.5",20698.3217786
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.5",20846.2530409
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.5",20993.9779461
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.5",21141.6994831
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.5",21289.289355
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.5",21436.6650744
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.5",21584.119863
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.5",21731.3102714
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.5",21878.5727976
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.5",22025.308105
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.5",22171.9545192
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.5",22318.2489101
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.5",22464.3532053
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.5",22610.0761587
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.5",22755.7883024
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.5",22900.8906129
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.5",23045.7585464
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.5",23190.2326882
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.5",23334.282729
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.55",19079.6906882
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.55",19231.7968774
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.55",19383.9271631
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.55",19536.1524715
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.55",19688.7663018
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.55",19841.2097201
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.55",19993.9940374
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.55",20146.6366992
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.55",20299.1795836
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.55",20451.8074663
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.55",20604.4238647
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.55",20757.1833997
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.55",20910.1178399
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.55",21062.6901715
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.55",21215.3677418
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.55",21367.8357747
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.55",21520.2206852
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.55",21672.5386612
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.55",21824.7607013
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.55",21976.8084558
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.55",22128.4869378
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.55",22280.0180648
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.55",22431.184026
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.55",22582.1876871
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.55",22732.8288914
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.55",22883.5472064
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.55",23033.6531598
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.55",23183.4996821
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.55",23332.9013132
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.55",23482.0234691
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.6",19084.8143437
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.6",19241.9160244
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.6",19398.987666
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.6",19556.2784346
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.6",19713.8832077
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.6",19871.4286761
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.6",20029.1957183
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.6",20186.8079432
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.6",20344.4930847
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.6",20502.1305796
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.6",20659.8025807
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.6",20817.5521255
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.6",20975.6235968
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.6",21133.1911548
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.6",21290.9910669
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.6",21448.4330664
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.6",21605.9761899
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.6",21763.4035596
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.6",21920.7928139
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.6",22077.9549106
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.6",22234.6770046
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.6",22391.3501588
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.6",22547.5386403
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.6",22703.7529601
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.6",22859.4819721
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.6",23015.3112934
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.6",23170.7455942
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.6",23325.7031226
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.6",23480.2163348
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.6",23634.3812118
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.65",19090.1400937
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.65",19252.5504543
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.65",19414.9923656
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.65",19577.5178733
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.65",19740.4508422
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.65",19903.2983472
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.65",20066.3224587
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.65",20229.2199859
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.65",20392.1814379
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.65",20555.1443247
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.65",20718.1027453
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.65",20881.1502287
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.65",21044.5158736
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.65",21207.4576076
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.65",21370.5587005
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.65",21533.3751322
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.65",21696.2552924
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.65",21858.9901036
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.65",22021.7915491
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.65",22184.3064171
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.65",22346.4025943
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.65",22508.3947243
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.65",22669.9706306
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.65",22831.6327266
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.65",22992.8157949
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.65",23154.040533
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.65",23314.8846026
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.65",23475.3498496
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.65",23635.2315916
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.65",23794.816021
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.7",19095.7820783
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.7",19263.9537517
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.7",19432.2063105
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.7",19600.3266291
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.7",19769.0307183
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.7",19937.5278291
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.7",20106.2678097
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.7",20274.9714803
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.7",20443.6925602
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.7",20612.4201203
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.7",20781.0382495
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.7",20949.7402083
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.7",21118.6433117
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.7",21287.2542328
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.7",21456.1842358
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.7",21624.8638653
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.7",21793.4375528
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.7",21962.0007852
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.7",22130.538022
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.7",22298.834804
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.7",22466.6711992
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.7",22634.4321648
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.7",22801.8920666
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.7",22969.3811855
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.7",23136.2729041
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.7",23303.2597761
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.7",23469.9222517
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.7",23636.2056947
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.7",23801.9189712
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.7",23967.381178
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.75",19101.8711414
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.75",19276.1996358
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.75",19450.7497358
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.75",19625.060412
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.75",19800.090722
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.75",19974.8055574
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.75",20149.8588826
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.75",20324.7413262
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.75",20499.7198763
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.75",20674.7425145
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.75",20849.7336271
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.75",21024.7280394
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.75",21199.8552669
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.75",21374.7365294
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.75",21549.9518475
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.75",21724.7788719
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.75",21899.7935788
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.75",22074.6412153
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.75",22249.4950884
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.75",22424.2227248
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.75",22598.4950664
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.75",22772.5194043
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.75",22946.3320259
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.75",23120.2744056
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.75",23293.5359999
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.75",23466.7887841
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.75",23639.9843715
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.75",23812.6499005
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.75",23984.6249269
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.75",24156.3266217
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.8",19108.8612476
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.8",19290.3927041
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.8",19472.0051054
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.8",19653.5090027
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.8",19835.5534426
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.8",20017.3028443
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.8",20199.3774375
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.8",20381.3325513
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.8",20563.3849253
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.8",20745.4258099
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.8",20927.6149955
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.8",21109.6616406
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.8",21291.8177341
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.8",21473.9083125
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.8",21656.2342053
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.8",21838.1373373
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.8",22020.1474707
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.8",22202.2944808
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.8",22384.3072978
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.8",22566.2469141
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.8",22747.8440921
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.8",22929.1831631
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.8",23110.4047666
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.8",23291.5298707
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.8",23472.1164466
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.8",23652.5462847
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.8",23832.9254326
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.8",24012.7007951
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.8",24191.7646717
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.8",24370.6530468
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.85",19117.3284232
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.85",19307.1966518
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.85",19497.2084242
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.85",19687.0050014
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.85",19877.4547522
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.85",20067.590346
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.85",20257.9710615
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.85",20448.3389066
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.85",20638.8730406
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.85",20829.3523214
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.85",21019.9718432
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.85",21210.536709
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.85",21401.3060405
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.85",21592.0765118
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.85",21782.9259906
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.85",21973.321015
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.85",22163.7698654
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.85",22354.4004825
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.85",22544.8568671
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.85",22735.3429185
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.85",22925.7179886
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.85",23115.5875571
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.85",23305.4606179
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.85",23495.0837887
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.85",23684.2483563
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.85",23873.4289419
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.85",24062.3224991
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.85",24250.5573601
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.85",24438.3354525
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.85",24625.7254921
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.9",19128.3136622
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.9",19329.0414716
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.9",19529.7864671
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.9",19730.4852025
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.9",19931.7480101
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.9",20132.7196791
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.9",20334.0085626
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.9",20535.3106678
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.9",20736.6197493
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.9",20938.2373323
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.9",21139.7449806
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.9",21341.0026343
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.9",21542.8679432
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.9",21744.5124553
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.9",21946.3088391
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.9",22148.0753074
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.9",22349.6637821
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.9",22551.1632467
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.9",22752.6390816
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.9",22954.1478067
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.9",23155.6318701
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.9",23356.570935
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.9",23557.4175088
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.9",23758.0258909
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.9",23958.5830248
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.9",24158.757698
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.9",24358.7510054
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.9",24558.3520453
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.9",24757.355922
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.9",24955.8672321
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.95",19144.8807244
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.95",19362.4399489
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.95",19579.7498244
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.95",19796.9344045
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.95",20014.6491227
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.95",20232.4967168
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.95",20450.5433877
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.95",20668.1317462
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.95",20885.9120415
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.95",21104.3655432
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.95",21322.6093444
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.95",21540.7995789
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.95",21759.7062524
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.95",21978.3555119
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.95",22196.7769539
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.95",22415.7015903
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.95",22634.3863418
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.95",22852.7531636
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.95",23071.2399599
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.95",23289.7832893
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.95",23508.2114291
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.95",23725.8668444
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.95",23943.7268511
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.95",24161.6192064
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.95",24379.6074612
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.95",24596.4560739
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.95",24813.2635592
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.95",25030.1309585
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.95",25246.2643826
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.95",25462.0911017
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.975",19160.2252438
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.975",19393.0025942
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.975",19625.4181565
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.975",19857.76346
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.975",20090.9071782
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.975",20322.8068384
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.975",20555.7138455
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.975",20788.0762957
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.975",21020.6346747
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.975",21253.8867097
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.975",21487.325069
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.975",21720.3264909
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.975",21954.4611665
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.975",22188.285274
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.975",22421.4991827
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.975",22655.1132795
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.975",22889.136741
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.975",23122.6354547
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.975",23356.148458
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.975",23589.8016041
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.975",23823.3136589
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.975",24056.0104521
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.975",24289.2487628
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.975",24521.6771905
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.975",24755.2200896
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.975",24987.1131223
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.975",25219.3141005
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.975",25451.5774969
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.975",25683.2774368
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.975",25913.8908911
+2020-12-07,"1 day ahead cum death",2020-12-08,"GM","Germany","quantile","0.99",19178.1156513
+2020-12-07,"2 day ahead cum death",2020-12-09,"GM","Germany","quantile","0.99",19429.0890589
+2020-12-07,"3 day ahead cum death",2020-12-10,"GM","Germany","quantile","0.99",19679.6786792
+2020-12-07,"4 day ahead cum death",2020-12-11,"GM","Germany","quantile","0.99",19930.4850788
+2020-12-07,"5 day ahead cum death",2020-12-12,"GM","Germany","quantile","0.99",20181.2706289
+2020-12-07,"6 day ahead cum death",2020-12-13,"GM","Germany","quantile","0.99",20432.1140081
+2020-12-07,"7 day ahead cum death",2020-12-14,"GM","Germany","quantile","0.99",20682.7648852
+2020-12-07,"8 day ahead cum death",2020-12-15,"GM","Germany","quantile","0.99",20933.1461933
+2020-12-07,"9 day ahead cum death",2020-12-16,"GM","Germany","quantile","0.99",21183.7489683
+2020-12-07,"10 day ahead cum death",2020-12-17,"GM","Germany","quantile","0.99",21435.1372468
+2020-12-07,"11 day ahead cum death",2020-12-18,"GM","Germany","quantile","0.99",21687.3689986
+2020-12-07,"12 day ahead cum death",2020-12-19,"GM","Germany","quantile","0.99",21938.6889086
+2020-12-07,"13 day ahead cum death",2020-12-20,"GM","Germany","quantile","0.99",22190.9871366
+2020-12-07,"14 day ahead cum death",2020-12-21,"GM","Germany","quantile","0.99",22443.8143539
+2020-12-07,"15 day ahead cum death",2020-12-22,"GM","Germany","quantile","0.99",22694.9543038
+2020-12-07,"16 day ahead cum death",2020-12-23,"GM","Germany","quantile","0.99",22946.4034763
+2020-12-07,"17 day ahead cum death",2020-12-24,"GM","Germany","quantile","0.99",23199.2090347
+2020-12-07,"18 day ahead cum death",2020-12-25,"GM","Germany","quantile","0.99",23451.4110123
+2020-12-07,"19 day ahead cum death",2020-12-26,"GM","Germany","quantile","0.99",23702.8212779
+2020-12-07,"20 day ahead cum death",2020-12-27,"GM","Germany","quantile","0.99",23956.0301688
+2020-12-07,"21 day ahead cum death",2020-12-28,"GM","Germany","quantile","0.99",24207.4753281
+2020-12-07,"22 day ahead cum death",2020-12-29,"GM","Germany","quantile","0.99",24459.0814325
+2020-12-07,"23 day ahead cum death",2020-12-30,"GM","Germany","quantile","0.99",24710.6047044
+2020-12-07,"24 day ahead cum death",2020-12-31,"GM","Germany","quantile","0.99",24961.9476829
+2020-12-07,"25 day ahead cum death",2021-01-01,"GM","Germany","quantile","0.99",25214.0779809
+2020-12-07,"26 day ahead cum death",2021-01-02,"GM","Germany","quantile","0.99",25465.1160934
+2020-12-07,"27 day ahead cum death",2021-01-03,"GM","Germany","quantile","0.99",25716.0893261
+2020-12-07,"28 day ahead cum death",2021-01-04,"GM","Germany","quantile","0.99",25966.5166277
+2020-12-07,"29 day ahead cum death",2021-01-05,"GM","Germany","quantile","0.99",26216.9040237
+2020-12-07,"30 day ahead cum death",2021-01-06,"GM","Germany","quantile","0.99",26466.434069
+2020-12-07,"-1 wk ahead inc death",2020-11-28,"GM","Germany","observed",NA,2081
+2020-12-07,"0 wk ahead inc death",2020-12-05,"GM","Germany","observed",NA,2552
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.01",2015.1914335
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.01",2004.4078428
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.01",1984.4871675
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.01",1948.7461216
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.025",2095.9155767
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.025",2087.1527267
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.025",2067.3332875
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.025",2027.848322
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.05",2166.2918917
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.05",2160.6665966
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.05",2141.8680619
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.05",2101.4168812
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.1",2249.8359866
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.1",2246.6592846
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.1",2225.4225954
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.1",2186.838368
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.15",2307.8857537
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.15",2305.0056094
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.15",2283.564747
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.15",2245.5221344
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.2",2355.0455704
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.2",2350.9627571
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.2",2331.3554601
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.2",2293.3369262
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.25",2395.1545286
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.25",2391.9706933
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.25",2372.5824095
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.25",2333.5525994
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.3",2432.036798
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.3",2428.9829784
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.3",2408.9626696
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.3",2371.0953735
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.35",2466.0930456
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.35",2463.5025329
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.35",2443.4590609
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.35",2405.3938703
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.4",2499.0621091
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.4",2497.0048048
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.4",2476.9920626
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.4",2439.1647742
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.45",2530.6337693
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.45",2529.3567264
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.45",2509.4115537
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.45",2470.7582273
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","point",NA,2562.0487838
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","point",NA,2560.740829
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","point",NA,2540.4292691
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","point",NA,2502.5949025
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.55",2593.470646
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.55",2592.2700392
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.55",2571.6568004
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.55",2533.8867311
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.6",2626.2996712
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.6",2624.7721564
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.6",2604.8606158
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.6",2566.7826122
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.65",2660.4780684
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.65",2658.355378
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.65",2639.0392651
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.65",2600.4874544
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.7",2696.0099014
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.7",2694.261898
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.7",2674.8389987
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.7",2636.3937184
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.75",2734.9861396
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.75",2734.1317491
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.75",2714.3046295
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.75",2676.7059028
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.8",2777.2691401
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.8",2777.48748
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.8",2758.2807761
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.8",2720.6426893
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.85",2828.2339666
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.85",2829.3086574
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.85",2809.9450155
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.85",2772.6508657
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.9",2893.6055703
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.9",2894.5749695
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.9",2875.5960178
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.9",2838.2489863
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.95",2990.427613
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.95",2992.6363923
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.95",2974.5009533
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.95",2937.3376529
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.975",3075.4064598
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.975",3078.9397959
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.975",3060.1404215
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.975",3026.091842
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.99",3174.1884905
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.99",3180.8563162
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.99",3165.6338513
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.99",3131.0417776
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM","Germany","quantile","0.5",2562.0487838
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM","Germany","quantile","0.5",2560.740829
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM","Germany","quantile","0.5",2540.4292691
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM","Germany","quantile","0.5",2502.5949025
+2020-12-07,"-1 wk ahead cum death",2020-11-28,"GM","Germany","observed",NA,15974
+2020-12-07,"0 wk ahead cum death",2020-12-05,"GM","Germany","observed",NA,18526
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","point",NA,19664.1410278
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","point",NA,20698.3217786
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","point",NA,21731.3102714
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","point",NA,22755.7883024
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.01",19283.876576
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.01",19785.1262398
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.01",20282.8303556
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.01",20770.2918624
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.025",19335.0505212
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.025",19908.4952982
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.025",20476.9044894
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.025",21035.9433996
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.05",19381.6882136
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.05",20019.8958513
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.05",20654.1870794
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.05",21278.6733595
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.1",19437.9258731
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.1",20155.0682423
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.1",20869.2046128
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.1",21573.8146591
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.15",19477.8310526
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.15",20250.8765924
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.15",21020.8767703
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.15",21782.0033424
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.2",19511.1601019
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.2",20330.1979919
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.2",21146.7825909
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.2",21953.9767882
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.25",19540.4609065
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.25",20400.3869158
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.25",21258.1119432
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.25",22106.6421944
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.3",19567.041976
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.3",20464.1169558
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.3",21359.5606314
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.3",22245.6037579
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.35",19591.9798331
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.35",20524.4849226
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.35",21455.4466505
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.35",22377.0814084
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.4",19616.1463992
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.4",20583.0414087
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.4",21548.6584168
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.4",22505.1405224
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.45",19640.371473
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.45",20641.0453918
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.45",21640.4089968
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.45",22630.6449668
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.5",19664.1410278
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.5",20698.3217786
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.5",21731.3102714
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.5",22755.7883024
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.55",19688.7663018
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.55",20757.1833997
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.55",21824.7607013
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.55",22883.5472064
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.6",19713.8832077
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.6",20817.5521255
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.6",21920.7928139
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.6",23015.3112934
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.65",19740.4508422
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.65",20881.1502287
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.65",22021.7915491
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.65",23154.040533
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.7",19769.0307183
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.7",20949.7402083
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.7",22130.538022
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.7",23303.2597761
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.75",19800.090722
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.75",21024.7280394
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.75",22249.4950884
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.75",23466.7887841
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.8",19835.5534426
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.8",21109.6616406
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.8",22384.3072978
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.8",23652.5462847
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.85",19877.4547522
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.85",21210.536709
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.85",22544.8568671
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.85",23873.4289419
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.9",19931.7480101
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.9",21341.0026343
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.9",22752.6390816
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.9",24158.757698
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.95",20014.6491227
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.95",21540.7995789
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.95",23071.2399599
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.95",24596.4560739
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.975",20090.9071782
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.975",21720.3264909
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.975",23356.148458
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.975",24987.1131223
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM","Germany","quantile","0.99",20181.2706289
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM","Germany","quantile","0.99",21938.6889086
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM","Germany","quantile","0.99",23702.8212779
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM","Germany","quantile","0.99",25465.1160934
+2020-12-07,"-1 wk ahead inc death",2020-11-28,"GM13","Free State of Saxony","observed",NA,232
+2020-12-07,"0 wk ahead inc death",2020-12-05,"GM13","Free State of Saxony","observed",NA,366
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.01",328.3516869
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.01",407.6090503
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.01",488.4993128
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.01",559.8000783
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.025",346.2492548
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.025",429.0240165
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.025",512.3942156
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.025",585.2696172
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.05",361.9506632
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.05",447.6849993
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.05",533.9255999
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.05",608.4450815
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.1",380.9612905
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.1",469.9198728
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.1",558.5427874
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.1",635.9023955
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.15",394.2079174
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.15",484.71634
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.15",575.7688911
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.15",654.9139641
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.2",404.8521945
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.2",496.9701151
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.2",589.8829702
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.2",670.095802
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.25",414.2727971
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.25",507.592094
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.25",602.0447482
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.25",683.8886451
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.3",422.8123696
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.3",517.2999857
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.3",613.0098195
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.3",695.9346483
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.35",430.7463712
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.35",526.3768223
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.35",623.3569547
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.35",707.2131698
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.4",438.1952296
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.4",535.1429234
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.4",633.2161957
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.4",718.1754485
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.45",445.6846762
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.45",543.6705877
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.45",642.7325162
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.45",728.9164976
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","point",NA,452.9047408
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","point",NA,552.1354159
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","point",NA,652.2562319
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","point",NA,739.5816728
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.55",460.2409532
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.55",560.7555152
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.55",661.836713
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.55",750.3002716
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.6",467.7984572
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.6",569.6219572
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.6",671.8923141
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.6",761.263615
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.65",475.6984454
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.65",578.8806945
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.65",682.4274501
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.65",772.9816849
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.7",484.3179923
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.7",588.6925048
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.7",693.5228405
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.7",785.2821904
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.75",493.6251142
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.75",599.5157934
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.75",705.373937
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.75",798.6993489
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.8",504.061747
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.8",611.0607079
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.8",718.9380717
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.8",813.7775035
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.85",516.3947773
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.85",625.0102804
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.85",734.9351299
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.85",831.903983
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.9",531.5936041
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.9",643.5520095
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.9",754.8575471
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.9",854.562488
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.95",555.2010056
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.95",670.4113668
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.95",785.4325719
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.95",889.0684061
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.975",576.1887825
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.975",695.4275256
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.975",812.5160289
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.975",919.1921801
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.99",601.7519689
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.99",725.1650777
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.99",844.913273
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.99",953.732606
+2020-12-07,"1 wk ahead inc death",2020-12-12,"GM13","Free State of Saxony","quantile","0.5",452.9047408
+2020-12-07,"2 wk ahead inc death",2020-12-19,"GM13","Free State of Saxony","quantile","0.5",552.1354159
+2020-12-07,"3 wk ahead inc death",2020-12-26,"GM13","Free State of Saxony","quantile","0.5",652.2562319
+2020-12-07,"4 wk ahead inc death",2021-01-02,"GM13","Free State of Saxony","quantile","0.5",739.5816728
+2020-12-07,"-1 wk ahead cum death",2020-11-28,"GM13","Free State of Saxony","observed",NA,867
+2020-12-07,"0 wk ahead cum death",2020-12-05,"GM13","Free State of Saxony","observed",NA,1233
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","point",NA,1603.8636247
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","point",NA,2065.6600957
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","point",NA,2636.5427018
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","point",NA,3325.0943955
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.01",1298.2841856
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.01",1456.4957385
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.01",1674.2211351
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.01",1958.6554683
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.025",1335.6156664
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.025",1530.1871449
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.025",1791.7497956
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.025",2126.9769643
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.05",1370.2172745
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.05",1599.5329261
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.05",1901.7281729
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.05",2284.3303955
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.1",1414.3198
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.1",1687.9024944
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.1",2041.1529771
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.1",2482.0712779
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.15",1446.4393853
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.15",1752.0541176
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.15",2142.2675996
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.15",2625.2159199
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.2",1473.4182271
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.2",1805.8043115
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.2",2226.8399206
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.2",2744.7999456
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.25",1497.5639842
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.25",1853.8088385
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.25",2302.5655911
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.25",2851.8143303
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.3",1519.778206
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.3",1898.2365052
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.3",2372.5832527
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.3",2950.9541918
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.35",1541.2497246
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.35",1940.9458694
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.35",2439.7285433
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.35",3046.1062334
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.4",1562.1948459
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.4",1982.5542943
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.4",2505.3483658
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.4",3138.920718
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.45",1582.8654879
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.45",2023.759225
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.45",2570.3925989
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.45",3231.3319074
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.5",1603.8636247
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.5",2065.6600957
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.5",2636.5427018
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.5",3325.0943955
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.55",1625.2073724
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.55",2108.5166873
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.55",2704.0056273
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.55",3420.8215994
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.6",1647.5790192
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.6",2153.1027968
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.6",2774.2698327
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.6",3520.2867246
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.65",1671.1100773
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.65",2200.2201411
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.65",2848.793848
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.65",3626.0294683
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.7",1696.5898152
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.7",2251.2138225
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.7",2929.4469109
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.7",3740.6137911
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.75",1724.7853622
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.75",2307.8286805
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.75",3018.9786623
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.75",3867.7481723
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.8",1757.0052279
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.8",2372.3555558
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.8",3121.1627118
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.8",4013.412076
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.85",1795.8218449
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.85",2450.0885562
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.85",3243.8864566
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.85",4188.131867
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.9",1846.7724759
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.9",2551.6381615
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.9",3403.6971286
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.9",4416.379708
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.95",1924.3849203
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.95",2708.1566405
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.95",3651.9071153
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.95",4769.2627677
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.975",1996.3069391
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.975",2850.9961297
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.975",3877.0193471
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.975",5089.0502332
+2020-12-07,"1 wk ahead cum death",2020-12-12,"GM13","Free State of Saxony","quantile","0.99",2083.2453642
+2020-12-07,"2 wk ahead cum death",2020-12-19,"GM13","Free State of Saxony","quantile","0.99",3025.2359077
+2020-12-07,"3 wk ahead cum death",2020-12-26,"GM13","Free State of Saxony","quantile","0.99",4148.5638496
+2020-12-07,"4 wk ahead cum death",2021-01-02,"GM13","Free State of Saxony","quantile","0.99",5472.3193487
