@@ -9,14 +9,17 @@ Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 
 # names of models which are not to be included in visualization:
 models_to_exclude <- c("LeipzigIMISE-rkiV1", "LeipzigIMISE-ecdcV1", "Imperial-ensemble1", 
-                       "KITCOVIDhub-mean_ensemble", "KIT-time_series_baseline")
+                       "KITCOVIDhub-mean_ensemble", "KIT-time_series_baseline", 
+                       "KITCOVIDhub-inverse_wis_ensemble", "epiforecasts-EpiNow2_secondary")
 
 # read in forecasts:
 forecasts_to_plot <- read.csv("https://raw.githubusercontent.com/KITmetricslab/covid19-forecast-hub-de/master/app_forecasts_de/data/forecasts_to_plot.csv",
                               stringsAsFactors = FALSE, colClasses = list(timezero = "Date", forecast_date = "Date", target_end_date = "Date"))
 # exclude some models:
 forecasts_to_plot <- subset(forecasts_to_plot, !(model %in% models_to_exclude) &
-                              !grepl("-1", target))
+                              !grepl("-1", target) &
+                                    !grepl("3", target) &
+                                    !grepl("4", target))
 
 # get timezeros, i.e. Mondays on which forecasts were made:
 timezeros <- as.character(sort(unique(forecasts_to_plot$timezero), decreasing = TRUE))
@@ -69,9 +72,9 @@ last_truths_PL <- dat_truth[["ECDC"]][[target]][dat_truth$ECDC$date >= Sys.Date(
                                                   dat_truth$ECDC$location == "PL"]
 
 # compute ylim from these values:
-ylim_GM <- c(0.95*min(last_truths_GM), 1.05*min(max(subs_current_GM$value, na.rm = TRUE),
+ylim_GM <- c(0, 1.05*min(max(subs_current_GM$value, na.rm = TRUE),
                                                 1.5*max(subs_current_GM$value[subs_current_GM$type == "point"], na.rm = TRUE)))
-ylim_PL <- c(0.95*min(last_truths_PL), 1.05*min(max(subs_current_PL$value, na.rm = TRUE),
+ylim_PL <- c(0, 1.05*min(max(subs_current_PL$value, na.rm = TRUE),
                                                 1.5*max(subs_current_PL$value[subs_current_GM$type == "point"], na.rm = TRUE)))
 
 # get model names:
