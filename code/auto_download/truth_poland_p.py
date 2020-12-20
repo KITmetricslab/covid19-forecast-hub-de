@@ -43,7 +43,6 @@ for idx, relevant_rows in enumerate([inc_case_rows, cum_case_rows, inc_death_row
     for row in relevant_rows:
         rows.append(worksheet.get_row(row))
         time.sleep(1)
-        print("hi")
         
     df = pd.DataFrame(rows[1:], columns=rows[0])
     
@@ -62,15 +61,17 @@ for idx, relevant_rows in enumerate([inc_case_rows, cum_case_rows, inc_death_row
     df = df.set_index("location_name")
     df = df.replace(r'^\s*$', np.nan, regex=True)
     df = df.astype(float)
-    df.loc['Poland'] = df.sum(axis=0)
     
     # for cum cases, the sum has to be extracted from different worksheet because of bulk reporting
     if idx == 1:
         
         worksheet_cases = a.worksheet('title','Wzrost')
         cum_cases_pol = worksheet_cases.get_col(col=11)[3:]
-        cum_cases_pol = [float(x) for x in cum_cases_pol if not x==""]
+        cum_cases_pol = [float(x) for x in cum_cases_pol if not x.strip()==""]
         df.loc["Poland"] = cum_cases_pol
+        
+    else:
+        df.loc['Poland'] = df.sum(axis=0)
     
     #df["location"] = abbr_vois
     
@@ -95,10 +96,6 @@ for idx, relevant_rows in enumerate([inc_case_rows, cum_case_rows, inc_death_row
     df = df[["location_name", "location", "value"]]
     
     result.append(df)
-
-worksheet_cases = a.worksheet('title','Wzrost')
-cum_cases_pol = worksheet_cases.get_col(col=11)[2:]
-cum_cases_pol = [float(x) for x in cum_cases_pol if not x==""]
 
     
 result[0].to_csv("../../data-truth/MZ/truth_MZ-Incident Cases_Poland.csv")
