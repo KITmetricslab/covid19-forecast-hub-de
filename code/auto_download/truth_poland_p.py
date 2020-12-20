@@ -13,6 +13,43 @@ import datetime
 import numpy as np
 import time
 
+def wide_to_long(df):
+    """
+
+    Parameters
+    ----------
+    df : TYPE
+        dataframe in wide format
+
+    Returns
+    -------
+    df : TYPE
+        dataframe in long format
+
+    """
+    df = df.unstack().reset_index()
+        
+    df = df.rename(columns={"level_0": "date", 0: "value"})
+    
+    # handle date
+    df["date"] = df['date'].apply(lambda x: (x + ".2020").replace(".", "/"))
+    df["date"] = pd.to_datetime(df["date"], format="%d/%m/%Y")
+    
+    # add location names
+    df["location"] = df["location_name"].apply(lambda x: abbr_vois[x])
+    
+    # handle polish characters
+    df["location_name"] = df["location_name"].apply(lambda x: unidecode(x))
+    
+    #shift to ecdc
+    df["date"] = df["date"]. apply(lambda x: x + datetime.timedelta(days=1))
+    df = df.set_index("date")
+    
+    df = df[["location_name", "location", "value"]]
+    
+    return df
+
+
 gc = pygsheets.authorize(service_account_env_var ='SHEETS_CREDS')
 #gc = pygsheets.authorize(service_file='creds.json')
 a = gc.open_by_key('1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E')
@@ -43,6 +80,7 @@ for idx, relevant_rows in enumerate([inc_case_rows, cum_case_rows, inc_death_row
     for row in relevant_rows:
         rows.append(worksheet.get_row(row))
         time.sleep(1)
+        #print("debug")
         
     df = pd.DataFrame(rows[1:], columns=rows[0])
     
@@ -69,36 +107,41 @@ for idx, relevant_rows in enumerate([inc_case_rows, cum_case_rows, inc_death_row
         cum_cases_pol = worksheet_cases.get_col(col=11)[3:]
         cum_cases_pol = [float(x) for x in cum_cases_pol if not x.strip()==""]
         df.loc["Poland"] = cum_cases_pol
+    
+    # for cum deaths, the sum has to be extracted from different worksheet because of bulk reporting
+    elif idx == 3:
         
-    else:
-        df.loc['Poland'] = df.sum(axis=0)
+        worksheet_cases = a.worksheet('title','Wzrost')
+        cum_cases_pol = worksheet_cases.get_col(col=12)[3:]
+        cum_cases_pol = [float(x) for x in cum_cases_pol if not x.strip()==""]
+        df.loc["Poland"] = cum_cases_pol
     
     #df["location"] = abbr_vois
     
-    df = df.unstack().reset_index()
-    
-    df = df.rename(columns={"level_0": "date", 0: "value"})
-    
-    # handle date
-    df["date"] = df['date'].apply(lambda x: (x + ".2020").replace(".", "/"))
-    df["date"] = pd.to_datetime(df["date"], format="%d/%m/%Y")
-    
-    # add location names
-    df["location"] = df["location_name"].apply(lambda x: abbr_vois[x])
-    
-    # handle polish characters
-    df["location_name"] = df["location_name"].apply(lambda x: unidecode(x))
-    
-    #shift to ecdc
-    df["date"] = df["date"]. apply(lambda x: x + datetime.timedelta(days=1))
-    df = df.set_index("date")
-    
-    df = df[["location_name", "location", "value"]]
-    
     result.append(df)
 
+wide = result
+
+# calculate inc cases for poland
+cum_cases = wide[1].loc["Poland"].values.tolist()
+inc_cases = np.asarray(cum_cases) - np.asarray([0] + cum_cases[:-1])
+ 
+df_inc_cases = wide[0]
+df_inc_cases.loc["Poland"] = inc_cases.tolist()
+wide[0] = df_inc_cases
+
+# calculate in deaths for poland
+cum_deaths = wide[3].loc["Poland"].values.tolist()
+inc_deaths = np.asarray(cum_deaths) - np.asarray([0] + cum_deaths[:-1])
+ 
+df_inc_deaths = wide[2]
+df_inc_deaths.loc["Poland"] = inc_deaths.tolist()
+wide[2] = df_inc_deaths
+
+long_result = [wide_to_long(df) for df in wide]
+
     
-result[0].to_csv("../../data-truth/MZ/truth_MZ-Incident Cases_Poland.csv")
-result[1].to_csv("../../data-truth/MZ/truth_MZ-Cumulative Cases_Poland.csv")
-result[2].to_csv("../../data-truth/MZ/truth_MZ-Incident Deaths_Poland.csv")
-result[3].to_csv("../../data-truth/MZ/truth_MZ-Cumulative Deaths_Poland.csv")
+long_result[0].to_csv("../../data-truth/MZ/truth_MZ-Incident Cases_Poland.csv")
+long_result[1].to_csv("../../data-truth/MZ/truth_MZ-Cumulative Cases_Poland.csv")
+long_result[2].to_csv("../../data-truth/MZ/truth_MZ-Incident Deaths_Poland.csv")
+long_result[3].to_csv("../../data-truth/MZ/truth_MZ-Cumulative Deaths_Poland.csv")
