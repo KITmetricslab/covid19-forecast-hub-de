@@ -39,6 +39,10 @@ for(i in 1:length(filepaths))
 filepaths<-filepaths[germany_reported]
 
 #write final files
+#test if newest date is good, otherwise change name of file
+#test<-readRDS(filepaths[length(filepaths)])
+#date_name<-get_date(filepaths[length(filepaths)])
+#date_actual<-names(test)
 
 for(i in 1:length(filepaths)){
   formatted_file_1 <- format_imperial(path=filepaths[i],ens_model=1,poland=pol)
