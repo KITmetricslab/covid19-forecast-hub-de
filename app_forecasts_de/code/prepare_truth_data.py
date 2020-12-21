@@ -16,7 +16,7 @@ def read_saturdays(source, target, country):
 
 def load_ecdc():
     '''
-    Loads all relevant RKI and ECDC files.
+    Loads all relevant RKI, MZ and ECDC files.
     '''
     # ECDC data for Germany
     df_cd = read_saturdays('ECDC', 'cum_death', 'Germany')
@@ -31,20 +31,12 @@ def load_ecdc():
     # Only use ECDC data until RKI data was available
     df1 = df1[df1.date < df2.date.iloc[0]]
     
-    # ECDC data for Poland
-    df_cd = read_saturdays('ECDC', 'cum_death', 'Poland')
-    df_cc = read_saturdays('ECDC', 'cum_case', 'Poland')
-    df3 = df_cd.merge(df_cc, on=['date', 'location', 'location_name'])
-    
     # MZ data for Poland and Voivodeships
     df_cd = read_saturdays('MZ', 'cum_death', 'Poland')
     df_cc = read_saturdays('MZ', 'cum_case', 'Poland')
-    df4 = df_cd.merge(df_cc, on=['date', 'location', 'location_name'])
-    
-    # Use ECDC data for national level
-    df4 = df4[df4.location != 'PL']
+    df3 = df_cd.merge(df_cc, on=['date', 'location', 'location_name'])
 
-    df = pd.concat([df1, df2, df3, df4]).reset_index(drop=True)
+    df = pd.concat([df1, df2, df3]).reset_index(drop=True)
     
     return df
 

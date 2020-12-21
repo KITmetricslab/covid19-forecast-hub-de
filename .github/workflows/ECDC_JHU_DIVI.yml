@@ -27,11 +27,11 @@ jobs:
 
     - name: ECDC Truth
       run: |
-        cd ./code/auto_download
-        python3 ./ecdc_download.py
-        sleep 5
-        python3 ./ecdc_preprocessing.py
-        cd ../../
+        #cd ./code/auto_download
+        #python3 ./ecdc_download.py
+        #sleep 5
+        #python3 ./ecdc_preprocessing.py
+        #cd ../../
         
     - name: JHU Truth
       run: |
