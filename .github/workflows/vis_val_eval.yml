@@ -45,7 +45,7 @@ jobs:
       run: |
         cd ./code/validation
         python3 ./get_commit_dates.py
-        python3 ./validate_truth.py
+        #python3 ./validate_truth.py
         cd ../../
 
     - name: Evaluation

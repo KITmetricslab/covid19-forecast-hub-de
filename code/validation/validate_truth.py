@@ -40,6 +40,8 @@ for rki, ecdc in zip(RKI_data, ECDC_data):
     # calculate diff
     truth_data = pd.merge(rki_df.tail(n=7), ecdc_df.tail(n=7), on="date")
     
+    print(truth_data)
+    
     #check if we have 7 matching dates in last 7 days
     if truth_data.shape[0] != 7:
         

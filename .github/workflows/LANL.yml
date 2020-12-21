@@ -1,5 +1,5 @@
   
-name: "Lanl"
+name: "LANL"
 on:
   workflow_dispatch:
   schedule:
@@ -38,7 +38,7 @@ jobs:
 
     - name: Process LANL
       env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: | 
         git checkout LANL_actions
         python3 code/auto_download/auto-download-lanl-covid19.py
