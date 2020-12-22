@@ -11,6 +11,8 @@ Tue 4 Nov: LANL omitted from ensemble as last available forecast dated from Wed 
 Wed 11 Nov: Ensemble only created on Wednesday to be able to include MOCOS forecasts. MIT cumulative forecasts excluded as much too sharp relative to incidence forecasts. ICM forecast not included as forecasts seem shifted by one week. LeipzigIMISE forecasts excluded due to missingness of quantiles for incident forecasts and unlikely non-monotonic pattern over next four weeks.
 Tue 1 Dec: ITWW not included in deaths, Germany due to strong misalignment with past values. KIT-time_series_baseline excluded due to unrealistically large values for several quantities.
 Tue 8 Dec: KIT-time_series_baseline excluded from death forecasts due to unplausible behaviour. ICM model excluded due to very pronounced divergence from other models.
+Tue 15 Dec: time series baseline not included bc of excessive uncertainty.
+Tue 22 Dec: USC excluded due to suspected misalignment with most recent data.
 
 ### Documentation of forecast revisions:
 
