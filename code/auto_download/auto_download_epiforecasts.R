@@ -73,8 +73,6 @@ submit_epiforecast <- function(forecast,
 #' to be submitted.
 #' @return NULL
 #' @export
-#'
-#' @examples
 submit_epiforecasts <- function(forecasts, 
                                 forecast_date = Sys.Date() - 1) {
   for (model in forecasts) {
