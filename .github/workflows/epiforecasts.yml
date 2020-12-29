@@ -1,0 +1,30 @@
+name: "epiforecasts"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * 2"
+jobs:
+  submit:
+    name: submit
+    runs-on: macOS-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/pr-fetch@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: r-lib/actions/setup-r@v1
+      - name: Install dependencies
+        run: Rscript -e 'install.packages(c("data.table", "purrr"))'
+      - name: Submit Forecasts
+        run: Rscript 'code/auto_download/auto_download_epiforecasts.R'
+      - name: Commit
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add *.csv
+          git commit -m 'EpiForecasts Submission'
+      - uses: r-lib/actions/pr-push@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
