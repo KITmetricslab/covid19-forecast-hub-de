@@ -44,17 +44,14 @@ jobs:
         # Execute Scripts
         git checkout UCLA_actions
         
-        git remote rm origin
-        git remote add origin https://${AUTH}@github.com/KITmetricslab/covid19-forecast-hub-de.git > /dev/null 2>&1
-        git merge origin/master
-        
         python3 code/auto_download/auto-download-ucla.py
         cd ./data-raw/UCLA-SuEIR
         Rscript UCLA-processing-script.R
         cd ../../
         
         # Push to Github
-        
+        git remote rm origin
+        git remote add origin https://${AUTH}@github.com/KITmetricslab/covid19-forecast-hub-de.git > /dev/null 2>&1
         git add --all
         git commit -m "Weekly UCLA forecasts"
         git push --quiet --set-upstream origin HEAD:UCLA_actions
