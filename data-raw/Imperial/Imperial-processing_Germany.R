@@ -168,7 +168,7 @@ format_imperial<-function(path,ens_model,location=if(poland)c("Germany","Poland"
       path_truth<-"../../data-truth/MZ/truth_MZ-Cumulative Deaths_Poland.csv"
     }
     obs_data <- read_csv(path_truth) %>%
-        mutate(date = as.Date(date, "%m/%d/%y"))
+        mutate(date = as.Date(date, "%m/%d/%y")) %>%filter(location_name==loop[k])
     last_obs_date <- as.Date(colnames(data_raw)[1])-1
     last_obs_death <- obs_data$value[which(obs_data$location_name==loop[k] & obs_data$date==last_obs_date)]
     sample_mat_cum <- matrixStats::rowCumsums(as.matrix(data_raw)) + last_obs_death
@@ -184,7 +184,7 @@ format_imperial<-function(path,ens_model,location=if(poland)c("Germany","Poland"
     }
     #path_truth<-paste0("../../data-truth/ECDC/truth_ECDC-Incident Deaths_",loop[k],".csv")
     obs_data_inc <- read_csv(path_truth) %>%
-      mutate(date = as.Date(date, "%m/%d/%y"))
+      mutate(date = as.Date(date, "%m/%d/%y")) %>%filter(location_name==loop[k])
     last_obs_death_inc <- obs_data_inc$value[which(obs_data_inc$location_name==loop[k] & obs_data_inc$date==last_obs_date)]
     
     ## indices and samples for incident deaths 
