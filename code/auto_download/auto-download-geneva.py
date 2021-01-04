@@ -1,5 +1,10 @@
-# Auto-download forecasts of Geneva-Team
-# Jakob Ketterer, November 2020
+## Auto-download forecasts of Geneva-Team
+## Jakob Ketterer
+## November 2020
+
+## Use daily JHU based forecasts after ECDC switched to weekly reporting interval
+## Jakob Ketterer
+## December 2020
 
 import os
 import urllib.request
@@ -15,8 +20,9 @@ if __name__ == "__main__":
     files = os.listdir(data_raw_dir)
 
     # determine latest deaths and cases forecast date already present in our repo
-    deaths_prefix = "ECDC_deaths_predictions_"
-    cases_prefix = "ECDC_cases_predictions_"
+    deaths_prefix = "JHU_deaths_predictions_"
+    cases_prefix = "JHU_cases_predictions_"
+    
     deaths_file_list = sorted([f for f in files if f.startswith(deaths_prefix)], reverse=True)
     cases_file_list = sorted([f for f in files if f.startswith(cases_prefix)], reverse=True)
     
@@ -55,7 +61,9 @@ if __name__ == "__main__":
 
     ############ url generation and download of files
     # root url
-    root = "https://renkulab.io/gitlab/covid-19/covid-19-forecast/-/raw/master/data/ECDC/raw_prediction/"
+    # root = "https://renkulab.io/gitlab/covid-19/covid-19-forecast/-/raw/master/data/ECDC/raw_prediction/" # ecdc
+    root = "https://renkulab.io/gitlab/covid-19/covid-19-forecast/-/raw/master/data/JHU/raw_prediction/" # jhu
+
 
     # generate date specific death forecast url
     deaths_file_names = [deaths_prefix + date.strftime("%Y_%m_%d") + ".csv" for date in deaths_date_list]

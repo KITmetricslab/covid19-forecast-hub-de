@@ -9,6 +9,10 @@
 ## Johannes Bracher
 ## April 2020
 
+## Use daily JHU based forecasts after ECDC switched to weekly reporting interval
+## Jakob Ketterer
+## December 2020
+
 #' helper funtion to extract a date from a CU path name
 #'
 #' @param geneva_filepath the path from which to extract the date
@@ -16,10 +20,16 @@
 #' @return an object of class date
 
 date_from_geneva_filepath <- function(geneva_filepath){
-  if(grepl("JHU", geneva_filepath)) stop("Please use ECDC rather than JHU forecast files for US COVID-19 forecast hub.")
-  # for newer files:
+  # if(grepl("JHU", geneva_filepath)) stop("Please use ECDC rather than JHU forecast files for US COVID-19 forecast hub.")
+  
+  # for JHU files:
+  geneva_filepath <- gsub("JHU_deaths_predictions_", "", geneva_filepath)
+  geneva_filepath <- gsub("JHU_cases_predictions_", "", geneva_filepath)
+  
+  # for ECDC files:
   geneva_filepath <- gsub("ECDC_deaths_predictions_", "", geneva_filepath)
   geneva_filepath <- gsub("ECDC_cases_predictions_", "", geneva_filepath)
+  
   # for older files:
   geneva_filepath <- gsub("predictions_deaths_", "", geneva_filepath)
   geneva_filepath <- gsub("predictions_cases_", "", geneva_filepath)
