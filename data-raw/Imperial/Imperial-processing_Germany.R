@@ -152,15 +152,37 @@ format_imperial<-function(path,ens_model,location=if(poland)c("Germany","Poland"
       target_end_date = get_next_saturday(timezero) + (wday(timezero)>2)*7)
     
     ## make cumulative death counts
-    path_truth<-paste0("../../data-truth/ECDC/truth_ECDC-Cumulative Deaths_",loop[k],".csv")
+    #new format, not ECDC file but RKI and MZ source now
+    
+    #path_truth<-paste0("../../data-truth/ECDC/truth_ECDC-Cumulative Deaths_",loop[k],".csv")
+    # obs_data <- read_csv(path_truth) %>%
+    #   mutate(date = as.Date(date, "%m/%d/%y"))
+    # last_obs_date <- as.Date(colnames(data_raw)[1])-1
+    
+    if(loop[k]=="Germany")
+    {
+      path_truth<-"../../data-truth/RKI/truth_RKI-Cumulative Deaths_Germany.csv"
+    }
+    if(loop[k]=="Poland")
+    {
+      path_truth<-"../../data-truth/MZ/truth_MZ-Cumulative Deaths_Poland.csv"
+    }
     obs_data <- read_csv(path_truth) %>%
-      mutate(date = as.Date(date, "%m/%d/%y"))
+        mutate(date = as.Date(date, "%m/%d/%y"))
     last_obs_date <- as.Date(colnames(data_raw)[1])-1
     last_obs_death <- obs_data$value[which(obs_data$location_name==loop[k] & obs_data$date==last_obs_date)]
     sample_mat_cum <- matrixStats::rowCumsums(as.matrix(data_raw)) + last_obs_death
     
     #get true inc counts
-    path_truth<-paste0("../../data-truth/ECDC/truth_ECDC-Incident Deaths_",loop[k],".csv")
+    if(loop[k]=="Germany")
+    {
+      path_truth<-"../../data-truth/RKI/truth_RKI-Incident Deaths_Germany.csv"
+    }
+    if(loop[k]=="Poland")
+    {
+      path_truth<-"../../data-truth/MZ/truth_MZ-Incident Deaths_Poland.csv"
+    }
+    #path_truth<-paste0("../../data-truth/ECDC/truth_ECDC-Incident Deaths_",loop[k],".csv")
     obs_data_inc <- read_csv(path_truth) %>%
       mutate(date = as.Date(date, "%m/%d/%y"))
     last_obs_death_inc <- obs_data_inc$value[which(obs_data_inc$location_name==loop[k] & obs_data_inc$date==last_obs_date)]
