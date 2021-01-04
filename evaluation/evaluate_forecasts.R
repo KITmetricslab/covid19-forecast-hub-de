@@ -47,7 +47,8 @@ for(truth_eval in c("ECDC", "JHU")){
       if(nrow(forecasts) > 0){
         eval_temp <- evaluate_forecasts(forecasts,
                                         name_truth_eval = truth_eval,
-                                        dat_truth = dat_truth)
+                                        dat_truth = dat_truth,
+                                        truth_data_use = truth_data_use)
         eval_temp <- cbind(model = model,
                            timezero = next_monday(get_date_from_filename(files_death[i])),
                            eval_temp)
@@ -74,7 +75,8 @@ for(truth_eval in c("ECDC", "JHU")){
       if(nrow(forecasts) > 0){
         eval_temp <- evaluate_forecasts(forecasts,
                                         name_truth_eval = truth_eval,
-                                        dat_truth = dat_truth)
+                                        dat_truth = dat_truth, 
+                                        truth_data_use = truth_data_use)
         eval_temp <- cbind(model = model,
                            timezero = next_monday(get_date_from_filename(files_case[i])),
                            eval_temp)

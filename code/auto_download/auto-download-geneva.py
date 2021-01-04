@@ -1,5 +1,10 @@
-# Auto-download forecasts of Geneva-Team
-# Jakob Ketterer, November 2020
+## Auto-download forecasts of Geneva-Team
+## Jakob Ketterer
+## November 2020
+
+## Use daily JHU based forecasts after ECDC switched to weekly reporting interval
+## Jakob Ketterer
+## December 2020
 
 import os
 import urllib.request
@@ -15,8 +20,9 @@ if __name__ == "__main__":
     files = os.listdir(data_raw_dir)
 
     # determine latest deaths and cases forecast date already present in our repo
-    deaths_prefix = "ECDC_deaths_predictions_"
-    cases_prefix = "ECDC_cases_predictions_"
+    deaths_prefix = "JHU_deaths_predictions_"
+    cases_prefix = "JHU_cases_predictions_"
+    
     deaths_file_list = sorted([f for f in files if f.startswith(deaths_prefix)], reverse=True)
     cases_file_list = sorted([f for f in files if f.startswith(cases_prefix)], reverse=True)
     
@@ -55,7 +61,9 @@ if __name__ == "__main__":
 
     ############ url generation and download of files
     # root url
-    root = "https://renkulab.io/gitlab/covid-19/covid-19-forecast/-/raw/master/data/ECDC/raw_prediction/"
+    # root = "https://renkulab.io/gitlab/covid-19/covid-19-forecast/-/raw/master/data/ECDC/raw_prediction/" # ecdc
+    root = "https://renkulab.io/gitlab/covid-19/covid-19-forecast/-/raw/master/data/JHU/raw_prediction/" # jhu
+
 
     # generate date specific death forecast url
     deaths_file_names = [deaths_prefix + date.strftime("%Y_%m_%d") + ".csv" for date in deaths_date_list]
@@ -72,7 +80,23 @@ if __name__ == "__main__":
     # download and safe csv files
     urls = deaths_urls + cases_urls
     dir_names = deaths_dirs + cases_dirs
+    dates_list = deaths_date_list + cases_date_list
 
-    for url, dir_name in zip(urls, dir_names):
+    # download and safe csv files
+    errors = False
+    for url, dir_name, date in zip(urls, dir_names, dates_list):
         urllib.request.urlretrieve(url, dir_name)
-        print("Downloaded and saved forecast to", dir_name)
+        print(f"Downloaded forecast from {date.date()} and saved it to", dir_name)
+    
+    # catch URL Errors: 
+    #     try:
+    #         urllib.request.urlretrieve(url, dir_name)
+    #         print(f"Downloaded forecast from {date.date()} and saved it to", dir_name)
+    #     except urllib.error.URLError as e:
+    #         print(f"URL-ERROR: Download failed for {date.date()}. The file probably doesn't exist in the Geneva repo yet OR the root URL may have changed.")
+    #         errors = True
+
+    # if errors:
+    #     print("\n↯ Errors occured while downloading Geneva forecasts! See download history for details!\n")
+    # else:
+    #     print("\n✓ No errors occured\n")

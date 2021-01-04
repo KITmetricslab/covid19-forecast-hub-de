@@ -2,7 +2,11 @@
 ![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/ECDC-JHU-DIVI/badge.svg)
 ![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/MZ/badge.svg)
 ![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/Visualization/Validation/Evaluation/badge.svg)
-![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/Lanl_Geneva/badge.svg)
+![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/Geneva/badge.svg)
+![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/UCLA/badge.svg)
+![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/LANL/badge.svg)
+![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/epiforecasts/badge.svg)
+
 
 # German and Polish COVID-19 Forecast Hub
 
@@ -26,7 +30,7 @@
 
 ## Purpose
 
-This repository assembles forecasts of cumulative and incident COVID-19 deaths and cases in Germany and Poland in a standardized format. Forecasts for ICU need or other targets may be added in the future. The repository is run by members of the [Chair of Econometrics and Statistics at Karlsruhe Institute of Technology](https://statistik.econ.kit.edu/index.php) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/), see [below](#forecast-hub-team).
+This repository assembles forecasts of cumulative and incident COVID-19 deaths and cases in Germany and Poland in a standardized format. The repository is run by members of the [Chair of Econometrics and Statistics at Karlsruhe Institute of Technology](https://statistik.econ.kit.edu/index.php) and the [Computational Statistics Group at Heidelberg Institute for Theoretical Studies](https://www.h-its.org/research/cst/), see [below](#forecast-hub-team).
 
 An **interactive visualization** and additional information on our project can be found on our website [here](https://kitmetricslab.github.io/forecasthub/).
 
@@ -36,26 +40,26 @@ We are running a **pre-registered evaluation study** covering the months of Octo
 
 The effort parallels the [US COVID-19 Forecast Hub](https://github.com/reichlab/covid19-forecast-hub) run by the UMass-Amherst Influenza Forecasting Center of Excellence based at the [Reich Lab](https://reichlab.io/). We are in close exchange with the Reich Lab team and follow the general structure and [data format](https://github.com/reichlab/covid19-forecast-hub/blob/master/data-processed/README.md) defined there, see this [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-Data-Format) for more details. We also re-use software provided by the ReichLab (see [below](#data-license-and-reuse)).
 
-If you are generating forecasts for COVID-19 cases, hospitalizations or deaths in Germany and would like to contribute to this repository do not hesitate to [get in touch](forecasthub@econ.kit.edu).
+If you are generating forecasts for COVID-19 cases, hospitalizations or deaths in Germany and would like to contribute to this repository do not hesitate to [get in touch](https://kitmetricslab.github.io/forecasthub/about).
 
 ## Forecast targets
 
 ### Deaths
 
-Our main focus is on **1 through 30 day and 1 through 4 week ahead forecasts of incident and cumulative deaths by reporting date in Germany and Poland (national level), the German states (Bundesländer) and Polish voivodeships.**. We also accept up to 130 day-ahead and up to 20 week-ahead forecasts. This [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets) contains details on the definition of the targets. There is no obligation to submit forecasts for all suggested targets and it is up to teams to decide what they feel comfortable forecasting.
+We collect **1 through 30 day and 1 through 4 week ahead forecasts of incident and cumulative deaths by reporting date in Germany and Poland (national level), the German states (Bundesländer) and Polish voivodeships, with a special focus on short horizons 1 and 2 week ahead.** This [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets) contains details on the definition of the targets. There is no obligation to submit forecasts for all suggested targets and it is up to teams to decide what they feel comfortable forecasting.
 
 Our definition of targets parallels the principles outlined [here](https://github.com/reichlab/covid19-forecast-hub#what-forecasts-we-are-tracking-and-for-which-locations) for the US COVID-19 Forecast Hub.
 
-Note that we currently treat the **ECDC data** available [here](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide) and [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/ECDC) in a processed form as our ground truth for the national level death forecasts. Data for German Bundesländer and Polish voivodeships is based on data from Robert Koch Institute and the Polish Ministry of Health see [below](#truth-data).
+Up to 14 December we treated the **ECDC data** available [here](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide) and [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/ECDC) in a processed form as our ground truth for the national level death forecasts. As of 19 December, we use data we process directly from Robert Koch Institute and the Polish Ministry of Health see [below](#truth-data). These agree with the ECDC data up to 14 Dec.
 
 ### Cases
 
 We collect **1 through 4 week ahead and 1 through 30 day forecasts of incident and cumulative confirmed cases by reporting date in Germany and Poland (national level), German states (Bundesländer) and Polish voivodeships**, see the [wiki entry](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Forecast-targets). The respective truth data from RKI and the Polish Ministry of Health can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/RKI) and [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/MZ).
 
+<!---
 ### Intensive care use
-
-We intend to start covering forecasts for intensive care use due to COVID19 (at the German national and Bundesland levels). Details will be provided here soon. Data from the [DIVI Registry](https://www.divi.de/) have been compiled [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/DIVI) and may be used to define prediction targets.
-
+We intend to start covering forecasts for intensive care use due to COVID19 (at the German national and Bundesland levels). Details will be provided here soon. # Data from the [DIVI Registry](https://www.divi.de/) have been compiled [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-# truth/DIVI) and may be used to define prediction targets.
+-->
 
 
 <!---
@@ -66,14 +70,14 @@ Note that unlike the US hub we also allow for `-1 wk ahead <target>`, `0 wk ahea
 
 The main contents of the repository are currently the following (see also [this](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Structure-of-the-repository) wiki page):
 
-- `data-raw`: the forecast files as provided by the various teams on their respective websites
 - `data-processed`: forecasts in a standardized format
 - `data-truth`: truth data from JHU and ECDC in a standardized format
-
+- `data-raw`: the forecast files as provided by various teams on their respective websites
+- The [interactive visualization](https://kitmetricslab.github.io/forecasthub), which has been implemented by embers of the Signale Team at RKI, is maintained in a [separate repository](https://github.com/KITmetricslab/forecasthub/).
 
 ## Guide to submission
 
-Submission for actively contributing teams is based on pull requests. Our wiki contains a detailed [guide to submission](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Preparing-your-submission). **Forecasts should be updated in a weekly rhythm. If at all possible, new forecast should be uploaded on Mondays.** Upload until Tuesday, 3pm Berlin/Warsaw time is acceptable. Note that we also accept additional updates on other days of the week (not more than one per day), but will not include these in visualizations or ensembles (if no new forecast was provided on a Monday we will, however, use forecasts from the preceding Sunday, Saturday or Friday).
+Submission for actively contributing teams is based on pull requests. Our wiki contains a detailed [guide to submission](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Preparing-your-submission). **Forecasts should be updated in a weekly rhythm. If possible, new forecast should be uploaded on Mondays.** Upload until Tuesday, 3pm Berlin/Warsaw time is acceptable. Note that we also accept additional updates on other days of the week (not more than one per day), but will not include these in visualizations or ensembles (if no new forecast was provided on a Monday we will, however, use forecasts from the preceding Sunday, Saturday or Friday).
 
 We moreover actively collect forecasts from a number of public repositories in accordance with the respective license terms and after having contacted the respective authors.
 
@@ -94,9 +98,9 @@ The forecasts assembled in this repository have been created by various independ
 
 Data on observed numbers of deaths and several other quantities are compiled [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth) and come from the following sources:
 
-- [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases) **This is our preferred source for national level counts.**
-- [Polish Ministry of Health](https://www.gov.pl/web/zdrowie). We pull these data from [this Google Sheet](bit.ly/covid19-poland) run by [Michal Rogalski](https://twitter.com/micalrg). **This is our preferred source for Polish voivodeship level counts.** The data are coherent with the national level data from ECDC. **To align with the ECDC time scale we have shifted them by one day, see [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/MZ).**
-- [Robert Koch Institut](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0). Note that these data are subject to some processing steps (see [here](data-truth/RKI)) and are in part based on manual data extraction performed by [IHME](https://covid19.healthdata.org/united-states-of-america). **This is our preferred source for German Bundesland level counts. The data are coherent with the national level data from ECDC.**
+- [European Centre for Disease Prevention and Control](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases) **This used to be our preferred source for national level counts, but ECDC has switched to weekly reporting intervals on 14 Dec 2020.**
+- [Polish Ministry of Health](https://www.gov.pl/web/zdrowie). We pull these data from [this Google Sheet](https://docs.google.com/spreadsheets/u/2/d/1ierEhD6gcq51HAm433knjnVwey4ZE5DCnu1bW7PRG3E/htmlview?usp=gmail_thread#) run by [Michal Rogalski](https://twitter.com/micalrg). **This is our preferred source for Polish voivodeship level counts.** The data are coherent with the national level data from ECDC. **These data are coherent with the ECDC data up to 14 Dec. To align with the ECDC time scale we have shifted them by one day, see [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/MZ).**
+- [Robert Koch Institut](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0). Note that these data are subject to some processing steps (see [here](data-truth/RKI)) and are in part based on manual data extraction performed by [IHME](https://covid19.healthdata.org/united-states-of-america). **This is our preferred source for German Bundesland level counts. The data are coherent with the national level data from ECDC up to 14 Dec.**
 - [Johns Hopkins University](https://coronavirus.jhu.edu/). These data are used by a number of teams generating forecasts. Currently (August 2020) the agreement with ECDC is good, but in the past there have been larger discrepancies.
 - [DIVI Intensivregister.](https://www.divi.de/register/tagesreport) These data are currently not yet used for forecasts, but we may extend our activities in this direction.
 
@@ -113,6 +117,7 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [Imperial College](https://github.com/mrc-ide/covid19-forecasts-orderly) (ECDC; Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License)
 - [Johannes Gutenberg University Mainz / University of Hamburg](https://github.com/QEDHamburg/covid19) (ECDC; MIT)
 - [KIT](https://github.com/KITmetricslab/KIT-baseline) (ECDC; MIT) *These are two simple baseline models run by the Forecast Hub Team. Part of these forecasts were created retrospectively, but using only data available at the respective forecast date. The commit dates of all forecasts can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/code/validation/commit_dates.csv).*
+- [Karlen working group](Karlen working group) (ECDC; to be specified)
 - [KITCOVIDhub] The `mean_ensemble` and `median_ensemble` are two different aggregations of all submitted and eligible forecasts, see [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble). While the median ensemble is our pre-specified main ensemble, we also monitor performance of the mean ensemble.
 - [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)
 - [MIM / University of Warsaw](https://www.mimuw.edu.pl/en/faculty) (ECDC; to be specified)
