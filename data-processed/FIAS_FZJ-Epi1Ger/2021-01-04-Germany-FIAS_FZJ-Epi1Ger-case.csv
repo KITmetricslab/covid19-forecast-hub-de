@@ -2363,7 +2363,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,30 day ahead inc case,2021-02-03,GM07,North Rhine-Westphalia State,quantile,0.990,2974.836082050318
 2021-01-04,-1 day ahead cum case,2021-01-03,GM07,North Rhine-Westphalia State,observed,NA,400594.0
 2021-01-04,0 day ahead cum case,2021-01-04,GM07,North Rhine-Westphalia State,observed,NA,402519.0
-2021-01-04,1 day ahead cum case,2021-01-05,GM,Germany,point,NA,408682.04014388577
+2021-01-04,1 day ahead cum case,2021-01-05,GM07,North Rhine-Westphalia State,point,NA,408682.04014388577
 2021-01-04,1 day ahead cum case,2021-01-05,GM07,North Rhine-Westphalia State,quantile,0.010,404359.1616894421
 2021-01-04,1 day ahead cum case,2021-01-05,GM07,North Rhine-Westphalia State,quantile,0.025,404634.8235039284
 2021-01-04,1 day ahead cum case,2021-01-05,GM07,North Rhine-Westphalia State,quantile,0.050,405133.93845591485
@@ -2387,7 +2387,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,1 day ahead cum case,2021-01-05,GM07,North Rhine-Westphalia State,quantile,0.950,411156.7314330238
 2021-01-04,1 day ahead cum case,2021-01-05,GM07,North Rhine-Westphalia State,quantile,0.975,411906.4480345433
 2021-01-04,1 day ahead cum case,2021-01-05,GM07,North Rhine-Westphalia State,quantile,0.990,412566.3657116468
-2021-01-04,2 day ahead cum case,2021-01-06,GM,Germany,point,NA,411201.32160546957
+2021-01-04,2 day ahead cum case,2021-01-06,GM07,North Rhine-Westphalia State,point,NA,411201.32160546957
 2021-01-04,2 day ahead cum case,2021-01-06,GM07,North Rhine-Westphalia State,quantile,0.010,405880.0804665257
 2021-01-04,2 day ahead cum case,2021-01-06,GM07,North Rhine-Westphalia State,quantile,0.025,406221.1539812374
 2021-01-04,2 day ahead cum case,2021-01-06,GM07,North Rhine-Westphalia State,quantile,0.050,406915.658746701
@@ -2411,7 +2411,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,2 day ahead cum case,2021-01-06,GM07,North Rhine-Westphalia State,quantile,0.950,413880.4787790019
 2021-01-04,2 day ahead cum case,2021-01-06,GM07,North Rhine-Westphalia State,quantile,0.975,415180.5126104392
 2021-01-04,2 day ahead cum case,2021-01-06,GM07,North Rhine-Westphalia State,quantile,0.990,415924.448320064
-2021-01-04,3 day ahead cum case,2021-01-07,GM,Germany,point,NA,413373.2783068348
+2021-01-04,3 day ahead cum case,2021-01-07,GM07,North Rhine-Westphalia State,point,NA,413373.2783068348
 2021-01-04,3 day ahead cum case,2021-01-07,GM07,North Rhine-Westphalia State,quantile,0.010,407211.32674680435
 2021-01-04,3 day ahead cum case,2021-01-07,GM07,North Rhine-Westphalia State,quantile,0.025,407765.7587519726
 2021-01-04,3 day ahead cum case,2021-01-07,GM07,North Rhine-Westphalia State,quantile,0.050,408532.77090420015
@@ -2435,7 +2435,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,3 day ahead cum case,2021-01-07,GM07,North Rhine-Westphalia State,quantile,0.950,416791.7968879239
 2021-01-04,3 day ahead cum case,2021-01-07,GM07,North Rhine-Westphalia State,quantile,0.975,418432.1112659087
 2021-01-04,3 day ahead cum case,2021-01-07,GM07,North Rhine-Westphalia State,quantile,0.990,419061.2335930167
-2021-01-04,4 day ahead cum case,2021-01-08,GM,Germany,point,NA,415583.62404947716
+2021-01-04,4 day ahead cum case,2021-01-08,GM07,North Rhine-Westphalia State,point,NA,415583.62404947716
 2021-01-04,4 day ahead cum case,2021-01-08,GM07,North Rhine-Westphalia State,quantile,0.010,408399.82431041327
 2021-01-04,4 day ahead cum case,2021-01-08,GM07,North Rhine-Westphalia State,quantile,0.025,409129.09382916987
 2021-01-04,4 day ahead cum case,2021-01-08,GM07,North Rhine-Westphalia State,quantile,0.050,409818.7650030166
@@ -2459,7 +2459,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,4 day ahead cum case,2021-01-08,GM07,North Rhine-Westphalia State,quantile,0.950,419639.154540662
 2021-01-04,4 day ahead cum case,2021-01-08,GM07,North Rhine-Westphalia State,quantile,0.975,421658.67013106495
 2021-01-04,4 day ahead cum case,2021-01-08,GM07,North Rhine-Westphalia State,quantile,0.990,422318.6425462293
-2021-01-04,5 day ahead cum case,2021-01-09,GM,Germany,point,NA,417777.01336782856
+2021-01-04,5 day ahead cum case,2021-01-09,GM07,North Rhine-Westphalia State,point,NA,417777.01336782856
 2021-01-04,5 day ahead cum case,2021-01-09,GM07,North Rhine-Westphalia State,quantile,0.010,409460.24223007704
 2021-01-04,5 day ahead cum case,2021-01-09,GM07,North Rhine-Westphalia State,quantile,0.025,410398.56393977354
 2021-01-04,5 day ahead cum case,2021-01-09,GM07,North Rhine-Westphalia State,quantile,0.050,410978.891422879
@@ -2483,7 +2483,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,5 day ahead cum case,2021-01-09,GM07,North Rhine-Westphalia State,quantile,0.950,422479.92699715064
 2021-01-04,5 day ahead cum case,2021-01-09,GM07,North Rhine-Westphalia State,quantile,0.975,424857.76233377104
 2021-01-04,5 day ahead cum case,2021-01-09,GM07,North Rhine-Westphalia State,quantile,0.990,425618.971110312
-2021-01-04,6 day ahead cum case,2021-01-10,GM,Germany,point,NA,419896.0984112476
+2021-01-04,6 day ahead cum case,2021-01-10,GM07,North Rhine-Westphalia State,point,NA,419896.0984112476
 2021-01-04,6 day ahead cum case,2021-01-10,GM07,North Rhine-Westphalia State,quantile,0.010,410401.93364242755
 2021-01-04,6 day ahead cum case,2021-01-10,GM07,North Rhine-Westphalia State,quantile,0.025,411431.7802914883
 2021-01-04,6 day ahead cum case,2021-01-10,GM07,North Rhine-Westphalia State,quantile,0.050,412095.64837931254
@@ -2507,7 +2507,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,6 day ahead cum case,2021-01-10,GM07,North Rhine-Westphalia State,quantile,0.950,425275.1321484903
 2021-01-04,6 day ahead cum case,2021-01-10,GM07,North Rhine-Westphalia State,quantile,0.975,428036.99361642584
 2021-01-04,6 day ahead cum case,2021-01-10,GM07,North Rhine-Westphalia State,quantile,0.990,428760.43960956763
-2021-01-04,7 day ahead cum case,2021-01-11,GM,Germany,point,NA,421954.12367177487
+2021-01-04,7 day ahead cum case,2021-01-11,GM07,North Rhine-Westphalia State,point,NA,421954.12367177487
 2021-01-04,7 day ahead cum case,2021-01-11,GM07,North Rhine-Westphalia State,quantile,0.010,411208.8411393165
 2021-01-04,7 day ahead cum case,2021-01-11,GM07,North Rhine-Westphalia State,quantile,0.025,412270.5150448275
 2021-01-04,7 day ahead cum case,2021-01-11,GM07,North Rhine-Westphalia State,quantile,0.050,413127.47156048653
@@ -2531,7 +2531,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,7 day ahead cum case,2021-01-11,GM07,North Rhine-Westphalia State,quantile,0.950,428028.9931938913
 2021-01-04,7 day ahead cum case,2021-01-11,GM07,North Rhine-Westphalia State,quantile,0.975,431190.210562767
 2021-01-04,7 day ahead cum case,2021-01-11,GM07,North Rhine-Westphalia State,quantile,0.990,432009.0801221745
-2021-01-04,8 day ahead cum case,2021-01-12,GM,Germany,point,NA,423940.34360132884
+2021-01-04,8 day ahead cum case,2021-01-12,GM07,North Rhine-Westphalia State,point,NA,423940.34360132884
 2021-01-04,8 day ahead cum case,2021-01-12,GM07,North Rhine-Westphalia State,quantile,0.010,411925.03347057966
 2021-01-04,8 day ahead cum case,2021-01-12,GM07,North Rhine-Westphalia State,quantile,0.025,413013.4916442535
 2021-01-04,8 day ahead cum case,2021-01-12,GM07,North Rhine-Westphalia State,quantile,0.050,413901.1662713273
@@ -2555,7 +2555,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,8 day ahead cum case,2021-01-12,GM07,North Rhine-Westphalia State,quantile,0.950,430735.28152047726
 2021-01-04,8 day ahead cum case,2021-01-12,GM07,North Rhine-Westphalia State,quantile,0.975,434317.68269402516
 2021-01-04,8 day ahead cum case,2021-01-12,GM07,North Rhine-Westphalia State,quantile,0.990,435321.60042702535
-2021-01-04,9 day ahead cum case,2021-01-13,GM,Germany,point,NA,425864.912988574
+2021-01-04,9 day ahead cum case,2021-01-13,GM07,North Rhine-Westphalia State,point,NA,425864.912988574
 2021-01-04,9 day ahead cum case,2021-01-13,GM07,North Rhine-Westphalia State,quantile,0.010,412563.15413967276
 2021-01-04,9 day ahead cum case,2021-01-13,GM07,North Rhine-Westphalia State,quantile,0.025,413675.51663535583
 2021-01-04,9 day ahead cum case,2021-01-13,GM07,North Rhine-Westphalia State,quantile,0.050,414589.8669590325
@@ -2579,7 +2579,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,9 day ahead cum case,2021-01-13,GM07,North Rhine-Westphalia State,quantile,0.950,433401.0232996415
 2021-01-04,9 day ahead cum case,2021-01-13,GM07,North Rhine-Westphalia State,quantile,0.975,437396.21006424143
 2021-01-04,9 day ahead cum case,2021-01-13,GM07,North Rhine-Westphalia State,quantile,0.990,438625.05030816357
-2021-01-04,10 day ahead cum case,2021-01-14,GM,Germany,point,NA,427721.0773511066
+2021-01-04,10 day ahead cum case,2021-01-14,GM07,North Rhine-Westphalia State,point,NA,427721.0773511066
 2021-01-04,10 day ahead cum case,2021-01-14,GM07,North Rhine-Westphalia State,quantile,0.010,413121.6169195034
 2021-01-04,10 day ahead cum case,2021-01-14,GM07,North Rhine-Westphalia State,quantile,0.025,414257.4141034305
 2021-01-04,10 day ahead cum case,2021-01-14,GM07,North Rhine-Westphalia State,quantile,0.050,415380.4495212462
@@ -2603,7 +2603,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,10 day ahead cum case,2021-01-14,GM07,North Rhine-Westphalia State,quantile,0.950,436028.98708972
 2021-01-04,10 day ahead cum case,2021-01-14,GM07,North Rhine-Westphalia State,quantile,0.975,440457.3199304248
 2021-01-04,10 day ahead cum case,2021-01-14,GM07,North Rhine-Westphalia State,quantile,0.990,441918.54215019627
-2021-01-04,11 day ahead cum case,2021-01-15,GM,Germany,point,NA,429525.4223014422
+2021-01-04,11 day ahead cum case,2021-01-15,GM07,North Rhine-Westphalia State,point,NA,429525.4223014422
 2021-01-04,11 day ahead cum case,2021-01-15,GM07,North Rhine-Westphalia State,quantile,0.010,413620.4258754643
 2021-01-04,11 day ahead cum case,2021-01-15,GM07,North Rhine-Westphalia State,quantile,0.025,414774.8768622209
 2021-01-04,11 day ahead cum case,2021-01-15,GM07,North Rhine-Westphalia State,quantile,0.050,416144.9180934923
@@ -2627,7 +2627,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,11 day ahead cum case,2021-01-15,GM07,North Rhine-Westphalia State,quantile,0.950,438608.0306671296
 2021-01-04,11 day ahead cum case,2021-01-15,GM07,North Rhine-Westphalia State,quantile,0.975,443566.6062909697
 2021-01-04,11 day ahead cum case,2021-01-15,GM07,North Rhine-Westphalia State,quantile,0.990,445200.9194348721
-2021-01-04,12 day ahead cum case,2021-01-16,GM,Germany,point,NA,431268.99601714715
+2021-01-04,12 day ahead cum case,2021-01-16,GM07,North Rhine-Westphalia State,point,NA,431268.99601714715
 2021-01-04,12 day ahead cum case,2021-01-16,GM07,North Rhine-Westphalia State,quantile,0.010,414059.6789752196
 2021-01-04,12 day ahead cum case,2021-01-16,GM07,North Rhine-Westphalia State,quantile,0.025,415229.09771327255
 2021-01-04,12 day ahead cum case,2021-01-16,GM07,North Rhine-Westphalia State,quantile,0.050,416851.1946725073
@@ -2651,7 +2651,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,12 day ahead cum case,2021-01-16,GM07,North Rhine-Westphalia State,quantile,0.950,441152.47051294945
 2021-01-04,12 day ahead cum case,2021-01-16,GM07,North Rhine-Westphalia State,quantile,0.975,446433.71642673697
 2021-01-04,12 day ahead cum case,2021-01-16,GM07,North Rhine-Westphalia State,quantile,0.990,448470.768422055
-2021-01-04,13 day ahead cum case,2021-01-17,GM,Germany,point,NA,432952.9494776714
+2021-01-04,13 day ahead cum case,2021-01-17,GM07,North Rhine-Westphalia State,point,NA,432952.9494776714
 2021-01-04,13 day ahead cum case,2021-01-17,GM07,North Rhine-Westphalia State,quantile,0.010,414452.840556283
 2021-01-04,13 day ahead cum case,2021-01-17,GM07,North Rhine-Westphalia State,quantile,0.025,415629.52592937485
 2021-01-04,13 day ahead cum case,2021-01-17,GM07,North Rhine-Westphalia State,quantile,0.050,417500.78252963896
@@ -2675,7 +2675,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,13 day ahead cum case,2021-01-17,GM07,North Rhine-Westphalia State,quantile,0.950,443657.5178023264
 2021-01-04,13 day ahead cum case,2021-01-17,GM07,North Rhine-Westphalia State,quantile,0.975,449189.5733410985
 2021-01-04,13 day ahead cum case,2021-01-17,GM07,North Rhine-Westphalia State,quantile,0.990,451722.7154637267
-2021-01-04,14 day ahead cum case,2021-01-18,GM,Germany,point,NA,434591.99257293844
+2021-01-04,14 day ahead cum case,2021-01-18,GM07,North Rhine-Westphalia State,point,NA,434591.99257293844
 2021-01-04,14 day ahead cum case,2021-01-18,GM07,North Rhine-Westphalia State,quantile,0.010,414789.3397972111
 2021-01-04,14 day ahead cum case,2021-01-18,GM07,North Rhine-Westphalia State,quantile,0.025,415988.43186199246
 2021-01-04,14 day ahead cum case,2021-01-18,GM07,North Rhine-Westphalia State,quantile,0.050,418095.6598287773
@@ -2699,7 +2699,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,14 day ahead cum case,2021-01-18,GM07,North Rhine-Westphalia State,quantile,0.950,446115.6199896239
 2021-01-04,14 day ahead cum case,2021-01-18,GM07,North Rhine-Westphalia State,quantile,0.975,452084.62975327816
 2021-01-04,14 day ahead cum case,2021-01-18,GM07,North Rhine-Westphalia State,quantile,0.990,454967.7408208039
-2021-01-04,15 day ahead cum case,2021-01-19,GM,Germany,point,NA,436173.02857095713
+2021-01-04,15 day ahead cum case,2021-01-19,GM07,North Rhine-Westphalia State,point,NA,436173.02857095713
 2021-01-04,15 day ahead cum case,2021-01-19,GM07,North Rhine-Westphalia State,quantile,0.010,415096.76598747657
 2021-01-04,15 day ahead cum case,2021-01-19,GM07,North Rhine-Westphalia State,quantile,0.025,416300.8529636808
 2021-01-04,15 day ahead cum case,2021-01-19,GM07,North Rhine-Westphalia State,quantile,0.050,418642.65991740086
@@ -2723,7 +2723,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,15 day ahead cum case,2021-01-19,GM07,North Rhine-Westphalia State,quantile,0.950,448545.73332644167
 2021-01-04,15 day ahead cum case,2021-01-19,GM07,North Rhine-Westphalia State,quantile,0.975,454888.52220109233
 2021-01-04,15 day ahead cum case,2021-01-19,GM07,North Rhine-Westphalia State,quantile,0.990,458197.39113570086
-2021-01-04,16 day ahead cum case,2021-01-20,GM,Germany,point,NA,437698.0302883698
+2021-01-04,16 day ahead cum case,2021-01-20,GM07,North Rhine-Westphalia State,point,NA,437698.0302883698
 2021-01-04,16 day ahead cum case,2021-01-20,GM07,North Rhine-Westphalia State,quantile,0.010,415438.88433319697
 2021-01-04,16 day ahead cum case,2021-01-20,GM07,North Rhine-Westphalia State,quantile,0.025,416567.0876213359
 2021-01-04,16 day ahead cum case,2021-01-20,GM07,North Rhine-Westphalia State,quantile,0.050,419148.74199239246
@@ -2747,7 +2747,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,16 day ahead cum case,2021-01-20,GM07,North Rhine-Westphalia State,quantile,0.950,450931.5499384315
 2021-01-04,16 day ahead cum case,2021-01-20,GM07,North Rhine-Westphalia State,quantile,0.975,457700.7696672649
 2021-01-04,16 day ahead cum case,2021-01-20,GM07,North Rhine-Westphalia State,quantile,0.990,461420.79132004717
-2021-01-04,17 day ahead cum case,2021-01-21,GM,Germany,point,NA,439179.82229791745
+2021-01-04,17 day ahead cum case,2021-01-21,GM07,North Rhine-Westphalia State,point,NA,439179.82229791745
 2021-01-04,17 day ahead cum case,2021-01-21,GM07,North Rhine-Westphalia State,quantile,0.010,415752.71865272726
 2021-01-04,17 day ahead cum case,2021-01-21,GM07,North Rhine-Westphalia State,quantile,0.025,416817.58700023586
 2021-01-04,17 day ahead cum case,2021-01-21,GM07,North Rhine-Westphalia State,quantile,0.050,419610.1499115596
@@ -2771,7 +2771,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,17 day ahead cum case,2021-01-21,GM07,North Rhine-Westphalia State,quantile,0.950,453283.89490063395
 2021-01-04,17 day ahead cum case,2021-01-21,GM07,North Rhine-Westphalia State,quantile,0.975,460477.1892480903
 2021-01-04,17 day ahead cum case,2021-01-21,GM07,North Rhine-Westphalia State,quantile,0.990,464628.0026026648
-2021-01-04,18 day ahead cum case,2021-01-22,GM,Germany,point,NA,440610.938204714
+2021-01-04,18 day ahead cum case,2021-01-22,GM07,North Rhine-Westphalia State,point,NA,440610.938204714
 2021-01-04,18 day ahead cum case,2021-01-22,GM07,North Rhine-Westphalia State,quantile,0.010,416022.8250725855
 2021-01-04,18 day ahead cum case,2021-01-22,GM07,North Rhine-Westphalia State,quantile,0.025,417030.91453653236
 2021-01-04,18 day ahead cum case,2021-01-22,GM07,North Rhine-Westphalia State,quantile,0.050,420032.0084579373
@@ -2795,7 +2795,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,18 day ahead cum case,2021-01-22,GM07,North Rhine-Westphalia State,quantile,0.950,455593.2333413031
 2021-01-04,18 day ahead cum case,2021-01-22,GM07,North Rhine-Westphalia State,quantile,0.975,463217.6341146021
 2021-01-04,18 day ahead cum case,2021-01-22,GM07,North Rhine-Westphalia State,quantile,0.990,467829.35373127845
-2021-01-04,19 day ahead cum case,2021-01-23,GM,Germany,point,NA,442005.7327542206
+2021-01-04,19 day ahead cum case,2021-01-23,GM07,North Rhine-Westphalia State,point,NA,442005.7327542206
 2021-01-04,19 day ahead cum case,2021-01-23,GM07,North Rhine-Westphalia State,quantile,0.010,416215.70855344436
 2021-01-04,19 day ahead cum case,2021-01-23,GM07,North Rhine-Westphalia State,quantile,0.025,417263.58238569385
 2021-01-04,19 day ahead cum case,2021-01-23,GM07,North Rhine-Westphalia State,quantile,0.050,420271.5966806219
@@ -2819,7 +2819,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,19 day ahead cum case,2021-01-23,GM07,North Rhine-Westphalia State,quantile,0.950,457871.775367222
 2021-01-04,19 day ahead cum case,2021-01-23,GM07,North Rhine-Westphalia State,quantile,0.975,465934.2399118242
 2021-01-04,19 day ahead cum case,2021-01-23,GM07,North Rhine-Westphalia State,quantile,0.990,471013.34601637477
-2021-01-04,20 day ahead cum case,2021-01-24,GM,Germany,point,NA,443303.0971979119
+2021-01-04,20 day ahead cum case,2021-01-24,GM07,North Rhine-Westphalia State,point,NA,443303.0971979119
 2021-01-04,20 day ahead cum case,2021-01-24,GM07,North Rhine-Westphalia State,quantile,0.010,416380.36257560056
 2021-01-04,20 day ahead cum case,2021-01-24,GM07,North Rhine-Westphalia State,quantile,0.025,417545.22566815565
 2021-01-04,20 day ahead cum case,2021-01-24,GM07,North Rhine-Westphalia State,quantile,0.050,420490.1042729296
@@ -2843,7 +2843,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,20 day ahead cum case,2021-01-24,GM07,North Rhine-Westphalia State,quantile,0.950,460108.5377691553
 2021-01-04,20 day ahead cum case,2021-01-24,GM07,North Rhine-Westphalia State,quantile,0.975,468615.9648496134
 2021-01-04,20 day ahead cum case,2021-01-24,GM07,North Rhine-Westphalia State,quantile,0.990,474191.6016746521
-2021-01-04,21 day ahead cum case,2021-01-25,GM,Germany,point,NA,444509.6841729804
+2021-01-04,21 day ahead cum case,2021-01-25,GM07,North Rhine-Westphalia State,point,NA,444509.6841729804
 2021-01-04,21 day ahead cum case,2021-01-25,GM07,North Rhine-Westphalia State,quantile,0.010,416522.45021350327
 2021-01-04,21 day ahead cum case,2021-01-25,GM07,North Rhine-Westphalia State,quantile,0.025,417812.24840886076
 2021-01-04,21 day ahead cum case,2021-01-25,GM07,North Rhine-Westphalia State,quantile,0.050,420683.08955336607
@@ -2867,7 +2867,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,21 day ahead cum case,2021-01-25,GM07,North Rhine-Westphalia State,quantile,0.950,462317.22054759314
 2021-01-04,21 day ahead cum case,2021-01-25,GM07,North Rhine-Westphalia State,quantile,0.975,471276.4639260977
 2021-01-04,21 day ahead cum case,2021-01-25,GM07,North Rhine-Westphalia State,quantile,0.990,477350.9973622974
-2021-01-04,22 day ahead cum case,2021-01-26,GM,Germany,point,NA,445664.25125948834
+2021-01-04,22 day ahead cum case,2021-01-26,GM07,North Rhine-Westphalia State,point,NA,445664.25125948834
 2021-01-04,22 day ahead cum case,2021-01-26,GM07,North Rhine-Westphalia State,quantile,0.010,416647.79238237534
 2021-01-04,22 day ahead cum case,2021-01-26,GM07,North Rhine-Westphalia State,quantile,0.025,418056.07350077917
 2021-01-04,22 day ahead cum case,2021-01-26,GM07,North Rhine-Westphalia State,quantile,0.050,420843.29654762015
@@ -2891,7 +2891,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,22 day ahead cum case,2021-01-26,GM07,North Rhine-Westphalia State,quantile,0.950,464485.3416231567
 2021-01-04,22 day ahead cum case,2021-01-26,GM07,North Rhine-Westphalia State,quantile,0.975,473903.2216024826
 2021-01-04,22 day ahead cum case,2021-01-26,GM07,North Rhine-Westphalia State,quantile,0.990,480489.8697500173
-2021-01-04,23 day ahead cum case,2021-01-27,GM,Germany,point,NA,446784.1167896188
+2021-01-04,23 day ahead cum case,2021-01-27,GM07,North Rhine-Westphalia State,point,NA,446784.1167896188
 2021-01-04,23 day ahead cum case,2021-01-27,GM07,North Rhine-Westphalia State,quantile,0.010,416762.39120450657
 2021-01-04,23 day ahead cum case,2021-01-27,GM07,North Rhine-Westphalia State,quantile,0.025,418280.51767888275
 2021-01-04,23 day ahead cum case,2021-01-27,GM07,North Rhine-Westphalia State,quantile,0.050,421099.8954170099
@@ -2915,7 +2915,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,23 day ahead cum case,2021-01-27,GM07,North Rhine-Westphalia State,quantile,0.950,466628.1985618215
 2021-01-04,23 day ahead cum case,2021-01-27,GM07,North Rhine-Westphalia State,quantile,0.975,476496.0206452665
 2021-01-04,23 day ahead cum case,2021-01-27,GM07,North Rhine-Westphalia State,quantile,0.990,483637.41150942375
-2021-01-04,24 day ahead cum case,2021-01-28,GM,Germany,point,NA,447857.3665883889
+2021-01-04,24 day ahead cum case,2021-01-28,GM07,North Rhine-Westphalia State,point,NA,447857.3665883889
 2021-01-04,24 day ahead cum case,2021-01-28,GM07,North Rhine-Westphalia State,quantile,0.010,416856.1189621851
 2021-01-04,24 day ahead cum case,2021-01-28,GM07,North Rhine-Westphalia State,quantile,0.025,418440.48198628507
 2021-01-04,24 day ahead cum case,2021-01-28,GM07,North Rhine-Westphalia State,quantile,0.050,421331.53616428195
@@ -2939,7 +2939,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,24 day ahead cum case,2021-01-28,GM07,North Rhine-Westphalia State,quantile,0.950,468731.75777189183
 2021-01-04,24 day ahead cum case,2021-01-28,GM07,North Rhine-Westphalia State,quantile,0.975,479070.951527101
 2021-01-04,24 day ahead cum case,2021-01-28,GM07,North Rhine-Westphalia State,quantile,0.990,486764.09569566895
-2021-01-04,25 day ahead cum case,2021-01-29,GM,Germany,point,NA,448886.03231860825
+2021-01-04,25 day ahead cum case,2021-01-29,GM07,North Rhine-Westphalia State,point,NA,448886.03231860825
 2021-01-04,25 day ahead cum case,2021-01-29,GM07,North Rhine-Westphalia State,quantile,0.010,416932.8152847499
 2021-01-04,25 day ahead cum case,2021-01-29,GM07,North Rhine-Westphalia State,quantile,0.025,418549.3935415759
 2021-01-04,25 day ahead cum case,2021-01-29,GM07,North Rhine-Westphalia State,quantile,0.050,421558.980721837
@@ -2963,7 +2963,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,25 day ahead cum case,2021-01-29,GM07,North Rhine-Westphalia State,quantile,0.950,470813.0246319395
 2021-01-04,25 day ahead cum case,2021-01-29,GM07,North Rhine-Westphalia State,quantile,0.975,481613.1431988195
 2021-01-04,25 day ahead cum case,2021-01-29,GM07,North Rhine-Westphalia State,quantile,0.990,489764.8250470697
-2021-01-04,26 day ahead cum case,2021-01-30,GM,Germany,point,NA,449890.3170559697
+2021-01-04,26 day ahead cum case,2021-01-30,GM07,North Rhine-Westphalia State,point,NA,449890.3170559697
 2021-01-04,26 day ahead cum case,2021-01-30,GM07,North Rhine-Westphalia State,quantile,0.010,417014.5192017568
 2021-01-04,26 day ahead cum case,2021-01-30,GM07,North Rhine-Westphalia State,quantile,0.025,418642.03394701483
 2021-01-04,26 day ahead cum case,2021-01-30,GM07,North Rhine-Westphalia State,quantile,0.050,421752.3954601747
@@ -2987,7 +2987,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,26 day ahead cum case,2021-01-30,GM07,North Rhine-Westphalia State,quantile,0.950,472838.27496410836
 2021-01-04,26 day ahead cum case,2021-01-30,GM07,North Rhine-Westphalia State,quantile,0.975,484122.3771978976
 2021-01-04,26 day ahead cum case,2021-01-30,GM07,North Rhine-Westphalia State,quantile,0.990,492675.8713590872
-2021-01-04,27 day ahead cum case,2021-01-31,GM,Germany,point,NA,450856.17178789753
+2021-01-04,27 day ahead cum case,2021-01-31,GM07,North Rhine-Westphalia State,point,NA,450856.17178789753
 2021-01-04,27 day ahead cum case,2021-01-31,GM07,North Rhine-Westphalia State,quantile,0.010,417070.05986579746
 2021-01-04,27 day ahead cum case,2021-01-31,GM07,North Rhine-Westphalia State,quantile,0.025,418722.3317810435
 2021-01-04,27 day ahead cum case,2021-01-31,GM07,North Rhine-Westphalia State,quantile,0.050,421931.91745548695
@@ -3011,7 +3011,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,27 day ahead cum case,2021-01-31,GM07,North Rhine-Westphalia State,quantile,0.950,474842.60200577974
 2021-01-04,27 day ahead cum case,2021-01-31,GM07,North Rhine-Westphalia State,quantile,0.975,486617.413355809
 2021-01-04,27 day ahead cum case,2021-01-31,GM07,North Rhine-Westphalia State,quantile,0.990,495562.4716555893
-2021-01-04,28 day ahead cum case,2021-02-01,GM,Germany,point,NA,451766.06964489643
+2021-01-04,28 day ahead cum case,2021-02-01,GM07,North Rhine-Westphalia State,point,NA,451766.06964489643
 2021-01-04,28 day ahead cum case,2021-02-01,GM07,North Rhine-Westphalia State,quantile,0.010,417140.79424379236
 2021-01-04,28 day ahead cum case,2021-02-01,GM07,North Rhine-Westphalia State,quantile,0.025,418794.36033026624
 2021-01-04,28 day ahead cum case,2021-02-01,GM07,North Rhine-Westphalia State,quantile,0.050,422101.49250321405
@@ -3035,7 +3035,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,28 day ahead cum case,2021-02-01,GM07,North Rhine-Westphalia State,quantile,0.950,476828.5532206093
 2021-01-04,28 day ahead cum case,2021-02-01,GM07,North Rhine-Westphalia State,quantile,0.975,489080.8802468918
 2021-01-04,28 day ahead cum case,2021-02-01,GM07,North Rhine-Westphalia State,quantile,0.990,498424.52475961787
-2021-01-04,29 day ahead cum case,2021-02-02,GM,Germany,point,NA,452661.4187401085
+2021-01-04,29 day ahead cum case,2021-02-02,GM07,North Rhine-Westphalia State,point,NA,452661.4187401085
 2021-01-04,29 day ahead cum case,2021-02-02,GM07,North Rhine-Westphalia State,quantile,0.010,417192.2319755597
 2021-01-04,29 day ahead cum case,2021-02-02,GM07,North Rhine-Westphalia State,quantile,0.025,418862.3526001412
 2021-01-04,29 day ahead cum case,2021-02-02,GM07,North Rhine-Westphalia State,quantile,0.050,422244.34686491865
@@ -3059,7 +3059,7 @@ forecast_date,target,target_end_date,location,location_name,type,quantile,value
 2021-01-04,29 day ahead cum case,2021-02-02,GM07,North Rhine-Westphalia State,quantile,0.950,478777.9300070011
 2021-01-04,29 day ahead cum case,2021-02-02,GM07,North Rhine-Westphalia State,quantile,0.975,491512.5997694347
 2021-01-04,29 day ahead cum case,2021-02-02,GM07,North Rhine-Westphalia State,quantile,0.990,501282.8054232363
-2021-01-04,30 day ahead cum case,2021-02-03,GM,Germany,point,NA,453525.8761785594
+2021-01-04,30 day ahead cum case,2021-02-03,GM07,North Rhine-Westphalia State,point,NA,453525.8761785594
 2021-01-04,30 day ahead cum case,2021-02-03,GM07,North Rhine-Westphalia State,quantile,0.010,417226.09014613583
 2021-01-04,30 day ahead cum case,2021-02-03,GM07,North Rhine-Westphalia State,quantile,0.025,418930.71585988
 2021-01-04,30 day ahead cum case,2021-02-03,GM07,North Rhine-Westphalia State,quantile,0.050,422383.67563900276
