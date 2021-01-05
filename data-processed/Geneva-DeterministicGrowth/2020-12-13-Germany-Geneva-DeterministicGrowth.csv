@@ -1,0 +1,24 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2020-12-13,"7 day ahead inc death",2020-12-20,"GM","Germany","point",NA,529.122269236337
+2020-12-13,"6 day ahead inc death",2020-12-19,"GM","Germany","point",NA,519.619907933287
+2020-12-13,"5 day ahead inc death",2020-12-18,"GM","Germany","point",NA,510.11754663023
+2020-12-13,"4 day ahead inc death",2020-12-17,"GM","Germany","point",NA,500.615185327173
+2020-12-13,"3 day ahead inc death",2020-12-16,"GM","Germany","point",NA,491.112824024123
+2020-12-13,"2 day ahead inc death",2020-12-15,"GM","Germany","point",NA,481.61046272107
+2020-12-13,"1 day ahead inc death",2020-12-14,"GM","Germany","point",NA,472.108101418013
+2020-12-13,"0 day ahead inc death",2020-12-13,"GM","Germany","observed",NA,321
+2020-12-13,"-1 day ahead inc death",2020-12-12,"GM","Germany","observed",NA,496
+2020-12-13,"7 day ahead cum death",2020-12-20,"GM","Germany","point",NA,25291.3062972902
+2020-12-13,"6 day ahead cum death",2020-12-19,"GM","Germany","point",NA,24762.1840280539
+2020-12-13,"5 day ahead cum death",2020-12-18,"GM","Germany","point",NA,24242.5641201206
+2020-12-13,"4 day ahead cum death",2020-12-17,"GM","Germany","point",NA,23732.4465734904
+2020-12-13,"3 day ahead cum death",2020-12-16,"GM","Germany","point",NA,23231.8313881632
+2020-12-13,"2 day ahead cum death",2020-12-15,"GM","Germany","point",NA,22740.7185641391
+2020-12-13,"1 day ahead cum death",2020-12-14,"GM","Germany","point",NA,22259.108101418
+2020-12-13,"0 day ahead cum death",2020-12-13,"GM","Germany","observed",NA,21787
+2020-12-13,"-1 day ahead cum death",2020-12-12,"GM","Germany","observed",NA,21466
+2020-12-13,"0 wk ahead inc death",2020-12-12,"GM","Germany","observed",NA,2949
+2020-12-13,"1 wk ahead inc death",2020-12-19,"GM","Germany","point",NA,3296.1840280539
+2020-12-13,"-1 wk ahead cum death",2020-12-05,"GM","Germany","observed",NA,18517
+2020-12-13,"0 wk ahead cum death",2020-12-12,"GM","Germany","observed",NA,21466
+2020-12-13,"1 wk ahead cum death",2020-12-19,"GM","Germany","point",NA,24762.1840280539
