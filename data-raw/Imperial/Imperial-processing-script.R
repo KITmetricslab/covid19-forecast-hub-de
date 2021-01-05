@@ -9,6 +9,9 @@
 ##File to read in Imperial Forecasts
 source("Imperial-processing_Germany.R")
 
+#only process latest?
+latest<-TRUE
+
 #make sure your wd is in the same folder as the file that was sourced,
 #i.e. in data-raw/Imperial
 
@@ -43,6 +46,12 @@ filepaths<-filepaths[germany_reported]
 #test<-readRDS(filepaths[length(filepaths)])
 #date_name<-get_date(filepaths[length(filepaths)])
 #date_actual<-names(test)
+
+#Only process latest forecast file?
+if(latest)
+{
+filepaths<-tail(filepaths,1)
+}
 
 for(i in 1:length(filepaths)){
   formatted_file_1 <- format_imperial(path=filepaths[i],ens_model=1,poland=pol)
