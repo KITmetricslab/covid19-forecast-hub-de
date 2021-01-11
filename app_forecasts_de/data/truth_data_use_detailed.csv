@@ -1,5 +1,6 @@
 model,location,truth_data_source,starting_from
 FIAS_FZJ-Epi1Ger,GM,ECDC,2020-01-01
+FIAS_FZJ-Epi1Ger,GM07,ECDC,2020-01-01
 Geneva-DeterministicGrowth,GM,ECDC,2020-01-01
 Geneva-DeterministicGrowth,PL,ECDC,2020-01-01
 IHME-CurveFit,GM,ECDC,2020-01-01
@@ -335,3 +336,5 @@ KIT-extrapolation_baseline,PL,ECDC,2020-01-01
 epiforecasts-EpiNow2_secondary ,GM,ECDC,2020-01-01
 epiforecasts-EpiNow2_secondary ,PL,ECDC,2020-01-01
 itwm-dSEIR,GM,ECDC,2020-01-01
+Geneva-DeterministicGrowth,GM,JHU,2020-12-16
+Geneva-DeterministicGrowth,PL,JHU,2020-12-16
