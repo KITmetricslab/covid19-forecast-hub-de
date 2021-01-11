@@ -1,0 +1,22 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2021-01-03,"6 day ahead inc death",2021-01-09,"PL","Poland","point",NA,241.25363469078
+2021-01-03,"5 day ahead inc death",2021-01-08,"PL","Poland","point",NA,244.222732106427
+2021-01-03,"4 day ahead inc death",2021-01-07,"PL","Poland","point",NA,247.228219231871
+2021-01-03,"3 day ahead inc death",2021-01-06,"PL","Poland","point",NA,250.270542064929
+2021-01-03,"2 day ahead inc death",2021-01-05,"PL","Poland","point",NA,253.350152069648
+2021-01-03,"1 day ahead inc death",2021-01-04,"PL","Poland","point",NA,256.467506243273
+2021-01-03,"0 day ahead inc death",2021-01-03,"PL","Poland","observed",NA,259.623067184082
+2021-01-03,"-1 day ahead inc death",2021-01-02,"PL","Poland","observed",NA,102
+2021-01-03,"6 day ahead cum death",2021-01-09,"PL","Poland","point",NA,30810.415853591
+2021-01-03,"5 day ahead cum death",2021-01-08,"PL","Poland","point",NA,30569.1622189002
+2021-01-03,"4 day ahead cum death",2021-01-07,"PL","Poland","point",NA,30324.9394867938
+2021-01-03,"3 day ahead cum death",2021-01-06,"PL","Poland","point",NA,30077.7112675619
+2021-01-03,"2 day ahead cum death",2021-01-05,"PL","Poland","point",NA,29827.440725497
+2021-01-03,"1 day ahead cum death",2021-01-04,"PL","Poland","point",NA,29574.0905734274
+2021-01-03,"0 day ahead cum death",2021-01-03,"PL","Poland","observed",NA,29317.6230671841
+2021-01-03,"-1 day ahead cum death",2021-01-02,"PL","Poland","observed",NA,29058
+2021-01-03,"0 wk ahead inc death",2021-01-02,"PL","Poland","observed",NA,1997
+2021-01-03,"1 wk ahead inc death",2021-01-09,"PL","Poland","point",NA,1752.41585359101
+2021-01-03,"-1 wk ahead cum death",2020-12-26,"PL","Poland","observed",NA,27061
+2021-01-03,"0 wk ahead cum death",2021-01-02,"PL","Poland","observed",NA,29058
+2021-01-03,"1 wk ahead cum death",2021-01-09,"PL","Poland","point",NA,30810.415853591
