@@ -13,7 +13,7 @@ Tue 1 Dec: ITWW not included in deaths, Germany due to strong misalignment with 
 Tue 8 Dec: KIT-time_series_baseline excluded from death forecasts due to unplausible behaviour. ICM model excluded due to very pronounced divergence from other models.
 Tue 15 Dec: time series baseline not included bc of excessive uncertainty. MOCOS model not included (arrived somewhat late and forgot to revise ensemble to include MOCOS.)
 Tue 22 Dec: USC excluded due to suspected misalignment with most recent data.
-Tue 12 Jan: Not inlcuding MIT forecasts as they look somethat detached from recent data for both Germany and Poland.
+Tue 12 Jan: Not inlcuding MIT forecasts as they look somethat detached from recent data for both Germany and Poland. Delayed ITWW model not included due do very narrow uncertainty bands.
 
 ### Documentation of forecast revisions and late inclusions:
 
@@ -49,3 +49,4 @@ Dec 16: Leipzig forecasts added late.
 Fri 18: UCLA added late
 Sun 20 Dec: All Imperial forecasts except 14 December were only made available in retrospect (most of them on 30 Nov). However, forecasts were available in real time on the Imperial website so that we consider it legitimate to include them retrospectively for comparison.
 Wed 23 Dec Leipzig arrived late.
+Tue 12 Jan ITWW and ICM arrived at 6pm
