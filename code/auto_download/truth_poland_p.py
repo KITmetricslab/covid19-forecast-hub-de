@@ -32,7 +32,23 @@ def wide_to_long(df):
     df = df.rename(columns={"level_0": "date", 0: "value"})
     
     # handle date
-    df["date"] = df['date'].apply(lambda x: (x + ".2020").replace(".", "/"))
+    date_col = df["date"].values.tolist()
+    
+    date_col_reversed = date_col.copy()
+    date_col_reversed.reverse()
+    
+    eoy = date_col_reversed.index("31.12")
+    
+    first_year = date_col[:len(date_col) - eoy]
+    second_year = date_col[len(date_col) - eoy:]
+    
+    first_year_compl = [x + ".2020" for x in first_year]
+    sec_year_compl = [x + ".2021" for x in second_year]
+    
+    df["date"] = first_year_compl + sec_year_compl
+    
+    
+    df["date"] = df['date'].apply(lambda x: (x).replace(".", "/"))
     df["date"] = pd.to_datetime(df["date"], format="%d/%m/%Y")
     
     # add location names
@@ -104,7 +120,8 @@ for idx, relevant_rows in enumerate([inc_case_rows, cum_case_rows, inc_death_row
     if idx == 1:
         
         worksheet_cases = a.worksheet('title','Wzrost')
-        cum_cases_pol = worksheet_cases.get_col(col=11)[3:]
+        cum_cases_pol = worksheet_cases.get_col(col=12)[3:]
+        #print(cum_cases_pol)
         cum_cases_pol = [float(x) for x in cum_cases_pol if not x.strip()==""]
         df.loc["Poland"] = cum_cases_pol
     
@@ -112,7 +129,7 @@ for idx, relevant_rows in enumerate([inc_case_rows, cum_case_rows, inc_death_row
     elif idx == 3:
         
         worksheet_cases = a.worksheet('title','Wzrost')
-        cum_cases_pol = worksheet_cases.get_col(col=12)[3:]
+        cum_cases_pol = worksheet_cases.get_col(col=13)[3:]
         cum_cases_pol = [float(x) for x in cum_cases_pol if not x.strip()==""]
         df.loc["Poland"] = cum_cases_pol
     
@@ -130,7 +147,7 @@ df_inc_cases = wide[0]
 df_inc_cases.loc["Poland"] = inc_cases.tolist()
 wide[0] = df_inc_cases
 
-# calculate in deaths for poland
+# calculate ncn deaths for poland
 cum_deaths = wide[3].loc["Poland"].values.tolist()
 inc_deaths = np.asarray(cum_deaths) - np.asarray([0] + cum_deaths[:-1])
  
