@@ -60,7 +60,7 @@ submit_epiforecast <- function(forecast,
   file_path <- file.path(target_path, target_folder, names(forecast))
   message("Submitting forecast to: ", 
           file_path)
-  fwrite(forecast, file_path)
+  fwrite(forecast[[1]], file_path, sep = ",")
   return(invisible(NULL))
 }
 
