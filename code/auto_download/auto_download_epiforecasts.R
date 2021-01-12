@@ -32,7 +32,11 @@ get_epiforecast <- function(base_path = "https://raw.githubusercontent.com/epifo
   forecast <- list()
   
   safe_read <- safely(fread)
-  forecast[[forecast_name]] <- safe_read(forecast_path)[[1]]
+  read_in <-  safe_read(forecast_path)
+  if (!is.null(read_in[[2]])) {
+    print(read_in[[2]])
+  }
+  forecast[[forecast_name]] <- read_in[[1]]
   return(forecast)
 }
 
