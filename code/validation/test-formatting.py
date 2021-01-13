@@ -10,6 +10,7 @@ from pathlib import Path
 sys.path.append(str(Path.cwd().joinpath("code", "validation")))
 import covid19
 
+# List of Countries in the repository
 COUNTRIES = ["Germany", "Poland"]
 
 
