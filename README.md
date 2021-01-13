@@ -110,7 +110,7 @@ Details can be found in the respective README files in the subfolders of `data-t
 
 Currently we assemble forecasts from the following teams. *Note that not all teams are using the same ground truth data.* (used truth data source and forecast reuse license in brackets):
 
-- [epiforecasts.io / London School of Hygiene and Tropical Medicine](https://epiforecasts.io/) (ECDC; no license specified)
+- [epiforecasts.io / London School of Hygiene and Tropical Medicine](https://github.com/epiforecasts/covid-german-forecasts) (ECDC; MIT)
 - [Frankfurt Institute for Advanced Studies & Forschungszentrum Jülich](https://www.medrxiv.org/content/10.1101/2020.04.18.20069955v1) (ECDC; no license specified)
 - [ICM / University of Warsaw](https://icm.edu.pl/en/) (ECDC; to be specified)
 - [IHME](https://covid19.healthdata.org/united-states-of-america) (JHU; CC-AT-NC4.0)
