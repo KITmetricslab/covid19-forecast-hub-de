@@ -1,6 +1,6 @@
 model,truth_data
 FIAS_FZJ-Epi1Ger,ECDC
-Geneva-DeterministicGrowth,ECDC
+Geneva-DeterministicGrowth,JHU
 ICM-agentModel,ECDC
 IHME-CurveFit,JHU
 Imperial-ensemble1,ECDC
@@ -25,3 +25,4 @@ KITCOVIDhub-inverse_wis_ensemble,ECDC
 Karlen-pypm,ECDC
 epiforecasts-EpiNow2_secondary ,ECDC
 KIT-extrapolation_baseline,ECDC
+itwm-dSEIR,ECDC
