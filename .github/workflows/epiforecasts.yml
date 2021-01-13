@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0 
       - uses: r-lib/actions/setup-r@v1
       - name: Install dependencies
-        run: Rscript -e 'install.packages(c("data.table", "purrr"))'
+        run: Rscript -e 'install.packages(c("data.table", "purrr", "curl"))'
       - name: Submit Forecasts
         run: Rscript 'code/auto_download/auto_download_epiforecasts.R'
       - name: Commit
