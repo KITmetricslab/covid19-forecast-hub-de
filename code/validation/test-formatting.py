@@ -78,6 +78,7 @@ def check_formatting(my_path, model=None):
                 # delete validated file if currrently present
                 df = df[df['file_path'] != filepath]
                 
+                # specify country name and forecast target for further tests
                 country = ""
                 for cou in COUNTRIES:
                     if cou in filepath:
