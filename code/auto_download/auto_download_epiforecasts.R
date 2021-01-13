@@ -122,4 +122,4 @@ forecasts <- list(
   )
 )
 
-submit_epiforecasts(forecasts)
+submit_epiforecasts(forecast, forecast_date = Sys.date() - 2)
