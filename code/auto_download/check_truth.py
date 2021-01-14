@@ -21,7 +21,6 @@ def check_file(filepath):
         send_notification(title = data_source + ' Data', message='Check Failed: ' + filename, 
                           details='The following locations are missing: \n' + missing_locations, 
                           link=link, color='danger')
-        sys.exit('Some locations are missing. Try again later.')
 
     else:
         send_notification(title = data_source + ' Data', message='Check Passed: ' + filename, 
