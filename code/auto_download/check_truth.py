@@ -9,7 +9,7 @@ def check_file(filepath):
     link='https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/' + data_source + '/' + filename
     
     df = pd.read_csv(filepath)
-    df = df[df.date == pd.Timestamp('today').strftime("%Y-%m-%d")]
+    df = df[df.date == (pd.Timestamp('today') + pd.DateOffset(days=1)).strftime("%Y-%m-%d")]
 
     missing_locations = df.loc[df.value.isnull(), ['location', 'location_name']]
     
