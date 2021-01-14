@@ -4,7 +4,7 @@ import pandas as pd
 from slack_alerts import *
 
 def check_file(filepath):
-    filename = filepath.split('\\')[-1]
+    filename = filepath.split('/')[-1]
     data_source = filename.split('-')[0][6:]
     link='https://github.com/KITmetricslab/covid19-forecast-hub-de/tree/master/data-truth/' + data_source + '/' + filename
     
