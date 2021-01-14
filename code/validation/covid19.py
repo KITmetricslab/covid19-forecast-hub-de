@@ -66,11 +66,17 @@ def validate_quantile_csv_file(csv_fp, mode, country):
         else:
             target_names = VALID_TARGET_NAMES_ICU
         
-        fips_codes = FIPS_CODES[country]
+        try:
+            fips_codes = FIPS_CODES[country]
         
             
-        _, error_messages = json_io_dict_from_quantile_csv_file(cdc_csv_fp, target_names, fips_codes, covid19_row_validator,
+            _, error_messages = json_io_dict_from_quantile_csv_file(cdc_csv_fp, target_names, fips_codes, covid19_row_validator,
                                                                     ['forecast_date', 'target_end_date'])    
+        
+        # Country is not in FIPS code dict
+        except KeyError:
+            error_messages = ["ERROR: Forecast country (" + country + ") is currently not supported"]
+        
         
         if error_messages:
             return error_messages
