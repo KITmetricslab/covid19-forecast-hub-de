@@ -2,6 +2,10 @@
 ## Johannes Bracher
 ## October 2020
 
+## remove issues with turn of the year 2020 -> 2021
+## Jakob Ketterer
+## Januar 2021
+
 source("process_UCLA_file_germany.R")
 
 # make sure that English names of days and months are used
@@ -23,7 +27,10 @@ cases_jhu_gm <- read.csv("../../data-truth/JHU/truth_JHU-Cumulative Cases_German
 all_files <- list.files()
 files_to_process <- all_files[grepl("pred_world", all_files)]
 
-forecast_dates <- as.Date(paste0("2020-", gsub(".csv", "", gsub("pred_world_", "", files_to_process))))
+# ignore the 13 dates belonging to 2020 to avoid issues
+files_to_process <- files_to_process[-(length(files_to_process)-12):-length(files_to_process)]
+
+forecast_dates <- as.Date(paste0("2021-", gsub(".csv", "", gsub("pred_world_", "", files_to_process))))
 
 for(j in seq_along(locations)){
   for(i in seq_along(files_to_process)){
