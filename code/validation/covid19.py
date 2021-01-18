@@ -10,6 +10,7 @@ from quantile_io import json_io_dict_from_quantile_csv_file
 # functions specific to the COVID19 project
 #
 
+# Allowed FIPS codes for respective country. (For forecasts on country-level, only one fips code per country is necessary)
 FIPS_CODES =  {"Germany": ["GM", "GM01", "GM02", "GM03", "GM04", "GM05", "GM06",
                             "GM07", "GM08", "GM09", "GM10", "GM11", "GM12",
                             "GM13", "GM14", "GM15", "GM16"],
@@ -65,11 +66,15 @@ def validate_quantile_csv_file(csv_fp, mode, country):
         else:
             target_names = VALID_TARGET_NAMES_ICU
         
-        fips_codes = FIPS_CODES[country]
-        
-            
-        _, error_messages = json_io_dict_from_quantile_csv_file(cdc_csv_fp, target_names, fips_codes, covid19_row_validator,
+        try:
+            fips_codes = FIPS_CODES[country]
+            _, error_messages = json_io_dict_from_quantile_csv_file(cdc_csv_fp, target_names, fips_codes, covid19_row_validator,
                                                                     ['forecast_date', 'target_end_date'])    
+        
+        # Country is not in FIPS code dict
+        except KeyError:
+            error_messages = ["ERROR: Forecast country (" + country + ") is currently not supported"]
+        
         
         if error_messages:
             return error_messages

@@ -80,6 +80,7 @@ evaluate_quantiles <- function(forecasts, name_truth_eval, dat_truth,
   # get weighted interval widths. Note that this already contains the weighting with alpha/2
   for(coverage in coverage_levels){
     forecasts_wide[, paste0("wgt_iw_", coverage)] <-
+      ifelse(coverage == 0, 0.5, 1)* # need to downweight absolute error here to avoid counting it twice
       (1 - coverage)/2*(
         forecasts_wide[paste0("value.", 1 - (1 - coverage)/2)] -
           forecasts_wide[paste0("value.", (1 - coverage)/2)]
@@ -89,19 +90,21 @@ evaluate_quantiles <- function(forecasts, name_truth_eval, dat_truth,
   # get weighted penalties. Note that this already contains the weighting with alpha/2,
   # which makes the terms simpler
   for(coverage in coverage_levels){
+    # need to downweight absolute error here to avoid counting it twice
     q_u <- 1 - (1 - coverage)/2
     forecasts_wide[, paste0("wgt_pen_u_", coverage)] <-
-      pmax(0, forecasts_wide$truth - forecasts_wide[, paste0("value.", q_u)])
+      ifelse(coverage == 0, 0.5, 1)*pmax(0, forecasts_wide$truth - forecasts_wide[, paste0("value.", q_u)])
 
+    # need to downweight absolute error here to avoid counting it twice
     q_l <- (1 - coverage)/2
     forecasts_wide[, paste0("wgt_pen_l_", coverage)] <-
-      pmax(0, forecasts_wide[, paste0("value.", q_l)] - forecasts_wide$truth)
+      ifelse(coverage == 0, 0.5, 1)*pmax(0, forecasts_wide[, paste0("value.", q_l)] - forecasts_wide$truth)
   }
 
   # averages:
-  forecasts_wide$wgt_iw <- rowMeans(forecasts_wide[, grepl("wgt_iw", colnames(forecasts_wide))])
-  forecasts_wide$wgt_pen_u <- rowMeans(forecasts_wide[, grepl("wgt_pen_u", colnames(forecasts_wide))])
-  forecasts_wide$wgt_pen_l <- rowMeans(forecasts_wide[, grepl("wgt_pen_l", colnames(forecasts_wide))])
+  forecasts_wide$wgt_iw <- rowSums(forecasts_wide[, grepl("wgt_iw", colnames(forecasts_wide))])/11.5
+  forecasts_wide$wgt_pen_u <- rowSums(forecasts_wide[, grepl("wgt_pen_u", colnames(forecasts_wide))])/11.5
+  forecasts_wide$wgt_pen_l <- rowSums(forecasts_wide[, grepl("wgt_pen_l", colnames(forecasts_wide))])/11.5
   forecasts_wide$wis <- forecasts_wide$wgt_iw + forecasts_wide$wgt_pen_u + forecasts_wide$wgt_pen_l
 
   # get PIT values:

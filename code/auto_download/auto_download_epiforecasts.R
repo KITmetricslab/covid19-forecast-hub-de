@@ -32,7 +32,11 @@ get_epiforecast <- function(base_path = "https://raw.githubusercontent.com/epifo
   forecast <- list()
   
   safe_read <- safely(fread)
-  forecast[[forecast_name]] <- safe_read(forecast_path)[[1]]
+  read_in <-  safe_read(forecast_path)
+  if (!is.null(read_in[[2]])) {
+    print(read_in[[2]])
+  }
+  forecast[[forecast_name]] <- read_in[[1]]
   return(forecast)
 }
 
@@ -56,7 +60,7 @@ submit_epiforecast <- function(forecast,
   file_path <- file.path(target_path, target_folder, names(forecast))
   message("Submitting forecast to: ", 
           file_path)
-  fwrite(forecast, file_path)
+  fwrite(forecast[[1]], file_path, sep = ",")
   return(invisible(NULL))
 }
 
@@ -80,6 +84,7 @@ submit_epiforecasts <- function(forecasts,
       for (region in model$regions) {
         forecast <- get_epiforecast(model_folder = model$folder,
                                     model_name = model$name, 
+                                    forecast_date = forecast_date,
                                     region = region,
                                     type = type)
         
@@ -118,4 +123,4 @@ forecasts <- list(
   )
 )
 
-submit_epiforecasts(forecasts)
+submit_epiforecasts(forecasts, forecast_date = Sys.Date() - 1)
