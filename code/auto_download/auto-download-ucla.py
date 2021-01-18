@@ -31,6 +31,7 @@ if __name__ == "__main__":
     # determine date up to which files should be downloaded
     download_up_to_date = datetime.today()
 
+    print(download_up_to_date, latest_fc_date)
     assert download_up_to_date > latest_fc_date, "Required forecasts already exists in the repo!"
 
     # generate lists of dates to download
@@ -59,12 +60,12 @@ if __name__ == "__main__":
         urllib.request.urlretrieve(url, dir_name)
         print(f"Downloaded forecast from {date.date()} and saved it to", dir_name)
         
-    # catch URL Errors: 
+    # # catch URL Errors: 
     #     try:
     #         urllib.request.urlretrieve(url, dir_name)
     #         print(f"Downloaded forecast from {date.date()} and saved it to", dir_name)
     #     except urllib.error.URLError as e:
-    #         print(f"URL-ERROR: Download failed for {date.date()}. The file probably doesn't exist in the UCLA repo yet.")
+    #         print(f"URL-ERROR: Download failed for {date.date()}. The file probably doesn't exist in the UCLA repo.")
     #         errors = True
 
     # if errors:
