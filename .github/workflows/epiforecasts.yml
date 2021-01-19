@@ -1,8 +1,8 @@
 name: "epiforecasts"
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 7 * * 2"
+  #schedule:
+    #- cron: "0 7 * * 2"
 jobs:
   submit:
     name: submit
