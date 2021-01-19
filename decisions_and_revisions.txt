@@ -62,3 +62,4 @@ file is available in our repository with a time stamp we replaced the forecasts 
 computing issues), shifting the cumulative forecasts additively in a way that they line up with the latest observations
 from the JHU data (which underlie the global_forecasts.csv file) rather than the ECDC data (which underlie the
 other_forecasts.csv file).
+Fri 15 Jan: Adding Leipzig forecasts late (these had been submitted on Wed, but format had not been correct).

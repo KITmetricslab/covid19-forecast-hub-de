@@ -84,6 +84,7 @@ submit_epiforecasts <- function(forecasts,
       for (region in model$regions) {
         forecast <- get_epiforecast(model_folder = model$folder,
                                     model_name = model$name, 
+                                    forecast_date = forecast_date,
                                     region = region,
                                     type = type)
         
@@ -122,4 +123,4 @@ forecasts <- list(
   )
 )
 
-submit_epiforecasts(forecasts)
+submit_epiforecasts(forecasts, forecast_date = Sys.Date() - 1)
