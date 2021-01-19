@@ -1,0 +1,20 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2021-01-14,"6 day ahead inc case",2021-01-20,"GM","Germany","point",NA,21546.8874533377
+2021-01-14,"5 day ahead inc case",2021-01-19,"GM","Germany","point",NA,21280.8500222797
+2021-01-14,"4 day ahead inc case",2021-01-18,"GM","Germany","point",NA,21014.8125912221
+2021-01-14,"3 day ahead inc case",2021-01-17,"GM","Germany","point",NA,20748.7751601646
+2021-01-14,"2 day ahead inc case",2021-01-16,"GM","Germany","point",NA,20482.7377291066
+2021-01-14,"1 day ahead inc case",2021-01-15,"GM","Germany","point",NA,20216.7002980493
+2021-01-14,"0 day ahead inc case",2021-01-14,"GM","Germany","observed",NA,19950.6628669912
+2021-01-14,"-1 day ahead inc case",2021-01-13,"GM","Germany","observed",NA,25566
+2021-01-14,"6 day ahead cum case",2021-01-20,"GM","Germany","point",NA,2139133.42612115
+2021-01-14,"5 day ahead cum case",2021-01-19,"GM","Germany","point",NA,2117586.53866781
+2021-01-14,"4 day ahead cum case",2021-01-18,"GM","Germany","point",NA,2096305.68864553
+2021-01-14,"3 day ahead cum case",2021-01-17,"GM","Germany","point",NA,2075290.87605431
+2021-01-14,"2 day ahead cum case",2021-01-16,"GM","Germany","point",NA,2054542.10089415
+2021-01-14,"1 day ahead cum case",2021-01-15,"GM","Germany","point",NA,2034059.36316504
+2021-01-14,"0 day ahead cum case",2021-01-14,"GM","Germany","observed",NA,2013842.66286699
+2021-01-14,"-1 day ahead cum case",2021-01-13,"GM","Germany","observed",NA,1993892
+2021-01-14,"0 wk ahead inc case",2021-01-16,"GM","Germany","point",NA,126080.100894147
+2021-01-14,"-1 wk ahead cum case",2021-01-09,"GM","Germany","observed",NA,1928462
+2021-01-14,"0 wk ahead cum case",2021-01-16,"GM","Germany","point",NA,2054542.10089415
