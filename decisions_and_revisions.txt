@@ -51,6 +51,7 @@ Fri 18: UCLA added late
 Sun 20 Dec: All Imperial forecasts except 14 December were only made available in retrospect (most of them on 30 Nov). However, forecasts were available in real time on the Imperial website so that we consider it legitimate to include them retrospectively for comparison.
 Wed 23 Dec Leipzig arrived late.
 Tue 12 Jan ITWW and ICM arrived at 6pm
+Wed 13 Jan MIMUW arrived late
 Thur 14 Jan Replacing USC case forecast from 2020-11-30. This has been discussed extensively with Ajitesh, Melanie and Tilmann. 
 The reason for this exceptional replacement is (briefly) the following:
 This is the forecast following the bulk reporting of 25,000 cases in Poland. We had alerted modellers to this 
@@ -64,3 +65,4 @@ computing issues), shifting the cumulative forecasts additively in a way that th
 from the JHU data (which underlie the global_forecasts.csv file) rather than the ECDC data (which underlie the
 other_forecasts.csv file).
 Fri 15 Jan: Adding Leipzig forecasts late (these had been submitted on Wed, but format had not been correct).
+Wed 20 Jan: MIMUW and epiExpert_Rt arrived late.
