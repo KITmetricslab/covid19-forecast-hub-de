@@ -40,7 +40,8 @@ jobs:
       run: |
         # Execute Scripts
         git checkout Imperial_actions
-        python3 code/auto_download/auto-download-imperial.py
+        cd ../
+        python3 ./code/auto_download/auto-download-imperial.py
         cd ./data-raw/Imperial
         Rscript Imperial-processing-script.R
         cd ../../
