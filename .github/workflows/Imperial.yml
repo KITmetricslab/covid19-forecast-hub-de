@@ -3,7 +3,7 @@ name: "Imperial"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 7 * * 2"
+    - cron: "0 14 * * 3"
 
 jobs:
   build:
