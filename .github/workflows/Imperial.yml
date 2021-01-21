@@ -25,8 +25,8 @@ jobs:
         pip3 install -r github-actions/Imperial_req.txt
         
     - uses: r-lib/actions/setup-r@v1
-      - name: Install R dependencies
-        run: Rscript -e 'install.packages(c("matrixStats", "tidyverse", "MMWRweek", "lubridate"))'
+    - name: Install R dependencies
+      run: Rscript -e 'install.packages(c("matrixStats", "tidyverse", "MMWRweek", "lubridate"))'
          
     - name: Setup Git
       run: |
