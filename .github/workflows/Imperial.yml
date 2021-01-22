@@ -11,8 +11,7 @@ jobs:
     steps:
     - uses: r-lib/actions/setup-r@v1
     - name: Install R dependencies
-      #run: Rscript -e 'install.packages(c("matrixStats", "tidyverse", "MMWRweek", "lubridate"))' 
-      run: Rscript -e 'install.packages(c("matrixStats", "MMWRweek", "lubridate"))' 
+      run: Rscript -e 'install.packages(c("matrixStats", "tidyverse", "MMWRweek", "lubridate"))' 
 
     - uses: actions/checkout@master
       with:
@@ -40,7 +39,6 @@ jobs:
       run: |
         # Execute Scripts
         git checkout Imperial_actions
-        cd ../
         python3 code/auto_download/auto-download-imperial.py
         cd ./data-raw/Imperial
         Rscript Imperial-processing-script.R
