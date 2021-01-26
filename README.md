@@ -90,7 +90,7 @@ We store point and quantile forecasts in a long format, including information on
 
 ## Data license and reuse
 
-The forecasts assembled in this repository have been created by various independent teams, most of which provided a license with their forecasts. These licenses can be found in the respective subfolders of `data-processed`. Parts of the processing, analysis and validation codes have been taken or adapted from the [US COVID-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) where they were provided under an [MIT license](https://github.com/reichlab/covid19-forecast-hub/blob/master/LICENSE). All codes contained in this repository are equally under the [MIT license](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/LICENSE). **If you want to re-use materials from this repository please [get in touch](forecasthub@econ.kit.edu) with us.**
+The forecasts assembled in this repository have been created by various independent teams, most of which provided a license with their forecasts. These licenses can be found in the respective subfolders of `data-processed`. Parts of the processing, analysis and validation codes have been taken or adapted from the [US COVID-19 forecast hub](https://github.com/reichlab/covid19-forecast-hub) where they were provided under an [MIT license](https://github.com/reichlab/covid19-forecast-hub/blob/master/LICENSE). All codes contained in this repository are equally under the [MIT license](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/LICENSE). **If you want to re-use materials from this repository please [get in touch](https://kitmetricslab.github.io/forecasthub/about) with us.**
 
 ## Truth data
 
@@ -116,7 +116,7 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [Johannes Gutenberg University Mainz / University of Hamburg](https://github.com/QEDHamburg/covid19) (ECDC; MIT)
 - [KIT](https://github.com/KITmetricslab/KIT-baseline) (ECDC; MIT) *These are two simple baseline models run by the Forecast Hub Team. Part of these forecasts were created retrospectively, but using only data available at the respective forecast date. The commit dates of all forecasts can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/code/validation/commit_dates.csv).*
 - [Karlen working group](https://pypm.github.io/home/) (ECDC; to be specified)
-- [KITCOVIDhub] The `mean_ensemble` and `median_ensemble` are two different aggregations of all submitted and eligible forecasts, see [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble). While the median ensemble is our pre-specified main ensemble, we also monitor performance of the mean ensemble.
+- KITCOVIDhub The `mean_ensemble` and `median_ensemble` are two different aggregations of all submitted and eligible forecasts, see [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble). While the median ensemble is our pre-specified main ensemble, we also monitor performance of the mean ensemble.
 - [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)
 - [MIM / University of Warsaw](https://www.mimuw.edu.pl/en/faculty) (ECDC; to be specified)
 - [MIT Covid Analytics](https://www.covidanalytics.io/) (JHU; Apache 2.0)
