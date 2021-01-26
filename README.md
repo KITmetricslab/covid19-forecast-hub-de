@@ -116,7 +116,7 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [Johannes Gutenberg University Mainz / University of Hamburg](https://github.com/QEDHamburg/covid19) (ECDC; MIT)
 - [KIT](https://github.com/KITmetricslab/KIT-baseline) (ECDC; MIT) *These are two simple baseline models run by the Forecast Hub Team. Part of these forecasts were created retrospectively, but using only data available at the respective forecast date. The commit dates of all forecasts can be found [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/code/validation/commit_dates.csv).*
 - [Karlen working group](https://pypm.github.io/home/) (ECDC; to be specified)
-- [KITCOVIDhub] The `mean_ensemble` and `median_ensemble` are two different aggregations of all submitted and eligible forecasts, see [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble). While the median ensemble is our pre-specified main ensemble, we also monitor performance of the mean ensemble.
+- KITCOVIDhub The `mean_ensemble` and `median_ensemble` are two different aggregations of all submitted and eligible forecasts, see [here](https://github.com/KITmetricslab/covid19-forecast-hub-de/wiki/Creation-of-equally-weighted-ensemble). While the median ensemble is our pre-specified main ensemble, we also monitor performance of the mean ensemble.
 - [LANL](https://covid-19.bsvgateway.org/) (JHU; custom)
 - [MIM / University of Warsaw](https://www.mimuw.edu.pl/en/faculty) (ECDC; to be specified)
 - [MIT Covid Analytics](https://www.covidanalytics.io/) (JHU; Apache 2.0)
