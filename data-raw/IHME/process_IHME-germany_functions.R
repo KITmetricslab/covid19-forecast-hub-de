@@ -7,6 +7,10 @@
 ###### The original file has been provided under the MIT license, and so is this adapted version.
 #################################################################################
 
+# fixed issues with change of year
+# January 2021
+# Jakob Ketterer
+
 
 #Function to get real and reported forecast date
 
@@ -27,10 +31,7 @@ get_forecast_date<-function(path,country="Germany") {
   real_date<-max(data$date[is_equal_lmu & is_not_zero],na.rm = TRUE)
   
   return(c(report_date=given_forecast_date,Real_forecast_date=real_date))
-  
 }
-
-
 
 ## Functions to process IHME files
 
@@ -66,6 +67,9 @@ coerceable_to_date <- function(x) {
 #' @param country the country you want the forecast for, currently supported: Germany and Poland
 #' @return long-format data_frame with quantiles
 #'
+
+
+
 make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",cases=FALSE) {
   require(tidyverse)
   require(MMWRweek)
@@ -90,7 +94,6 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
 
   #forecast date is given from function now
   #forecast_date <- get_date(path)
-  
   
   # make sure that all names are the same over different data sets
   
@@ -123,7 +126,6 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
     fread(code_fips,data.table = FALSE,encoding = "UTF-8",
              stringsAsFactors = FALSE)
   
-  
   #first filter data so only your desired countries/regions are manipulated (speeds up procedure)
   
   data<-data %>% left_join(state_fips_codes, by = c("location_name" = "state_name")) %>% 
@@ -146,8 +148,6 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
     
   }
     
-
-  
   ## code for incident deaths or cases (var names might be confusing since they
   #seem only to cover cases, but are general)
   
@@ -200,7 +200,7 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
     # rename columns to match output standard
     dplyr::rename(location = state_code) %>%
     dplyr::rename(target_end_date = date_v)
-  
+
   ## code for cumulative deaths
   col_list2 <-
     c(
@@ -265,7 +265,6 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
   #   dplyr::mutate(type=ifelse(quantile=="NA","point","quantile"),forecast_date=forecast_date) %>%
   #   dplyr::rename(target_end_date=date_v)
   
-  
   ## weekly forecasts
   
   # add if for forecast date weekly
@@ -276,13 +275,12 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
   } else {
     Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
   }
-  
 
-  
   if (lubridate::wday(submission_date, label = TRUE, abbr = FALSE) == "Sunday" |
       lubridate::wday(submission_date, label = TRUE, abbr = FALSE) == "Monday") {
     death_qntl2_1 <- data[, c(col_list2)] %>%
       dplyr::rename(date_v = date) %>%
+      dplyr::filter(date_v >= submission_date) %>%  # avoids ew difference issues with change of year
       dplyr::mutate(
         day_v = lubridate::wday(date_v, label = TRUE, abbr = FALSE),
         ew = unname(MMWRweek(date_v)[[2]])
@@ -302,6 +300,7 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
   } else {
     death_qntl2_1 <- data[, c(col_list2)] %>%
       dplyr::rename(date_v = date) %>%
+      dplyr::filter(date_v >= submission_date) %>% # avoids ew difference issues with change of year
       dplyr::mutate(
         day_v = lubridate::wday(date_v, label = TRUE, abbr = FALSE),
         ew = unname(MMWRweek(date_v)[[2]])
@@ -334,8 +333,6 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
     dplyr::left_join(state_fips_codes, by = c("location_name" = "state_name")) %>%
     dplyr::rename(location = state_code, target_end_date = date_v) %>%
     dplyr::select(-"day_v",-"ew")
-  
-
   
   ### combining data
   
@@ -373,3 +370,4 @@ make_qntl_dat <- function(path,forecast_date,submission_date, country="Germany",
   
   return(final)
 }
+

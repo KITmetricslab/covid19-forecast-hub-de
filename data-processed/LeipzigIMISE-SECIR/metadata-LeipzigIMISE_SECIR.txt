@@ -11,6 +11,7 @@ team_model_designation: primary
 data_inputs: RKI and DIVI, ECDC, age distributions for cases and deaths from RKI as described in methods, case & ICU  & death counts
 methods: SECIR type model 
 methods_long: 
+	2021-01-11 - present		Stronger regularisation of future infectivity by using stronger priors
 	2020-12-28 - 2021-01-03		Assuming average reduction in infectivity of 40% (i.e. infectivity level 60% compared with infectivity seen in beginn of December) and assuming variance infectivity +- 20% to reflect uncertainty
 	2020-12-21 - 2020-12-21		Assuming average reduction in infectivity of 20% (i.e. infectivity level 80% compared with infectivity seen in beginn of December) and assuming variance infectivity +- 20% to reflect uncertainty
 	2020-12-14 - 2020-12-20		Assuming average reduction in infectivity of 20% (i.e. infectivity level 80% compared with infectivity seen in beginn of December)

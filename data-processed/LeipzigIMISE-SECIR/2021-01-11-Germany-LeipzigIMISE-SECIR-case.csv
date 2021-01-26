@@ -1,0 +1,1837 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2021-01-11,"-1 day ahead inc case",2021-01-10,"GM","Germany","observed",NA,16946
+2021-01-11,"0 day ahead inc case",2021-01-11,"GM","Germany","observed",NA,12497
+2021-01-11,"-1 day ahead cum case",2021-01-10,"GM","Germany","observed",NA,1908527
+2021-01-11,"0 day ahead cum case",2021-01-11,"GM","Germany","observed",NA,1921024
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","point",NA,12480.7411354896
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","point",NA,12507.0547072514
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","point",NA,12552.0976910645
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","point",NA,12617.3842386729
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","point",NA,12689.3897073346
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","point",NA,12791.3140526721
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","point",NA,12874.8240443087
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","point",NA,12976.9898509772
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","point",NA,13080.5960058294
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","point",NA,13176.1334610241
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","point",NA,13287.3462685443
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","point",NA,13385.0665922498
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","point",NA,13481.5330077183
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","point",NA,13587.2758090003
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","point",NA,13682.4246391191
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","point",NA,13799.7404640888
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","point",NA,13895.2062918715
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","point",NA,13972.8708979178
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","point",NA,14091.1299901732
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","point",NA,14174.5709287744
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","point",NA,14277.0299438477
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","point",NA,14352.4167730003
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","point",NA,14501.0850658613
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","point",NA,14531.5586936856
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","point",NA,14611.0792571431
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","point",NA,14731.4748841751
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","point",NA,14800.3691187535
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","point",NA,14924.7155663016
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","point",NA,14993.5139640179
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","point",NA,15083.2175850294
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.01",9827.72550687523
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.01",9754.24767128349
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.01",9682.57869035895
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.01",9604.32735875679
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.01",9539.25516300574
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.01",9477.95047023073
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.01",9457.1269014708
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.01",9346.05335513929
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.01",9260.5644115807
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.01",9207.36277542214
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.01",9097.86615146502
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.01",9033.47611772554
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.01",8888.51949148948
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.01",8837.87956713869
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.01",8731.59459871962
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.01",8617.02270571826
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.01",8481.19477899462
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.01",8428.70791361516
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.01",8341.54762018546
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.01",8231.16174207798
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.01",8124.88707876202
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.01",7995.31204992459
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.01",7924.29889346238
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.01",7819.32985384208
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.01",7710.66917518578
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.01",7612.56531808887
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.01",7518.50359282617
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.01",7441.75340078027
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.01",7266.4963034429
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.01",7234.22424301057
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.025",10270.9732388373
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.025",10194.376809118
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.025",10125.5033110532
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.025",10071.1336978854
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.025",10015.9887616823
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.025",9964.05585930152
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.025",9942.63786631084
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.025",9868.21216582678
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.025",9814.60907941837
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.025",9762.1194516038
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.025",9676.97108256063
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.025",9606.02211915863
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.025",9517.79831718932
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.025",9475.42029785835
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.025",9389.26361805788
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.025",9338.28790547247
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.025",9231.84816298444
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.025",9172.0235428184
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.025",9093.63402773967
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.025",8987.35971440452
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.025",8928.07434724332
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.025",8792.84617627738
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.025",8726.90131858335
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.025",8640.7957299227
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.025",8567.93592843347
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.025",8470.65462689972
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.025",8380.29887835603
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.025",8333.17461914576
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.025",8174.40128068126
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.025",8131.55043262834
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.05",10627.924379467
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.05",10570.9882255129
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.05",10526.6169261713
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.05",10489.192885447
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.05",10445.4824162974
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.05",10392.4018393105
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.05",10372.6943426059
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.05",10332.4274612676
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.05",10286.4750566477
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.05",10239.7548180713
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.05",10188.9478428052
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.05",10141.0595928059
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.05",10076.5198473603
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.05",10039.1831908205
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.05",9976.46596044049
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.05",9950.33258399253
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.05",9876.1601978179
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.05",9801.23017459849
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.05",9755.95333701258
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.05",9669.3445067781
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.05",9617.97744910479
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.05",9516.46822624482
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.05",9478.51399778685
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.05",9402.64371129124
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.05",9325.07641011733
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.05",9273.3596292999
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.05",9186.19453058633
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.05",9124.06853102303
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.05",9027.34688369817
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.05",8972.76139374318
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.1",11026.7235621064
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.1",10998.9367433707
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.1",10983.1290551003
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.1",10958.9618265832
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.1",10938.1600938389
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.1",10918.2956256007
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.1",10899.765639482
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.1",10879.7151976304
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.1",10851.7760970431
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.1",10835.5701374219
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.1",10806.2973475682
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.1",10779.2646769014
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.1",10732.1122170654
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.1",10730.682335382
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.1",10692.3990831737
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.1",10655.6667027319
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.1",10637.4026700043
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.1",10577.0666266989
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.1",10562.708533406
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.1",10489.3501504251
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.1",10461.8529880167
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.1",10398.7235262454
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.1",10385.596448463
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.1",10315.3146324811
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.1",10279.1214367462
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.1",10253.7789849365
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.1",10165.6220995703
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.1",10174.6584244025
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.1",10090.3123622671
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.1",10057.1516541035
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.15",11294.5921994932
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.15",11282.3415561559
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.15",11282.9666722276
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.15",11274.8164282981
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.15",11269.6880486685
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.15",11277.2874511857
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.15",11265.1749029344
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.15",11263.6544042862
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.15",11254.1862614872
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.15",11249.3132770428
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.15",11242.859159974
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.15",11231.8352751209
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.15",11203.5581637404
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.15",11212.9685414082
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.15",11189.3958855037
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.15",11174.4327033192
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.15",11180.2383149957
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.15",11139.0732525339
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.15",11130.7622295431
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.15",11087.7376440815
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.15",11070.4563178468
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.15",11039.8303409657
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.15",11043.1537997573
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.15",10980.533149975
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.15",10960.106576223
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.15",10964.1448312782
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.15",10914.4826495349
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.15",10913.5300747312
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.15",10856.9569860013
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.15",10858.9611696148
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.2",11509.8108971071
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.2",11502.7969757281
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.2",11519.9110341645
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.2",11530.1717895696
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.2",11531.3089598086
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.2",11554.5702108668
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.2",11568.4406880474
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.2",11585.8112203647
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.2",11588.3448767941
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.2",11598.3220411443
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.2",11608.7831299395
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.2",11613.1156303171
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.2",11600.6732782596
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.2",11614.8185395776
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.2",11614.8366425007
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.2",11621.1057784722
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.2",11632.1649621146
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.2",11615.0966043866
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.2",11620.885119436
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.2",11578.2167803874
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.2",11586.2581550671
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.2",11563.6510725841
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.2",11593.9365432578
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.2",11540.2105863201
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.2",11531.7175507175
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.2",11550.4542353747
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.2",11523.2310647085
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.2",11521.5696263369
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.2",11479.5033210944
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.2",11498.3854258825
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.25",11695.0678927062
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.25",11697.3396138474
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.25",11721.4101916858
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.25",11745.6507417031
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.25",11762.5006245341
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.25",11803.4356389169
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.25",11822.5032313399
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.25",11859.6349582649
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.25",11883.1806099011
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.25",11908.3435173952
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.25",11932.7689214246
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.25",11952.1758051596
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.25",11957.7419232505
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.25",11987.4597935346
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.25",12001.0146864781
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.25",12023.4525501132
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.25",12049.5099228169
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.25",12044.6148335142
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.25",12060.6789767391
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.25",12036.6962344145
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.25",12060.1140878187
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.25",12051.9930257947
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.25",12085.4485206856
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.25",12048.499835447
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.25",12044.8056458347
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.25",12076.7534964594
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.25",12051.36591039
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.25",12074.8102194596
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.25",12044.5504541472
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.25",12071.8807154461
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.3",11863.6435292486
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.3",11870.9795442043
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.3",11907.8606696274
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.3",11941.1772096008
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.3",11968.5236434761
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.3",12024.8034728744
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.3",12055.1267427065
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.3",12113.1240266944
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.3",12154.5621588024
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.3",12192.4453940579
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.3",12229.5813319016
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.3",12272.1588967945
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.3",12290.7165756725
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.3",12332.5747529177
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.3",12364.8604581434
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.3",12396.846612375
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.3",12431.4669867427
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.3",12446.9360527971
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.3",12473.6673889305
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.3",12475.1855210841
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.3",12507.4418275438
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.3",12526.2862905023
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.3",12569.9376087575
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.3",12548.4387460075
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.3",12551.5892276861
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.3",12594.1037052057
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.3",12589.7741477347
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.3",12615.8956975068
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.3",12602.0663944638
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.3",12634.5991126285
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.35",12023.9920252055
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.35",12033.9363372613
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.35",12077.0641364897
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.35",12122.1696499566
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.35",12158.4817118805
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.35",12226.3348085495
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.35",12278.3229243417
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.35",12345.7986169515
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.35",12402.9782392592
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.35",12456.3825017276
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.35",12506.9085408531
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.35",12567.3194963995
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.35",12604.3886779143
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.35",12656.2304238284
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.35",12714.307568876
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.35",12772.6423928051
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.35",12813.7818243314
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.35",12838.5870377569
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.35",12883.2766354031
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.35",12914.2428800614
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.35",12960.5160230532
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.35",12974.2805180754
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.35",13036.9446626008
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.35",13035.7237631153
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.35",13054.2414806746
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.35",13115.990267011
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.35",13128.1140051023
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.35",13168.2021648389
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.35",13176.1519025209
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.35",13226.2652856546
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.4",12177.0545324009
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.4",12195.9436143691
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.4",12236.2292742954
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.4",12292.6066182357
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.4",12339.2010414012
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.4",12420.0732568499
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.4",12484.1861925226
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.4",12561.1553248539
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.4",12637.8974849006
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.4",12704.7927290136
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.4",12768.5195713691
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.4",12851.4511066035
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.4",12912.3213939803
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.4",12978.4908767917
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.4",13035.8601580346
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.4",13122.5504244597
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.4",13176.794235546
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.4",13218.780598884
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.4",13278.2587341832
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.4",13338.4406973006
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.4",13393.5839836006
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.4",13440.91521642
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.4",13526.3523384844
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.4",13536.1034745675
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.4",13566.2432900857
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.4",13646.3472393014
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.4",13686.8438164733
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.4",13746.0615448053
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.4",13788.8788729195
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.4",13832.9266347576
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.45",12328.827597421
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.45",12353.8483561058
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.45",12394.4828735979
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.45",12460.2221289365
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.45",12516.2529078866
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.45",12604.9090765648
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.45",12681.6056928993
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.45",12771.3030066314
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.45",12863.1674308585
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.45",12941.5012807869
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.45",13033.3010308164
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.45",13118.4261869999
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.45",13197.8530334175
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.45",13288.7678001165
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.45",13361.7678221863
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.45",13459.9227096263
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.45",13543.5641519537
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.45",13593.8119159492
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.45",13687.1254101845
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.45",13750.0556694481
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.45",13839.6971099856
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.45",13891.799132713
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.45",14007.6384641216
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.45",14028.6946978587
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.45",14091.7884621345
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.45",14176.5436647887
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.45",14242.8641581873
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.45",14328.1078143598
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.45",14379.7014035982
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.45",14443.5658628133
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.5",12480.7411354896
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.5",12507.0547072514
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.5",12552.0976910645
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.5",12617.3842386729
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.5",12689.3897073346
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.5",12791.3140526721
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.5",12874.8240443087
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.5",12976.9898509772
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.5",13080.5960058294
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.5",13176.1334610241
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.5",13287.3462685443
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.5",13385.0665922498
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.5",13481.5330077183
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.5",13587.2758090003
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.5",13682.4246391191
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.5",13799.7404640888
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.5",13895.2062918715
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.5",13972.8708979178
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.5",14091.1299901732
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.5",14174.5709287744
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.5",14277.0299438477
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.5",14352.4167730003
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.5",14501.0850658613
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.5",14531.5586936856
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.5",14611.0792571431
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.5",14731.4748841751
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.5",14800.3691187535
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.5",14924.7155663016
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.5",14993.5139640179
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.5",15083.2175850294
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.55",12633.7122270398
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.55",12661.7773042442
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.55",12712.4043885574
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.55",12785.2057353654
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.55",12864.4869144528
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.55",12975.0468086531
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.55",13068.6163317373
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.55",13181.2375647616
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.55",13303.732708885
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.55",13412.0113066234
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.55",13539.3142512546
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.55",13661.5940565341
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.55",13767.9154157399
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.55",13890.4078074211
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.55",14004.0346119389
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.55",14143.2775761533
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.55",14250.5445495723
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.55",14352.926171152
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.55",14493.4826893069
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.55",14601.5311714126
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.55",14732.0282075282
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.55",14826.4138440885
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.55",14997.0839599985
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.55",15057.9709159943
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.55",15145.0719979686
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.55",15313.7076815204
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.55",15396.7791584917
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.55",15543.3539256378
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.55",15623.9797884946
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.55",15752.3680315715
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.6",12794.6708471428
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.6",12823.0134087656
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.6",12877.7876811382
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.6",12955.6210248669
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.6",13043.7992006273
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.6",13160.053604832
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.6",13272.8129072336
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.6",13392.2812577226
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.6",13525.3684123766
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.6",13657.4002596584
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.6",13791.342286663
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.6",13938.6149672856
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.6",14053.1595253801
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.6",14202.0612302353
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.6",14336.7866800285
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.6",14491.7657504153
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.6",14617.9279994786
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.6",14740.7253831621
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.6",14906.6037709617
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.6",15047.7071554308
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.6",15203.560817807
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.6",15311.4432523974
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.6",15507.5288036437
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.6",15601.0377208263
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.6",15718.4544570221
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.6",15894.2647933263
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.6",16017.8116223713
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.6",16192.7653649832
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.6",16304.0462880939
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.6",16465.1770792232
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.65",12962.309166493
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.65",12997.4299234348
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.65",13055.2406922637
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.65",13132.7807045473
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.65",13232.0473753375
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.65",13355.736468909
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.65",13477.9456026041
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.65",13608.795316483
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.65",13762.2664750005
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.65",13907.9247991601
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.65",14048.8115649436
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.65",14220.8326527609
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.65",14355.2589987588
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.65",14519.4492175879
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.65",14678.4845863381
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.65",14851.0018672337
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.65",14998.6547712846
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.65",15156.2062494031
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.65",15342.4472059408
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.65",15501.5575439881
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.65",15675.8700782003
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.65",15817.5991075325
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.65",16045.5429368468
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.65",16175.0980069541
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.65",16328.2578153691
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.65",16522.4899782593
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.65",16675.2508377196
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.65",16871.3612141566
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.65",17045.3526316575
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.65",17232.8820667658
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.7",13149.0368172356
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.7",13181.8504733099
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.7",13239.6591974854
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.7",13325.0846331903
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.7",13431.9682312902
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.7",13566.0350579632
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.7",13696.7190867679
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.7",13848.6664560854
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.7",14009.6282893143
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.7",14173.1585962129
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.7",14330.3553290906
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.7",14516.6468117747
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.7",14676.8834371829
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.7",14866.3933529674
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.7",15037.2389386172
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.7",15245.828555944
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.7",15418.256976512
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.7",15593.1151597736
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.7",15824.996089912
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.7",15993.627101716
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.7",16213.4395952153
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.7",16374.6276703108
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.7",16613.0762213822
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.7",16781.0549584151
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.7",16979.2990781976
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.7",17192.7100722759
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.7",17402.3838664759
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.7",17636.6182349291
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.7",17819.8792950633
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.7",18078.6464616334
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.75",13361.0870842332
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.75",13389.3435148509
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.75",13452.0245692999
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.75",13533.9426412963
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.75",13651.2309746892
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.75",13792.5100751742
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.75",13935.9206341965
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.75",14107.8642600527
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.75",14284.1529914064
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.75",14461.3657205384
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.75",14640.0730465805
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.75",14848.6593633715
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.75",15037.3060746181
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.75",15248.9100009932
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.75",15448.9029443519
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.75",15683.1699019724
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.75",15881.1907348275
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.75",16077.9463413613
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.75",16341.2727446678
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.75",16548.0163984765
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.75",16810.0092275538
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.75",16994.1785345386
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.75",17266.6664358659
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.75",17476.0243705423
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.75",17717.992309412
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.75",17956.5740441439
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.75",18201.5828467388
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.75",18468.98967885
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.75",18681.119481274
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.75",19015.8679151918
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.8",13592.7064418225
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.8",13627.0380346272
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.8",13688.7457445893
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.8",13775.5233475526
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.8",13901.5117917837
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.8",14048.7046934269
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.8",14207.3919678314
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.8",14396.3072600141
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.8",14589.6561384375
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.8",14788.3559553675
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.8",14987.634859306
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.8",15217.7752630426
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.8",15445.2109115974
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.8",15682.804504788
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.8",15909.3852901597
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.8",16186.2031145804
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.8",16414.8523911883
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.8",16636.2008934149
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.8",16954.8719335437
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.8",17175.0598281011
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.8",17478.222587805
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.8",17699.1401429378
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.8",18021.4415047168
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.8",18272.9091891164
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.8",18551.5842985505
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.8",18837.0448047475
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.8",19118.4526656821
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.8",19441.1256391313
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.8",19673.6541747405
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.8",20082.0003895303
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.85",13876.5685238323
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.85",13920.4899592716
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.85",13986.733093291
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.85",14073.8905511538
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.85",14208.1410266323
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.85",14358.3851152829
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.85",14535.7934449569
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.85",14740.2448633545
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.85",14955.8606557082
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.85",15169.3169672604
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.85",15401.872417809
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.85",15667.2409598963
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.85",15931.5380600247
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.85",16198.6317883888
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.85",16479.8384692916
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.85",16767.7692196001
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.85",17043.3210522255
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.85",17305.8766904471
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.85",17647.5381128445
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.85",17917.9582880031
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.85",18263.4694149345
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.85",18550.2911640432
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.85",18902.664048037
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.85",19217.2759526054
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.85",19532.3673600556
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.85",19880.6837524081
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.85",20200.7152370047
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.85",20587.9433946622
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.85",20888.726930852
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.85",21362.3593116873
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.9",14265.5931981584
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.9",14302.321663414
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.9",14376.1734692189
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.9",14470.596193181
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.9",14611.8550605197
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.9",14774.2879603425
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.9",14968.8587728923
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.9",15199.7931735128
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.9",15440.5474910449
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.9",15684.170434821
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.9",15953.4873183042
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.9",16242.9748884765
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.9",16558.5708785046
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.9",16873.7914873862
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.9",17182.6536162498
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.9",17500.4403233542
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.9",17854.7011286385
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.9",18147.9380915836
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.9",18529.6240739243
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.9",18878.5408686747
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.9",19265.1297790751
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.9",19622.2153677357
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.9",20033.1656667598
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.9",20416.1608946707
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.9",20811.1077908881
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.9",21211.6720838029
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.9",21599.6590442435
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.9",22045.7414717129
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.9",22439.5929766066
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.9",22999.7631387705
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.95",14872.566408321
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.95",14924.5125814358
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.95",15021.3617671043
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.95",15137.2747477604
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.95",15284.2949852383
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.95",15461.9323347501
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.95",15671.8687133398
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.95",15952.0507735738
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.95",16220.4536276805
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.95",16495.877205038
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.95",16805.6560711835
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.95",17175.3761677067
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.95",17530.1312800161
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.95",17893.4131478937
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.95",18267.1761904623
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.95",18638.6530643287
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.95",19089.0232582711
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.95",19484.2124541529
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.95",19930.7347310889
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.95",20349.3003654099
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.95",20826.4784848989
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.95",21271.4164303428
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.95",21831.2548252533
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.95",22280.0983951212
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.95",22764.6879234778
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.95",23272.0035746822
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.95",23772.0466646803
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.95",24405.1161327493
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.95",24916.9543214184
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.95",25554.0700928295
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.975",15436.1725793745
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.975",15515.2550379572
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.975",15653.2808082621
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.975",15776.4300978337
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.975",15924.6999920498
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.975",16132.8628762147
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.975",16392.6966855651
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.975",16662.8791324752
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.975",16989.8748519407
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.975",17301.8610938942
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.975",17611.3131038604
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.975",18060.0499127399
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.975",18467.9982515956
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.975",18886.8597807652
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.975",19367.5780736782
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.975",19797.850068207
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.975",20335.1191941034
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.975",20809.8376772801
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.975",21375.7421913842
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.975",21886.1406131022
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.975",22441.8344198167
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.975",23007.5517088629
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.975",23742.6720766722
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.975",24233.4473922424
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.975",24989.3190728957
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.975",25589.6538692586
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.975",26283.0221549957
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.975",27007.8410635317
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.975",27690.7160529854
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.975",28484.0789783079
+2021-01-11,"1 day ahead inc case",2021-01-12,"GM","Germany","quantile","0.99",16177.5580612693
+2021-01-11,"2 day ahead inc case",2021-01-13,"GM","Germany","quantile","0.99",16237.1487906706
+2021-01-11,"3 day ahead inc case",2021-01-14,"GM","Germany","quantile","0.99",16437.8608738265
+2021-01-11,"4 day ahead inc case",2021-01-15,"GM","Germany","quantile","0.99",16574.8661438518
+2021-01-11,"5 day ahead inc case",2021-01-16,"GM","Germany","quantile","0.99",16821.5630870934
+2021-01-11,"6 day ahead inc case",2021-01-17,"GM","Germany","quantile","0.99",17032.8008287461
+2021-01-11,"7 day ahead inc case",2021-01-18,"GM","Germany","quantile","0.99",17399.3579007744
+2021-01-11,"8 day ahead inc case",2021-01-19,"GM","Germany","quantile","0.99",17635.7719022837
+2021-01-11,"9 day ahead inc case",2021-01-20,"GM","Germany","quantile","0.99",18015.7194754717
+2021-01-11,"10 day ahead inc case",2021-01-21,"GM","Germany","quantile","0.99",18358.6559114364
+2021-01-11,"11 day ahead inc case",2021-01-22,"GM","Germany","quantile","0.99",18733.6992373166
+2021-01-11,"12 day ahead inc case",2021-01-23,"GM","Germany","quantile","0.99",19235.0953965958
+2021-01-11,"13 day ahead inc case",2021-01-24,"GM","Germany","quantile","0.99",19754.6103512653
+2021-01-11,"14 day ahead inc case",2021-01-25,"GM","Germany","quantile","0.99",20243.1809393039
+2021-01-11,"15 day ahead inc case",2021-01-26,"GM","Germany","quantile","0.99",20845.3014081469
+2021-01-11,"16 day ahead inc case",2021-01-27,"GM","Germany","quantile","0.99",21321.8681704378
+2021-01-11,"17 day ahead inc case",2021-01-28,"GM","Germany","quantile","0.99",21920.6139521129
+2021-01-11,"18 day ahead inc case",2021-01-29,"GM","Germany","quantile","0.99",22572.0392196165
+2021-01-11,"19 day ahead inc case",2021-01-30,"GM","Germany","quantile","0.99",23260.9479402482
+2021-01-11,"20 day ahead inc case",2021-01-31,"GM","Germany","quantile","0.99",23957.2142224218
+2021-01-11,"21 day ahead inc case",2021-02-01,"GM","Germany","quantile","0.99",24590.6033858447
+2021-01-11,"22 day ahead inc case",2021-02-02,"GM","Germany","quantile","0.99",25302.7345986385
+2021-01-11,"23 day ahead inc case",2021-02-03,"GM","Germany","quantile","0.99",26143.4099923783
+2021-01-11,"24 day ahead inc case",2021-02-04,"GM","Germany","quantile","0.99",26714.117268293
+2021-01-11,"25 day ahead inc case",2021-02-05,"GM","Germany","quantile","0.99",27713.1769688404
+2021-01-11,"26 day ahead inc case",2021-02-06,"GM","Germany","quantile","0.99",28367.3136259114
+2021-01-11,"27 day ahead inc case",2021-02-07,"GM","Germany","quantile","0.99",29317.3040855555
+2021-01-11,"28 day ahead inc case",2021-02-08,"GM","Germany","quantile","0.99",30218.8687713575
+2021-01-11,"29 day ahead inc case",2021-02-09,"GM","Germany","quantile","0.99",31169.6894046209
+2021-01-11,"30 day ahead inc case",2021-02-10,"GM","Germany","quantile","0.99",32165.243305209
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","point",NA,1933504.74113549
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","point",NA,1946011.79584274
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","point",NA,1958563.89353381
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","point",NA,1971181.27777248
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","point",NA,1983870.66747981
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","point",NA,1996661.98153248
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","point",NA,2009536.80557679
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","point",NA,2022513.79542777
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","point",NA,2035594.3914336
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","point",NA,2048770.52489462
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","point",NA,2062057.87116317
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","point",NA,2075442.93775542
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","point",NA,2088924.47076314
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","point",NA,2102511.74657214
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","point",NA,2116194.17121126
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","point",NA,2129993.91167535
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","point",NA,2143889.11796722
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","point",NA,2157861.98886513
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","point",NA,2171953.11885531
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","point",NA,2186127.68978408
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","point",NA,2200404.71972793
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","point",NA,2214757.13650093
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","point",NA,2229258.22156679
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","point",NA,2243789.78026048
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","point",NA,2258400.85951762
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","point",NA,2273132.3344018
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","point",NA,2287932.70352055
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","point",NA,2302857.41908685
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","point",NA,2317850.93305087
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","point",NA,2332934.1506359
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.01",1930851.72550688
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.01",1940605.97317816
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.01",1950288.55186852
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.01",1959892.87922727
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.01",1969432.13439028
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.01",1978910.08486051
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.01",1988367.21176198
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.01",1997713.26511712
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.01",2006973.8295287
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.01",2016181.19230412
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.01",2025279.05845559
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.01",2034312.53457331
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.01",2043201.0540648
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.01",2052038.93363194
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.01",2060770.52823066
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.01",2069387.55093638
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.01",2077868.74571538
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.01",2086297.45362899
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.01",2094639.00124918
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.01",2102870.16299125
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.01",2110995.05007002
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.01",2118990.36211994
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.01",2126914.6610134
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.01",2134733.99086725
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.01",2142444.66004243
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.01",2150057.22536052
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.01",2157575.72895335
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.01",2165017.48235413
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.01",2172283.97865757
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.01",2179518.20290058
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.025",1931294.97323884
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.025",1941489.35004796
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.025",1951614.85335901
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.025",1961685.98705689
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.025",1971701.97581858
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.025",1981666.03167788
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.025",1991608.66954419
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.025",2001476.88171002
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.025",2011291.49078943
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.025",2021053.61024104
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.025",2030730.5813236
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.025",2040336.60344276
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.025",2049854.40175995
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.025",2059329.8220578
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.025",2068719.08567586
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.025",2078057.37358133
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.025",2087289.22174432
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.025",2096461.24528714
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.025",2105554.87931488
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.025",2114542.23902928
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.025",2123470.31337652
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.025",2132263.1595528
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.025",2140990.06087139
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.025",2149630.85660131
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.025",2158198.79252974
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.025",2166669.44715664
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.025",2175049.746035
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.025",2183382.92065414
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.025",2191557.32193482
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.025",2199688.87236745
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.05",1931651.92437947
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.05",1942222.91260498
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.05",1952749.52953115
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.05",1963238.7224166
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.05",1973684.2048329
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.05",1984076.60667221
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.05",1994449.30101481
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.05",2004781.72847608
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.05",2015068.20353273
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.05",2025307.9583508
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.05",2035496.9061936
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.05",2045637.96578641
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.05",2055714.48563377
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.05",2065753.66882459
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.05",2075730.13478503
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.05",2085680.46736902
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.05",2095556.62756684
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.05",2105357.85774144
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.05",2115113.81107845
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.05",2124783.15558523
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.05",2134401.13303434
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.05",2143917.60126058
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.05",2153396.11525837
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.05",2162798.75896966
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.05",2172123.83537978
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.05",2181397.19500908
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.05",2190583.38953966
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.05",2199707.45807068
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.05",2208734.80495438
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.05",2217707.56634813
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.1",1932050.72356211
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.1",1943049.66030548
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.1",1954032.78936058
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.1",1964991.75118716
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.1",1975929.911281
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.1",1986848.2069066
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.1",1997747.97254608
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.1",2008627.68774371
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.1",2019479.46384076
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.1",2030315.03397818
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.1",2041121.33132575
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.1",2051900.59600265
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.1",2062632.70821971
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.1",2073363.39055509
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.1",2084055.78963827
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.1",2094711.456341
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.1",2105348.859011
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.1",2115925.9256377
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.1",2126488.63417111
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.1",2136977.98432153
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.1",2147439.83730955
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.1",2157838.5608358
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.1",2168224.15728426
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.1",2178539.47191674
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.1",2188818.59335349
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.1",2199072.37233842
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.1",2209237.99443799
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.1",2219412.6528624
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.1",2229502.96522466
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.1",2239560.11687877
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.15",1932318.59219949
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.15",1943600.93375565
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.15",1954883.90042788
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.15",1966158.71685617
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.15",1977428.40490484
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.15",1988705.69235603
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.15",1999970.86725896
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.15",2011234.52166325
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.15",2022488.70792474
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.15",2033738.02120178
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.15",2044980.88036175
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.15",2056212.71563687
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.15",2067416.27380061
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.15",2078629.24234202
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.15",2089818.63822753
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.15",2100993.07093085
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.15",2112173.30924584
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.15",2123312.38249838
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.15",2134443.14472792
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.15",2145530.882372
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.15",2156601.33868985
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.15",2167641.16903081
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.15",2178684.32283057
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.15",2189664.85598054
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.15",2200624.96255677
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.15",2211589.10738805
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.15",2222503.59003758
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.15",2233417.12011231
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.15",2244274.07709831
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.15",2255133.03826793
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.2",1932533.81089711
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.2",1944036.60787284
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.2",1955556.518907
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.2",1967086.69069657
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.2",1978617.99965638
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.2",1990172.56986724
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.2",2001741.01055529
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.2",2013326.82177566
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.2",2024915.16665245
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.2",2036513.4886936
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.2",2048122.27182353
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.2",2059735.38745385
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.2",2071336.06073211
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.2",2082950.87927169
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.2",2094565.71591419
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.2",2106186.82169266
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.2",2117818.98665478
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.2",2129434.08325916
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.2",2141054.9683786
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.2",2152633.18515899
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.2",2164219.44331405
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.2",2175783.09438664
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.2",2187377.0309299
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.2",2198917.24151622
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.2",2210448.95906693
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.2",2221999.41330231
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.2",2233522.64436702
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.2",2245044.21399335
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.2",2256523.71731445
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.2",2268022.10274033
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.25",1932719.06789271
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.25",1944416.40750655
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.25",1956137.81769824
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.25",1967883.46843994
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.25",1979645.96906448
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.25",1991449.40470339
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.25",2003271.90793473
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.25",2015131.542893
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.25",2027014.7235029
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.25",2038923.06702029
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.25",2050855.83594172
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.25",2062808.01174688
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.25",2074765.75367013
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.25",2086753.21346366
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.25",2098754.22815014
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.25",2110777.68070026
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.25",2122827.19062307
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.25",2134871.80545659
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.25",2146932.48443333
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.25",2158969.18066774
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.25",2171029.29475556
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.25",2183081.28778135
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.25",2195166.73630204
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.25",2207215.23613749
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.25",2219260.04178332
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.25",2231336.79527978
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.25",2243388.16119017
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.25",2255462.97140963
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.25",2267507.52186378
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.25",2279579.40257922
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.3",1932887.64352925
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.3",1944758.62307345
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.3",1956666.48374308
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.3",1968607.66095268
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.3",1980576.18459616
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.3",1992600.98806903
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.3",2004656.11481174
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.3",2016769.23883843
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.3",2028923.80099723
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.3",2041116.24639129
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.3",2053345.82772319
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.3",2065617.98661999
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.3",2077908.70319566
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.3",2090241.27794858
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.3",2102606.13840672
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.3",2115002.9850191
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.3",2127434.45200584
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.3",2139881.38805864
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.3",2152355.05544757
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.3",2164830.24096865
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.3",2177337.6827962
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.3",2189863.9690867
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.3",2202433.90669546
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.3",2214982.34544146
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.3",2227533.93466915
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.3",2240128.03837436
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.3",2252717.81252209
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.3",2265333.7082196
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.3",2277935.77461406
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.3",2290570.37372669
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.35",1933047.99202521
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.35",1945081.92836247
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.35",1957158.99249896
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.35",1969281.16214891
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.35",1981439.64386079
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.35",1993665.97866934
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.35",2005944.30159368
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.35",2018290.10021064
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.35",2030693.0784499
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.35",2043149.46095162
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.35",2055656.36949248
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.35",2068223.68898888
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.35",2080828.07766679
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.35",2093484.30809062
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.35",2106198.61565949
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.35",2118971.2580523
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.35",2131785.03987663
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.35",2144623.62691439
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.35",2157506.90354979
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.35",2170421.14642985
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.35",2183381.66245291
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.35",2196355.94297098
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.35",2209392.88763358
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.35",2222428.6113967
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.35",2235482.85287737
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.35",2248598.84314438
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.35",2261726.95714948
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.35",2274895.15931432
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.35",2288071.31121684
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.35",2301297.5765025
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.4",1933201.0545324
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.4",1945396.99814677
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.4",1957633.22742107
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.4",1969925.8340393
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.4",1982265.0350807
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.4",1994685.10833755
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.4",2007169.29453007
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.4",2019730.44985493
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.4",2032368.34733983
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.4",2045073.14006884
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.4",2057841.65964021
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.4",2070693.11074682
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.4",2083605.4321408
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.4",2096583.92301759
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.4",2109619.78317562
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.4",2122742.33360008
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.4",2135919.12783563
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.4",2149137.90843451
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.4",2162416.1671687
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.4",2175754.607866
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.4",2189148.1918496
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.4",2202589.10706602
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.4",2216115.4594045
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.4",2229651.56287907
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.4",2243217.80616915
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.4",2256864.15340846
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.4",2270550.99722493
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.4",2284297.05876973
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.4",2298085.93764265
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.4",2311918.86427741
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.45",1933352.82759742
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.45",1945706.67595353
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.45",1958101.15882712
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.45",1970561.38095606
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.45",1983077.63386395
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.45",1995682.54294051
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.45",2008364.14863341
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.45",2021135.45164004
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.45",2033998.6190709
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.45",2046940.12035169
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.45",2059973.4213825
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.45",2073091.8475695
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.45",2086289.70060292
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.45",2099578.46840304
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.45",2112940.23622523
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.45",2126400.15893485
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.45",2139943.72308681
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.45",2153537.53500275
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.45",2167224.66041294
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.45",2180974.71608239
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.45",2194814.41319237
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.45",2208706.21232509
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.45",2222713.85078921
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.45",2236742.54548707
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.45",2250834.3339492
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.45",2265010.87761399
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.45",2279253.74177218
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.45",2293581.84958654
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.45",2307961.55099013
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.45",2322405.11685295
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.5",1933504.74113549
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.5",1946011.79584274
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.5",1958563.89353381
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.5",1971181.27777248
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.5",1983870.66747981
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.5",1996661.98153248
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.5",2009536.80557679
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.5",2022513.79542777
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.5",2035594.3914336
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.5",2048770.52489462
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.5",2062057.87116317
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.5",2075442.93775542
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.5",2088924.47076314
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.5",2102511.74657214
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.5",2116194.17121126
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.5",2129993.91167535
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.5",2143889.11796722
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.5",2157861.98886513
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.5",2171953.11885531
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.5",2186127.68978408
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.5",2200404.71972793
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.5",2214757.13650093
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.5",2229258.22156679
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.5",2243789.78026048
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.5",2258400.85951762
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.5",2273132.3344018
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.5",2287932.70352055
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.5",2302857.41908685
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.5",2317850.93305087
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.5",2332934.1506359
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.55",1933657.71222704
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.55",1946319.48953128
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.55",1959031.89391984
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.55",1971817.09965521
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.55",1984681.58656966
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.55",1997656.63337831
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.55",2010725.24971005
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.55",2023906.48727481
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.55",2037210.2199837
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.55",2050622.23129032
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.55",2064161.54554157
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.55",2077823.13959811
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.55",2091591.05501385
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.55",2105481.46282127
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.55",2119485.49743321
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.55",2133628.77500936
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.55",2147879.31955893
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.55",2162232.24573009
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.55",2176725.72841939
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.55",2191327.25959081
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.55",2206059.28779833
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.55",2220885.70164242
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.55",2235882.78560242
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.55",2250940.75651842
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.55",2266085.82851638
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.55",2281399.5361979
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.55",2296796.3153564
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.55",2312339.66928203
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.55",2327963.64907053
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.55",2343716.0171021
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.6",1933818.67084714
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.6",1946641.68425591
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.6",1959519.47193705
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.6",1972475.09296191
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.6",1985518.89216254
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.6",1998678.94576737
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.6",2011951.75867461
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.6",2025344.03993233
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.6",2038869.40834471
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.6",2052526.80860436
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.6",2066318.15089103
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.6",2080256.76585831
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.6",2094309.92538369
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.6",2108511.98661393
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.6",2122848.77329396
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.6",2137340.53904437
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.6",2151958.46704385
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.6",2166699.19242701
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.6",2181605.79619797
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.6",2196653.5033534
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.6",2211857.06417121
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.6",2227168.50742361
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.6",2242676.03622725
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.6",2258277.07394808
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.6",2273995.5284051
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.6",2289889.79319843
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.6",2305907.6048208
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.6",2322100.37018578
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.6",2338404.41647388
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.6",2354869.5935531
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.65",1933986.30916649
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.65",1946983.73908993
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.65",1960038.97978219
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.65",1973171.76048674
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.65",1986403.80786208
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.65",1999759.54433099
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.65",2013237.48993359
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.65",2026846.28525007
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.65",2040608.55172507
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.65",2054516.47652423
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.65",2068565.28808918
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.65",2082786.12074194
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.65",2097141.3797407
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.65",2111660.82895828
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.65",2126339.31354462
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.65",2141190.31541186
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.65",2156188.97018314
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.65",2171345.17643254
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.65",2186687.62363848
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.65",2202189.18118247
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.65",2217865.05126067
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.65",2233682.65036821
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.65",2249728.19330505
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.65",2265903.29131201
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.65",2282231.54912738
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.65",2298754.03910563
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.65",2315429.28994335
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.65",2332300.65115751
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.65",2349346.00378917
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.65",2366578.88585593
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.7",1934173.03681724
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.7",1947354.88729055
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.7",1960594.54648803
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.7",1973919.63112122
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.7",1987351.59935251
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.7",2000917.63441047
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.7",2014614.35349724
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.7",2028463.01995333
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.7",2042472.64824264
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.7",2056645.80683885
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.7",2070976.16216795
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.7",2085492.80897972
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.7",2100169.6924169
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.7",2115036.08576987
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.7",2130073.32470849
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.7",2145319.15326443
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.7",2160737.41024094
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.7",2176330.52540072
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.7",2192155.52149063
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.7",2208149.14859235
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.7",2224362.58818756
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.7",2240737.21585787
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.7",2257350.29207925
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.7",2274131.34703767
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.7",2291110.64611587
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.7",2308303.35618814
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.7",2325705.74005462
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.7",2343342.35828955
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.7",2361162.23758461
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.7",2379240.88404624
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.75",1934385.08708423
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.75",1947774.43059908
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.75",1961226.45516838
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.75",1974760.39780968
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.75",1988411.62878437
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.75",2002204.13885954
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.75",2016140.05949374
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.75",2030247.92375379
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.75",2044532.0767452
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.75",2058993.44246574
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.75",2073633.51551232
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.75",2088482.17487569
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.75",2103519.48095031
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.75",2118768.3909513
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.75",2134217.29389565
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.75",2149900.46379763
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.75",2165781.65453245
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.75",2181859.60087381
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.75",2198200.87361848
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.75",2214748.89001696
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.75",2231558.89924451
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.75",2248553.07777905
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.75",2265819.74421492
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.75",2283295.76858546
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.75",2301013.76089487
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.75",2318970.33493902
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.75",2337171.91778575
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.75",2355640.9074646
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.75",2374322.02694588
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.75",2393337.89486107
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.8",1934616.70644182
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.8",1948243.74447645
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.8",1961932.49022104
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.8",1975708.01356859
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.8",1989609.52536038
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.8",2003658.2300538
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.8",2017865.62202163
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.8",2032261.92928165
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.8",2046851.58542009
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.8",2061639.94137545
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.8",2076627.57623476
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.8",2091845.3514978
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.8",2107290.5624094
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.8",2122973.36691419
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.8",2138882.75220435
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.8",2155068.95531893
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.8",2171483.80771012
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.8",2188120.00860353
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.8",2205074.88053707
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.8",2222249.94036517
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.8",2239728.16295298
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.8",2257427.30309592
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.8",2275448.74460063
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.8",2293721.65378975
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.8",2312273.2380883
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.8",2331110.28289305
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.8",2350228.73555873
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.8",2369669.86119786
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.8",2389343.5153726
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.8",2409425.51576213
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.85",1934900.56852383
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.85",1948821.0584831
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.85",1962807.7915764
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.85",1976881.68212755
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.85",1991089.82315418
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.85",2005448.20826946
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.85",2019984.00171442
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.85",2034724.24657778
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.85",2049680.10723348
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.85",2064849.42420074
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.85",2080251.29661855
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.85",2095918.53757845
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.85",2111850.07563847
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.85",2128048.70742686
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.85",2144528.54589615
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.85",2161296.31511575
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.85",2178339.63616798
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.85",2195645.51285843
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.85",2213293.05097127
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.85",2231211.00925927
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.85",2249474.47867421
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.85",2268024.76983825
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.85",2286927.43388629
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.85",2306144.7098389
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.85",2325677.07719895
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.85",2345557.76095136
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.85",2365758.47618836
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.85",2386346.41958303
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.85",2407235.14651388
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.85",2428597.50582556
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.9",1935289.59319816
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.9",1949591.91486157
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.9",1963968.08833079
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.9",1978438.68452397
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.9",1993050.53958449
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.9",2007824.82754483
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.9",2022793.68631773
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.9",2037993.47949124
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.9",2053434.02698228
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.9",2069118.19741711
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.9",2085071.68473541
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.9",2101314.65962389
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.9",2117873.23050239
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.9",2134747.02198978
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.9",2151929.67560603
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.9",2169430.11592938
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.9",2187284.81705802
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.9",2205432.7551496
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.9",2223962.37922353
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.9",2242840.9200922
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.9",2262106.04987128
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.9",2281728.26523901
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.9",2301761.43090577
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.9",2322177.59180044
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.9",2342988.69959133
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.9",2364200.37167513
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.9",2385800.03071938
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.9",2407845.77219109
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.9",2430285.3651677
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.9",2453285.12830647
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.95",1935896.56640832
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.95",1950821.07898976
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.95",1965842.44075686
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.95",1980979.71550462
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.95",1996264.01048986
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.95",2011725.94282461
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.95",2027397.81153795
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.95",2043349.86231152
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.95",2059570.3159392
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.95",2076066.19314424
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.95",2092871.84921543
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.95",2110047.22538313
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.95",2127577.35666315
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.95",2145470.76981104
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.95",2163737.9460015
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.95",2182376.59906583
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.95",2201465.6223241
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.95",2220949.83477826
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.95",2240880.56950935
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.95",2261229.86987476
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.95",2282056.34835965
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.95",2303327.76479
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.95",2325159.01961525
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.95",2347439.11801037
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.95",2370203.80593385
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.95",2393475.80950853
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.95",2417247.85617321
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.95",2441652.97230596
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.95",2466569.92662738
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.95",2492123.99672021
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.975",1936460.17257937
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.975",1951975.42761733
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.975",1967628.70842559
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.975",1983405.13852343
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.975",1999329.83851548
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.975",2015462.70139169
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.975",2031855.39807726
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.975",2048518.27720973
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.975",2065508.15206167
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.975",2082810.01315557
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.975",2100421.32625943
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.975",2118481.37617217
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.975",2136949.37442376
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.975",2155836.23420453
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.975",2175203.81227821
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.975",2195001.66234641
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.975",2215336.78154052
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.975",2236146.6192178
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.975",2257522.36140918
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.975",2279408.50202228
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.975",2301850.3364421
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.975",2324857.88815096
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.975",2348600.56022764
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.975",2372834.00761988
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.975",2397823.32669277
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.975",2423412.98056203
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.975",2449696.00271703
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.975",2476703.84378056
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.975",2504394.55983354
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.975",2532878.63881185
+2021-01-11,"1 day ahead cum case",2021-01-12,"GM","Germany","quantile","0.99",1937201.55806127
+2021-01-11,"2 day ahead cum case",2021-01-13,"GM","Germany","quantile","0.99",1953438.70685194
+2021-01-11,"3 day ahead cum case",2021-01-14,"GM","Germany","quantile","0.99",1969876.56772577
+2021-01-11,"4 day ahead cum case",2021-01-15,"GM","Germany","quantile","0.99",1986451.43386962
+2021-01-11,"5 day ahead cum case",2021-01-16,"GM","Germany","quantile","0.99",2003272.99695671
+2021-01-11,"6 day ahead cum case",2021-01-17,"GM","Germany","quantile","0.99",2020305.79778546
+2021-01-11,"7 day ahead cum case",2021-01-18,"GM","Germany","quantile","0.99",2037705.15568623
+2021-01-11,"8 day ahead cum case",2021-01-19,"GM","Germany","quantile","0.99",2055340.92758852
+2021-01-11,"9 day ahead cum case",2021-01-20,"GM","Germany","quantile","0.99",2073356.64706399
+2021-01-11,"10 day ahead cum case",2021-01-21,"GM","Germany","quantile","0.99",2091715.30297542
+2021-01-11,"11 day ahead cum case",2021-01-22,"GM","Germany","quantile","0.99",2110449.00221274
+2021-01-11,"12 day ahead cum case",2021-01-23,"GM","Germany","quantile","0.99",2129684.09760934
+2021-01-11,"13 day ahead cum case",2021-01-24,"GM","Germany","quantile","0.99",2149438.7079606
+2021-01-11,"14 day ahead cum case",2021-01-25,"GM","Germany","quantile","0.99",2169681.88889991
+2021-01-11,"15 day ahead cum case",2021-01-26,"GM","Germany","quantile","0.99",2190527.19030805
+2021-01-11,"16 day ahead cum case",2021-01-27,"GM","Germany","quantile","0.99",2211849.05847849
+2021-01-11,"17 day ahead cum case",2021-01-28,"GM","Germany","quantile","0.99",2233769.6724306
+2021-01-11,"18 day ahead cum case",2021-01-29,"GM","Germany","quantile","0.99",2256341.71165022
+2021-01-11,"19 day ahead cum case",2021-01-30,"GM","Germany","quantile","0.99",2279602.65959047
+2021-01-11,"20 day ahead cum case",2021-01-31,"GM","Germany","quantile","0.99",2303559.87381289
+2021-01-11,"21 day ahead cum case",2021-02-01,"GM","Germany","quantile","0.99",2328150.47719873
+2021-01-11,"22 day ahead cum case",2021-02-02,"GM","Germany","quantile","0.99",2353453.21179737
+2021-01-11,"23 day ahead cum case",2021-02-03,"GM","Germany","quantile","0.99",2379596.62178975
+2021-01-11,"24 day ahead cum case",2021-02-04,"GM","Germany","quantile","0.99",2406310.73905804
+2021-01-11,"25 day ahead cum case",2021-02-05,"GM","Germany","quantile","0.99",2434023.91602688
+2021-01-11,"26 day ahead cum case",2021-02-06,"GM","Germany","quantile","0.99",2462391.2296528
+2021-01-11,"27 day ahead cum case",2021-02-07,"GM","Germany","quantile","0.99",2491708.53373835
+2021-01-11,"28 day ahead cum case",2021-02-08,"GM","Germany","quantile","0.99",2521927.40250971
+2021-01-11,"29 day ahead cum case",2021-02-09,"GM","Germany","quantile","0.99",2553097.09191433
+2021-01-11,"30 day ahead cum case",2021-02-10,"GM","Germany","quantile","0.99",2585262.33521954
+2021-01-11,"-1 wk ahead inc case",2021-01-02,"GM","Germany","observed",NA,128248
+2021-01-11,"0 wk ahead inc case",2021-01-09,"GM","Germany","observed",NA,136230
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.01",124779.890934323
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.01",126273.812783449
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.01",127199.363627461
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.01",127549.938063005
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.025",127385.280300029
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.025",129797.758055945
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.025",131640.579009488
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.025",133337.631376309
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.05",129637.403534244
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.05",132883.404382461
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.05",135752.810340281
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.05",138879.819260431
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.1",132193.165158822
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.1",136569.98489137
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.1",140798.677081065
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.1",145324.70397827
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.15",133981.427086792
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.15",139140.282264711
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.15",144302.226115276
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.15",149813.46358829
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.2",135415.79412344
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.2",141200.328177572
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.2",147160.110999534
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.2",153421.14625873
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.25",136594.338795367
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.25",142985.241396288
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.25",149605.016214567
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.25",156577.007288241
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.3",137718.563219615
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.3",144645.671995108
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.3",151901.107782896
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.3",159584.036237672
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.35",138751.423873784
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.35",146136.028730496
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.35",154039.687741814
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.35",162410.333897877
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.4",139741.530559587
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.4",147567.440019694
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.4",156069.839157609
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.4",165081.843699219
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.45",140682.948302601
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.45",148974.022050578
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.45",158049.53836461
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.45",167824.605174629
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","point",NA,141624.926186796
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","point",NA,150369.128518489
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","point",NA,160054.392073237
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","point",NA,170501.884972755
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.55",142570.67913216
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.55",151781.250251041
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.55",162056.432072642
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.55",173263.687866486
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.6",143535.571776514
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.6",153219.484700341
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.6",164106.26501967
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.6",176048.549221022
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.65",144548.050354233
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.65",154708.661073115
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.65",166252.728705068
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.65",178997.119180953
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.7",145625.274553515
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.7",156316.638596987
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.7",168564.116155798
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.7",182142.421337189
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.75",146756.081677737
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.75",158080.447166954
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.75",171098.939764504
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.75",185610.822505325
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.8",148076.286576361
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.8",160046.347667289
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.8",173975.477543781
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.8",189562.692455413
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.85",149584.149598893
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.85",162381.530864704
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.85",177465.135745831
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.85",194292.334803601
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.9",151535.37500354
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.9",165338.038292388
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.9",181739.126731406
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.9",200272.856083807
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.95",154455.38884643
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.95",169806.978015436
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.95",188379.295425472
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.95",209556.047219659
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.975",157120.53380369
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.975",173848.632476877
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.975",194334.077907514
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.975",217882.808894374
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.99",160255.636966576
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.99",178412.524490499
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.99",201474.441972717
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.99",228339.135631669
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM","Germany","quantile","0.5",141624.926186796
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM","Germany","quantile","0.5",150369.128518489
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM","Germany","quantile","0.5",160054.392073237
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM","Germany","quantile","0.5",170501.884972755
+2021-01-11,"-1 wk ahead cum case",2021-01-02,"GM","Germany","observed",NA,1755351
+2021-01-11,"0 wk ahead cum case",2021-01-09,"GM","Germany","observed",NA,1891581
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","point",NA,1983870.66747981
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","point",NA,2075442.93775542
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","point",NA,2171953.11885531
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","point",NA,2273132.3344018
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.01",1969432.13439028
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.01",2034312.53457331
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.01",2094639.00124918
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.01",2150057.22536052
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.025",1971701.97581858
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.025",2040336.60344276
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.025",2105554.87931488
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.025",2166669.44715664
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.05",1973684.2048329
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.05",2045637.96578641
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.05",2115113.81107845
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.05",2181397.19500908
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.1",1975929.911281
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.1",2051900.59600265
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.1",2126488.63417111
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.1",2199072.37233842
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.15",1977428.40490484
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.15",2056212.71563687
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.15",2134443.14472792
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.15",2211589.10738805
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.2",1978617.99965638
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.2",2059735.38745385
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.2",2141054.9683786
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.2",2221999.41330231
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.25",1979645.96906448
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.25",2062808.01174688
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.25",2146932.48443333
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.25",2231336.79527978
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.3",1980576.18459616
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.3",2065617.98661999
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.3",2152355.05544757
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.3",2240128.03837436
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.35",1981439.64386079
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.35",2068223.68898888
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.35",2157506.90354979
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.35",2248598.84314438
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.4",1982265.0350807
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.4",2070693.11074682
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.4",2162416.1671687
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.4",2256864.15340846
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.45",1983077.63386395
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.45",2073091.8475695
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.45",2167224.66041294
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.45",2265010.87761399
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.5",1983870.66747981
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.5",2075442.93775542
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.5",2171953.11885531
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.5",2273132.3344018
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.55",1984681.58656966
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.55",2077823.13959811
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.55",2176725.72841939
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.55",2281399.5361979
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.6",1985518.89216254
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.6",2080256.76585831
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.6",2181605.79619797
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.6",2289889.79319843
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.65",1986403.80786208
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.65",2082786.12074194
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.65",2186687.62363848
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.65",2298754.03910563
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.7",1987351.59935251
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.7",2085492.80897972
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.7",2192155.52149063
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.7",2308303.35618814
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.75",1988411.62878437
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.75",2088482.17487569
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.75",2198200.87361848
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.75",2318970.33493902
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.8",1989609.52536038
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.8",2091845.3514978
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.8",2205074.88053707
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.8",2331110.28289305
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.85",1991089.82315418
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.85",2095918.53757845
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.85",2213293.05097127
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.85",2345557.76095136
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.9",1993050.53958449
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.9",2101314.65962389
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.9",2223962.37922353
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.9",2364200.37167513
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.95",1996264.01048986
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.95",2110047.22538313
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.95",2240880.56950935
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.95",2393475.80950853
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.975",1999329.83851548
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.975",2118481.37617217
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.975",2257522.36140918
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.975",2423412.98056203
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM","Germany","quantile","0.99",2003272.99695671
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM","Germany","quantile","0.99",2129684.09760934
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM","Germany","quantile","0.99",2279602.65959047
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM","Germany","quantile","0.99",2462391.2296528
+2021-01-11,"-1 wk ahead inc case",2021-01-02,"GM13","Free State of Saxony","observed",NA,15971
+2021-01-11,"0 wk ahead inc case",2021-01-09,"GM13","Free State of Saxony","observed",NA,15428
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.01",10732.9449440141
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.01",7906.32646143027
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.01",5795.28580045063
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.01",4239.4779670485
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.025",10899.0397321113
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.025",8076.19347943986
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.025",5953.94583902144
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.025",4387.75147438691
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.05",11044.5024936578
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.05",8224.08365816733
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.05",6096.01239955194
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.05",4515.33249241169
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.1",11212.8366976781
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.1",8390.57325572058
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.1",6260.9261095622
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.1",4664.20030272792
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.15",11327.0434927375
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.15",8509.42698181224
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.15",6371.86575299936
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.15",4768.74687525465
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.2",11416.6719794963
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.2",8599.26532317486
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.2",6460.1062967826
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.2",4850.18660389337
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.25",11495.6197816818
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.25",8680.08596379272
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.25",6539.13285097889
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.25",4923.58692315787
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.3",11565.4654412414
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.3",8750.76350109378
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.3",6611.57720858339
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.3",4988.09651214078
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.35",11629.3994808855
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.35",8818.41115240826
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.35",6677.76347521499
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.35",5049.34124983499
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.4",11691.4039536214
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.4",8883.70589608381
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.4",6740.59018507537
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.4",5108.70889904981
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.45",11750.771251184
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.45",8946.62886715209
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.45",6800.41397622221
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.45",5165.95641684461
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","point",NA,11810.9434416855
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","point",NA,9008.32744963277
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","point",NA,6861.71708964232
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","point",NA,5223.09707485643
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.55",11871.400394238
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.55",9071.46729268418
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.55",6923.10962406931
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.55",5282.17271097508
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.6",11933.4380218338
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.6",9135.35139314704
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.6",6986.42161853615
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.6",5341.02113084383
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.65",11998.2968369321
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.65",9199.89624837182
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.65",7052.17914209919
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.65",5402.97395329624
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.7",12064.8972879025
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.7",9269.2343534048
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.7",7120.48369159859
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.7",5468.85080101174
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.75",12139.709655194
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.75",9344.81090515212
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.75",7196.79647599648
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.75",5540.12735455306
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.8",12218.9169434838
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.8",9432.36808165527
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.8",7279.78599554564
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.8",5621.45511518008
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.85",12314.1496225794
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.85",9531.94258764753
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.85",7380.12320685232
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.85",5717.88273799979
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.9",12436.4388375998
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.9",9659.25238768415
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.9",7511.42131285086
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.9",5841.75247217873
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.95",12616.7529374339
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.95",9852.35964878435
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.95",7712.46031175858
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.95",6028.63801145147
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.975",12775.3176176117
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.975",10032.0623092903
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.975",7885.72642533539
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.975",6201.29856427501
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.99",12964.3569548609
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.99",10222.7926457572
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.99",8090.37792829827
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.99",6400.48506917097
+2021-01-11,"1 wk ahead inc case",2021-01-16,"GM13","Free State of Saxony","quantile","0.5",11810.9434416855
+2021-01-11,"2 wk ahead inc case",2021-01-23,"GM13","Free State of Saxony","quantile","0.5",9008.32744963277
+2021-01-11,"3 wk ahead inc case",2021-01-30,"GM13","Free State of Saxony","quantile","0.5",6861.71708964232
+2021-01-11,"4 wk ahead inc case",2021-02-06,"GM13","Free State of Saxony","quantile","0.5",5223.09707485643
+2021-01-11,"-1 wk ahead cum case",2021-01-02,"GM13","Free State of Saxony","observed",NA,137072
+2021-01-11,"0 wk ahead cum case",2021-01-09,"GM13","Free State of Saxony","observed",NA,152500
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","point",NA,160619.240637101
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","point",NA,166131.065403141
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","point",NA,170325.386769314
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","point",NA,173508.090826526
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.01",159722.271365091
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.01",163955.342376199
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.01",166882.123722789
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.01",168890.849732293
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.025",159860.394747175
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.025",164281.323767666
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.025",167385.40983593
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.025",169545.951738372
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.05",159980.993553254
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.05",164570.139672084
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.05",167832.674894791
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.05",170131.780656197
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.1",160119.840096036
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.1",164907.3388457
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.1",168360.990404924
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.1",170832.637628218
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.15",160213.783908452
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.15",165136.797056295
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.15",168725.429451779
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.15",171320.962843235
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.2",160288.741743727
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.2",165320.267162375
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.2",169019.062879345
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.2",171718.033785462
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.25",160353.315399205
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.25",165479.575663743
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.25",169274.20735024
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.25",172064.756462027
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.3",160412.114614127
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.3",165623.201975123
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.3",169504.512640966
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.3",172379.734678987
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.35",160466.83956454
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.35",165757.319359007
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.35",169720.329199415
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.35",172676.211164733
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.4",160518.83248684
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.4",165884.503074768
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.4",169925.64579758
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.4",172958.454306477
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.45",160569.443733158
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.45",166008.559054596
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.45",170126.697964461
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.45",173234.91913272
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.5",160619.240637101
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.5",166131.065403141
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.5",170325.386769314
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.5",173508.090826526
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.55",160669.431449076
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.55",166254.712174486
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.55",170524.930789948
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.55",173782.239291222
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.6",160720.930226297
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.6",166380.631801524
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.6",170728.57129336
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.6",174062.594960699
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.65",160774.046435519
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.65",166511.845790563
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.65",170940.773840524
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.65",174354.852431734
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.7",160830.39396848
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.7",166650.670190133
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.7",171165.31431373
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.7",174664.431633271
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.75",160892.551624523
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.75",166803.117769066
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.75",171412.130364059
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.75",175005.550464502
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.8",160962.261235241
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.8",166975.40942788
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.8",171692.175605046
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.8",175391.528531061
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.85",161044.358160042
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.85",167179.001486993
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.85",172023.045782694
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.85",175850.207102154
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.9",161149.190621552
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.9",167440.406184614
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.9",172448.565537442
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.9",176442.234183921
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.95",161307.959094637
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.95",167838.214390772
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.95",173103.365791668
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.95",177362.499230399
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.975",161451.91315301
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.975",168202.81663827
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.975",173709.592209163
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.975",178219.733680139
+2021-01-11,"1 wk ahead cum case",2021-01-16,"GM13","Free State of Saxony","quantile","0.99",161623.25223827
+2021-01-11,"2 wk ahead cum case",2021-01-23,"GM13","Free State of Saxony","quantile","0.99",168648.230376718
+2021-01-11,"3 wk ahead cum case",2021-01-30,"GM13","Free State of Saxony","quantile","0.99",174462.781263591
+2021-01-11,"4 wk ahead cum case",2021-02-06,"GM13","Free State of Saxony","quantile","0.99",179305.46599866
