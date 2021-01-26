@@ -26,9 +26,11 @@ def get_relevant_dates(dates):
 
 path = Path('../../data-processed')
 
-models = [f.name for f in path.iterdir() if not f.name.endswith('.csv')]
-
 forecasts_to_exclude = pd.read_csv('../data/forecasts_to_exclude.csv').filename.to_list()
+models_to_exclude = pd.read_csv('../data/models_to_exclude.csv').model.to_list()
+
+models = [f.name for f in path.iterdir() if not f.name.endswith('.csv')]
+models = [m for m in models if m not in models_to_exclude]
 
 VALID_TARGETS = [f"{_} wk ahead inc death" for _ in range(-1, 5)] + \
                 [f"{_} wk ahead cum death" for _ in range(-1, 5)] + \
