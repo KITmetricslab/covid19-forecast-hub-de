@@ -1,0 +1,22 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2021-01-17,"6 day ahead inc death",2021-01-23,"GM","Germany","point",NA,978.88811342312
+2021-01-17,"5 day ahead inc death",2021-01-22,"GM","Germany","point",NA,963.763584753506
+2021-01-17,"4 day ahead inc death",2021-01-21,"GM","Germany","point",NA,948.639056083884
+2021-01-17,"3 day ahead inc death",2021-01-20,"GM","Germany","point",NA,933.514527414271
+2021-01-17,"2 day ahead inc death",2021-01-19,"GM","Germany","point",NA,918.389998744649
+2021-01-17,"1 day ahead inc death",2021-01-18,"GM","Germany","point",NA,903.265470075035
+2021-01-17,"0 day ahead inc death",2021-01-17,"GM","Germany","observed",NA,888.140941405414
+2021-01-17,"-1 day ahead inc death",2021-01-16,"GM","Germany","observed",NA,759
+2021-01-17,"6 day ahead cum death",2021-01-23,"GM","Germany","point",NA,52998.6016918999
+2021-01-17,"5 day ahead cum death",2021-01-22,"GM","Germany","point",NA,52019.7135784768
+2021-01-17,"4 day ahead cum death",2021-01-21,"GM","Germany","point",NA,51055.9499937233
+2021-01-17,"3 day ahead cum death",2021-01-20,"GM","Germany","point",NA,50107.3109376394
+2021-01-17,"2 day ahead cum death",2021-01-19,"GM","Germany","point",NA,49173.7964102251
+2021-01-17,"1 day ahead cum death",2021-01-18,"GM","Germany","point",NA,48255.4064114804
+2021-01-17,"0 day ahead cum death",2021-01-17,"GM","Germany","observed",NA,47352.1409414054
+2021-01-17,"-1 day ahead cum death",2021-01-16,"GM","Germany","observed",NA,46464
+2021-01-17,"0 wk ahead inc death",2021-01-16,"GM","Germany","observed",NA,5867
+2021-01-17,"1 wk ahead inc death",2021-01-23,"GM","Germany","point",NA,6534.60169189988
+2021-01-17,"-1 wk ahead cum death",2021-01-09,"GM","Germany","observed",NA,40597
+2021-01-17,"0 wk ahead cum death",2021-01-16,"GM","Germany","observed",NA,46464
+2021-01-17,"1 wk ahead cum death",2021-01-23,"GM","Germany","point",NA,52998.6016918999

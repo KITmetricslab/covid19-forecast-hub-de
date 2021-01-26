@@ -40,6 +40,7 @@ jobs:
       env:
         AUTH: ${{ secrets.GITHUBTOKEN }}
       run: | 
+        # check out dummy branch
         git checkout LANL_actions
         python3 code/auto_download/auto-download-lanl-covid19.py
         cd ./data-raw/LANL
