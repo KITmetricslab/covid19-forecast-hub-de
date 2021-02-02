@@ -1,0 +1,22 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2021-01-31,"6 day ahead inc case",2021-02-06,"PL","Poland","point",NA,4198.20114693465
+2021-01-31,"5 day ahead inc case",2021-02-05,"PL","Poland","point",NA,4292.51755609224
+2021-01-31,"4 day ahead inc case",2021-02-04,"PL","Poland","point",NA,4388.95236461353
+2021-01-31,"3 day ahead inc case",2021-02-03,"PL","Poland","point",NA,4487.55315293395
+2021-01-31,"2 day ahead inc case",2021-02-02,"PL","Poland","point",NA,4588.36857017293
+2021-01-31,"1 day ahead inc case",2021-02-01,"PL","Poland","point",NA,4691.44835813576
+2021-01-31,"0 day ahead inc case",2021-01-31,"PL","Poland","observed",NA,4796.84337585745
+2021-01-31,"-1 day ahead inc case",2021-01-30,"PL","Poland","observed",NA,5864
+2021-01-31,"6 day ahead cum case",2021-02-06,"PL","Poland","point",NA,1540117.88452474
+2021-01-31,"5 day ahead cum case",2021-02-05,"PL","Poland","point",NA,1535919.68337781
+2021-01-31,"4 day ahead cum case",2021-02-04,"PL","Poland","point",NA,1531627.16582171
+2021-01-31,"3 day ahead cum case",2021-02-03,"PL","Poland","point",NA,1527238.2134571
+2021-01-31,"2 day ahead cum case",2021-02-02,"PL","Poland","point",NA,1522750.66030417
+2021-01-31,"1 day ahead cum case",2021-02-01,"PL","Poland","point",NA,1518162.29173399
+2021-01-31,"0 day ahead cum case",2021-01-31,"PL","Poland","observed",NA,1513470.84337586
+2021-01-31,"-1 day ahead cum case",2021-01-30,"PL","Poland","observed",NA,1508674
+2021-01-31,"0 wk ahead inc case",2021-01-30,"PL","Poland","observed",NA,37795
+2021-01-31,"1 wk ahead inc case",2021-02-06,"PL","Poland","point",NA,31443.8845247405
+2021-01-31,"-1 wk ahead cum case",2021-01-23,"PL","Poland","observed",NA,1470879
+2021-01-31,"0 wk ahead cum case",2021-01-30,"PL","Poland","observed",NA,1508674
+2021-01-31,"1 wk ahead cum case",2021-02-06,"PL","Poland","point",NA,1540117.88452474
