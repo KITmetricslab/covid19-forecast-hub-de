@@ -38,6 +38,7 @@ dates_processed <- unlist(lapply(filenames_processed, FUN = function(x) substr(b
 
 for(country in c("Germany","Poland"))
 {
+  # print(country)
   #check for IHME first forecast date
   list_forecast<-list()
   for (i in 1:length(filepaths))
@@ -64,20 +65,25 @@ for(country in c("Germany","Poland"))
   # filepaths<-filepaths[real_vs_reported[keep_report,2]>as.Date("2020-07-01")]
   # forecast_dates<-real_vs_reported[keep_report & real_vs_reported[,2]>as.Date("2020-07-01"),]
   
-  filepaths <- filepaths[keep_report & keep_date]
-  forecast_dates <- real_vs_reported[keep_report & keep_date,]
-  # print(c("Generating forecasts for the following dates:", forecast_dates[,1]))
+  filepaths_to_process <- filepaths[keep_report & keep_date]
+  # forecast_dates <- real_vs_reported[keep_report & keep_date,]
+  forecast_dates <- real_vs_reported[keep_report & keep_date,1]
   
+  print(paste0("Generating ", country, " forecasts for the following dates:", forecast_dates))
+  # stop()
   
-  for (i in 1:length(filepaths)) {
+  for (i in 1:length(filepaths_to_process)) {
     #changed submission date to real forecast date, to change back, change to [i,1] in submission_date=forecast_dates[i,2]
     #Update 10.08: Set forecast date to submission date for consistency reasons, i.e. forecast_date=forecast_dates[i,1] instead of [i,2]
     # Sometimes, values that are actually forecasts will be labeled as observations now
     # Idea is the assumptions that submission should be on same day as forecast generation 
-    formatted_file <- make_qntl_dat(path=filepaths[i],forecast_date=forecast_dates[i,1],
-                                    submission_date=forecast_dates[i,1],country=country) 
     
-    date <- get_date(filepaths[i])
+    # formatted_file <- make_qntl_dat(path=filepaths_to_process[i],forecast_date=forecast_dates[i,1],
+    #                                 submission_date=forecast_dates[i,1],country=country) 
+    formatted_file <- make_qntl_dat(path=filepaths_to_process[i],forecast_date=forecast_dates[i],
+                                    submission_date=forecast_dates[i],country=country)
+    
+    date <- get_date(filepaths_to_process[i])
     #date<-forecast_dates[i,2]
     
     write_csv(

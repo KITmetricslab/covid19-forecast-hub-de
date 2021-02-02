@@ -24,7 +24,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 10,2020,2020-03-07,GM11,Brandenburg State,0.0,0,2.0,2
 10,2020,2020-03-07,GM12,Mecklenburg-Western Pomerania State,0.0,0,4.0,4
 10,2020,2020-03-07,GM13,Free State of Saxony,0.0,0,4.0,4
-10,2020,2020-03-07,GM15,Free State of Thüringia,0.0,0,2.0,2
+10,2020,2020-03-07,GM15,Free State of Thuringia,0.0,0,2.0,2
 10,2020,2020-03-07,GM16,Berlin State,0.0,0,27.0,27
 11,2020,2020-03-14,GM,Germany,8.0,8,3776.0,2995
 11,2020,2020-03-14,GM01,Baden-Württemberg State,2.0,2,562.0,395
@@ -41,7 +41,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 11,2020,2020-03-14,GM12,Mecklenburg-Western Pomerania State,0.0,0,42.0,38
 11,2020,2020-03-14,GM13,Free State of Saxony,0.0,0,92.0,88
 11,2020,2020-03-14,GM14,Sachsen-Anhalt State,0.0,0,44.0,44
-11,2020,2020-03-14,GM15,Free State of Thüringia,0.0,0,45.0,43
+11,2020,2020-03-14,GM15,Free State of Thuringia,0.0,0,45.0,43
 11,2020,2020-03-14,GM16,Berlin State,0.0,0,214.0,187
 12,2020,2020-03-21,GM,Germany,47.0,39,16625.0,12849
 12,2020,2020-03-21,GM01,Baden-Württemberg State,16.0,14,3628.0,3066
@@ -58,7 +58,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 12,2020,2020-03-21,GM12,Mecklenburg-Western Pomerania State,0.0,0,167.0,125
 12,2020,2020-03-21,GM13,Free State of Saxony,0.0,0,564.0,472
 12,2020,2020-03-21,GM14,Sachsen-Anhalt State,1.0,1,205.0,161
-12,2020,2020-03-21,GM15,Free State of Thüringia,0.0,0,188.0,143
+12,2020,2020-03-21,GM15,Free State of Thuringia,0.0,0,188.0,143
 12,2020,2020-03-21,GM16,Berlin State,1.0,1,862.0,648
 13,2020,2020-03-28,GM,Germany,325.0,278,48507.0,31882
 13,2020,2020-03-28,GM01,Baden-Württemberg State,101.0,85,9675.0,6047
@@ -75,7 +75,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 13,2020,2020-03-28,GM12,Mecklenburg-Western Pomerania State,0.0,0,308.0,141
 13,2020,2020-03-28,GM13,Free State of Saxony,9.0,9,1426.0,862
 13,2020,2020-03-28,GM14,Sachsen-Anhalt State,2.0,1,473.0,268
-13,2020,2020-03-28,GM15,Free State of Thüringia,5.0,5,582.0,394
+13,2020,2020-03-28,GM15,Free State of Thuringia,5.0,5,582.0,394
 13,2020,2020-03-28,GM16,Berlin State,8.0,7,2154.0,1292
 14,2020,2020-04-04,GM,Germany,1158.0,833,85778.0,37271
 14,2020,2020-04-04,GM01,Baden-Württemberg State,316.0,215,17014.0,7339
@@ -92,7 +92,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 14,2020,2020-04-04,GM12,Mecklenburg-Western Pomerania State,5.0,5,501.0,193
 14,2020,2020-04-04,GM13,Free State of Saxony,24.0,15,2591.0,1165
 14,2020,2020-04-04,GM14,Sachsen-Anhalt State,11.0,9,896.0,423
-14,2020,2020-04-04,GM15,Free State of Thüringia,10.0,5,1072.0,490
+14,2020,2020-04-04,GM15,Free State of Thuringia,10.0,5,1072.0,490
 14,2020,2020-04-04,GM16,Berlin State,22.0,14,3471.0,1317
 15,2020,2020-04-11,GM,Germany,2544.0,1386,117658.0,31880
 15,2020,2020-04-11,GM01,Baden-Württemberg State,622.0,306,23617.0,6603
@@ -109,7 +109,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 15,2020,2020-04-11,GM12,Mecklenburg-Western Pomerania State,11.0,6,601.0,100
 15,2020,2020-04-11,GM13,Free State of Saxony,65.0,41,3565.0,974
 15,2020,2020-04-11,GM14,Sachsen-Anhalt State,18.0,7,1135.0,239
-15,2020,2020-04-11,GM15,Free State of Thüringia,25.0,15,1435.0,363
+15,2020,2020-04-11,GM15,Free State of Thuringia,25.0,15,1435.0,363
 15,2020,2020-04-11,GM16,Berlin State,46.0,24,4458.0,987
 16,2020,2020-04-18,GM,Germany,4110.0,1566,137439.0,19781
 16,2020,2020-04-18,GM01,Baden-Württemberg State,919.0,297,27258.0,3641
@@ -126,7 +126,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 16,2020,2020-04-18,GM12,Mecklenburg-Western Pomerania State,14.0,3,645.0,44
 16,2020,2020-04-18,GM13,Free State of Saxony,103.0,38,4140.0,575
 16,2020,2020-04-18,GM14,Sachsen-Anhalt State,29.0,11,1315.0,180
-16,2020,2020-04-18,GM15,Free State of Thüringia,50.0,25,1717.0,282
+16,2020,2020-04-18,GM15,Free State of Thuringia,50.0,25,1717.0,282
 16,2020,2020-04-18,GM16,Berlin State,91.0,45,5066.0,608
 17,2020,2020-04-25,GM,Germany,5500.0,1390,152438.0,14999
 17,2020,2020-04-25,GM01,Baden-Württemberg State,1189.0,270,30169.0,2911
@@ -143,7 +143,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 17,2020,2020-04-25,GM12,Mecklenburg-Western Pomerania State,16.0,2,667.0,22
 17,2020,2020-04-25,GM13,Free State of Saxony,141.0,38,4406.0,266
 17,2020,2020-04-25,GM14,Sachsen-Anhalt State,35.0,6,1480.0,165
-17,2020,2020-04-25,GM15,Free State of Thüringia,71.0,21,2058.0,341
+17,2020,2020-04-25,GM15,Free State of Thuringia,71.0,21,2058.0,341
 17,2020,2020-04-25,GM16,Berlin State,113.0,22,5525.0,459
 18,2020,2020-05-02,GM,Germany,6575.0,1075,161703.0,9265
 18,2020,2020-05-02,GM01,Baden-Württemberg State,1402.0,213,32146.0,1977
@@ -160,7 +160,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 18,2020,2020-05-02,GM12,Mecklenburg-Western Pomerania State,18.0,2,695.0,28
 18,2020,2020-05-02,GM13,Free State of Saxony,163.0,22,4617.0,211
 18,2020,2020-05-02,GM14,Sachsen-Anhalt State,44.0,9,1571.0,91
-18,2020,2020-05-02,GM15,Free State of Thüringia,93.0,22,2335.0,277
+18,2020,2020-05-02,GM15,Free State of Thuringia,93.0,22,2335.0,277
 18,2020,2020-05-02,GM16,Berlin State,152.0,39,5943.0,418
 19,2020,2020-05-09,GM,Germany,7369.0,794,168551.0,6848
 19,2020,2020-05-09,GM01,Baden-Württemberg State,1534.0,132,33105.0,959
@@ -177,7 +177,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 19,2020,2020-05-09,GM12,Mecklenburg-Western Pomerania State,19.0,1,722.0,27
 19,2020,2020-05-09,GM13,Free State of Saxony,186.0,23,4873.0,256
 19,2020,2020-05-09,GM14,Sachsen-Anhalt State,48.0,4,1637.0,66
-19,2020,2020-05-09,GM15,Free State of Thüringia,115.0,22,2533.0,198
+19,2020,2020-05-09,GM15,Free State of Thuringia,115.0,22,2533.0,198
 19,2020,2020-05-09,GM16,Berlin State,164.0,12,6242.0,299
 20,2020,2020-05-16,GM,Germany,7881.0,512,173772.0,5221
 20,2020,2020-05-16,GM01,Baden-Württemberg State,1644.0,110,33893.0,788
@@ -194,7 +194,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 20,2020,2020-05-16,GM12,Mecklenburg-Western Pomerania State,20.0,1,746.0,24
 20,2020,2020-05-16,GM13,Free State of Saxony,197.0,11,5089.0,216
 20,2020,2020-05-16,GM14,Sachsen-Anhalt State,54.0,6,1676.0,39
-20,2020,2020-05-16,GM15,Free State of Thüringia,137.0,22,2711.0,178
+20,2020,2020-05-16,GM15,Free State of Thuringia,137.0,22,2711.0,178
 20,2020,2020-05-16,GM16,Berlin State,181.0,17,6428.0,186
 21,2020,2020-05-23,GM,Germany,8216.0,335,177850.0,4078
 21,2020,2020-05-23,GM01,Baden-Württemberg State,1692.0,48,34345.0,452
@@ -211,7 +211,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 21,2020,2020-05-23,GM12,Mecklenburg-Western Pomerania State,20.0,0,763.0,17
 21,2020,2020-05-23,GM13,Free State of Saxony,204.0,7,5219.0,130
 21,2020,2020-05-23,GM14,Sachsen-Anhalt State,54.0,0,1692.0,16
-21,2020,2020-05-23,GM15,Free State of Thüringia,151.0,14,2830.0,119
+21,2020,2020-05-23,GM15,Free State of Thuringia,151.0,14,2830.0,119
 21,2020,2020-05-23,GM16,Berlin State,190.0,9,6614.0,186
 22,2020,2020-05-30,GM,Germany,8489.0,273,181196.0,3346
 22,2020,2020-05-30,GM01,Baden-Württemberg State,1748.0,56,34718.0,373
@@ -228,7 +228,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 22,2020,2020-05-30,GM12,Mecklenburg-Western Pomerania State,20.0,0,760.0,-3
 22,2020,2020-05-30,GM13,Free State of Saxony,213.0,9,5297.0,78
 22,2020,2020-05-30,GM14,Sachsen-Anhalt State,55.0,1,1701.0,9
-22,2020,2020-05-30,GM15,Free State of Thüringia,161.0,10,2974.0,144
+22,2020,2020-05-30,GM15,Free State of Thuringia,161.0,10,2974.0,144
 22,2020,2020-05-30,GM16,Berlin State,197.0,7,6767.0,153
 23,2020,2020-06-06,GM,Germany,8646.0,157,183678.0,2482
 23,2020,2020-06-06,GM01,Baden-Württemberg State,1790.0,42,34898.0,180
@@ -245,7 +245,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 23,2020,2020-06-06,GM12,Mecklenburg-Western Pomerania State,20.0,0,766.0,6
 23,2020,2020-06-06,GM13,Free State of Saxony,212.0,-1,5321.0,24
 23,2020,2020-06-06,GM14,Sachsen-Anhalt State,55.0,0,1717.0,16
-23,2020,2020-06-06,GM15,Free State of Thüringia,170.0,9,3066.0,92
+23,2020,2020-06-06,GM15,Free State of Thuringia,170.0,9,3066.0,92
 23,2020,2020-06-06,GM16,Berlin State,201.0,4,6964.0,197
 24,2020,2020-06-13,GM,Germany,8781.0,135,186022.0,2344
 24,2020,2020-06-13,GM01,Baden-Württemberg State,1805.0,15,35090.0,192
@@ -262,7 +262,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 24,2020,2020-06-13,GM12,Mecklenburg-Western Pomerania State,20.0,0,781.0,15
 24,2020,2020-06-13,GM13,Free State of Saxony,219.0,7,5345.0,24
 24,2020,2020-06-13,GM14,Sachsen-Anhalt State,56.0,1,1734.0,17
-24,2020,2020-06-13,GM15,Free State of Thüringia,174.0,4,3154.0,88
+24,2020,2020-06-13,GM15,Free State of Thuringia,174.0,4,3154.0,88
 24,2020,2020-06-13,GM16,Berlin State,208.0,7,7252.0,288
 25,2020,2020-06-20,GM,Germany,8883.0,102,189135.0,3113
 25,2020,2020-06-20,GM01,Baden-Württemberg State,1824.0,19,35272.0,182
@@ -279,7 +279,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 25,2020,2020-06-20,GM12,Mecklenburg-Western Pomerania State,20.0,0,791.0,10
 25,2020,2020-06-20,GM13,Free State of Saxony,221.0,2,5408.0,63
 25,2020,2020-06-20,GM14,Sachsen-Anhalt State,57.0,1,1839.0,105
-25,2020,2020-06-20,GM15,Free State of Thüringia,178.0,4,3210.0,56
+25,2020,2020-06-20,GM15,Free State of Thuringia,178.0,4,3210.0,56
 25,2020,2020-06-20,GM16,Berlin State,211.0,3,7733.0,481
 26,2020,2020-06-27,GM,Germany,8954.0,71,193243.0,4108
 26,2020,2020-06-27,GM01,Baden-Württemberg State,1829.0,5,35530.0,258
@@ -296,7 +296,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 26,2020,2020-06-27,GM12,Mecklenburg-Western Pomerania State,20.0,0,798.0,7
 26,2020,2020-06-27,GM13,Free State of Saxony,222.0,1,5444.0,36
 26,2020,2020-06-27,GM14,Sachsen-Anhalt State,58.0,1,1865.0,26
-26,2020,2020-06-27,GM15,Free State of Thüringia,181.0,3,3248.0,38
+26,2020,2020-06-27,GM15,Free State of Thuringia,181.0,3,3248.0,38
 26,2020,2020-06-27,GM16,Berlin State,213.0,2,8145.0,412
 27,2020,2020-07-04,GM,Germany,9010.0,56,196096.0,2853
 27,2020,2020-07-04,GM01,Baden-Württemberg State,1837.0,8,35807.0,277
@@ -313,7 +313,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 27,2020,2020-07-04,GM12,Mecklenburg-Western Pomerania State,20.0,0,804.0,6
 27,2020,2020-07-04,GM13,Free State of Saxony,224.0,2,5458.0,14
 27,2020,2020-07-04,GM14,Sachsen-Anhalt State,59.0,1,1880.0,15
-27,2020,2020-07-04,GM15,Free State of Thüringia,181.0,0,3267.0,19
+27,2020,2020-07-04,GM15,Free State of Thuringia,181.0,0,3267.0,19
 27,2020,2020-07-04,GM16,Berlin State,214.0,1,8393.0,248
 28,2020,2020-07-11,GM,Germany,9060.0,50,198556.0,2460
 28,2020,2020-07-11,GM01,Baden-Württemberg State,1837.0,0,36041.0,234
@@ -330,7 +330,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 28,2020,2020-07-11,GM12,Mecklenburg-Western Pomerania State,20.0,0,804.0,0
 28,2020,2020-07-11,GM13,Free State of Saxony,225.0,1,5473.0,15
 28,2020,2020-07-11,GM14,Sachsen-Anhalt State,61.0,2,1907.0,27
-28,2020,2020-07-11,GM15,Free State of Thüringia,182.0,1,3289.0,22
+28,2020,2020-07-11,GM15,Free State of Thuringia,182.0,1,3289.0,22
 28,2020,2020-07-11,GM16,Berlin State,216.0,2,8617.0,224
 29,2020,2020-07-18,GM,Germany,9083.0,23,201372.0,2816
 29,2020,2020-07-18,GM01,Baden-Württemberg State,1838.0,1,36342.0,301
@@ -347,7 +347,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 29,2020,2020-07-18,GM12,Mecklenburg-Western Pomerania State,20.0,0,806.0,2
 29,2020,2020-07-18,GM13,Free State of Saxony,225.0,0,5488.0,15
 29,2020,2020-07-18,GM14,Sachsen-Anhalt State,62.0,1,1939.0,32
-29,2020,2020-07-18,GM15,Free State of Thüringia,182.0,0,3320.0,31
+29,2020,2020-07-18,GM15,Free State of Thuringia,182.0,0,3320.0,31
 29,2020,2020-07-18,GM16,Berlin State,221.0,5,8748.0,131
 30,2020,2020-07-25,GM,Germany,9118.0,35,204964.0,3592
 30,2020,2020-07-25,GM01,Baden-Württemberg State,1841.0,3,36819.0,477
@@ -364,7 +364,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 30,2020,2020-07-25,GM12,Mecklenburg-Western Pomerania State,20.0,0,843.0,37
 30,2020,2020-07-25,GM13,Free State of Saxony,225.0,0,5512.0,24
 30,2020,2020-07-25,GM14,Sachsen-Anhalt State,63.0,1,1979.0,40
-30,2020,2020-07-25,GM15,Free State of Thüringia,182.0,0,3340.0,20
+30,2020,2020-07-25,GM15,Free State of Thuringia,182.0,0,3340.0,20
 30,2020,2020-07-25,GM16,Berlin State,223.0,2,8957.0,209
 31,2020,2020-08-01,GM,Germany,9148.0,30,209653.0,4689
 31,2020,2020-08-01,GM01,Baden-Württemberg State,1847.0,6,37272.0,453
@@ -381,7 +381,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 31,2020,2020-08-01,GM12,Mecklenburg-Western Pomerania State,20.0,0,868.0,25
 31,2020,2020-08-01,GM13,Free State of Saxony,225.0,0,5541.0,29
 31,2020,2020-08-01,GM14,Sachsen-Anhalt State,64.0,1,2022.0,43
-31,2020,2020-08-01,GM15,Free State of Thüringia,182.0,0,3369.0,29
+31,2020,2020-08-01,GM15,Free State of Thuringia,182.0,0,3369.0,29
 31,2020,2020-08-01,GM16,Berlin State,223.0,0,9274.0,317
 32,2020,2020-08-08,GM,Germany,9195.0,47,215336.0,5683
 32,2020,2020-08-08,GM01,Baden-Württemberg State,1858.0,11,37749.0,477
@@ -398,7 +398,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 32,2020,2020-08-08,GM12,Mecklenburg-Western Pomerania State,20.0,0,930.0,62
 32,2020,2020-08-08,GM13,Free State of Saxony,225.0,0,5632.0,91
 32,2020,2020-08-08,GM14,Sachsen-Anhalt State,64.0,0,2057.0,35
-32,2020,2020-08-08,GM15,Free State of Thüringia,183.0,1,3420.0,51
+32,2020,2020-08-08,GM15,Free State of Thuringia,183.0,1,3420.0,51
 32,2020,2020-08-08,GM16,Berlin State,224.0,1,9640.0,366
 33,2020,2020-08-15,GM,Germany,9231.0,36,222828.0,7492
 33,2020,2020-08-15,GM01,Baden-Württemberg State,1859.0,1,38422.0,673
@@ -415,7 +415,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 33,2020,2020-08-15,GM12,Mecklenburg-Western Pomerania State,20.0,0,970.0,40
 33,2020,2020-08-15,GM13,Free State of Saxony,225.0,0,5719.0,87
 33,2020,2020-08-15,GM14,Sachsen-Anhalt State,64.0,0,2114.0,57
-33,2020,2020-08-15,GM15,Free State of Thüringia,186.0,3,3492.0,72
+33,2020,2020-08-15,GM15,Free State of Thuringia,186.0,3,3492.0,72
 33,2020,2020-08-15,GM16,Berlin State,224.0,0,10196.0,556
 34,2020,2020-08-22,GM,Germany,9267.0,36,232082.0,9254
 34,2020,2020-08-22,GM01,Baden-Württemberg State,1862.0,3,39829.0,1407
@@ -432,7 +432,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 34,2020,2020-08-22,GM12,Mecklenburg-Western Pomerania State,20.0,0,989.0,19
 34,2020,2020-08-22,GM13,Free State of Saxony,225.0,0,5806.0,87
 34,2020,2020-08-22,GM14,Sachsen-Anhalt State,65.0,1,2170.0,56
-34,2020,2020-08-22,GM15,Free State of Thüringia,186.0,0,3546.0,54
+34,2020,2020-08-22,GM15,Free State of Thuringia,186.0,0,3546.0,54
 34,2020,2020-08-22,GM16,Berlin State,226.0,2,10655.0,459
 35,2020,2020-08-29,GM,Germany,9289.0,22,240986.0,8904
 35,2020,2020-08-29,GM01,Baden-Württemberg State,1862.0,0,41574.0,1745
@@ -449,7 +449,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 35,2020,2020-08-29,GM12,Mecklenburg-Western Pomerania State,20.0,0,1004.0,15
 35,2020,2020-08-29,GM13,Free State of Saxony,225.0,0,5934.0,128
 35,2020,2020-08-29,GM14,Sachsen-Anhalt State,65.0,0,2226.0,56
-35,2020,2020-08-29,GM15,Free State of Thüringia,186.0,0,3611.0,65
+35,2020,2020-08-29,GM15,Free State of Thuringia,186.0,0,3611.0,65
 35,2020,2020-08-29,GM16,Berlin State,226.0,0,11125.0,470
 36,2020,2020-09-05,GM,Germany,9324.0,35,248997.0,8011
 36,2020,2020-09-05,GM01,Baden-Württemberg State,1865.0,3,43259.0,1685
@@ -466,7 +466,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 36,2020,2020-09-05,GM12,Mecklenburg-Western Pomerania State,20.0,0,1023.0,19
 36,2020,2020-09-05,GM13,Free State of Saxony,225.0,0,6138.0,204
 36,2020,2020-09-05,GM14,Sachsen-Anhalt State,66.0,1,2274.0,48
-36,2020,2020-09-05,GM15,Free State of Thüringia,186.0,0,3676.0,65
+36,2020,2020-09-05,GM15,Free State of Thuringia,186.0,0,3676.0,65
 36,2020,2020-09-05,GM16,Berlin State,226.0,0,11623.0,498
 37,2020,2020-09-12,GM,Germany,9347.0,23,258480.0,9483
 37,2020,2020-09-12,GM01,Baden-Württemberg State,1867.0,2,44903.0,1644
@@ -483,7 +483,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 37,2020,2020-09-12,GM12,Mecklenburg-Western Pomerania State,20.0,0,1055.0,32
 37,2020,2020-09-12,GM13,Free State of Saxony,226.0,1,6351.0,213
 37,2020,2020-09-12,GM14,Sachsen-Anhalt State,66.0,0,2330.0,56
-37,2020,2020-09-12,GM15,Free State of Thüringia,188.0,2,3765.0,89
+37,2020,2020-09-12,GM15,Free State of Thuringia,188.0,2,3765.0,89
 37,2020,2020-09-12,GM16,Berlin State,226.0,0,12216.0,593
 38,2020,2020-09-19,GM,Germany,9384.0,37,270070.0,11590
 38,2020,2020-09-19,GM01,Baden-Württemberg State,1871.0,4,46779.0,1876
@@ -500,7 +500,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 38,2020,2020-09-19,GM12,Mecklenburg-Western Pomerania State,20.0,0,1105.0,50
 38,2020,2020-09-19,GM13,Free State of Saxony,226.0,0,6658.0,307
 38,2020,2020-09-19,GM14,Sachsen-Anhalt State,66.0,0,2393.0,63
-38,2020,2020-09-19,GM15,Free State of Thüringia,189.0,1,3919.0,154
+38,2020,2020-09-19,GM15,Free State of Thuringia,189.0,1,3919.0,154
 38,2020,2020-09-19,GM16,Berlin State,227.0,1,12919.0,703
 39,2020,2020-09-26,GM,Germany,9452.0,68,282730.0,12660
 39,2020,2020-09-26,GM01,Baden-Württemberg State,1877.0,6,48467.0,1688
@@ -517,7 +517,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 39,2020,2020-09-26,GM12,Mecklenburg-Western Pomerania State,20.0,0,1151.0,46
 39,2020,2020-09-26,GM13,Free State of Saxony,233.0,7,7052.0,394
 39,2020,2020-09-26,GM14,Sachsen-Anhalt State,67.0,1,2536.0,143
-39,2020,2020-09-26,GM15,Free State of Thüringia,190.0,1,4046.0,127
+39,2020,2020-09-26,GM15,Free State of Thuringia,190.0,1,4046.0,127
 39,2020,2020-09-26,GM16,Berlin State,228.0,1,13970.0,1051
 40,2020,2020-10-03,GM,Germany,9527.0,75,296958.0,14228
 40,2020,2020-10-03,GM01,Baden-Württemberg State,1888.0,11,50240.0,1773
@@ -534,7 +534,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 40,2020,2020-10-03,GM12,Mecklenburg-Western Pomerania State,20.0,0,1220.0,69
 40,2020,2020-10-03,GM13,Free State of Saxony,239.0,6,7391.0,339
 40,2020,2020-10-03,GM14,Sachsen-Anhalt State,68.0,1,2693.0,157
-40,2020,2020-10-03,GM15,Free State of Thüringia,191.0,1,4158.0,112
+40,2020,2020-10-03,GM15,Free State of Thuringia,191.0,1,4158.0,112
 40,2020,2020-10-03,GM16,Berlin State,231.0,3,15371.0,1401
 41,2020,2020-10-10,GM,Germany,9604.0,77,319381.0,22423
 41,2020,2020-10-10,GM01,Baden-Württemberg State,1899.0,11,53344.0,3104
@@ -551,7 +551,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 41,2020,2020-10-10,GM12,Mecklenburg-Western Pomerania State,20.0,0,1373.0,153
 41,2020,2020-10-10,GM13,Free State of Saxony,246.0,7,8203.0,812
 41,2020,2020-10-10,GM14,Sachsen-Anhalt State,68.0,0,2858.0,165
-41,2020,2020-10-10,GM15,Free State of Thüringia,191.0,0,4363.0,205
+41,2020,2020-10-10,GM15,Free State of Thuringia,191.0,0,4363.0,205
 41,2020,2020-10-10,GM16,Berlin State,234.0,3,17555.0,2184
 42,2020,2020-10-17,GM,Germany,9767.0,163,356387.0,37006
 42,2020,2020-10-17,GM01,Baden-Württemberg State,1927.0,28,58653.0,5309
@@ -568,7 +568,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 42,2020,2020-10-17,GM12,Mecklenburg-Western Pomerania State,20.0,0,1590.0,217
 42,2020,2020-10-17,GM13,Free State of Saxony,257.0,11,9738.0,1535
 42,2020,2020-10-17,GM14,Sachsen-Anhalt State,71.0,3,3134.0,276
-42,2020,2020-10-17,GM15,Free State of Thüringia,198.0,7,4793.0,430
+42,2020,2020-10-17,GM15,Free State of Thuringia,198.0,7,4793.0,430
 42,2020,2020-10-17,GM16,Berlin State,240.0,6,20764.0,3209
 43,2020,2020-10-24,GM,Germany,10003.0,236,418005.0,61618
 43,2020,2020-10-24,GM01,Baden-Württemberg State,1966.0,39,66838.0,8185
@@ -585,7 +585,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 43,2020,2020-10-24,GM12,Mecklenburg-Western Pomerania State,21.0,1,2056.0,466
 43,2020,2020-10-24,GM13,Free State of Saxony,273.0,16,12453.0,2715
 43,2020,2020-10-24,GM14,Sachsen-Anhalt State,73.0,2,3760.0,626
-43,2020,2020-10-24,GM15,Free State of Thüringia,202.0,4,5546.0,753
+43,2020,2020-10-24,GM15,Free State of Thuringia,202.0,4,5546.0,753
 43,2020,2020-10-24,GM16,Berlin State,248.0,8,25374.0,4610
 44,2020,2020-10-31,GM,Germany,10452.0,449,518753.0,100748
 44,2020,2020-10-31,GM01,Baden-Württemberg State,2022.0,56,80233.0,13395
@@ -602,7 +602,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 44,2020,2020-10-31,GM12,Mecklenburg-Western Pomerania State,23.0,2,2782.0,726
 44,2020,2020-10-31,GM13,Free State of Saxony,317.0,44,17196.0,4743
 44,2020,2020-10-31,GM14,Sachsen-Anhalt State,79.0,6,5067.0,1307
-44,2020,2020-10-31,GM15,Free State of Thüringia,207.0,5,6953.0,1407
+44,2020,2020-10-31,GM15,Free State of Thuringia,207.0,5,6953.0,1407
 44,2020,2020-10-31,GM16,Berlin State,255.0,7,31440.0,6066
 45,2020,2020-11-07,GM,Germany,11226.0,774,642488.0,123735
 45,2020,2020-11-07,GM01,Baden-Württemberg State,2107.0,85,96602.0,16369
@@ -619,7 +619,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 45,2020,2020-11-07,GM12,Mecklenburg-Western Pomerania State,29.0,6,3580.0,798
 45,2020,2020-11-07,GM13,Free State of Saxony,389.0,72,24255.0,7059
 45,2020,2020-11-07,GM14,Sachsen-Anhalt State,89.0,10,6482.0,1415
-45,2020,2020-11-07,GM15,Free State of Thüringia,218.0,11,8620.0,1667
+45,2020,2020-11-07,GM15,Free State of Thuringia,218.0,11,8620.0,1667
 45,2020,2020-11-07,GM16,Berlin State,292.0,37,38686.0,7246
 46,2020,2020-11-14,GM,Germany,12378.0,1152,773556.0,131068
 46,2020,2020-11-14,GM01,Baden-Württemberg State,2242.0,135,113539.0,16937
@@ -636,7 +636,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 46,2020,2020-11-14,GM12,Mecklenburg-Western Pomerania State,37.0,8,4289.0,709
 46,2020,2020-11-14,GM13,Free State of Saxony,502.0,113,33007.0,8752
 46,2020,2020-11-14,GM14,Sachsen-Anhalt State,105.0,16,7941.0,1459
-46,2020,2020-11-14,GM15,Free State of Thüringia,247.0,29,10549.0,1929
+46,2020,2020-11-14,GM15,Free State of Thuringia,247.0,29,10549.0,1929
 46,2020,2020-11-14,GM16,Berlin State,348.0,56,46434.0,7748
 47,2020,2020-11-21,GM,Germany,13884.0,1506,902528.0,128972
 47,2020,2020-11-21,GM01,Baden-Württemberg State,2436.0,194,129905.0,16366
@@ -653,7 +653,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 47,2020,2020-11-21,GM12,Mecklenburg-Western Pomerania State,53.0,16,5064.0,775
 47,2020,2020-11-21,GM13,Free State of Saxony,626.0,124,41336.0,8329
 47,2020,2020-11-21,GM14,Sachsen-Anhalt State,121.0,16,9580.0,1639
-47,2020,2020-11-21,GM15,Free State of Thüringia,289.0,42,13132.0,2583
+47,2020,2020-11-21,GM15,Free State of Thuringia,289.0,42,13132.0,2583
 47,2020,2020-11-21,GM16,Berlin State,441.0,93,55018.0,8584
 48,2020,2020-11-28,GM,Germany,15965.0,2081,1028089.0,125561
 48,2020,2020-11-28,GM01,Baden-Württemberg State,2671.0,235,145615.0,15710
@@ -670,7 +670,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 48,2020,2020-11-28,GM12,Mecklenburg-Western Pomerania State,61.0,8,5820.0,756
 48,2020,2020-11-28,GM13,Free State of Saxony,858.0,232,52411.0,11075
 48,2020,2020-11-28,GM14,Sachsen-Anhalt State,160.0,39,11667.0,2087
-48,2020,2020-11-28,GM15,Free State of Thüringia,345.0,56,16364.0,3232
+48,2020,2020-11-28,GM15,Free State of Thuringia,345.0,56,16364.0,3232
 48,2020,2020-11-28,GM16,Berlin State,539.0,98,63064.0,8046
 49,2020,2020-12-05,GM,Germany,18517.0,2552,1153556.0,125467
 49,2020,2020-12-05,GM01,Baden-Württemberg State,2978.0,307,162349.0,16734
@@ -687,7 +687,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 49,2020,2020-12-05,GM12,Mecklenburg-Western Pomerania State,73.0,12,6605.0,785
 49,2020,2020-12-05,GM13,Free State of Saxony,1224.0,366,65830.0,13419
 49,2020,2020-12-05,GM14,Sachsen-Anhalt State,202.0,42,14340.0,2673
-49,2020,2020-12-05,GM15,Free State of Thüringia,414.0,69,20115.0,3751
+49,2020,2020-12-05,GM15,Free State of Thuringia,414.0,69,20115.0,3751
 49,2020,2020-12-05,GM16,Berlin State,657.0,118,69768.0,6704
 50,2020,2020-12-12,GM,Germany,21466.0,2949,1300516.0,146960
 50,2020,2020-12-12,GM01,Baden-Württemberg State,3353.0,375,182958.0,20609
@@ -704,7 +704,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 50,2020,2020-12-12,GM12,Mecklenburg-Western Pomerania State,96.0,23,7870.0,1265
 50,2020,2020-12-12,GM13,Free State of Saxony,1591.0,367,82226.0,16396
 50,2020,2020-12-12,GM14,Sachsen-Anhalt State,263.0,61,17703.0,3363
-50,2020,2020-12-12,GM15,Free State of Thüringia,508.0,94,24811.0,4696
+50,2020,2020-12-12,GM15,Free State of Thuringia,508.0,94,24811.0,4696
 50,2020,2020-12-12,GM16,Berlin State,790.0,133,77208.0,7440
 51,2020,2020-12-19,GM,Germany,25640.0,4174,1471238.0,170722
 51,2020,2020-12-19,GM01,Baden-Württemberg State,3892.0,539,206397.0,23439
@@ -721,7 +721,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 51,2020,2020-12-19,GM12,Mecklenburg-Western Pomerania State,114.0,18,9448.0,1578
 51,2020,2020-12-19,GM13,Free State of Saxony,2132.0,541,102193.0,19967
 51,2020,2020-12-19,GM14,Sachsen-Anhalt State,376.0,113,21867.0,4164
-51,2020,2020-12-19,GM15,Free State of Thüringia,666.0,158,31343.0,6532
+51,2020,2020-12-19,GM15,Free State of Thuringia,666.0,158,31343.0,6532
 51,2020,2020-12-19,GM16,Berlin State,985.0,195,85244.0,8036
 52,2020,2020-12-26,GM,Germany,29422.0,3782,1627103.0,155865
 52,2020,2020-12-26,GM01,Baden-Württemberg State,4400.0,508,227305.0,20908
@@ -738,7 +738,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 52,2020,2020-12-26,GM12,Mecklenburg-Western Pomerania State,139.0,25,10841.0,1393
 52,2020,2020-12-26,GM13,Free State of Saxony,2682.0,550,121060.0,18867
 52,2020,2020-12-26,GM14,Sachsen-Anhalt State,502.0,126,26569.0,4702
-52,2020,2020-12-26,GM15,Free State of Thüringia,819.0,153,38141.0,6798
+52,2020,2020-12-26,GM15,Free State of Thuringia,819.0,153,38141.0,6798
 52,2020,2020-12-26,GM16,Berlin State,1118.0,133,92346.0,7102
 53,2020,2021-01-02,GM,Germany,33960.0,4538,1755351.0,128248
 53,2020,2021-01-02,GM01,Baden-Württemberg State,4894.0,494,242744.0,15439
@@ -755,7 +755,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 53,2020,2021-01-02,GM12,Mecklenburg-Western Pomerania State,173.0,34,12362.0,1521
 53,2020,2021-01-02,GM13,Free State of Saxony,3302.0,620,137031.0,15971
 53,2020,2021-01-02,GM14,Sachsen-Anhalt State,666.0,164,30708.0,4139
-53,2020,2021-01-02,GM15,Free State of Thüringia,1027.0,208,43875.0,5734
+53,2020,2021-01-02,GM15,Free State of Thuringia,1027.0,208,43875.0,5734
 53,2020,2021-01-02,GM16,Berlin State,1277.0,159,97637.0,5291
 1,2021,2021-01-09,GM,Germany,39878.0,5918,1891581.0,136230
 1,2021,2021-01-09,GM01,Baden-Württemberg State,5464.0,570,257403.0,14659
@@ -772,7 +772,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 1,2021,2021-01-09,GM12,Mecklenburg-Western Pomerania State,235.0,62,14429.0,2067
 1,2021,2021-01-09,GM13,Free State of Saxony,3981.0,679,152459.0,15428
 1,2021,2021-01-09,GM14,Sachsen-Anhalt State,832.0,166,35734.0,5026
-1,2021,2021-01-09,GM15,Free State of Thüringia,1298.0,271,50302.0,6427
+1,2021,2021-01-09,GM15,Free State of Thuringia,1298.0,271,50302.0,6427
 1,2021,2021-01-09,GM16,Berlin State,1547.0,270,105118.0,7481
 2,2021,2021-01-16,GM,Germany,45974.0,6096,2019636.0,128055
 2,2021,2021-01-16,GM01,Baden-Württemberg State,6050.0,586,271976.0,14573
@@ -789,7 +789,7 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 2,2021,2021-01-16,GM12,Mecklenburg-Western Pomerania State,296.0,61,16361.0,1932
 2,2021,2021-01-16,GM13,Free State of Saxony,4982.0,1001,165292.0,12833
 2,2021,2021-01-16,GM14,Sachsen-Anhalt State,1089.0,257,42249.0,6515
-2,2021,2021-01-16,GM15,Free State of Thüringia,1611.0,313,56539.0,6237
+2,2021,2021-01-16,GM15,Free State of Thuringia,1611.0,313,56539.0,6237
 2,2021,2021-01-16,GM16,Berlin State,1800.0,253,111730.0,6612
 3,2021,2021-01-23,GM,Germany,51521.0,5547,2122679.0,103043
 3,2021,2021-01-23,GM01,Baden-Württemberg State,6585.0,535,282920.0,10944
@@ -806,8 +806,25 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 3,2021,2021-01-23,GM12,Mecklenburg-Western Pomerania State,355.0,59,18108.0,1747
 3,2021,2021-01-23,GM13,Free State of Saxony,5670.0,688,173272.0,7980
 3,2021,2021-01-23,GM14,Sachsen-Anhalt State,1397.0,308,47452.0,5203
-3,2021,2021-01-23,GM15,Free State of Thüringia,1901.0,290,61290.0,4751
+3,2021,2021-01-23,GM15,Free State of Thuringia,1901.0,290,61290.0,4751
 3,2021,2021-01-23,GM16,Berlin State,2021.0,221,116119.0,4389
+4,2021,2021-01-30,GM,Germany,56546.0,5025,2205171.0,82492
+4,2021,2021-01-30,GM01,Baden-Württemberg State,7013.0,428,291818.0,8898
+4,2021,2021-01-30,GM02,Free State of Bavaria,10344.0,761,400504.0,12641
+4,2021,2021-01-30,GM03,Free Hanseatic City of Bremen,266.0,16,15885.0,559
+4,2021,2021-01-30,GM04,Free Hanseatic City of Hamburg,1066.0,90,46015.0,1766
+4,2021,2021-01-30,GM05,Hesse State,4786.0,424,170883.0,5939
+4,2021,2021-01-30,GM06,Lower Saxony State,3253.0,308,141085.0,6158
+4,2021,2021-01-30,GM07,North Rhine-Westphalia State,10717.0,822,483456.0,15985
+4,2021,2021-01-30,GM08,Rhineland-Palatinate State,2450.0,187,91711.0,3099
+4,2021,2021-01-30,GM09,Saarland State,731.0,50,25450.0,1382
+4,2021,2021-01-30,GM10,Schleswig-Holstein State,853.0,112,35717.0,2472
+4,2021,2021-01-30,GM11,Brandenburg State,2263.0,367,67836.0,5023
+4,2021,2021-01-30,GM12,Mecklenburg-Western Pomerania State,443.0,88,19682.0,1574
+4,2021,2021-01-30,GM13,Free State of Saxony,6254.0,584,179153.0,5881
+4,2021,2021-01-30,GM14,Sachsen-Anhalt State,1705.0,308,51521.0,4069
+4,2021,2021-01-30,GM15,Free State of Thuringia,2164.0,263,64941.0,3651
+4,2021,2021-01-30,GM16,Berlin State,2238.0,217,119514.0,3395
 11,2020,2020-03-14,PL72,Dolnoslaskie,1.0,1,8.0,7
 11,2020,2020-03-14,PL73,Kujawsko-Pomorskie,0.0,0,0.0,0
 11,2020,2020-03-14,PL75,Lubelskie,0.0,0,7.0,7
@@ -1590,3 +1607,20 @@ epi_week,epi_year,date,location,location_name,cum_death,inc_death,cum_case,inc_c
 3,2021,2021-01-23,PL86,Wielkopolskie,3660.0,252,148967.0,4256
 3,2021,2021-01-23,PL87,Zachodniopomorskie,1414.0,132,75768.0,3160
 3,2021,2021-01-23,PL,Poland,34894.0,2062,1464573.0,42284
+4,2021,2021-01-30,PL72,Dolnoslaskie,2397.0,118,99455.0,2412
+4,2021,2021-01-30,PL73,Kujawsko-Pomorskie,2248.0,161,104324.0,3613
+4,2021,2021-01-30,PL75,Lubelskie,2371.0,123,75138.0,2002
+4,2021,2021-01-30,PL76,Lubuskie,953.0,70,36834.0,1109
+4,2021,2021-01-30,PL74,Lodzkie,2627.0,139,97155.0,2097
+4,2021,2021-01-30,PL77,Malopolskie,3027.0,101,116975.0,1642
+4,2021,2021-01-30,PL78,Mazowieckie,4390.0,262,184181.0,5516
+4,2021,2021-01-30,PL79,Opolskie,1184.0,26,40695.0,725
+4,2021,2021-01-30,PL80,Podkarpackie,2145.0,51,65862.0,1221
+4,2021,2021-01-30,PL81,Podlaskie,1067.0,68,40427.0,1399
+4,2021,2021-01-30,PL82,Pomorskie,2145.0,141,101520.0,3543
+4,2021,2021-01-30,PL83,Slaskie,4086.0,159,171506.0,2977
+4,2021,2021-01-30,PL84,Swietokrzyskie,1098.0,43,38380.0,601
+4,2021,2021-01-30,PL85,Warminsko-Mazurskie,1666.0,122,66633.0,2279
+4,2021,2021-01-30,PL86,Wielkopolskie,3860.0,200,152699.0,3732
+4,2021,2021-01-30,PL87,Zachodniopomorskie,1502.0,88,78164.0,2396
+4,2021,2021-01-30,PL,Poland,36766.0,1872,1502690.0,38117
