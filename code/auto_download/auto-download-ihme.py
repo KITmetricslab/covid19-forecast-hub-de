@@ -44,6 +44,6 @@ def download_covid_zip_files(path):
 
 
 if __name__ == '__main__':
-    path = sys.argv[1]
+    path = "./data-raw/IHME"
     download_covid_zip_files(path)
 
