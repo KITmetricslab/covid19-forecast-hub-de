@@ -56,7 +56,7 @@ process_ucla_file <- function(ucla_filepath, truth_jhu_cum, forecast_date, count
   
   ### incident targets weekly
   last_jhu_cum <- subset(truth_jhu_cum, weekdays(date) == "Saturday" &
-                        date <= forecast_date & date >= forecast_date - 7)
+                        date <= forecast_date & date >= forecast_date - 7) # [2,]
   if(nrow(last_jhu_cum) != 1) stop("Please update JHU truth data.")
 
   weekly_inc <- subset(weekly_cum, type == "point")
