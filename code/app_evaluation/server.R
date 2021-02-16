@@ -18,7 +18,7 @@ cols_models <- glasbey(5)
 
 timezeros <- 1:10
 
-local <- TRUE
+local <- FALSE
 
 
 dat_evaluation <- list()
@@ -54,7 +54,9 @@ locations <- c("GM", "PL")
 # function for time series plot based on evaluation data:
 plot_from_eval <- function(dat_eval, model, location,
                            target_type, inc_or_cum, horizon = NULL, forecast_date = NULL,
-                           ylim = NULL, start = NULL, end = NULL,
+                           ylim = NULL,
+                           first_forecast_date = NULL, last_forecast_date = NULL,
+                           start = NULL, end = NULL,
                            col = "steelblue", alpha.col = 0.3, add = FALSE,
                            shifts = c(0, 1, -1, -0.5, -0.5)){
 
@@ -68,6 +70,15 @@ plot_from_eval <- function(dat_eval, model, location,
   # extract data to plot truth:
   all_dates <- dat_eval$target_end_date[!duplicated(dat_eval$target_end_date)]
   all_truths <- dat_eval$truth[!duplicated(dat_eval$target_end_date)]
+  
+  # restrict to time period:
+  if(!is.null(first_forecast_date)){
+    dat_eval <- dat_eval[dat_eval$timezero >= first_forecast_date, ]
+  }
+  if(!is.null(last_forecast_date)){
+    dat_eval <- dat_eval[dat_eval$timezero <= last_forecast_date, ]
+  }
+  
 
   # restrict to model and forecast date or horizon:
   dat_eval <- dat_eval[dat_eval$model %in% model, ]
@@ -177,7 +188,7 @@ shinyServer(function(input, output) {
   # input element to select start date of evaluation period if horizon is used
   output$inp_select_first_date <- renderUI({
     selectInput("select_first_date", "First forecast date to consider", timezeros,
-                selected = as.Date("2020-10-12"))
+                selected = as.Date("2021-01-11"))
   })
 
   # input element to select end date of evaluation period if horizon is used
@@ -241,13 +252,15 @@ shinyServer(function(input, output) {
     par(las = 1, mar = c(4, 6, 4, 1), mfrow = c(3, 1), cex = 1)
 
 
-    # plot forecasts from first model, coloured
-    plot1 <- plot_from_eval(dat_eval = dat_evaluation_restricted$ECDC,
+    # plot forecasts from first model, coloured (not using dat_evaluation_restricted here as we need all truth data)
+    plot1 <- plot_from_eval(dat_eval = dat_evaluation$ECDC,
                    model = selected_models,
                    location = input$select_location,
                    target_type = input$select_target_type,
                    inc_or_cum = input$select_inc_or_cum,
                    start = start, end = end,
+                   first_forecast_date = input$select_first_date,
+                   last_forecast_date = input$select_last_date,
                    forecast_date = if(input$select_stratification == "forecast_date") input$select_date else NULL,
                    horizon = if(input$select_stratification == "horizon") input$select_horizon else NULL,
                    col = cols_models, shifts = shifts)
