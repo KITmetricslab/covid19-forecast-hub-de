@@ -30,3 +30,4 @@ jobs:
     - run: python3 main.py
       env:
         GH_TOKEN: ${{secrets.GITHUBTOKEN}}
+        IMGBB_TOKEN: ${{secrets.IMGBB_TOKEN}}
