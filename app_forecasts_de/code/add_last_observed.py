@@ -61,4 +61,8 @@ df_new = df_new[['forecast_date', 'target', 'target_end_date', 'location', 'type
        'shift_ECDC', 'shift_JHU', 'first_commit_date']]
 
 # export csv
+df_new.to_csv('../data/forecasts_to_plot_archive.csv', index=False)
+
+# light version to load faster
+df_new = df_new[df_new.timezero.isin(pd.Series(df_new.timezero.unique()).nlargest(6))]
 df_new.to_csv('../data/forecasts_to_plot.csv', index=False)
