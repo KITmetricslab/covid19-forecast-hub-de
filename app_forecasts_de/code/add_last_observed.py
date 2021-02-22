@@ -64,5 +64,7 @@ df = df[['forecast_date', 'target', 'target_end_date', 'location', 'type',
 df.to_csv('../data/forecasts_to_plot_archive.csv', index=False)
 
 # light version to load faster
-df = df[df.timezero.isin(pd.Series(df.timezero.unique()).nlargest(6))]
+df = df[(df.timezero.isin(pd.Series(df.timezero.unique()).nlargest(8)) & df.location.isin(['GM', 'PL'])) | 
+        (df.timezero.isin(pd.Series(df.timezero.unique()).nlargest(2)) & (~df.location.isin(['GM', 'PL'])))]
+
 df.to_csv('../data/forecasts_to_plot.csv', index=False)
