@@ -41,10 +41,10 @@ temp.value = temp.truth
 temp.target_end_date = temp.saturday0
 
 # concat old forecasts_to_plot and newly added last observed values (0 wk ahead)
-df_new = pd.concat([df, temp])
+df = pd.concat([df, temp])
 
 # sort models and adjust format
-models = df_new.model.unique().tolist()
+models = df.model.unique().tolist()
 models.sort(key=str.casefold)
 
 ensembles = ['KITCOVIDhub-mean_ensemble', 'KITCOVIDhub-median_ensemble', 'KITCOVIDhub-inverse_wis_ensemble']
@@ -53,12 +53,18 @@ individual_models = [m for m in models if m not in ensembles + baselines ]
 
 models = ensembles + individual_models +  baselines
 
-df_new.model = pd.Categorical(df_new.model, models, ordered=True)
-df_new = df_new.sort_values(['model', 'forecast_date', 'target_end_date', 'location', 'target', 'type', 'quantile']).reset_index(drop=True)
+df.model = pd.Categorical(df.model, models, ordered=True)
+df = df.sort_values(['model', 'forecast_date', 'target_end_date', 'location', 'target', 'type', 'quantile']).reset_index(drop=True)
 
-df_new = df_new[['forecast_date', 'target', 'target_end_date', 'location', 'type',
+df = df[['forecast_date', 'target', 'target_end_date', 'location', 'type',
        'quantile', 'value', 'timezero', 'model', 'truth_data_source',
        'shift_ECDC', 'shift_JHU', 'first_commit_date']]
 
 # export csv
-df_new.to_csv('../data/forecasts_to_plot.csv', index=False)
+df.to_csv('../data/forecasts_to_plot_archive.csv', index=False)
+
+# light version to load faster
+df = df[(df.timezero.isin(pd.Series(df.timezero.unique()).nlargest(8)) & df.location.isin(['GM', 'PL'])) | 
+        (df.timezero.isin(pd.Series(df.timezero.unique()).nlargest(2)) & (~df.location.isin(['GM', 'PL'])))]
+
+df.to_csv('../data/forecasts_to_plot.csv', index=False)
