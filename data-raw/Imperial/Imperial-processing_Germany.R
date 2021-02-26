@@ -56,8 +56,17 @@ get_date<-function(path)
 #' 
 #' @details Assumes that the matrix gives 1 through 7 day ahead forecasts
 #'
+#'
+
+# path <- "./ensemble_model_predictions_2021-02-21.rds"
+# ens_model <- TRUE
+# location=c("Germany","Poland")
+# qntls=c(0.01, 0.025, seq(0.05, 0.95, by=0.05), 0.975, 0.99)
+# poland=TRUE
+  
 format_imperial<-function(path,ens_model,location=if(poland)c("Germany","Poland")else"Germany", qntls=c(0.01, 0.025, seq(0.05, 0.95, by=0.05), 0.975, 0.99),poland=TRUE)
 {
+
   require(tidyverse)
   require(lubridate)
   require(MMWRweek)
@@ -190,9 +199,10 @@ format_imperial<-function(path,ens_model,location=if(poland)c("Germany","Poland"
     ## indices and samples for incident deaths 
     which_days <- which(colnames(data_raw) %in% as.character(day_aheads$target_end_date))
     which_weeks <- which(colnames(data_raw) %in% as.character(week_aheads$target_end_date))
+    # print(which_weeks)
     samples_daily <- data_raw[,which_days]
    # samples_weekly <- data_raw[,which_weeks]
-  
+    
     #for weekly inc forecasts, use all forecasts in the epidemiological week
     #Since forecasts usually occur on Sunday, we will add the last observed date,i.e
     #Sunday to week counts.
@@ -319,11 +329,7 @@ format_imperial<-function(path,ens_model,location=if(poland)c("Germany","Poland"
     final[[k]]<-all_dat
   }
   
-  #make one final file
-  
   return(final)
- 
-  
-}
+  }
 
 
