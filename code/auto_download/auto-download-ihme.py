@@ -25,6 +25,7 @@ import sys
 def download_covid_zip_files(path):
     # metadata
     url = "https://ihmecovid19storage.blob.core.windows.net/latest/ihme-covid19.zip"
+    # url = "https://ihmecovid19storage.blob.core.windows.net/archive/2021-02-20/ihme-covid19.zip"
     http = urllib3.PoolManager()
     name = 'ihme-covid19.zip'
     old_list = os.listdir(path)
