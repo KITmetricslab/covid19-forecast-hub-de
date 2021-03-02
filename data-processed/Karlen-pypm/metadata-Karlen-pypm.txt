@@ -5,7 +5,7 @@ model_contributors: Dean Karlen (University of Victoria and TRIUMF) <karlen@uvic
 website_url: https://pypm.github.io/home/
 license: gpl-3.0
 team_model_designation: primary
-methods: Discrete-time difference equations with long periods of constant transmission rate
+methods: Discrete-time difference equations with long periods of constant transmission rate. Feb 28 - add variant strain
 team_funding: none
 data_inputs: RKI (confirmed cases, deaths), DIVI (ICU data)
 citation: https://arxiv.org/abs/2007.07156
