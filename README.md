@@ -3,7 +3,6 @@
 ![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/MZ/badge.svg)
 ![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/Visualization/Validation/Evaluation/badge.svg)
 ![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/Geneva/badge.svg)
-![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/UCLA/badge.svg)
 ![Actions Status](https://github.com/KITmetricslab/covid19-forecast-hub-de/workflows/LANL/badge.svg)
 
 # German and Polish COVID-19 Forecast Hub
@@ -13,6 +12,8 @@
 *Beschreibung in deutscher Sprache siehe [hier](https://github.com/KITmetricslab/covid19-forecast-hub-de/blob/master/README_DE.md).*
 
 **Website:**: https://kitmetricslab.github.io/forecasthub/
+
+**Preprint:** https://www.medrxiv.org/content/10.1101/2020.12.24.20248826v2
 
 **Old version of visualization incl. evaluation scores:** https://jobrac.shinyapps.io/app_forecasts_de/
 
@@ -123,7 +124,7 @@ Currently we assemble forecasts from the following teams. *Note that not all tea
 - [MOCOS Group](https://mocos.pl/) (ECDC; to be specified)
 - ITTW (Universities of Ilmenau, Trier, Wroclaw, Warsaw) (ECDC; no license specified)
 - itwm (Fraunhofer Institute for Industrial Mathematics ITWM)
-- [University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
+- [Institute of Global Health, University of Geneva / Swiss Data Science Center](https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/) (ECDC; none given)
 - [University of Leipzig IMISE/GenStat](https://github.com/holgerman/covid19-forecast-hub-de) (ECDC; MIT)
 - [UCLA Statistical Machine Learning Lab](https://covid19.uclaml.org/) (JHU; cc-by-4.0)
 - [University of Southern California Data Science Lab](https://scc-usc.github.io/ReCOVER-COVID-19)(JHU; MIT) (MIT)
@@ -157,6 +158,7 @@ The following persons have contributed to this repository, either by assembling 
 
 Members of our group have contributed to the following papers and preprints on collaborative COVID-19 forecasting:
 
+- J. Bracher, D. Wolffram, J. Deuschel, K. Goergen, J.Ketterer, A. Ullrich et al (2021): [Short-term forecasting of COVID-19 in Germany and Poland during the second wave – a preregistered study](https://www.medrxiv.org/content/10.1101/2020.12.24.20248826v2)
 - J. Bracher, E.L. Ray, T. Gneiting, N.G. Reich: [Evaluating epidemic forecasts in an interval format](https://arxiv.org/abs/2005.12881).
 - L.C. Brooks, E.L. Ray, J. Bien, J. Bracher, A. Rumack, R.J. Tibshirani, N.G. Reich: [Comparing ensemble approaches for short-term probabilistic COVID-19 forecasts in the U.S.](https://forecasters.org/blog/2020/10/28/comparing-ensemble-approaches-for-short-term-probabilistic-covid-19-forecasts-in-the-u-s/)
 - E.L. Ray, N. Wattanachit, J. Niemi et al: [Ensemble Forecasts of Coronavirus Disease 2019 (COVID-19) in the U.S.](https://www.medrxiv.org/content/10.1101/2020.08.19.20177493v1).

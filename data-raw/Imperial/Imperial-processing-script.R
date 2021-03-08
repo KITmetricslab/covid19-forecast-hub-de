@@ -89,4 +89,10 @@ for(i in 1:length(filepaths)){
   }
   
 }
-#Might get warning for is.na CALL, should be fine
+
+# Remarks on warnings/errors:
+
+# Might get warning for is.na CALL, should be fine
+
+# In case of "Error in sample_mat_cum[, which_weeks] : wrong number of dimensions",
+# check if truth data is up to date!

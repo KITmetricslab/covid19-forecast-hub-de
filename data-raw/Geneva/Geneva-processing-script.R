@@ -16,7 +16,7 @@ source("process_geneva_file_germany.R")
 # this is necessary for Linux VMs
 Sys.setlocale(category = "LC_TIME", locale = "en_US.UTF8")
 
-dir.create("../../data-processed/Geneva-DeterministicGrowth", showWarnings = FALSE)
+dir.create("../../data-processed/SDSC-ISG_TrendModel", showWarnings = FALSE)
 
 vector_countries <- c("Germany", "Poland")
 vector_fips <- c("GM", "PL")
@@ -30,7 +30,7 @@ death_files_to_process <- death_files_to_process[grepl(".csv", death_files_to_pr
 death_forecast_dates <- lapply(death_files_to_process, date_from_geneva_filepath)
 
 # check which ones are already processed:
-files_already_processed <- list.files("../../data-processed/Geneva-DeterministicGrowth")
+files_already_processed <- list.files("../../data-processed/SDSC-ISG_TrendModel")
 dates_already_processed <- as.Date(substr(files_already_processed, start = 1, stop = 10))
 
 # restrict to those not yet processed:
@@ -43,8 +43,8 @@ for(i in 1:length(death_files_to_process)) {
     tmp_dat <- process_geneva_file(death_files_to_process[i], forecast_date = death_forecast_dates[[i]],
                                       country = vector_countries[j], location = vector_fips[j], type = "death")
     write.csv(tmp_dat,
-              paste0("../../data-processed/Geneva-DeterministicGrowth/", death_forecast_dates[[i]],
-                     "-", vector_countries[j], "-Geneva-DeterministicGrowth.csv"),
+              paste0("../../data-processed/SDSC-ISG_TrendModel/", death_forecast_dates[[i]],
+                     "-", vector_countries[j], "-SDSC-ISG_TrendModel.csv"),
               row.names = FALSE)
   }
   cat("processing ", i, "/", length(death_files_to_process), "\n")
@@ -67,8 +67,8 @@ for(i in 1:length(case_files_to_process)) {
     tmp_dat <- process_geneva_file(case_files_to_process[i], forecast_date = case_forecast_dates[[i]],
                                    country = vector_countries[j], location = vector_fips[j], type = "case")
     write.csv(tmp_dat,
-              paste0("../../data-processed/Geneva-DeterministicGrowth/", case_forecast_dates[[i]],
-                     "-", vector_countries[j], "-Geneva-DeterministicGrowth-case.csv"),
+              paste0("../../data-processed/SDSC-ISG_TrendModel/", case_forecast_dates[[i]],
+                     "-", vector_countries[j], "-SDSC-ISG_TrendModel-case.csv"),
               row.names = FALSE)
   }
   cat("processing ", i, "/", length(case_files_to_process), "\n")

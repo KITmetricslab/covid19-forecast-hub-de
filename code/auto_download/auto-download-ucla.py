@@ -16,16 +16,23 @@ if __name__ == "__main__":
     # determine latest forecast date already present in our repo
     prefix = "pred_world_"
 
-    file_list = sorted([f for f in files if f.startswith(prefix)], reverse=True)
-    
-    if file_list:
-        # manually add current year
-        cur_year = str(datetime.today().year)
-        latest_fc_date_str = cur_year + "-" + file_list[0].replace(prefix, "").strip(".csv")
-    else:
-        raise Exception("Set most_current_date_str manually!")
-    
-    
+    # get mm-dd strings from file names
+    dates_wo_year = sorted([f.replace(prefix, "").strip(".csv") for f in files if f.startswith(prefix)], reverse=True)
+
+    # add years based on month of submission
+    dates_w_year = []
+    for date in dates_wo_year:
+        # dates from September 2020 on
+        if int(date[:2]) >= 9:
+            date_w_year = "2020-" + date
+        # dates from 2021
+        else:
+            date_w_year = "2021-" + date
+        dates_w_year.append(date_w_year)
+    dates_w_year = sorted(dates_w_year)
+
+    # latest fc present in our repo
+    latest_fc_date_str = dates_w_year[-1]    
     latest_fc_date = datetime.strptime(latest_fc_date_str, "%Y-%m-%d")
 
     # determine date up to which files should be downloaded
@@ -37,7 +44,7 @@ if __name__ == "__main__":
     # generate lists of dates to download
     date_list = [latest_fc_date + timedelta(days=x) for x in range(1, (download_up_to_date-latest_fc_date).days+1)]
     
-    # restrict on Sundays (UCLA forecasts are generated on Sundays only)
+    # restrict on Sundays (UCLA forecasts are usually generated on Sundays)
     date_list = [date for date in date_list if date.weekday() == 6]
     print("Trying to download forecasts for the following dates: ", ["".join(str(d.date())) for d in date_list])
 

@@ -6,8 +6,9 @@ import os
 
 if __name__ == "__main__":
     
-    url = "https://raw.githubusercontent.com/uclaml/ucla-covid19-forecasts/master/projection_result/pred_state_11-15.csv"
-    file_name = "pred_world_11-15.csv"
+    # url = "https://raw.githubusercontent.com/uclaml/ucla-covid19-forecasts/master/projection_result/pred_world_02-06.csv"
+    url = "https://ihmecovid19storage.blob.core.windows.net/archive/2021-02-20/ihme-covid19.zip"
+    file_name = "ihme-covid19.zip"
     dir_name = os.path.join("./data-raw/UCLA-SuEIR", file_name)
 
     urllib.request.urlretrieve(url, dir_name)

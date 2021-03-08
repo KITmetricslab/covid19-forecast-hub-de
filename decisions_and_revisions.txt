@@ -16,6 +16,8 @@ Tue 22 Dec: USC excluded due to suspected misalignment with most recent data.
 Tue 12 Jan: Not inlcuding MIT forecasts as they look somethat detached from recent data for both Germany and Poland. Delayed ITWW model not included due do very narrow uncertainty bands.
 Tue 19 Jan: Not inlcuding ITWW into death ensembles due to very narrow prediction bands.
 Tue 2 Feb: Excluding time series baseline from death forecasts in Germany as pattern looks very implausible. ITWW forecasts not included due to very narrow prediction bands.
+Tue 9 Feb: not including ITWW in death ensembles as forecastin intervals are very narrow.
+Tue 16 Feb: not including ITWW in death ensembles as forecastin intervals are very narrow. Not including USC in cumulative ensembles as forecast uncertainty does not grow with horizon. 
 
 ### Documentation of forecast revisions and late inclusions:
 
@@ -71,3 +73,4 @@ Wed 27 Jan: Retrospectivey adding sub-national ensembles for last three weeks.
 Tue 2 Feb: epiExpert_Rt had erroneously not been submitted last week (gone unnoticed by Forecast Hub Team). Files are included retrospectively to complete the record.
 Wed 3 Feb: MIMUW and MPI_DS forecasts arrived late.
 Mon 8 Feb: Included MIMUW forecast from 25 Jan retrospectively as file had not been uploaded in this week (email communication with Krzysztof)
+Fri 26 Feb: Leipzig submission delayed (final submission on Thursday) due to fail of automated checks in combination with a correction of cumulative forecasts (technical problem)
