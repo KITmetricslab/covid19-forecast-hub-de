@@ -30,23 +30,7 @@ def wide_to_long(df):
     df = df.unstack().reset_index()
         
     df = df.rename(columns={"level_0": "date", 0: "value"})
-    
-    # handle date
-    date_col = df["date"].values.tolist()
-    
-    date_col_reversed = date_col.copy()
-    date_col_reversed.reverse()
-    
-    eoy = date_col_reversed.index("31.12")
-    
-    first_year = date_col[:len(date_col) - eoy]
-    second_year = date_col[len(date_col) - eoy:]
-    
-    first_year_compl = [x + ".2020" for x in first_year]
-    sec_year_compl = [x + ".2021" for x in second_year]
-    
-    df["date"] = first_year_compl + sec_year_compl
-    
+      
     
     df["date"] = df['date'].apply(lambda x: (x).replace(".", "/"))
     df["date"] = pd.to_datetime(df["date"], format="%d/%m/%Y")
@@ -98,6 +82,17 @@ for idx, relevant_rows in enumerate([inc_case_rows, cum_case_rows, inc_death_row
         time.sleep(1)
         #print("debug")
         
+    eoy = rows[0].index("31.12")
+    first_year = rows[0][:eoy + 1]
+    second_year = rows[0][eoy + 1:]
+    
+    first_year_compl = [x + ".2020" for x in first_year]
+    sec_year_compl = [x + ".2021" for x in second_year]
+    first_year_compl[0] = first_year_compl[0][:-5]
+    
+    
+    rows[0] = first_year_compl + sec_year_compl
+    
     df = pd.DataFrame(rows[1:], columns=rows[0])
     
     # drop cols without values
