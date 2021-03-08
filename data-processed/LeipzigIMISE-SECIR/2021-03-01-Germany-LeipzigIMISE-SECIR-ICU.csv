@@ -1,0 +1,918 @@
+"forecast_date","target","target_end_date","location","location_name","type","quantile","value"
+2021-03-01,"0 day ahead curr ICU",2021-03-01,"GM","Germany","observed",NA,2869
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","point",NA,2869.25340727755
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","point",NA,2874.48028165538
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","point",NA,2882.49516216971
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","point",NA,2897.33270250909
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","point",NA,2918.07670645785
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","point",NA,2938.51819148789
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","point",NA,2958.92610678616
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","point",NA,2988.27336141892
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","point",NA,3015.93698349964
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","point",NA,3045.9658918382
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","point",NA,3080.39390103091
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","point",NA,3113.19784766908
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","point",NA,3151.17727066693
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","point",NA,3194.32641622086
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","point",NA,3234.60253594772
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","point",NA,3266.86058635102
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","point",NA,3306.70277260051
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","point",NA,3329.47229279143
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","point",NA,3377.17235668116
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","point",NA,3411.86469414778
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","point",NA,3469.38709275629
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","point",NA,3525.94989365486
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","point",NA,3581.5169688348
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","point",NA,3626.47946300456
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","point",NA,3676.94074712427
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","point",NA,3714.12860587968
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","point",NA,3779.52097509824
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","point",NA,3818.41805329833
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","point",NA,3879.53643589175
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","point",NA,3949.34801131362
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.01",2389.87198851885
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.01",2322.35973867834
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.01",2258.04260576455
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.01",2194.9590766235
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.01",2136.66274512011
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.01",2066.0138703125
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.01",2006.1463207444
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.01",1951.79421330564
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.01",1898.53363160855
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.01",1831.67295380358
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.01",1786.17152022185
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.01",1715.37244805782
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.01",1668.43180943587
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.01",1600.15938311185
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.01",1544.00482270882
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.01",1470.45885958546
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.01",1424.07340390207
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.01",1352.30319640966
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.01",1295.16413908621
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.01",1227.66649059151
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.01",1172.86880813344
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.01",1127.22703470634
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.01",1076.58302561394
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.01",1022.77322231998
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.01",978.768423970476
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.01",921.004234803751
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.01",869.851416048776
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.01",819.369427325224
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.01",769.321634210808
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.01",736.240605380653
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.025",2455.08041477415
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.025",2392.68197975823
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.025",2335.5725044712
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.025",2282.7478535004
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.025",2232.42876692965
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.025",2177.22072201591
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.025",2128.92296649684
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.025",2079.28108104231
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.025",2031.2562138226
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.025",1969.24007644869
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.025",1917.31593173958
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.025",1855.15992954188
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.025",1804.273765097
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.025",1742.1903525491
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.025",1690.70975864339
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.025",1628.41384287041
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.025",1574.72691913857
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.025",1508.98957726137
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.025",1452.40722261008
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.025",1381.77930417128
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.025",1329.86885181196
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.025",1275.60898779675
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.025",1218.26659978889
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.025",1164.63766663331
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.025",1114.48998589754
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.025",1058.79750779686
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.025",1008.62088844453
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.025",955.43440771737
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.025",911.169488052152
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.025",871.965348954521
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.05",2513.26374143268
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.05",2458.76852998387
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.05",2413.63676296538
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.05",2366.65067547268
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.05",2324.66211450782
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.05",2274.68448433024
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.05",2227.5730086558
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.05",2185.2020570067
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.05",2138.03831655797
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.05",2082.99530497474
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.05",2029.91594842379
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.05",1978.02111843691
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.05",1923.47146727306
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.05",1866.61220085213
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.05",1823.69807699416
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.05",1765.97058656962
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.05",1715.15693996088
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.05",1652.96616779175
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.05",1598.87029973153
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.05",1530.99431112088
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.05",1479.63591870078
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.05",1421.54268288985
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.05",1358.64178798946
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.05",1300.79932898305
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.05",1246.45270364466
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.05",1190.77252151349
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.05",1141.94472174531
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.05",1090.29515882565
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.05",1039.64216445926
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.05",997.811313701487
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.1",2584.79454211359
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.1",2542.56378564195
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.1",2504.83375623973
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.1",2471.56706604324
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.1",2439.34579860416
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.1",2403.25007933681
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.1",2368.3049020393
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.1",2337.65687169862
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.1",2306.70123375766
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.1",2267.26337510163
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.1",2229.42971101679
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.1",2189.22602653199
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.1",2132.22871846671
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.1",2081.68111549962
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.1",2040.10175798103
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.1",1997.61602116409
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.1",1952.55572280505
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.1",1911.28728145728
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.1",1870.63197462683
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.1",1825.67217904303
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.1",1785.92022868687
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.1",1749.96866009147
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.1",1704.05168609704
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.1",1658.37708914449
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.1",1615.79507703106
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.1",1554.65381340572
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.1",1509.06658930705
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.1",1467.20432056744
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.1",1401.66447757431
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.1",1382.18597583131
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.15",2634.89864684799
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.15",2600.95742160914
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.15",2568.93791392289
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.15",2543.19816442034
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.15",2519.60962846916
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.15",2493.37231441743
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.15",2471.31277780683
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.15",2446.13375670922
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.15",2415.0557454381
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.15",2381.7850031143
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.15",2357.21114835946
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.15",2332.74645327205
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.15",2300.82147707116
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.15",2275.01148613844
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.15",2247.41666323869
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.15",2211.75191449255
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.15",2172.60018110706
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.15",2132.22157622005
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.15",2095.11971955608
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.15",2055.51225268237
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.15",2011.2258549184
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.15",1990.15679927511
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.15",1955.38008739146
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.15",1902.96986144449
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.15",1878.11116465961
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.15",1829.94316238261
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.15",1792.59102811403
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.15",1757.50400464433
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.15",1711.9865142913
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.15",1697.57849536132
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.2",2677.01776173368
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.2",2647.74995730377
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.2",2622.99868127116
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.2",2602.85829681299
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.2",2584.57194444522
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.2",2563.19023462372
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.2",2548.82617009
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.2",2529.70873085485
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.2",2510.16153276376
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.2",2488.31725607038
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.2",2473.07154543525
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.2",2455.50779500088
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.2",2432.21962762112
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.2",2409.45838634694
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.2",2391.84093201196
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.2",2360.85547880897
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.2",2337.31243369246
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.2",2313.79854272429
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.2",2292.35599156213
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.2",2257.99082222762
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.2",2221.34724547065
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.2",2198.92643235136
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.2",2159.75852459474
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.2",2114.72451864625
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.2",2090.49265824862
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.2",2044.49395233779
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.2",2008.66597647968
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.2",1981.13636427061
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.2",1939.80207579577
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.2",1922.87717009424
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.25",2713.99782955655
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.25",2691.18162244293
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.25",2671.10241652214
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.25",2655.16405334664
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.25",2642.34932605826
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.25",2626.61695076376
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.25",2618.27677973694
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.25",2609.99683470443
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.25",2600.71040982909
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.25",2586.82423651669
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.25",2580.2104813928
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.25",2571.83547325848
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.25",2557.88550608277
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.25",2542.68530047981
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.25",2529.329686486
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.25",2510.21793248162
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.25",2488.34850750076
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.25",2466.51355155356
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.25",2446.60409780964
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.25",2423.31237376403
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.25",2402.82220945822
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.25",2388.62217021669
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.25",2368.95972067493
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.25",2322.40013932864
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.25",2315.19612132096
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.25",2256.34679767534
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.25",2231.33135641312
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.25",2212.28381098465
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.25",2171.04640087891
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.25",2152.07095942102
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.3",2747.40353325657
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.3",2731.18979589735
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.3",2715.66644899517
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.3",2706.35862859663
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.3",2698.54116886892
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.3",2688.28528654943
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.3",2688.00384068076
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.3",2688.65249223435
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.3",2688.22260935308
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.3",2681.61985922247
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.3",2682.01762813021
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.3",2675.94447871597
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.3",2668.34659199279
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.3",2661.25004987662
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.3",2663.80871708226
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.3",2655.20261858804
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.3",2652.78820343071
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.3",2639.33549159782
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.3",2632.84922693098
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.3",2616.26847062724
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.3",2598.90728539778
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.3",2601.84368549131
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.3",2581.51982422236
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.3",2552.45262143438
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.3",2546.6715941269
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.3",2513.44781104803
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.3",2501.63870025232
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.3",2489.41353713656
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.3",2465.70307913319
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.3",2458.24372228405
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.35",2778.84144295652
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.35",2768.87227226126
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.35",2758.68232251172
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.35",2755.99743931915
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.35",2754.85032755625
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.35",2751.88866719487
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.35",2756.53098764608
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.35",2769.18198554199
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.35",2777.48079278765
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.35",2780.77944094796
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.35",2787.11685840055
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.35",2792.13539343935
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.35",2789.41806768635
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.35",2790.86057819195
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.35",2801.23993954338
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.35",2803.04928033509
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.35",2808.05849106429
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.35",2802.46921474007
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.35",2803.34260082898
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.35",2794.64915486813
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.35",2794.59038778056
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.35",2802.78547700382
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.35",2797.11764713856
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.35",2780.98674980945
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.35",2785.15050652917
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.35",2767.68911358784
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.35",2772.02285637196
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.35",2787.7719191973
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.35",2761.91346934635
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.35",2756.61962134671
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.4",2809.82724750086
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.4",2804.63912442684
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.4",2800.33595368566
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.4",2804.59263729721
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.4",2811.54725091688
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.4",2816.71662093787
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.4",2824.77847669313
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.4",2844.49762130559
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.4",2858.4953607109
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.4",2872.46034719609
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.4",2889.04568620826
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.4",2905.51237781265
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.4",2920.29234012055
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.4",2925.33306480598
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.4",2934.09267222153
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.4",2944.35263430438
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.4",2959.39918805034
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.4",2961.69415848416
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.4",2977.52310159849
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.4",2977.00991314658
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.4",2995.55306860506
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.4",3007.50756120359
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.4",3013.34976756171
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.4",3011.59480524195
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.4",3024.91680756012
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.4",3018.04840036014
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.4",3026.86257843796
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.4",3062.56516353483
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.4",3061.6944033638
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.4",3077.7295833238
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.45",2839.82993135421
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.45",2839.60083987128
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.45",2842.0350073362
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.45",2851.43356705701
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.45",2865.83495274218
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.45",2878.52716708362
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.45",2892.22915042221
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.45",2915.95058434352
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.45",2934.62494651952
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.45",2955.96055242573
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.45",2982.20672599286
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.45",3006.10291784239
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.45",3032.60970650223
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.45",3057.84596105876
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.45",3083.00430993547
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.45",3104.61430516508
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.45",3130.08209930561
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.45",3139.00912217626
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.45",3163.45488706856
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.45",3176.11713647647
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.45",3207.51663987091
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.45",3241.48161642049
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.45",3255.81207681901
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.45",3280.34720802104
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.45",3308.03039847785
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.45",3325.70429315615
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.45",3358.41985613614
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.45",3397.53753413893
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.45",3414.53201342426
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.45",3432.7835152363
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.5",2869.25340727755
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.5",2874.48028165538
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.5",2882.49516216971
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.5",2897.33270250909
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.5",2918.07670645785
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.5",2938.51819148789
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.5",2958.92610678616
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.5",2988.27336141892
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.5",3015.93698349964
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.5",3045.9658918382
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.5",3080.39390103091
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.5",3113.19784766908
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.5",3151.17727066693
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.5",3194.32641622086
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.5",3234.60253594772
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.5",3266.86058635102
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.5",3306.70277260051
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.5",3329.47229279143
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.5",3377.17235668116
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.5",3411.86469414778
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.5",3469.38709275629
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.5",3525.94989365486
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.5",3581.5169688348
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.5",3626.47946300456
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.5",3676.94074712427
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.5",3714.12860587968
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.5",3779.52097509824
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.5",3818.41805329833
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.5",3879.53643589175
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.5",3949.34801131362
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.55",2899.86863093892
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.55",2910.75849411629
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.55",2924.51250208454
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.55",2944.20461749752
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.55",2972.83103188703
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.55",3001.67305477406
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.55",3029.6533527294
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.55",3068.41903862005
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.55",3107.77834347907
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.55",3154.38634713663
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.55",3202.9492248966
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.55",3242.54498301001
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.55",3293.36841082411
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.55",3338.59721618732
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.55",3394.43088167895
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.55",3442.19435871169
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.55",3511.43904498405
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.55",3557.38215161782
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.55",3634.37669895543
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.55",3701.09782382978
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.55",3786.3106136647
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.55",3862.25932759288
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.55",3926.91978537904
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.55",3972.406759628
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.55",4051.24263097422
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.55",4116.12349699227
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.55",4187.17549925638
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.55",4255.07452667855
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.55",4337.82458972999
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.55",4428.11264691543
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.6",2931.91996386652
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.6",2948.33841589792
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.6",2968.90601979629
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.6",2995.88358351638
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.6",3031.43253780436
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.6",3070.0248628876
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.6",3108.6432167464
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.6",3158.37494001685
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.6",3206.96080642104
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.6",3269.24719735589
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.6",3336.72829376966
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.6",3392.28109405482
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.6",3452.87607165007
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.6",3512.27526915076
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.6",3592.11660286751
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.6",3668.50657036991
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.6",3754.47315845089
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.6",3836.04936025563
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.6",3925.34904184883
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.6",4015.33036375523
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.6",4116.20479703891
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.6",4206.75036759791
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.6",4307.34167694909
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.6",4404.94323804408
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.6",4530.14744510154
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.6",4629.0187745445
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.6",4722.45858280172
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.6",4834.69058257603
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.6",4937.90683540899
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.6",5082.4574346604
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.65",2967.02630996396
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.65",2988.98637372474
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.65",3017.85973105181
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.65",3050.71109922972
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.65",3095.21373612093
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.65",3143.76177475036
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.65",3191.63529324167
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.65",3254.0356231732
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.65",3312.50821034434
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.65",3387.97954820854
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.65",3469.2090069201
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.65",3545.58279749744
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.65",3625.54778163294
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.65",3715.13563946483
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.65",3808.62876918128
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.65",3890.653010392
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.65",3993.83420606908
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.65",4070.54019305486
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.65",4179.34954071467
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.65",4309.58636668922
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.65",4477.96561969776
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.65",4601.40024669423
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.65",4716.40425533114
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.65",4825.43552581703
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.65",4983.89477297889
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.65",5106.89386251011
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.65",5259.56097561766
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.65",5393.10272730294
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.65",5536.61778286301
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.65",5725.57107976847
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.7",3005.65947016458
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.7",3034.79556748671
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.7",3073.31888498921
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.7",3115.06525707989
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.7",3165.94737206893
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.7",3222.47028214143
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.7",3281.36804747939
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.7",3361.03149269524
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.7",3435.29771421216
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.7",3514.64897296067
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.7",3604.2237016592
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.7",3699.3138886479
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.7",3806.37600828107
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.7",3929.65813296912
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.7",4051.92192860581
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.7",4178.87347298191
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.7",4339.36465897149
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.7",4464.30863840995
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.7",4613.12095856648
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.7",4752.0879105967
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.7",4921.82107865832
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.7",5106.51010901583
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.7",5263.92193524721
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.7",5413.15013904468
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.7",5628.48139709226
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.7",5789.22935438012
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.7",5966.85565902032
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.7",6181.31749153587
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.7",6398.61235018751
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.7",6691.08900007108
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.75",3048.67815250626
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.75",3086.07736815937
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.75",3133.5899441992
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.75",3184.69958600219
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.75",3247.8252673528
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.75",3314.08308511882
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.75",3379.69968684868
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.75",3470.85674214995
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.75",3561.47576986635
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.75",3655.07537185093
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.75",3760.62892845692
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.75",3873.94135265484
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.75",4002.86214986802
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.75",4161.23017599825
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.75",4326.24721175993
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.75",4487.21778029496
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.75",4672.42047552596
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.75",4830.10569098566
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.75",5028.28951214821
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.75",5211.05610069076
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.75",5427.11973477788
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.75",5666.34239309439
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.75",5897.51729817456
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.75",6096.12114521202
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.75",6404.87873278241
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.75",6625.69673967168
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.75",6928.44230514306
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.75",7219.03571139965
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.75",7507.95734906327
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.75",7882.85410634181
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.8",3097.64401132208
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.8",3143.62426721898
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.8",3201.15520209211
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.8",3264.70547062205
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.8",3341.53092241986
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.8",3421.66850152633
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.8",3502.74203421447
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.8",3602.7327690304
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.8",3708.78145513316
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.8",3831.20795872822
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.8",3962.47521874573
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.8",4097.78276425641
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.8",4270.33299286142
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.8",4462.3655452086
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.8",4647.87037941956
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.8",4835.49783494527
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.8",5096.58571200931
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.8",5292.71528784457
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.8",5538.00004625886
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.8",5807.25114721545
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.8",6102.96494099776
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.8",6380.31458455565
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.8",6732.92008136981
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.8",7045.32621874548
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.8",7501.43381521342
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.8",7827.36897843576
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.8",8243.50651988325
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.8",8694.37591567231
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.8",9106.35741392488
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.8",9630.63911441196
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.85",3157.44686204197
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.85",3211.36236224921
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.85",3280.50514709299
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.85",3354.48218795884
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.85",3445.18684251718
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.85",3538.509656798
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.85",3636.99585621712
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.85",3759.44459079981
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.85",3884.6485240084
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.85",4041.17930467616
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.85",4219.12811085712
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.85",4393.34079642164
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.85",4585.16893931254
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.85",4802.4752701347
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.85",5033.75810739477
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.85",5265.28289896875
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.85",5553.91239220254
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.85",5817.16175071316
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.85",6132.82014337989
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.85",6497.57578367051
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.85",6918.54424792529
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.85",7282.44181395314
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.85",7692.32431636915
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.85",8130.83428878205
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.85",8660.05635036353
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.85",9143.63550206459
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.85",9710.49748220055
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.85",10340.6665616875
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.85",10910.5325879745
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.85",11580.9854649002
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.9",3236.66303252241
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.9",3303.28539729598
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.9",3381.17184439115
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.9",3469.52313624931
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.9",3581.33566648244
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.9",3683.63703027687
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.9",3801.13759971781
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.9",3971.08731412993
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.9",4162.13809472973
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.9",4353.25086094079
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.9",4553.91490215873
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.9",4754.34421663365
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.9",5007.12644861166
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.9",5285.92344798093
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.9",5578.29971062716
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.9",5894.10673380997
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.9",6400.71610274613
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.9",6836.60480492569
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.9",7248.6930140823
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.9",7766.94571164209
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.9",8332.00430973523
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.9",8799.75852324388
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.9",9334.72903354701
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.9",9929.3565923193
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.9",10657.0847972475
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.9",11260.449173678
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.9",11960.5941029451
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.9",12736.0389307768
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.9",13534.5044335631
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.9",14476.9571291598
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.95",3371.54456846815
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.95",3458.76402078746
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.95",3564.93932669556
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.95",3674.52562970562
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.95",3826.72915327476
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.95",3984.0243692674
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.95",4147.12845845458
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.95",4352.85621896115
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.95",4550.8602484731
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.95",4812.53812744959
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.95",5110.88540731132
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.95",5476.95656464159
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.95",5861.97032297227
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.95",6249.7967354494
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.95",6674.90155080424
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.95",7106.93010704952
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.95",7603.8571143112
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.95",8201.3725176887
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.95",8894.23010829658
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.95",9568.76796655087
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.95",10407.2748367388
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.95",11316.347025049
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.95",12353.4859514391
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.95",13327.5918805276
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.95",14596.5298200643
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.95",15652.5085636249
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.95",17128.4632054721
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.95",18643.8366414563
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.95",20206.8725208348
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.95",21924.2764711114
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.975",3507.8813747161
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.975",3624.56952906839
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.975",3766.66752755127
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.975",3918.21996921177
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.975",4098.95149685006
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.975",4257.58084902473
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.975",4483.71043732579
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.975",4734.62440102326
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.975",4997.25775101758
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.975",5298.93651517459
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.975",5617.09682383075
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.975",6036.87130041623
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.975",6447.14777003588
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.975",6985.5566532719
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.975",7655.93452817471
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.975",8273.56067464455
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.975",9123.23573064878
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.975",9888.79272578421
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.975",10867.6966503764
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.975",11808.0020017812
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.975",13049.1655516546
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.975",13680.2553273092
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.975",15490.3286008693
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.975",16475.5032312903
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.975",18190.4870380963
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.975",19103.1584541531
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.975",21018.2614849407
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.975",22971.0314490486
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.975",25005.7617478592
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.975",27400.4059752023
+2021-03-01,"1 day ahead curr ICU",2021-03-02,"GM","Germany","quantile","0.99",3639.54966964331
+2021-03-01,"2 day ahead curr ICU",2021-03-03,"GM","Germany","quantile","0.99",3783.3608390745
+2021-03-01,"3 day ahead curr ICU",2021-03-04,"GM","Germany","quantile","0.99",3944.26135604533
+2021-03-01,"4 day ahead curr ICU",2021-03-05,"GM","Germany","quantile","0.99",4107.38877023108
+2021-03-01,"5 day ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.99",4289.84392611888
+2021-03-01,"6 day ahead curr ICU",2021-03-07,"GM","Germany","quantile","0.99",4460.83585805932
+2021-03-01,"7 day ahead curr ICU",2021-03-08,"GM","Germany","quantile","0.99",4694.92113200801
+2021-03-01,"8 day ahead curr ICU",2021-03-09,"GM","Germany","quantile","0.99",4979.45137247081
+2021-03-01,"9 day ahead curr ICU",2021-03-10,"GM","Germany","quantile","0.99",5326.33047895644
+2021-03-01,"10 day ahead curr ICU",2021-03-11,"GM","Germany","quantile","0.99",5762.81928848673
+2021-03-01,"11 day ahead curr ICU",2021-03-12,"GM","Germany","quantile","0.99",6258.95426610621
+2021-03-01,"12 day ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.99",6853.82111631683
+2021-03-01,"13 day ahead curr ICU",2021-03-14,"GM","Germany","quantile","0.99",7465.38749162664
+2021-03-01,"14 day ahead curr ICU",2021-03-15,"GM","Germany","quantile","0.99",8212.82504486623
+2021-03-01,"15 day ahead curr ICU",2021-03-16,"GM","Germany","quantile","0.99",9262.40162413414
+2021-03-01,"16 day ahead curr ICU",2021-03-17,"GM","Germany","quantile","0.99",10433.2510733701
+2021-03-01,"17 day ahead curr ICU",2021-03-18,"GM","Germany","quantile","0.99",11772.3724178978
+2021-03-01,"18 day ahead curr ICU",2021-03-19,"GM","Germany","quantile","0.99",13094.6976935074
+2021-03-01,"19 day ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.99",14665.853556259
+2021-03-01,"20 day ahead curr ICU",2021-03-21,"GM","Germany","quantile","0.99",16135.2738867838
+2021-03-01,"21 day ahead curr ICU",2021-03-22,"GM","Germany","quantile","0.99",18119.2326906936
+2021-03-01,"22 day ahead curr ICU",2021-03-23,"GM","Germany","quantile","0.99",20097.3084322446
+2021-03-01,"23 day ahead curr ICU",2021-03-24,"GM","Germany","quantile","0.99",22578.5064685339
+2021-03-01,"24 day ahead curr ICU",2021-03-25,"GM","Germany","quantile","0.99",24937.7834020135
+2021-03-01,"25 day ahead curr ICU",2021-03-26,"GM","Germany","quantile","0.99",27946.204899035
+2021-03-01,"26 day ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.99",30734.0233919558
+2021-03-01,"27 day ahead curr ICU",2021-03-28,"GM","Germany","quantile","0.99",34075.2221120857
+2021-03-01,"28 day ahead curr ICU",2021-03-29,"GM","Germany","quantile","0.99",37751.1951401018
+2021-03-01,"29 day ahead curr ICU",2021-03-30,"GM","Germany","quantile","0.99",42014.1512934078
+2021-03-01,"30 day ahead curr ICU",2021-03-31,"GM","Germany","quantile","0.99",46143.7528959845
+2021-03-01,"-1 wk ahead curr ICU",2021-02-20,"GM","Germany","observed",NA,3079
+2021-03-01,"0 wk ahead curr ICU",2021-02-27,"GM","Germany","observed",NA,2827
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.01",2136.66274512011
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.01",1715.37244805782
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.01",1295.16413908621
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.01",921.004234803751
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.025",2232.42876692965
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.025",1855.15992954188
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.025",1452.40722261008
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.025",1058.79750779686
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.05",2324.66211450782
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.05",1978.02111843691
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.05",1598.87029973153
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.05",1190.77252151349
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.1",2439.34579860416
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.1",2189.22602653199
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.1",1870.63197462683
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.1",1554.65381340572
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.15",2519.60962846916
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.15",2332.74645327205
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.15",2095.11971955608
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.15",1829.94316238261
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.2",2584.57194444522
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.2",2455.50779500088
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.2",2292.35599156213
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.2",2044.49395233779
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.25",2642.34932605826
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.25",2571.83547325848
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.25",2446.60409780964
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.25",2256.34679767534
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.3",2698.54116886892
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.3",2675.94447871597
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.3",2632.84922693098
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.3",2513.44781104803
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.35",2754.85032755625
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.35",2792.13539343935
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.35",2803.34260082898
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.35",2767.68911358784
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.4",2811.54725091688
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.4",2905.51237781265
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.4",2977.52310159849
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.4",3018.04840036014
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.45",2865.83495274218
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.45",3006.10291784239
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.45",3163.45488706856
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.45",3325.70429315615
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","point",NA,2918.07670645785
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","point",NA,3113.19784766908
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","point",NA,3377.17235668116
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","point",NA,3714.12860587968
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.55",2972.83103188703
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.55",3242.54498301001
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.55",3634.37669895543
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.55",4116.12349699227
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.6",3031.43253780436
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.6",3392.28109405482
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.6",3925.34904184883
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.6",4629.0187745445
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.65",3095.21373612093
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.65",3545.58279749744
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.65",4179.34954071467
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.65",5106.89386251011
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.7",3165.94737206893
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.7",3699.3138886479
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.7",4613.12095856648
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.7",5789.22935438012
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.75",3247.8252673528
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.75",3873.94135265484
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.75",5028.28951214821
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.75",6625.69673967168
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.8",3341.53092241986
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.8",4097.78276425641
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.8",5538.00004625886
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.8",7827.36897843576
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.85",3445.18684251718
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.85",4393.34079642164
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.85",6132.82014337989
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.85",9143.63550206459
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.9",3581.33566648244
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.9",4754.34421663365
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.9",7248.6930140823
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.9",11260.449173678
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.95",3826.72915327476
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.95",5476.95656464159
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.95",8894.23010829658
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.95",15652.5085636249
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.975",4098.95149685006
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.975",6036.87130041623
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.975",10867.6966503764
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.975",19103.1584541531
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.99",4289.84392611888
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.99",6853.82111631683
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.99",14665.853556259
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.99",30734.0233919558
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM","Germany","quantile","0.5",2918.07670645785
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM","Germany","quantile","0.5",3113.19784766908
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM","Germany","quantile","0.5",3377.17235668116
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM","Germany","quantile","0.5",3714.12860587968
+2021-03-01,"-1 wk ahead curr ICU",2021-02-20,"GM13","Free State of Saxony","observed",NA,214
+2021-03-01,"0 wk ahead curr ICU",2021-02-27,"GM13","Free State of Saxony","observed",NA,188
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.01",124.229349279776
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.01",116.843111420405
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.01",107.693085528505
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.01",100.933492633455
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.025",132.354964421817
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.025",132.939507988351
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.025",129.889536983234
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.025",126.884018966471
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.05",140.750628995022
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.05",147.059948435053
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.05",151.188966511329
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.05",150.491801013776
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.1",152.189816009083
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.1",164.232607432209
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.1",176.5392717605
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.1",183.443121558005
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.15",160.891709858528
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.15",178.885293607799
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.15",195.146184493748
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.15",205.509850954868
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.2",168.158057723229
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.2",191.894989093603
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.2",211.245167263234
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.2",223.895820496057
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.25",174.730370874895
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.25",202.63494238878
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.25",225.590415271172
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.25",241.233780475154
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.3",181.015691660737
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.3",212.366716476945
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.3",240.142366434903
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.3",262.429724492435
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.35",186.954576935125
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.35",221.202960956896
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.35",255.313644811459
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.35",288.08906921632
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.4",192.613225281515
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.4",230.021791432003
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.4",270.346885235589
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.4",311.72914488147
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.45",198.014789352432
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.45",239.234737860102
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.45",286.572580259753
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.45",335.545154450715
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","point",NA,203.550700171218
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","point",NA,250.455426513132
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","point",NA,307.373627195546
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","point",NA,370.477060206217
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.55",209.348331746558
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.55",260.261078794595
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.55",322.237959434986
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.55",398.398153214262
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.6",215.395126019704
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.6",271.799908467945
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.6",343.917537102574
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.6",436.982018331706
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.65",222.068727038701
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.65",284.853638339767
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.65",373.895360658805
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.65",481.167604907714
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.7",229.625089954066
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.7",300.25869243406
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.7",405.44050108183
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.7",525.051137252934
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.75",238.782351978961
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.75",319.128559675152
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.75",438.656610653918
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.75",585.231733619849
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.8",249.810837554147
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.8",343.114678055057
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.8",479.405382518072
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.8",667.553112051737
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.85",263.943409252393
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.85",372.740879396534
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.85",538.387782978413
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.85",802.502754446044
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.9",281.935596822636
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.9",416.086849882527
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.9",622.576302994142
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.9",952.557906587716
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.95",312.170712954589
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.95",502.232715503479
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.95",845.724218159909
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.95",1401.86888038604
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.975",348.029075751483
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.975",571.627883219905
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.975",1112.14881009977
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.975",2078.58931654164
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.99",395.620232928342
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.99",693.763229425037
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.99",1484.22531715062
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.99",3069.65553536755
+2021-03-01,"1 wk ahead curr ICU",2021-03-06,"GM13","Free State of Saxony","quantile","0.5",203.57249569588
+2021-03-01,"2 wk ahead curr ICU",2021-03-13,"GM13","Free State of Saxony","quantile","0.5",249.211814000042
+2021-03-01,"3 wk ahead curr ICU",2021-03-20,"GM13","Free State of Saxony","quantile","0.5",304.240457843423
+2021-03-01,"4 wk ahead curr ICU",2021-03-27,"GM13","Free State of Saxony","quantile","0.5",363.128786757098
