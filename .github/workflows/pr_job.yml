@@ -4,8 +4,9 @@
 name: PR checks
 
 on:
-  pull_request:
-    branches: [ master ]
+  push:
+    branches-ignore:
+      - '**'
 
 jobs:
   build:
